@@ -28,7 +28,7 @@ class AppTheme {
   static Color get text2    => isDark ? Colors.white70 : const Color(0xFF424242);
   static Color get text3    => isDark ? Colors.white38 : const Color(0xFF757575);
 
-  static const String appVersion = "1.1.1+5";
+  static const String appVersion = "1.1.1+7";
 
   static ThemeData get darkTheme => ThemeData(
     brightness: Brightness.dark,

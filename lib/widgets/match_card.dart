@@ -6,6 +6,7 @@ import '../models/match_model.dart';
 import '../theme/app_theme.dart';
 import '../screens/match_detail_screen.dart';
 import '../services/ad_service.dart';
+import 'team_crest.dart';
 
 class MatchCard extends StatelessWidget {
   final MatchModel match;
@@ -49,7 +50,7 @@ class MatchCard extends StatelessWidget {
             Expanded(
               child: Row(
                 children: [
-                  TeamCrestSmall(logoUrl: match.homeLogo, code: match.home),
+                  TeamCrest(logoUrl: match.homeLogo, code: match.home, size: 28),
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
@@ -95,7 +96,7 @@ class MatchCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 8),
-                  TeamCrestSmall(logoUrl: match.awayLogo, code: match.away),
+                  TeamCrest(logoUrl: match.awayLogo, code: match.away, size: 28),
                 ],
               ),
             ),
@@ -106,52 +107,6 @@ class MatchCard extends StatelessWidget {
   }
 }
 
-class TeamCrestSmall extends StatelessWidget {
-  final String? logoUrl;
-  final String code;
-  const TeamCrestSmall({super.key, this.logoUrl, required this.code});
-
-  @override
-  Widget build(BuildContext context) {
-    if (logoUrl != null && logoUrl!.isNotEmpty) {
-      return CachedNetworkImage(
-        imageUrl: logoUrl!,
-        width: 28, height: 28,
-        fit: BoxFit.contain,
-        errorWidget: (_, __, ___) => _InitialsCircle(code: code, size: 28),
-      );
-    }
-    return _InitialsCircle(code: code, size: 28);
-  }
-}
-
-class _InitialsCircle extends StatelessWidget {
-  final String code;
-  final double size;
-  const _InitialsCircle({required this.code, required this.size});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: size, height: size,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: AppTheme.accentDim,
-        border: Border.all(color: AppTheme.border2),
-      ),
-      child: Center(
-        child: Text(
-          code.length > 3 ? code.substring(0, 3) : code,
-          style: TextStyle(
-            color: AppTheme.accent2,
-            fontSize: size * 0.3,
-            fontWeight: FontWeight.w800,
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 class CountdownTimer extends StatefulWidget {
   final MatchModel match;

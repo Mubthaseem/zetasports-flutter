@@ -33,6 +33,7 @@ class _MainShellState extends State<MainShell> {
   @override
   void initState() {
     super.initState();
+    AdService.init();
     _setupFCM();
     WidgetsBinding.instance.addObserver(AppLifecycleObserver());
   }

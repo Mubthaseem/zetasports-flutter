@@ -63,43 +63,45 @@ class _SplashScreenState extends State<SplashScreen>
       stream: FirestoreService.configStream(),
       builder: (context, configSnap) {
         final config = configSnap.data;
+        
+        // If we have config, check for Maintenance/Updates
+        if (config != null) {
+          final isMaintenance = config['maintenanceMode'] as bool? ?? false;
+          final minVersion = config['minVersion'] as String? ?? '1.0.0';
+          final updateUrl = config['updateUrl'] as String?;
+          final loadingLogo = config['loadingLogo'] as String?;
+          final appName = config['appName'] as String? ?? 'ZETASPORTS';
+
+          if (isMaintenance) {
+            return _FullScreenOverlay(
+              title: 'UNDER MAINTENANCE',
+              subtitle: 'We are performing some scheduled updates to improve your experience. We will be back shortly!',
+              icon: Icons.construction,
+              logoUrl: loadingLogo,
+            );
+          }
+
+          if (updateUrl != null && updateUrl.isNotEmpty && currentVersion != minVersion) {
+             if (minVersion.contains('+') && currentVersion.contains('+')) {
+                int minBuild = int.tryParse(minVersion.split('+').last) ?? 0;
+                int curBuild = int.tryParse(currentVersion.split('+').last) ?? 0;
+                if (curBuild < minBuild) {
+                  return _FullScreenOverlay(
+                    title: 'UPDATE REQUIRED',
+                    subtitle: 'A new version of $appName is available! Please update to continue using the app.',
+                    icon: Icons.system_update,
+                    logoUrl: loadingLogo,
+                    actionLabel: 'DOWNLOAD UPDATE',
+                    actionUrl: updateUrl,
+                  );
+                }
+             }
+          }
+        }
+
+        // Default Splash View (Shown during loading or as fallback)
         final loadingLogo = config?['loadingLogo'] as String?;
         final appName = config?['appName'] as String? ?? 'ZETASPORTS';
-        final isMaintenance = config?['maintenanceMode'] as bool? ?? false;
-        final minVersion = config?['minVersion'] as String? ?? '1.0.0';
-        final updateUrl = config?['updateUrl'] as String?;
-
-        // 🛠️ Maintenance Screen
-        if (isMaintenance) {
-          return _FullScreenOverlay(
-            title: 'UNDER MAINTENANCE',
-            subtitle: 'We are performing some scheduled updates to improve your experience. We will be back shortly!',
-            icon: Icons.construction,
-            logoUrl: loadingLogo,
-          );
-        }
-
-        // 📲 Force Update Screen (Only if minVersion is truly higher)
-        // Simple version check: if currentVersion doesn't contain minVersion and looks 'older'
-        if (updateUrl != null && updateUrl.isNotEmpty && currentVersion != minVersion) {
-           // Basic check: if minVersion is 'ahead' of currentVersion
-           // For simplicity in this build, we only block if they are explicitly different 
-           // and updateUrl is provided.
-           if (minVersion.contains('+') && currentVersion.contains('+')) {
-              int minBuild = int.tryParse(minVersion.split('+').last) ?? 0;
-              int curBuild = int.tryParse(currentVersion.split('+').last) ?? 0;
-              if (curBuild < minBuild) {
-                return _FullScreenOverlay(
-                  title: 'UPDATE REQUIRED',
-                  subtitle: 'A new version of $appName is available! Please update to continue using the app.',
-                  icon: Icons.system_update,
-                  logoUrl: loadingLogo,
-                  actionLabel: 'DOWNLOAD UPDATE',
-                  actionUrl: updateUrl,
-                );
-              }
-           }
-        }
 
         return Scaffold(
           backgroundColor: AppTheme.bg,
@@ -161,6 +163,7 @@ class _SplashScreenState extends State<SplashScreen>
                                     imageUrl: loadingLogo,
                                     fit: BoxFit.contain,
                                     placeholder: (_, __) => const CircularProgressIndicator(strokeWidth: 2),
+                                    errorWidget: (_, __, ___) => Text('⚡', style: TextStyle(fontSize: 42, color: AppTheme.accent)),
                                   ),
                                 )
                               : Text('⚡', style: TextStyle(fontSize: 42, color: AppTheme.accent)),

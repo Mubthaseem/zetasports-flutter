@@ -11,22 +11,26 @@ class TeamCrest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (logoUrl != null && logoUrl!.isNotEmpty) {
-      return CachedNetworkImage(
-        imageUrl: logoUrl!,
-        width: size, height: size,
-        fit: BoxFit.contain,
-        errorWidget: (_, __, ___) => _Initials(code: code, size: size),
-      );
-    }
-    return _Initials(code: code, size: size);
+    if (logoUrl == null || logoUrl!.isEmpty) return _Initials(code: code, size: size);
+
+    return CachedNetworkImage(
+      imageUrl: logoUrl!,
+      width: size,
+      height: size,
+      fit: BoxFit.contain,
+      memCacheHeight: (size * 2).toInt(),
+      memCacheWidth: (size * 2).toInt(),
+      placeholder: (_, __) => _Initials(code: code, size: size, isLoading: true),
+      errorWidget: (_, __, ___) => _Initials(code: code, size: size),
+    );
   }
 }
 
 class _Initials extends StatelessWidget {
   final String code;
   final double size;
-  const _Initials({required this.code, required this.size});
+  final bool isLoading;
+  const _Initials({required this.code, required this.size, this.isLoading = false});
 
   @override
   Widget build(BuildContext context) {
@@ -36,19 +40,21 @@ class _Initials extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         gradient: LinearGradient(
-          colors: [AppTheme.accentDim, Color(0xFF0A1A3A)],
+          colors: [AppTheme.accentDim, const Color(0xFF0A1A3A)],
         ),
         border: Border.all(color: AppTheme.border2, width: 1.5),
       ),
       child: Center(
-        child: Text(
-          display,
-          style: TextStyle(
-            color: AppTheme.accent2,
-            fontSize: size * 0.28,
-            fontWeight: FontWeight.w800,
-          ),
-        ),
+        child: isLoading 
+          ? SizedBox(width: size*0.4, height: size*0.4, child: CircularProgressIndicator(strokeWidth: 1, color: AppTheme.accent.withOpacity(0.5)))
+          : Text(
+              display,
+              style: TextStyle(
+                color: AppTheme.accent2,
+                fontSize: size * 0.28,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
       ),
     );
   }

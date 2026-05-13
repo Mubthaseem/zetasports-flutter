@@ -19,18 +19,18 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 }
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  MobileAds.instance.initialize();
-  AdService.init();
+  try {
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+    MobileAds.instance.initialize();
+  } catch (e) {
+    debugPrint("Startup Error: $e");
+  }
   
   final prefs = await SharedPreferences.getInstance();
   final isDark = prefs.getBool('isDark') ?? true;
   themeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
   // Initialize Local Notifications for Foreground Popups

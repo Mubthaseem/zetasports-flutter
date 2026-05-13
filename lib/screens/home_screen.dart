@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -54,187 +55,45 @@ class _HomeScreenState extends State<HomeScreen> {
     return StreamBuilder<List<MatchModel>>(
       stream: FirestoreService.matchesStream(),
       builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(child: CircularProgressIndicator(color: AppTheme.accent));
+        if (snapshot.hasError) {
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.error_outline, color: AppTheme.red, size: 48),
+                const SizedBox(height: 16),
+                Text('CONNECTION ERROR', style: GoogleFonts.rajdhani(color: AppTheme.text1, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 8),
+                Text('Please check your internet connection', style: TextStyle(color: AppTheme.text3, fontSize: 12)),
+              ],
+            ),
+          );
         }
+
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return _buildShimmerLoading();
+        }
+
         final matches = snapshot.data ?? [];
         final trending = matches.where((m) => m.featured).toList();
         final live = matches.where((m) => m.isLive).toList();
         
-        // Date Logic Fix
-        final now = DateTime.now();
-        final today = DateTime(now.year, now.month, now.day);
-        String targetDateStr = '';
-        if (_dateFilter == 'today') {
-          targetDateStr = today.toIso8601String().split('T')[0];
-        } else if (_dateFilter == 'tomorrow') {
-          final tmr = today.add(const Duration(days: 1));
-          targetDateStr = tmr.toIso8601String().split('T')[0];
-        } else if (_dateFilter == 'yesterday') {
-          final yest = today.subtract(const Duration(days: 1));
-          targetDateStr = yest.toIso8601String().split('T')[0];
-        }
-
-        final dateMatches = matches.where((m) => m.kickoffDate == targetDateStr).toList();
-
         return RefreshIndicator(
           color: AppTheme.accent,
           backgroundColor: AppTheme.card,
-          onRefresh: () async => await Future.delayed(const Duration(milliseconds: 500)),
+          onRefresh: () async => await Future.delayed(const Duration(milliseconds: 1000)),
           child: SingleChildScrollView(
             physics: const AlwaysScrollableScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Global Announcement Bar
-                StreamBuilder<Map<String, dynamic>?>(
-                  stream: FirestoreService.configStream(),
-                  builder: (context, snap) {
-                    final msg = snap.data?['announcement'] as String?;
-                    if (msg == null || msg.isEmpty) return const SizedBox.shrink();
-                    return Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                      margin: const EdgeInsets.only(bottom: 8),
-                      decoration: BoxDecoration(
-                        color: AppTheme.accent.withOpacity(0.15),
-                        border: Border(bottom: BorderSide(color: AppTheme.accent.withOpacity(0.3))),
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.campaign, color: AppTheme.accent2, size: 18),
-                          const SizedBox(width: 10),
-                          Expanded(
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Text(
-                                msg.toUpperCase(),
-                                style: GoogleFonts.inter(
-                                  fontSize: 11, fontWeight: FontWeight.w800,
-                                  color: AppTheme.accent2, letterSpacing: 0.5,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
+                _buildAnnouncementBar(),
 
-                // Community Hub (WhatsApp & Telegram)
-                StreamBuilder<Map<String, dynamic>?>(
-                  stream: FirestoreService.configStream(),
-                  builder: (context, snap) {
-                    final config = snap.data;
-                    final wa = config?['whatsappUrl'] as String?;
-                    final tg = config?['telegramUrl'] as String?;
-                    
-                    if ((wa == null || wa.isEmpty) && (tg == null || tg.isEmpty)) {
-                      return const SizedBox.shrink();
-                    }
+                // Community Hub
+                _buildCommunityHub(),
 
-                    return Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-                      child: Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: AppTheme.card,
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: AppTheme.border),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Icon(Icons.groups, color: AppTheme.accent, size: 20),
-                                const SizedBox(width: 10),
-                                Text('COMMUNITY HUB', 
-                                  style: GoogleFonts.rajdhani(fontSize: 14, fontWeight: FontWeight.w800, color: AppTheme.text1, letterSpacing: 1)),
-                              ],
-                            ),
-                            const SizedBox(height: 4),
-                            Text('Join our official groups for instant match updates and VIP tips!', 
-                              style: TextStyle(color: AppTheme.text3, fontSize: 11)),
-                            const SizedBox(height: 16),
-                            Row(
-                              children: [
-                                if (wa != null && wa.isNotEmpty)
-                                  Expanded(
-                                    child: _SocialButton(
-                                      label: 'WHATSAPP',
-                                      color: const Color(0xFF25D366),
-                                      icon: Icons.chat,
-                                      onTap: () {}, // Link handled by user
-                                    ),
-                                  ),
-                                if (wa != null && wa.isNotEmpty && tg != null && tg.isNotEmpty)
-                                  const SizedBox(width: 12),
-                                if (tg != null && tg.isNotEmpty)
-                                  Expanded(
-                                    child: _SocialButton(
-                                      label: 'TELEGRAM',
-                                      color: const Color(0xFF0088CC),
-                                      icon: Icons.send,
-                                      onTap: () {}, // Link handled by user
-                                    ),
-                                  ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  },
-                ),
-
-                // Trending Matches Carousel
-                if (trending.isNotEmpty) ...[
-                  _SectionHeader(
-                    icon: Icons.local_fire_department,
-                    iconColor: AppTheme.red,
-                    title: 'TRENDING MATCHES',
-                  ),
-                  SizedBox(
-                    height: 200,
-                    child: Stack(
-                      children: [
-                        PageView.builder(
-                          controller: _trendingController,
-                          onPageChanged: (i) => _currentPage = i,
-                          itemBuilder: (context, index) {
-                            final m = trending[index % trending.length];
-                            return _TrendingMatchBanner(match: m);
-                          },
-                        ),
-                        // Navigation Arrows
-                        Positioned(
-                          left: 10, top: 0, bottom: 0,
-                          child: Center(
-                            child: IconButton(
-                              icon: Icon(Icons.chevron_left, color: Colors.white.withOpacity(0.3), size: 28),
-                              onPressed: () => _trendingController.previousPage(
-                                duration: const Duration(milliseconds: 400), curve: Curves.easeOut),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          right: 10, top: 0, bottom: 0,
-                          child: Center(
-                            child: IconButton(
-                              icon: Icon(Icons.chevron_right, color: Colors.white.withOpacity(0.3), size: 28),
-                              onPressed: () => _trendingController.nextPage(
-                                duration: const Duration(milliseconds: 400), curve: Curves.easeOut),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-
-                // Live Matches
+                // Live Matches (Priority)
                 if (live.isNotEmpty) ...[
                   _SectionHeader(
                     icon: Icons.fiber_manual_record,
@@ -244,59 +103,221 @@ class _HomeScreenState extends State<HomeScreen> {
                   ...live.map((m) => MatchCard(match: m)),
                 ],
 
-                // Date Filter Chips
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Row(
-                      children: [
-                        _DateChip(
-                          label: 'Yesterday',
-                          isSelected: _dateFilter == 'yesterday',
-                          onTap: () => setState(() => _dateFilter = 'yesterday'),
-                        ),
-                        const SizedBox(width: 10),
-                        _DateChip(
-                          label: 'Today',
-                          isSelected: _dateFilter == 'today',
-                          onTap: () => setState(() => _dateFilter = 'today'),
-                        ),
-                        const SizedBox(width: 10),
-                        _DateChip(
-                          label: 'Tomorrow',
-                          isSelected: _dateFilter == 'tomorrow',
-                          onTap: () => setState(() => _dateFilter = 'tomorrow'),
-                        ),
-                      ],
-                    ),
+                // Trending Matches Carousel
+                if (trending.isNotEmpty) ...[
+                  _SectionHeader(
+                    icon: Icons.local_fire_department,
+                    iconColor: AppTheme.red,
+                    title: 'TRENDING MATCHES',
                   ),
+                  _buildTrendingCarousel(trending),
+                ],
+
+                // All Matches (The Reliable Section!)
+                _SectionHeader(
+                  icon: Icons.sports_soccer,
+                  iconColor: AppTheme.gold,
+                  title: 'TOP MATCHES',
                 ),
                 
-                if (dateMatches.isNotEmpty)
-                  ..._buildLeagueGroups(dateMatches)
+                if (matches.isNotEmpty)
+                  ..._buildLeagueGroups(matches)
                 else
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 60, horizontal: 30),
-                    child: Center(
-                      child: Column(
-                        children: [
-                          Icon(Icons.event_busy, color: AppTheme.text3.withOpacity(0.2), size: 48),
-                          const SizedBox(height: 12),
-                          Text('No matches scheduled for this date.', 
-                            style: TextStyle(color: AppTheme.text3, fontSize: 13, fontWeight: FontWeight.w500)),
-                        ],
-                      ),
-                    ),
-                  ),
+                  _buildEmptyState(),
 
-                const SizedBox(height: 24),
+                const SizedBox(height: 100), // Extra space for banner
               ],
             ),
           ),
         );
       },
+    );
+  }
+
+  Widget _buildShimmerLoading() {
+    return SingleChildScrollView(
+      child: Column(
+        children: List.generate(5, (index) => 
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            height: 80,
+            decoration: BoxDecoration(
+              color: AppTheme.card.withOpacity(0.5),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: const Center(child: CircularProgressIndicator(strokeWidth: 1)),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildAnnouncementBar() {
+    return StreamBuilder<Map<String, dynamic>?>(
+      stream: FirestoreService.configStream(),
+      builder: (context, snap) {
+        final msg = snap.data?['announcement'] as String?;
+        if (msg == null || msg.isEmpty) return const SizedBox.shrink();
+        return Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+          margin: const EdgeInsets.only(bottom: 8),
+          decoration: BoxDecoration(
+            color: AppTheme.accent.withOpacity(0.15),
+            border: Border(bottom: BorderSide(color: AppTheme.accent.withOpacity(0.3))),
+          ),
+          child: Row(
+            children: [
+              Icon(Icons.campaign, color: AppTheme.accent2, size: 18),
+              const SizedBox(width: 10),
+              Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Text(
+                    msg.toUpperCase(),
+                    style: GoogleFonts.inter(
+                      fontSize: 11, fontWeight: FontWeight.w800,
+                      color: AppTheme.accent2, letterSpacing: 0.5,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildCommunityHub() {
+    return StreamBuilder<Map<String, dynamic>?>(
+      stream: FirestoreService.configStream(),
+      builder: (context, snap) {
+        final config = snap.data;
+        final wa = config?['whatsappUrl'] as String?;
+        final tg = config?['telegramUrl'] as String?;
+        if ((wa == null || wa.isEmpty) && (tg == null || tg.isEmpty)) return const SizedBox.shrink();
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+          child: Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: AppTheme.card,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: AppTheme.border),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.groups, color: AppTheme.accent, size: 20),
+                    const SizedBox(width: 10),
+                    Text('COMMUNITY HUB', style: GoogleFonts.rajdhani(fontSize: 14, fontWeight: FontWeight.w800, color: AppTheme.text1, letterSpacing: 1)),
+                  ],
+                ),
+                const SizedBox(height: 4),
+                Text('Join our official groups for instant match updates and VIP tips!', style: TextStyle(color: AppTheme.text3, fontSize: 11)),
+                const SizedBox(height: 16),
+                Row(
+                  children: [
+                    if (wa != null && wa.isNotEmpty)
+                      Expanded(child: _SocialButton(
+                        label: 'WHATSAPP', 
+                        color: const Color(0xFF25D366), 
+                        icon: Icons.chat, 
+                        onTap: () => launchUrl(Uri.parse(wa), mode: LaunchMode.externalApplication),
+                      )),
+                    if (wa != null && wa.isNotEmpty && tg != null && tg.isNotEmpty) const SizedBox(width: 12),
+                    if (tg != null && tg.isNotEmpty)
+                      Expanded(child: _SocialButton(
+                        label: 'TELEGRAM', 
+                        color: const Color(0xFF0088CC), 
+                        icon: Icons.send, 
+                        onTap: () => launchUrl(Uri.parse(tg), mode: LaunchMode.externalApplication),
+                      )),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildTrendingCarousel(List<MatchModel> trending) {
+    return SizedBox(
+      height: 200,
+      child: Stack(
+        children: [
+          PageView.builder(
+            controller: _trendingController,
+            onPageChanged: (i) => _currentPage = i,
+            itemBuilder: (context, index) => _TrendingMatchBanner(match: trending[index % trending.length]),
+          ),
+          _buildCarouselNav(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildCarouselNav() {
+    return Stack(
+      children: [
+        Positioned(
+          left: 10, top: 0, bottom: 0,
+          child: Center(
+            child: IconButton(
+              icon: Icon(Icons.chevron_left, color: Colors.white.withOpacity(0.3), size: 28),
+              onPressed: () => _trendingController.previousPage(duration: const Duration(milliseconds: 400), curve: Curves.easeOut),
+            ),
+          ),
+        ),
+        Positioned(
+          right: 10, top: 0, bottom: 0,
+          child: Center(
+            child: IconButton(
+              icon: Icon(Icons.chevron_right, color: Colors.white.withOpacity(0.3), size: 28),
+              onPressed: () => _trendingController.nextPage(duration: const Duration(milliseconds: 400), curve: Curves.easeOut),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDateFilters() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Row(
+          children: [
+            _DateChip(label: 'Yesterday', isSelected: _dateFilter == 'yesterday', onTap: () => setState(() => _dateFilter = 'yesterday')),
+            const SizedBox(width: 10),
+            _DateChip(label: 'Today', isSelected: _dateFilter == 'today', onTap: () => setState(() => _dateFilter = 'today')),
+            const SizedBox(width: 10),
+            _DateChip(label: 'Tomorrow', isSelected: _dateFilter == 'tomorrow', onTap: () => setState(() => _dateFilter = 'tomorrow')),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildEmptyState() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 30),
+      child: Center(
+        child: Column(
+          children: [
+            Icon(Icons.event_busy, color: AppTheme.text3.withOpacity(0.2), size: 48),
+            const SizedBox(height: 12),
+            Text('No matches scheduled for this date.', style: TextStyle(color: AppTheme.text3, fontSize: 13, fontWeight: FontWeight.w500)),
+          ],
+        ),
+      ),
     );
   }
 
@@ -454,7 +475,7 @@ class _TrendingMatchBanner extends StatelessWidget {
                           Expanded(
                             child: Column(
                               children: [
-                                _LargeCrest(logoUrl: match.homeLogo, code: match.home),
+                                TeamCrest(logoUrl: match.homeLogo, code: match.home, size: 54),
                                 const SizedBox(height: 8),
                                 Text(match.homeTeam, 
                                   textAlign: TextAlign.center,
@@ -487,7 +508,7 @@ class _TrendingMatchBanner extends StatelessWidget {
                           Expanded(
                             child: Column(
                               children: [
-                                _LargeCrest(logoUrl: match.awayLogo, code: match.away),
+                                TeamCrest(logoUrl: match.awayLogo, code: match.away, size: 54),
                                 const SizedBox(height: 8),
                                 Text(match.awayTeam, 
                                   textAlign: TextAlign.center,
@@ -525,49 +546,6 @@ class _TrendingMatchBanner extends StatelessWidget {
   }
 }
 
-class _LargeCrest extends StatelessWidget {
-  final String? logoUrl;
-  final String code;
-  const _LargeCrest({this.logoUrl, required this.code});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 54, height: 54,
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.03),
-        shape: BoxShape.circle,
-        border: Border.all(color: Colors.white.withOpacity(0.08)),
-        boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 10, offset: const Offset(0, 4))
-        ],
-      ),
-      child: logoUrl != null && logoUrl!.isNotEmpty
-        ? CachedNetworkImage(
-            imageUrl: logoUrl!,
-            fit: BoxFit.contain,
-            errorWidget: (_, __, ___) => _FallbackInitials(code: code),
-          )
-        : _FallbackInitials(code: code),
-    );
-  }
-}
-
-class _FallbackInitials extends StatelessWidget {
-  final String code;
-  const _FallbackInitials({required this.code});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        code.length > 3 ? code.substring(0, 3) : code,
-        style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w800),
-      ),
-    );
-  }
-}
 
 class _SectionHeader extends StatelessWidget {
   final IconData icon;
