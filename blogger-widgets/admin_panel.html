@@ -328,6 +328,10 @@
             <input type="text" id="gh-path" value="blogger-widgets/matches.json">
           </div>
           <div class="form-group">
+            <label>Branch</label>
+            <input type="text" id="gh-branch" value="main">
+          </div>
+          <div class="form-group">
             <label>Personal Access Token (PAT)</label>
             <input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
           </div>
@@ -474,6 +478,7 @@
     document.getElementById('gh-user').value = localStorage.getItem('gh-user') || 'Mubthaseem';
     document.getElementById('gh-repo').value = localStorage.getItem('gh-repo') || 'zetasports-flutter';
     document.getElementById('gh-path').value = localStorage.getItem('gh-path') || 'blogger-widgets/matches.json';
+    document.getElementById('gh-branch').value = localStorage.getItem('gh-branch') || 'main';
     document.getElementById('gh-token').value = localStorage.getItem('gh-token') || '';
     
     const now = new Date();
@@ -666,14 +671,16 @@
     const user = document.getElementById('gh-user').value.trim();
     const repo = document.getElementById('gh-repo').value.trim();
     const path = document.getElementById('gh-path').value.trim();
+    const branch = document.getElementById('gh-branch').value.trim();
     const token = document.getElementById('gh-token').value.trim();
 
     localStorage.setItem('gh-user', user);
     localStorage.setItem('gh-repo', repo);
     localStorage.setItem('gh-path', path);
+    localStorage.setItem('gh-branch', branch);
     localStorage.setItem('gh-token', token);
 
-    return { user, repo, path, token };
+    return { user, repo, path, branch, token };
   }
 
   async function loadFromGithub() {
@@ -683,14 +690,14 @@
       return;
     }
 
-    const url = `https://api.github.com/repos/${settings.user}/${settings.repo}/contents/${settings.path}`;
+    const url = `https://api.github.com/repos/${settings.user}/${settings.repo}/contents/${settings.path}?ref=${settings.branch}`;
     const headers = {};
     if (settings.token) {
       headers['Authorization'] = `token ${settings.token}`;
     }
 
     try {
-      const response = await fetch(url + '?t=' + Date.now(), { headers });
+      const response = await fetch(url + '&t=' + Date.now(), { headers });
       if (!response.ok) {
         if (response.status === 404) {
           alert("File not found on GitHub. Starting with an empty list.");
@@ -729,7 +736,7 @@
 
     let sha = '';
     try {
-      const getRes = await fetch(url, { headers: { 'Authorization': `token ${settings.token}` } });
+      const getRes = await fetch(url + `?ref=${settings.branch}`, { headers: { 'Authorization': `token ${settings.token}` } });
       if (getRes.ok) {
         const fileData = await getRes.json();
         sha = fileData.sha;
@@ -744,7 +751,7 @@
     const payload = {
       message: "Update matches via Admin Panel",
       content: base64Content,
-      branch: "main"
+      branch: settings.branch
     };
     if (sha) {
       payload.sha = sha;
