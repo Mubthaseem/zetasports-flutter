@@ -699,13 +699,21 @@
     try {
       const response = await fetch(url + '&t=' + Date.now(), { headers });
       if (!response.ok) {
+        let errMsg = `GitHub returned status: ${response.status}`;
+        try {
+          const errData = await response.json();
+          if (errData && errData.message) {
+            errMsg += ` (${errData.message})`;
+          }
+        } catch(e) {}
+        
         if (response.status === 404) {
-          alert("File not found on GitHub. Starting with an empty list.");
+          alert(`File not found (404) on GitHub.\n\nDetails: ${errMsg}\n\nThis typically means:\n1. The repository is PRIVATE, and your Personal Access Token (PAT) is missing, incorrect, or lacks "repo" permissions.\n2. The Username, Repo Name, Branch, or File Path contains a typo.\n3. The file does not exist on the specified branch.`);
           matches = [];
           renderMatchesList();
           return;
         }
-        throw new Error(`GitHub returned status: ${response.status}`);
+        throw new Error(errMsg);
       }
 
       const fileData = await response.json();
