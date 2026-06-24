@@ -3,8 +3,14 @@ name: iOS Build
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'blogger-widgets/**'
+      - '.github/workflows/update_matches.yml'
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - 'blogger-widgets/**'
+      - '.github/workflows/update_matches.yml'
 
 jobs:
   build:
