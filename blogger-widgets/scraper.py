@@ -2,139 +2,228 @@ import urllib.request
 import json
 import datetime
 import os
+import re
+import html
 
 # Configuration
 JSON_OUTPUT_PATH = 'blogger-widgets/matches.json'
-MANUAL_INPUT_PATH = 'blogger-widgets/manual_matches.json'
 
-FLAG_MAP = {
-    'Switzerland': 'ch', 'Canada': 'ca', 'Bosnia & Herzegovina': 'ba', 'Qatar': 'qa',
-    'Scotland': 'gb-sct', 'Brazil': 'br', 'Morocco': 'ma', 'Haiti': 'ht',
-    'India': 'in', 'Australia': 'au', 'Colombia': 'co', 'DR Congo': 'cd',
-    'South Africa': 'za', 'South Korea': 'kr', 'Czechia': 'cz', 'Mexico': 'mx',
-    'England': 'gb-eng', 'Spain': 'es', 'Germany': 'de', 'France': 'fr',
-    'Italy': 'it', 'Argentina': 'ar', 'Portugal': 'pt', 'Netherlands': 'nl',
-    'Belgium': 'be', 'Croatia': 'hr', 'Uruguay': 'uy', 'USA': 'us',
-    'Japan': 'jp', 'Senegal': 'sn', 'Wales': 'gb-wls', 'Iran': 'ir'
-}
+def get_attr(name, attrs_string):
+    pattern = rf'data-{name}=["\']([^"\']*)["\']'
+    m = re.search(pattern, attrs_string, re.IGNORECASE)
+    return m.group(1) if m else ''
 
-def get_flag_url(team_name):
-    code = FLAG_MAP.get(team_name)
-    if code:
-        return f"https://flagcdn.com/w80/{code}.png"
-    for name, code in FLAG_MAP.items():
-        if name.lower() in team_name.lower():
-            return f"https://flagcdn.com/w80/{code}.png"
-    return "https://i.ibb.co/qF41b08G/HELLO-THUM.png"
+def format_display_time(iso_str):
+    try:
+        # iso_str e.g., "2026-06-25T00:30:00+05:30"
+        time_part = iso_str.split('T')[1]
+        hours_str, minutes_str = time_part.split(':')[:2]
+        hours = int(hours_str)
+        ampm = "PM" if hours >= 12 else "AM"
+        display_hours = hours % 12
+        if display_hours == 0:
+            display_hours = 12
+        return f"{display_hours:02d}:{minutes_str} {ampm}"
+    except Exception:
+        return "12:00 AM"
 
-def fetch_public_fixtures():
-    print("Fetching public football fixtures...")
-    url = "https://fixturedownload.com/feed/json/epl-2025"
+def fetch_hellosports_matches():
+    print("Fetching matches from hellosports.live...")
+    url = "https://www.hellosports.live/"
     try:
         req = urllib.request.Request(
             url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
         )
         with urllib.request.urlopen(req, timeout=10) as response:
-            data = json.loads(response.read().decode())
-            return data
+            content = response.read().decode('utf-8', errors='ignore')
+            
+        card_regex = re.compile(r"<div\s+class=['\"]msw-card['\"]([\s\S]*?)>", re.IGNORECASE)
+        cards = card_regex.findall(content)
+        print(f"Found {len(cards)} match cards in HTML.")
+        
+        matches = []
+        for attrs in cards:
+            scraped_id = get_attr('id', attrs)
+            if not scraped_id:
+                continue
+                
+            home = html.unescape(get_attr('home', attrs))
+            home_id = get_attr('home-id', attrs)
+            away = html.unescape(get_attr('away', attrs))
+            away_id = get_attr('away-id', attrs)
+            start = get_attr('start', attrs)
+            sport = get_attr('sport', attrs)
+            comp_name = html.unescape(get_attr('comp-name', attrs))
+            detail = html.unescape(get_attr('detail', attrs))
+            watch_url = get_attr('url', attrs)
+            
+            matches.append({
+                "scraped_id": scraped_id,
+                "home_team": home,
+                "home_id": home_id,
+                "away_team": away,
+                "away_id": away_id,
+                "start": start,
+                "sport": sport if sport else "football",
+                "league": comp_name,
+                "group": detail,
+                "url": watch_url
+            })
+        return matches
     except Exception as e:
-        print(f"Error fetching public fixtures: {e}")
+        print(f"Error fetching hellosports matches: {e}")
         return []
 
-def process_fixtures(raw_fixtures):
-    processed = []
-    now = datetime.datetime.now(datetime.timezone.utc)
-    
-    for item in raw_fixtures:
-        try:
-            date_str = item.get('DateUtc')
-            if not date_str:
-                continue
-                
-            match_date = datetime.datetime.strptime(date_str, "%Y-%m-%d %H:%M:%SZ").replace(tzinfo=datetime.timezone.utc)
-            delta = match_date - now
-            if abs(delta.days) > 2:
-                continue
-                
-            home = item.get('HomeTeam')
-            away = item.get('AwayTeam')
-            time_display = match_date.strftime("%I:%M %p")
-            
-            home_score = item.get('HomeTeamScore')
-            away_score = item.get('AwayTeamScore')
-            is_finished = home_score is not None and away_score is not None
-            is_live = False
-            
-            if not is_finished and match_date <= now <= (match_date + datetime.timedelta(hours=2)):
-                is_live = True
-                
-            slug = f"{home.lower().replace(' ', '-')}-vs-{away.lower().replace(' ', '-')}"
-            watch_url = f"https://sportsevo.thinkgovtjobs.com/watch/{slug}"
-            
-            processed.append({
-                "id": f"epl_{item.get('MatchNumber', '0')}",
-                "sport": "football",
-                "home_team": home,
-                "home_logo": get_flag_url(home),
-                "away_team": away,
-                "away_logo": get_flag_url(away),
-                "time": time_display,
-                "date": match_date.isoformat(),
-                "league": "Premier League",
-                "group": f"Matchweek {item.get('RoundNumber', '1')}",
-                "is_live": is_live,
-                "is_finished": is_finished,
-                "home_score": str(home_score) if home_score is not None else "0",
-                "away_score": str(away_score) if away_score is not None else "0",
-                "watch_url": watch_url
-            })
-        except Exception as ex:
-            print(f"Error processing fixture: {ex}")
-    return processed
+def fetch_365scores_game(game_id):
+    url = f"https://webws.365scores.com/web/game/?gameId={game_id}"
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Origin': 'https://www.365scores.com',
+                'Referer': 'https://www.365scores.com/'
+            }
+        )
+        with urllib.request.urlopen(req, timeout=5) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            return data.get('game')
+    except Exception as e:
+        print(f"Error fetching 365scores game {game_id}: {e}")
+        return None
 
 def main():
-    public_matches = []
-    raw_data = fetch_public_fixtures()
-    if raw_data:
-        public_matches = process_fixtures(raw_data)
-        print(f"Processed {len(public_matches)} public matches.")
-        
+    # 1. Load existing matches to preserve manual ones and custom watch URLs
+    existing_matches_map = {}
     manual_matches = []
-    if os.path.exists(MANUAL_INPUT_PATH):
+    if os.path.exists(JSON_OUTPUT_PATH):
         try:
-            with open(MANUAL_INPUT_PATH, 'r') as f:
-                data = json.load(f)
-                manual_matches = data.get('matches', [])
-                print(f"Loaded {len(manual_matches)} manual matches.")
+            with open(JSON_OUTPUT_PATH, 'r') as f:
+                old_data = json.load(f)
+                for m in old_data.get('matches', []):
+                    m_id = m.get('id')
+                    if m_id:
+                        existing_matches_map[m_id] = m
+                        # A manual match has an ID that does NOT start with 'hs_'
+                        if not m_id.startswith('hs_'):
+                            manual_matches.append(m)
+            print(f"Loaded {len(existing_matches_map)} total matches from local JSON. Found {len(manual_matches)} manual matches.")
         except Exception as e:
-            print(f"Error reading manual matches: {e}")
+            print(f"Error loading existing matches: {e}")
             
-    final_matches = []
-    merged_ids = set()
+    # 2. Fetch matches from hellosports.live
+    scraped_list = fetch_hellosports_matches()
     
-    for m in manual_matches:
-        final_matches.append(m)
-        if 'id' in m:
-            merged_ids.add(m['id'])
+    # 3. Process matches using 365scores API
+    processed_scraped_matches = []
+    for match in scraped_list:
+        scraped_id = match["scraped_id"]
+        hs_id = f"hs_{scraped_id}"
+        print(f"Processing match: {match['home_team']} vs {match['away_team']} ({scraped_id})...")
+        
+        # Query 365scores API
+        game = fetch_365scores_game(scraped_id)
+        
+        home_score = "0"
+        away_score = "0"
+        is_live = False
+        is_finished = False
+        
+        if game:
+            h_score_val = game.get('homeCompetitor', {}).get('score', -1)
+            a_score_val = game.get('awayCompetitor', {}).get('score', -1)
             
-    for m in public_matches:
-        if m['id'] not in merged_ids:
-            team_combo = (m['home_team'], m['away_team'])
-            duplicate = False
-            for mm in manual_matches:
-                if mm.get('home_team') == m['home_team'] and mm.get('away_team') == m['away_team']:
-                    duplicate = True
-                    break
-            if not duplicate:
-                final_matches.append(m)
+            home_score = str(h_score_val) if h_score_val != -1 else "0"
+            away_score = str(a_score_val) if a_score_val != -1 else "0"
+            
+            status_text = game.get('statusText', '').lower()
+            status_group = game.get('statusGroup')
+            
+            if status_text in ['ended', 'finished', 'cancelled', 'postponed', 'aborted']:
+                is_finished = True
+            elif status_text == 'scheduled':
+                is_live = False
+                is_finished = False
+            else:
+                if status_group == 3:
+                    is_live = True
+                elif status_group == 4:
+                    is_finished = True
+                else:
+                    # Fallback check: if start time is past but status is not ended
+                    try:
+                        # Use current time comparison
+                        now = datetime.datetime.now(datetime.timezone.utc)
+                        # data-start format: e.g. "2026-06-25T00:30:00+05:30"
+                        # Clean offset for fromisoformat (replace timezone format if older python)
+                        clean_start = match["start"]
+                        if clean_start.endswith('Z'):
+                            clean_start = clean_start[:-1] + '+00:00'
+                        start_dt = datetime.datetime.fromisoformat(clean_start)
+                        if start_dt <= now <= (start_dt + datetime.timedelta(hours=3)):
+                            is_live = True
+                        elif now > (start_dt + datetime.timedelta(hours=3)):
+                            is_finished = True
+                    except Exception as te:
+                        print(f"Time parsing error fallback: {te}")
+        else:
+            print(f"No API response for {scraped_id}. Using time-based status fallbacks.")
+            try:
+                now = datetime.datetime.now(datetime.timezone.utc)
+                clean_start = match["start"]
+                if clean_start.endswith('Z'):
+                    clean_start = clean_start[:-1] + '+00:00'
+                start_dt = datetime.datetime.fromisoformat(clean_start)
+                if start_dt <= now <= (start_dt + datetime.timedelta(hours=3)):
+                    is_live = True
+                elif now > (start_dt + datetime.timedelta(hours=3)):
+                    is_finished = True
+            except Exception as te:
+                print(f"Time parsing error: {te}")
                 
+        # Fallback and Map team logos using 365scores CDN
+        home_logo = f"https://widgets.365scores.com/images/teams/width/80/{match['home_id']}.png" if match['home_id'] else "https://i.ibb.co/qF41b08G/HELLO-THUM.png"
+        away_logo = f"https://widgets.365scores.com/images/teams/width/80/{match['away_id']}.png" if match['away_id'] else "https://i.ibb.co/qF41b08G/HELLO-THUM.png"
+        
+        # Preserving customized watch URLs from admin panel manually
+        watch_url = match["url"]
+        if hs_id in existing_matches_map:
+            old_match = existing_matches_map[hs_id]
+            old_watch_url = old_match.get('watch_url', '')
+            if old_watch_url and old_watch_url.startswith('http'):
+                watch_url = old_watch_url
+                print(f"  Preserved custom watch URL: {watch_url}")
+                
+        processed_scraped_matches.append({
+            "id": hs_id,
+            "sport": match["sport"],
+            "home_team": match["home_team"],
+            "home_logo": home_logo,
+            "away_team": match["away_team"],
+            "away_logo": away_logo,
+            "time": format_display_time(match["start"]),
+            "date": match["start"],
+            "league": match["league"],
+            "group": match["group"],
+            "is_live": is_live,
+            "is_finished": is_finished,
+            "home_score": home_score,
+            "away_score": away_score,
+            "watch_url": watch_url
+        })
+        
+    # 4. Merge manual matches and new scraped matches
+    final_matches = manual_matches + processed_scraped_matches
+    
     output_data = {
         "success": True,
         "matches": final_matches,
         "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat()
     }
     
+    # Ensure folder directory exists
+    os.makedirs(os.path.dirname(JSON_OUTPUT_PATH), exist_ok=True)
     with open(JSON_OUTPUT_PATH, 'w') as f:
         json.dump(output_data, f, indent=2)
     print(f"Saved {len(final_matches)} total matches to {JSON_OUTPUT_PATH}.")

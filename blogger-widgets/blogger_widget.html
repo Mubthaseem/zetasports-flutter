@@ -485,6 +485,7 @@
         `;
 
         let centerMarkup = '';
+        let countdownId = null;
         if (match.is_live) {
           centerMarkup = `
             <div class="center-info">
@@ -510,7 +511,7 @@
             </div>
           `;
         } else {
-          const countdownId = `countdown-${match.id}-${idx}`;
+          countdownId = `countdown-${match.id}-${idx}`;
           centerMarkup = `
             <div class="center-info">
               <div class="match-time">${match.time}</div>
@@ -518,11 +519,14 @@
               <div class="league-badge">${match.league}</div>
             </div>
           `;
-          startCountdown(match.date, countdownId);
         }
 
         card.innerHTML = homeBlock + centerMarkup + awayBlock;
         grid.appendChild(card);
+
+        if (countdownId) {
+          startCountdown(match.date, countdownId);
+        }
       });
     }
 
