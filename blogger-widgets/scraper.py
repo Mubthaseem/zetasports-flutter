@@ -93,22 +93,30 @@ def fetch_365scores_game(game_id):
         print(f"Error fetching 365scores game {game_id}: {e}")
         return None
 
+def clean_team_name(name):
+    if not name:
+        return ""
+    name = name.lower()
+    name = name.replace('&amp;', '&').replace('&', 'and')
+    name = re.sub(r'[^a-z0-9]', '', name)
+    return name
+
+def is_duplicate_match(team_a1, team_a2, team_b1, team_b2):
+    a1 = clean_team_name(team_a1)
+    a2 = clean_team_name(team_a2)
+    b1 = clean_team_name(team_b1)
+    b2 = clean_team_name(team_b2)
+    return (a1 == b1 and a2 == b2) or (a1 == b2 and a2 == b1)
+
 def main():
-    # 1. Load existing matches to preserve manual ones and custom watch URLs
-    existing_matches_map = {}
-    manual_matches = []
+    # 1. Load existing matches
+    existing_matches = []
     if os.path.exists(JSON_OUTPUT_PATH):
         try:
             with open(JSON_OUTPUT_PATH, 'r') as f:
                 old_data = json.load(f)
-                for m in old_data.get('matches', []):
-                    m_id = m.get('id')
-                    if m_id:
-                        existing_matches_map[m_id] = m
-                        # A manual match has an ID that does NOT start with 'hs_'
-                        if not m_id.startswith('hs_'):
-                            manual_matches.append(m)
-            print(f"Loaded {len(existing_matches_map)} total matches from local JSON. Found {len(manual_matches)} manual matches.")
+                existing_matches = old_data.get('matches', [])
+            print(f"Loaded {len(existing_matches)} matches from existing JSON.")
         except Exception as e:
             print(f"Error loading existing matches: {e}")
             
@@ -117,11 +125,30 @@ def main():
     
     # 3. Process matches using 365scores API
     processed_scraped_matches = []
+    merged_existing_ids = set()
+    
     for match in scraped_list:
         scraped_id = match["scraped_id"]
         hs_id = f"hs_{scraped_id}"
         print(f"Processing match: {match['home_team']} vs {match['away_team']} ({scraped_id})...")
         
+        # Check if there's a matching existing match (by ID or by team names)
+        matched_existing = None
+        for em in existing_matches:
+            em_id = em.get('id', '')
+            if em_id == hs_id:
+                matched_existing = em
+                break
+            # Also check if it's a manual match representing the same fixture
+            if not em_id.startswith('hs_'):
+                if is_duplicate_match(em.get('home_team'), em.get('away_team'), match['home_team'], match['away_team']):
+                    matched_existing = em
+                    break
+                    
+        if matched_existing:
+            merged_existing_ids.add(matched_existing['id'])
+            print(f"  Matched with existing entry: {matched_existing['id']}")
+            
         # Query 365scores API
         game = fetch_365scores_game(scraped_id)
         
@@ -155,8 +182,6 @@ def main():
                     try:
                         # Use current time comparison
                         now = datetime.datetime.now(datetime.timezone.utc)
-                        # data-start format: e.g. "2026-06-25T00:30:00+05:30"
-                        # Clean offset for fromisoformat (replace timezone format if older python)
                         clean_start = match["start"]
                         if clean_start.endswith('Z'):
                             clean_start = clean_start[:-1] + '+00:00'
@@ -188,12 +213,11 @@ def main():
         
         # Preserving customized watch URLs from admin panel manually
         watch_url = match["url"]
-        if hs_id in existing_matches_map:
-            old_match = existing_matches_map[hs_id]
-            old_watch_url = old_match.get('watch_url', '')
+        if matched_existing:
+            old_watch_url = matched_existing.get('watch_url', '')
             if old_watch_url and old_watch_url.startswith('http'):
                 watch_url = old_watch_url
-                print(f"  Preserved custom watch URL: {watch_url}")
+                print(f"  Preserved watch URL: {watch_url}")
                 
         processed_scraped_matches.append({
             "id": hs_id,
@@ -213,8 +237,17 @@ def main():
             "watch_url": watch_url
         })
         
-    # 4. Merge manual matches and new scraped matches
-    final_matches = manual_matches + processed_scraped_matches
+    # 4. Retain only manual matches that were not merged
+    remaining_manual_matches = []
+    for em in existing_matches:
+        em_id = em.get('id', '')
+        if em_id not in merged_existing_ids and not em_id.startswith('hs_'):
+            remaining_manual_matches.append(em)
+            
+    print(f"Retained {len(remaining_manual_matches)} manual matches that do not duplicate scraped ones.")
+    
+    # 5. Merge remaining manual matches and new scraped matches
+    final_matches = remaining_manual_matches + processed_scraped_matches
     
     output_data = {
         "success": True,
