@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Matches Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --panel-bg: rgba(22, 28, 45, 0.7);
+      --border: rgba(255, 255, 255, 0.08);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-green: #10b981;
+      --accent-red: #ef4444;
+      --accent-sky: #0ea5e9;
+      --card-hover: rgba(255, 255, 255, 0.02);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    h1 span {
+      color: var(--accent-sky);
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1.8fr;
+      gap: 30px;
+    }
+
+    @media (max-width: 968px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel {
+      background: var(--panel-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .panel-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime-local"],
+    select {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--accent-sky);
+      box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-green {
+      background: var(--accent-green);
+    }
+    .btn-green:hover {
+      background: #0d9488;
+    }
+
+    .btn-red {
+      background: var(--accent-red);
+    }
+    .btn-red:hover {
+      background: #dc2626;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-full {
+      width: 100%;
+      padding: 12px;
+    }
+
+    .matches-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 550px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    .matches-list::-webkit-scrollbar {
+      width: 6px;
+    }
+    .matches-list::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 3px;
+    }
+
+    .match-item {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s;
+    }
+
+    .match-item:hover {
+      background: var(--card-hover);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .match-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .match-teams {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .match-meta {
+      font-size: 12px;
+      color: var(--text-secondary);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .sport-tag {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .live-dot {
+      color: var(--accent-red);
+      animation: pulse 1.5s infinite;
+      font-weight: 800;
+    }
+
+    .match-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+
+    .github-box {
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    .json-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .json-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    textarea.json-output {
+      width: 100%;
+      height: 300px;
+      background: rgba(0,0,0,0.5);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: #10b981;
+      font-family: monospace;
+      padding: 12px;
+      margin-bottom: 16px;
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Sports Dashboard <span>Admin Panel</span></h1>
+    <div style="display: flex; gap: 10px;">
+      <button class="btn btn-secondary" onclick="openJsonExport()">📦 View Raw JSON</button>
+      <button class="btn btn-green" onclick="saveToGithub()">💾 Save to GitHub</button>
+    </div>
+  </header>
+
+  <div class="dashboard-grid">
+    <!-- Left Panel -->
+    <div style="display: flex; flex-direction: column; gap: 30px;">
+      <!-- GitHub Configurations -->
+      <div class="panel">
+        <div class="panel-title">GitHub Config</div>
+        <div class="github-box">
+          <div class="form-group">
+            <label>GitHub Username</label>
+            <input type="text" id="gh-user" placeholder="e.g. Mubthaseem">
+          </div>
+          <div class="form-group">
+            <label>Repository Name</label>
+            <input type="text" id="gh-repo" placeholder="e.g. zetasports-flutter">
+          </div>
+          <div class="form-group">
+            <label>File Path in Repo</label>
+            <input type="text" id="gh-path" value="blogger-widgets/matches.json">
+          </div>
+          <div class="form-group">
+            <label>Personal Access Token (PAT)</label>
+            <input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+          </div>
+          <button class="btn btn-full" onclick="loadFromGithub()">📥 Load from GitHub</button>
+        </div>
+      </div>
+
+      <!-- Match List -->
+      <div class="panel">
+        <div class="panel-title">
+          <span>Active Matches</span>
+          <button class="btn btn-secondary" style="padding: 4px 10px; font-size: 12px;" onclick="clearForm()">+ New Match</button>
+        </div>
+        <div class="matches-list" id="matches-list">
+          <div style="text-align: center; color: var(--text-secondary); padding: 20px;">No matches loaded. Start by adding one or loading from GitHub.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="panel">
+      <div class="panel-title" id="form-title">Add New Match</div>
+      <form id="match-form" onsubmit="handleFormSubmit(event)">
+        <input type="hidden" id="match-idx" value="-1">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Sport</label>
+            <select id="match-sport">
+              <option value="football">Football</option>
+              <option value="cricket">Cricket</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>League / Tournament</label>
+            <input type="text" id="match-league" placeholder="e.g. FIFA World Cup" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Group / Details</label>
+          <input type="text" id="match-group" placeholder="e.g. Group B or Super 8s">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Home Team</label>
+            <input type="text" id="match-home" placeholder="Switzerland" required>
+          </div>
+          <div class="form-group">
+            <label>Away Team</label>
+            <input type="text" id="match-away" placeholder="Canada" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Home Logo / Flag URL</label>
+            <input type="text" id="match-home-logo" placeholder="Auto-mapped if blank">
+          </div>
+          <div class="form-group">
+            <label>Away Logo / Flag URL</label>
+            <input type="text" id="match-away-logo" placeholder="Auto-mapped if blank">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date & Time (Your Local Time)</label>
+            <input type="datetime-local" id="match-datetime" required>
+          </div>
+          <div class="form-group">
+            <label>Display Time String</label>
+            <input type="text" id="match-time-str" placeholder="e.g. 12:30 AM" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Streaming / Watch URL</label>
+          <input type="text" id="match-url" placeholder="https://sportsevo.thinkgovtjobs.com/watch/swiss-vs-canada">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Match Status</label>
+            <select id="match-status" onchange="toggleScoreInputs()">
+              <option value="upcoming">Upcoming</option>
+              <option value="live">Live</option>
+              <option value="finished">Finished</option>
+            </select>
+          </div>
+          <div class="form-group" id="score-row-container" style="display: none;">
+            <label>Live Score (Home - Away)</label>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <input type="text" id="match-home-score" value="0" style="text-align: center;">
+              <span>-</span>
+              <input type="text" id="match-away-score" value="0" style="text-align: center;">
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <button type="submit" class="btn btn-full" id="submit-btn">Add Match</button>
+          <button type="button" class="btn btn-secondary" onclick="clearForm()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="json-modal" class="json-modal">
+  <div class="json-box">
+    <div class="panel-title">Raw matches.json Output</div>
+    <textarea id="json-output" class="json-output" readonly></textarea>
+    <div style="display: flex; justify-content: flex-end; gap: 10px;">
+      <button class="btn btn-secondary" onclick="copyJsonText()">📋 Copy JSON</button>
+      <button class="btn btn-red" onclick="closeJsonExport()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let matches = [];
+
+  const FLAG_MAP = {
+    'switzerland': 'ch', 'canada': 'ca', 'bosnia': 'ba', 'qatar': 'qa',
+    'scotland': 'gb-sct', 'brazil': 'br', 'morocco': 'ma', 'haiti': 'ht',
+    'india': 'in', 'australia': 'au', 'colombia': 'co', 'congo': 'cd',
+    'south africa': 'za', 'south korea': 'kr', 'czechia': 'cz', 'mexico': 'mx'
+  };
+
+  function getAutoLogo(teamName) {
+    if (!teamName) return '';
+    const cleanName = teamName.toLowerCase().trim();
+    for (const key in FLAG_MAP) {
+      if (cleanName.includes(key)) {
+        return `https://flagcdn.com/w80/${FLAG_MAP[key]}.png`;
+      }
+    }
+    return 'https://i.ibb.co/qF41b08G/HELLO-THUM.png';
+  }
+
+  window.onload = () => {
+    document.getElementById('gh-user').value = localStorage.getItem('gh-user') || 'Mubthaseem';
+    document.getElementById('gh-repo').value = localStorage.getItem('gh-repo') || 'zetasports-flutter';
+    document.getElementById('gh-path').value = localStorage.getItem('gh-path') || 'blogger-widgets/matches.json';
+    document.getElementById('gh-token').value = localStorage.getItem('gh-token') || '';
+    
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    document.getElementById('match-datetime').value = now.toISOString().slice(0, 16);
+    
+    updateDisplayTime();
+    document.getElementById('match-datetime').addEventListener('change', updateDisplayTime);
+  };
+
+  function updateDisplayTime() {
+    const datetimeVal = document.getElementById('match-datetime').value;
+    if (!datetimeVal) return;
+    const date = new Date(datetimeVal);
+    let hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    document.getElementById('match-time-str').value = `${hours}:${minutes} ${ampm}`;
+  }
+
+  function toggleScoreInputs() {
+    const status = document.getElementById('match-status').value;
+    const container = document.getElementById('score-row-container');
+    if (status === 'live' || status === 'finished') {
+      container.style.display = 'block';
+    } else {
+      container.style.display = 'none';
+    }
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const idx = parseInt(document.getElementById('match-idx').value);
+    const datetimeStr = document.getElementById('match-datetime').value;
+    const isoDate = new Date(datetimeStr).toISOString();
+
+    const homeTeam = document.getElementById('match-home').value;
+    const awayTeam = document.getElementById('match-away').value;
+
+    const homeLogo = document.getElementById('match-home-logo').value || getAutoLogo(homeTeam);
+    const awayLogo = document.getElementById('match-away-logo').value || getAutoLogo(awayTeam);
+
+    const status = document.getElementById('match-status').value;
+
+    const newMatch = {
+      id: idx >= 0 ? matches[idx].id : `match_${Date.now()}`,
+      sport: document.getElementById('match-sport').value,
+      home_team: homeTeam,
+      home_logo: homeLogo,
+      away_team: awayTeam,
+      away_logo: awayLogo,
+      time: document.getElementById('match-time-str').value,
+      date: isoDate,
+      league: document.getElementById('match-league').value,
+      group: document.getElementById('match-group').value || '',
+      is_live: status === 'live',
+      is_finished: status === 'finished',
+      home_score: document.getElementById('match-home-score').value || "0",
+      away_score: document.getElementById('match-away-score').value || "0",
+      watch_url: document.getElementById('match-url').value || ''
+    };
+
+    if (idx >= 0) {
+      matches[idx] = newMatch;
+    } else {
+      matches.push(newMatch);
+    }
+
+    clearForm();
+    renderMatchesList();
+  }
+
+  function renderMatchesList() {
+    const list = document.getElementById('matches-list');
+    if (matches.length === 0) {
+      list.innerHTML = `<div style="text-align: center; color: var(--text-secondary); padding: 20px;">No matches added yet.</div>`;
+      return;
+    }
+
+    list.innerHTML = '';
+    matches.forEach((match, idx) => {
+      const item = document.createElement('div');
+      item.className = 'match-item';
+
+      const liveBadge = match.is_live ? '<span class="live-dot">● LIVE</span>' : '';
+      const finishBadge = match.is_finished ? '<span style="color:var(--text-secondary)">FT</span>' : '';
+
+      item.innerHTML = `
+        <div class="match-info">
+          <div class="match-teams">${match.home_team} vs ${match.away_team}</div>
+          <div class="match-meta">
+            <span class="sport-tag">${match.sport}</span>
+            <span>${match.time}</span>
+            ${liveBadge}
+            ${finishBadge}
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn btn-secondary" style="padding: 4px 8px; font-size:12px" onclick="editMatch(${idx})">Edit</button>
+          <button class="btn btn-red" style="padding: 4px 8px; font-size:12px" onclick="deleteMatch(${idx})">Delete</button>
+        </div>
+      `;
+      list.appendChild(item);
+    });
+  }
+
+  function editMatch(idx) {
+    const match = matches[idx];
+    document.getElementById('match-idx').value = idx;
+    document.getElementById('form-title').textContent = "Edit Match";
+    document.getElementById('submit-btn').textContent = "Save Changes";
+
+    document.getElementById('match-sport').value = match.sport;
+    document.getElementById('match-league').value = match.league;
+    document.getElementById('match-group').value = match.group;
+    document.getElementById('match-home').value = match.home_team;
+    document.getElementById('match-away').value = match.away_team;
+    document.getElementById('match-home-logo').value = match.home_logo;
+    document.getElementById('match-away-logo').value = match.away_logo;
+    document.getElementById('match-time-str').value = match.time;
+    document.getElementById('match-url').value = match.watch_url;
+
+    const date = new Date(match.date);
+    date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
+    document.getElementById('match-datetime').value = date.toISOString().slice(0, 16);
+
+    let status = 'upcoming';
+    if (match.is_live) status = 'live';
+    else if (match.is_finished) status = 'finished';
+    
+    document.getElementById('match-status').value = status;
+    document.getElementById('match-home-score').value = match.home_score;
+    document.getElementById('match-away-score').value = match.away_score;
+    
+    toggleScoreInputs();
+  }
+
+  function deleteMatch(idx) {
+    if (confirm("Are you sure you want to delete this match?")) {
+      matches.splice(idx, 1);
+      renderMatchesList();
+    }
+  }
+
+  function clearForm() {
+    document.getElementById('match-idx').value = "-1";
+    document.getElementById('form-title').textContent = "Add New Match";
+    document.getElementById('submit-btn').textContent = "Add Match";
+    
+    document.getElementById('match-home').value = '';
+    document.getElementById('match-away').value = '';
+    document.getElementById('match-home-logo').value = '';
+    document.getElementById('match-away-logo').value = '';
+    document.getElementById('match-url').value = '';
+    document.getElementById('match-group').value = '';
+    document.getElementById('match-home-score').value = '0';
+    document.getElementById('match-away-score').value = '0';
+    document.getElementById('match-status').value = 'upcoming';
+
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    document.getElementById('match-datetime').value = now.toISOString().slice(0, 16);
+    updateDisplayTime();
+    toggleScoreInputs();
+  }
+
+  function getJsonData() {
+    return JSON.stringify({ success: true, matches: matches, last_updated: new Date().toISOString() }, null, 2);
+  }
+
+  function openJsonExport() {
+    document.getElementById('json-output').value = getJsonData();
+    document.getElementById('json-modal').style.display = 'flex';
+  }
+
+  function closeJsonExport() {
+    document.getElementById('json-modal').style.display = 'none';
+  }
+
+  function copyJsonText() {
+    const text = document.getElementById('json-output');
+    text.select();
+    document.execCommand('copy');
+    alert('JSON copied to clipboard!');
+  }
+
+  function saveGithubSettings() {
+    const user = document.getElementById('gh-user').value.trim();
+    const repo = document.getElementById('gh-repo').value.trim();
+    const path = document.getElementById('gh-path').value.trim();
+    const token = document.getElementById('gh-token').value.trim();
+
+    localStorage.setItem('gh-user', user);
+    localStorage.setItem('gh-repo', repo);
+    localStorage.setItem('gh-path', path);
+    localStorage.setItem('gh-token', token);
+
+    return { user, repo, path, token };
+  }
+
+  async function loadFromGithub() {
+    const settings = saveGithubSettings();
+    if (!settings.user || !settings.repo) {
+      alert("Please fill in Username and Repository name.");
+      return;
+    }
+
+    const url = `https://api.github.com/repos/${settings.user}/${settings.repo}/contents/${settings.path}`;
+    const headers = {};
+    if (settings.token) {
+      headers['Authorization'] = `token ${settings.token}`;
+    }
+
+    try {
+      const response = await fetch(url + '?t=' + Date.now(), { headers });
+      if (!response.ok) {
+        if (response.status === 404) {
+          alert("File not found on GitHub. Starting with an empty list.");
+          matches = [];
+          renderMatchesList();
+          return;
+        }
+        throw new Error(`GitHub returned status: ${response.status}`);
+      }
+
+      const fileData = await response.json();
+      const content = decodeURIComponent(escape(atob(fileData.content)));
+      const parsed = JSON.parse(content);
+      
+      matches = parsed.matches || [];
+      renderMatchesList();
+      alert("Matches loaded successfully from GitHub!");
+    } catch (e) {
+      console.error(e);
+      alert("Error loading matches from GitHub: " + e.message);
+    }
+  }
+
+  async function saveToGithub() {
+    const settings = saveGithubSettings();
+    if (!settings.user || !settings.repo || !settings.token) {
+      alert("Personal Access Token (PAT), Username, and Repository are required to save changes.");
+      return;
+    }
+
+    const url = `https://api.github.com/repos/${settings.user}/${settings.repo}/contents/${settings.path}`;
+    const headers = {
+      'Authorization': `token ${settings.token}`,
+      'Content-Type': 'application/json'
+    };
+
+    let sha = '';
+    try {
+      const getRes = await fetch(url, { headers: { 'Authorization': `token ${settings.token}` } });
+      if (getRes.ok) {
+        const fileData = await getRes.json();
+        sha = fileData.sha;
+      }
+    } catch (e) {
+      console.log("File does not exist yet.");
+    }
+
+    const jsonString = getJsonData();
+    const base64Content = btoa(unescape(encodeURIComponent(jsonString)));
+    
+    const payload = {
+      message: "Update matches via Admin Panel",
+      content: base64Content,
+      branch: "main"
+    };
+    if (sha) {
+      payload.sha = sha;
+    }
+
+    try {
+      const putRes = await fetch(url, {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify(payload)
+      });
+
+      if (putRes.ok) {
+        alert("Matches saved directly to GitHub successfully!");
+      } else {
+        const errorData = await putRes.json();
+        throw new Error(errorData.message || "Failed to push file");
+      }
+    } catch (e) {
+      console.error(e);
+      alert("Error saving to GitHub: " + e.message);
+    }
+  }
+</script>
+
+</body>
+</html>

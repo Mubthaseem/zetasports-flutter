@@ -1,0 +1,560 @@
+<!--
+  ============================================================
+  Premium Live Sports Matches Widget (Dark Edition)
+  Author: Antigravity (Google DeepMind)
+  Features: Live countdowns, auto-scores, redirection watch links
+  ============================================================
+-->
+<div id="zeta-sports-container" class="zeta-sports-dark">
+  
+  <!-- Sport Filters -->
+  <div class="sports-filter-row">
+    <button class="sport-btn active" data-sport="all">
+      <span class="btn-icon">🏆</span> All
+    </button>
+    <button class="sport-btn" data-sport="football">
+      <span class="btn-icon">⚽</span> Football
+    </button>
+    <button class="sport-btn" data-sport="cricket">
+      <span class="btn-icon">🏏</span> Cricket
+    </button>
+  </div>
+
+  <!-- Date Tabs -->
+  <div class="date-tabs-row">
+    <button class="date-tab-btn" data-date-tab="yesterday">Yesterday</button>
+    <button class="date-tab-btn active" data-date-tab="today">Today</button>
+    <button class="date-tab-btn" data-date-tab="tomorrow">Tomorrow</button>
+  </div>
+
+  <!-- Matches Grid Container -->
+  <div id="matches-grid" class="matches-grid">
+    <div class="matches-loader">
+      <div class="spinner"></div>
+      <p>Fetching live matches...</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Base & Theme Variables */
+  :root {
+    --zeta-bg: #090d16;
+    --zeta-card-bg: rgba(22, 28, 45, 0.6);
+    --zeta-border: rgba(255, 255, 255, 0.08);
+    --zeta-text-primary: #f8fafc;
+    --zeta-text-secondary: #94a3b8;
+    --zeta-accent-blue: #2563eb;
+    --zeta-accent-sky: #0ea5e9;
+    --zeta-accent-green: #10b981;
+    --zeta-accent-red: #ef4444;
+  }
+
+  #zeta-sports-container.zeta-sports-dark {
+    background-color: var(--zeta-bg);
+    color: var(--zeta-text-primary);
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    margin: 20px auto;
+    border: 1px solid var(--zeta-border);
+    backdrop-filter: blur(12px);
+  }
+
+  /* Sport Filter Buttons */
+  .sports-filter-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .sport-btn {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--zeta-border);
+    color: var(--zeta-text-secondary);
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .sport-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--zeta-text-primary);
+    transform: translateY(-1px);
+  }
+
+  .sport-btn.active {
+    background: var(--zeta-text-primary);
+    color: var(--zeta-bg);
+    border-color: var(--zeta-text-primary);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  }
+
+  /* Date Tabs */
+  .date-tabs-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--zeta-border);
+    border-radius: 12px;
+    padding: 6px;
+    margin-bottom: 24px;
+  }
+
+  .date-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--zeta-text-secondary);
+    padding: 12px 6px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+
+  .date-tab-btn:hover {
+    color: var(--zeta-text-primary);
+  }
+
+  .date-tab-btn.active {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--zeta-text-primary);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Matches Grid & Cards */
+  .matches-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 200px;
+  }
+
+  .match-card {
+    background: var(--zeta-card-bg);
+    border: 1px solid var(--zeta-border);
+    border-radius: 16px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+  }
+
+  .match-card:hover {
+    transform: translateY(-3px) scale(1.01);
+    background: rgba(22, 28, 45, 0.85);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Team Styling */
+  .team-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .team-block.home {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .team-block.away {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .team-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--zeta-text-primary);
+    letter-spacing: -0.2px;
+  }
+
+  .team-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  }
+
+  /* Center Status & Info */
+  .center-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    min-width: 130px;
+  }
+
+  .match-time {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--zeta-text-primary);
+    margin-bottom: 6px;
+  }
+
+  .league-badge {
+    font-size: 11px;
+    color: var(--zeta-text-secondary);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+  }
+
+  /* Badge Badges */
+  .status-badge {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    letter-spacing: 0.5px;
+  }
+
+  .status-badge.live {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--zeta-accent-red);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    animation: pulseRed 1.8s infinite;
+  }
+
+  .status-badge.countdown {
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--zeta-accent-green);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+  }
+
+  .status-badge.finished {
+    background: rgba(148, 163, 184, 0.1);
+    color: var(--zeta-text-secondary);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  /* Live Score */
+  .live-score-display {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--zeta-text-primary);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 4px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--zeta-border);
+    margin-bottom: 6px;
+  }
+
+  .score-divider {
+    color: var(--zeta-text-secondary);
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  /* Loader / Empty States */
+  .matches-loader, .matches-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--zeta-text-secondary);
+  }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--zeta-border);
+    border-top: 3px solid var(--zeta-accent-sky);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 16px;
+  }
+
+  .empty-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+    opacity: 0.6;
+  }
+
+  /* Animations */
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes pulseRed {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 640px) {
+    .match-card {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .team-block.home {
+      justify-content: center;
+      text-align: center;
+      flex-direction: column-reverse;
+    }
+
+    .team-block.away {
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .center-info {
+      order: -1;
+      border-bottom: 1px solid var(--zeta-border);
+      padding-bottom: 12px;
+      margin-bottom: 4px;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    // ==========================================
+    // CONFIGURATION - Linked to your GitHub Repo
+    // ==========================================
+    const JSON_URL = "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/blogger-widgets/matches.json";
+    const POLL_INTERVAL = 30000; // Poll matches data every 30 seconds
+
+    let matchesData = [];
+    let activeSport = 'all';
+    let activeDateTab = 'today';
+    let countdownIntervals = [];
+
+    // Initialize Widget
+    document.addEventListener("DOMContentLoaded", () => {
+      initWidget();
+    });
+
+    async function initWidget() {
+      setupEventListeners();
+      await fetchMatches();
+      // Start polling loop
+      setInterval(fetchMatches, POLL_INTERVAL);
+    }
+
+    function setupEventListeners() {
+      // Sport Filter Click
+      document.querySelectorAll(".sport-btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          document.querySelectorAll(".sport-btn").forEach(b => b.classList.remove("active"));
+          const target = e.currentTarget;
+          target.classList.add("active");
+          activeSport = target.getAttribute("data-sport");
+          renderMatches();
+        });
+      });
+
+      // Date Tab Click
+      document.querySelectorAll(".date-tab-btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          document.querySelectorAll(".date-tab-btn").forEach(b => b.classList.remove("active"));
+          const target = e.currentTarget;
+          target.classList.add("active");
+          activeDateTab = target.getAttribute("data-date-tab");
+          renderMatches();
+        });
+      });
+    }
+
+    async function fetchMatches() {
+      try {
+        const response = await fetch(JSON_URL + '?t=' + new Date().getTime()); // Avoid caching
+        if (!response.ok) throw new Error("Network response error fetching matches");
+        const data = await response.json();
+        
+        if (data && data.matches) {
+          matchesData = data.matches;
+          renderMatches();
+        }
+      } catch (err) {
+        console.error("Failed to fetch sports matches:", err);
+        if (matchesData.length === 0) {
+          const grid = document.getElementById("matches-grid");
+          grid.innerHTML = `
+            <div class="matches-empty">
+              <div class="empty-icon">⚠️</div>
+              <h3>Unable to load matches</h3>
+              <p>Failed to connect to matches feed. Check repository raw link configuration.</p>
+            </div>
+          `;
+        }
+      }
+    }
+
+    function getMatchDateCategory(isoString) {
+      const matchDate = new Date(isoString);
+      const today = new Date();
+      
+      const mDate = new Date(matchDate.getFullYear(), matchDate.getMonth(), matchDate.getDate());
+      const tDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      
+      const diffTime = mDate.getTime() - tDate.getTime();
+      const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+      
+      if (diffDays === -1) return 'yesterday';
+      if (diffDays === 0) return 'today';
+      if (diffDays === 1) return 'tomorrow';
+      
+      if (diffDays < -1) return 'yesterday';
+      return 'tomorrow';
+    }
+
+    function renderMatches() {
+      countdownIntervals.forEach(clearInterval);
+      countdownIntervals = [];
+
+      const grid = document.getElementById("matches-grid");
+      if (!grid) return;
+
+      const filtered = matchesData.filter(match => {
+        const sportMatch = activeSport === 'all' || match.sport === activeSport;
+        const dateMatch = getMatchDateCategory(match.date) === activeDateTab;
+        return sportMatch && dateMatch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="matches-empty">
+            <div class="empty-icon">📅</div>
+            <h3>No matches scheduled</h3>
+            <p>No ${activeSport !== 'all' ? activeSport : ''} matches found for ${activeDateTab}.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = '';
+
+      filtered.forEach((match, idx) => {
+        const card = document.createElement("a");
+        card.className = "match-card";
+        card.href = match.watch_url || "#";
+        if (match.watch_url) card.target = "_blank";
+
+        const homeBlock = `
+          <div class="team-block home">
+            <span class="team-name">${match.home_team}</span>
+            <img class="team-logo" src="${match.home_logo}" alt="${match.home_team}" onerror="this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
+          </div>
+        `;
+
+        const awayBlock = `
+          <div class="team-block away">
+            <img class="team-logo" src="${match.away_logo}" alt="${match.away_team}" onerror="this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
+            <span class="team-name">${match.away_team}</span>
+          </div>
+        `;
+
+        let centerMarkup = '';
+        if (match.is_live) {
+          centerMarkup = `
+            <div class="center-info">
+              <div class="live-score-display">
+                <span>${match.home_score}</span>
+                <span class="score-divider">-</span>
+                <span>${match.away_score}</span>
+              </div>
+              <div class="status-badge live">● LIVE</div>
+              <div class="league-badge">${match.league}</div>
+            </div>
+          `;
+        } else if (match.is_finished) {
+          centerMarkup = `
+            <div class="center-info">
+              <div class="live-score-display">
+                <span style="opacity: 0.8;">${match.home_score}</span>
+                <span class="score-divider">-</span>
+                <span style="opacity: 0.8;">${match.away_score}</span>
+              </div>
+              <div class="status-badge finished">FT</div>
+              <div class="league-badge">${match.league}</div>
+            </div>
+          `;
+        } else {
+          const countdownId = `countdown-${match.id}-${idx}`;
+          centerMarkup = `
+            <div class="center-info">
+              <div class="match-time">${match.time}</div>
+              <div id="${countdownId}" class="status-badge countdown">--h --m --s</div>
+              <div class="league-badge">${match.league}</div>
+            </div>
+          `;
+          startCountdown(match.date, countdownId);
+        }
+
+        card.innerHTML = homeBlock + centerMarkup + awayBlock;
+        grid.appendChild(card);
+      });
+    }
+
+    function startCountdown(targetIsoString, elementId) {
+      const targetTime = new Date(targetIsoString).getTime();
+      
+      const updateTimer = () => {
+        const el = document.getElementById(elementId);
+        if (!el) return;
+
+        const now = new Date().getTime();
+        const diff = targetTime - now;
+
+        if (diff <= 0) {
+          el.textContent = "00h 00m 00s";
+          return;
+        }
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        const hDisplay = hours.toString().padStart(2, '0');
+        const mDisplay = minutes.toString().padStart(2, '0');
+        const sDisplay = seconds.toString().padStart(2, '0');
+
+        el.textContent = `${hDisplay}h ${mDisplay}m ${sDisplay}s`;
+      };
+
+      updateTimer();
+      const interval = setInterval(updateTimer, 1000);
+      countdownIntervals.push(interval);
+    }
+  })();
+</script>

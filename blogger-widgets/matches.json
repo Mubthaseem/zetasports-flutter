@@ -1,0 +1,72 @@
+{
+  "matches": [
+    {
+      "id": "m1",
+      "sport": "football",
+      "home_team": "Switzerland",
+      "home_logo": "https://flagcdn.com/w80/ch.png",
+      "away_team": "Canada",
+      "away_logo": "https://flagcdn.com/w80/ca.png",
+      "time": "12:30 AM",
+      "date": "2026-06-25T00:30:00+05:30",
+      "league": "FIFA World Cup",
+      "group": "Group B",
+      "is_live": false,
+      "is_finished": false,
+      "home_score": "0",
+      "away_score": "0",
+      "watch_url": "https://sportsevo.thinkgovtjobs.com/watch/swiss-vs-canada"
+    },
+    {
+      "id": "m2",
+      "sport": "football",
+      "home_team": "Bosnia & Herzegovina",
+      "home_logo": "https://flagcdn.com/w80/ba.png",
+      "away_team": "Qatar",
+      "away_logo": "https://flagcdn.com/w80/qa.png",
+      "time": "12:30 AM",
+      "date": "2026-06-25T00:30:00+05:30",
+      "league": "FIFA World Cup",
+      "group": "Group B",
+      "is_live": true,
+      "is_finished": false,
+      "home_score": "2",
+      "away_score": "1",
+      "watch_url": "https://sportsevo.thinkgovtjobs.com/watch/bosnia-vs-qatar"
+    },
+    {
+      "id": "m3",
+      "sport": "football",
+      "home_team": "Scotland",
+      "home_logo": "https://flagcdn.com/w80/gb-sct.png",
+      "away_team": "Brazil",
+      "away_logo": "https://flagcdn.com/w80/br.png",
+      "time": "03:30 AM",
+      "date": "2026-06-25T03:30:00+05:30",
+      "league": "FIFA World Cup",
+      "group": "Group C",
+      "is_live": false,
+      "is_finished": false,
+      "home_score": "0",
+      "away_score": "0",
+      "watch_url": "https://sportsevo.thinkgovtjobs.com/watch/scotland-vs-brazil"
+    },
+    {
+      "id": "m4",
+      "sport": "cricket",
+      "home_team": "India",
+      "home_logo": "https://flagcdn.com/w80/in.png",
+      "away_team": "Australia",
+      "away_logo": "https://flagcdn.com/w80/au.png",
+      "time": "07:30 PM",
+      "date": "2026-06-25T19:30:00+05:30",
+      "league": "ICC T20 World Cup",
+      "group": "Super 8s",
+      "is_live": false,
+      "is_finished": false,
+      "home_score": "0",
+      "away_score": "0",
+      "watch_url": "https://sportsevo.thinkgovtjobs.com/watch/india-vs-australia"
+    }
+  ]
+}
