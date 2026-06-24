@@ -693,7 +693,7 @@
     const url = `https://api.github.com/repos/${settings.user}/${settings.repo}/contents/${settings.path}?ref=${settings.branch}`;
     const headers = {};
     if (settings.token) {
-      headers['Authorization'] = `token ${settings.token}`;
+      headers['Authorization'] = `Bearer ${settings.token}`;
     }
 
     try {
@@ -738,13 +738,13 @@
 
     const url = `https://api.github.com/repos/${settings.user}/${settings.repo}/contents/${settings.path}`;
     const headers = {
-      'Authorization': `token ${settings.token}`,
+      'Authorization': `Bearer ${settings.token}`,
       'Content-Type': 'application/json'
     };
 
     let sha = '';
     try {
-      const getRes = await fetch(url + `?ref=${settings.branch}`, { headers: { 'Authorization': `token ${settings.token}` } });
+      const getRes = await fetch(url + `?ref=${settings.branch}`, { headers: { 'Authorization': `Bearer ${settings.token}` } });
       if (getRes.ok) {
         const fileData = await getRes.json();
         sha = fileData.sha;
