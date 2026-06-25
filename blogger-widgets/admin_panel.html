@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sports Matches Admin Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #090d16;
@@ -110,6 +110,7 @@
 
     input[type="text"],
     input[type="password"],
+    input[type="date"],
     input[type="datetime-local"],
     select {
       width: 100%;
@@ -295,6 +296,342 @@
       margin-bottom: 16px;
       resize: none;
     }
+
+    /* ========================================== */
+    /* Blogger Widget Styles for Live Preview     */
+    /* ========================================== */
+    #zeta-sports-container {
+      --zs-bg: #090d16;
+      --zs-card-bg: rgba(22, 28, 45, 0.45);
+      --zs-card-hover: rgba(22, 28, 45, 0.8);
+      --zs-border: rgba(255, 255, 255, 0.08);
+      --zs-border-hover: rgba(255, 255, 255, 0.18);
+      --zs-text-primary: #f8fafc;
+      --zs-text-secondary: #94a3b8;
+      --zs-accent-blue: #2563eb;
+      --zs-accent-sky: #0ea5e9;
+      --zs-accent-green: #10b981;
+      --zs-accent-red: #ef4444;
+    }
+
+    #zeta-sports-container.zeta-sports-dark {
+      background: radial-gradient(circle at 50% 10%, #0d1326 0%, #050811 100%);
+      color: var(--zs-text-primary);
+      font-family: 'Inter', -apple-system, sans-serif;
+      padding: 28px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+      max-width: 900px;
+      margin: 20px auto;
+      border: 1px solid var(--zs-border);
+      backdrop-filter: blur(12px);
+      box-sizing: border-box;
+    }
+
+    #zeta-sports-container.zeta-sports-dark * {
+      box-sizing: border-box;
+    }
+
+    /* Sport Filter Buttons */
+    .sports-filter-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .sport-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--zs-border);
+      color: var(--zs-text-secondary);
+      padding: 10px 22px;
+      border-radius: 9999px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sport-btn:hover {
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--zs-text-primary);
+      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .sport-btn.active {
+      background: var(--zs-text-primary);
+      color: var(--zs-bg);
+      border-color: var(--zs-text-primary);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.12);
+    }
+
+    /* Date Tabs */
+    .date-tabs-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--zs-border);
+      border-radius: 14px;
+      padding: 6px;
+      margin-bottom: 28px;
+    }
+
+    .date-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--zs-text-secondary);
+      padding: 12px 6px;
+      border-radius: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .date-tab-btn:hover {
+      color: var(--zs-text-primary);
+    }
+
+    .date-tab-btn.active {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--zs-text-primary);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Matches Grid & Cards */
+    .matches-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-height: 200px;
+    }
+
+    .match-card {
+      background: var(--zs-card-bg);
+      border: 1px solid var(--zs-border);
+      border-radius: 18px;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 1.1fr auto 1.1fr;
+      align-items: center;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+    }
+
+    /* Clickable Card Hover */
+    a.match-card:hover {
+      transform: translateY(-2px);
+      background: var(--zs-card-hover);
+      border-color: var(--zs-border-hover);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(37, 99, 235, 0.05);
+      cursor: pointer;
+    }
+
+    /* Static (Non-Clickable) Card Styling */
+    div.match-card {
+      cursor: default;
+    }
+
+    /* Team Alignment */
+    .team-block {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .team-block.home {
+      justify-content: flex-end;
+      text-align: right;
+    }
+
+    .team-block.away {
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .team-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--zs-text-primary);
+      letter-spacing: -0.2px;
+    }
+
+    .team-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: contain;
+      border: 2px solid rgba(255, 255, 255, 0.05);
+      background-color: rgba(255, 255, 255, 0.03);
+      padding: 3px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+
+    a.match-card:hover .team-logo {
+      transform: scale(1.05);
+    }
+
+    /* Center Status & Info */
+    .center-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      min-width: 150px;
+    }
+
+    .match-time {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--zs-text-primary);
+      margin-bottom: 6px;
+    }
+
+    .league-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 10px;
+      color: var(--zs-text-secondary);
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      margin-top: 6px;
+    }
+
+    /* Status Badges */
+    .status-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      letter-spacing: 0.5px;
+    }
+
+    .status-badge.live {
+      background: rgba(239, 68, 68, 0.12);
+      color: var(--zs-accent-red);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      animation: zs-pulseRed 1.8s infinite;
+    }
+
+    .status-badge.countdown {
+      background: rgba(16, 185, 129, 0.1);
+      color: var(--zs-accent-green);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+
+    .status-badge.finished {
+      background: rgba(148, 163, 184, 0.08);
+      color: var(--zs-text-secondary);
+      border: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    /* Live Score */
+    .live-score-display {
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--zs-text-primary);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--zs-border);
+      margin-bottom: 6px;
+    }
+
+    .score-divider {
+      color: var(--zs-text-secondary);
+      font-weight: 400;
+      font-size: 18px;
+    }
+
+    /* Loading State */
+    .matches-loader, .matches-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      text-align: center;
+      color: var(--zs-text-secondary);
+    }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--zs-border);
+      border-top: 3px solid var(--zs-accent-sky);
+      border-radius: 50%;
+      animation: zs-spin 0.8s linear infinite;
+      margin-bottom: 16px;
+    }
+
+    .empty-icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+      opacity: 0.65;
+    }
+
+    /* Animations */
+    @keyframes zs-spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes zs-pulseRed {
+      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.35); }
+      70% { box-shadow: 0 0 0 7px rgba(239, 68, 68, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 640px) {
+      .match-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .team-block.home {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column-reverse;
+      }
+
+      .team-block.away {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .center-info {
+        order: -1;
+        border-bottom: 1px solid var(--zs-border);
+        padding-bottom: 14px;
+        margin-bottom: 4px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -351,93 +688,179 @@
       </div>
     </div>
 
-    <!-- Right Panel -->
-    <div class="panel">
-      <div class="panel-title" id="form-title">Add New Match</div>
-      <form id="match-form" onsubmit="handleFormSubmit(event)">
-        <input type="hidden" id="match-idx" value="-1">
-
+    <!-- Right Column -->
+    <div style="display: flex; flex-direction: column; gap: 30px;">
+      <!-- FotMob Fetcher Panel -->
+      <div class="panel">
+        <div class="panel-title">⚡ Import from FotMob</div>
         <div class="form-row">
           <div class="form-group">
-            <label>Sport</label>
-            <select id="match-sport">
-              <option value="football">Football</option>
-              <option value="cricket">Cricket</option>
+            <label>Select League</label>
+            <select id="fetch-league" onchange="toggleCustomLeagueInput()">
+              <option value="77">FIFA World Cup (77)</option>
+              <option value="47">English Premier League (47)</option>
+              <option value="42">UEFA Champions League (42)</option>
+              <option value="87">Spanish La Liga (87)</option>
+              <option value="55">Italian Serie A (55)</option>
+              <option value="54">German Bundesliga (54)</option>
+              <option value="53">French Ligue 1 (53)</option>
+              <option value="custom">-- Custom League ID --</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>League / Tournament</label>
-            <input type="text" id="match-league" placeholder="e.g. FIFA World Cup" required>
+          <div class="form-group" id="custom-league-group" style="display: none;">
+            <label>Custom League ID</label>
+            <input type="text" id="fetch-custom-league-id" placeholder="e.g. 9806">
           </div>
         </div>
-
-        <div class="form-group">
-          <label>Group / Details</label>
-          <input type="text" id="match-group" placeholder="e.g. Group B or Super 8s">
-        </div>
-
         <div class="form-row">
           <div class="form-group">
-            <label>Home Team</label>
-            <input type="text" id="match-home" placeholder="Switzerland" required>
+            <label>Select Date</label>
+            <input type="date" id="fetch-date">
           </div>
           <div class="form-group">
-            <label>Away Team</label>
-            <input type="text" id="match-away" placeholder="Canada" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>Home Logo / Flag URL</label>
-            <input type="text" id="match-home-logo" placeholder="Auto-mapped if blank">
-          </div>
-          <div class="form-group">
-            <label>Away Logo / Flag URL</label>
-            <input type="text" id="match-away-logo" placeholder="Auto-mapped if blank">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>Date & Time (Your Local Time)</label>
-            <input type="datetime-local" id="match-datetime" required>
-          </div>
-          <div class="form-group">
-            <label>Display Time String</label>
-            <input type="text" id="match-time-str" placeholder="e.g. 12:30 AM" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Streaming / Watch URL</label>
-          <input type="text" id="match-url" placeholder="https://sportsevo.thinkgovtjobs.com/watch/swiss-vs-canada">
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>Match Status</label>
-            <select id="match-status" onchange="toggleScoreInputs()">
-              <option value="upcoming">Upcoming</option>
-              <option value="live">Live</option>
-              <option value="finished">Finished</option>
+            <label>CORS Proxy Mode</label>
+            <select id="fetch-proxy">
+              <option value="direct">No Proxy (Direct - Recommended)</option>
+              <option value="allorigins">AllOrigins (Proxy)</option>
+              <option value="corsproxy">CorsProxy.io (Proxy)</option>
             </select>
           </div>
-          <div class="form-group" id="score-row-container" style="display: none;">
-            <label>Live Score (Home - Away)</label>
-            <div style="display: flex; gap: 10px; align-items: center;">
-              <input type="text" id="match-home-score" value="0" style="text-align: center;">
-              <span>-</span>
-              <input type="text" id="match-away-score" value="0" style="text-align: center;">
+        </div>
+        <div style="margin-top: 10px; margin-bottom: 15px;">
+          <button type="button" class="btn btn-full" onclick="fetchFotmobMatches()">Fetch Matches</button>
+        </div>
+        <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 15px; line-height: 1.4;">
+          💡 <strong>Tip:</strong> If using a proxy fails, install a browser CORS extension (e.g. <em>Allow CORS</em>) and choose "No Proxy (Direct)" to fetch matches directly from FotMob.
+        </div>
+        <div id="fetch-results" style="max-height: 250px; overflow-y: auto; padding-right: 5px;">
+          <div style="text-align: center; color: var(--text-secondary); padding: 15px; font-size: 13px;">No matches fetched. Select a league and date to load fixtures.</div>
+        </div>
+      </div>
+
+      <!-- Add/Edit Form Panel -->
+      <div class="panel">
+        <div class="panel-title" id="form-title">Add New Match</div>
+        <form id="match-form" onsubmit="handleFormSubmit(event)">
+          <input type="hidden" id="match-idx" value="-1">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Sport</label>
+              <select id="match-sport">
+                <option value="football">Football</option>
+                <option value="cricket">Cricket</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>League / Tournament</label>
+              <input type="text" id="match-league" placeholder="e.g. FIFA World Cup" required>
             </div>
           </div>
-        </div>
 
-        <div style="display: flex; gap: 12px; margin-top: 20px;">
-          <button type="submit" class="btn btn-full" id="submit-btn">Add Match</button>
-          <button type="button" class="btn btn-secondary" onclick="clearForm()">Cancel</button>
+          <div class="form-group">
+            <label>Group / Details</label>
+            <input type="text" id="match-group" placeholder="e.g. Group B or Super 8s">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Home Team</label>
+              <input type="text" id="match-home" placeholder="Switzerland" required>
+            </div>
+            <div class="form-group">
+              <label>Away Team</label>
+              <input type="text" id="match-away" placeholder="Canada" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Home Logo / Flag URL</label>
+              <input type="text" id="match-home-logo" placeholder="Auto-mapped if blank">
+            </div>
+            <div class="form-group">
+              <label>Away Logo / Flag URL</label>
+              <input type="text" id="match-away-logo" placeholder="Auto-mapped if blank">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Date & Time (Your Local Time)</label>
+              <input type="datetime-local" id="match-datetime" required>
+            </div>
+            <div class="form-group">
+              <label>Display Time String</label>
+              <input type="text" id="match-time-str" placeholder="e.g. 12:30 AM" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Streaming / Watch URL</label>
+            <input type="text" id="match-url" placeholder="https://sportsevo.thinkgovtjobs.com/watch/swiss-vs-canada">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Match Status</label>
+              <select id="match-status" onchange="toggleScoreInputs()">
+                <option value="upcoming">Upcoming</option>
+                <option value="live">Live</option>
+                <option value="finished">Finished</option>
+              </select>
+            </div>
+            <div class="form-group" id="score-row-container" style="display: none;">
+              <label>Live Score (Home - Away)</label>
+              <div style="display: flex; gap: 10px; align-items: center;">
+                <input type="text" id="match-home-score" value="0" style="text-align: center;">
+                <span>-</span>
+                <input type="text" id="match-away-score" value="0" style="text-align: center;">
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 20px;">
+            <button type="submit" class="btn btn-full" id="submit-btn">Add Match</button>
+            <button type="button" class="btn btn-secondary" onclick="clearForm()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Widget Preview Panel -->
+  <div class="panel" style="margin-top: 30px;">
+    <div class="panel-title">🌐 Live Blogger Widget Preview</div>
+    <div id="zeta-sports-container" class="zeta-sports-dark" style="margin: 10px auto; max-width: 100%;">
+      
+      <!-- Sport Filters -->
+      <div class="sports-filter-row">
+        <button class="sport-btn active" data-sport="all" onclick="setPreviewSport('all', this)">
+          <span class="btn-icon">🏆</span> All
+        </button>
+        <button class="sport-btn" data-sport="football" onclick="setPreviewSport('football', this)">
+          <span class="btn-icon">⚽</span> Football
+        </button>
+        <button class="sport-btn" data-sport="cricket" onclick="setPreviewSport('cricket', this)">
+          <span class="btn-icon">🏏</span> Cricket
+        </button>
+      </div>
+
+      <!-- Date Tabs -->
+      <div class="date-tabs-row">
+        <button class="date-tab-btn" data-date-tab="yesterday" onclick="setPreviewDateTab('yesterday', this)">Yesterday</button>
+        <button class="date-tab-btn active" data-date-tab="today" onclick="setPreviewDateTab('today', this)">Today</button>
+        <button class="date-tab-btn" data-date-tab="tomorrow" onclick="setPreviewDateTab('tomorrow', this)">Tomorrow</button>
+      </div>
+
+      <!-- Matches Grid Container -->
+      <div id="preview-matches-grid" class="matches-grid">
+        <div class="matches-empty">
+          <div class="empty-icon">📅</div>
+          <h3>No matches scheduled</h3>
+          <p>No matches added yet.</p>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </div>
@@ -484,6 +907,10 @@
     const now = new Date();
     now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
     document.getElementById('match-datetime').value = now.toISOString().slice(0, 16);
+    
+    // Set default date for FotMob fetcher date input to today (local YYYY-MM-DD)
+    const todayStr = now.toISOString().split('T')[0];
+    document.getElementById('fetch-date').value = todayStr;
     
     updateDisplayTime();
     document.getElementById('match-datetime').addEventListener('change', updateDisplayTime);
@@ -554,6 +981,7 @@
   }
 
   function renderMatchesList() {
+    renderPreviewMatches(); // Trigger Live Preview update!
     const list = document.getElementById('matches-list');
     if (matches.length === 0) {
       list.innerHTML = `<div style="text-align: center; color: var(--text-secondary); padding: 20px;">No matches added yet.</div>`;
@@ -782,6 +1210,366 @@
       console.error(e);
       alert("Error saving to GitHub: " + e.message);
     }
+  }
+
+  /* ======================================================== */
+  /* FotMob Scraper/Fetcher JavaScript Logic                 */
+  /* ======================================================== */
+  function toggleCustomLeagueInput() {
+    const val = document.getElementById('fetch-league').value;
+    const group = document.getElementById('custom-league-group');
+    if (val === 'custom') {
+      group.style.display = 'block';
+    } else {
+      group.style.display = 'none';
+    }
+  }
+
+  async function fetchFotmobMatches() {
+    const leagueSelect = document.getElementById('fetch-league').value;
+    const leagueId = leagueSelect === 'custom' 
+      ? document.getElementById('fetch-custom-league-id').value.trim() 
+      : leagueSelect;
+    const selectedDateStr = document.getElementById('fetch-date').value; // YYYY-MM-DD
+    const proxyMode = document.getElementById('fetch-proxy').value;
+
+    if (!leagueId) {
+      alert("Please select or enter a League ID.");
+      return;
+    }
+    if (!selectedDateStr) {
+      alert("Please select a date.");
+      return;
+    }
+
+    let url = `https://www.fotmob.com/leagues/${leagueId}/fixtures`;
+    
+    if (proxyMode === 'allorigins') {
+      url = "https://api.allorigins.win/raw?url=" + encodeURIComponent(url);
+    } else if (proxyMode === 'corsproxy') {
+      url = "https://corsproxy.io/?" + encodeURIComponent(url);
+    }
+
+    const resultsDiv = document.getElementById('fetch-results');
+    resultsDiv.innerHTML = '<div class="spinner"></div><p style="text-align:center">Fetching matches from FotMob...</p>';
+
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
+      
+      const htmlText = await res.text();
+      const regex = /<script\s+id="__NEXT_DATA__"\s+type="application\/json">([\s\S]*?)<\/script>/i;
+      const match = htmlText.match(regex);
+      
+      if (!match) throw new Error("Could not find match data script block in FotMob response.");
+      
+      const data = JSON.parse(match[1].trim());
+      const pageProps = data.props?.pageProps;
+      if (!pageProps || !pageProps.fixtures) throw new Error("No fixtures data found in page properties.");
+      
+      const leagueName = pageProps.details?.name || "Football Match";
+      const allMatches = pageProps.fixtures.allMatches || [];
+      
+      // Filter matches by date
+      const targetDate = selectedDateStr; // e.g. "2026-06-25"
+      
+      const filteredMatches = allMatches.filter(m => {
+        const utcTime = m.status?.utcTime;
+        if (!utcTime) return false;
+        
+        const dateObj = new Date(utcTime);
+        const year = dateObj.getFullYear();
+        const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+        const day = String(dateObj.getDate()).padStart(2, '0');
+        const localDateStr = `${year}-${month}-${day}`;
+        
+        const utcDateStr = utcTime.split('T')[0];
+        
+        return localDateStr === targetDate || utcDateStr === targetDate;
+      });
+
+      renderFetchedMatches(filteredMatches, leagueName);
+    } catch (e) {
+      console.error(e);
+      resultsDiv.innerHTML = `<div style="color:var(--accent-red); padding:10px; text-align:center;">Error: ${e.message}<br><br><small>If you got a CORS error or 403, make sure to install a browser extension (like "Allow CORS") and select "No Proxy (Direct)".</small></div>`;
+    }
+  }
+
+  function renderFetchedMatches(matches, leagueName) {
+    const container = document.getElementById('fetch-results');
+    if (matches.length === 0) {
+      container.innerHTML = '<div style="text-align:center; padding:15px; color:var(--text-secondary)">No matches found for this league on the selected date.</div>';
+      return;
+    }
+
+    container.innerHTML = '';
+    matches.forEach(m => {
+      const item = document.createElement('div');
+      item.className = 'fetched-match-item';
+      item.style.cssText = 'background:rgba(0,0,0,0.25); border:1px solid var(--border); border-radius:8px; padding:10px; margin-bottom:8px; display:flex; justify-content:space-between; align-items:center;';
+
+      const homeName = m.home.name;
+      const awayName = m.away.name;
+      
+      const homeLogo = `https://images.fotmob.com/image_resources/logo/teamlogo/${m.home.id}_small.png`;
+      const awayLogo = `https://images.fotmob.com/image_resources/logo/teamlogo/${m.away.id}_small.png`;
+      
+      const dateObj = new Date(m.status.utcTime);
+      let hours = dateObj.getHours();
+      const minutes = dateObj.getMinutes().toString().padStart(2, '0');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      const timeStr = `${hours}:${minutes} ${ampm}`;
+      
+      const isLive = m.status.started && !m.status.finished && !m.status.cancelled;
+      const isFinished = m.status.finished;
+      
+      let scoreStr = "0 - 0";
+      if (m.status.scoreStr) {
+        scoreStr = m.status.scoreStr;
+      } else if (m.status.homeScore !== undefined && m.status.awayScore !== undefined) {
+        scoreStr = `${m.status.homeScore} - ${m.status.awayScore}`;
+      }
+
+      const matchState = isLive ? "LIVE" : (isFinished ? "FT" : "Upcoming");
+      const stateColor = isLive ? "var(--accent-red)" : (isFinished ? "var(--text-secondary)" : "var(--accent-green)");
+
+      const matchData = {
+        sport: 'football',
+        league: leagueName,
+        group: m.groupName || '',
+        home_team: homeName,
+        home_logo: homeLogo,
+        away_team: awayName,
+        away_logo: awayLogo,
+        time: timeStr,
+        date: m.status.utcTime,
+        is_live: isLive,
+        is_finished: isFinished,
+        home_score: m.status.homeScore !== undefined ? String(m.status.homeScore) : "0",
+        away_score: m.status.awayScore !== undefined ? String(m.status.awayScore) : "0"
+      };
+
+      item.innerHTML = `
+        <div style="display:flex; flex-direction:column; gap:4px; flex-grow:1; text-align:left;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <img src="${homeLogo}" style="width:20px; height:20px; object-fit:contain;">
+            <span style="font-weight:600; font-size:13px;">${homeName}</span>
+            <span style="color:var(--text-secondary); font-size:11px; font-weight:700; margin:0 4px;">${scoreStr}</span>
+            <img src="${awayLogo}" style="width:20px; height:20px; object-fit:contain;">
+            <span style="font-weight:600; font-size:13px;">${awayName}</span>
+          </div>
+          <div style="font-size:10px; color:var(--text-secondary); display:flex; gap:8px;">
+            <span>${timeStr}</span>
+            <span style="color:${stateColor}; font-weight:700;">${matchState}</span>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary" style="padding:4px 8px; font-size:11px;" onclick="populateFormFromFetched(${JSON.stringify(matchData).replace(/"/g, '&quot;')})">+ Populate</button>
+      `;
+      container.appendChild(item);
+    });
+  }
+
+  function populateFormFromFetched(data) {
+    document.getElementById('match-idx').value = "-1";
+    document.getElementById('form-title').textContent = "Add New Match";
+    document.getElementById('submit-btn').textContent = "Add Match";
+
+    document.getElementById('match-sport').value = data.sport;
+    document.getElementById('match-league').value = data.league;
+    document.getElementById('match-group').value = data.group;
+    document.getElementById('match-home').value = data.home_team;
+    document.getElementById('match-away').value = data.away_team;
+    document.getElementById('match-home-logo').value = data.home_logo;
+    document.getElementById('match-away-logo').value = data.away_logo;
+    document.getElementById('match-time-str').value = data.time;
+    document.getElementById('match-url').value = '';
+
+    // Convert UTC isoString to local time YYYY-MM-DDTHH:MM for HTML datetime-local input
+    const dateObj = new Date(data.date);
+    const localIso = new Date(dateObj.getTime() - dateObj.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+    document.getElementById('match-datetime').value = localIso;
+
+    let status = 'upcoming';
+    if (data.is_live) status = 'live';
+    else if (data.is_finished) status = 'finished';
+    
+    document.getElementById('match-status').value = status;
+    document.getElementById('match-home-score').value = data.home_score;
+    document.getElementById('match-away-score').value = data.away_score;
+
+    toggleScoreInputs();
+    
+    // Smooth scroll down to form
+    document.getElementById('match-form').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  /* ======================================================== */
+  /* Blogger Live Widget Preview Javascript Logic            */
+  /* ======================================================== */
+  let previewSport = 'all';
+  let previewDateTab = 'today';
+  let previewIntervals = [];
+
+  function setPreviewSport(sport, btn) {
+    btn.parentNode.querySelectorAll('.sport-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    previewSport = sport;
+    renderPreviewMatches();
+  }
+
+  function setPreviewDateTab(tab, btn) {
+    btn.parentNode.querySelectorAll('.date-tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    previewDateTab = tab;
+    renderPreviewMatches();
+  }
+
+  function getPreviewMatchDateCategory(isoString) {
+    const matchDate = new Date(isoString);
+    const today = new Date();
+    
+    const mDate = new Date(matchDate.getFullYear(), matchDate.getMonth(), matchDate.getDate());
+    const tDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    
+    const diffTime = mDate.getTime() - tDate.getTime();
+    const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays === -1) return 'yesterday';
+    if (diffDays === 0) return 'today';
+    if (diffDays === 1) return 'tomorrow';
+    
+    if (diffDays < -1) return 'yesterday';
+    return 'tomorrow';
+  }
+
+  function renderPreviewMatches() {
+    previewIntervals.forEach(clearInterval);
+    previewIntervals = [];
+
+    const grid = document.getElementById("preview-matches-grid");
+    if (!grid) return;
+
+    const filtered = matches.filter(match => {
+      const sportMatch = previewSport === 'all' || match.sport === previewSport;
+      const dateMatch = getPreviewMatchDateCategory(match.date) === previewDateTab;
+      return sportMatch && dateMatch;
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `
+        <div class="matches-empty">
+          <div class="empty-icon">📅</div>
+          <h3>No matches scheduled</h3>
+          <p>No ${previewSport !== 'all' ? previewSport : ''} matches scheduled for ${previewDateTab}.</p>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = '';
+
+    filtered.forEach((match, idx) => {
+      const hasLink = match.watch_url && match.watch_url.startsWith('http');
+      
+      const card = document.createElement(hasLink ? "a" : "div");
+      card.className = "match-card";
+      if (hasLink) {
+        card.href = match.watch_url;
+        card.target = "_blank";
+      }
+
+      const homeBlock = `
+        <div class="team-block home">
+          <span class="team-name">${match.home_team}</span>
+          <img class="team-logo" src="${match.home_logo}" alt="${match.home_team}" onerror="this.onerror=null; this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
+        </div>
+      `;
+
+      const awayBlock = `
+        <div class="team-block away">
+          <img class="team-logo" src="${match.away_logo}" alt="${match.away_team}" onerror="this.onerror=null; this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
+          <span class="team-name">${match.away_team}</span>
+        </div>
+      `;
+
+      let centerMarkup = '';
+      let countdownId = null;
+      
+      if (match.is_live) {
+        centerMarkup = `
+          <div class="center-info">
+            <div class="live-score-display">
+              <span>${match.home_score}</span>
+              <span class="score-divider">-</span>
+              <span>${match.away_score}</span>
+            </div>
+            <div class="status-badge live">● LIVE</div>
+            <div class="league-badge">${match.league}</div>
+          </div>
+        `;
+      } else if (match.is_finished) {
+        centerMarkup = `
+          <div class="center-info">
+            <div class="live-score-display">
+              <span style="opacity: 0.85;">${match.home_score}</span>
+              <span class="score-divider">-</span>
+              <span style="opacity: 0.85;">${match.away_score}</span>
+            </div>
+            <div class="status-badge finished">FT</div>
+            <div class="league-badge">${match.league}</div>
+          </div>
+        `;
+      } else {
+        countdownId = `preview-countdown-${match.id}-${idx}`;
+        centerMarkup = `
+          <div class="center-info">
+            <div class="match-time">${match.time}</div>
+            <div id="${countdownId}" class="status-badge countdown">--h --m --s</div>
+            <div class="league-badge">${match.league}</div>
+          </div>
+        `;
+      }
+
+      card.innerHTML = homeBlock + centerMarkup + awayBlock;
+      grid.appendChild(card);
+
+      if (countdownId) {
+        startPreviewCountdown(match.date, countdownId);
+      }
+    });
+  }
+
+  function startPreviewCountdown(targetIsoString, elementId) {
+    const targetTime = new Date(targetIsoString).getTime();
+    
+    const updateTimer = () => {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+
+      const now = new Date().getTime();
+      const diff = targetTime - now;
+
+      if (diff <= 0) {
+        el.textContent = "00h 00m 00s";
+        return;
+      }
+
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      const hDisplay = hours.toString().padStart(2, '0');
+      const mDisplay = minutes.toString().padStart(2, '0');
+      const sDisplay = seconds.toString().padStart(2, '0');
+
+      el.textContent = `${hDisplay}h ${mDisplay}m ${sDisplay}s`;
+    };
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+    previewIntervals.push(interval);
   }
 </script>
 
