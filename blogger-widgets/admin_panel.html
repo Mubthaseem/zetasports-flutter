@@ -1172,7 +1172,7 @@
 
     let sha = '';
     try {
-      const getRes = await fetch(url + `?ref=${settings.branch}`, { headers: { 'Authorization': `Bearer ${settings.token}` } });
+      const getRes = await fetch(url + `?ref=${settings.branch}&t=${Date.now()}`, { headers: { 'Authorization': `Bearer ${settings.token}` } });
       if (getRes.ok) {
         const fileData = await getRes.json();
         sha = fileData.sha;
