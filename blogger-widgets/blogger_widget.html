@@ -1,8 +1,7 @@
 <!--
   ============================================================
-  Premium Live Sports Matches Widget (Dark Edition)
-  Author: Antigravity (Google DeepMind)
-  Features: Live countdowns, auto-scores, redirection watch links
+  Premium Live Sports Matches Dashboard (Dark Edition)
+  Features: Live countdowns, auto-scores, no-redirect handling
   ============================================================
 -->
 <div id="zeta-sports-container" class="zeta-sports-dark">
@@ -31,36 +30,44 @@
   <div id="matches-grid" class="matches-grid">
     <div class="matches-loader">
       <div class="spinner"></div>
-      <p>Fetching live matches...</p>
+      <p>Loading matches feed...</p>
     </div>
   </div>
 </div>
 
+<!-- Styles and Typography -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  /* Base & Theme Variables */
   :root {
-    --zeta-bg: #090d16;
-    --zeta-card-bg: rgba(22, 28, 45, 0.6);
-    --zeta-border: rgba(255, 255, 255, 0.08);
-    --zeta-text-primary: #f8fafc;
-    --zeta-text-secondary: #94a3b8;
-    --zeta-accent-blue: #2563eb;
-    --zeta-accent-sky: #0ea5e9;
-    --zeta-accent-green: #10b981;
-    --zeta-accent-red: #ef4444;
+    --zs-bg: #090d16;
+    --zs-card-bg: rgba(22, 28, 45, 0.45);
+    --zs-card-hover: rgba(22, 28, 45, 0.8);
+    --zs-border: rgba(255, 255, 255, 0.08);
+    --zs-border-hover: rgba(255, 255, 255, 0.18);
+    --zs-text-primary: #f8fafc;
+    --zs-text-secondary: #94a3b8;
+    --zs-accent-blue: #2563eb;
+    --zs-accent-sky: #0ea5e9;
+    --zs-accent-green: #10b981;
+    --zs-accent-red: #ef4444;
   }
 
   #zeta-sports-container.zeta-sports-dark {
-    background-color: var(--zeta-bg);
-    color: var(--zeta-text-primary);
-    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    padding: 24px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: radial-gradient(circle at 50% 10%, #0d1326 0%, #050811 100%);
+    color: var(--zs-text-primary);
+    font-family: 'Inter', -apple-system, sans-serif;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     max-width: 900px;
     margin: 20px auto;
-    border: 1px solid var(--zeta-border);
+    border: 1px solid var(--zs-border);
     backdrop-filter: blur(12px);
+    box-sizing: border-box;
+  }
+
+  #zeta-sports-container.zeta-sports-dark * {
+    box-sizing: border-box;
   }
 
   /* Sport Filter Buttons */
@@ -72,64 +79,67 @@
   }
 
   .sport-btn {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--zeta-border);
-    color: var(--zeta-text-secondary);
-    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--zs-border);
+    color: var(--zs-text-secondary);
+    padding: 10px 22px;
     border-radius: 9999px;
+    font-family: 'Outfit', sans-serif;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .sport-btn:hover {
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--zeta-text-primary);
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--zs-text-primary);
     transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.15);
   }
 
   .sport-btn.active {
-    background: var(--zeta-text-primary);
-    color: var(--zeta-bg);
-    border-color: var(--zeta-text-primary);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+    background: var(--zs-text-primary);
+    color: var(--zs-bg);
+    border-color: var(--zs-text-primary);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.12);
   }
 
   /* Date Tabs */
   .date-tabs-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--zeta-border);
-    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--zs-border);
+    border-radius: 14px;
     padding: 6px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
   .date-tab-btn {
     background: transparent;
     border: none;
-    color: var(--zeta-text-secondary);
+    color: var(--zs-text-secondary);
     padding: 12px 6px;
-    border-radius: 8px;
+    border-radius: 10px;
+    font-family: 'Outfit', sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.2s ease;
     text-align: center;
   }
 
   .date-tab-btn:hover {
-    color: var(--zeta-text-primary);
+    color: var(--zs-text-primary);
   }
 
   .date-tab-btn.active {
     background: rgba(255, 255, 255, 0.05);
-    color: var(--zeta-text-primary);
+    color: var(--zs-text-primary);
     box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
   }
 
@@ -142,14 +152,13 @@
   }
 
   .match-card {
-    background: var(--zeta-card-bg);
-    border: 1px solid var(--zeta-border);
-    border-radius: 16px;
-    padding: 20px;
+    background: var(--zs-card-bg);
+    border: 1px solid var(--zs-border);
+    border-radius: 18px;
+    padding: 20px 24px;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1.1fr auto 1.1fr;
     align-items: center;
-    cursor: pointer;
     position: relative;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     text-decoration: none;
@@ -157,14 +166,21 @@
     overflow: hidden;
   }
 
-  .match-card:hover {
-    transform: translateY(-3px) scale(1.01);
-    background: rgba(22, 28, 45, 0.85);
-    border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.8);
+  /* Clickable Card Hover */
+  a.match-card:hover {
+    transform: translateY(-2px);
+    background: var(--zs-card-hover);
+    border-color: var(--zs-border-hover);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(37, 99, 235, 0.05);
+    cursor: pointer;
   }
 
-  /* Team Styling */
+  /* Static (Non-Clickable) Card Styling */
+  div.match-card {
+    cursor: default;
+  }
+
+  /* Team Alignment */
   .team-block {
     display: flex;
     align-items: center;
@@ -183,21 +199,27 @@
   }
 
   .team-name {
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: var(--zeta-text-primary);
+    color: var(--zs-text-primary);
     letter-spacing: -0.2px;
   }
 
   .team-logo {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 2px;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    object-fit: contain;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+  }
+
+  a.match-card:hover .team-logo {
+    transform: scale(1.05);
   }
 
   /* Center Status & Info */
@@ -206,29 +228,32 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
-    min-width: 130px;
+    padding: 0 16px;
+    min-width: 150px;
   }
 
   .match-time {
+    font-family: 'Outfit', sans-serif;
     font-size: 15px;
     font-weight: 700;
-    color: var(--zeta-text-primary);
+    color: var(--zs-text-primary);
     margin-bottom: 6px;
   }
 
   .league-badge {
-    font-size: 11px;
-    color: var(--zeta-text-secondary);
+    font-family: 'Outfit', sans-serif;
+    font-size: 10px;
+    color: var(--zs-text-secondary);
     text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
     margin-top: 6px;
   }
 
-  /* Badge Badges */
+  /* Status Badges */
   .status-badge {
-    font-size: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
     font-weight: 800;
     padding: 5px 12px;
     border-radius: 9999px;
@@ -239,46 +264,47 @@
   }
 
   .status-badge.live {
-    background: rgba(239, 68, 68, 0.15);
-    color: var(--zeta-accent-red);
-    border: 1px solid rgba(239, 68, 68, 0.3);
-    animation: pulseRed 1.8s infinite;
+    background: rgba(239, 68, 68, 0.12);
+    color: var(--zs-accent-red);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    animation: zs-pulseRed 1.8s infinite;
   }
 
   .status-badge.countdown {
-    background: rgba(16, 185, 129, 0.12);
-    color: var(--zeta-accent-green);
-    border: 1px solid rgba(16, 185, 129, 0.25);
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--zs-accent-green);
+    border: 1px solid rgba(16, 185, 129, 0.2);
   }
 
   .status-badge.finished {
-    background: rgba(148, 163, 184, 0.1);
-    color: var(--zeta-text-secondary);
-    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(148, 163, 184, 0.08);
+    color: var(--zs-text-secondary);
+    border: 1px solid rgba(148, 163, 184, 0.15);
   }
 
   /* Live Score */
   .live-score-display {
+    font-family: 'Outfit', sans-serif;
     font-size: 24px;
     font-weight: 800;
-    color: var(--zeta-text-primary);
+    color: var(--zs-text-primary);
     display: flex;
     gap: 12px;
     align-items: center;
-    background: rgba(0, 0, 0, 0.25);
-    padding: 4px 14px;
-    border-radius: 8px;
-    border: 1px solid var(--zeta-border);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--zs-border);
     margin-bottom: 6px;
   }
 
   .score-divider {
-    color: var(--zeta-text-secondary);
+    color: var(--zs-text-secondary);
     font-weight: 400;
     font-size: 18px;
   }
 
-  /* Loader / Empty States */
+  /* Loading State */
   .matches-loader, .matches-empty {
     display: flex;
     flex-direction: column;
@@ -286,33 +312,33 @@
     justify-content: center;
     padding: 60px 20px;
     text-align: center;
-    color: var(--zeta-text-secondary);
+    color: var(--zs-text-secondary);
   }
 
   .spinner {
-    width: 40px;
-    height: 40px;
-    border: 3px solid var(--zeta-border);
-    border-top: 3px solid var(--zeta-accent-sky);
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--zs-border);
+    border-top: 3px solid var(--zs-accent-sky);
     border-radius: 50%;
-    animation: spin 0.8s linear infinite;
+    animation: zs-spin 0.8s linear infinite;
     margin-bottom: 16px;
   }
 
   .empty-icon {
-    font-size: 40px;
+    font-size: 38px;
     margin-bottom: 12px;
-    opacity: 0.6;
+    opacity: 0.65;
   }
 
   /* Animations */
-  @keyframes spin {
+  @keyframes zs-spin {
     to { transform: rotate(360deg); }
   }
 
-  @keyframes pulseRed {
-    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-    70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  @keyframes zs-pulseRed {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.35); }
+    70% { box-shadow: 0 0 0 7px rgba(239, 68, 68, 0); }
     100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
   }
 
@@ -339,27 +365,24 @@
 
     .center-info {
       order: -1;
-      border-bottom: 1px solid var(--zeta-border);
-      padding-bottom: 12px;
+      border-bottom: 1px solid var(--zs-border);
+      padding-bottom: 14px;
       margin-bottom: 4px;
     }
   }
 </style>
 
+<!-- Widget Logic -->
 <script>
   (function() {
-    // ==========================================
-    // CONFIGURATION - Linked to your GitHub Repo
-    // ==========================================
     const JSON_URL = "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/blogger-widgets/matches.json";
-    const POLL_INTERVAL = 30000; // Poll matches data every 30 seconds
+    const POLL_INTERVAL = 30000;
 
     let matchesData = [];
     let activeSport = 'all';
     let activeDateTab = 'today';
     let countdownIntervals = [];
 
-    // Initialize Widget
     document.addEventListener("DOMContentLoaded", () => {
       initWidget();
     });
@@ -367,12 +390,10 @@
     async function initWidget() {
       setupEventListeners();
       await fetchMatches();
-      // Start polling loop
       setInterval(fetchMatches, POLL_INTERVAL);
     }
 
     function setupEventListeners() {
-      // Sport Filter Click
       document.querySelectorAll(".sport-btn").forEach(btn => {
         btn.addEventListener("click", (e) => {
           document.querySelectorAll(".sport-btn").forEach(b => b.classList.remove("active"));
@@ -383,7 +404,6 @@
         });
       });
 
-      // Date Tab Click
       document.querySelectorAll(".date-tab-btn").forEach(btn => {
         btn.addEventListener("click", (e) => {
           document.querySelectorAll(".date-tab-btn").forEach(b => b.classList.remove("active"));
@@ -397,8 +417,8 @@
 
     async function fetchMatches() {
       try {
-        const response = await fetch(JSON_URL + '?t=' + new Date().getTime()); // Avoid caching
-        if (!response.ok) throw new Error("Network response error fetching matches");
+        const response = await fetch(JSON_URL + '?t=' + new Date().getTime());
+        if (!response.ok) throw new Error("Fetch error");
         const data = await response.json();
         
         if (data && data.matches) {
@@ -406,14 +426,14 @@
           renderMatches();
         }
       } catch (err) {
-        console.error("Failed to fetch sports matches:", err);
+        console.error("Failed to fetch matches:", err);
         if (matchesData.length === 0) {
           const grid = document.getElementById("matches-grid");
           grid.innerHTML = `
             <div class="matches-empty">
               <div class="empty-icon">⚠️</div>
               <h3>Unable to load matches</h3>
-              <p>Failed to connect to matches feed. Check repository raw link configuration.</p>
+              <p>Please check your internet connection or try again later.</p>
             </div>
           `;
         }
@@ -456,7 +476,7 @@
           <div class="matches-empty">
             <div class="empty-icon">📅</div>
             <h3>No matches scheduled</h3>
-            <p>No ${activeSport !== 'all' ? activeSport : ''} matches found for ${activeDateTab}.</p>
+            <p>No ${activeSport !== 'all' ? activeSport : ''} matches scheduled for ${activeDateTab}.</p>
           </div>
         `;
         return;
@@ -465,27 +485,33 @@
       grid.innerHTML = '';
 
       filtered.forEach((match, idx) => {
-        const card = document.createElement("a");
+        const hasLink = match.watch_url && match.watch_url.startsWith('http');
+        
+        // Create an <a> link tag if watch_url is present, otherwise create a static <div> container
+        const card = document.createElement(hasLink ? "a" : "div");
         card.className = "match-card";
-        card.href = match.watch_url || "#";
-        if (match.watch_url) card.target = "_blank";
+        if (hasLink) {
+          card.href = match.watch_url;
+          card.target = "_blank";
+        }
 
         const homeBlock = `
           <div class="team-block home">
             <span class="team-name">${match.home_team}</span>
-            <img class="team-logo" src="${match.home_logo}" alt="${match.home_team}" onerror="this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
+            <img class="team-logo" src="${match.home_logo}" alt="${match.home_team}" onerror="this.onerror=null; this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
           </div>
         `;
 
         const awayBlock = `
           <div class="team-block away">
-            <img class="team-logo" src="${match.away_logo}" alt="${match.away_team}" onerror="this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
+            <img class="team-logo" src="${match.away_logo}" alt="${match.away_team}" onerror="this.onerror=null; this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
             <span class="team-name">${match.away_team}</span>
           </div>
         `;
 
         let centerMarkup = '';
         let countdownId = null;
+        
         if (match.is_live) {
           centerMarkup = `
             <div class="center-info">
@@ -502,9 +528,9 @@
           centerMarkup = `
             <div class="center-info">
               <div class="live-score-display">
-                <span style="opacity: 0.8;">${match.home_score}</span>
+                <span style="opacity: 0.85;">${match.home_score}</span>
                 <span class="score-divider">-</span>
-                <span style="opacity: 0.8;">${match.away_score}</span>
+                <span style="opacity: 0.85;">${match.away_score}</span>
               </div>
               <div class="status-badge finished">FT</div>
               <div class="league-badge">${match.league}</div>

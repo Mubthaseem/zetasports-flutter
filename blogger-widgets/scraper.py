@@ -8,90 +8,26 @@ import html
 # Configuration
 JSON_OUTPUT_PATH = 'blogger-widgets/matches.json'
 
-def get_attr(name, attrs_string):
-    pattern = rf'data-{name}=["\']([^"\']*)["\']'
-    m = re.search(pattern, attrs_string, re.IGNORECASE)
-    return m.group(1) if m else ''
-
-def format_display_time(iso_str):
+def parse_utc_to_ist(utc_str):
     try:
-        # iso_str e.g., "2026-06-25T00:30:00+05:30"
-        time_part = iso_str.split('T')[1]
-        hours_str, minutes_str = time_part.split(':')[:2]
-        hours = int(hours_str)
+        # utc_str e.g., "2026-06-24T19:00:00.000Z" or "2026-06-24T19:00:00Z"
+        dt_str = utc_str.replace('Z', '').split('.')[0]
+        dt = datetime.datetime.strptime(dt_str, "%Y-%m-%dT%H:%M:%S")
+        ist_dt = dt + datetime.timedelta(hours=5, minutes=30)
+        
+        iso_date = ist_dt.strftime("%Y-%m-%dT%H:%M:%S+05:30")
+        
+        hours = ist_dt.hour
         ampm = "PM" if hours >= 12 else "AM"
         display_hours = hours % 12
         if display_hours == 0:
             display_hours = 12
-        return f"{display_hours:02d}:{minutes_str} {ampm}"
-    except Exception:
-        return "12:00 AM"
-
-def fetch_hellosports_matches():
-    print("Fetching matches from hellosports.live...")
-    url = "https://www.hellosports.live/"
-    try:
-        req = urllib.request.Request(
-            url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
-        )
-        with urllib.request.urlopen(req, timeout=10) as response:
-            content = response.read().decode('utf-8', errors='ignore')
-            
-        card_regex = re.compile(r"<div\s+class=['\"]msw-card['\"]([\s\S]*?)>", re.IGNORECASE)
-        cards = card_regex.findall(content)
-        print(f"Found {len(cards)} match cards in HTML.")
+        time_str = f"{display_hours:02d}:{ist_dt.minute:02d} {ampm}"
         
-        matches = []
-        for attrs in cards:
-            scraped_id = get_attr('id', attrs)
-            if not scraped_id:
-                continue
-                
-            home = html.unescape(get_attr('home', attrs))
-            home_id = get_attr('home-id', attrs)
-            away = html.unescape(get_attr('away', attrs))
-            away_id = get_attr('away-id', attrs)
-            start = get_attr('start', attrs)
-            sport = get_attr('sport', attrs)
-            comp_name = html.unescape(get_attr('comp-name', attrs))
-            detail = html.unescape(get_attr('detail', attrs))
-            watch_url = get_attr('url', attrs)
-            
-            matches.append({
-                "scraped_id": scraped_id,
-                "home_team": home,
-                "home_id": home_id,
-                "away_team": away,
-                "away_id": away_id,
-                "start": start,
-                "sport": sport if sport else "football",
-                "league": comp_name,
-                "group": detail,
-                "url": watch_url
-            })
-        return matches
+        return iso_date, time_str
     except Exception as e:
-        print(f"Error fetching hellosports matches: {e}")
-        return []
-
-def fetch_365scores_game(game_id):
-    url = f"https://webws.365scores.com/web/game/?gameId={game_id}"
-    try:
-        req = urllib.request.Request(
-            url,
-            headers={
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Origin': 'https://www.365scores.com',
-                'Referer': 'https://www.365scores.com/'
-            }
-        )
-        with urllib.request.urlopen(req, timeout=5) as response:
-            data = json.loads(response.read().decode('utf-8'))
-            return data.get('game')
-    except Exception as e:
-        print(f"Error fetching 365scores game {game_id}: {e}")
-        return None
+        print(f"Error parsing date {utc_str}: {e}")
+        return utc_str, "12:00 AM"
 
 def clean_team_name(name):
     if not name:
@@ -108,6 +44,34 @@ def is_duplicate_match(team_a1, team_a2, team_b1, team_b2):
     b2 = clean_team_name(team_b2)
     return (a1 == b1 and a2 == b2) or (a1 == b2 and a2 == b1)
 
+def fetch_fotmob_fixtures():
+    print("Fetching fixtures from fotmob.com...")
+    url = "https://www.fotmob.com/leagues/77/fixtures/world-cup"
+    try:
+        req = urllib.request.Request(
+            url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+        )
+        with urllib.request.urlopen(req, timeout=15) as response:
+            content = response.read().decode('utf-8', errors='ignore')
+            
+        next_data_regex = re.compile(r'<script\s+id="__NEXT_DATA__"\s+type="application/json">([\s\S]*?)</script>', re.IGNORECASE)
+        m = next_data_regex.search(content)
+        if not m:
+            print("Could not find __NEXT_DATA__ script tag in HTML.")
+            return []
+            
+        data = json.loads(m.group(1).strip())
+        fixtures_data = data.get('props', {}).get('pageProps', {}).get('fixtures', {})
+        
+        all_matches = []
+        if isinstance(fixtures_data, dict):
+            all_matches = fixtures_data.get('allMatches', [])
+        return all_matches
+    except Exception as e:
+        print(f"Error fetching FotMob matches: {e}")
+        return []
+
 def main():
     # 1. Load existing matches
     existing_matches = []
@@ -120,17 +84,41 @@ def main():
         except Exception as e:
             print(f"Error loading existing matches: {e}")
             
-    # 2. Fetch matches from hellosports.live
-    scraped_list = fetch_hellosports_matches()
+    # 2. Fetch matches from FotMob
+    scraped_list = fetch_fotmob_fixtures()
+    print(f"Fetched {len(scraped_list)} fixtures from FotMob.")
     
-    # 3. Process matches using 365scores API
+    # 3. Process matches
     processed_scraped_matches = []
     merged_existing_ids = set()
     
+    now = datetime.datetime.now(datetime.timezone.utc)
+    now_ist = now + datetime.timedelta(hours=5, minutes=30)
+    today_ist = now_ist.date()
+    
     for match in scraped_list:
-        scraped_id = match["scraped_id"]
-        hs_id = f"hs_{scraped_id}"
-        print(f"Processing match: {match['home_team']} vs {match['away_team']} ({scraped_id})...")
+        utc_time_str = match.get('status', {}).get('utcTime')
+        if not utc_time_str:
+            continue
+            
+        iso_date, time_str = parse_utc_to_ist(utc_time_str)
+        
+        # Filter: Keep matches within 2 days of today (IST)
+        try:
+            match_dt = datetime.datetime.strptime(iso_date.split('T')[0], "%Y-%m-%d").date()
+            diff_days = (match_dt - today_ist).days
+            if not (-2 <= diff_days <= 2):
+                continue
+        except Exception as e:
+            print(f"Error filtering match date: {e}")
+            continue
+            
+        scraped_id = match.get('id')
+        hs_id = f"hs_fm_{scraped_id}"
+        
+        home_name = match.get('home', {}).get('name')
+        away_name = match.get('away', {}).get('name')
+        print(f"Processing match: {home_name} vs {away_name} ({scraped_id})...")
         
         # Check if there's a matching existing match (by ID or by team names)
         matched_existing = None
@@ -139,9 +127,8 @@ def main():
             if em_id == hs_id:
                 matched_existing = em
                 break
-            # Also check if it's a manual match representing the same fixture
             if not em_id.startswith('hs_'):
-                if is_duplicate_match(em.get('home_team'), em.get('away_team'), match['home_team'], match['away_team']):
+                if is_duplicate_match(em.get('home_team'), em.get('away_team'), home_name, away_name):
                     matched_existing = em
                     break
                     
@@ -149,91 +136,64 @@ def main():
             merged_existing_ids.add(matched_existing['id'])
             print(f"  Matched with existing entry: {matched_existing['id']}")
             
-        # Query 365scores API
-        game = fetch_365scores_game(scraped_id)
+        status = match.get('status', {})
+        is_finished = status.get('finished', False)
+        is_started = status.get('started', False)
+        is_cancelled = status.get('cancelled', False)
         
-        home_score = "0"
-        away_score = "0"
-        is_live = False
-        is_finished = False
+        is_live = is_started and not is_finished and not is_cancelled
         
-        if game:
-            h_score_val = game.get('homeCompetitor', {}).get('score', -1)
-            a_score_val = game.get('awayCompetitor', {}).get('score', -1)
-            
-            home_score = str(h_score_val) if h_score_val != -1 else "0"
-            away_score = str(a_score_val) if a_score_val != -1 else "0"
-            
-            status_text = game.get('statusText', '').lower()
-            status_group = game.get('statusGroup')
-            
-            if status_text in ['ended', 'finished', 'cancelled', 'postponed', 'aborted']:
-                is_finished = True
-            elif status_text == 'scheduled':
-                is_live = False
-                is_finished = False
-            else:
-                if status_group == 3:
-                    is_live = True
-                elif status_group == 4:
-                    is_finished = True
-                else:
-                    # Fallback check: if start time is past but status is not ended
-                    try:
-                        # Use current time comparison
-                        now = datetime.datetime.now(datetime.timezone.utc)
-                        clean_start = match["start"]
-                        if clean_start.endswith('Z'):
-                            clean_start = clean_start[:-1] + '+00:00'
-                        start_dt = datetime.datetime.fromisoformat(clean_start)
-                        if start_dt <= now <= (start_dt + datetime.timedelta(hours=3)):
-                            is_live = True
-                        elif now > (start_dt + datetime.timedelta(hours=3)):
-                            is_finished = True
-                    except Exception as te:
-                        print(f"Time parsing error fallback: {te}")
-        else:
-            print(f"No API response for {scraped_id}. Using time-based status fallbacks.")
+        # Extract scores
+        score_str = status.get('scoreStr', '')
+        if score_str and ' - ' in score_str:
             try:
-                now = datetime.datetime.now(datetime.timezone.utc)
-                clean_start = match["start"]
-                if clean_start.endswith('Z'):
-                    clean_start = clean_start[:-1] + '+00:00'
-                start_dt = datetime.datetime.fromisoformat(clean_start)
-                if start_dt <= now <= (start_dt + datetime.timedelta(hours=3)):
-                    is_live = True
-                elif now > (start_dt + datetime.timedelta(hours=3)):
-                    is_finished = True
-            except Exception as te:
-                print(f"Time parsing error: {te}")
-                
-        # Fallback and Map team logos using 365scores CDN
-        home_logo = f"https://widgets.365scores.com/images/teams/width/80/{match['home_id']}.png" if match['home_id'] else "https://i.ibb.co/qF41b08G/HELLO-THUM.png"
-        away_logo = f"https://widgets.365scores.com/images/teams/width/80/{match['away_id']}.png" if match['away_id'] else "https://i.ibb.co/qF41b08G/HELLO-THUM.png"
+                home_score, away_score = score_str.split(' - ')
+            except Exception:
+                home_score, away_score = "0", "0"
+        else:
+            home_score, away_score = "0", "0"
+            
+        # FotMob crest URLs
+        home_id = match.get('home', {}).get('id')
+        away_id = match.get('away', {}).get('id')
+        home_logo = f"https://images.fotmob.com/image_resources/logo/teamlogo/{home_id}_small.png" if home_id else "https://i.ibb.co/qF41b08G/HELLO-THUM.png"
+        away_logo = f"https://images.fotmob.com/image_resources/logo/teamlogo/{away_id}_small.png" if away_id else "https://i.ibb.co/qF41b08G/HELLO-THUM.png"
         
-        # Preserving customized watch URLs from admin panel manually
-        watch_url = match["url"]
+        # Match watch page link on FotMob as fallback
+        page_url = match.get('pageUrl', '')
+        fallback_watch_url = f"https://www.fotmob.com{page_url}" if page_url else ""
+        
+        watch_url = fallback_watch_url
         if matched_existing:
             old_watch_url = matched_existing.get('watch_url', '')
             if old_watch_url and old_watch_url.startswith('http'):
                 watch_url = old_watch_url
-                print(f"  Preserved watch URL: {watch_url}")
+                print(f"  Preserved custom watch URL: {watch_url}")
                 
+        # Group name / Round details
+        group_name = match.get('group', '')
+        round_val = match.get('round', '')
+        group_detail = ""
+        if group_name:
+            group_detail = f"Group {group_name}"
+        elif round_val:
+            group_detail = f"Round {round_val}"
+            
         processed_scraped_matches.append({
             "id": hs_id,
-            "sport": match["sport"],
-            "home_team": match["home_team"],
+            "sport": "football",
+            "home_team": home_name,
             "home_logo": home_logo,
-            "away_team": match["away_team"],
+            "away_team": away_name,
             "away_logo": away_logo,
-            "time": format_display_time(match["start"]),
-            "date": match["start"],
-            "league": match["league"],
-            "group": match["group"],
+            "time": time_str,
+            "date": iso_date,
+            "league": "FIFA World Cup",
+            "group": group_detail,
             "is_live": is_live,
             "is_finished": is_finished,
-            "home_score": home_score,
-            "away_score": away_score,
+            "home_score": home_score.strip(),
+            "away_score": away_score.strip(),
             "watch_url": watch_url
         })
         
