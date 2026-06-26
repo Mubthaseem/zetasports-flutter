@@ -199,10 +199,10 @@
       "date": "2026-06-26T04:30:00+05:30",
       "league": "FIFA World Cup",
       "group": "Group F",
-      "is_live": true,
-      "is_finished": false,
-      "home_score": "0",
-      "away_score": "0",
+      "is_live": false,
+      "is_finished": true,
+      "home_score": "1",
+      "away_score": "1",
       "watch_url": "https://zeta.magiskapk.one/2026/06/japan-vs-sweden.html"
     },
     {
@@ -216,10 +216,10 @@
       "date": "2026-06-26T04:30:00+05:30",
       "league": "FIFA World Cup",
       "group": "Group F",
-      "is_live": true,
-      "is_finished": false,
-      "home_score": "0",
-      "away_score": "2",
+      "is_live": false,
+      "is_finished": true,
+      "home_score": "1",
+      "away_score": "3",
       "watch_url": "https://www.fotmob.com/matches/netherlands-vs-tunisia/1hoci5#4667787"
     },
     {
@@ -461,5 +461,5 @@
       "watch_url": "https://www.fotmob.com/matches/jordan-vs-argentina/1aoo0p#4667816"
     }
   ],
-  "last_updated": "2026-06-25T23:43:39.960859+00:00"
+  "last_updated": "2026-06-26T01:54:10.514166+00:00"
 }
