@@ -1,590 +1,731 @@
 <!--
   ============================================================
-  Premium Live Sports Matches Dashboard (Dark Edition)
-  Features: Live countdowns, auto-scores, no-redirect handling
+  ZetaSports – FotMob-style Match Widget
+  White cards · League header · Centered logos · Live minute
   ============================================================
 -->
-<div id="zeta-sports-container" class="zeta-sports-dark">
-  
-  <!-- Sport Filters -->
-  <div class="sports-filter-row">
-    <button class="sport-btn active" data-sport="all">
-      <span class="btn-icon">🏆</span> All
+<div id="zs-root">
+
+  <!-- Date Tab Bar -->
+  <div class="zs-date-bar">
+    <button class="zs-dtab" data-date="yesterday">
+      Yesterday <span class="zs-cnt" id="cnt-yesterday">0</span>
     </button>
-    <button class="sport-btn" data-sport="football">
-      <span class="btn-icon">⚽</span> Football
+    <button class="zs-dtab active" data-date="today">
+      Today <span class="zs-cnt" id="cnt-today">0</span>
     </button>
-    <button class="sport-btn" data-sport="cricket">
-      <span class="btn-icon">🏏</span> Cricket
+    <button class="zs-dtab" data-date="tomorrow">
+      Tomorrow <span class="zs-cnt" id="cnt-tomorrow">0</span>
     </button>
   </div>
 
-  <!-- Date Tabs -->
-  <div class="date-tabs-row">
-    <button class="date-tab-btn" data-date-tab="yesterday">Yesterday</button>
-    <button class="date-tab-btn active" data-date-tab="today">Today</button>
-    <button class="date-tab-btn" data-date-tab="tomorrow">Tomorrow</button>
-  </div>
-
-  <!-- Matches Grid Container -->
-  <div id="matches-grid" class="matches-grid">
-    <div class="matches-loader">
-      <div class="spinner"></div>
-      <p>Loading matches feed...</p>
+  <!-- Match Cards -->
+  <div id="zs-list">
+    <div class="zs-spinner-wrap">
+      <div class="zs-spin"></div>
     </div>
   </div>
+
 </div>
 
-<!-- Styles and Typography -->
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --zs-bg: #090d16;
-    --zs-card-bg: rgba(22, 28, 45, 0.45);
-    --zs-card-hover: rgba(22, 28, 45, 0.8);
-    --zs-border: rgba(255, 255, 255, 0.08);
-    --zs-border-hover: rgba(255, 255, 255, 0.18);
-    --zs-text-primary: #f8fafc;
-    --zs-text-secondary: #94a3b8;
-    --zs-accent-blue: #2563eb;
-    --zs-accent-sky: #0ea5e9;
-    --zs-accent-green: #10b981;
-    --zs-accent-red: #ef4444;
+/* ── Base reset scoped to widget ─────────────────────── */
+#zs-root, #zs-root * {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+#zs-root {
+  background: #eef0f6;
+  padding: 16px 12px 20px;
+  border-radius: 16px;
+  max-width: 860px;
+  margin: 12px auto;
+}
+
+/* ── Date Tab Bar ────────────────────────────────────── */
+.zs-date-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.zs-dtab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.zs-dtab:hover {
+  color: #1e293b;
+}
+
+.zs-dtab.active {
+  background: #1a1a2e;
+  color: #fff;
+}
+
+/* Count badge */
+.zs-cnt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(100,116,139,0.18);
+  color: #64748b;
+}
+
+.zs-dtab.active .zs-cnt {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+}
+
+/* ── Match List ──────────────────────────────────────── */
+#zs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 200px;
+}
+
+/* ── Match Card ──────────────────────────────────────── */
+.zs-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(15,23,42,0.07);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+a.zs-card:hover {
+  box-shadow: 0 6px 20px rgba(15,23,42,0.12);
+  transform: translateY(-1px);
+}
+
+/* ── Card Header ─────────────────────────────────────── */
+.zs-ch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 14px 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.zs-ch-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zs-league-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #f1f5f9;
+  flex-shrink: 0;
+}
+
+.zs-league-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.zs-league-round {
+  font-size: 11px;
+  color: #3b82f6;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+/* Status badges */
+.zs-badge {
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+
+.zs-badge.live {
+  background: #fb7185;
+  color: #fff;
+  animation: zs-live-pulse 1.8s infinite;
+}
+
+.zs-badge.upcoming {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.zs-badge.finished {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* ── Card Body: Teams + Score ────────────────────────── */
+.zs-cb {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 18px 16px 14px;
+  gap: 8px;
+}
+
+/* Team column: logo on top, name below, centered */
+.zs-team-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.zs-team-col.home {
+  align-items: center;
+}
+
+.zs-team-col.away {
+  align-items: center;
+}
+
+.zs-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #f8fafc;
+  flex-shrink: 0;
+}
+
+.zs-tname {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Score/VS center column */
+.zs-score-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 100px;
+}
+
+.zs-score {
+  font-size: 30px;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.zs-vs {
+  font-size: 22px;
+  font-weight: 800;
+  color: #cbd5e1;
+  line-height: 1;
+}
+
+/* Live minute indicator */
+.zs-minute {
+  font-size: 13px;
+  font-weight: 700;
+  color: #22c55e;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.zs-live-dot {
+  font-size: 8px;
+  color: #ef4444;
+  animation: zs-live-pulse 1.2s infinite;
+}
+
+@keyframes zs-live-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+.zs-ko-time {
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* ── Card Footer ─────────────────────────────────────── */
+.zs-cf {
+  border-top: 1px solid #f1f5f9;
+  padding: 8px 14px 10px;
+}
+
+.zs-cf-label {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.zs-cf-value {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.2px;
+}
+
+/* Live minute in footer */
+.zs-cf-value.is-live {
+  color: #22c55e;
+}
+
+/* ── Play overlay (cards with watch_url) ─────────────── */
+.zs-play-wrap {
+  position: relative;
+}
+
+.zs-play-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(37, 99, 235, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+a.zs-card:hover .zs-play-overlay {
+  opacity: 1;
+}
+
+.zs-play-btn {
+  width: 50px;
+  height: 50px;
+  background: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.4);
+  transform: scale(0.82);
+  transition: transform 0.22s cubic-bezier(0.16,1,0.3,1);
+}
+
+a.zs-card:hover .zs-play-btn {
+  transform: scale(1);
+}
+
+.zs-play-icon {
+  width: 0; height: 0;
+  border: solid transparent;
+  border-width: 8px 0 8px 15px;
+  border-left-color: #fff;
+  margin-left: 3px;
+}
+
+/* ── Loading / Empty ─────────────────────────────────── */
+.zs-spinner-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.zs-spin {
+  width: 32px; height: 32px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: zs-rot 0.75s linear infinite;
+}
+
+.zs-empty {
+  text-align: center;
+  padding: 50px 20px;
+  color: #94a3b8;
+}
+
+.zs-empty-icon { font-size: 36px; margin-bottom: 10px; }
+
+.zs-empty h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.zs-empty p { font-size: 13px; }
+
+/* ── Animations ─────────────────────────────────────── */
+@keyframes zs-rot { to { transform: rotate(360deg); } }
+
+@keyframes zs-live-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(251,113,133,0.5); }
+  70%  { box-shadow: 0 0 0 6px rgba(251,113,133,0); }
+  100% { box-shadow: 0 0 0 0 rgba(251,113,133,0); }
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 520px) {
+  #zs-root {
+    padding: 12px 8px 16px;
+    border-radius: 12px;
+    margin: 8px 4px;
   }
 
-  #zeta-sports-container.zeta-sports-dark {
-    background: radial-gradient(circle at 50% 10%, #0d1326 0%, #050811 100%);
-    color: var(--zs-text-primary);
-    font-family: 'Inter', -apple-system, sans-serif;
-    padding: 28px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-    max-width: 900px;
-    margin: 20px auto;
-    border: 1px solid var(--zs-border);
-    backdrop-filter: blur(12px);
-    box-sizing: border-box;
+  .zs-dtab {
+    font-size: 12px;
+    padding: 7px 12px;
+    gap: 4px;
   }
 
-  #zeta-sports-container.zeta-sports-dark * {
-    box-sizing: border-box;
+  .zs-logo {
+    width: 52px;
+    height: 52px;
   }
 
-  /* Sport Filter Buttons */
-  .sports-filter-row {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 24px;
+  .zs-score {
+    font-size: 22px;
   }
 
-  .sport-btn {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--zs-border);
-    color: var(--zs-text-secondary);
-    padding: 10px 22px;
-    border-radius: 9999px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  .zs-vs {
+    font-size: 17px;
   }
 
-  .sport-btn:hover {
-    background: rgba(255, 255, 255, 0.07);
-    color: var(--zs-text-primary);
-    transform: translateY(-1px);
-    border-color: rgba(255, 255, 255, 0.15);
+  .zs-tname {
+    font-size: 11.5px;
   }
 
-  .sport-btn.active {
-    background: var(--zs-text-primary);
-    color: var(--zs-bg);
-    border-color: var(--zs-text-primary);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.12);
+  .zs-score-col {
+    min-width: 74px;
   }
 
-  /* Date Tabs */
-  .date-tabs-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--zs-border);
-    border-radius: 14px;
-    padding: 6px;
-    margin-bottom: 28px;
+  .zs-cb {
+    padding: 14px 10px 10px;
+    gap: 4px;
   }
 
-  .date-tab-btn {
-    background: transparent;
-    border: none;
-    color: var(--zs-text-secondary);
-    padding: 12px 6px;
-    border-radius: 10px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-align: center;
+  .zs-ch {
+    padding: 9px 10px 7px;
   }
 
-  .date-tab-btn:hover {
-    color: var(--zs-text-primary);
+  .zs-league-name {
+    font-size: 11.5px;
   }
 
-  .date-tab-btn.active {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--zs-text-primary);
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  }
-
-  /* Matches Grid & Cards */
-  .matches-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    min-height: 200px;
-  }
-
-  .match-card {
-    background: var(--zs-card-bg);
-    border: 1px solid var(--zs-border);
-    border-radius: 18px;
-    padding: 20px 24px;
-    display: grid;
-    grid-template-columns: 1.1fr auto 1.1fr;
-    align-items: center;
-    position: relative;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    text-decoration: none;
-    color: inherit;
-    overflow: hidden;
-  }
-
-  /* Clickable Card Hover */
-  a.match-card:hover {
-    transform: translateY(-2px);
-    background: var(--zs-card-hover);
-    border-color: var(--zs-border-hover);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(37, 99, 235, 0.05);
-    cursor: pointer;
-  }
-
-  /* Static (Non-Clickable) Card Styling */
-  div.match-card {
-    cursor: default;
-  }
-
-  /* Team Alignment */
-  .team-block {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-  }
-
-  .team-block.home {
-    justify-content: flex-end;
-    text-align: right;
-  }
-
-  .team-block.away {
-    justify-content: flex-start;
-    text-align: left;
-  }
-
-  .team-name {
-    font-family: 'Outfit', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--zs-text-primary);
-    letter-spacing: -0.2px;
-  }
-
-  .team-logo {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: contain;
-    border: 2px solid rgba(255, 255, 255, 0.05);
-    background-color: rgba(255, 255, 255, 0.03);
-    padding: 3px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
-    transition: transform 0.3s ease;
-  }
-
-  a.match-card:hover .team-logo {
-    transform: scale(1.05);
-  }
-
-  /* Center Status & Info */
-  .center-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px;
-    min-width: 150px;
-  }
-
-  .match-time {
-    font-family: 'Outfit', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--zs-text-primary);
-    margin-bottom: 6px;
-  }
-
-  .league-badge {
-    font-family: 'Outfit', sans-serif;
+  .zs-league-round {
     font-size: 10px;
-    color: var(--zs-text-secondary);
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 0.6px;
-    margin-top: 6px;
   }
 
-  /* Status Badges */
-  .status-badge {
-    font-family: 'Outfit', sans-serif;
-    font-size: 11px;
-    font-weight: 800;
-    padding: 5px 12px;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    letter-spacing: 0.5px;
+  .zs-badge {
+    font-size: 9.5px;
+    padding: 3px 8px;
   }
 
-  .status-badge.live {
-    background: rgba(239, 68, 68, 0.12);
-    color: var(--zs-accent-red);
-    border: 1px solid rgba(239, 68, 68, 0.25);
-    animation: zs-pulseRed 1.8s infinite;
+  .zs-cf {
+    padding: 7px 10px 9px;
   }
 
-  .status-badge.countdown {
-    background: rgba(16, 185, 129, 0.1);
-    color: var(--zs-accent-green);
-    border: 1px solid rgba(16, 185, 129, 0.2);
+  .zs-cf-value {
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .zs-logo {
+    width: 42px;
+    height: 42px;
   }
 
-  .status-badge.finished {
-    background: rgba(148, 163, 184, 0.08);
-    color: var(--zs-text-secondary);
-    border: 1px solid rgba(148, 163, 184, 0.15);
-  }
-
-  /* Live Score */
-  .live-score-display {
-    font-family: 'Outfit', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--zs-text-primary);
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 4px 16px;
-    border-radius: 10px;
-    border: 1px solid var(--zs-border);
-    margin-bottom: 6px;
-  }
-
-  .score-divider {
-    color: var(--zs-text-secondary);
-    font-weight: 400;
+  .zs-score {
     font-size: 18px;
   }
 
-  /* Loading State */
-  .matches-loader, .matches-empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
-    text-align: center;
-    color: var(--zs-text-secondary);
+  .zs-score-col {
+    min-width: 60px;
   }
 
-  .spinner {
-    width: 36px;
-    height: 36px;
-    border: 3px solid var(--zs-border);
-    border-top: 3px solid var(--zs-accent-sky);
-    border-radius: 50%;
-    animation: zs-spin 0.8s linear infinite;
-    margin-bottom: 16px;
+  .zs-tname {
+    font-size: 10px;
   }
 
-  .empty-icon {
-    font-size: 38px;
-    margin-bottom: 12px;
-    opacity: 0.65;
+  .zs-dtab {
+    padding: 6px 9px;
+    font-size: 11px;
   }
-
-  /* Animations */
-  @keyframes zs-spin {
-    to { transform: rotate(360deg); }
-  }
-
-  @keyframes zs-pulseRed {
-    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.35); }
-    70% { box-shadow: 0 0 0 7px rgba(239, 68, 68, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-  }
-
-  /* Responsive Design */
-  @media (max-width: 640px) {
-    .match-card {
-      grid-template-columns: 1fr;
-      gap: 16px;
-      padding: 24px;
-      text-align: center;
-    }
-
-    .team-block.home {
-      justify-content: center;
-      text-align: center;
-      flex-direction: column-reverse;
-    }
-
-    .team-block.away {
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-    }
-
-    .center-info {
-      order: -1;
-      border-bottom: 1px solid var(--zs-border);
-      padding-bottom: 14px;
-      margin-bottom: 4px;
-    }
-  }
+}
 </style>
 
-<!-- Widget Logic -->
 <script>
-  (function() {
-    const JSON_URL = "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/blogger-widgets/matches.json";
-    const POLL_INTERVAL = 30000;
+(function () {
+  const JSON_URL = 'https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/blogger-widgets/matches.json';
+  const POLL_MS  = 30000;
+  const FALLBACK = 'https://i.ibb.co/qF41b08G/HELLO-THUM.png';
 
-    let matchesData = [];
-    let activeSport = 'all';
-    let activeDateTab = 'today';
-    let countdownIntervals = [];
+  let allMatches  = [];
+  let activeDate  = 'today';
+  let cdTimers    = [];
 
-    document.addEventListener("DOMContentLoaded", () => {
-      initWidget();
+  // ── Boot ──────────────────────────────────────────────
+  function boot() {
+    const root = document.getElementById('zs-root');
+    if (!root) return;
+    root.querySelectorAll('.zs-dtab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        root.querySelectorAll('.zs-dtab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeDate = btn.getAttribute('data-date');
+        render();
+      });
+    });
+    load();
+    setInterval(load, POLL_MS);
+  }
+
+  // ── Fetch ─────────────────────────────────────────────
+  async function load() {
+    try {
+      const r = await fetch(JSON_URL + '?_=' + Date.now());
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const d = await r.json();
+      if (d && Array.isArray(d.matches)) {
+        allMatches = d.matches;
+        updateCounts();
+        render();
+      }
+    } catch (e) {
+      console.warn('[ZetaSports] fetch failed', e);
+      if (!allMatches.length) showErr();
+    }
+  }
+
+  // ── Date helpers ──────────────────────────────────────
+  function dateCat(iso) {
+    const m  = new Date(iso);
+    const t  = new Date();
+    const md = new Date(m.getFullYear(), m.getMonth(), m.getDate()).getTime();
+    const td = new Date(t.getFullYear(), t.getMonth(), t.getDate()).getTime();
+    const d  = Math.round((md - td) / 86400000);
+    if (d <= -1) return 'yesterday';
+    if (d === 0)  return 'today';
+    return 'tomorrow';
+  }
+
+  function updateCounts() {
+    ['yesterday','today','tomorrow'].forEach(k => {
+      const n = allMatches.filter(m => dateCat(m.date) === k).length;
+      const el = document.getElementById('cnt-' + k);
+      if (el) el.textContent = n;
+    });
+  }
+
+  // ── Render ────────────────────────────────────────────
+  function render() {
+    cdTimers.forEach(clearInterval);
+    cdTimers = [];
+
+    const list = document.getElementById('zs-list');
+    if (!list) return;
+
+    const matches = allMatches.filter(m => dateCat(m.date) === activeDate);
+
+    if (!matches.length) {
+      list.innerHTML = `
+        <div class="zs-empty">
+          <div class="zs-empty-icon">📅</div>
+          <h3>No matches scheduled</h3>
+          <p>No matches for ${activeDate}.</p>
+        </div>`;
+      return;
+    }
+
+    list.innerHTML = '';
+
+    // Pin live matches to top, then upcoming (soonest first), then finished
+    const sorted = [...matches].sort((a, b) => {
+      const rank = m => m.is_live ? 0 : m.is_finished ? 2 : 1;
+      if (rank(a) !== rank(b)) return rank(a) - rank(b);
+      // Within same group: sort by kickoff time ascending
+      return new Date(a.date) - new Date(b.date);
     });
 
-    async function initWidget() {
-      setupEventListeners();
-      await fetchMatches();
-      setInterval(fetchMatches, POLL_INTERVAL);
+    sorted.forEach((m, i) => list.appendChild(buildCard(m, i)));
+  }
+
+  // ── Build card ────────────────────────────────────────
+  function buildCard(m, idx) {
+    const hasLink = m.watch_url && m.watch_url.startsWith('http');
+    const el = document.createElement(hasLink ? 'a' : 'div');
+    el.className = 'zs-card' + (hasLink ? ' zs-play-wrap' : '');
+    if (hasLink) {
+      el.href   = m.watch_url;
+      el.target = '_blank';
+      el.rel    = 'noopener noreferrer';
     }
 
-    function setupEventListeners() {
-      document.querySelectorAll(".sport-btn").forEach(btn => {
-        btn.addEventListener("click", (e) => {
-          document.querySelectorAll(".sport-btn").forEach(b => b.classList.remove("active"));
-          const target = e.currentTarget;
-          target.classList.add("active");
-          activeSport = target.getAttribute("data-sport");
-          renderMatches();
-        });
-      });
+    // Status
+    let badgeClass = 'upcoming', badgeText = 'UPCOMING';
+    if (m.is_live)     { badgeClass = 'live';     badgeText = 'LIVE'; }
+    if (m.is_finished) { badgeClass = 'finished'; badgeText = 'FT'; }
 
-      document.querySelectorAll(".date-tab-btn").forEach(btn => {
-        btn.addEventListener("click", (e) => {
-          document.querySelectorAll(".date-tab-btn").forEach(b => b.classList.remove("active"));
-          const target = e.currentTarget;
-          target.classList.add("active");
-          activeDateTab = target.getAttribute("data-date-tab");
-          renderMatches();
-        });
-      });
+    // League icon: use fotmob league image or fallback emoji
+    const leagueIcon = m.league_logo || FALLBACK;
+
+    // Score center
+    let scoreHTML = '';
+    let footLabel = '', footVal = '', footValClass = '';
+    const cdId = `zs-cd-${idx}`;
+
+    if (m.is_live) {
+      // live_minute from scraper (e.g. "45'", "HT") — fall back to auto-elapsed
+      const liveMinDisp = m.live_minute ? esc(m.live_minute) : computeElapsed(m.date);
+      scoreHTML = `
+        <div class="zs-score">${esc(m.home_score)} - ${esc(m.away_score)}</div>
+        <div class="zs-minute"><span class="zs-live-dot">&#9679;</span> ${liveMinDisp}</div>`;
+      footLabel   = 'Live';
+      footVal     = liveMinDisp;
+      footValClass = 'is-live';
+    } else if (m.is_finished) {
+      scoreHTML = `<div class="zs-score">${esc(m.home_score)} - ${esc(m.away_score)}</div>`;
+      footLabel = 'Full Time';
+      footVal   = `${esc(m.home_score)} - ${esc(m.away_score)}`;
+    } else {
+      scoreHTML = `
+        <div class="zs-vs">VS</div>
+        <div class="zs-ko-time">${esc(m.time)}</div>`;
+      footLabel = 'Kickoff in';
+      footVal   = '';  // filled by countdown
     }
 
-    async function fetchMatches() {
-      try {
-        const response = await fetch(JSON_URL + '?t=' + new Date().getTime());
-        if (!response.ok) throw new Error("Fetch error");
-        const data = await response.json();
-        
-        if (data && data.matches) {
-          matchesData = data.matches;
-          renderMatches();
-        }
-      } catch (err) {
-        console.error("Failed to fetch matches:", err);
-        if (matchesData.length === 0) {
-          const grid = document.getElementById("matches-grid");
-          grid.innerHTML = `
-            <div class="matches-empty">
-              <div class="empty-icon">⚠️</div>
-              <h3>Unable to load matches</h3>
-              <p>Please check your internet connection or try again later.</p>
-            </div>
-          `;
-        }
-      }
-    }
-
-    function getMatchDateCategory(isoString) {
-      const matchDate = new Date(isoString);
-      const today = new Date();
-      
-      const mDate = new Date(matchDate.getFullYear(), matchDate.getMonth(), matchDate.getDate());
-      const tDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-      
-      const diffTime = mDate.getTime() - tDate.getTime();
-      const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
-      
-      if (diffDays === -1) return 'yesterday';
-      if (diffDays === 0) return 'today';
-      if (diffDays === 1) return 'tomorrow';
-      
-      if (diffDays < -1) return 'yesterday';
-      return 'tomorrow';
-    }
-
-    function renderMatches() {
-      countdownIntervals.forEach(clearInterval);
-      countdownIntervals = [];
-
-      const grid = document.getElementById("matches-grid");
-      if (!grid) return;
-
-      const filtered = matchesData.filter(match => {
-        const sportMatch = activeSport === 'all' || match.sport === activeSport;
-        const dateMatch = getMatchDateCategory(match.date) === activeDateTab;
-        return sportMatch && dateMatch;
-      });
-
-      if (filtered.length === 0) {
-        grid.innerHTML = `
-          <div class="matches-empty">
-            <div class="empty-icon">📅</div>
-            <h3>No matches scheduled</h3>
-            <p>No ${activeSport !== 'all' ? activeSport : ''} matches scheduled for ${activeDateTab}.</p>
+    el.innerHTML = `
+      <!-- Header -->
+      <div class="zs-ch">
+        <div class="zs-ch-left">
+          <img class="zs-league-icon" src="${esc(leagueIcon)}" alt="" onerror="this.src='${FALLBACK}'">
+          <div>
+            <div class="zs-league-name">${esc(m.league)}</div>
+            <div class="zs-league-round">${esc(m.group || 'Round')}</div>
           </div>
-        `;
-        return;
-      }
+        </div>
+        <span class="zs-badge ${badgeClass}">${badgeText}</span>
+      </div>
 
-      grid.innerHTML = '';
+      <!-- Body -->
+      <div class="zs-cb">
+        <div class="zs-team-col home">
+          <img class="zs-logo" src="${esc(m.home_logo)}" alt="${esc(m.home_team)}" onerror="this.onerror=null;this.src='${FALLBACK}'">
+          <span class="zs-tname">${esc(m.home_team)}</span>
+        </div>
+        <div class="zs-score-col">${scoreHTML}</div>
+        <div class="zs-team-col away">
+          <img class="zs-logo" src="${esc(m.away_logo)}" alt="${esc(m.away_team)}" onerror="this.onerror=null;this.src='${FALLBACK}'">
+          <span class="zs-tname">${esc(m.away_team)}</span>
+        </div>
+      </div>
 
-      filtered.forEach((match, idx) => {
-        const hasLink = match.watch_url && match.watch_url.startsWith('http');
-        
-        // Create an <a> link tag if watch_url is present, otherwise create a static <div> container
-        const card = document.createElement(hasLink ? "a" : "div");
-        card.className = "match-card";
-        if (hasLink) {
-          card.href = match.watch_url;
-          card.target = "_blank";
-        }
+      <!-- Footer -->
+      <div class="zs-cf">
+        <div class="zs-cf-label">${footLabel}</div>
+        <div class="zs-cf-value ${footValClass}" id="${cdId}-foot">${footVal}</div>
+      </div>
 
-        const homeBlock = `
-          <div class="team-block home">
-            <span class="team-name">${match.home_team}</span>
-            <img class="team-logo" src="${match.home_logo}" alt="${match.home_team}" onerror="this.onerror=null; this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
-          </div>
-        `;
+      ${hasLink ? '<div class="zs-play-overlay"><div class="zs-play-btn"><div class="zs-play-icon"></div></div></div>' : ''}
+    `;
 
-        const awayBlock = `
-          <div class="team-block away">
-            <img class="team-logo" src="${match.away_logo}" alt="${match.away_team}" onerror="this.onerror=null; this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
-            <span class="team-name">${match.away_team}</span>
-          </div>
-        `;
-
-        let centerMarkup = '';
-        let countdownId = null;
-        
-        if (match.is_live) {
-          centerMarkup = `
-            <div class="center-info">
-              <div class="live-score-display">
-                <span>${match.home_score}</span>
-                <span class="score-divider">-</span>
-                <span>${match.away_score}</span>
-              </div>
-              <div class="status-badge live">● LIVE</div>
-              <div class="league-badge">${match.league}</div>
-            </div>
-          `;
-        } else if (match.is_finished) {
-          centerMarkup = `
-            <div class="center-info">
-              <div class="live-score-display">
-                <span style="opacity: 0.85;">${match.home_score}</span>
-                <span class="score-divider">-</span>
-                <span style="opacity: 0.85;">${match.away_score}</span>
-              </div>
-              <div class="status-badge finished">FT</div>
-              <div class="league-badge">${match.league}</div>
-            </div>
-          `;
-        } else {
-          countdownId = `countdown-${match.id}-${idx}`;
-          centerMarkup = `
-            <div class="center-info">
-              <div class="match-time">${match.time}</div>
-              <div id="${countdownId}" class="status-badge countdown">--h --m --s</div>
-              <div class="league-badge">${match.league}</div>
-            </div>
-          `;
-        }
-
-        card.innerHTML = homeBlock + centerMarkup + awayBlock;
-        grid.appendChild(card);
-
-        if (countdownId) {
-          startCountdown(match.date, countdownId);
-        }
-      });
+    // Start countdown for upcoming
+    if (!m.is_live && !m.is_finished) {
+      startCountdown(m.date, cdId + '-foot');
     }
 
-    function startCountdown(targetIsoString, elementId) {
-      const targetTime = new Date(targetIsoString).getTime();
-      
-      const updateTimer = () => {
-        const el = document.getElementById(elementId);
-        if (!el) return;
+    return el;
+  }
 
-        const now = new Date().getTime();
-        const diff = targetTime - now;
+  // ── Countdown ─────────────────────────────────────────
+  function startCountdown(iso, elId) {
+    const target = new Date(iso).getTime();
+    const tick = () => {
+      const el = document.getElementById(elId);
+      if (!el) return;
+      const diff = target - Date.now();
+      if (diff <= 0) { el.textContent = 'Starting…'; return; }
+      const h = Math.floor(diff / 3600000).toString().padStart(2, '0');
+      const m = Math.floor((diff % 3600000) / 60000).toString().padStart(2, '0');
+      const s = Math.floor((diff % 60000) / 1000).toString().padStart(2, '0');
+      el.textContent = `${h}:${m}:${s}`;
+    };
+    tick();
+    cdTimers.push(setInterval(tick, 1000));
+  }
 
-        if (diff <= 0) {
-          el.textContent = "00h 00m 00s";
-          return;
-        }
+  function showErr() {
+    const list = document.getElementById('zs-list');
+    if (list) list.innerHTML = `
+      <div class="zs-empty">
+        <div class="zs-empty-icon">⚠️</div>
+        <h3>Couldn't load matches</h3>
+        <p>Check your connection and try again.</p>
+      </div>`;
+  }
 
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  // ── Compute elapsed minutes from kickoff (fallback) ──
+  function computeElapsed(isoDate) {
+    try {
+      const kickoff = new Date(isoDate).getTime();
+      const elapsed = Math.floor((Date.now() - kickoff) / 60000);
+      if (elapsed < 0)  return '';
+      if (elapsed <= 45) return elapsed + "'";
+      if (elapsed <= 50) return "45+'";
+      if (elapsed <= 90) return (elapsed - 45) + "' (2H)";
+      return "90+'";
+    } catch { return ''; }
+  }
 
-        const hDisplay = hours.toString().padStart(2, '0');
-        const mDisplay = minutes.toString().padStart(2, '0');
-        const sDisplay = seconds.toString().padStart(2, '0');
+  // ── HTML escape ───────────────────────────────────────
+  function esc(v) {
+    if (v == null) return '';
+    return String(v)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
 
-        el.textContent = `${hDisplay}h ${mDisplay}m ${sDisplay}s`;
-      };
-
-      updateTimer();
-      const interval = setInterval(updateTimer, 1000);
-      countdownIntervals.push(interval);
-    }
-  })();
+  // Boot
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
 </script>
