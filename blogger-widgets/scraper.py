@@ -250,6 +250,8 @@ def date_keys_for_iso(iso_str):
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
+
     # 1. Load existing admin-selected matches
     existing_matches = []
     if os.path.exists(JSON_OUTPUT_PATH):
@@ -285,7 +287,6 @@ def main():
     dates_needed = set()
     for em in existing_matches:
         dates_needed.update(date_keys_for_iso(em.get('date', '')))
-    now_utc = datetime.datetime.now(datetime.timezone.utc)
     for d in [-1, 0, 1]:
         dates_needed.add((now_utc + datetime.timedelta(days=d)).strftime('%Y%m%d'))
 
