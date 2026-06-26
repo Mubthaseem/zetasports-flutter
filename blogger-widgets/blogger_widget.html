@@ -596,10 +596,22 @@ a.zs-card:hover .zs-play-btn {
       el.rel    = 'noopener noreferrer';
     }
 
-    // Status
+    // Auto-detect finished matches by elapsed time
+    // (handles cases where backend scraper is slow to mark match as FT)
+    let isLive     = m.is_live;
+    let isFinished = m.is_finished;
+    if (isLive && m.date) {
+      const minsElapsed = (Date.now() - new Date(m.date)) / 60000;
+      if (minsElapsed > 115) {   // 90min match + 25min buffer
+        isLive     = false;
+        isFinished = true;       // treat as finished on client side
+      }
+    }
+
+    // Status badge
     let badgeClass = 'upcoming', badgeText = 'UPCOMING';
-    if (m.is_live)     { badgeClass = 'live';     badgeText = 'LIVE'; }
-    if (m.is_finished) { badgeClass = 'finished'; badgeText = 'FT'; }
+    if (isLive)     { badgeClass = 'live';     badgeText = 'LIVE'; }
+    if (isFinished) { badgeClass = 'finished'; badgeText = 'FT'; }
 
     // League icon: use fotmob league image or fallback emoji
     const leagueIcon = m.league_logo || FALLBACK;
@@ -609,7 +621,7 @@ a.zs-card:hover .zs-play-btn {
     let footLabel = '', footVal = '', footValClass = '';
     const cdId = `zs-cd-${idx}`;
 
-    if (m.is_live) {
+    if (isLive) {
       // live_minute from scraper (e.g. "45'", "HT") — fall back to auto-elapsed
       const liveMinDisp = m.live_minute ? esc(m.live_minute) : computeElapsed(m.date);
       scoreHTML = `
@@ -618,7 +630,7 @@ a.zs-card:hover .zs-play-btn {
       footLabel   = 'Live';
       footVal     = liveMinDisp;
       footValClass = 'is-live';
-    } else if (m.is_finished) {
+    } else if (isFinished) {
       scoreHTML = `<div class="zs-score">${esc(m.home_score)} - ${esc(m.away_score)}</div>`;
       footLabel = 'Full Time';
       footVal   = `${esc(m.home_score)} - ${esc(m.away_score)}`;

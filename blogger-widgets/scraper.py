@@ -97,26 +97,46 @@ def get_espn_slug(league_name):
             return slug
     return None
 
-def fetch_espn_scoreboard(slug, extra_dates=None):
+def fetch_espn_all_matches(slug, dates_str):
     """
-    Fetch ESPN scoreboard for a league slug.
-    Returns list of normalised match dicts.
-    Uses limit=50 and optional dates to ensure all simultaneous matches are returned.
+    Fetch ALL matches for a given slug and date from ESPN.
+    Tries both the scoreboard (live matches) and the schedule (all matches).
+    Returns a deduplicated list of normalised match dicts.
     """
-    dates_str = extra_dates or datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%d')
-    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={dates_str}&limit=50"
-    print(f"    ESPN → {url}")
+    results = {}   # event_id → dict, for deduplication
+
+    # Try 1: scoreboard (best for live matches, but selective)
+    sb_url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={dates_str}&limit=100"
+    print(f"    ESPN scoreboard → {sb_url}")
+    for match in _parse_espn_events(sb_url):
+        results[match.get('_event_id', match['home_name'] + match['away_name'])] = match
+
+    # Try 2: schedule (returns ALL events for the day, including finished)
+    sc_url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/schedule?dates={dates_str}"
+    print(f"    ESPN schedule   → {sc_url}")
+    for match in _parse_espn_events(sc_url):
+        key = match.get('_event_id', match['home_name'] + match['away_name'])
+        if key not in results:    # scoreboard data takes priority (fresher)
+            results[key] = match
+
+    print(f"    Got {len(results)} unique events for {slug} / {dates_str}.")
+    return list(results.values())
+
+def _parse_espn_events(url):
+    """Parse ESPN scoreboard or schedule URL → list of normalised match dicts."""
     content = http_get(url)
     if not content:
         return []
     try:
         data = json.loads(content)
     except Exception as e:
-        print(f"    ESPN JSON error: {e}")
+        print(f"    ESPN JSON error [{url[:60]}]: {e}")
         return []
 
+    # Both scoreboard and schedule put events at 'events' key
+    events = data.get('events', [])
     results = []
-    for event in data.get('events', []):
+    for event in events:
         comps = event.get('competitions', [])
         if not comps:
             continue
@@ -255,11 +275,11 @@ def main():
     # 3. Fetch ESPN data (keyed by home+away name)
     espn_pool = []   # list of normalised dicts
     for slug in league_slugs_needed:
-        # Fetch today AND yesterday to cover late-night games that cross UTC midnight
+        # Fetch today AND yesterday/tomorrow to cover late-night games crossing UTC midnight
         for delta in [0, -1, 1]:
             d = (now_utc + datetime.timedelta(days=delta)).strftime('%Y%m%d')
             print(f"\nFetching ESPN [{slug}] for date {d}...")
-            espn_pool.extend(fetch_espn_scoreboard(slug, extra_dates=d))
+            espn_pool.extend(fetch_espn_all_matches(slug, d))
 
     # 4. Fetch FotMob data for needed dates
     dates_needed = set()
