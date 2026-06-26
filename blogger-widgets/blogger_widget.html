@@ -495,6 +495,28 @@ a.zs-card:hover .zs-play-btn {
   const POLL_MS  = 30000;
   const FALLBACK = 'https://i.ibb.co/qF41b08G/HELLO-THUM.png';
 
+  // ESPN slug mappings
+  const ESPN_SLUGS = {
+    'world cup':          'fifa.world',
+    'fifa world cup':     'fifa.world',
+    'premier league':     'eng.1',
+    'la liga':            'esp.1',
+    'champions league':   'uefa.champions',
+    'europa league':      'uefa.europa',
+    'serie a':            'ita.1',
+    'bundesliga':         'ger.1',
+    'ligue 1':            'fra.1',
+    'eredivisie':         'ned.1',
+    'pro league':         'uae.league',
+    'saudi league':       'sau.1',
+    'mls':                'usa.1',
+    'copa america':       'conmebol.america',
+    'euro':               'uefa.euro',
+    'nations league':     'uefa.nations',
+    'carabao':            'eng.league_cup',
+    'fa cup':             'eng.fa'
+  };
+
   let allMatches  = [];
   let activeDate  = 'today';
   let cdTimers    = [];
@@ -515,7 +537,7 @@ a.zs-card:hover .zs-play-btn {
     setInterval(load, POLL_MS);
   }
 
-  // ── Fetch ─────────────────────────────────────────────
+  // ── Fetch & Real-time Update ──────────────────────────
   async function load() {
     try {
       const r = await fetch(JSON_URL + '?_=' + Date.now());
@@ -525,10 +547,167 @@ a.zs-card:hover .zs-play-btn {
         allMatches = d.matches;
         updateCounts();
         render();
+        
+        // Asynchronously enrich loaded matches with live data directly from ESPN API in real-time
+        await enrichMatchesWithRealtime();
       }
     } catch (e) {
       console.warn('[ZetaSports] fetch failed', e);
       if (!allMatches.length) showErr();
+    }
+  }
+
+  // ── Client-side ESPN Scraper ──────────────────────────
+  function getEspnSlug(leagueName) {
+    if (!leagueName) return null;
+    const key = leagueName.toLowerCase().trim();
+    for (const [pattern, slug] of Object.entries(ESPN_SLUGS)) {
+      if (key.includes(pattern) || pattern.includes(key)) {
+        return slug;
+      }
+    }
+    return null;
+  }
+
+  function getEspnDates() {
+    const dates = [];
+    const now = new Date();
+    for (let delta = -1; delta <= 1; delta++) {
+      const d = new Date(now.getTime() + delta * 24 * 60 * 60 * 1000);
+      const yyyy = d.getUTCFullYear();
+      const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+      const dd = String(d.getUTCDate()).padStart(2, '0');
+      dates.push(`${yyyy}${mm}${dd}`);
+    }
+    return dates;
+  }
+
+  function cleanName(name) {
+    if (!name) return '';
+    return name.toLowerCase()
+      .replace(/&amp;/g, '&')
+      .replace(/&/g, 'and')
+      .replace(/côte/g, 'cote')
+      .replace(/é/g, 'e')
+      .replace(/ü/g, 'u')
+      .replace(/ö/g, 'o')
+      .replace(/ä/g, 'a')
+      .replace(/[^a-z0-9]/g, '');
+  }
+
+  function namesMatch(a, b) {
+    const ca = cleanName(a);
+    const cb = cleanName(b);
+    if (ca === cb) return true;
+    if (ca.length >= 3 && cb.length >= 3) {
+      if (ca.includes(cb) || cb.includes(ca)) return true;
+    }
+    return false;
+  }
+
+  function matchFound(adminHome, adminAway, feedHome, feedAway) {
+    return (namesMatch(adminHome, feedHome) && namesMatch(adminAway, feedAway)) ||
+           (namesMatch(adminHome, feedAway) && namesMatch(adminAway, feedHome));
+  }
+
+  function fmtClock(clockStr, detail) {
+    const special = new Set(['HT', 'ET', 'PEN', 'AET', 'P', 'PSO']);
+    if (detail && special.has(detail.toUpperCase())) {
+      return detail.toUpperCase();
+    }
+    if (!clockStr) return '';
+    const m = clockStr.trim().match(/^(\d+)/);
+    if (m) {
+      return m[1] + "'";
+    }
+    return clockStr;
+  }
+
+  async function fetchEspnScores(slug, dates) {
+    const feedMatches = [];
+    const promises = dates.map(async (dateStr) => {
+      try {
+        const url = `https://site.api.espn.com/apis/site/v2/sports/soccer/${slug}/scoreboard?dates=${dateStr}&limit=100`;
+        const res = await fetch(url);
+        if (!res.ok) return;
+        const data = await res.json();
+        const events = data.events || [];
+        for (const event of events) {
+          const comps = event.competitions || [];
+          if (!comps.length) continue;
+          const comp = comps[0];
+          const competitors = comp.competitors || [];
+          const home = competitors.find(c => c.homeAway === 'home') || {};
+          const away = competitors.find(c => c.homeAway === 'away') || {};
+
+          const status = event.status || {};
+          const stype = status.type || {};
+          const state = stype.state || '';
+          const isLive = state === 'in';
+          const isFinished = stype.completed || false;
+
+          const homeScore = String(home.score ?? '0');
+          const awayScore = String(away.score ?? '0');
+
+          let liveMin = '';
+          if (isLive) {
+            const detail = stype.shortDetail || stype.detail || '';
+            const displayClock = status.displayClock || '';
+            liveMin = fmtClock(displayClock, detail);
+          }
+
+          feedMatches.push({
+            home_name: home.team?.displayName || '',
+            away_name: away.team?.displayName || '',
+            home_score: homeScore,
+            away_score: awayScore,
+            is_live: isLive,
+            is_finished: isFinished,
+            live_minute: liveMin
+          });
+        }
+      } catch (e) {
+        console.warn(`[ZetaSports] ESPN fetch failed for ${slug} on ${dateStr}`, e);
+      }
+    });
+    await Promise.all(promises);
+    return feedMatches;
+  }
+
+  async function enrichMatchesWithRealtime() {
+    const slugs = new Set();
+    allMatches.forEach(m => {
+      const slug = getEspnSlug(m.league);
+      if (slug) slugs.add(slug);
+    });
+
+    if (slugs.size === 0) return;
+
+    const dates = getEspnDates();
+    const allFeeds = [];
+
+    const fetchPromises = Array.from(slugs).map(async (slug) => {
+      const feed = await fetchEspnScores(slug, dates);
+      allFeeds.push(...feed);
+    });
+    await Promise.all(fetchPromises);
+
+    let updated = false;
+    allMatches.forEach(m => {
+      const feed = allFeeds.find(f => matchFound(m.home_team, m.away_team, f.home_name, f.away_name));
+      if (feed) {
+        m.home_score  = feed.home_score;
+        m.away_score  = feed.away_score;
+        m.is_live     = feed.is_live;
+        m.is_finished = feed.is_finished;
+        m.live_minute = feed.live_minute;
+        updated = true;
+      }
+    });
+
+    if (updated) {
+      updateCounts();
+      render();
     }
   }
 
