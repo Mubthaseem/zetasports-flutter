@@ -97,12 +97,14 @@ def get_espn_slug(league_name):
             return slug
     return None
 
-def fetch_espn_scoreboard(slug):
+def fetch_espn_scoreboard(slug, extra_dates=None):
     """
     Fetch ESPN scoreboard for a league slug.
     Returns list of normalised match dicts.
+    Uses limit=50 and optional dates to ensure all simultaneous matches are returned.
     """
-    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard"
+    dates_str = extra_dates or datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%d')
+    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={dates_str}&limit=50"
     print(f"    ESPN → {url}")
     content = http_get(url)
     if not content:
@@ -253,8 +255,11 @@ def main():
     # 3. Fetch ESPN data (keyed by home+away name)
     espn_pool = []   # list of normalised dicts
     for slug in league_slugs_needed:
-        print(f"\nFetching ESPN [{slug}]...")
-        espn_pool.extend(fetch_espn_scoreboard(slug))
+        # Fetch today AND yesterday to cover late-night games that cross UTC midnight
+        for delta in [0, -1, 1]:
+            d = (now_utc + datetime.timedelta(days=delta)).strftime('%Y%m%d')
+            print(f"\nFetching ESPN [{slug}] for date {d}...")
+            espn_pool.extend(fetch_espn_scoreboard(slug, extra_dates=d))
 
     # 4. Fetch FotMob data for needed dates
     dates_needed = set()
