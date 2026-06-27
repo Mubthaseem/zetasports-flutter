@@ -297,126 +297,71 @@
       resize: none;
     }
 
-    /* ========================================== */
-    /* Blogger Widget Styles for Live Preview     */
-    /* ========================================== */
-    #zeta-sports-container {
-      --zs-bg: #090d16;
-      --zs-card-bg: rgba(22, 28, 45, 0.45);
-      --zs-card-hover: rgba(22, 28, 45, 0.8);
-      --zs-border: rgba(255, 255, 255, 0.08);
-      --zs-border-hover: rgba(255, 255, 255, 0.18);
-      --zs-text-primary: #f8fafc;
-      --zs-text-secondary: #94a3b8;
-      --zs-accent-blue: #2563eb;
-      --zs-accent-sky: #0ea5e9;
-      --zs-accent-green: #10b981;
-      --zs-accent-red: #ef4444;
-    }
+    /* ============================================================ */
+    /* FotMob-style Preview Widget CSS                              */
+    /* ============================================================ */
+    #adm-preview-root, #adm-preview-root * { box-sizing:border-box; margin:0; padding:0; font-family:'Inter',-apple-system,sans-serif; }
 
-    #zeta-sports-container.zeta-sports-dark {
-      background: radial-gradient(circle at 50% 10%, #0d1326 0%, #050811 100%);
-      color: var(--zs-text-primary);
-      font-family: 'Inter', -apple-system, sans-serif;
-      padding: 28px;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-      max-width: 900px;
-      margin: 20px auto;
-      border: 1px solid var(--zs-border);
-      backdrop-filter: blur(12px);
-      box-sizing: border-box;
+    .adm-dtab {
+      display:inline-flex; align-items:center; gap:5px;
+      background:transparent; border:none;
+      color:#64748b; font-size:13px; font-weight:600;
+      padding:7px 14px; border-radius:999px; cursor:pointer; transition:all .2s;
     }
+    .adm-dtab:hover { color:#1e293b; }
+    .adm-dtab.active { background:#1a1a2e; color:#fff; }
 
-    #zeta-sports-container.zeta-sports-dark * {
-      box-sizing: border-box;
+    .adm-cnt {
+      display:inline-flex; align-items:center; justify-content:center;
+      min-width:18px; height:18px; padding:0 4px; border-radius:999px;
+      font-size:10px; font-weight:700;
+      background:rgba(100,116,139,.18); color:#64748b;
     }
+    .adm-dtab.active .adm-cnt { background:rgba(255,255,255,.2); color:#fff; }
 
-    /* Sport Filter Buttons */
-    .sports-filter-row {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 24px;
+    #adm-preview-list { display:flex; flex-direction:column; gap:10px; min-height:120px; }
+
+    .adm-card {
+      background:#fff; border-radius:13px;
+      box-shadow:0 1px 6px rgba(15,23,42,.07);
+      overflow:hidden; text-decoration:none; color:inherit; display:block;
+      transition:box-shadow .2s, transform .2s;
     }
+    a.adm-card:hover { box-shadow:0 6px 20px rgba(15,23,42,.12); transform:translateY(-1px); }
 
-    .sport-btn {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--zs-border);
-      color: var(--zs-text-secondary);
-      padding: 10px 22px;
-      border-radius: 9999px;
-      font-family: 'Outfit', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+    .adm-ch { display:flex; align-items:center; justify-content:space-between; padding:10px 13px 8px; border-bottom:1px solid #f1f5f9; }
+    .adm-ch-left { display:flex; align-items:center; gap:7px; }
+    .adm-lig-icon { width:24px; height:24px; border-radius:50%; object-fit:contain; background:#f1f5f9; flex-shrink:0; }
+    .adm-lig-name { font-size:12.5px; font-weight:700; color:#1e293b; line-height:1.3; }
+    .adm-lig-round { font-size:10.5px; color:#3b82f6; font-weight:500; margin-top:1px; }
 
-    .sport-btn:hover {
-      background: rgba(255, 255, 255, 0.07);
-      color: var(--zs-text-primary);
-      transform: translateY(-1px);
-      border-color: rgba(255, 255, 255, 0.15);
-    }
+    .adm-badge { font-size:10px; font-weight:800; padding:3px 9px; border-radius:999px; flex-shrink:0; }
+    .adm-badge.live { background:#fb7185; color:#fff; }
+    .adm-badge.upcoming { background:#dbeafe; color:#2563eb; }
+    .adm-badge.finished { background:#f1f5f9; color:#64748b; }
 
-    .sport-btn.active {
-      background: var(--zs-text-primary);
-      color: var(--zs-bg);
-      border-color: var(--zs-text-primary);
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.12);
-    }
+    .adm-cb { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:16px 14px 12px; gap:6px; }
 
-    /* Date Tabs */
-    .date-tabs-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid var(--zs-border);
-      border-radius: 14px;
-      padding: 6px;
-      margin-bottom: 28px;
-    }
+    .adm-tcol { display:flex; flex-direction:column; align-items:center; gap:7px; }
+    .adm-logo { width:60px; height:60px; border-radius:50%; object-fit:contain; background:#f8fafc; }
+    .adm-tname { font-size:12px; font-weight:700; color:#1e293b; text-align:center; line-height:1.3; }
 
-    .date-tab-btn {
-      background: transparent;
-      border: none;
-      color: var(--zs-text-secondary);
-      padding: 12px 6px;
-      border-radius: 10px;
-      font-family: 'Outfit', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-align: center;
-    }
+    .adm-sc { display:flex; flex-direction:column; align-items:center; gap:4px; min-width:90px; }
+    .adm-score { font-size:26px; font-weight:900; color:#0f172a; letter-spacing:-.5px; line-height:1; }
+    .adm-vs { font-size:20px; font-weight:800; color:#cbd5e1; line-height:1; }
+    .adm-minute { font-size:12px; font-weight:700; color:#22c55e; }
+    .adm-kotime { font-size:12px; font-weight:600; color:#94a3b8; }
 
-    .date-tab-btn:hover {
-      color: var(--zs-text-primary);
-    }
+    .adm-cf { border-top:1px solid #f1f5f9; padding:7px 13px 9px; }
+    .adm-cf-label { font-size:10.5px; color:#94a3b8; font-weight:500; margin-bottom:2px; }
+    .adm-cf-value { font-size:14px; font-weight:800; color:#1e293b; }
+    .adm-cf-value.live { color:#22c55e; }
 
-    .date-tab-btn.active {
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--zs-text-primary);
-      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
-    }
+    .adm-empty { text-align:center; padding:40px 20px; }
 
-    /* Matches Grid & Cards */
-    .matches-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      min-height: 200px;
-    }
+    @keyframes adm-rot { to { transform:rotate(360deg); } }
+  </style>
 
-    .match-card {
-      background: var(--zs-card-bg);
-      border: 1px solid var(--zs-border);
-      border-radius: 18px;
       padding: 20px 24px;
       display: grid;
       grid-template-columns: 1.1fr auto 1.1fr;
@@ -831,34 +776,21 @@
   <!-- Live Widget Preview Panel -->
   <div class="panel" style="margin-top: 30px;">
     <div class="panel-title">🌐 Live Blogger Widget Preview</div>
-    <div id="zeta-sports-container" class="zeta-sports-dark" style="margin: 10px auto; max-width: 100%;">
-      
-      <!-- Sport Filters -->
-      <div class="sports-filter-row">
-        <button class="sport-btn active" data-sport="all" onclick="setPreviewSport('all', this)">
-          <span class="btn-icon">🏆</span> All
-        </button>
-        <button class="sport-btn" data-sport="football" onclick="setPreviewSport('football', this)">
-          <span class="btn-icon">⚽</span> Football
-        </button>
-        <button class="sport-btn" data-sport="cricket" onclick="setPreviewSport('cricket', this)">
-          <span class="btn-icon">🏏</span> Cricket
-        </button>
+    <!-- New FotMob-style preview container -->
+    <div id="adm-preview-root" style="background:#eef0f6; border-radius:14px; padding:14px 10px 18px; margin-top:12px;">
+
+      <!-- Date Bar -->
+      <div style="display:flex; justify-content:center; gap:6px; margin-bottom:14px;">
+        <button class="adm-dtab" data-pdate="yesterday" onclick="setPDate('yesterday',this)">Yesterday <span class="adm-cnt" id="adm-cnt-y">0</span></button>
+        <button class="adm-dtab active" data-pdate="today" onclick="setPDate('today',this)">Today <span class="adm-cnt" id="adm-cnt-t">0</span></button>
+        <button class="adm-dtab" data-pdate="tomorrow" onclick="setPDate('tomorrow',this)">Tomorrow <span class="adm-cnt" id="adm-cnt-tm">0</span></button>
       </div>
 
-      <!-- Date Tabs -->
-      <div class="date-tabs-row">
-        <button class="date-tab-btn" data-date-tab="yesterday" onclick="setPreviewDateTab('yesterday', this)">Yesterday</button>
-        <button class="date-tab-btn active" data-date-tab="today" onclick="setPreviewDateTab('today', this)">Today</button>
-        <button class="date-tab-btn" data-date-tab="tomorrow" onclick="setPreviewDateTab('tomorrow', this)">Tomorrow</button>
-      </div>
-
-      <!-- Matches Grid Container -->
-      <div id="preview-matches-grid" class="matches-grid">
-        <div class="matches-empty">
-          <div class="empty-icon">📅</div>
-          <h3>No matches scheduled</h3>
-          <p>No matches added yet.</p>
+      <!-- Cards -->
+      <div id="adm-preview-list">
+        <div class="adm-empty">
+          <div style="font-size:32px;">📅</div>
+          <p style="margin-top:8px; color:#94a3b8; font-size:13px;">Add or fetch matches to see a live preview.</p>
         </div>
       </div>
     </div>
@@ -1119,7 +1051,10 @@
     }
 
     const url = `https://api.github.com/repos/${settings.user}/${settings.repo}/contents/${settings.path}?ref=${settings.branch}`;
-    const headers = {};
+    const headers = {
+      'Cache-Control': 'no-cache',
+      'Pragma': 'no-cache'
+    };
     if (settings.token) {
       headers['Authorization'] = `Bearer ${settings.token}`;
     }
@@ -1172,13 +1107,27 @@
 
     let sha = '';
     try {
-      const getRes = await fetch(url + `?ref=${settings.branch}&t=${Date.now()}`, { headers: { 'Authorization': `Bearer ${settings.token}` } });
+      const getRes = await fetch(url + `?ref=${settings.branch}&t=${Date.now()}`, {
+        headers: {
+          'Authorization': `Bearer ${settings.token}`,
+          'Cache-Control': 'no-cache',
+          'Pragma': 'no-cache'
+        }
+      });
       if (getRes.ok) {
         const fileData = await getRes.json();
         sha = fileData.sha;
+        console.log("Fetched current SHA:", sha);
+      } else if (getRes.status === 404) {
+        console.log("File does not exist yet. Will create new file.");
+      } else {
+        const errText = await getRes.text();
+        throw new Error(`Failed to fetch file metadata (status: ${getRes.status}). Details: ${errText}`);
       }
     } catch (e) {
-      console.log("File does not exist yet.");
+      console.error(e);
+      alert("Error checking existing file on GitHub: " + e.message);
+      return;
     }
 
     const jsonString = getJsonData();
@@ -1426,150 +1375,181 @@
     renderPreviewMatches();
   }
 
-  function getPreviewMatchDateCategory(isoString) {
-    const matchDate = new Date(isoString);
-    const today = new Date();
-    
-    const mDate = new Date(matchDate.getFullYear(), matchDate.getMonth(), matchDate.getDate());
-    const tDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-    
-    const diffTime = mDate.getTime() - tDate.getTime();
-    const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
-    
-    if (diffDays === -1) return 'yesterday';
-    if (diffDays === 0) return 'today';
-    if (diffDays === 1) return 'tomorrow';
-    
-    if (diffDays < -1) return 'yesterday';
+  function admDateCat(iso) {
+    const m = new Date(iso), t = new Date();
+    const md = new Date(m.getFullYear(),m.getMonth(),m.getDate()).getTime();
+    const td = new Date(t.getFullYear(),t.getMonth(),t.getDate()).getTime();
+    const d = Math.round((md-td)/86400000);
+    if (d <= -1) return 'yesterday';
+    if (d === 0)  return 'today';
     return 'tomorrow';
+  }
+
+  function admEsc(v) {
+    if (v==null) return '';
+    return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  let admDate = 'today';
+
+  function setPDate(d, btn) {
+    document.querySelectorAll('.adm-dtab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    admDate = d;
+    renderPreviewMatches();
   }
 
   function renderPreviewMatches() {
     previewIntervals.forEach(clearInterval);
     previewIntervals = [];
 
-    const grid = document.getElementById("preview-matches-grid");
+    const list = document.getElementById('adm-preview-list');
+    if (!list) return;
+
+    // Update counts
+    ['yesterday','today','tomorrow'].forEach(k => {
+      const ids = {'yesterday':'adm-cnt-y','today':'adm-cnt-t','tomorrow':'adm-cnt-tm'};
+      const el = document.getElementById(ids[k]);
+      if (el) el.textContent = matches.filter(m => admDateCat(m.date) === k).length;
+    });
+
+    const filtered = matches.filter(m => admDateCat(m.date) === admDate);
+
+    if (!filtered.length) {
+      list.innerHTML = `<div class="adm-empty"><div style="font-size:32px">📅</div><p style="margin-top:8px;color:#94a3b8;font-size:13px">No matches for ${admDate}.</p></div>`;
+      return;
+    }
+
+    list.innerHTML = '';
+    const FALLBACK = 'https://i.ibb.co/qF41b08G/HELLO-THUM.png';
+
+    filtered.forEach((m, idx) => {
+      const hasLink = m.watch_url && m.watch_url.startsWith('http');
+      const card = document.createElement(hasLink ? 'a' : 'div');
+      card.className = 'adm-card';
+      if (hasLink) { card.href = m.watch_url; card.target='_blank'; card.rel='noopener'; }
+
+      let badgeClass = 'upcoming', badgeText = 'UPCOMING';
+      if (m.is_live)     { badgeClass = 'live';     badgeText = 'LIVE'; }
+      if (m.is_finished) { badgeClass = 'finished'; badgeText = 'FT'; }
+
+      let scoreHTML = '', footLabel = '', footVal = '', footValClass = '';
+      const cdId = `acd-${idx}`;
+
+      if (m.is_live) {
+        scoreHTML = `<div class="adm-score">${admEsc(m.home_score)} - ${admEsc(m.away_score)}</div><div class="adm-minute">${admEsc(m.live_minute || m.time)}</div>`;
+        footLabel = 'Live'; footVal = admEsc(m.live_minute || m.time); footValClass = 'live';
+      } else if (m.is_finished) {
+        scoreHTML = `<div class="adm-score">${admEsc(m.home_score)} - ${admEsc(m.away_score)}</div>`;
+        footLabel = 'Final'; footVal = `${admEsc(m.home_score)} - ${admEsc(m.away_score)}`;
+      } else {
+        scoreHTML = `<div class="adm-vs">VS</div><div class="adm-kotime">${admEsc(m.time)}</div>`;
+        footLabel = 'Kickoff in'; footVal = '';
+      }
+
+      card.innerHTML = `
+        <div class="adm-ch">
+          <div class="adm-ch-left">
+            <img class="adm-lig-icon" src="${admEsc(m.league_logo||FALLBACK)}" alt="" onerror="this.src='${FALLBACK}'">
+            <div>
+              <div class="adm-lig-name">${admEsc(m.league)}</div>
+              <div class="adm-lig-round">${admEsc(m.group||'Round')}</div>
+            </div>
+          </div>
+          <span class="adm-badge ${badgeClass}">${badgeText}</span>
+        </div>
+        <div class="adm-cb">
+          <div class="adm-tcol">
+            <img class="adm-logo" src="${admEsc(m.home_logo)}" alt="" onerror="this.onerror=null;this.src='${FALLBACK}'">
+            <span class="adm-tname">${admEsc(m.home_team)}</span>
+          </div>
+          <div class="adm-sc">${scoreHTML}</div>
+          <div class="adm-tcol">
+            <img class="adm-logo" src="${admEsc(m.away_logo)}" alt="" onerror="this.onerror=null;this.src='${FALLBACK}'">
+            <span class="adm-tname">${admEsc(m.away_team)}</span>
+          </div>
+        </div>
+        <div class="adm-cf">
+          <div class="adm-cf-label">${footLabel}</div>
+          <div class="adm-cf-value ${footValClass}" id="${cdId}-foot">${footVal}</div>
+        </div>
+      `;
+      list.appendChild(card);
+      if (!m.is_live && !m.is_finished) startPreviewCountdown(m.date, cdId + '-foot');
+    });
+  }
+
+  function zsEsc(str) {
+    if (str == null) return '';
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function renderPreviewMatches() {
+    previewIntervals.forEach(clearInterval);
+    previewIntervals = [];
+
+    const grid = document.getElementById('preview-matches-grid');
     if (!grid) return;
 
-    const filtered = matches.filter(match => {
-      const sportMatch = previewSport === 'all' || match.sport === previewSport;
-      const dateMatch = getPreviewMatchDateCategory(match.date) === previewDateTab;
-      return sportMatch && dateMatch;
-    });
+    const filtered = matches.filter(m =>
+      (previewSport === 'all' || m.sport === previewSport) &&
+      getPreviewMatchDateCategory(m.date) === previewDateTab
+    );
 
     if (filtered.length === 0) {
       grid.innerHTML = `
-        <div class="matches-empty">
-          <div class="empty-icon">📅</div>
+        <div class="zs-empty">
+          <div class="zs-empty-icon">📅</div>
           <h3>No matches scheduled</h3>
-          <p>No ${previewSport !== 'all' ? previewSport : ''} matches scheduled for ${previewDateTab}.</p>
-        </div>
-      `;
+          <p>No ${previewSport !== 'all' ? previewSport : ''} matches for ${previewDateTab}.</p>
+        </div>`;
       return;
     }
 
     grid.innerHTML = '';
+    const fallback = 'https://i.ibb.co/qF41b08G/HELLO-THUM.png';
 
-    filtered.forEach((match, idx) => {
-      const hasLink = match.watch_url && match.watch_url.startsWith('http');
-      
-      const card = document.createElement(hasLink ? "a" : "div");
-      card.className = "match-card";
-      if (hasLink) {
-        card.href = match.watch_url;
-        card.target = "_blank";
-      }
+    filtered.forEach((m, idx) => {
+      const hasLink = m.watch_url && m.watch_url.startsWith('http');
+      const card = document.createElement(hasLink ? 'a' : 'div');
+      card.className = 'zs-card';
+      if (hasLink) { card.href = m.watch_url; card.target = '_blank'; card.rel = 'noopener noreferrer'; }
 
-      const homeBlock = `
-        <div class="team-block home">
-          <span class="team-name">${match.home_team}</span>
-          <img class="team-logo" src="${match.home_logo}" alt="${match.home_team}" onerror="this.onerror=null; this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
-        </div>
-      `;
+      const homeBlock = `<div class="zs-team home"><span class="zs-team-name">${zsEsc(m.home_team)}</span><img class="zs-team-logo" src="${zsEsc(m.home_logo)}" alt="${zsEsc(m.home_team)}" onerror="this.onerror=null;this.src='${fallback}'"></div>`;
+      const awayBlock = `<div class="zs-team away"><img class="zs-team-logo" src="${zsEsc(m.away_logo)}" alt="${zsEsc(m.away_team)}" onerror="this.onerror=null;this.src='${fallback}'"><span class="zs-team-name">${zsEsc(m.away_team)}</span></div>`;
 
-      const awayBlock = `
-        <div class="team-block away">
-          <img class="team-logo" src="${match.away_logo}" alt="${match.away_team}" onerror="this.onerror=null; this.src='https://i.ibb.co/qF41b08G/HELLO-THUM.png';">
-          <span class="team-name">${match.away_team}</span>
-        </div>
-      `;
-
-      let centerMarkup = '';
-      let countdownId = null;
-      
-      if (match.is_live) {
-        centerMarkup = `
-          <div class="center-info">
-            <div class="live-score-display">
-              <span>${match.home_score}</span>
-              <span class="score-divider">-</span>
-              <span>${match.away_score}</span>
-            </div>
-            <div class="status-badge live">● LIVE</div>
-            <div class="league-badge">${match.league}</div>
-          </div>
-        `;
-      } else if (match.is_finished) {
-        centerMarkup = `
-          <div class="center-info">
-            <div class="live-score-display">
-              <span style="opacity: 0.85;">${match.home_score}</span>
-              <span class="score-divider">-</span>
-              <span style="opacity: 0.85;">${match.away_score}</span>
-            </div>
-            <div class="status-badge finished">FT</div>
-            <div class="league-badge">${match.league}</div>
-          </div>
-        `;
+      let center = '';
+      let cdId = null;
+      if (m.is_live) {
+        center = `<div class="zs-center"><div class="zs-score"><span>${zsEsc(m.home_score)}</span><span class="zs-score-sep">–</span><span>${zsEsc(m.away_score)}</span></div><div class="zs-badge live">● LIVE</div><div class="zs-league">${zsEsc(m.league)}</div></div>`;
+      } else if (m.is_finished) {
+        center = `<div class="zs-center"><div class="zs-score"><span>${zsEsc(m.home_score)}</span><span class="zs-score-sep">–</span><span>${zsEsc(m.away_score)}</span></div><div class="zs-badge finished">FT</div><div class="zs-league">${zsEsc(m.league)}</div></div>`;
       } else {
-        countdownId = `preview-countdown-${match.id}-${idx}`;
-        centerMarkup = `
-          <div class="center-info">
-            <div class="match-time">${match.time}</div>
-            <div id="${countdownId}" class="status-badge countdown">--h --m --s</div>
-            <div class="league-badge">${match.league}</div>
-          </div>
-        `;
+        cdId = `pcd-${m.id||idx}-${idx}`;
+        center = `<div class="zs-center"><div class="zs-time">${zsEsc(m.time)}</div><div id="${cdId}" class="zs-badge upcoming">--h --m --s</div><div class="zs-league">${zsEsc(m.league)}</div></div>`;
       }
 
-      card.innerHTML = homeBlock + centerMarkup + awayBlock;
+      const playOverlay = hasLink ? `<div class="zs-play-overlay"><div class="zs-play-btn"><div class="zs-play-icon"></div></div></div>` : '';
+      card.innerHTML = `<div class="zs-card-inner">${homeBlock}${center}${awayBlock}</div>${playOverlay}`;
       grid.appendChild(card);
-
-      if (countdownId) {
-        startPreviewCountdown(match.date, countdownId);
-      }
+      if (cdId) startPreviewCountdown(m.date, cdId);
     });
   }
 
-  function startPreviewCountdown(targetIsoString, elementId) {
-    const targetTime = new Date(targetIsoString).getTime();
-    
-    const updateTimer = () => {
-      const el = document.getElementById(elementId);
+  function startPreviewCountdown(iso, elId) {
+    const target = new Date(iso).getTime();
+    const tick = () => {
+      const el = document.getElementById(elId);
       if (!el) return;
-
-      const now = new Date().getTime();
-      const diff = targetTime - now;
-
-      if (diff <= 0) {
-        el.textContent = "00h 00m 00s";
-        return;
-      }
-
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      const hDisplay = hours.toString().padStart(2, '0');
-      const mDisplay = minutes.toString().padStart(2, '0');
-      const sDisplay = seconds.toString().padStart(2, '0');
-
-      el.textContent = `${hDisplay}h ${mDisplay}m ${sDisplay}s`;
+      const diff = target - Date.now();
+      if (diff <= 0) { el.textContent = '00h 00m 00s'; return; }
+      const h = Math.floor(diff/3600000).toString().padStart(2,'0');
+      const m = Math.floor((diff%3600000)/60000).toString().padStart(2,'0');
+      const s = Math.floor((diff%60000)/1000).toString().padStart(2,'0');
+      el.textContent = `${h}h ${m}m ${s}s`;
     };
-
-    updateTimer();
-    const interval = setInterval(updateTimer, 1000);
-    previewIntervals.push(interval);
+    tick();
+    previewIntervals.push(setInterval(tick,1000));
   }
 </script>
 
