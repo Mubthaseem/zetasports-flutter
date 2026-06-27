@@ -256,12 +256,12 @@
       "date": "2026-06-27T00:00:00.000Z",
       "league": "FIFA World Cup",
       "group": "Group H",
-      "is_live": true,
-      "is_finished": false,
+      "is_live": false,
+      "is_finished": true,
       "home_score": "0",
       "away_score": "0",
       "watch_url": "https://zeta.thinkgovtjobs.com/2026/06/cape-verde-vs-saudi-arabia.html",
-      "live_minute": "71'"
+      "live_minute": ""
     },
     {
       "id": "hs_fm_4667802",
@@ -274,12 +274,12 @@
       "date": "2026-06-27T00:00:00.000Z",
       "league": "FIFA World Cup",
       "group": "Group H",
-      "is_live": true,
-      "is_finished": false,
+      "is_live": false,
+      "is_finished": true,
       "home_score": "0",
       "away_score": "1",
       "watch_url": "https://zeta.thinkgovtjobs.com/2026/06/uruguay-vs-spain.html",
-      "live_minute": "70'"
+      "live_minute": ""
     },
     {
       "id": "hs_fm_4667795",
@@ -293,9 +293,9 @@
       "league": "FIFA World Cup",
       "group": "Group G",
       "is_live": false,
-      "is_finished": false,
-      "home_score": "0",
-      "away_score": "0",
+      "is_finished": true,
+      "home_score": "1",
+      "away_score": "1",
       "watch_url": "https://www.fotmob.com/matches/iran-vs-egypt/2dp33g#4667795",
       "live_minute": ""
     },
@@ -311,9 +311,9 @@
       "league": "FIFA World Cup",
       "group": "Group G",
       "is_live": false,
-      "is_finished": false,
-      "home_score": "0",
-      "away_score": "0",
+      "is_finished": true,
+      "home_score": "1",
+      "away_score": "5",
       "watch_url": "https://zeta.thinkgovtjobs.com/2026/06/uruguay-vs-spain.html",
       "live_minute": ""
     },
@@ -460,5 +460,5 @@
       "watch_url": "https://www.fotmob.com/matches/japan-vs-brazil/1uqadm#4653711"
     }
   ],
-  "last_updated": "2026-06-27T01:34:35.780916+00:00"
+  "last_updated": "2026-06-27T05:32:56.111396+00:00"
 }
