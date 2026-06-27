@@ -1051,16 +1051,16 @@
     }
 
     const url = `https://api.github.com/repos/${settings.user}/${settings.repo}/contents/${settings.path}?ref=${settings.branch}`;
-    const headers = {
-      'Cache-Control': 'no-cache',
-      'Pragma': 'no-cache'
-    };
+    const headers = {};
     if (settings.token) {
       headers['Authorization'] = `Bearer ${settings.token}`;
     }
 
     try {
-      const response = await fetch(url + '&t=' + Date.now(), { headers });
+      const response = await fetch(url + '&t=' + Date.now(), { 
+        headers,
+        cache: 'no-store'
+      });
       if (!response.ok) {
         let errMsg = `GitHub returned status: ${response.status}`;
         try {
@@ -1109,10 +1109,9 @@
     try {
       const getRes = await fetch(url + `?ref=${settings.branch}&t=${Date.now()}`, {
         headers: {
-          'Authorization': `Bearer ${settings.token}`,
-          'Cache-Control': 'no-cache',
-          'Pragma': 'no-cache'
-        }
+          'Authorization': `Bearer ${settings.token}`
+        },
+        cache: 'no-store'
       });
       if (getRes.ok) {
         const fileData = await getRes.json();

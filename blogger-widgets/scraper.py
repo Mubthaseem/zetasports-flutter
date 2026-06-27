@@ -103,17 +103,17 @@ def fetch_espn_all_matches(slug, dates_str):
     Tries both the scoreboard (live matches) and the schedule (all matches).
     Returns a deduplicated list of normalised match dicts.
     """
-    results = {}   # event_id → dict, for deduplication
+    results = {}   # event_id -> dict, for deduplication
 
     # Try 1: scoreboard (best for live matches, but selective)
     sb_url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={dates_str}&limit=100"
-    print(f"    ESPN scoreboard → {sb_url}")
+    print(f"    ESPN scoreboard -> {sb_url}")
     for match in _parse_espn_events(sb_url):
         results[match.get('_event_id', match['home_name'] + match['away_name'])] = match
 
     # Try 2: schedule (returns ALL events for the day, including finished)
     sc_url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/schedule?dates={dates_str}"
-    print(f"    ESPN schedule   → {sc_url}")
+    print(f"    ESPN schedule   -> {sc_url}")
     for match in _parse_espn_events(sc_url):
         key = match.get('_event_id', match['home_name'] + match['away_name'])
         if key not in results:    # scoreboard data takes priority (fresher)
@@ -123,7 +123,7 @@ def fetch_espn_all_matches(slug, dates_str):
     return list(results.values())
 
 def _parse_espn_events(url):
-    """Parse ESPN scoreboard or schedule URL → list of normalised match dicts."""
+    """Parse ESPN scoreboard or schedule URL -> list of normalised match dicts."""
     content = http_get(url)
     if not content:
         return []
@@ -175,11 +175,11 @@ def _parse_espn_events(url):
     print(f"    Got {len(results)} events from ESPN.")
     return results
 
-# ── FotMob fallback ────────────────────────────────────────────────────────────
+# -- FotMob fallback ------------------------------------------------------------
 
 def fetch_fotmob_by_date(date_str):
     url = f"https://www.fotmob.com/api/matches?date={date_str}"
-    print(f"    FotMob → {url}")
+    print(f"    FotMob -> {url}")
     content = http_get(url)
     if not content:
         return []
@@ -247,6 +247,23 @@ def date_keys_for_iso(iso_str):
         pass
     return keys
 
+def load_settings():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    candidates = [
+        os.path.join(base_dir, '../local-agent/settings.json'),
+        os.path.join(base_dir, 'local-agent/settings.json'),
+        'local-agent/settings.json',
+        '../local-agent/settings.json'
+    ]
+    for p in candidates:
+        if os.path.exists(p):
+            try:
+                with open(p, 'r') as f:
+                    return json.load(f)
+            except Exception:
+                pass
+    return {}
+
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
@@ -295,10 +312,30 @@ def main():
     for ds in sorted(dates_needed):
         fotmob_raw.extend(fetch_fotmob_by_date(ds))
 
+    if not fotmob_raw:
+        print("  FotMob date feed yielded no matches. Falling back to league page scraping...")
+        settings = load_settings()
+        favorite_leagues = settings.get("favorite_leagues", ["77", "47", "42", "87"])
+        for league_id in favorite_leagues:
+            url = f"https://www.fotmob.com/leagues/{league_id}/fixtures"
+            print(f"  Scraping FotMob league fixtures: {url}")
+            content = http_get(url)
+            if content:
+                try:
+                    m = re.search(r'<script\s+id="__NEXT_DATA__"\s+type="application/json">([\s\S]*?)</script>', content, re.IGNORECASE)
+                    if m:
+                        data = json.loads(m.group(1).strip())
+                        fixtures = data.get('props', {}).get('pageProps', {}).get('fixtures', {})
+                        all_matches = fixtures.get('allMatches', []) if isinstance(fixtures, dict) else []
+                        print(f"    Found {len(all_matches)} matches in league {league_id}")
+                        fotmob_raw.extend(all_matches)
+                except Exception as e:
+                    print(f"    Error parsing league {league_id}: {e}")
+
     fotmob_pool = [parse_fotmob(sm) for sm in fotmob_raw]
 
     # 5. Update each match
-    print(f"\n── Updating {len(existing_matches)} matches ──")
+    print(f"\n== Updating {len(existing_matches)} matches ==")
     updated_matches = []
     for em in existing_matches:
         home_name = em.get('home_team', '')
@@ -315,7 +352,7 @@ def main():
                 em['is_live']     = feed['is_live']
                 em['is_finished'] = feed['is_finished']
                 em['live_minute'] = feed['live_minute']
-                print(f"    ✓ ESPN: {feed['home_score']}-{feed['away_score']} live={feed['is_live']} min='{feed['live_minute']}'")
+                print(f"    [OK] ESPN: {feed['home_score']}-{feed['away_score']} live={feed['is_live']} min='{feed['live_minute']}'")
                 updated = True
                 break
 
@@ -333,12 +370,12 @@ def main():
                         em['home_logo'] = f"https://images.fotmob.com/image_resources/logo/teamlogo/{feed['home_id']}_small.png"
                     if feed.get('away_id') and not em.get('away_logo'):
                         em['away_logo'] = f"https://images.fotmob.com/image_resources/logo/teamlogo/{feed['away_id']}_small.png"
-                    print(f"    ✓ FotMob: {feed['home_score']}-{feed['away_score']} live={feed['is_live']} min='{feed['live_minute']}'")
+                    print(f"    [OK] FotMob: {feed['home_score']}-{feed['away_score']} live={feed['is_live']} min='{feed['live_minute']}'")
                     updated = True
                     break
 
         if not updated:
-            print(f"    ✗ Not found in any source — keeping existing data.")
+            print(f"    [FAIL] Not found in any source -- keeping existing data.")
 
         updated_matches.append(em)
 
@@ -351,7 +388,7 @@ def main():
     os.makedirs(os.path.dirname(JSON_OUTPUT_PATH), exist_ok=True)
     with open(JSON_OUTPUT_PATH, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
-    print(f"\nSaved {len(updated_matches)} matches → {JSON_OUTPUT_PATH}")
+    print(f"\nSaved {len(updated_matches)} matches -> {JSON_OUTPUT_PATH}")
 
 if __name__ == '__main__':
     main()
