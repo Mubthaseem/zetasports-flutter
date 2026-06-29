@@ -377,6 +377,19 @@ def main():
         if not updated:
             print(f"    [FAIL] Not found in any source -- keeping existing data.")
 
+        # Auto-cleanup old finished matches (older than 36 hours)
+        is_finished = em.get('is_finished', False)
+        date_str = em.get('date', '')
+        if date_str and is_finished:
+            try:
+                match_time = datetime.datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                cutoff_time = now_utc - datetime.timedelta(hours=36)
+                if match_time < cutoff_time:
+                    print(f"    [CLEANUP] Removing finished match older than 36 hours: {home_name} vs {away_name}")
+                    continue
+            except Exception as e:
+                print(f"    [CLEANUP] Error parsing date for cleanup: {e}")
+
         updated_matches.append(em)
 
     # 6. Save
