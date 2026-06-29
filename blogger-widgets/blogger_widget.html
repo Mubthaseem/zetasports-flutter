@@ -814,9 +814,23 @@ a.zs-card:hover .zs-play-btn {
       footLabel = 'Full Time';
       footVal   = `${esc(m.home_score)} - ${esc(m.away_score)}`;
     } else {
+      let localTimeStr = esc(m.time);
+      if (m.date) {
+        try {
+          const dateObj = new Date(m.date);
+          let hours = dateObj.getHours();
+          const minutes = dateObj.getMinutes().toString().padStart(2, '0');
+          const ampm = hours >= 12 ? 'PM' : 'AM';
+          hours = hours % 12;
+          hours = hours ? hours : 12;
+          localTimeStr = `${hours}:${minutes} ${ampm}`;
+        } catch (e) {
+          console.error(e);
+        }
+      }
       scoreHTML = `
         <div class="zs-vs">VS</div>
-        <div class="zs-ko-time">${esc(m.time)}</div>`;
+        <div class="zs-ko-time">${localTimeStr}</div>`;
       footLabel = 'Kickoff in';
       footVal   = '';  // filled by countdown
     }

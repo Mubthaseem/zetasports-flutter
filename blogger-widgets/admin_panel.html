@@ -1442,7 +1442,21 @@
         scoreHTML = `<div class="adm-score">${admEsc(m.home_score)} - ${admEsc(m.away_score)}</div>`;
         footLabel = 'Final'; footVal = `${admEsc(m.home_score)} - ${admEsc(m.away_score)}`;
       } else {
-        scoreHTML = `<div class="adm-vs">VS</div><div class="adm-kotime">${admEsc(m.time)}</div>`;
+        let localTimeStr = admEsc(m.time);
+        if (m.date) {
+          try {
+            const dateObj = new Date(m.date);
+            let hours = dateObj.getHours();
+            const minutes = dateObj.getMinutes().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            localTimeStr = `${hours}:${minutes} ${ampm}`;
+          } catch (e) {
+            console.error(e);
+          }
+        }
+        scoreHTML = `<div class="adm-vs">VS</div><div class="adm-kotime">${localTimeStr}</div>`;
         footLabel = 'Kickoff in'; footVal = '';
       }
 
