@@ -84,11 +84,12 @@
       "date": "2026-06-30T21:00:00.000Z",
       "league": "World Cup",
       "group": "",
-      "is_live": false,
+      "is_live": true,
       "is_finished": false,
       "home_score": "0",
       "away_score": "0",
-      "watch_url": "https://zeta.magiskapk.one/2026/06/brazil-vs-japan.html"
+      "watch_url": "https://zeta.magiskapk.one/2026/06/brazil-vs-japan.html",
+      "live_minute": "7'"
     },
     {
       "id": "match_1782808641367",
@@ -105,7 +106,8 @@
       "is_finished": false,
       "home_score": "0",
       "away_score": "0",
-      "watch_url": "https://zeta.magiskapk.one/2026/06/brazil-vs-japan.html"
+      "watch_url": "https://zeta.magiskapk.one/2026/06/brazil-vs-japan.html",
+      "live_minute": ""
     },
     {
       "id": "match_1782808645224",
@@ -144,5 +146,5 @@
       "live_minute": ""
     }
   ],
-  "last_updated": "2026-06-30T20:55:41.257Z"
+  "last_updated": "2026-06-30T21:07:12.158105+00:00"
 }
