@@ -1,110 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'dart:math';
 import 'firebase_options.dart';
-import 'screens/splash_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/home_screen.dart';
+import 'services/firestore_service.dart';
 import 'theme/app_theme.dart';
-import 'services/ad_service.dart';
 
-final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.dark);
-
-@pragma('vm:entry-point')
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-}
 
 void main() async {
   try {
     WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-    MobileAds.instance.initialize();
+    
+    // Initialize Supabase
+    try {
+      await Supabase.initialize(
+        url: 'https://voocdrpetiyspuhyeapi.supabase.co',
+        anonKey: 'sb_publishable_1rE1_AHPxoOv2AUpJtehJw_Gg0tj1xU',
+      );
+    } catch (e) {
+      debugPrint("Supabase Init Error: $e");
+    }
+    
+    // Initialize Firebase (keep for push notifications)
+    try {
+      await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).timeout(
+        const Duration(seconds: 8),
+      );
+    } catch (e) {
+      debugPrint("Firebase Init Timeout or Error: $e");
+    }
+
   } catch (e) {
-    debugPrint("Startup Error: $e");
+    debugPrint("Startup Critical Error: $e");
   }
-  
-  final prefs = await SharedPreferences.getInstance();
-  final isDark = prefs.getBool('isDark') ?? true;
-  themeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
 
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-
-  // Initialize Local Notifications for Foreground Popups
-  const AndroidInitializationSettings initializationSettingsAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
-  const InitializationSettings initializationSettings = InitializationSettings(android: initializationSettingsAndroid);
-  await flutterLocalNotificationsPlugin.initialize(initializationSettings);
-
-  // Create high-importance Android channel
-  const AndroidNotificationChannel channel = AndroidNotificationChannel(
-    'zetasports_high_importance', // id
-    'Important Alerts', // name
-    description: 'Used for live match alerts.', // description
-    importance: Importance.max,
-  );
-
-  await flutterLocalNotificationsPlugin
-      .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
-      ?.createNotificationChannel(channel);
-
-  runApp(const ZetaSportsApp());
+  runApp(const FIFAStreamApp());
 }
 
-class ZetaSportsApp extends StatefulWidget {
-  const ZetaSportsApp({super.key});
-
-  @override
-  State<ZetaSportsApp> createState() => _ZetaSportsAppState();
-}
-
-class _ZetaSportsAppState extends State<ZetaSportsApp> {
-
-  @override
-  void initState() {
-    super.initState();
-    _setupNotifications();
-  }
-
-  Future<void> _setupNotifications() async {
-    FirebaseMessaging messaging = FirebaseMessaging.instance;
-
-    // 1. Request permission from user (Critical for Android 13+)
-    await messaging.requestPermission(
-      alert: true,
-      badge: true,
-      sound: true,
-    );
-
-    // 2. Subscribe everyone to a single topic for easy broadcasting
-    await messaging.subscribeToTopic('all_users');
-
-    // 3. Listen for Foreground notifications (when app is open)
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      RemoteNotification? notification = message.notification;
-      AndroidNotification? android = message.notification?.android;
-
-      if (notification != null && android != null) {
-        flutterLocalNotificationsPlugin.show(
-          notification.hashCode,
-          notification.title,
-          notification.body,
-          const NotificationDetails(
-            android: AndroidNotificationDetails(
-              'zetasports_high_importance',
-              'Important Alerts',
-              channelDescription: 'Used for live match alerts',
-              importance: Importance.max,
-              priority: Priority.high,
-              icon: '@mipmap/ic_launcher',
-            ),
-          ),
-        );
-      }
-    });
-  }
+class FIFAStreamApp extends StatelessWidget {
+  const FIFAStreamApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -112,14 +50,89 @@ class _ZetaSportsAppState extends State<ZetaSportsApp> {
       valueListenable: themeNotifier,
       builder: (_, ThemeMode currentMode, __) {
         return MaterialApp(
-          title: 'ZETASPORTS',
+          title: 'FIFA LIVE TV',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          themeMode: currentMode,
-          home: const SplashScreen(),
+          themeMode: ThemeMode.dark, // Enforce dark mode for TV app
+          home: const InitScreen(),
         );
       },
+    );
+  }
+}
+
+class InitScreen extends StatefulWidget {
+  const InitScreen({super.key});
+
+  @override
+  State<InitScreen> createState() => _InitScreenState();
+}
+
+class _InitScreenState extends State<InitScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _checkSession();
+  }
+
+  Future<void> _checkSession() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final user = prefs.getString('fifa_sess_user') ?? '';
+      final pin = prefs.getString('fifa_sess_pin') ?? '';
+
+      if (user.isEmpty || pin.isEmpty) {
+        _navTo(const LoginScreen());
+        return;
+      }
+
+      // Validate session credentials
+      final userData = await FirestoreService.checkLogin(user, pin);
+      if (userData == null) {
+        _navTo(const LoginScreen());
+        return;
+      }
+
+      // Check device registration
+      String? devId = prefs.getString('fifa_device_id');
+      if (devId == null) {
+        final random = Random.secure();
+        final values = List<int>.generate(16, (i) => random.nextInt(256));
+        devId = values.map((b) => b.toRadixString(16).padLeft(2, '0')).join();
+        await prefs.setString('fifa_device_id', devId);
+      }
+
+      final registered = await FirestoreService.registerSession(user, devId);
+      if (!registered) {
+        // Device limit exceeded or session expired, navigate to Login to show error
+        _navTo(const LoginScreen());
+        return;
+      }
+
+      _navTo(const HomeScreen());
+    } catch (e) {
+      debugPrint("Session check failed: $e");
+      _navTo(const LoginScreen());
+    }
+  }
+
+  void _navTo(Widget screen) {
+    if (mounted) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => screen),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppTheme.pureBlack,
+      body: Center(
+        child: CircularProgressIndicator(color: AppTheme.accent),
+      ),
     );
   }
 }

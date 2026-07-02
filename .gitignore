@@ -43,3 +43,33 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Credentials & Secrets (Security Protection)
+*.env
+*.env.*
+*.jks
+*.keystore
+*.p12
+*.key
+*.pem
+*.der
+key.properties
+local.properties
+google-services.json
+GoogleService-Info.plist
+
+# Local / IDE settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ZetaSports Local Agent Ignores
+local-agent/client_secrets.json
+local-agent/token.json
+local-agent/settings.json
+local-agent/agent.log
+local-agent/python-embed/

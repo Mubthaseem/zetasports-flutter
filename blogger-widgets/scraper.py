@@ -10,7 +10,9 @@ import datetime
 import os
 import re
 
-JSON_OUTPUT_PATH = 'blogger-widgets/matches.json'
+# Resolve matches.json path relative to the script directory
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+JSON_OUTPUT_PATH = os.path.join(BASE_DIR, 'matches.json')
 
 # ── ESPN league slug map ───────────────────────────────────────────────────────
 # Keys are lowercase substrings of the league name entered in the admin panel
@@ -50,18 +52,41 @@ def http_get(url, timeout=20):
         print(f"  HTTP error [{url[:70]}]: {e}")
         return None
 
+# Mapping of common team name variations to match aliases
+TEAM_ALIASES = {
+    'usa': {'unitedstates', 'us'},
+    'unitedstates': {'usa', 'us'},
+    'us': {'usa', 'unitedstates'},
+    'southafrica': {'rsa', 'safrica'},
+    'rsa': {'southafrica', 'safrica'},
+    'drcongo': {'congodr', 'democraticrepublicofcongo', 'congo'},
+    'congodr': {'drcongo', 'democraticrepublicofcongo', 'congo'},
+    'southkorea': {'korearepublic', 'koreasouth', 'korea'},
+    'korearepublic': {'southkorea', 'koreasouth', 'korea'},
+    'bosniaandherzegovina': {'bosniaherzegovina', 'bosnia'},
+    'bosniaherzegovina': {'bosniaandherzegovina', 'bosnia'},
+}
+
 def clean(name):
     if not name:
         return ''
-    return re.sub(r'[^a-z0-9]', '', name.lower()
-                  .replace('&amp;', '&').replace('&', 'and')
-                  .replace('côte', 'cote').replace('é', 'e')
-                  .replace('ü', 'u').replace('ö', 'o').replace('ä', 'a'))
+    # Normalize by converting to lowercase, removing '&', 'and', and accents
+    val = name.lower()
+    val = val.replace('&amp;', '').replace('&', '').replace('and', '')
+    val = val.replace('côte', 'cote').replace('é', 'e').replace('ü', 'u').replace('ö', 'o').replace('ä', 'a')
+    return re.sub(r'[^a-z0-9]', '', val)
 
 def names_match(a, b):
     ca, cb = clean(a), clean(b)
     if ca == cb:
         return True
+    
+    # Check aliases
+    if ca in TEAM_ALIASES and cb in TEAM_ALIASES[ca]:
+        return True
+    if cb in TEAM_ALIASES and ca in TEAM_ALIASES[cb]:
+        return True
+        
     # Partial match for very short vs long names (e.g. "USA" vs "United States")
     if len(ca) >= 3 and len(cb) >= 3:
         if ca in cb or cb in ca:
@@ -275,13 +300,37 @@ def main():
         try:
             with open(JSON_OUTPUT_PATH, 'r', encoding='utf-8') as f:
                 old_data = json.load(f)
-            existing_matches = old_data.get('matches', [])
-            print(f"Loaded {len(existing_matches)} existing matches.")
+            raw_matches = old_data.get('matches', [])
+            print(f"Loaded {len(raw_matches)} existing matches.")
+            
+            # Delete matches older than 2 days (48 hours in the past)
+            for em in raw_matches:
+                match_date_str = em.get('date')
+                if match_date_str:
+                    try:
+                        # Clean timezone suffix and parse ISO format
+                        dt_str = re.sub(r'([+-]\d{2}:\d{2}|Z)$', '', match_date_str).split('.')[0]
+                        match_date = datetime.datetime.fromisoformat(dt_str).replace(tzinfo=datetime.timezone.utc)
+                        # If kickoff was more than 2 days ago, drop it
+                        if now_utc - match_date > datetime.timedelta(days=2):
+                            print(f"  Removing old match (2+ days ago): {em.get('home_team')} vs {em.get('away_team')} (Date: {match_date_str})")
+                            continue
+                    except Exception as e:
+                        print(f"  Error parsing date for old match cleanup: {e}")
+                existing_matches.append(em)
         except Exception as e:
             print(f"Error loading existing matches: {e}")
 
     if not existing_matches:
         print("No matches in JSON. Nothing to update.")
+        # Save the filtered (empty) state back to file
+        output = {
+            "success": True,
+            "matches": [],
+            "last_updated": now_utc.isoformat()
+        }
+        with open(JSON_OUTPUT_PATH, 'w', encoding='utf-8') as f:
+            json.dump(output, f, indent=2, ensure_ascii=False)
         return
 
     # 2. Collect all unique league slugs needed
@@ -294,9 +343,16 @@ def main():
     # 3. Fetch ESPN data (keyed by home+away name)
     espn_pool = []   # list of normalised dicts
     for slug in league_slugs_needed:
-        # Fetch today AND yesterday/tomorrow to cover late-night games crossing UTC midnight
-        for delta in [0, -1, 1]:
-            d = (now_utc + datetime.timedelta(days=delta)).strftime('%Y%m%d')
+        # Get all dates needed for matches in this league
+        league_dates = set()
+        for em in existing_matches:
+            if get_espn_slug(em.get('league', '')) == slug:
+                league_dates.update(date_keys_for_iso(em.get('date', '')))
+        # Always include today, yesterday, tomorrow
+        for delta in [-1, 0, 1]:
+            league_dates.add((now_utc + datetime.timedelta(days=delta)).strftime('%Y%m%d'))
+            
+        for d in sorted(league_dates):
             print(f"\nFetching ESPN [{slug}] for date {d}...")
             espn_pool.extend(fetch_espn_all_matches(slug, d))
 

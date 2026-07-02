@@ -1,7 +1,7 @@
 name: zetasports
 description: ZETASPORTS - Live Football Scores & Streams
 publish_to: 'none'
-version: 1.1.1+7
+version: 1.1.2+11
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -10,18 +10,23 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Supabase
+  supabase_flutter: ^2.6.0
+
   # Firebase
-  firebase_core: ^3.1.0
-  cloud_firestore: ^5.1.0
-  firebase_messaging: ^15.0.1
+  firebase_core: ^4.9.0
+  cloud_firestore: ^6.4.1
+  firebase_messaging: ^16.2.2
 
   # Player
   webview_flutter: ^4.7.0
+  video_player: ^2.8.6
 
   # UI & Images
   cached_network_image: ^3.3.1
   google_fonts: ^6.2.1
   shimmer: ^3.0.0
+  crypto: ^3.0.3
 
   # Utilities
   url_launcher: ^6.3.0

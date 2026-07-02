@@ -29,7 +29,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCxxQUxtEImclVGMWF1FZ84p-0XM9-OGPk',
+    apiKey: 'AIzaSyDSZkTynabN6kiYZyNtSZc35atXgQYbRiA',
     appId: '1:500544502674:web:d0f19312ef703352b41f4b',
     messagingSenderId: '500544502674',
     projectId: 'zeta-sports',
@@ -38,7 +38,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCxxQUxtEImclVGMWF1FZ84p-0XM9-OGPk',
+    apiKey: 'AIzaSyDSZkTynabN6kiYZyNtSZc35atXgQYbRiA',
     appId: '1:500544502674:android:d0f19312ef703352b41f4b',
     messagingSenderId: '500544502674',
     projectId: 'zeta-sports',
@@ -46,7 +46,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCxxQUxtEImclVGMWF1FZ84p-0XM9-OGPk',
+    apiKey: 'AIzaSyDSZkTynabN6kiYZyNtSZc35atXgQYbRiA',
     appId: '1:500544502674:ios:d0f19312ef703352b41f4b',
     messagingSenderId: '500544502674',
     projectId: 'zeta-sports',
@@ -55,7 +55,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCxxQUxtEImclVGMWF1FZ84p-0XM9-OGPk',
+    apiKey: 'AIzaSyDSZkTynabN6kiYZyNtSZc35atXgQYbRiA',
     appId: '1:500544502674:ios:d0f19312ef703352b41f4b',
     messagingSenderId: '500544502674',
     projectId: 'zeta-sports',
@@ -64,7 +64,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCxxQUxtEImclVGMWF1FZ84p-0XM9-OGPk',
+    apiKey: 'AIzaSyDSZkTynabN6kiYZyNtSZc35atXgQYbRiA',
     appId: '1:500544502674:web:d0f19312ef703352b41f4b',
     messagingSenderId: '500544502674',
     projectId: 'zeta-sports',
