@@ -30,11 +30,12 @@
       "date": "2026-07-11T21:00:00.000Z",
       "league": "World Cup",
       "group": "",
-      "is_live": false,
+      "is_live": true,
       "is_finished": false,
       "home_score": "0",
       "away_score": "0",
-      "watch_url": "https://z.netmirror.info/p/fifa.html"
+      "watch_url": "https://z.netmirror.info/p/fifa.html",
+      "live_minute": "1'"
     },
     {
       "id": "match_1783794592487",
@@ -51,8 +52,9 @@
       "is_finished": false,
       "home_score": "0",
       "away_score": "0",
-      "watch_url": "https://z.netmirror.info/p/fifa.html"
+      "watch_url": "https://z.netmirror.info/p/fifa.html",
+      "live_minute": ""
     }
   ],
-  "last_updated": "2026-07-11T20:56:09.694Z"
+  "last_updated": "2026-07-11T21:02:19.684013+00:00"
 }
