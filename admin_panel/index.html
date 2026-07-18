@@ -1333,6 +1333,75 @@ async function saveMatch(){
 }
 async function deleteMatch(id){if(!confirm('Delete match?'))return;await sb.from('zeta_matches').delete().eq('id',id);loadMatches();loadDashboard();}
 
+// ─── HELPERS FOR FOTMOB FETCHING ───
+async function fetchFotmobMatch(fotmobId, proxyMode = 'allorigins') {
+  // 1. Try local python agent first
+  try {
+    const res = await fetch(`http://localhost:5000/api/fotmob/${fotmobId}`);
+    if (res.ok) {
+      const json = await res.json();
+      if (json.success && json.data) {
+        console.log('Successfully fetched FotMob data from local python agent proxy');
+        const data = json.data;
+        const pageProps = data.props?.pageProps || data;
+        // Normalize matchFacts case sensitivity
+        if (pageProps.content) {
+          if (pageProps.content.matchFacts && !pageProps.content.matchfacts) {
+            pageProps.content.matchfacts = pageProps.content.matchFacts;
+          }
+          if (pageProps.content.matchfacts && !pageProps.content.matchFacts) {
+            pageProps.content.matchFacts = pageProps.content.matchfacts;
+          }
+        }
+        return pageProps;
+      }
+    }
+  } catch(e) {
+    console.warn('Local python agent not available or failed:', e);
+  }
+
+  // 2. Fall back to proxying the HTML match page and extracting __NEXT_DATA__
+  const targetUrl = `https://www.fotmob.com/match/${fotmobId}`;
+  let proxyUrl = targetUrl;
+  if (proxyMode === 'allorigins') {
+    proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(targetUrl);
+  } else if (proxyMode === 'corsproxy') {
+    proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(targetUrl);
+  }
+
+  const res = await fetch(proxyUrl);
+  if (!res.ok) throw new Error(`HTTP ${res.status} from proxy`);
+  const html = await res.text();
+  
+  const startTag = '<script id="__NEXT_DATA__" type="application/json">';
+  const endTag = '</script>';
+  const startIdx = html.indexOf(startTag);
+  if (startIdx === -1) {
+    throw new Error('Could not find __NEXT_DATA__ payload. The page might be blocked by Cloudflare/CORS proxy restrictions.');
+  }
+  
+  const contentIdx = startIdx + startTag.length;
+  const endIdx = html.indexOf(endTag, contentIdx);
+  if (endIdx === -1) {
+    throw new Error('Invalid HTML markup returned');
+  }
+  
+  const payload = JSON.parse(html.slice(contentIdx, endIdx));
+  const pageProps = payload.props?.pageProps || payload;
+  
+  // Normalize matchFacts case sensitivity
+  if (pageProps.content) {
+    if (pageProps.content.matchFacts && !pageProps.content.matchfacts) {
+      pageProps.content.matchfacts = pageProps.content.matchFacts;
+    }
+    if (pageProps.content.matchfacts && !pageProps.content.matchFacts) {
+      pageProps.content.matchFacts = pageProps.content.matchfacts;
+    }
+  }
+  
+  return pageProps;
+}
+
 // ─── FOTMOB FULL MATCH DATA FETCH ───
 async function fetchFotmobFullData() {
   const fotmobId = document.getElementById('mmatch-fmid').value.trim();
@@ -1347,15 +1416,9 @@ async function fetchFotmobFullData() {
   statusEl.style.color='var(--t3)';
   statusEl.textContent='⏳ Fetching from FotMob…';
 
-  let apiUrl = `https://www.fotmob.com/api/matchDetails?matchId=${fotmobId}`;
-  if (proxyMode === 'allorigins') apiUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(apiUrl);
-  else if (proxyMode === 'corsproxy') apiUrl = 'https://corsproxy.io/?' + encodeURIComponent(apiUrl);
-
   let d;
   try {
-    const res = await fetch(apiUrl);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    d = await res.json();
+    d = await fetchFotmobMatch(fotmobId, proxyMode);
   } catch(e) {
     statusEl.style.color='var(--red)';
     statusEl.textContent=`❌ Fetch failed: ${e.message}. Try another proxy.`;
@@ -2212,60 +2275,76 @@ async function fetchAutoclipIncidents() {
   statusEl.textContent = '⏳ Fetching match incident details from FotMob...';
   resultEl.style.display = 'none';
   
-  const targetUrl = `https://www.fotmob.com/api/matchDetails?matchId=${fmid}`;
-  const proxies = [
-    `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`,
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
-    targetUrl
-  ];
-  
   let d = null;
-  let lastError = '';
-  
-  for (const proxyUrl of proxies) {
-    try {
-      console.log(`Trying proxy: ${proxyUrl}`);
-      const res = await fetch(proxyUrl);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      d = await res.json();
-      break;
-    } catch(e) {
-      console.warn(`Proxy failed: ${proxyUrl}`, e);
-      lastError = e.message;
-    }
-  }
-  
-  if (!d) {
+  try {
+    d = await fetchFotmobMatch(fmid);
+  } catch(e) {
     statusEl.style.color = 'var(--red)';
-    statusEl.textContent = `❌ Fetch failed: ${lastError}. Try again.`;
+    statusEl.textContent = `❌ Fetch failed: ${e.message}. Try again.`;
     return;
   }
   
   try {
-    const incidents = d?.content?.incidents?.allIncidents || d?.content?.matchFacts?.events?.allEvents || [];
+    const rawIncidents = d?.content?.matchFacts?.events?.events || d?.content?.matchfacts?.events?.events || d?.content?.incidents?.allIncidents || d?.content?.matchFacts?.events?.allEvents || [];
     
     AC_EVENTS = [];
     
-    incidents.forEach(inc => {
-      const type = inc.type?.toLowerCase() || '';
-      if (['goal', 'penalty', 'own_goal', 'redcard'].includes(type)) {
+    rawIncidents.forEach(inc => {
+      const typeLower = (inc.type || '').toLowerCase();
+      let type = '';
+      let desc = '';
+      if (typeLower === 'goal') {
+        if (inc.ownGoal) {
+          type = 'own_goal';
+          desc = `OWN GOAL: ${inc.player?.name || 'Player'} (${inc.time}')`;
+        } else if (inc.isPenaltyShootoutEvent || (inc.goalDescriptionKey && inc.goalDescriptionKey.includes('penalty'))) {
+          type = 'penalty';
+          desc = `PENALTY GOAL: ${inc.player?.name || 'Player'} (${inc.time}')`;
+        } else {
+          type = 'goal';
+          desc = `GOAL: ${inc.player?.name || 'Player'} (${inc.time}')`;
+        }
+      } else if (typeLower === 'card' && (inc.card === 'Red' || inc.card === 'YellowRed' || inc.cardType === 'Red')) {
+        type = 'redcard';
+        desc = `RED CARD: ${inc.player?.name || 'Player'} (${inc.time}')`;
+      } else if (['goal', 'penalty', 'own_goal', 'redcard'].includes(typeLower)) {
+        type = typeLower;
+        desc = `${typeLower.toUpperCase()}: ${inc.player?.name || 'Player'} (${inc.time}')`;
+      }
+      
+      if (type) {
         AC_EVENTS.push({
           minute: inc.time || 0,
           type: type,
           player: inc.player?.name || 'Player',
-          desc: `${type.toUpperCase()}: ${inc.player?.name || 'Player'} (${inc.time}')`
+          desc: desc
         });
       }
     });
     
     AC_EVENTS.sort((a,b) => a.minute - b.minute);
     
-    statusEl.style.color = 'var(--grn)';
-    statusEl.textContent = `✅ Successfully fetched incidents! Total clips: ${AC_EVENTS.length}`;
-    renderAcEventsList();
+    const homeTeam = d?.general?.homeTeam?.name || 'Home';
+    const awayTeam = d?.general?.awayTeam?.name || 'Away';
+    const started = d?.general?.started;
+    
+    if (AC_EVENTS.length === 0) {
+      document.getElementById('ac-ranges').value = '0-30';
+      statusEl.style.color = 'var(--grn)';
+      if (started === false) {
+        statusEl.textContent = `✅ Successfully fetched match info (${homeTeam} vs ${awayTeam})! Match hasn't started yet. Pre-filled 30-second preview (0-30s).`;
+      } else {
+        statusEl.textContent = `✅ Successfully fetched match info (${homeTeam} vs ${awayTeam})! No major incidents found. Pre-filled 30-second preview (0-30s).`;
+      }
+      renderAcEventsList();
+    } else {
+      statusEl.style.color = 'var(--grn)';
+      statusEl.textContent = `✅ Successfully fetched incidents for ${homeTeam} vs ${awayTeam}! Total clips: ${AC_EVENTS.length}`;
+      renderAcEventsList();
+    }
   } catch(e) {
     statusEl.style.color = 'var(--red)';
-    statusEl.textContent = `❌ Fetch failed: ${e.message}. Try again.`;
+    statusEl.textContent = `❌ Parse failed: ${e.message}. Try again.`;
   }
 }
 
