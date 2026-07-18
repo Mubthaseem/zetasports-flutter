@@ -13,22 +13,22 @@ class SupabaseService {
     final List<Map<String, dynamic>> list = [];
     for (var row in res as List) {
       final m = Map<String, dynamic>.from(row as Map);
-      final home = m['zeta_teams'];
+      final home = m['zeta_teams'] ?? m['home_team'];
       if (home is Map) {
         m['home_team'] = home['name'];
         m['home_team_logo'] = home['logo'];
         m['home_team_color'] = home['color'];
       }
-      final away = m['teams:away'] ?? (m['teams'] is Map ? m['teams']['away'] : null);
+      final away = m['away_team'] ?? m['teams:away'] ?? (m['teams'] is Map ? m['teams']['away'] : null);
       if (away is Map) {
         m['away_team'] = away['name'];
         m['away_team_logo'] = away['logo'];
         m['away_team_color'] = away['color'];
       }
-      final lg = m['zeta_leagues'];
+      final lg = m['zeta_leagues'] ?? m['leagues'];
       if (lg is Map) {
         m['league_name'] = lg['name'];
-        m['league_banner'] = lg['banner'];
+        m['league_banner'] = lg['banner'] ?? lg['league_banner'];
       }
       list.add(m);
     }
@@ -79,25 +79,26 @@ class SupabaseService {
       ''').eq('id', id).maybeSingle();
       if (res == null) return null;
       final m = Map<String, dynamic>.from(res);
-      final home = m['zeta_teams'];
+      final home = m['zeta_teams'] ?? m['home_team'];
       if (home is Map) {
         m['home_team'] = home['name'];
         m['home_team_logo'] = home['logo'];
         m['home_team_color'] = home['color'];
       }
-      final away = m['teams:away'] ?? (m['teams'] is Map ? m['teams']['away'] : null);
+      final away = m['away_team'] ?? m['teams:away'] ?? (m['teams'] is Map ? m['teams']['away'] : null);
       if (away is Map) {
         m['away_team'] = away['name'];
         m['away_team_logo'] = away['logo'];
         m['away_team_color'] = away['color'];
       }
-      final lg = m['zeta_leagues'];
+      final lg = m['zeta_leagues'] ?? m['leagues'];
       if (lg is Map) {
         m['league_name'] = lg['name'];
-        m['league_banner'] = lg['banner'];
+        m['league_banner'] = lg['banner'] ?? lg['league_banner'];
       }
       return m;
     } catch (e) {
+
       debugPrint('fetchMatchById: $e');
       return null;
     }

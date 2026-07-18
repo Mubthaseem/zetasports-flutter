@@ -1210,19 +1210,22 @@ async function importMatchToModal(data) {
 
 // ─── MATCHES ───
 async function loadMatches(){
-  const{data,error}=await sb.from('zeta_matches').select('*').order('date',{ascending:false}).limit(200);
-  if(error){console.error('loadMatches error:',error.message);}
-  ALL_MATCHES=data||[];
-  renderMatches(ALL_MATCHES);
-  // Fetch team names separately for dropdown
+  // Fetch team names first to ensure map is populated before render
   const{data:teamsData}=await sb.from('zeta_teams').select('id,name');
   const teamsMap={};
   (teamsData||[]).forEach(t=>{teamsMap[t.id]=t.name;});
   ALL_TEAMS_MAP=teamsMap;
+
+  const{data,error}=await sb.from('zeta_matches').select('*').order('date',{ascending:false}).limit(200);
+  if(error){console.error('loadMatches error:',error.message);}
+  ALL_MATCHES=data||[];
+  renderMatches(ALL_MATCHES);
+
   const opts=ALL_MATCHES.map(m=>`<option value="${m.id}">${teamsMap[m.home_team_id]||m.home_team||'Home'} vs ${teamsMap[m.away_team_id]||m.away_team||'Away'}</option>`).join('');
   const mhlEl=document.getElementById('mhl-mt');
   if(mhlEl)mhlEl.innerHTML='<option value="">Select match...</option>'+opts;
 }
+
 function renderMatches(data){
   const el=document.getElementById('matches-body');
   if(!el)return;
