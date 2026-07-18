@@ -649,6 +649,11 @@ const sb=supabase.createClient(SB_URL,SB_KEY);
 let ALL_TEAMS=[],ALL_PLAYERS=[],ALL_LEAGUES=[],ALL_MATCHES=[],ALL_HIGHLIGHTS=[],ALL_NEWS=[],ALL_STREAMS=[],ALL_USERS=[],ALL_NOTIFICATIONS=[];
 
 // ─── AUTH ───
+window.onload = () => {
+  document.getElementById('ls').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  loadAll();
+};
 async function h256(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
 async function doLogin(){
   const u=document.getElementById('au').value.trim().toLowerCase();
