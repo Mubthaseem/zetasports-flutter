@@ -574,23 +574,28 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
 
 <!-- STREAM MODAL -->
 <div class="mo" id="m-stream">
-  <div class="md">
+  <div class="md" style="width:680px;">
     <h3 id="mstr-t">Add Stream</h3>
     <input type="hidden" id="mstr-id"/>
-    <div class="fg"><label>Label / Name</label><input id="mstr-lb" placeholder="e.g., MALAYALAM, ENGLISH"/></div>
     <div class="fr">
-      <div class="fg"><label>Quality</label><input id="mstr-qlt" placeholder="e.g., 1080p, 720p" value="1080p"/></div>
-      <div class="fg"><label>Primary Theme Color</label><input id="mstr-clr" type="color" value="#00ff88" style="height:40px; padding:0; cursor:pointer;"/></div>
-    </div>
-    <div class="fg">
-      <label>Stream URL or Servers JSON Array</label>
-      <textarea id="mstr-ur" rows="6" placeholder='Plain URL or JSON array:&#10;[{"serverName":"ENGLISH","url":"https://...","type":"m3u8","drmType":"none"}]'></textarea>
+      <div class="fg"><label>Label / Name</label><input id="mstr-lb" placeholder="e.g., IPL 2026, FIFA WC"/></div>
+      <div class="fg"><label>Quality</label><input id="mstr-qlt" placeholder="1080p" value="1080p"/></div>
     </div>
     <div class="fr">
-      <div class="fg"><label>Active</label><select id="mstr-act"><option value="true">Yes (Online)</option><option value="false">No (Offline)</option></select></div>
+      <div class="fg"><label>Theme Color</label><input id="mstr-clr" type="color" value="#00ff88" style="height:40px;padding:2px;cursor:pointer;"/></div>
+      <div class="fg"><label>Active</label><select id="mstr-act"><option value="true">✅ Yes (Online)</option><option value="false">❌ No (Offline)</option></select></div>
+    </div>
+    <!-- Server Builder -->
+    <div style="margin-top:4px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+        <label style="font-size:11px;color:var(--t2);text-transform:uppercase;letter-spacing:.5px;">📡 Stream Servers</label>
+        <button class="btn bp bsm" onclick="addServerRow()">+ Add Server</button>
+      </div>
+      <div id="mstr-servers" style="display:flex;flex-direction:column;gap:8px;"></div>
+      <div id="mstr-no-servers" style="text-align:center;padding:20px;color:var(--t3);font-size:13px;border:1px dashed var(--bdr);border-radius:10px;display:none;">No servers added yet. Click "+ Add Server" above.</div>
     </div>
     <div class="me" id="mstr-er"></div>
-    <div class="ma"><button class="btn bgh" onclick="closeModal('m-stream')">Cancel</button><button class="btn bp" onclick="saveStream()">Save</button></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-stream')">Cancel</button><button class="btn bp" onclick="saveStream()">Save Stream</button></div>
   </div>
 </div>
 
@@ -1103,33 +1108,103 @@ async function findOrCreateTeam(name, logo) {
 }
 
 async function importMatchToModal(data) {
-  document.getElementById('fetch-results').innerHTML = '<div class="ld"><div class="sp"></div>Mapping Teams/Leagues...</div>';
-  
-  const leagueId = await findOrCreateLeague(data.league_name);
-  const homeId = await findOrCreateTeam(data.home_team, data.home_logo);
-  const awayId = await findOrCreateTeam(data.away_team, data.away_logo);
-  
-  openMatchModal(null);
-  
-  document.getElementById('mmatch-lg').value = leagueId;
-  document.getElementById('mmatch-ht').value = homeId;
-  document.getElementById('mmatch-at').value = awayId;
-  document.getElementById('mmatch-st').value = data.status || 'upcoming';
-  
-  const scores = data.score.split('-');
-  if (scores.length === 2) {
-    document.getElementById('mmatch-hs').value = parseInt(scores[0]) || 0;
-    document.getElementById('mmatch-as').value = parseInt(scores[1]) || 0;
+  const resultsDiv = document.getElementById('fetch-results');
+  resultsDiv.innerHTML = '<div class="ld"><div class="sp"></div>Creating teams & league in DB...</div>';
+
+  // ── Create/find league ──
+  let leagueId = '';
+  if (data.league_name) {
+    let l = ALL_LEAGUES.find(x => x.name.toLowerCase() === data.league_name.toLowerCase());
+    if (l) {
+      leagueId = l.id;
+    } else {
+      const {data:ld, error:le} = await sb.from('zeta_leagues')
+        .insert({name: data.league_name, sport:'football', type:'league', country:''})
+        .select().single();
+      if (le) { resultsDiv.innerHTML = `<div style="color:var(--red);padding:10px">❌ League insert failed: ${le.message}</div>`; return; }
+      leagueId = ld.id;
+      await loadLeagues();
+    }
   }
-  
+
+  // ── Create/find home team ──
+  let homeId = '';
+  if (data.home_team) {
+    let ht = ALL_TEAMS.find(x => x.name.toLowerCase() === data.home_team.toLowerCase());
+    if (ht) {
+      homeId = ht.id;
+    } else {
+      const {data:htd, error:hte} = await sb.from('zeta_teams')
+        .insert({name: data.home_team, logo: data.home_logo||null, sport:'football'})
+        .select().single();
+      if (hte) { resultsDiv.innerHTML = `<div style="color:var(--red);padding:10px">❌ Home team insert failed: ${hte.message}</div>`; return; }
+      homeId = htd.id;
+      await loadTeams();
+    }
+  }
+
+  // ── Create/find away team ──
+  let awayId = '';
+  if (data.away_team) {
+    let at = ALL_TEAMS.find(x => x.name.toLowerCase() === data.away_team.toLowerCase());
+    if (at) {
+      awayId = at.id;
+    } else {
+      const {data:atd, error:ate} = await sb.from('zeta_teams')
+        .insert({name: data.away_team, logo: data.away_logo||null, sport:'football'})
+        .select().single();
+      if (ate) { resultsDiv.innerHTML = `<div style="color:var(--red);padding:10px">❌ Away team insert failed: ${ate.message}</div>`; return; }
+      awayId = atd.id;
+      await loadTeams();
+    }
+  }
+
+  // ── Open modal and populate fields ──
+  // Reset all fields manually (same as openMatchModal(null)) but WITHOUT resetting selects
+  document.getElementById('mmatch-t').textContent = 'Add Match';
+  document.getElementById('mmatch-id').value = '';
+  document.getElementById('mmatch-er').textContent = '';
+  document.getElementById('mmatch-vn').value = '';
+  document.getElementById('mmatch-te').value = '';
+  document.getElementById('mmatch-rd').value = '';
+  document.getElementById('mmatch-sids').value = '';
+  document.getElementById('mmatch-fmid').value = '';
+  document.getElementById('mmatch-hs').value = 0;
+  document.getElementById('mmatch-as').value = 0;
+  document.getElementById('mmatch-fm-status').textContent = '';
+
+  // Set status (map 'upcoming' → 'scheduled')
+  const statusMap = {upcoming:'scheduled', live:'live', finished:'finished', postponed:'postponed', cancelled:'cancelled'};
+  document.getElementById('mmatch-st').value = statusMap[data.status] || data.status || 'scheduled';
+
+  // Set date
   if (data.match_time) {
     const dt = new Date(data.match_time);
     dt.setMinutes(dt.getMinutes() - dt.getTimezoneOffset());
     document.getElementById('mmatch-dt').value = dt.toISOString().slice(0, 16);
   }
-  
-  document.getElementById('fetch-results').innerHTML = '<div style="text-align:center; padding:15px; color:var(--accent-green)">Teams successfully mapped and loaded into modal! Please review and click Save.</div>';
+
+  // Set scores
+  if (data.score) {
+    const scores = data.score.split(' - ').map(s => parseInt(s.trim()));
+    if (scores.length === 2 && !isNaN(scores[0])) {
+      document.getElementById('mmatch-hs').value = scores[0];
+      document.getElementById('mmatch-as').value = scores[1];
+    }
+  }
+
+  // Open the modal
+  document.getElementById('m-match').classList.add('open');
+
+  // Set selects AFTER modal is open (requestAnimationFrame ensures DOM is painted)
+  requestAnimationFrame(() => {
+    document.getElementById('mmatch-lg').value = leagueId;
+    document.getElementById('mmatch-ht').value = homeId;
+    document.getElementById('mmatch-at').value = awayId;
+    resultsDiv.innerHTML = `<div style="text-align:center;padding:12px;color:var(--grn)">✅ ${data.home_team} vs ${data.away_team} imported! Review and click Save.</div>`;
+  });
 }
+
 
 // ─── MATCHES ───
 async function loadMatches(){
@@ -1768,24 +1843,106 @@ function renderStreams(data){
   '</tbody></table>';
 }
 function filterStreams(q){renderStreams(ALL_STREAMS.filter(s=>(s.label||'').toLowerCase().includes(q.toLowerCase())));}
+// ─── SERVER BUILDER ───
+function addServerRow(srv) {
+  const container = document.getElementById('mstr-servers');
+  document.getElementById('mstr-no-servers').style.display = 'none';
+  const idx = container.children.length;
+  const row = document.createElement('div');
+  row.className = 'server-row';
+  row.style.cssText = 'background:var(--card2);border:1px solid var(--bdr);border-radius:10px;padding:12px;position:relative;';
+  row.innerHTML = `
+    <button onclick="this.closest('.server-row').remove();updateNoServers()" style="position:absolute;top:8px;right:8px;background:rgba(255,61,61,.15);border:1px solid rgba(255,61,61,.3);color:var(--red);border-radius:6px;width:24px;height:24px;cursor:pointer;font-size:14px;line-height:1;">×</button>
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:10px;margin-bottom:8px;">
+      <div class="fg" style="margin:0"><label>Server Name</label><input class="srv-name" value="${srv?.serverName||''}" placeholder="e.g., MALAYALAM"/></div>
+      <div class="fg" style="margin:0"><label>Stream URL</label><input class="srv-url" value="${srv?.url||''}" placeholder="https://..."/></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div class="fg" style="margin:0"><label>Type</label>
+        <select class="srv-type">
+          <option value="m3u8" ${(srv?.type||'m3u8')==='m3u8'?'selected':''}>HLS (m3u8)</option>
+          <option value="mpd" ${srv?.type==='mpd'?'selected':''}>DASH (mpd)</option>
+          <option value="mp4" ${srv?.type==='mp4'?'selected':''}>MP4</option>
+          <option value="rtmp" ${srv?.type==='rtmp'?'selected':''}>RTMP</option>
+        </select>
+      </div>
+      <div class="fg" style="margin:0"><label>DRM</label>
+        <select class="srv-drm">
+          <option value="none" ${(srv?.drmType||'none')==='none'?'selected':''}>None (Free)</option>
+          <option value="widevine" ${srv?.drmType==='widevine'?'selected':''}>Widevine</option>
+          <option value="fairplay" ${srv?.drmType==='fairplay'?'selected':''}>FairPlay</option>
+          <option value="playready" ${srv?.drmType==='playready'?'selected':''}>PlayReady</option>
+        </select>
+      </div>
+    </div>
+  `;
+  container.appendChild(row);
+}
+function updateNoServers() {
+  const hasRows = document.getElementById('mstr-servers').children.length > 0;
+  document.getElementById('mstr-no-servers').style.display = hasRows ? 'none' : 'block';
+}
 function openStreamModal(s){
-  document.getElementById('mstr-t').textContent=s?'Edit Stream':'Add Stream';
-  document.getElementById('mstr-id').value=s?.id||'';
-  document.getElementById('mstr-lb').value=s?.label||'';
-  document.getElementById('mstr-qlt').value=s?.quality||'1080p';
-  document.getElementById('mstr-clr').value=s?.color||'#00ff88';
-  document.getElementById('mstr-ur').value=s?.url||'';
-  document.getElementById('mstr-act').value=s?.active === false ? 'false' : 'true';
-  document.getElementById('mstr-er').textContent='';
+  document.getElementById('mstr-t').textContent = s ? 'Edit Stream' : 'Add Stream';
+  document.getElementById('mstr-id').value = s?.id || '';
+  document.getElementById('mstr-lb').value = s?.label || '';
+  document.getElementById('mstr-qlt').value = s?.quality || '1080p';
+  document.getElementById('mstr-clr').value = s?.color || '#00ff88';
+  document.getElementById('mstr-act').value = s?.active === false ? 'false' : 'true';
+  document.getElementById('mstr-er').textContent = '';
+  // Clear and repopulate server rows
+  document.getElementById('mstr-servers').innerHTML = '';
+  let servers = [];
+  if (s?.url) {
+    try {
+      const parsed = JSON.parse(s.url);
+      servers = Array.isArray(parsed) ? parsed : [{serverName:'SERVER 1', url: s.url, type:'m3u8', drmType:'none'}];
+    } catch {
+      // Plain URL — wrap into one server row
+      servers = [{serverName:'SERVER 1', url: s.url, type:'m3u8', drmType:'none'}];
+    }
+  }
+  if (servers.length > 0) {
+    servers.forEach(srv => addServerRow(srv));
+  } else {
+    document.getElementById('mstr-no-servers').style.display = 'block';
+    addServerRow(); // Start with one empty row
+  }
   document.getElementById('m-stream').classList.add('open');
 }
 async function saveStream(){
-  const id=document.getElementById('mstr-id').value;
-  const p={label:document.getElementById('mstr-lb').value.trim(),quality:document.getElementById('mstr-qlt').value.trim()||'1080p',color:document.getElementById('mstr-clr').value.trim()||'#00ff88',url:document.getElementById('mstr-ur').value.trim(),active:document.getElementById('mstr-act').value==='true',deleted:false};
-  if(!p.label||!p.url){document.getElementById('mstr-er').textContent='Label and URL required.';return;}
-  const{error}=id?await sb.from('zeta_streams').update(p).eq('id',id):await sb.from('zeta_streams').insert({...p,created_at:new Date().toISOString()});
-  if(error){document.getElementById('mstr-er').textContent=error.message;return;}
-  closeModal('m-stream');loadStreams();loadDashboard();
+  const id = document.getElementById('mstr-id').value;
+  const label = document.getElementById('mstr-lb').value.trim();
+  if (!label) { document.getElementById('mstr-er').textContent = 'Label is required.'; return; }
+  // Collect server rows
+  const rows = document.querySelectorAll('#mstr-servers .server-row');
+  if (rows.length === 0) { document.getElementById('mstr-er').textContent = 'Add at least one server.'; return; }
+  const servers = [];
+  for (const row of rows) {
+    const name = row.querySelector('.srv-name').value.trim();
+    const url  = row.querySelector('.srv-url').value.trim();
+    const type = row.querySelector('.srv-type').value;
+    const drm  = row.querySelector('.srv-drm').value;
+    if (!url) { document.getElementById('mstr-er').textContent = `Server "${name||'?'}" is missing a URL.`; return; }
+    servers.push({serverName: name || 'SERVER', url, type, drmType: drm});
+  }
+  // Store as JSON if multiple servers, plain URL if only one with no-drm
+  const urlValue = servers.length === 1 && servers[0].drmType === 'none' && servers[0].type === 'm3u8'
+    ? servers[0].url
+    : JSON.stringify(servers);
+  const p = {
+    label,
+    quality: document.getElementById('mstr-qlt').value.trim() || '1080p',
+    color:   document.getElementById('mstr-clr').value || '#00ff88',
+    url:     urlValue,
+    active:  document.getElementById('mstr-act').value === 'true',
+    deleted: false
+  };
+  const {error} = id
+    ? await sb.from('zeta_streams').update(p).eq('id', id)
+    : await sb.from('zeta_streams').insert({...p, created_at: new Date().toISOString()});
+  if (error) { document.getElementById('mstr-er').textContent = error.message; return; }
+  closeModal('m-stream'); loadStreams(); loadDashboard();
 }
 async function deleteStream(id){if(!confirm('Hide stream?'))return;await sb.from('zeta_streams').update({deleted:true}).eq('id',id);loadStreams();}
 
