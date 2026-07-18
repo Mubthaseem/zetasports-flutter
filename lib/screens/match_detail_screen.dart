@@ -627,19 +627,22 @@ class _LineupsTab extends StatelessWidget {
     if (raw is List) {
       return raw.map((e) => Map<String, dynamic>.from(e)).toList();
     }
+    if (raw is Map && raw['players'] is List) {
+      return (raw['players'] as List).map((e) => Map<String, dynamic>.from(e)).toList();
+    }
     return [];
   }
 
   @override
   Widget build(BuildContext context) {
-    final homeList = _parseLineupList(lineup?['home_players']);
-    final awayList = _parseLineupList(lineup?['away_players']);
+    final homeList = _parseLineupList(lineup?['home_lineup'] ?? lineup?['home_players']);
+    final awayList = _parseLineupList(lineup?['away_lineup'] ?? lineup?['away_players']);
 
     final homePlayers = homeList.isNotEmpty ? homeList : _homeXI;
     final awayPlayers = awayList.isNotEmpty ? awayList : _awayXI;
 
-    final homeForm = lineup?['home_formation']?.toString() ?? '4-3-3';
-    final awayForm = lineup?['away_formation']?.toString() ?? '4-3-3';
+    final homeForm = lineup?['home_lineup']?['formation']?.toString() ?? lineup?['home_formation']?.toString() ?? '4-3-3';
+    final awayForm = lineup?['away_lineup']?['formation']?.toString() ?? lineup?['away_formation']?.toString() ?? '4-3-3';
 
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -813,16 +816,19 @@ class _StatsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final homeObj = stats?['home_stats'] is Map ? Map<String, dynamic>.from(stats!['home_stats']) : null;
+    final awayObj = stats?['away_stats'] is Map ? Map<String, dynamic>.from(stats!['away_stats']) : null;
+
     final List<Map<String, dynamic>> displayStats = stats != null
         ? [
-            {'label': 'Possession', 'home': stats!['possession_home'] ?? 50, 'away': stats!['possession_away'] ?? 50},
-            {'label': 'Shots', 'home': stats!['shots_home'] ?? 0, 'away': stats!['shots_away'] ?? 0},
-            {'label': 'Shots on Target', 'home': stats!['shots_on_target_home'] ?? 0, 'away': stats!['shots_on_target_away'] ?? 0},
-            {'label': 'Pass Accuracy', 'home': stats!['pass_accuracy_home'] ?? 0, 'away': stats!['pass_accuracy_away'] ?? 0},
-            {'label': 'Corners', 'home': stats!['corners_home'] ?? 0, 'away': stats!['corners_away'] ?? 0},
-            {'label': 'Expected Goals', 'home': stats!['xg_home'] ?? 0.0, 'away': stats!['xg_away'] ?? 0.0},
-            {'label': 'Fouls', 'home': stats!['fouls_home'] ?? 0, 'away': stats!['fouls_away'] ?? 0},
-            {'label': 'Yellow Cards', 'home': stats!['yellow_cards_home'] ?? 0, 'away': stats!['yellow_cards_away'] ?? 0},
+            {'label': 'Possession', 'home': homeObj?['possession'] ?? stats!['possession_home'] ?? 50, 'away': awayObj?['possession'] ?? stats!['possession_away'] ?? 50},
+            {'label': 'Shots', 'home': homeObj?['shots'] ?? stats!['shots_home'] ?? 0, 'away': awayObj?['shots'] ?? stats!['shots_away'] ?? 0},
+            {'label': 'Shots on Target', 'home': homeObj?['shots_on_target'] ?? stats!['shots_on_target_home'] ?? 0, 'away': awayObj?['shots_on_target'] ?? stats!['shots_on_target_away'] ?? 0},
+            {'label': 'Pass Accuracy', 'home': homeObj?['pass_accuracy'] ?? stats!['pass_accuracy_home'] ?? 0, 'away': awayObj?['pass_accuracy'] ?? stats!['pass_accuracy_away'] ?? 0},
+            {'label': 'Corners', 'home': homeObj?['corners'] ?? stats!['corners_home'] ?? 0, 'away': awayObj?['corners'] ?? stats!['corners_away'] ?? 0},
+            {'label': 'Expected Goals', 'home': homeObj?['xg'] ?? stats!['xg_home'] ?? 0.0, 'away': awayObj?['xg'] ?? stats!['xg_away'] ?? 0.0},
+            {'label': 'Fouls', 'home': homeObj?['fouls'] ?? stats!['fouls_home'] ?? 0, 'away': awayObj?['fouls'] ?? stats!['fouls_away'] ?? 0},
+            {'label': 'Yellow Cards', 'home': homeObj?['yellow_cards'] ?? stats!['yellow_cards_home'] ?? 0, 'away': awayObj?['yellow_cards'] ?? stats!['yellow_cards_away'] ?? 0},
           ]
         : _mockStats;
 

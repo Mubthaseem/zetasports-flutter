@@ -193,9 +193,15 @@ class SupabaseService {
       final res = await _db
           .from('zeta_match_commentary')
           .select()
-          .eq('match_id', matchId)
-          .order('time_stamp', ascending: false);
-      return List<Map<String, dynamic>>.from(res);
+          .eq('match_id', matchId);
+      if (res is List && res.isNotEmpty) {
+        final first = res.first;
+        if (first['commentary'] is List) {
+          return List<Map<String, dynamic>>.from(first['commentary']);
+        }
+        return List<Map<String, dynamic>>.from(res);
+      }
+      return [];
     } catch (e) {
       debugPrint('fetchCommentary: $e');
       return [];
@@ -207,9 +213,15 @@ class SupabaseService {
       final res = await _db
           .from('zeta_match_events')
           .select()
-          .eq('match_id', matchId)
-          .order('time_stamp', ascending: true);
-      return List<Map<String, dynamic>>.from(res);
+          .eq('match_id', matchId);
+      if (res is List && res.isNotEmpty) {
+        final first = res.first;
+        if (first['events'] is List) {
+          return List<Map<String, dynamic>>.from(first['events']);
+        }
+        return List<Map<String, dynamic>>.from(res);
+      }
+      return [];
     } catch (e) {
       debugPrint('fetchMatchEvents: $e');
       return [];
@@ -222,9 +234,15 @@ class SupabaseService {
       final res = await _db
           .from('zeta_league_standings')
           .select()
-          .eq('league_id', leagueId)
-          .order('position', ascending: true);
-      return List<Map<String, dynamic>>.from(res);
+          .eq('league_id', leagueId);
+      if (res is List && res.isNotEmpty) {
+        final first = res.first;
+        if (first['standings'] is List) {
+          return List<Map<String, dynamic>>.from(first['standings']);
+        }
+        return List<Map<String, dynamic>>.from(res);
+      }
+      return [];
     } catch (e) {
       debugPrint('fetchLeagueStandings: $e');
       return [];

@@ -1497,13 +1497,12 @@ async function fetchFotmobFullData() {
       const homeFormation = homeLineup?.formation || homeLineup?.formationStr || '';
       const awayFormation = awayLineup?.formation || awayLineup?.formationStr || '';
 
-      const { error } = await sb.from('zeta_match_lineups').upsert({
+      const lineupRow = {
         match_id: matchId,
-        home_players: homePlayers,
-        away_players: awayPlayers,
-        home_formation: homeFormation,
-        away_formation: awayFormation,
-      }, { onConflict: 'match_id' });
+        home_lineup: { formation: homeFormation, players: homePlayers },
+        away_lineup: { formation: awayFormation, players: awayPlayers }
+      };
+      const { error } = await sb.from('zeta_match_lineups').upsert(lineupRow, { onConflict: 'match_id' });
       if (error) throw error;
       log.push(`✅ Lineups (${homePlayers.length} + ${awayPlayers.length} players)`);
     } else {
@@ -1537,14 +1536,26 @@ async function fetchFotmobFullData() {
 
       const payload = {
         match_id: matchId,
-        possession_home: getVal(poss,'home'), possession_away: getVal(poss,'away'),
-        shots_home: getVal(shots,'home'),     shots_away: getVal(shots,'away'),
-        shots_on_target_home: getVal(sot,'home'), shots_on_target_away: getVal(sot,'away'),
-        pass_accuracy_home: getVal(pass,'home'),  pass_accuracy_away: getVal(pass,'away'),
-        corners_home: getVal(corn,'home'),    corners_away: getVal(corn,'away'),
-        xg_home: getVal(xg,'home'),           xg_away: getVal(xg,'away'),
-        fouls_home: getVal(foul,'home'),      fouls_away: getVal(foul,'away'),
-        yellow_cards_home: getVal(yc,'home'), yellow_cards_away: getVal(yc,'away'),
+        home_stats: {
+          possession: getVal(poss,'home'),
+          shots: getVal(shots,'home'),
+          shots_on_target: getVal(sot,'home'),
+          pass_accuracy: getVal(pass,'home'),
+          corners: getVal(corn,'home'),
+          xg: getVal(xg,'home'),
+          fouls: getVal(foul,'home'),
+          yellow_cards: getVal(yc,'home')
+        },
+        away_stats: {
+          possession: getVal(poss,'away'),
+          shots: getVal(shots,'away'),
+          shots_on_target: getVal(sot,'away'),
+          pass_accuracy: getVal(pass,'away'),
+          corners: getVal(corn,'away'),
+          xg: getVal(xg,'away'),
+          fouls: getVal(foul,'away'),
+          yellow_cards: getVal(yc,'away')
+        }
       };
       const { error } = await sb.from('zeta_match_stats').upsert(payload, { onConflict: 'match_id' });
       if (error) throw error;
@@ -1572,9 +1583,10 @@ async function fetchFotmobFullData() {
       .filter(r => r.text);
 
     if (commentaryRows.length > 0) {
-      // Delete old and insert fresh
-      await sb.from('zeta_match_commentary').delete().eq('match_id', matchId);
-      const { error } = await sb.from('zeta_match_commentary').insert(commentaryRows);
+      const { error } = await sb.from('zeta_match_commentary').upsert({
+        match_id: matchId,
+        commentary: commentaryRows
+      }, { onConflict: 'match_id' });
       if (error) throw error;
       log.push(`✅ Commentary (${commentaryRows.length} entries)`);
     } else {
@@ -1600,8 +1612,10 @@ async function fetchFotmobFullData() {
       }));
 
     if (eventRows.length > 0) {
-      await sb.from('zeta_match_events').delete().eq('match_id', matchId);
-      const { error } = await sb.from('zeta_match_events').insert(eventRows);
+      const { error } = await sb.from('zeta_match_events').upsert({
+        match_id: matchId,
+        events: eventRows
+      }, { onConflict: 'match_id' });
       if (error) throw error;
       log.push(`✅ Events (${eventRows.length} events)`);
     } else {
@@ -1646,9 +1660,10 @@ async function fetchFotmobFullData() {
                     ) : zoneOf(row.idx || (i+1)),
       }));
 
-      // Delete existing standings for this league then insert fresh
-      await sb.from('zeta_league_standings').delete().eq('league_id', leagueId);
-      const { error } = await sb.from('zeta_league_standings').insert(standingRows);
+      const { error } = await sb.from('zeta_league_standings').upsert({
+        league_id: leagueId,
+        standings: standingRows
+      }, { onConflict: 'league_id' });
       if (error) throw error;
       log.push(`✅ Standings (${standingRows.length} teams)`);
     } else if (!leagueId) {
@@ -1702,19 +1717,12 @@ async function saveMatchCenterOverview() {
     return;
   }
 
-  const { data: existingStats } = await sb.from('zeta_match_stats').select('id').eq('match_id', matchId).maybeSingle();
-  if (existingStats) {
-    await sb.from('zeta_match_stats').update({
-      possession_home: possHome,
-      possession_away: possAway
-    }).eq('id', existingStats.id);
-  } else {
-    await sb.from('zeta_match_stats').insert({
-      match_id: matchId,
-      possession_home: possHome,
-      possession_away: possAway
-    });
-  }
+  const statsRow = {
+    match_id: matchId,
+    home_stats: { possession: possHome },
+    away_stats: { possession: possAway }
+  };
+  await sb.from('zeta_match_stats').upsert(statsRow, { onConflict: 'match_id' });
 
   alert("Overview saved successfully!");
   closeModal('m-match-center');
@@ -1799,32 +1807,30 @@ async function syncMatchFromFotmob() {
 
     const statsRow = {
       match_id: matchId,
-      possession_home: Math.round(poss.home),
-      possession_away: Math.round(poss.away),
-      shots_home: Math.round(shots.home),
-      shots_away: Math.round(shots.away),
-      shots_on_target_home: Math.round(targetShots.home),
-      shots_on_target_away: Math.round(targetShots.away),
-      pass_accuracy_home: Math.round(passes.home),
-      pass_accuracy_away: Math.round(passes.away),
-      corners_home: Math.round(corners.home),
-      corners_away: Math.round(corners.away),
-      xg_home: parseFloat(xg.home) || 0.0,
-      xg_away: parseFloat(xg.away) || 0.0,
-      fouls_home: Math.round(fouls.home),
-      fouls_away: Math.round(fouls.away),
-      yellow_cards_home: Math.round(yellow.home),
-      yellow_cards_away: Math.round(yellow.away),
-      red_cards_home: Math.round(red.home),
-      red_cards_away: Math.round(red.away),
+      home_stats: {
+        possession: Math.round(poss.home),
+        shots: Math.round(shots.home),
+        shots_on_target: Math.round(targetShots.home),
+        pass_accuracy: Math.round(passes.home),
+        corners: Math.round(corners.home),
+        xg: parseFloat(xg.home) || 0.0,
+        fouls: Math.round(fouls.home),
+        yellow_cards: Math.round(yellow.home),
+        red_cards: Math.round(red.home)
+      },
+      away_stats: {
+        possession: Math.round(poss.away),
+        shots: Math.round(shots.away),
+        shots_on_target: Math.round(targetShots.away),
+        pass_accuracy: Math.round(passes.away),
+        corners: Math.round(corners.away),
+        xg: parseFloat(xg.away) || 0.0,
+        fouls: Math.round(fouls.away),
+        yellow_cards: Math.round(yellow.away),
+        red_cards: Math.round(red.away)
+      }
     };
-
-    const { data: existingStats } = await sb.from('zeta_match_stats').select('id').eq('match_id', matchId).maybeSingle();
-    if (existingStats) {
-      await sb.from('zeta_match_stats').update(statsRow).eq('id', existingStats.id);
-    } else {
-      await sb.from('zeta_match_stats').insert(statsRow);
-    }
+    await sb.from('zeta_match_stats').upsert(statsRow, { onConflict: 'match_id' });
 
     statusEl.innerHTML = 'Parsing lineups...';
 
@@ -1872,28 +1878,17 @@ async function syncMatchFromFotmob() {
 
     const lineupRow = {
       match_id: matchId,
-      home_formation: homeForm,
-      away_formation: awayForm,
-      home_players: homeXI,
-      away_players: awayXI,
+      home_lineup: { formation: homeForm, players: homeXI },
+      away_lineup: { formation: awayForm, players: awayXI }
     };
-
-    const { data: existingLineup } = await sb.from('zeta_match_lineups').select('id').eq('match_id', matchId).maybeSingle();
-    if (existingLineup) {
-      await sb.from('zeta_match_lineups').update(lineupRow).eq('id', existingLineup.id);
-    } else {
-      await sb.from('zeta_match_lineups').insert(lineupRow);
-    }
+    await sb.from('zeta_match_lineups').upsert(lineupRow, { onConflict: 'match_id' });
 
     statusEl.innerHTML = 'Parsing commentary events...';
-
-    await sb.from('zeta_match_commentary').delete().eq('match_id', matchId);
 
     const tickerList = data.content?.liveticker?.teams || data.content?.liveticker?.events || [];
     if (tickerList.length > 0) {
       const commentaryRows = tickerList.map((evt, idx) => {
         return {
-          match_id: matchId,
           min: evt.time || evt.minute || '—',
           type: evt.type || (evt.isGoal ? 'goal' : evt.isCard ? 'card' : 'info'),
           text: evt.text || evt.comment || '',
@@ -1902,7 +1897,7 @@ async function syncMatchFromFotmob() {
       }).filter(row => row.text.trim().length > 0);
 
       if (commentaryRows.length > 0) {
-        await sb.from('zeta_match_commentary').insert(commentaryRows);
+        await sb.from('zeta_match_commentary').upsert({ match_id: matchId, commentary: commentaryRows }, { onConflict: 'match_id' });
       }
     }
 
