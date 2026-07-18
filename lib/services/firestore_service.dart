@@ -66,7 +66,7 @@ class SupabaseService {
       return _mapMatchRelations(res);
     } catch (e) {
       debugPrint('fetchMatches: $e');
-      return [];
+      rethrow;
     }
   }
 
@@ -246,7 +246,7 @@ class SupabaseService {
       return List<Map<String, dynamic>>.from(res as List);
     } catch (e) {
       debugPrint('fetchLeagues: $e');
-      return [];
+      rethrow;
     }
   }
 
@@ -344,7 +344,7 @@ class SupabaseService {
       return list;
     } catch (e) {
       debugPrint('fetchHighlights: $e');
-      return [];
+      rethrow;
     }
   }
 
@@ -366,7 +366,7 @@ class SupabaseService {
       return List<Map<String, dynamic>>.from(res as List);
     } catch (e) {
       debugPrint('fetchNews: $e');
-      return [];
+      rethrow;
     }
   }
 
