@@ -1350,13 +1350,15 @@ function openMatchModal(m){
   document.getElementById('mmatch-as').value=m?.away_score||0;
   document.getElementById('mmatch-te').value=m?.time_elapsed||'';
   document.getElementById('mmatch-rd').value=m?.round||'';
+  // Populate stream dropdown from ALL_STREAMS
   const sel2=document.getElementById('mmatch-sids');
   const existingIds=m?.stream_ids||[];
-  Array.from(sel2.options).forEach(o=>o.selected=existingIds.includes(o.value));
+  sel2.innerHTML=ALL_STREAMS.filter(s=>!s.deleted).map(s=>`<option value="${s.id}" ${existingIds.includes(s.id)?'selected':''}>${s.label} (${s.quality||'1080p'})</option>`).join('')||'<option disabled>No streams yet — add streams first</option>';
   document.getElementById('mmatch-fmid').value=m?.fotmob_id||'';
   document.getElementById('mmatch-er').textContent='';
   document.getElementById('m-match').classList.add('open');
 }
+
 async function saveMatch(){
   const id=document.getElementById('mmatch-id').value;
   const selectedStreamIds = Array.from(document.getElementById('mmatch-sids').selectedOptions).map(o=>o.value);
