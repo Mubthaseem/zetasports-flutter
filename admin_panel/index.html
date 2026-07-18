@@ -657,7 +657,8 @@ async function doLogin(){
   e.textContent='Checking...';
   const{data}=await sb.from('zeta_users').select().eq('username',u).maybeSingle();
   if(!data){e.textContent='User not found.';return;}
-  const h=await h256(p);
+  let h='';
+  try { h=await h256(p); } catch(_) {}
   if(data.pin!==h && data.pin!==p && data.passcode!==p){e.textContent='Wrong PIN.';return;}
   const isAdmin = u==='admin' || u==='admin_user' || data.is_admin===true || data.role==='admin';
   if(!isAdmin){e.textContent='Not an admin.';return;}
