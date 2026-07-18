@@ -160,6 +160,7 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
         <div class="ni" onclick="goPage(this,'matches')"><span class="ic">📅</span>Matches</div>
         <div class="ni" onclick="goPage(this,'highlights')"><span class="ic">🎬</span>Highlights</div>
         <div class="ni" onclick="goPage(this,'news')"><span class="ic">📰</span>News</div>
+        <div class="ni" onclick="goPage(this,'autoclip')"><span class="ic">⚡</span>AutoClip Video</div>
         <div class="ni" onclick="goPage(this,'streams')"><span class="ic">📺</span>Live Streams</div>
         <div class="ni" onclick="goPage(this,'notifications')"><span class="ic">🔔</span>Notifications</div>
         <div class="ni" onclick="goPage(this,'users')"><span class="ic">👥</span>Users</div>
@@ -323,6 +324,50 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
       <div class="page" id="page-settings">
         <div class="ph"><h1>Settings</h1><p>App-wide configuration</p></div>
         <div class="tc" style="padding:28px;max-width:600px"><div id="cfg-form"><div class="ld"><div class="sp"></div>Loading...</div></div></div>
+      </div>
+
+      <!-- AUTOCLIP VIDEO -->
+      <div class="page" id="page-autoclip">
+        <div class="ph">
+          <h1>🎬 AutoClip Highlights</h1>
+          <p>Generate exciting video summaries dynamically based on match events</p>
+        </div>
+        <div class="tc" style="padding: 24px; max-width: 800px;">
+          <div class="fr">
+            <div class="fg">
+              <label>FotMob Match ID</label>
+              <div style="display: flex; gap: 8px;">
+                <input id="ac-fmid" placeholder="e.g., 4506254" style="flex: 1;"/>
+                <button class="btn bp" onclick="fetchAutoclipIncidents()">⚡ Fetch Events</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="fr" style="margin-top: 16px;">
+            <div class="fg"><label>Clip Padding Before (Sec)</label><input id="ac-pad-before" type="number" value="10"/></div>
+            <div class="fg"><label>Clip Padding After (Sec)</label><input id="ac-pad-after" type="number" value="5"/></div>
+            <div class="fg"><label>Kickoff Video Offset (Sec)</label><input id="ac-offset" type="number" value="0"/></div>
+          </div>
+          
+          <div id="ac-status" style="margin-top: 12px; font-size: 13px; color: var(--t3);"></div>
+          
+          <div id="ac-events-section" style="display: none; margin-top: 24px;">
+            <h3 style="font-family: Rajdhani; font-size: 18px; margin-bottom: 12px; color: var(--acc);">Match Timeline Incidents</h3>
+            <div id="ac-events-list" style="max-height: 200px; overflow-y: auto; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px;"></div>
+            
+            <div style="margin-top: 20px;">
+              <button class="btn bp" onclick="generateClipCommands()">⚙️ Generate Automation Commands</button>
+            </div>
+            
+            <div id="ac-result" style="display: none; margin-top: 24px;">
+              <h3 style="font-family: Rajdhani; font-size: 16px; margin-bottom: 10px; color: var(--grn);">Copy FFmpeg CLI Command</h3>
+              <p style="font-size: 11px; color: var(--t2); margin-bottom: 8px;">Run this command in your PC terminal inside the folder with your full match video file (named <code>input.mp4</code>):</p>
+              <textarea id="ac-command" style="width: 100%; height: 120px; font-family: monospace; font-size: 11px; background: rgba(0,0,0,0.3); border: 1px solid var(--border); color: #fff; padding: 8px; border-radius: 6px; resize: none;" readonly></textarea>
+              <button class="btn bgh bsm" style="margin-top: 8px;" onclick="copyAcCommand()">📋 Copy Command</button>
+              <button class="btn bgh bsm" style="margin-top: 8px; margin-left: 8px;" onclick="downloadAcBat()">📥 Download .bat Script</button>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
@@ -2116,6 +2161,137 @@ async function saveSettings(){
   m.style.color=err?'var(--red)':'var(--grn)';
   m.textContent=err?'Error: '+err.message:'Settings saved successfully!';
   setTimeout(()=>{if(m)m.textContent='';},3000);
+}
+
+// ─── AUTOCLIP INCIDENTS ───
+let AC_EVENTS = [];
+
+async function fetchAutoclipIncidents() {
+  const fmid = document.getElementById('ac-fmid').value.trim();
+  const statusEl = document.getElementById('ac-status');
+  const sectionEl = document.getElementById('ac-events-section');
+  const listEl = document.getElementById('ac-events-list');
+  const resultEl = document.getElementById('ac-result');
+  
+  if (!fmid) {
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = '⚠ Enter a FotMob Match ID first.';
+    return;
+  }
+  
+  statusEl.style.color = 'var(--t3)';
+  statusEl.textContent = '⏳ Fetching match incident details from FotMob...';
+  sectionEl.style.display = 'none';
+  resultEl.style.display = 'none';
+  
+  // Use proxy to avoid CORS
+  const url = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + fmid)}`;
+  
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('API request failed');
+    const d = await res.json();
+    
+    // Parse incidents
+    const incidents = d?.content?.incidents?.allIncidents || d?.content?.matchFacts?.events?.allEvents || [];
+    AC_EVENTS = [];
+    
+    incidents.forEach(inc => {
+      const type = inc.type?.toLowerCase() || '';
+      if (['goal', 'penalty', 'own_goal', 'redcard'].includes(type)) {
+        AC_EVENTS.push({
+          minute: inc.time || 0,
+          type: type,
+          player: inc.player?.name || 'Player',
+          desc: `${type.toUpperCase()}: ${inc.player?.name || 'Player'} (${inc.time}')`
+        });
+      }
+    });
+    
+    AC_EVENTS.sort((a,b) => a.minute - b.minute);
+    
+    if (AC_EVENTS.length === 0) {
+      statusEl.style.color = 'var(--red)';
+      statusEl.textContent = '❌ No goals or red cards found for this Match ID.';
+      return;
+    }
+    
+    statusEl.style.color = 'var(--grn)';
+    statusEl.textContent = `✅ Successfully fetched ${AC_EVENTS.length} incidents!`;
+    
+    listEl.innerHTML = AC_EVENTS.map((e, idx) => `
+      <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; cursor: pointer; margin-bottom: 4px;">
+        <input type="checkbox" id="ac-ev-${idx}" checked style="cursor: pointer;"/>
+        <span style="color: ${e.type === 'redcard' ? 'var(--red)' : 'var(--primary)'}; font-weight: 700;">[${e.type.toUpperCase()}]</span>
+        <span>${e.desc}</span>
+      </label>
+    `).join('');
+    
+    sectionEl.style.display = 'block';
+  } catch(e) {
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = `❌ Fetch failed: ${e.message}. Try again.`;
+  }
+}
+
+function generateClipCommands() {
+  const padBefore = parseInt(document.getElementById('ac-pad-before').value) || 10;
+  const padAfter = parseInt(document.getElementById('ac-pad-after').value) || 5;
+  const offset = parseInt(document.getElementById('ac-offset').value) || 0;
+  const resultEl = document.getElementById('ac-result');
+  const commandArea = document.getElementById('ac-command');
+  
+  const selectedEvents = [];
+  AC_EVENTS.forEach((e, idx) => {
+    if (document.getElementById(`ac-ev-${idx}`).checked) {
+      selectedEvents.push(e);
+    }
+  });
+  
+  if (selectedEvents.length === 0) {
+    alert('Select at least one incident to include in highlights.');
+    return;
+  }
+  
+  // Build FFmpeg complex filter command
+  let trims = '';
+  let concats = '';
+  
+  selectedEvents.forEach((e, idx) => {
+    const eventSec = e.minute * 60 + offset;
+    const start = Math.max(0, eventSec - padBefore);
+    const end = eventSec + padAfter;
+    
+    trims += `[0:v]trim=start=${start}:end=${end},setpts=PTS-STARTPTS[v${idx}]; [0:a]atrim=start=${start}:end=${end},asetpts=PTS-STARTPTS[a${idx}]; `;
+    concats += `[v${idx}][a${idx}]`;
+  });
+  
+  const filterComplex = `${trims}${concats}concat=n=${selectedEvents.length}:v=1:a=1[outv][outa]`;
+  const fullCommand = `ffmpeg -i input.mp4 -filter_complex "${filterComplex}" -map "[outv]" -map "[outa]" -c:v libx264 -c:a aac -y exciting_highlights.mp4`;
+  
+  commandArea.value = fullCommand;
+  resultEl.style.display = 'block';
+}
+
+function copyAcCommand() {
+  const commandArea = document.getElementById('ac-command');
+  commandArea.select();
+  document.execCommand('copy');
+  alert('FFmpeg command copied to clipboard!');
+}
+
+function downloadAcBat() {
+  const command = document.getElementById('ac-command').value;
+  const fileContent = `@echo off\necho Starting ZetaSports AutoClip compilation...\n${command}\necho Done!\npause`;
+  const blob = new Blob([fileContent], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'autoclip_highlights.bat';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 </script>
