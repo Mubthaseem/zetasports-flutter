@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'dart:async';
 import 'dart:math' as math;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -125,7 +126,10 @@ class _SplashScreenState extends State<SplashScreen>
     await Future.delayed(const Duration(milliseconds: 700));
     if (!mounted) return;
 
-    AdService.showAppOpenAd(onDismissed: () {
+    bool proceeded = false;
+    void proceed() {
+      if (proceeded) return;
+      proceeded = true;
       if (!mounted) return;
       Navigator.of(context).pushReplacement(PageRouteBuilder(
         pageBuilder: (_, __, ___) => const MainShell(), // direct entry — no login gate
@@ -133,7 +137,17 @@ class _SplashScreenState extends State<SplashScreen>
             FadeTransition(opacity: anim, child: child),
         transitionDuration: const Duration(milliseconds: 600),
       ));
-    });
+    }
+
+    // Safety timeout of 3.5 seconds to prevent getting stuck if AdMob hangs
+    Timer(const Duration(milliseconds: 3500), proceed);
+
+    try {
+      AdService.showAppOpenAd(onDismissed: proceed);
+    } catch (e) {
+      debugPrint('AppOpenAd Error: $e');
+      proceed();
+    }
   }
 
   // ── Force Update Dialog (non-dismissable) ──────────────────────────────────
