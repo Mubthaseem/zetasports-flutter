@@ -709,8 +709,9 @@ async function loadDashboard(){
     sb.from('zeta_users').select('id',{count:'exact'}),
     sb.from('fifa_stream_sessions').select('id',{count:'exact'}).gte('created_at',new Date(Date.now()-86400000).toISOString())
   ]);
-  ['zeta_teams','zeta_players','zeta_leagues','zeta_matches','zeta_highlights','zeta_news','streams','users','sessions'].forEach((x,i)=>{
-    document.getElementById('st-'+x).textContent=[a,b,c,d,e,f,g,h,i][i].count??0;
+  ['teams','players','leagues','matches','highlights','news','streams','users','sessions'].forEach((x,i)=>{
+    const el=document.getElementById('st-'+x);
+    if(el) el.textContent=[a,b,c,d,e,f,g,h,i][i].count??0;
   });
   const{data:s}=await sb.from('fifa_stream_sessions').select().order('created_at',{ascending:false}).limit(20);
   const el=document.getElementById('dash-body');
