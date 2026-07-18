@@ -98,6 +98,8 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
 .tabi{padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;color:var(--t2);cursor:pointer;transition:all .15s}
 .tabi.active{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#000}
 .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.ac-input{padding:10px 14px;background:var(--card2);border:1px solid var(--bdr);border-radius:9px;color:var(--t1);outline:none;font-family:Inter,sans-serif;transition:border-color .2s}
+.ac-input:focus{border-color:var(--acc)}
 .card{background:var(--card);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
 .card-img{width:100%;height:160px;object-fit:cover}
@@ -341,9 +343,9 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
           <div style="margin-top: 20px; border: 1px solid var(--border); border-radius: 12px; padding: 20px; background: rgba(255,255,255,0.015);">
             <h4 style="margin: 0 0 14px 0; font-family: Rajdhani; font-size: 16px; color: var(--primary);">➕ Add Custom Clip Segment</h4>
             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-              <input id="ac-custom-desc" placeholder="e.g. France Goals Promo" style="flex: 2; min-width: 150px;"/>
-              <input id="ac-custom-start" type="number" placeholder="Start (Sec)" style="flex: 1; min-width: 80px;"/>
-              <input id="ac-custom-end" type="number" placeholder="End (Sec)" style="flex: 1; min-width: 80px;"/>
+              <input id="ac-custom-desc" class="ac-input" placeholder="e.g. France Goals Promo" style="flex: 2; min-width: 150px;"/>
+              <input id="ac-custom-start" class="ac-input" type="number" placeholder="Start (Sec)" style="flex: 1; min-width: 80px;"/>
+              <input id="ac-custom-end" class="ac-input" type="number" placeholder="End (Sec)" style="flex: 1; min-width: 80px;"/>
               <button class="btn bp" onclick="addCustomSegment()" style="padding: 10px 16px;">Add Clip</button>
             </div>
           </div>
