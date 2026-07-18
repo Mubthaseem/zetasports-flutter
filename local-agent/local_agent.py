@@ -80,6 +80,43 @@ def get_fotmob_match(match_id):
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response, 500
 
+SB_URL = 'https://voocdrpetiyspuhyeapi.supabase.co'
+SB_KEY = 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV'
+
+@app.route('/api/sb/<path:table>', methods=['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'])
+def supabase_proxy(table):
+    """Proxies Supabase REST API calls to bypass browser CORS restrictions."""
+    if request.method == 'OPTIONS':
+        resp = app.make_default_options_response()
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        resp.headers['Access-Control-Allow-Methods'] = 'GET, POST, PATCH, DELETE, OPTIONS'
+        resp.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, apikey, Prefer'
+        return resp
+    try:
+        qs = request.query_string.decode()
+        url = f"{SB_URL}/rest/v1/{table}"
+        if qs:
+            url += f"?{qs}"
+        headers = {
+            'Content-Type': 'application/json',
+            'apikey': SB_KEY,
+            'Authorization': f'Bearer {SB_KEY}',
+            'Prefer': request.headers.get('Prefer', 'return=minimal')
+        }
+        body = request.get_data()
+        resp = requests.request(request.method, url, headers=headers, data=body, timeout=15)
+        response = app.response_class(
+            response=resp.content,
+            status=resp.status_code,
+            mimetype='application/json'
+        )
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        return response
+    except Exception as e:
+        r = jsonify({"error": str(e)})
+        r.headers['Access-Control-Allow-Origin'] = '*'
+        return r, 500
+
 @app.route('/api/matches', methods=['GET', 'POST'])
 def handle_matches():
     """Fetches or updates the matches.json file."""

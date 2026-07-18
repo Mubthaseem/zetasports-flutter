@@ -704,16 +704,40 @@ const sb=supabase.createClient(SB_URL,SB_KEY);
 
 let ALL_TEAMS=[],ALL_PLAYERS=[],ALL_LEAGUES=[],ALL_MATCHES=[],ALL_HIGHLIGHTS=[],ALL_NEWS=[],ALL_STREAMS=[],ALL_USERS=[],ALL_NOTIFICATIONS=[];
 
-// Direct REST helper — uses POST upsert (bypasses CORS PATCH block from localhost)
+// Direct REST helper — routes through local Flask proxy (no CORS) with direct fallback
 async function sbSave(table, data, id = null) {
   const payload = id ? {...data, id} : data;
+  const prefer = id ? 'resolution=merge-duplicates,return=minimal' : 'return=minimal';
+
+  // Try local Flask proxy first (bypasses browser CORS)
+  try {
+    const proxyRes = await fetch(`http://localhost:5000/api/sb/${table}`, {
+      method: id ? 'PATCH' : 'POST',
+      headers: { 'Content-Type': 'application/json', 'Prefer': prefer },
+      body: JSON.stringify(id ? {...data, id} : data)
+    });
+    if (proxyRes.ok || proxyRes.status < 500) {
+      if (!proxyRes.ok) {
+        let msg = `HTTP ${proxyRes.status}`;
+        try { const j = await proxyRes.json(); msg += ': ' + (j.message || j.error || JSON.stringify(j)); } catch(_) {}
+        throw new Error(msg);
+      }
+      return;
+    }
+  } catch(e) {
+    if (!e.message.startsWith('HTTP ') && !e.message.includes('Failed to fetch')) throw e;
+    // If proxy is offline, fall through to direct
+    if (e.message.startsWith('HTTP ')) throw e;
+  }
+
+  // Fallback: direct Supabase REST with POST upsert (avoids PATCH CORS block)
   const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'apikey': SB_KEY,
       'Authorization': `Bearer ${SB_KEY}`,
-      'Prefer': id ? 'resolution=merge-duplicates,return=minimal' : 'return=minimal'
+      'Prefer': prefer
     },
     body: JSON.stringify(payload)
   });
@@ -724,6 +748,10 @@ async function sbSave(table, data, id = null) {
   }
 }
 async function sbDelete(table, id) {
+  try {
+    const r = await fetch(`http://localhost:5000/api/sb/${table}?id=eq.${encodeURIComponent(id)}`, { method: 'DELETE' });
+    if (r.ok) return;
+  } catch(_) {}
   const res = await fetch(`${SB_URL}/rest/v1/${table}?id=eq.${encodeURIComponent(id)}`, {
     method: 'DELETE',
     headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
