@@ -1786,7 +1786,7 @@ function openHighlightModal(h){
 }
 async function saveHighlight(){
   const id=document.getElementById('mhl-id').value;
-  const p={title:document.getElementById('mhl-tt').value.trim(),match_id:document.getElementById('mhl-mt').value||null,duration:document.getElementById('mhl-dr').value.trim(),views:parseInt(document.getElementById('mhl-vw').value)||0,league_id:document.getElementById('mhl-lg').value||null,thumbnail_url:document.getElementById('mhl-th').value.trim()||null,video_url:document.getElementById('mhl-vurl').value.trim()||null,badge:document.getElementById('mhl-bg').value||null,published:document.getElementById('mhl-pub').value==='true',is_replay:document.getElementById('mhl-type').value==='replay'};
+  const p={title:document.getElementById('mhl-tt').value.trim(),match_id:document.getElementById('mhl-mt').value||null,duration:document.getElementById('mhl-dr').value.trim(),views:parseInt(document.getElementById('mhl-vw').value)||0,league_id:document.getElementById('mhl-lg').value||null,thumbnail_url:document.getElementById('mhl-th').value.trim()||null,thumbnail:document.getElementById('mhl-th').value.trim()||null,video_url:document.getElementById('mhl-vurl').value.trim()||null,badge:document.getElementById('mhl-bg').value||null,published:document.getElementById('mhl-pub').value==='true',is_replay:document.getElementById('mhl-type').value==='replay'};
   if(!p.title){document.getElementById('mhl-er').textContent='Title required.';return;}
   const{error}=id?await sb.from('zeta_highlights').update(p).eq('id',id):await sb.from('zeta_highlights').insert({...p,created_at:new Date().toISOString()});
   if(error){document.getElementById('mhl-er').textContent=error.message;return;}
