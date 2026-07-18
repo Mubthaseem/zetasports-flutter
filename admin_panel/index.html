@@ -328,6 +328,13 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
         <div class="tc" style="padding:28px;max-width:600px"><div id="cfg-form"><div class="ld"><div class="sp"></div>Loading...</div></div></div>
       </div>
 
+      <!-- AUTOCLIP VIDEO -->
+      <div class="page" id="page-autoclip">
+        <div class="ph">
+          <h1>🎬 AutoClip Highlights</h1>
+          <p>Generate exciting video summaries dynamically based on match events</p>
+        </div>
+        <div class="tc" style="padding: 24px; max-width: 800px;">
           <!-- Fetch section -->
           <div class="fr">
             <div class="fg">
@@ -339,15 +346,10 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
             </div>
           </div>
           
-          <!-- Custom clip creator -->
-          <div style="margin-top: 20px; border: 1px solid var(--border); border-radius: 12px; padding: 20px; background: rgba(255,255,255,0.015);">
-            <h4 style="margin: 0 0 14px 0; font-family: Rajdhani; font-size: 16px; color: var(--primary);">➕ Add Custom Clip Segment</h4>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-              <input id="ac-custom-desc" class="ac-input" placeholder="e.g. France Goals Promo" style="flex: 2; min-width: 150px;"/>
-              <input id="ac-custom-start" class="ac-input" type="number" placeholder="Start (Sec)" style="flex: 1; min-width: 80px;"/>
-              <input id="ac-custom-end" class="ac-input" type="number" placeholder="End (Sec)" style="flex: 1; min-width: 80px;"/>
-              <button class="btn bp" onclick="addCustomSegment()" style="padding: 10px 16px;">Add Clip</button>
-            </div>
+          <!-- Custom clip creator (Simplified Single Input) -->
+          <div class="fg" style="margin-top: 20px;">
+            <label>Or Enter Custom Ranges (Seconds)</label>
+            <input id="ac-ranges" class="ac-input" placeholder="e.g., 10-20, 45-60, 120-150" style="width: 100%;"/>
           </div>
 
           <div class="fr" style="margin-top: 20px;">
@@ -377,6 +379,7 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
             </div>
           </div>
         </div>
+      </div>
     </main>
   </div>
 </div>
@@ -2185,47 +2188,13 @@ function renderAcEventsList() {
     <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.15); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 4px;">
       <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; cursor: pointer; flex: 1; margin: 0;">
         <input type="checkbox" id="ac-ev-${idx}" checked style="cursor: pointer;"/>
-        <span style="color: ${e.isCustom ? 'var(--grn)' : (e.type === 'redcard' ? 'var(--red)' : 'var(--primary)')}; font-weight: 700;">
-          [${e.isCustom ? 'CUSTOM' : e.type.toUpperCase()}]
+        <span style="color: ${e.type === 'redcard' ? 'var(--red)' : 'var(--primary)'}; font-weight: 700;">
+          [${e.type.toUpperCase()}]
         </span>
         <span>${e.desc}</span>
       </label>
-      <button class="btn bd bsm" style="padding: 2px 8px; font-size: 10px; margin: 0;" onclick="deleteAcSegment(${idx})">Del</button>
     </div>
   `).join('');
-}
-
-function addCustomSegment() {
-  const descInput = document.getElementById('ac-custom-desc');
-  const startInput = document.getElementById('ac-custom-start');
-  const endInput = document.getElementById('ac-custom-end');
-  
-  const desc = descInput.value.trim() || 'Custom Clip';
-  const start = parseInt(startInput.value);
-  const end = parseInt(endInput.value);
-  
-  if (isNaN(start) || isNaN(end) || start < 0 || end <= start) {
-    alert('Please enter valid Start and End times (End must be greater than Start).');
-    return;
-  }
-  
-  AC_EVENTS.push({
-    isCustom: true,
-    start: start,
-    end: end,
-    desc: `${desc} (${start}s - ${end}s)`
-  });
-  
-  descInput.value = '';
-  startInput.value = '';
-  endInput.value = '';
-  
-  renderAcEventsList();
-}
-
-function deleteAcSegment(idx) {
-  AC_EVENTS.splice(idx, 1);
-  renderAcEventsList();
 }
 
 async function fetchAutoclipIncidents() {
@@ -2275,8 +2244,7 @@ async function fetchAutoclipIncidents() {
   try {
     const incidents = d?.content?.incidents?.allIncidents || d?.content?.matchFacts?.events?.allEvents || [];
     
-    // Clear out previous FotMob incidents, keep custom ones
-    AC_EVENTS = AC_EVENTS.filter(e => e.isCustom);
+    AC_EVENTS = [];
     
     incidents.forEach(inc => {
       const type = inc.type?.toLowerCase() || '';
@@ -2290,22 +2258,16 @@ async function fetchAutoclipIncidents() {
       }
     });
     
-    AC_EVENTS.sort((a,b) => {
-      const tA = a.isCustom ? a.start : a.minute * 60;
-      const tB = b.isCustom ? b.start : b.minute * 60;
-      return tA - tB;
-    });
+    AC_EVENTS.sort((a,b) => a.minute - b.minute);
     
     statusEl.style.color = 'var(--grn)';
-    statusEl.textContent = `✅ Successfully merged incidents! Total clips: ${AC_EVENTS.length}`;
+    statusEl.textContent = `✅ Successfully fetched incidents! Total clips: ${AC_EVENTS.length}`;
     
     renderAcEventsList();
   } catch(e) {
     statusEl.style.color = 'var(--red)';
     statusEl.textContent = `❌ Fetch failed: ${e.message}. Try again.`;
   }
-}
-
 function generateClipCommands() {
   const padBefore = parseInt(document.getElementById('ac-pad-before').value) || 10;
   const padAfter = parseInt(document.getElementById('ac-pad-after').value) || 5;
@@ -2314,16 +2276,47 @@ function generateClipCommands() {
   const commandArea = document.getElementById('ac-command');
   
   const selectedEvents = [];
+  
+  // 1. Parse manual ranges from the single input box (e.g. 10-20, 45-60)
+  const rangesInput = document.getElementById('ac-ranges').value.trim();
+  if (rangesInput) {
+    const parts = rangesInput.split(',');
+    parts.forEach((p, idx) => {
+      const range = p.trim();
+      if (!range) return;
+      const bounds = range.split('-');
+      if (bounds.length === 2) {
+        const start = parseInt(bounds[0].trim());
+        const end = parseInt(bounds[1].trim());
+        if (!isNaN(start) && !isNaN(end)) {
+          selectedEvents.push({
+            isCustom: true,
+            start: start,
+            end: end
+          });
+        }
+      }
+    });
+  }
+  
+  // 2. Add any checked FotMob incidents
   AC_EVENTS.forEach((e, idx) => {
-    if (document.getElementById(`ac-ev-${idx}`).checked) {
+    if (document.getElementById(`ac-ev-${idx}`) && document.getElementById(`ac-ev-${idx}`).checked) {
       selectedEvents.push(e);
     }
   });
   
   if (selectedEvents.length === 0) {
-    alert('Select at least one incident to include in highlights.');
+    alert('Please enter at least one clip range (e.g., 10-20) or fetch and select FotMob incidents.');
     return;
   }
+  
+  // Sort selected events by start time so the output video clips are in chronological order
+  selectedEvents.sort((a, b) => {
+    const tA = a.isCustom ? a.start : a.minute * 60;
+    const tB = b.isCustom ? b.start : b.minute * 60;
+    return tA - tB;
+  });
   
   // Build FFmpeg complex filter command
   let trims = '';
@@ -2350,7 +2343,6 @@ function generateClipCommands() {
   commandArea.value = fullCommand;
   resultEl.style.display = 'block';
 }
-
 function copyAcCommand() {
   const commandArea = document.getElementById('ac-command');
   commandArea.select();
