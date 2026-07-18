@@ -704,20 +704,18 @@ const sb=supabase.createClient(SB_URL,SB_KEY);
 
 let ALL_TEAMS=[],ALL_PLAYERS=[],ALL_LEAGUES=[],ALL_MATCHES=[],ALL_HIGHLIGHTS=[],ALL_NEWS=[],ALL_STREAMS=[],ALL_USERS=[],ALL_NOTIFICATIONS=[];
 
-// Direct REST helper — bypasses Supabase JS client CORS/fetch issues
+// Direct REST helper — uses POST upsert (bypasses CORS PATCH block from localhost)
 async function sbSave(table, data, id = null) {
-  const url = id
-    ? `${SB_URL}/rest/v1/${table}?id=eq.${encodeURIComponent(id)}`
-    : `${SB_URL}/rest/v1/${table}`;
-  const res = await fetch(url, {
-    method: id ? 'PATCH' : 'POST',
+  const payload = id ? {...data, id} : data;
+  const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'apikey': SB_KEY,
       'Authorization': `Bearer ${SB_KEY}`,
-      'Prefer': 'return=minimal'
+      'Prefer': id ? 'resolution=merge-duplicates,return=minimal' : 'return=minimal'
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(payload)
   });
   if (!res.ok) {
     let msg = `HTTP ${res.status}`;
@@ -732,6 +730,7 @@ async function sbDelete(table, id) {
   });
   if (!res.ok) throw new Error(`Delete HTTP ${res.status}`);
 }
+
 
 
 // ─── AUTH ───
