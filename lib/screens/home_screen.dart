@@ -401,7 +401,7 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16), scrollDirection: Axis.horizontal,
       itemCount: _tournaments.length, itemBuilder: (_, i) {
         final t = _tournaments[i];
-        final col = t['color'] as Color? ?? Color((i * 0x1E40AF) | 0xFF000000);
+        final col = _hexColor(t['color']?.toString(), defaultColor: Color((i * 0x1E40AF) | 0xFF000000));
         return Container(width: 160, margin: const EdgeInsets.only(right: 12), padding: const EdgeInsets.all(16), decoration: BoxDecoration(gradient: LinearGradient(colors: [col.withOpacity(0.3), col.withOpacity(0.1)], begin: Alignment.topLeft, end: Alignment.bottomRight), borderRadius: BorderRadius.circular(16), border: Border.all(color: col.withOpacity(0.3))), child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Text(t['name'] ?? '', style: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.w800, color: AppTheme.text1), maxLines: 2, overflow: TextOverflow.ellipsis),
           Text('${t['team_count'] ?? '—'} Teams', style: GoogleFonts.outfit(fontSize: 10, fontWeight: FontWeight.w600, color: col)),
@@ -505,14 +505,14 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(context, MaterialPageRoute(builder: (_) => MatchDetailScreen(match: m)));
   }
 
-  Color _hexColor(String? hex) {
-    if (hex == null || hex.isEmpty) return AppTheme.primary;
+  Color _hexColor(String? hex, {Color defaultColor = AppTheme.primary}) {
+    if (hex == null || hex.isEmpty) return defaultColor;
     try {
       hex = hex.replaceAll('#', '');
       if (hex.length == 6) hex = 'FF$hex';
       return Color(int.parse(hex, radix: 16));
     } catch (_) {
-      return AppTheme.primary;
+      return defaultColor;
     }
   }
 }
