@@ -12,6 +12,7 @@ class AppConfig {
   final String updateMessage;   // Custom message shown in update dialog
   final bool   maintenanceMode; // block all users for maintenance
   final String onesignalAppId;  // OneSignal App ID
+  final int    requiredPatchVersion; // Required Shorebird patch version
 
   const AppConfig({
     required this.minVersion,
@@ -22,6 +23,7 @@ class AppConfig {
     required this.updateMessage,
     required this.maintenanceMode,
     required this.onesignalAppId,
+    required this.requiredPatchVersion,
   });
 
   factory AppConfig.fromMap(Map<String, dynamic> m) => AppConfig(
@@ -36,6 +38,7 @@ class AppConfig {
         'A new version is available. Please update to continue.',
     maintenanceMode : m['maintenance_mode']  ?? false,
     onesignalAppId  : m['onesignal_app_id']  ?? '',
+    requiredPatchVersion : m['required_patch_version'] ?? 0,
   );
 
   /// Fallback when Supabase is unreachable — allow app to open normally
@@ -48,6 +51,7 @@ class AppConfig {
     updateMessage   : '',
     maintenanceMode : false,
     onesignalAppId  : '',
+    requiredPatchVersion : 0,
   );
 }
 
@@ -57,6 +61,9 @@ class AppVersionService {
 
   // ── Current app version (bump this with every release) ─────────────────────
   static const String currentVersion = '1.1.5';
+  
+  // ── Current Shorebird patch version (hardcoded in compiled patch code) ─────
+  static const int currentPatchVersion = 19;
 
   /// Fetch app_config row from Supabase.
   /// Table: app_config  (single row, id = 'global')

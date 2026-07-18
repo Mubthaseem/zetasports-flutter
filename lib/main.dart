@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:flutter/services.dart';
 import 'dart:async';
 import 'dart:math' as math;
 import 'package:google_fonts/google_fonts.dart';
@@ -118,6 +119,12 @@ class _SplashScreenState extends State<SplashScreen>
       return; // never navigates away
     }
 
+    // Shorebird live patch force relaunch check
+    if (config.requiredPatchVersion > AppVersionService.currentPatchVersion) {
+      await _showPatchRelaunchDialog();
+      return; // never navigates away
+    }
+
     // ── Normal boot ──────────────────────────────────────────────────────────
     setState(() => _msg = 'Synchronizing match fixtures...');
     await Future.delayed(const Duration(milliseconds: 900));
@@ -207,6 +214,68 @@ class _SplashScreenState extends State<SplashScreen>
                   const Icon(Icons.download_rounded, color: Colors.black, size: 20),
                   const SizedBox(width: 8),
                   Text('UPDATE NOW', style: GoogleFonts.outfit(
+                    fontSize: 14, fontWeight: FontWeight.w900, color: Colors.black)),
+                ]),
+              ),
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
+
+  // ── Shorebird Patch Relaunch Dialog (non-dismissable) ─────────────────────────
+  Future<void> _showPatchRelaunchDialog() async {
+    await showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => WillPopScope(
+        onWillPop: () async => false, // block back button
+        child: AlertDialog(
+          backgroundColor: AppTheme.surface,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+          contentPadding: const EdgeInsets.all(28),
+          content: Column(mainAxisSize: MainAxisSize.min, children: [
+            Container(
+              width: 80, height: 80,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: const LinearGradient(
+                  colors: [AppTheme.primary, AppTheme.secondary]),
+                boxShadow: [BoxShadow(
+                  color: AppTheme.primary.withValues(alpha: 0.4),
+                  blurRadius: 24, spreadRadius: 4)]),
+              child: const Icon(Icons.flash_on_rounded,
+                color: Colors.black, size: 36)),
+            const SizedBox(height: 20),
+            Text('Update Ready!', style: GoogleFonts.outfit(
+              fontSize: 20, fontWeight: FontWeight.w900, color: AppTheme.text1)),
+            const SizedBox(height: 8),
+            Text(
+              'A live hotfix is downloaded and ready to apply.\n\nPlease tap below to relaunch the app and apply the update immediately!',
+              style: GoogleFonts.outfit(
+                fontSize: 13, color: AppTheme.text2, height: 1.5),
+              textAlign: TextAlign.center),
+            const SizedBox(height: 24),
+            // Relaunch button
+            GestureDetector(
+              onTap: () {
+                // Exit app. Next launch will apply the Shorebird patch automatically.
+                SystemNavigator.pop();
+              },
+              child: Container(
+                height: 52, width: double.infinity,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [AppTheme.primary, AppTheme.secondary]),
+                  borderRadius: BorderRadius.circular(14),
+                  boxShadow: [BoxShadow(
+                    color: AppTheme.primary.withValues(alpha: 0.3),
+                    blurRadius: 16, offset: const Offset(0, 6))]),
+                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  const Icon(Icons.restart_alt_rounded, color: Colors.black, size: 20),
+                  const SizedBox(width: 8),
+                  Text('RELAUNCH NOW', style: GoogleFonts.outfit(
                     fontSize: 14, fontWeight: FontWeight.w900, color: Colors.black)),
                 ]),
               ),
