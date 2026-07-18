@@ -1120,7 +1120,7 @@ async function importMatchToModal(data) {
       leagueId = l.id;
     } else {
       const {data:ld, error:le} = await sb.from('zeta_leagues')
-        .insert({name: data.league_name, sport:'football', type:'league'})
+        .insert({id: crypto.randomUUID(), name: data.league_name, sport:'football', type:'league'})
         .select().single();
       if (le) { resultsDiv.innerHTML = `<div style="color:var(--red);padding:10px">❌ League insert failed: ${le.message}</div>`; return; }
       leagueId = ld.id;
@@ -1136,7 +1136,7 @@ async function importMatchToModal(data) {
       homeId = ht.id;
     } else {
       const {data:htd, error:hte} = await sb.from('zeta_teams')
-        .insert({name: data.home_team, logo: data.home_logo||null, sport:'football'})
+        .insert({id: crypto.randomUUID(), name: data.home_team, logo: data.home_logo||null, sport:'football'})
         .select().single();
       if (hte) { resultsDiv.innerHTML = `<div style="color:var(--red);padding:10px">❌ Home team insert failed: ${hte.message}</div>`; return; }
       homeId = htd.id;
@@ -1152,13 +1152,14 @@ async function importMatchToModal(data) {
       awayId = at.id;
     } else {
       const {data:atd, error:ate} = await sb.from('zeta_teams')
-        .insert({name: data.away_team, logo: data.away_logo||null, sport:'football'})
+        .insert({id: crypto.randomUUID(), name: data.away_team, logo: data.away_logo||null, sport:'football'})
         .select().single();
       if (ate) { resultsDiv.innerHTML = `<div style="color:var(--red);padding:10px">❌ Away team insert failed: ${ate.message}</div>`; return; }
       awayId = atd.id;
       await loadTeams();
     }
   }
+
 
   // ── Open modal and populate fields ──
   // Reset all fields manually (same as openMatchModal(null)) but WITHOUT resetting selects
