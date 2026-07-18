@@ -1091,7 +1091,8 @@ async function findOrCreateLeague(name) {
   if(!name) return '';
   let l = ALL_LEAGUES.find(x => x.name.toLowerCase() === name.toLowerCase());
   if(l) return l.id;
-  const p = {name, sport:'football', type:'league', country:''};
+  const p = {name, sport:'football', type:'league'};
+
   const {data, error} = await sb.from('zeta_leagues').insert(p).select().single();
   if(!error && data) { await loadLeagues(); return data.id; }
   return '';
@@ -1119,7 +1120,7 @@ async function importMatchToModal(data) {
       leagueId = l.id;
     } else {
       const {data:ld, error:le} = await sb.from('zeta_leagues')
-        .insert({name: data.league_name, sport:'football', type:'league', country:''})
+        .insert({name: data.league_name, sport:'football', type:'league'})
         .select().single();
       if (le) { resultsDiv.innerHTML = `<div style="color:var(--red);padding:10px">❌ League insert failed: ${le.message}</div>`; return; }
       leagueId = ld.id;
