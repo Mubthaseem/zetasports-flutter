@@ -215,6 +215,11 @@ class _MatchDetailScreenState extends State<MatchDetailScreen>
   }
 
   Widget _buildMatchHeader() {
+    final homeColor = _hexColor(m['home_team_color']?.toString() ?? m['zeta_teams']?['color']?.toString(), defaultColor: AppTheme.primary);
+    final awayColor = _hexColor(m['away_team_color']?.toString() ?? m['teams:away']?['color']?.toString(), defaultColor: AppTheme.secondary);
+    final homeLogo = m['home_team_logo'] ?? m['zeta_teams']?['logo'];
+    final awayLogo = m['away_team_logo'] ?? m['teams:away']?['logo'];
+
     return Container(
       color: AppTheme.surface,
       padding: const EdgeInsets.all(16),
@@ -247,7 +252,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen>
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _teamColumn(m['home_team'] ?? 'Brazil', AppTheme.primary),
+              _teamColumn(m['home_team'] ?? 'Brazil', homeLogo?.toString(), homeColor),
               // Center score + time
               Column(
                 children: [
@@ -291,7 +296,7 @@ class _MatchDetailScreenState extends State<MatchDetailScreen>
                   ),
                 ],
               ),
-              _teamColumn(m['away_team'] ?? 'Argentina', AppTheme.secondary),
+              _teamColumn(m['away_team'] ?? 'Argentina', awayLogo?.toString(), awayColor),
             ],
           ),
         ],
@@ -299,18 +304,33 @@ class _MatchDetailScreenState extends State<MatchDetailScreen>
     );
   }
 
-  Widget _teamColumn(String name, Color col) {
+  Widget _teamColumn(String name, String? logoUrl, Color col) {
     final abbr = name.length >= 3 ? name.substring(0, 3).toUpperCase() : name.toUpperCase();
     return Column(
       children: [
-        Container(
-          width: 54, height: 54,
-          decoration: BoxDecoration(
-            color: col.withOpacity(0.12),
-            shape: BoxShape.circle,
-            border: Border.all(color: col.withOpacity(0.4), width: 2)),
-          child: Center(child: Text(abbr, style: GoogleFonts.outfit(
-            fontSize: 14, fontWeight: FontWeight.w900, color: col)))),
+        if (logoUrl != null && logoUrl.isNotEmpty)
+          Container(
+            width: 54, height: 54,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: col.withOpacity(0.4), width: 2)),
+            child: ClipOval(
+              child: Image.network(
+                logoUrl,
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) => _logoFallback(abbr, col),
+              ),
+            ),
+          )
+        else
+          Container(
+            width: 54, height: 54,
+            decoration: BoxDecoration(
+              color: col.withOpacity(0.12),
+              shape: BoxShape.circle,
+              border: Border.all(color: col.withOpacity(0.4), width: 2)),
+            child: Center(child: Text(abbr, style: GoogleFonts.outfit(
+              fontSize: 14, fontWeight: FontWeight.w900, color: col)))),
         const SizedBox(height: 8),
         SizedBox(
           width: 80,
@@ -319,6 +339,22 @@ class _MatchDetailScreenState extends State<MatchDetailScreen>
             textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis)),
       ],
     );
+  }
+
+  Widget _logoFallback(String abbr, Color col) {
+    return Center(child: Text(abbr, style: GoogleFonts.outfit(
+      fontSize: 14, fontWeight: FontWeight.w900, color: col)));
+  }
+
+  Color _hexColor(String? hex, {Color defaultColor = AppTheme.primary}) {
+    if (hex == null || hex.isEmpty) return defaultColor;
+    try {
+      hex = hex.replaceAll('#', '');
+      if (hex.length == 6) hex = 'FF$hex';
+      return Color(int.parse(hex, radix: 16));
+    } catch (_) {
+      return defaultColor;
+    }
   }
 
   Widget _buildTabBar() {
