@@ -2262,13 +2262,19 @@ async function fetchAutoclipIncidents() {
     
     statusEl.style.color = 'var(--grn)';
     statusEl.textContent = `✅ Successfully fetched incidents! Total clips: ${AC_EVENTS.length}`;
-    
     renderAcEventsList();
   } catch(e) {
     statusEl.style.color = 'var(--red)';
     statusEl.textContent = `❌ Fetch failed: ${e.message}. Try again.`;
   }
+}
+
 function generateClipCommands() {
+    
+
+
+    
+
   const padBefore = parseInt(document.getElementById('ac-pad-before').value) || 10;
   const padAfter = parseInt(document.getElementById('ac-pad-after').value) || 5;
   const offset = parseInt(document.getElementById('ac-offset').value) || 0;
