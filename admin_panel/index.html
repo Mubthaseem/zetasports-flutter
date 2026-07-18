@@ -487,7 +487,9 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
       <div class="fg"><label>Round/Stage</label><input id="mmatch-rd" placeholder="Group Stage, QF, SF, Final"/></div>
     </div>
     <div class="fr">
-      <div class="fg"><label>Stream IDs (comma-separated)</label><input id="mmatch-sids" placeholder="stream1,stream2"/></div>
+      <div class="fg"><label>Stream IDs <span style="color:var(--t3);font-size:11px">(pick from Live Streams)</span></label>
+        <select id="mmatch-sids" multiple style="min-height:80px;background:var(--card2);border:1px solid var(--bdr);border-radius:8px;color:var(--t1);padding:6px;width:100%"><option disabled>Loading streams...</option></select>
+      </div>
       <div class="fg"><label>FotMob Match ID</label><input id="mmatch-fmid" placeholder="e.g., 4506254"/></div>
     </div>
     <!-- FotMob Full Data Fetch -->
@@ -1259,7 +1261,10 @@ async function importMatchToModal(data) {
   document.getElementById('mmatch-vn').value = '';
   document.getElementById('mmatch-te').value = '';
   document.getElementById('mmatch-rd').value = '';
-  document.getElementById('mmatch-sids').value = '';
+  // Populate stream dropdown
+  const sel = document.getElementById('mmatch-sids');
+  sel.innerHTML = ALL_STREAMS.filter(s=>!s.deleted).map(s=>`<option value="${s.id}">${s.label} (${s.quality||'1080p'})</option>`).join('') || '<option disabled>No streams yet</option>';
+  Array.from(sel.options).forEach(o=>o.selected=false);
   document.getElementById('mmatch-fmid').value = '';
   document.getElementById('mmatch-hs').value = 0;
   document.getElementById('mmatch-as').value = 0;
@@ -1345,14 +1350,17 @@ function openMatchModal(m){
   document.getElementById('mmatch-as').value=m?.away_score||0;
   document.getElementById('mmatch-te').value=m?.time_elapsed||'';
   document.getElementById('mmatch-rd').value=m?.round||'';
-  document.getElementById('mmatch-sids').value=(m?.stream_ids||[]).join(',');
+  const sel2=document.getElementById('mmatch-sids');
+  const existingIds=m?.stream_ids||[];
+  Array.from(sel2.options).forEach(o=>o.selected=existingIds.includes(o.value));
   document.getElementById('mmatch-fmid').value=m?.fotmob_id||'';
   document.getElementById('mmatch-er').textContent='';
   document.getElementById('m-match').classList.add('open');
 }
 async function saveMatch(){
   const id=document.getElementById('mmatch-id').value;
-  const p={home_team_id:document.getElementById('mmatch-ht').value||null,away_team_id:document.getElementById('mmatch-at').value||null,league_id:document.getElementById('mmatch-lg').value||null,date:document.getElementById('mmatch-dt').value||null,status:document.getElementById('mmatch-st').value,venue:document.getElementById('mmatch-vn').value.trim(),home_score:parseInt(document.getElementById('mmatch-hs').value)||0,away_score:parseInt(document.getElementById('mmatch-as').value)||0,time_elapsed:document.getElementById('mmatch-te').value.trim()||null,round:document.getElementById('mmatch-rd').value.trim()||null,stream_ids:document.getElementById('mmatch-sids').value.split(',').map(s=>s.trim()).filter(Boolean),fotmob_id:document.getElementById('mmatch-fmid').value.trim()||null};
+  const selectedStreamIds = Array.from(document.getElementById('mmatch-sids').selectedOptions).map(o=>o.value);
+  const p={home_team_id:document.getElementById('mmatch-ht').value||null,away_team_id:document.getElementById('mmatch-at').value||null,league_id:document.getElementById('mmatch-lg').value||null,date:document.getElementById('mmatch-dt').value||null,status:document.getElementById('mmatch-st').value,venue:document.getElementById('mmatch-vn').value.trim(),home_score:parseInt(document.getElementById('mmatch-hs').value)||0,away_score:parseInt(document.getElementById('mmatch-as').value)||0,time_elapsed:document.getElementById('mmatch-te').value.trim()||null,round:document.getElementById('mmatch-rd').value.trim()||null,stream_ids:selectedStreamIds,fotmob_id:document.getElementById('mmatch-fmid').value.trim()||null};
   if(!p.home_team_id||!p.away_team_id){document.getElementById('mmatch-er').textContent='Home and away teams required.';return;}
   try{
     await sbSave('zeta_matches',p,id||null);
@@ -1992,12 +2000,12 @@ async function loadStreams(){
 function renderStreams(data){
   const el=document.getElementById('streams-body');
   if(!data.length){el.innerHTML='<div class="es"><div class="ic2">📺</div><p>No streams</p></div>';return;}
-  el.innerHTML='<table><thead><tr><th>Label</th><th>Quality</th><th>Theme Color</th><th>Servers JSON / URL</th><th>Status</th><th>Actions</th></tr></thead><tbody>'+
+  el.innerHTML='<table><thead><tr><th>Label / ID</th><th>Quality</th><th>Theme Color</th><th>Servers JSON / URL</th><th>Status</th><th>Actions</th></tr></thead><tbody>'+
   data.map(s=>{
     const safeS=JSON.stringify(s).replace(/"/g,'&quot;');
     const isJson = s.url && s.url.startsWith('[');
     const urlDisplay = isJson ? 'JSON Array (' + JSON.parse(s.url).length + ' servers)' : s.url;
-    return `<tr><td><strong>${s.label}</strong></td><td><span class="badge bb">${(s.quality||'1080p').toUpperCase()}</span></td><td><div class="color-swatch" style="background:${s.color||'#00ff88'}"></div></td><td><div class="uc" title="${s.url}">${urlDisplay}</div></td><td><span class="badge ${s.deleted?'br':s.active?'bg':'bw'}">${s.deleted?'HIDDEN':s.active?'LIVE':'OFFLINE'}</span></td><td><button class="btn bgh bsm" onclick='openStreamModal(JSON.parse(this.dataset.s))' data-s="${safeS}">Edit</button> <button class="btn bd bsm" onclick="deleteStream('${s.id}')">Del</button></td></tr>`;
+    return `<tr><td><strong>${s.label}</strong><br><span style="font-size:10px;color:var(--t3);font-family:monospace">${s.id}</span> <button onclick="navigator.clipboard.writeText('${s.id}');this.textContent='✅';setTimeout(()=>this.textContent='📋',1500)" style="background:none;border:none;cursor:pointer;color:var(--acc);font-size:11px;padding:0">📋</button></td><td><span class="badge bb">${(s.quality||'1080p').toUpperCase()}</span></td><td><div class="color-swatch" style="background:${s.color||'#00ff88'}"></div></td><td><div class="uc" title="${s.url}">${urlDisplay}</div></td><td><span class="badge ${s.deleted?'br':s.active?'bg':'bw'}">${s.deleted?'HIDDEN':s.active?'LIVE':'OFFLINE'}</span></td><td><button class="btn bgh bsm" onclick='openStreamModal(JSON.parse(this.dataset.s))' data-s="${safeS}">Edit</button> <button class="btn bd bsm" onclick="deleteStream('${s.id}')">Del</button></td></tr>`;
   }).join('')+
   '</tbody></table>';
 }
