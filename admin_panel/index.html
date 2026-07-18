@@ -2184,15 +2184,36 @@ async function fetchAutoclipIncidents() {
   sectionEl.style.display = 'none';
   resultEl.style.display = 'none';
   
-  // Use proxy to avoid CORS
-  const url = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + fmid)}`;
+  const targetUrl = `https://www.fotmob.com/api/matchDetails?matchId=${fmid}`;
+  const proxies = [
+    `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`,
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
+    targetUrl
+  ];
+  
+  let d = null;
+  let lastError = '';
+  
+  for (const proxyUrl of proxies) {
+    try {
+      console.log(`Trying proxy: ${proxyUrl}`);
+      const res = await fetch(proxyUrl);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      d = await res.json();
+      break;
+    } catch(e) {
+      console.warn(`Proxy failed: ${proxyUrl}`, e);
+      lastError = e.message;
+    }
+  }
+  
+  if (!d) {
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = `❌ Fetch failed: ${lastError}. Try again.`;
+    return;
+  }
   
   try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error('API request failed');
-    const d = await res.json();
-    
-    // Parse incidents
     const incidents = d?.content?.incidents?.allIncidents || d?.content?.matchFacts?.events?.allEvents || [];
     AC_EVENTS = [];
     
