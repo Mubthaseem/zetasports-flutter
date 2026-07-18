@@ -704,6 +704,36 @@ const sb=supabase.createClient(SB_URL,SB_KEY);
 
 let ALL_TEAMS=[],ALL_PLAYERS=[],ALL_LEAGUES=[],ALL_MATCHES=[],ALL_HIGHLIGHTS=[],ALL_NEWS=[],ALL_STREAMS=[],ALL_USERS=[],ALL_NOTIFICATIONS=[];
 
+// Direct REST helper — bypasses Supabase JS client CORS/fetch issues
+async function sbSave(table, data, id = null) {
+  const url = id
+    ? `${SB_URL}/rest/v1/${table}?id=eq.${encodeURIComponent(id)}`
+    : `${SB_URL}/rest/v1/${table}`;
+  const res = await fetch(url, {
+    method: id ? 'PATCH' : 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': SB_KEY,
+      'Authorization': `Bearer ${SB_KEY}`,
+      'Prefer': 'return=minimal'
+    },
+    body: JSON.stringify(data)
+  });
+  if (!res.ok) {
+    let msg = `HTTP ${res.status}`;
+    try { const j = await res.json(); msg += ': ' + (j.message || j.error || JSON.stringify(j)); } catch(_) {}
+    throw new Error(msg);
+  }
+}
+async function sbDelete(table, id) {
+  const res = await fetch(`${SB_URL}/rest/v1/${table}?id=eq.${encodeURIComponent(id)}`, {
+    method: 'DELETE',
+    headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
+  });
+  if (!res.ok) throw new Error(`Delete HTTP ${res.status}`);
+}
+
+
 // ─── AUTH ───
 window.onload = () => {
   document.getElementById('ls').style.display = 'none';
@@ -1327,11 +1357,12 @@ async function saveMatch(){
   const id=document.getElementById('mmatch-id').value;
   const p={home_team_id:document.getElementById('mmatch-ht').value||null,away_team_id:document.getElementById('mmatch-at').value||null,league_id:document.getElementById('mmatch-lg').value||null,date:document.getElementById('mmatch-dt').value||null,status:document.getElementById('mmatch-st').value,venue:document.getElementById('mmatch-vn').value.trim(),home_score:parseInt(document.getElementById('mmatch-hs').value)||0,away_score:parseInt(document.getElementById('mmatch-as').value)||0,time_elapsed:document.getElementById('mmatch-te').value.trim()||null,round:document.getElementById('mmatch-rd').value.trim()||null,stream_ids:document.getElementById('mmatch-sids').value.split(',').map(s=>s.trim()).filter(Boolean),fotmob_id:document.getElementById('mmatch-fmid').value.trim()||null};
   if(!p.home_team_id||!p.away_team_id){document.getElementById('mmatch-er').textContent='Home and away teams required.';return;}
-  const{error}=id?await sb.from('zeta_matches').update(p).eq('id',id):await sb.from('zeta_matches').insert(p);
-  if(error){document.getElementById('mmatch-er').textContent=error.message;return;}
-  closeModal('m-match');loadMatches();loadDashboard();
+  try{
+    await sbSave('zeta_matches',p,id||null);
+    closeModal('m-match');loadMatches();loadDashboard();
+  }catch(e){document.getElementById('mmatch-er').textContent=e.message;}
 }
-async function deleteMatch(id){if(!confirm('Delete match?'))return;await sb.from('zeta_matches').delete().eq('id',id);loadMatches();loadDashboard();}
+async function deleteMatch(id){if(!confirm('Delete match?'))return;try{await sbDelete('zeta_matches',id);}catch(e){alert(e.message);}loadMatches();loadDashboard();}
 
 // ─── HELPERS FOR FOTMOB FETCHING ───
 async function fetchFotmobMatch(fotmobId, proxyMode = 'allorigins') {
@@ -2069,13 +2100,12 @@ async function saveStream(){
     active:  document.getElementById('mstr-act').value === 'true',
     deleted: false
   };
-  const {error} = id
-    ? await sb.from('zeta_streams').update(p).eq('id', id)
-    : await sb.from('zeta_streams').insert({...p, created_at: new Date().toISOString()});
-  if (error) { document.getElementById('mstr-er').textContent = error.message; return; }
-  closeModal('m-stream'); loadStreams(); loadDashboard();
+  try{
+    await sbSave('zeta_streams', id ? p : {...p, created_at: new Date().toISOString()}, id||null);
+    closeModal('m-stream'); loadStreams(); loadDashboard();
+  }catch(e){document.getElementById('mstr-er').textContent=e.message;}
 }
-async function deleteStream(id){if(!confirm('Hide stream?'))return;await sb.from('zeta_streams').update({deleted:true}).eq('id',id);loadStreams();}
+async function deleteStream(id){if(!confirm('Hide stream?'))return;try{await sbSave('zeta_streams',{deleted:true},id);}catch(e){alert(e.message);}loadStreams();}
 
 // ─── NOTIFICATIONS ───
 async function loadNotifications(){
