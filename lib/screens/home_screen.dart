@@ -223,8 +223,8 @@ class _HomeScreenState extends State<HomeScreen> {
     final timeElapsed = m['time_elapsed'] ?? 'LIVE';
     final homeLogo = m['home_team_logo'] ?? m['zeta_teams']?['logo'];
     final awayLogo = m['away_team_logo'] ?? m['teams:away']?['logo'];
-    final homeColor = m['home_team_color'] ?? m['zeta_teams']?['color'] ?? AppTheme.primary;
-    final awayColor = m['away_team_color'] ?? m['teams:away']?['color'] ?? AppTheme.secondary;
+    final homeColor = _hexColor(m['home_team_color']?.toString() ?? m['zeta_teams']?['color']?.toString());
+    final awayColor = _hexColor(m['away_team_color']?.toString() ?? m['teams:away']?['color']?.toString());
 
     return GestureDetector(
       onTap: () => _goToMatch(m),
@@ -503,5 +503,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _goToMatch(Map<String, dynamic> m) {
     Navigator.push(context, MaterialPageRoute(builder: (_) => MatchDetailScreen(match: m)));
+  }
+
+  Color _hexColor(String? hex) {
+    if (hex == null || hex.isEmpty) return AppTheme.primary;
+    try {
+      hex = hex.replaceAll('#', '');
+      if (hex.length == 6) hex = 'FF$hex';
+      return Color(int.parse(hex, radix: 16));
+    } catch (_) {
+      return AppTheme.primary;
+    }
   }
 }
