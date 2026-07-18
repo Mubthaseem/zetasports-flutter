@@ -1,0 +1,563 @@
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../theme/app_theme.dart';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SCREEN 13 — LIVE PLAYER  (JioHotstar / FanCode style)
+//  Uses a gradient preview since webview_flutter needs native setup.
+//  All controls, chat, stream/quality selectors are present.
+// ─────────────────────────────────────────────────────────────────────────────
+class PlayerScreen extends StatefulWidget {
+  final Map<String, dynamic> match;
+  final String username;
+  final String deviceId;
+
+  const PlayerScreen({
+    super.key,
+    required this.match,
+    required this.username,
+    required this.deviceId,
+  });
+
+  @override
+  State<PlayerScreen> createState() => _PlayerScreenState();
+}
+
+class _PlayerScreenState extends State<PlayerScreen>
+    with SingleTickerProviderStateMixin {
+  bool _hudVisible = true;
+  Timer? _hudTimer;
+  bool _playing = true;
+  bool _muted = false;
+  bool _fullscreen = false;
+  double _volume = 0.8;
+  double _progress = 0.0;          // 0..1
+  Timer? _progressTimer;
+
+  // Stream & Quality
+  String _quality  = 'Auto';
+  String _stream   = 'Stream 1';
+  final _qualities = ['Auto', '1080p', '720p', '480p', '240p'];
+  final _streams   = ['Stream 1', 'Stream 2', 'Stream 3', 'Backup'];
+
+  // Live Chat
+  bool _chatOpen = false;
+  final _chatCtrl = TextEditingController();
+  final _chatScroll = ScrollController();
+  final List<Map<String, dynamic>> _messages = [
+    {'user': 'ZetaFan_007', 'msg': '🔥 What a match!',         'col': AppTheme.primary},
+    {'user': 'FootballFreak','msg': 'Bellingham is unreal 🙌',  'col': AppTheme.success},
+    {'user': 'SportsBro99', 'msg': 'COME ON REAL MADRID!!!',    'col': AppTheme.warning},
+    {'user': 'LiverpoolFan','msg': 'That goal was offside 😤',  'col': AppTheme.danger},
+    {'user': 'ZetaFan_007', 'msg': 'VAR check incoming 👀',     'col': AppTheme.primary},
+  ];
+
+  int _viewers = 14287;
+
+  @override
+  void initState() {
+    super.initState();
+    // Go landscape + immersive
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+
+    // Simulate live progress
+    _progressTimer = Timer.periodic(const Duration(seconds: 2), (_) {
+      if (!mounted || !_playing) return;
+      setState(() {
+        _progress = (_progress + 0.003).clamp(0.0, 1.0);
+        _viewers += (DateTime.now().second % 3 == 0) ? -12 : 8;
+      });
+    });
+
+    _showHudTemporarily();
+  }
+
+  @override
+  void dispose() {
+    _hudTimer?.cancel();
+    _progressTimer?.cancel();
+    _chatCtrl.dispose();
+    _chatScroll.dispose();
+    // Restore portrait
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    super.dispose();
+  }
+
+  void _showHudTemporarily() {
+    setState(() => _hudVisible = true);
+    _hudTimer?.cancel();
+    _hudTimer = Timer(const Duration(seconds: 4), () {
+      if (mounted) setState(() => _hudVisible = false);
+    });
+  }
+
+  void _sendMessage() {
+    final text = _chatCtrl.text.trim();
+    if (text.isEmpty) return;
+    setState(() {
+      _messages.add({
+        'user': widget.username.isNotEmpty ? widget.username : 'You',
+        'msg': text,
+        'col': AppTheme.primary,
+      });
+      _chatCtrl.clear();
+    });
+    Future.delayed(const Duration(milliseconds: 100), () {
+      if (_chatScroll.hasClients) {
+        _chatScroll.animateTo(
+          _chatScroll.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut);
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final m = widget.match;
+    final isLive = m['status'] == 'live';
+    final homeTeam = m['home_team'] ?? 'Real Madrid';
+    final awayTeam = m['away_team'] ?? 'Man City';
+    final score = isLive
+        ? '${m['home_score'] ?? 0} - ${m['away_score'] ?? 0}'
+        : 'UPCOMING';
+    final minute = m['time_elapsed'] ?? '78\'';
+
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: GestureDetector(
+        onTap: _showHudTemporarily,
+        child: Stack(
+          children: [
+            // ── VIDEO AREA (stadium gradient preview)
+            Positioned.fill(child: _buildVideoArea(homeTeam, awayTeam, score, minute, isLive)),
+
+            // ── HUD OVERLAY
+            AnimatedOpacity(
+              opacity: _hudVisible ? 1.0 : 0.0,
+              duration: const Duration(milliseconds: 300),
+              child: _buildHUD(homeTeam, awayTeam, score, minute, isLive),
+            ),
+
+            // ── LIVE CHAT PANEL
+            if (_chatOpen)
+              Positioned(
+                right: 0, top: 0, bottom: 0,
+                width: 220,
+                child: _buildChatPanel(),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // ── VIDEO AREA ─────────────────────────────────────────────────────────────
+  Widget _buildVideoArea(String home, String away, String score, String min, bool live) {
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Color(0xFF0A2E15), Color(0xFF07132B), Color(0xFF0A0A1A)],
+          begin: Alignment.topLeft, end: Alignment.bottomRight),
+      ),
+      child: Stack(
+        children: [
+          // Stadium grid lines (subtle)
+          Positioned.fill(child: Opacity(
+            opacity: 0.04,
+            child: CustomPaint(painter: _StadiumPainter()))),
+          // Center match info
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _teamBadge(home, AppTheme.primary),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 32),
+                      child: Column(
+                        children: [
+                          Text(score, style: GoogleFonts.rajdhani(
+                            fontSize: 48, fontWeight: FontWeight.w900, color: Colors.white)),
+                          if (live)
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                              decoration: BoxDecoration(
+                                color: AppTheme.danger,
+                                borderRadius: BorderRadius.circular(6)),
+                              child: Text(min, style: GoogleFonts.outfit(
+                                color: Colors.white, fontSize: 12, fontWeight: FontWeight.w900))),
+                        ],
+                      ),
+                    ),
+                    _teamBadge(away, AppTheme.secondary),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                if (!live)
+                  const Icon(Icons.play_circle_fill_rounded,
+                    color: Colors.white38, size: 72),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _teamBadge(String name, Color col) {
+    final abbr = name.length >= 3 ? name.substring(0, 3).toUpperCase() : name.toUpperCase();
+    return Column(
+      children: [
+        Container(
+          width: 60, height: 60,
+          decoration: BoxDecoration(
+            color: col.withOpacity(0.15),
+            shape: BoxShape.circle,
+            border: Border.all(color: col.withOpacity(0.5), width: 2)),
+          child: Center(child: Text(abbr, style: GoogleFonts.outfit(
+            fontSize: 16, fontWeight: FontWeight.w900, color: col)))),
+        const SizedBox(height: 6),
+        Text(name, style: GoogleFonts.outfit(
+          fontSize: 12, fontWeight: FontWeight.w700, color: Colors.white70)),
+      ],
+    );
+  }
+
+  // ── FULL HUD OVERLAY ───────────────────────────────────────────────────────
+  Widget _buildHUD(String home, String away, String score, String min, bool live) {
+    return Column(
+      children: [
+        // ── TOP BAR
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.black87, Colors.transparent],
+              begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+          child: Row(
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: const Icon(Icons.arrow_back_ios_new_rounded,
+                  color: Colors.white, size: 18)),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text('$home vs $away', style: GoogleFonts.outfit(
+                  color: Colors.white, fontSize: 13, fontWeight: FontWeight.w800))),
+              // Viewer count
+              Row(children: [
+                Container(
+                  width: 6, height: 6,
+                  decoration: const BoxDecoration(color: AppTheme.danger, shape: BoxShape.circle)),
+                const SizedBox(width: 5),
+                Text('${_formatViewers(_viewers)} watching',
+                  style: GoogleFonts.outfit(color: Colors.white70, fontSize: 10)),
+              ]),
+              const SizedBox(width: 12),
+              // Chromecast
+              GestureDetector(
+                onTap: _showCastDialog,
+                child: const Icon(Icons.cast_rounded, color: Colors.white70, size: 20)),
+              const SizedBox(width: 12),
+              // PiP
+              GestureDetector(
+                onTap: () {},
+                child: const Icon(Icons.picture_in_picture_alt_rounded,
+                  color: Colors.white70, size: 20)),
+              const SizedBox(width: 12),
+              // Chat
+              GestureDetector(
+                onTap: () => setState(() => _chatOpen = !_chatOpen),
+                child: Icon(Icons.chat_bubble_outline_rounded,
+                  color: _chatOpen ? AppTheme.primary : Colors.white70, size: 20)),
+            ],
+          ),
+        ),
+
+        // ── CENTER — empty spacer
+        const Spacer(),
+
+        // ── BOTTOM CONTROLS
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.transparent, Colors.black87],
+              begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+          child: Column(
+            children: [
+              // Progress bar
+              Row(children: [
+                Text(_live ? min : _formatDuration(_progress),
+                  style: GoogleFonts.outfit(color: Colors.white70, fontSize: 9)),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: SliderTheme(
+                    data: SliderTheme.of(context).copyWith(
+                      thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 5),
+                      overlayShape: const RoundSliderOverlayShape(overlayRadius: 10),
+                      trackHeight: 3,
+                      activeTrackColor: AppTheme.primary,
+                      inactiveTrackColor: Colors.white24,
+                      thumbColor: AppTheme.primary),
+                    child: Slider(
+                      value: _progress,
+                      onChanged: (v) => setState(() => _progress = v)),
+                  ),
+                ),
+                if (live)
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: AppTheme.danger, borderRadius: BorderRadius.circular(4)),
+                    child: Text('LIVE', style: GoogleFonts.outfit(
+                      color: Colors.white, fontSize: 8, fontWeight: FontWeight.w900))),
+              ]),
+              const SizedBox(height: 6),
+              // Control row
+              Row(children: [
+                // Play/Pause
+                GestureDetector(
+                  onTap: () => setState(() => _playing = !_playing),
+                  child: Icon(
+                    _playing ? Icons.pause_circle_filled_rounded : Icons.play_circle_filled_rounded,
+                    color: AppTheme.primary, size: 36)),
+                const SizedBox(width: 12),
+                // Mute
+                GestureDetector(
+                  onTap: () => setState(() => _muted = !_muted),
+                  child: Icon(
+                    _muted ? Icons.volume_off_rounded : Icons.volume_up_rounded,
+                    color: Colors.white70, size: 22)),
+                // Volume slider
+                SizedBox(
+                  width: 80,
+                  child: SliderTheme(
+                    data: SliderTheme.of(context).copyWith(
+                      thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 4),
+                      trackHeight: 2,
+                      activeTrackColor: Colors.white70,
+                      inactiveTrackColor: Colors.white24,
+                      thumbColor: Colors.white),
+                    child: Slider(
+                      value: _muted ? 0.0 : _volume,
+                      onChanged: (v) => setState(() { _volume = v; _muted = v == 0; })),
+                  ),
+                ),
+                const Spacer(),
+                // Stream selector
+                _buildDropdown(
+                  value: _stream,
+                  items: _streams,
+                  icon: Icons.layers_rounded,
+                  onChanged: (v) => setState(() => _stream = v!),
+                ),
+                const SizedBox(width: 8),
+                // Quality selector
+                _buildDropdown(
+                  value: _quality,
+                  items: _qualities,
+                  icon: Icons.high_quality_rounded,
+                  onChanged: (v) => setState(() => _quality = v!),
+                ),
+                const SizedBox(width: 8),
+                // Fullscreen toggle
+                GestureDetector(
+                  onTap: () => setState(() => _fullscreen = !_fullscreen),
+                  child: Icon(
+                    _fullscreen ? Icons.fullscreen_exit_rounded : Icons.fullscreen_rounded,
+                    color: Colors.white70, size: 22)),
+              ]),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  bool get _live => widget.match['status'] == 'live';
+
+  Widget _buildDropdown({
+    required String value,
+    required List<String> items,
+    required IconData icon,
+    required ValueChanged<String?> onChanged,
+  }) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        color: Colors.white12, borderRadius: BorderRadius.circular(6)),
+      child: DropdownButton<String>(
+        value: value,
+        items: items.map((q) => DropdownMenuItem(
+          value: q,
+          child: Text(q, style: GoogleFonts.outfit(
+            color: Colors.white, fontSize: 10, fontWeight: FontWeight.w700)))).toList(),
+        onChanged: onChanged,
+        icon: Icon(icon, color: Colors.white70, size: 14),
+        underline: const SizedBox(),
+        dropdownColor: const Color(0xFF0D1B3E),
+        isDense: true,
+        style: GoogleFonts.outfit(color: Colors.white, fontSize: 10),
+      ),
+    );
+  }
+
+  // ── LIVE CHAT PANEL ────────────────────────────────────────────────────────
+  Widget _buildChatPanel() {
+    return Container(
+      decoration: const BoxDecoration(
+        color: Color(0xE60D1B3E),
+        border: Border(left: BorderSide(color: AppTheme.border))),
+      child: Column(
+        children: [
+          // Header
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            decoration: const BoxDecoration(
+              border: Border(bottom: BorderSide(color: AppTheme.border))),
+            child: Row(children: [
+              const Icon(Icons.chat_rounded, color: AppTheme.primary, size: 16),
+              const SizedBox(width: 6),
+              Text('Live Chat', style: GoogleFonts.outfit(
+                fontSize: 12, fontWeight: FontWeight.w800, color: AppTheme.text1)),
+              const Spacer(),
+              GestureDetector(
+                onTap: () => setState(() => _chatOpen = false),
+                child: const Icon(Icons.close_rounded, color: AppTheme.text3, size: 16)),
+            ]),
+          ),
+          // Messages
+          Expanded(
+            child: ListView.builder(
+              controller: _chatScroll,
+              padding: const EdgeInsets.all(8),
+              itemCount: _messages.length,
+              itemBuilder: (_, i) {
+                final msg = _messages[i];
+                final col = msg['col'] as Color;
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(msg['user'].toString(), style: GoogleFonts.outfit(
+                        fontSize: 9, fontWeight: FontWeight.w900, color: col)),
+                      Text(msg['msg'].toString(), style: GoogleFonts.outfit(
+                        fontSize: 11, color: AppTheme.text2)),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+          // Input
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: const BoxDecoration(
+              border: Border(top: BorderSide(color: AppTheme.border))),
+            child: Row(children: [
+              Expanded(
+                child: TextField(
+                  controller: _chatCtrl,
+                  style: GoogleFonts.outfit(color: AppTheme.text1, fontSize: 11),
+                  decoration: InputDecoration(
+                    hintText: 'Send a message...',
+                    hintStyle: GoogleFonts.outfit(color: AppTheme.text3, fontSize: 11),
+                    filled: true, fillColor: AppTheme.card,
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none)),
+                  onSubmitted: (_) => _sendMessage(),
+                ),
+              ),
+              const SizedBox(width: 6),
+              GestureDetector(
+                onTap: _sendMessage,
+                child: Container(
+                  width: 32, height: 32,
+                  decoration: BoxDecoration(
+                    color: AppTheme.primary, borderRadius: BorderRadius.circular(8)),
+                  child: const Icon(Icons.send_rounded, color: Colors.black, size: 14))),
+            ]),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ── Utilities ──────────────────────────────────────────────────────────────
+  String _formatViewers(int v) {
+    if (v >= 1000) return '${(v / 1000).toStringAsFixed(1)}K';
+    return '$v';
+  }
+
+  String _formatDuration(double pct) {
+    final secs = (pct * 5400).toInt(); // 90 min
+    final m = secs ~/ 60;
+    final s = secs % 60;
+    return "$m:${s.toString().padLeft(2, '0')}";
+  }
+
+  void _showCastDialog() {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        backgroundColor: AppTheme.surface,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: Row(children: [
+          const Icon(Icons.cast_connected_rounded, color: AppTheme.primary, size: 22),
+          const SizedBox(width: 10),
+          Text('Cast to TV', style: GoogleFonts.outfit(fontWeight: FontWeight.w800, fontSize: 15)),
+        ]),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const CircularProgressIndicator(color: AppTheme.primary, strokeWidth: 2),
+            const SizedBox(height: 14),
+            Text('Searching for devices on your local network...',
+              style: GoogleFonts.outfit(fontSize: 12, color: AppTheme.text2),
+              textAlign: TextAlign.center),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text('Cancel', style: GoogleFonts.outfit(
+              color: AppTheme.primary, fontWeight: FontWeight.w800))),
+        ],
+      ),
+    );
+  }
+}
+
+// ── PAINTERS ──────────────────────────────────────────────────────────────────
+class _StadiumPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final p = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.0;
+    final W = size.width;
+    final H = size.height;
+    canvas.drawRect(Rect.fromLTWH(W * 0.05, H * 0.05, W * 0.90, H * 0.90), p);
+    canvas.drawLine(Offset(W / 2, H * 0.05), Offset(W / 2, H * 0.95), p);
+    canvas.drawCircle(Offset(W / 2, H / 2), H * 0.25, p);
+    canvas.drawRect(Rect.fromLTWH(W * 0.05, H * 0.25, W * 0.15, H * 0.50), p);
+    canvas.drawRect(Rect.fromLTWH(W * 0.80, H * 0.25, W * 0.15, H * 0.50), p);
+  }
+
+  @override
+  bool shouldRepaint(_) => false;
+}

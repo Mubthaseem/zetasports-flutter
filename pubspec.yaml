@@ -1,7 +1,8 @@
 name: zetasports
-description: ZETASPORTS - Live Football Scores & Streams
+description: "ZetaSports — Live Sports Streaming App"
 publish_to: 'none'
-version: 1.1.2+11
+
+version: 1.1.5+16
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -10,33 +11,30 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Supabase
+  # ── Backend (Supabase only)
   supabase_flutter: ^2.6.0
 
-  # Firebase
-  firebase_core: ^4.9.0
-  cloud_firestore: ^6.4.1
-  firebase_messaging: ^16.2.2
+  # ── Ads
+  google_mobile_ads: ^5.3.0
 
-  # Player
-  webview_flutter: ^4.7.0
-  video_player: ^2.8.6
-
-  # UI & Images
-  cached_network_image: ^3.3.1
+  # ── Fonts & UI
   google_fonts: ^6.2.1
+  flutter_svg: ^2.3.0
+  cached_network_image: ^3.3.1
   shimmer: ^3.0.0
-  crypto: ^3.0.3
 
-  # Utilities
-  url_launcher: ^6.3.0
-  intl: ^0.19.0
-  flutter_local_notifications: ^17.2.3
+  # ── Utilities
   shared_preferences: ^2.5.5
+  url_launcher: ^6.3.0
+  intl: ^0.20.0
   timeago: ^3.6.1
-  google_mobile_ads: ^8.0.0
-  app_tracking_transparency: ^2.0.4
+  crypto: ^3.0.3
+  video_player: ^2.9.1
+  chewie: ^1.8.5
+  webview_flutter: ^4.8.0
+  onesignal_flutter: ^5.1.2
 
+  # ── Media
 
 dev_dependencies:
   flutter_test:

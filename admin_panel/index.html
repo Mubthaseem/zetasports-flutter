@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>ZetaSports Admin Panel</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root{
+  --bg:#080b12;--card:#0f1421;--card2:#161d2e;--bdr:#1e2a40;
+  --acc:#ff6b00;--acc2:#ff8c00;--grn:#00e676;--red:#ff3d3d;--blu:#4fc3f7;
+  --t1:#f0f4ff;--t2:#8899bb;--t3:#4a5a7a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t1);font-family:Inter,sans-serif;min-height:100vh}
+#ls{display:flex;align-items:center;justify-content:center;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#1a0a00,var(--bg) 70%)}
+.lb{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:48px 40px;width:380px;box-shadow:0 0 60px rgba(255,107,0,.08)}
+.ll{text-align:center;margin-bottom:32px}
+.ll h1{font-family:Rajdhani,sans-serif;font-size:36px;font-weight:700}.ll h1 span{color:var(--acc)}
+.ll p{color:var(--t2);font-size:13px;margin-top:4px}
+.lb input{width:100%;padding:12px 16px;background:var(--card2);border:1px solid var(--bdr);border-radius:10px;color:var(--t1);font-size:14px;margin-bottom:14px;outline:none;font-family:Inter,sans-serif;transition:border-color .2s}
+.lb input:focus{border-color:var(--acc)}
+.lb button{width:100%;padding:13px;background:var(--acc);border:none;border-radius:10px;color:#fff;font-family:Rajdhani,sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;cursor:pointer}
+.lb button:hover{background:var(--acc2)}
+#lerr{color:var(--red);font-size:12px;text-align:center;margin-top:10px;min-height:16px}
+#app{display:none}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:240px;background:var(--card);border-right:1px solid var(--bdr);display:flex;flex-direction:column;position:fixed;height:100vh;z-index:100}
+.sl{padding:24px 20px 20px;border-bottom:1px solid var(--bdr)}
+.sl h2{font-family:Rajdhani,sans-serif;font-size:22px;font-weight:700}.sl h2 span{color:var(--acc)}
+.sl p{color:var(--t3);font-size:10px;letter-spacing:1px;margin-top:2px}
+.nav{flex:1;padding:12px 0;overflow-y:auto}
+.ni{display:flex;align-items:center;gap:12px;padding:11px 20px;cursor:pointer;color:var(--t2);font-size:13px;font-weight:500;transition:all .15s;border-left:3px solid transparent}
+.ni:hover{background:rgba(255,107,0,.06);color:var(--t1)}
+.ni.active{background:rgba(255,107,0,.1);color:var(--acc);border-left-color:var(--acc)}
+.ni .ic{font-size:16px;width:20px;text-align:center}
+.sf{padding:16px 20px;border-top:1px solid var(--bdr)}
+.ab{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.av{width:32px;height:32px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;font-family:Rajdhani,sans-serif;font-weight:700;font-size:14px}
+.an{font-size:12px;font-weight:600}.ar{font-size:10px;color:var(--t3)}
+.lob{width:100%;padding:8px;background:rgba(255,61,61,.1);border:1px solid rgba(255,61,61,.2);border-radius:8px;color:var(--red);font-size:12px;cursor:pointer}
+.lob:hover{background:rgba(255,61,61,.2)}
+.main{margin-left:240px;flex:1;padding:28px}
+.page{display:none}.page.active{display:block}
+.ph{margin-bottom:24px}.ph h1{font-family:Rajdhani,sans-serif;font-size:28px;font-weight:700}.ph p{color:var(--t2);font-size:13px;margin-top:4px}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-bottom:28px}
+.sc{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:20px}
+.slb{color:var(--t2);font-size:11px;letter-spacing:.5px;text-transform:uppercase}
+.sv{font-family:Rajdhani,sans-serif;font-size:36px;font-weight:700;margin-top:4px}
+.ss{color:var(--t3);font-size:11px;margin-top:2px}
+.tc{background:var(--card);border:1px solid var(--bdr);border-radius:14px;overflow:hidden}
+.tt{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--bdr)}
+.tt h3{font-family:Rajdhani,sans-serif;font-size:16px;font-weight:700}
+.ta{display:flex;gap:10px}
+table{width:100%;border-collapse:collapse}
+th{padding:12px 16px;text-align:left;font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--bdr);background:var(--card2)}
+td{padding:13px 16px;font-size:13px;border-bottom:1px solid rgba(30,42,64,.5)}
+tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)}
+.badge{display:inline-block;padding:3px 8px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.5px}
+.bg{background:rgba(0,230,118,.12);color:var(--grn)}
+.br{background:rgba(255,61,61,.12);color:var(--red)}
+.bb{background:rgba(79,195,247,.12);color:var(--blu)}
+.bo{background:rgba(255,107,0,.15);color:var(--acc)}
+.bw{background:rgba(255,200,61,.12);color:var(--acc2)}
+.btn{padding:8px 16px;border-radius:8px;border:none;font-size:12px;font-weight:600;cursor:pointer;transition:all .15s}
+.bp{background:var(--acc);color:#fff}.bp:hover{background:var(--acc2)}
+.bgh{background:var(--card2);color:var(--t2);border:1px solid var(--bdr)}.bgh:hover{color:var(--t1)}
+.bd{background:rgba(255,61,61,.1);color:var(--red);border:1px solid rgba(255,61,61,.2)}.bd:hover{background:rgba(255,61,61,.2)}
+.bsm{padding:5px 10px;font-size:11px}
+.mo{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:1000;backdrop-filter:blur(4px)}
+.mo.open{display:flex}
+.md{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:28px;width:560px;max-width:95vw;max-height:90vh;overflow-y:auto}
+.md h3{font-family:Rajdhani,sans-serif;font-size:20px;font-weight:700;margin-bottom:20px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:11px;color:var(--t2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.fg input,.fg select,.fg textarea{width:100%;padding:10px 14px;background:var(--card2);border:1px solid var(--bdr);border-radius:9px;color:var(--t1);font-size:13px;outline:none;font-family:Inter,sans-serif;transition:border-color .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--acc)}
+.fg select option{background:var(--card2)}
+.fg textarea{resize:vertical;min-height:80px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ma{display:flex;gap:10px;justify-content:flex-end;margin-top:24px}
+.me{color:var(--red);font-size:12px;margin-top:8px}
+.es{text-align:center;padding:60px 20px;color:var(--t3)}
+.es .ic2{font-size:48px;margin-bottom:12px}
+.ld{text-align:center;padding:40px;color:var(--t3);font-size:14px}
+.sp{width:28px;height:28px;border:3px solid var(--bdr);border-top-color:var(--acc);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 12px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.uc{max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;color:var(--t3)}
+.si{padding:8px 14px;background:var(--card2);border:1px solid var(--bdr);border-radius:8px;color:var(--t1);font-size:13px;outline:none;width:220px}
+.si:focus{border-color:var(--acc)}
+.sessgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;padding:16px}
+.sesscard{background:var(--card2);border:1px solid var(--bdr);border-radius:12px;padding:16px}
+.collapse{padding:10px 16px;background:var(--card2);border-top:1px solid var(--bdr);font-size:11px;color:var(--t2);cursor:pointer;display:flex;align-items:center;gap:6px}
+.collapse:hover{color:var(--t1)}
+.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-family:Rajdhani,sans-serif;font-weight:700;font-size:14px;color:#000}
+.tabbar{display:flex;gap:6px;padding:4px;background:var(--card);border-radius:12px;border:1px solid var(--bdr);margin-bottom:16px}
+.tabi{padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;color:var(--t2);cursor:pointer;transition:all .15s}
+.tabi.active{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#000}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.card-img{width:100%;height:160px;object-fit:cover}
+.card-body{padding:16px}
+.card-title{font-size:14px;font-weight:700;margin-bottom:8px;color:var(--t1)}
+.card-meta{font-size:11px;color:var(--t3);margin-bottom:4px}
+.card-badges{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.card-actions{display:flex;gap:8px}
+.action-btn{flex:1;padding:8px;border-radius:8px;border:none;font-size:11px;font-weight:600;cursor:pointer}
+.color-swatch{width:24px;height:24px;border-radius:6px;border:2px solid var(--bdr)}
+.stats-row{display:flex;gap:12px;margin-top:12px;padding-top:12px;border-top:1px solid var(--bdr)}
+.stat-item{flex:1;text-align:center}
+.stat-val{font-family:Rajdhani,sans-serif;font-size:18px;font-weight:700;color:var(--t1)}
+.stat-label{font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
+.toggle{position:relative;width:44px;height:24px;appearance:none;background:var(--card2);border:1px solid var(--bdr);border-radius:12px;cursor:pointer}
+.toggle:checked{background:var(--acc);border-color:var(--acc)}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:18px;height:18px;background:#fff;border-radius:50%;transition:left .2s;box-shadow:0 2px 4px rgba(0,0,0,.2)}
+.toggle:checked::after{left:24px}
+.image-preview{width:80px;height:50px;object-fit:cover;border-radius:6px;border:1px solid var(--bdr);background:var(--card2)}
+.empty-state{text-align:center;padding:40px 20px;color:var(--t3)}
+.empty-state .icon{font-size:48px;margin-bottom:12px}
+.league-row{display:flex;align-items:center;gap:12px;padding:12px;background:var(--card);border-radius:10px;border:1px solid var(--bdr);margin-bottom:8px}
+.league-color{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.player-row{display:flex;align-items:center;gap:12px;padding:12px;background:var(--card);border-radius:10px;border:1px solid var(--bdr);margin-bottom:8px}
+.player-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#000}
+.team-badge{width:40px;height:40px;border-radius:10px;background:var(--card2);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+.highlight-row{display:flex;gap:12px;padding:12px;background:var(--card);border-radius:10px;border:1px solid var(--bdr);margin-bottom:8px;align-items:center}
+.highlight-thumb{width:120px;height:68px;border-radius:8px;object-fit:cover;flex-shrink:0}
+.highlight-info{flex:1;min-width:0}
+.highlight-title{font-size:13px;font-weight:600;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.highlight-meta{font-size:11px;color:var(--t3)}
+.notification-row{display:flex;gap:12px;padding:12px;background:var(--card);border-radius:10px;border:1px solid var(--bdr);margin-bottom:8px;align-items:flex-start}
+.notification-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.notification-content{flex:1}
+.notification-title{font-size:12px;font-weight:700;margin-bottom:2px}
+.notification-body{font-size:12px;color:var(--t2);margin-bottom:4px}
+.notification-meta{font-size:10px;color:var(--t3)}
+@media(max-width:900px){.sidebar{transform:translateX(-100%);transition:transform .3s}.sidebar.open{transform:translateX(0)}.main{margin-left:0}.mo .md{width:95vw;margin:16px}.fr{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="ls">
+  <div class="lb">
+    <div class="ll"><h1>ZETA<span>SPORTS</span></h1><p>ADMIN CONTROL PANEL</p></div>
+    <input id="au" type="text" placeholder="Admin Username" autocomplete="username"/>
+    <input id="ap" type="password" placeholder="4-Digit PIN" maxlength="4" autocomplete="current-password"/>
+    <button onclick="doLogin()">LOGIN →</button>
+    <div id="lerr"></div>
+  </div>
+</div>
+<div id="app">
+  <div class="layout">
+    <nav class="sidebar" id="sidebar">
+      <div class="sl"><h2>ZETA<span>SPORTS</span></h2><p>ADMIN PANEL v2.0</p></div>
+      <div class="nav">
+        <div class="ni active" onclick="goPage(this,'dashboard')"><span class="ic">📊</span>Dashboard</div>
+        <div class="ni" onclick="goPage(this,'teams')"><span class="ic">🏟️</span>Teams</div>
+        <div class="ni" onclick="goPage(this,'players')"><span class="ic">⚽</span>Players</div>
+        <div class="ni" onclick="goPage(this,'leagues')"><span class="ic">🏆</span>Leagues</div>
+        <div class="ni" onclick="goPage(this,'matches')"><span class="ic">📅</span>Matches</div>
+        <div class="ni" onclick="goPage(this,'highlights')"><span class="ic">🎬</span>Highlights</div>
+        <div class="ni" onclick="goPage(this,'news')"><span class="ic">📰</span>News</div>
+        <div class="ni" onclick="goPage(this,'streams')"><span class="ic">📺</span>Live Streams</div>
+        <div class="ni" onclick="goPage(this,'notifications')"><span class="ic">🔔</span>Notifications</div>
+        <div class="ni" onclick="goPage(this,'users')"><span class="ic">👥</span>Users</div>
+        <div class="ni" onclick="goPage(this,'sessions')"><span class="ic">👁️</span>Sessions</div>
+        <div class="ni" onclick="goPage(this,'settings')"><span class="ic">⚙️</span>Settings</div>
+      </div>
+      <div class="sf">
+        <div class="ab"><div class="av" id="aav">A</div><div><div class="an" id="anm">Admin</div><div class="ar">SUPER ADMIN</div></div></div>
+        <button class="lob" onclick="doLogout()">⏏ Logout</button>
+      </div>
+    </nav>
+    <main class="main">
+      <!-- DASHBOARD -->
+      <div class="page active" id="page-dashboard">
+        <div class="ph"><h1>Dashboard</h1><p>Overview of ZetaSports platform</p></div>
+        <div class="sg">
+          <div class="sc"><div class="slb">Teams</div><div class="sv" id="st-teams">-</div><div class="ss">Registered</div></div>
+          <div class="sc"><div class="slb">Players</div><div class="sv" id="st-players">-</div><div class="ss">Active</div></div>
+          <div class="sc"><div class="slb">Leagues</div><div class="sv" id="st-leagues">-</div><div class="ss">Configured</div></div>
+          <div class="sc"><div class="slb">Matches</div><div class="sv" id="st-matches">-</div><div class="ss">In database</div></div>
+          <div class="sc"><div class="slb">Highlights</div><div class="sv" id="st-highlights">-</div><div class="ss">Published</div></div>
+          <div class="sc"><div class="slb">News Articles</div><div class="sv" id="st-news">-</div><div class="ss">Published</div></div>
+          <div class="sc"><div class="slb">Live Streams</div><div class="sv" id="st-streams">-</div><div class="ss">Channels</div></div>
+          <div class="sc"><div class="slb">Total Users</div><div class="sv" id="st-users">-</div><div class="ss">Accounts</div></div>
+          <div class="sc"><div class="slb">Sessions 24h</div><div class="sv" id="st-sessions">-</div><div class="ss">Views today</div></div>
+        </div>
+        <div class="tc">
+          <div class="tt"><h3>Recent Activity</h3><button class="btn bgh bsm" onclick="loadDashboard()">⟳ Refresh</button></div>
+          <div id="dash-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- TEAMS -->
+      <div class="page" id="page-teams">
+        <div class="ph"><h1>Teams</h1><p>Manage team data for all sports</p></div>
+        <div class="tc">
+          <div class="tt"><h3>All Teams</h3><div class="ta"><input class="si" id="flt-teams" placeholder="Search teams..." oninput="filterTeams(this.value)"/><button class="btn bp" onclick="openTeamModal(null)">+ Add Team</button></div></div>
+          <div id="teams-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- PLAYERS -->
+      <div class="page" id="page-players">
+        <div class="ph"><h1>Players</h1><p>Manage player profiles, stats, and career history</p></div>
+        <div class="tc">
+          <div class="tt"><h3>All Players</h3><div class="ta"><input class="si" id="flt-players" placeholder="Search players..." oninput="filterPlayers(this.value)"/><button class="btn bp" onclick="openPlayerModal(null)">+ Add Player</button></div></div>
+          <div id="players-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- LEAGUES -->
+      <div class="page" id="page-leagues">
+        <div class="ph"><h1>Leagues & Tournaments</h1><p>Manage leagues, seasons, and tournaments</p></div>
+        <div class="tc">
+          <div class="tt"><h3>All Leagues</h3><div class="ta"><button class="btn bp" onclick="openLeagueModal(null)">+ Add League</button></div></div>
+          <div id="leagues-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- MATCHES -->
+      <div class="page" id="page-matches">
+        <div class="ph"><h1>Matches</h1><p>Manage match fixtures, results, and live data</p></div>
+        
+        <!-- FOTMOB IMPORTER UI -->
+        <div class="tc" style="margin-bottom: 20px; background: rgba(37, 99, 235, 0.05); border: 1px solid rgba(37, 99, 235, 0.2);">
+          <div class="tt"><h3>⚡ Import from FotMob (Free Live Stats)</h3></div>
+          <div style="padding: 16px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+              <div>
+                <label style="display:block; font-size:12px; margin-bottom:6px; color:var(--t2);">League ID / Custom</label>
+                <select class="si" id="fetch-league" style="width:100%; margin-bottom:8px;" onchange="document.getElementById('fetch-custom-league-id').style.display = this.value === 'custom' ? 'block' : 'none';">
+                  <option value="77">FIFA World Cup (77)</option>
+                  <option value="47">English Premier League (47)</option>
+                  <option value="42">UEFA Champions League (42)</option>
+                  <option value="87">Spanish La Liga (87)</option>
+                  <option value="55">Italian Serie A (55)</option>
+                  <option value="54">German Bundesliga (54)</option>
+                  <option value="53">French Ligue 1 (53)</option>
+                  <option value="custom">-- Custom League ID --</option>
+                </select>
+                <input class="si" id="fetch-custom-league-id" style="width:100%; display:none;" placeholder="e.g. 9806"/>
+              </div>
+              <div>
+                <label style="display:block; font-size:12px; margin-bottom:6px; color:var(--t2);">Date & Proxy</label>
+                <input class="si" type="date" id="fetch-date" style="width:100%; margin-bottom:8px;" value=""/>
+                <select class="si" id="fetch-proxy" style="width:100%;">
+                  <option value="direct">No Proxy (Direct - Recommended)</option>
+                  <option value="allorigins">AllOrigins (Proxy)</option>
+                  <option value="corsproxy">CorsProxy.io (Proxy)</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn bp" style="width:100%; justify-content:center;" onclick="fetchFotmobMatches()">Fetch Matches</button>
+            <div id="fetch-results" style="margin-top: 16px; max-height: 300px; overflow-y: auto;">
+              <div style="text-align: center; color: var(--t3); padding: 10px; font-size: 13px;">No matches fetched. Select a league and date.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tc">
+          <div class="tt"><h3>All Matches</h3><div class="ta"><input class="si" id="flt-matches" placeholder="Search matches..." oninput="filterMatches(this.value)"/><button class="btn bp" onclick="openMatchModal(null)">+ Add Match</button></div></div>
+          <div id="matches-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- HIGHLIGHTS -->
+      <div class="page" id="page-highlights">
+        <div class="ph"><h1>Highlights</h1><p>Manage video highlights and clips</p></div>
+        <div class="tc">
+          <div class="tt"><h3>All Highlights</h3><div class="ta"><input class="si" id="flt-highlights" placeholder="Search highlights..." oninput="filterHighlights(this.value)"/><button class="btn bp" onclick="openHighlightModal(null)">+ Add Highlight</button></div></div>
+          <div id="highlights-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- NEWS -->
+      <div class="page" id="page-news">
+        <div class="ph"><h1>News Articles</h1><p>Manage news content and breaking stories</p></div>
+        <div class="tc">
+          <div class="tt"><h3>All Articles</h3><div class="ta"><button class="btn bp" onclick="openNewsModal(null)">+ Add Article</button></div></div>
+          <div id="news-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- STREAMS -->
+      <div class="page" id="page-streams">
+        <div class="ph"><h1>Live Streams</h1><p>Manage streaming channels and sources</p></div>
+        <div class="tc">
+          <div class="tt"><h3>All Streams</h3><div class="ta"><input class="si" id="flt-streams" placeholder="Search streams..." oninput="filterStreams(this.value)"/><button class="btn bp" onclick="openStreamModal(null)">+ Add Stream</button></div></div>
+          <div id="streams-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- NOTIFICATIONS -->
+      <div class="page" id="page-notifications">
+        <div class="ph"><h1>Notifications</h1><p>Manage push notifications and alerts</p></div>
+        <div class="tc">
+          <div class="tt"><h3>All Notifications</h3><div class="ta"><button class="btn bp" onclick="openNotificationModal(null)">+ Create Notification</button></div></div>
+          <div id="notifications-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- USERS -->
+      <div class="page" id="page-users">
+        <div class="ph"><h1>Users</h1><p>Manage subscriber accounts and access</p></div>
+        <div class="tc">
+          <div class="tt"><h3>All Users</h3><div class="ta"><input class="si" id="flt-users" placeholder="Search users..." oninput="filterUsers(this.value)"/><button class="btn bp" onclick="openUserModal(null)">+ Add User</button></div></div>
+          <div id="users-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- SESSIONS -->
+      <div class="page" id="page-sessions">
+        <div class="ph"><h1>Active Sessions</h1><p>Monitor who is watching now</p></div>
+        <div class="tc">
+          <div class="tt"><h3>Live Viewers</h3><button class="btn bgh bsm" onclick="loadSessions()">⟳ Refresh</button></div>
+          <div id="sessions-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+        </div>
+      </div>
+
+      <!-- SETTINGS -->
+      <div class="page" id="page-settings">
+        <div class="ph"><h1>Settings</h1><p>App-wide configuration</p></div>
+        <div class="tc" style="padding:28px;max-width:600px"><div id="cfg-form"><div class="ld"><div class="sp"></div>Loading...</div></div></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- TEAM MODAL -->
+<div class="mo" id="m-team">
+  <div class="md">
+    <h3 id="mteam-t">Add Team</h3>
+    <input type="hidden" id="mteam-id"/>
+    <div class="fr">
+      <div class="fg"><label>Name</label><input id="mteam-nm"/></div>
+      <div class="fg"><label>Sport</label><select id="mteam-sp"><option value="football">Football</option><option value="cricket">Cricket</option><option value="basketball">Basketball</option><option value="tennis">Tennis</option><option value="other">Other</option></select></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Country</label><input id="mteam-ct"/></div>
+      <div class="fg"><label>Short Code (3 letters)</label><input id="mteam-sc" maxlength="3" style="text-transform:uppercase"/></div>
+    </div>
+    <div class="fg"><label>Primary Color (hex)</label><input id="mteam-cl" value="#7C3AED" style="width:120px"/></div>
+    <div class="fg"><label>Logo URL</label><input id="mteam-lo"/></div>
+    <div class="fg"><label>Banner URL</label><input id="mteam-bn"/></div>
+    <div class="me" id="mteam-er"></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-team')">Cancel</button><button class="btn bp" onclick="saveTeam()">Save</button></div>
+  </div>
+</div>
+
+<!-- PLAYER MODAL -->
+<div class="mo" id="m-player">
+  <div class="md" style="max-width:700px">
+    <h3 id="mplayer-t">Add Player</h3>
+    <input type="hidden" id="mplayer-id"/>
+    <div class="fr">
+      <div class="fg"><label>Name</label><input id="mplayer-nm"/></div>
+      <div class="fg"><label>Nationality (emoji)</label><input id="mplayer-nt" maxlength="4"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Team</label><select id="mplayer-tm"><option value="">Select team...</option></select></div>
+      <div class="fg"><label>Position</label><input id="mplayer-ps" placeholder="e.g., ST, CM, GK"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Jersey Number</label><input id="mplayer-jn" type="number" min="1" max="99"/></div>
+      <div class="fg"><label>Rating</label><input id="mplayer-rt" type="number" step="0.1" min="0" max="10" value="7.0"/></div>
+    </div>
+    <div class="fg"><label>Photo URL</label><input id="mplayer-ph"/></div>
+    <div class="fg"><label>Bio / Description</label><textarea id="mplayer-bio" rows="3"></textarea></div>
+    <h4 style="margin:16px 0 8px;font-family:Rajdhani;font-size:16px">Season Stats</h4>
+    <div class="fr">
+      <div class="fg"><label>Apps</label><input id="mplayer-ap" type="number" value="0"/></div>
+      <div class="fg"><label>Goals</label><input id="mplayer-gl" type="number" value="0"/></div>
+      <div class="fg"><label>Assists</label><input id="mplayer-as" type="number" value="0"/></div>
+      <div class="fg"><label>Yellow Cards</label><input id="mplayer-yc" type="number" value="0"/></div>
+      <div class="fg"><label>Red Cards</label><input id="mplayer-rc" type="number" value="0"/></div>
+    </div>
+    <h4 style="margin:16px 0 8px;font-family:Rajdhani;font-size:16px">Career History (JSON array)</h4>
+    <div class="fg"><textarea id="mplayer-career" rows="4" placeholder='[{"club":"Real Madrid","from":"2024","to":"Present","apps":36,"goals":32},{"club":"Paris SG","from":"2017","to":"2024","apps":181,"goals":200}]'></textarea></div>
+    <div class="me" id="mplayer-er"></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-player')">Cancel</button><button class="btn bp" onclick="savePlayer()">Save</button></div>
+  </div>
+</div>
+
+<!-- LEAGUE MODAL -->
+<div class="mo" id="m-league">
+  <div class="md">
+    <h3 id="mleague-t">Add League</h3>
+    <input type="hidden" id="mleague-id"/>
+    <div class="fg"><label>Name</label><input id="mleague-nm"/></div>
+    <div class="fr">
+      <div class="fg"><label>Country</label><input id="mleague-ct"/></div>
+      <div class="fg"><label>Season</label><input id="mleague-sn" placeholder="2025/26"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Sport</label><select id="mleague-sp"><option value="football">Football</option><option value="cricket">Cricket</option><option value="basketball">Basketball</option><option value="tennis">Tennis</option></select></div>
+      <div class="fg"><label>Type</label><select id="mleague-tp"><option value="league">League</option><option value="cup">Cup</option><option value="tournament">Tournament</option></select></div>
+    </div>
+    <div class="fg"><label>Logo URL</label><input id="mleague-lo"/></div>
+    <div class="fg"><label>Banner URL</label><input id="mleague-bn"/></div>
+    <div class="fg"><label>Description</label><textarea id="mleague-desc" rows="3"></textarea></div>
+    <div class="me" id="mleague-er"></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-league')">Cancel</button><button class="btn bp" onclick="saveLeague()">Save</button></div>
+  </div>
+</div>
+
+<!-- MATCH MODAL -->
+<div class="mo" id="m-match">
+  <div class="md">
+    <h3 id="mmatch-t">Add Match</h3>
+    <input type="hidden" id="mmatch-id"/>
+    <div class="fr">
+      <div class="fg"><label>Home Team</label><select id="mmatch-ht"><option value="">Select team...</option></select></div>
+      <div class="fg"><label>Away Team</label><select id="mmatch-at"><option value="">Select team...</option></select></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>League</label><select id="mmatch-lg"><option value="">Select league...</option></select></div>
+      <div class="fg"><label>Date & Time</label><input id="mmatch-dt" type="datetime-local"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Status</label><select id="mmatch-st"><option value="scheduled">Scheduled</option><option value="live">Live</option><option value="finished">Finished</option><option value="postponed">Postponed</option><option value="cancelled">Cancelled</option></select></div>
+      <div class="fg"><label>Venue</label><input id="mmatch-vn"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Home Score</label><input id="mmatch-hs" type="number" value="0"/></div>
+      <div class="fg"><label>Away Score</label><input id="mmatch-as" type="number" value="0"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Time Elapsed (e.g., 78')</label><input id="mmatch-te" placeholder="78'"/></div>
+      <div class="fg"><label>Round/Stage</label><input id="mmatch-rd" placeholder="Group Stage, QF, SF, Final"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Stream IDs (comma-separated)</label><input id="mmatch-sids" placeholder="stream1,stream2"/></div>
+      <div class="fg"><label>FotMob Match ID</label><input id="mmatch-fmid" placeholder="e.g., 4506254"/></div>
+    </div>
+    <!-- FotMob Full Data Fetch -->
+    <div style="background:rgba(255,107,0,.06);border:1px solid rgba(255,107,0,.2);border-radius:12px;padding:14px;margin-bottom:16px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--acc);">⚡ Fetch Full Match Data from FotMob</div>
+          <div style="font-size:11px;color:var(--t3);margin-top:2px;">Imports Lineups · Stats · Commentary · Events · Standings into DB</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <select id="mmatch-proxy" style="padding:6px 10px;background:var(--card2);border:1px solid var(--bdr);border-radius:7px;color:var(--t1);font-size:11px;outline:none;">
+            <option value="allorigins">AllOrigins</option>
+            <option value="corsproxy">CorsProxy.io</option>
+            <option value="direct">Direct (CORS)</option>
+          </select>
+          <button class="btn bp" style="white-space:nowrap;" onclick="fetchFotmobFullData()">⚡ Fetch All</button>
+        </div>
+      </div>
+      <div id="mmatch-fm-status" style="font-size:12px;color:var(--t3);min-height:16px;"></div>
+    </div>
+    <div class="me" id="mmatch-er"></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-match')">Cancel</button><button class="btn bp" onclick="saveMatch()">Save</button></div>
+  </div>
+</div>
+
+<!-- HIGHLIGHT MODAL -->
+<div class="mo" id="m-highlight">
+  <div class="md">
+    <h3 id="mhl-t">Add Highlight</h3>
+    <input type="hidden" id="mhl-id"/>
+    <div class="fg"><label>Title</label><input id="mhl-tt"/></div>
+    <div class="fr">
+      <div class="fg"><label>Match</label><select id="mhl-mt"><option value="">Select match...</option></select></div>
+      <div class="fg"><label>Duration</label><input id="mhl-dr" placeholder="5:24"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Views</label><input id="mhl-vw" type="number" value="0"/></div>
+      <div class="fg"><label>League</label><select id="mhl-lg"><option value="">Select league...</option></select></div>
+    </div>
+    <div class="fg"><label>Thumbnail URL</label><input id="mhl-th"/></div>
+    <div class="fg"><label>Video URL (m3u8/mp4)</label><input id="mhl-vurl"/></div>
+    <div class="fr">
+      <div class="fg"><label>Media Type</label><select id="mhl-type"><option value="highlight">Highlight</option><option value="replay">Full Replay</option></select></div>
+      <div class="fg"><label>Badge</label><select id="mhl-bg"><option value="">None</option><option value="TRENDING">TRENDING</option><option value="POPULAR">POPULAR</option><option value="NEW">NEW</option></select></div>
+      <div class="fg"><label>Published</label><select id="mhl-pub"><option value="true">Yes</option><option value="false">No</option></select></div>
+    </div>
+    <div class="me" id="mhl-er"></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-highlight')">Cancel</button><button class="btn bp" onclick="saveHighlight()">Save</button></div>
+  </div>
+</div>
+
+<!-- MATCH CENTER MODAL -->
+<div class="mo" id="m-match-center">
+  <div class="md" style="max-width: 700px; width: 90%;">
+    <h3>⚙️ Match Center Dashboard</h3>
+    <p id="mc-match-title" style="font-weight: 700; color: var(--primary); margin-bottom: 12px;"></p>
+    <input type="hidden" id="mc-match-id"/>
+
+    <!-- FotMob Sync Section -->
+    <div class="tc" style="background: rgba(37, 99, 235, 0.05); border: 1px solid rgba(37, 99, 235, 0.2); padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+      <div style="font-weight: 700; font-size: 13px; margin-bottom: 8px;">⚡ Auto-Sync Stats, Lineups, & Commentary from FotMob</div>
+      <div class="fr" style="align-items: flex-end; gap: 8px; margin-bottom: 8px;">
+        <div class="fg"><label>FotMob Match ID</label><input id="mc-fotmob-id" placeholder="e.g., 4506254"/></div>
+        <button class="btn bp" onclick="syncMatchFromFotmob()" style="height: 38px;">Fetch & Sync</button>
+      </div>
+      <div id="mc-sync-status" style="margin-top: 8px; font-size: 11px; color: var(--t3); line-height: 1.4;"></div>
+    </div>
+
+    <!-- Overview details editor -->
+    <div class="fr">
+      <div class="fg"><label>Referee</label><input id="mc-referee"/></div>
+      <div class="fg"><label>Venue</label><input id="mc-venue"/></div>
+    </div>
+    <div class="fr" style="margin-bottom: 16px;">
+      <div class="fg"><label>Home Possession %</label><input type="number" id="mc-poss-home" value="50"/></div>
+      <div class="fg"><label>Away Possession %</label><input type="number" id="mc-poss-away" value="50"/></div>
+    </div>
+
+    <div class="ma">
+      <button class="btn bgh" onclick="closeModal('m-match-center')">Close</button>
+      <button class="btn bp" onclick="saveMatchCenterOverview()">Save Overview</button>
+    </div>
+  </div>
+</div>
+
+<!-- LEAGUE STANDINGS MODAL -->
+<div class="mo" id="m-standings">
+  <div class="md" style="max-width: 800px; width: 90%;">
+    <h3>📊 League Standings - <span id="st-league-name" style="color: var(--primary);"></span></h3>
+    <input type="hidden" id="st-league-id"/>
+    
+    <div style="margin-bottom: 12px; display: flex; justify-content: space-between;">
+      <button class="btn bp bsm" onclick="addStandingsRow()">+ Add Team Row</button>
+      <button class="btn bp bsm" onclick="saveStandings()">💾 Save Standings</button>
+    </div>
+    
+    <div style="max-height: 350px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px;">
+      <table style="width: 100%; border-collapse: collapse;" id="standings-table">
+        <thead>
+          <tr style="background: var(--surface); border-bottom: 1px solid var(--border);">
+            <th style="padding: 8px; text-align: center;">Pos</th>
+            <th style="padding: 8px; text-align: left;">Team Name</th>
+            <th style="padding: 8px; text-align: center;">Played</th>
+            <th style="padding: 8px; text-align: center;">Points</th>
+            <th style="padding: 8px; text-align: center;">Zone</th>
+            <th style="padding: 8px; text-align: center;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="standings-table-body">
+          <!-- Standings rows will load dynamically -->
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="ma">
+      <button class="btn bgh" onclick="closeModal('m-standings')">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- NEWS MODAL -->
+<div class="mo" id="m-news">
+  <div class="md">
+    <h3 id="mnews-t">Add Article</h3>
+    <input type="hidden" id="mnews-id"/>
+    <div class="fg"><label>Title</label><input id="mnews-tt"/></div>
+    <div class="fg"><label>Content</label><textarea id="mnews-co" rows="5"></textarea></div>
+    <div class="fr">
+      <div class="fg"><label>Image URL</label><input id="mnews-im"/></div>
+      <div class="fg"><label>Category</label><select id="mnews-ca"><option value="football">Football</option><option value="transfers">Transfers</option><option value="results">Results</option><option value="injuries">Injuries</option><option value="other">Other</option></select></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Tag</label><select id="mnews-tg"><option value="NEWS">NEWS</option><option value="BREAKING">BREAKING</option><option value="TRANSFER">TRANSFER</option><option value="INJURY">INJURY</option></select></div>
+      <div class="fg"><label>Published</label><select id="mnews-pub"><option value="true">Yes</option><option value="false">No</option></select></div>
+    </div>
+    <div class="me" id="mnews-er"></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-news')">Cancel</button><button class="btn bp" onclick="saveNews()">Save</button></div>
+  </div>
+</div>
+
+<!-- STREAM MODAL -->
+<div class="mo" id="m-stream">
+  <div class="md">
+    <h3 id="mstr-t">Add Stream</h3>
+    <input type="hidden" id="mstr-id"/>
+    <div class="fg"><label>Label / Name</label><input id="mstr-lb" placeholder="e.g., MALAYALAM, ENGLISH"/></div>
+    <div class="fr">
+      <div class="fg"><label>Quality</label><input id="mstr-qlt" placeholder="e.g., 1080p, 720p" value="1080p"/></div>
+      <div class="fg"><label>Primary Theme Color</label><input id="mstr-clr" type="color" value="#00ff88" style="height:40px; padding:0; cursor:pointer;"/></div>
+    </div>
+    <div class="fg">
+      <label>Stream URL or Servers JSON Array</label>
+      <textarea id="mstr-ur" rows="6" placeholder='Plain URL or JSON array:&#10;[{"serverName":"ENGLISH","url":"https://...","type":"m3u8","drmType":"none"}]'></textarea>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Active</label><select id="mstr-act"><option value="true">Yes (Online)</option><option value="false">No (Offline)</option></select></div>
+    </div>
+    <div class="me" id="mstr-er"></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-stream')">Cancel</button><button class="btn bp" onclick="saveStream()">Save</button></div>
+  </div>
+</div>
+
+<!-- NOTIFICATION MODAL -->
+<div class="mo" id="m-notification">
+  <div class="md">
+    <h3 id="mnotif-t">Create Notification</h3>
+    <input type="hidden" id="mnotif-id"/>
+    <div class="fg"><label>Title</label><input id="mnotif-tt"/></div>
+    <div class="fg"><label>Body</label><textarea id="mnotif-bd" rows="3"></textarea></div>
+    <div class="fr">
+      <div class="fg"><label>Category</label><select id="mnotif-ca"><option value="matches">Matches</option><option value="news">News</option><option value="transfers">Transfers</option><option value="reminders">Reminders</option></select></div>
+      <div class="fg"><label>Priority</label><select id="mnotif-pr"><option value="normal">Normal</option><option value="high">High</option><option value="urgent">Urgent</option></select></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Target Users</label><select id="mnotif-tg"><option value="all">All Users</option><option value="premium">Premium Only</option><option value="custom">Custom Segment</option></select></div>
+      <div class="fg"><label>Send At</label><input id="mnotif-st" type="datetime-local"/></div>
+    </div>
+    <div class="me" id="mnotif-er"></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-notification')">Cancel</button><button class="btn bp" onclick="saveNotification()">Save</button></div>
+  </div>
+</div>
+
+<!-- USER MODAL (existing enhanced) -->
+<div class="mo" id="m-usr">
+  <div class="md">
+    <h3 id="musr-t">Add User</h3>
+    <input type="hidden" id="musr-id"/>
+    <div class="fr">
+      <div class="fg"><label>Username</label><input id="musr-un"/></div>
+      <div class="fg"><label>PIN (4 digits)</label><input id="musr-pn" type="password" maxlength="4"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Max Devices</label><input id="musr-md" type="number" value="2"/></div>
+      <div class="fg"><label>Expiry Date</label><input id="musr-ex" type="date"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Role</label><select id="musr-rl"><option value="user">User</option><option value="premium">Premium</option><option value="admin">Admin</option></select></div>
+      <div class="fg"><label>Status</label><select id="musr-st"><option value="active">Active</option><option value="suspended">Suspended</option></select></div>
+    </div>
+    <div class="me" id="musr-er"></div>
+    <div class="ma"><button class="btn bgh" onclick="closeModal('m-usr')">Cancel</button><button class="btn bp" onclick="saveUser()">Save</button></div>
+  </div>
+</div>
+
+<script>
+const SB_URL='https://voocdrpetiyspuhyeapi.supabase.co';
+const SB_KEY='sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
+const sb=supabase.createClient(SB_URL,SB_KEY);
+
+let ALL_TEAMS=[],ALL_PLAYERS=[],ALL_LEAGUES=[],ALL_MATCHES=[],ALL_HIGHLIGHTS=[],ALL_NEWS=[],ALL_STREAMS=[],ALL_USERS=[],ALL_NOTIFICATIONS=[];
+
+// ─── AUTH ───
+async function h256(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function doLogin(){
+  const u=document.getElementById('au').value.trim().toLowerCase();
+  const p=document.getElementById('ap').value.trim();
+  const e=document.getElementById('lerr');
+  e.textContent='Checking...';
+  const{data}=await sb.from('zeta_users').select().eq('username',u).maybeSingle();
+  if(!data){e.textContent='User not found.';return;}
+  const h=await h256(p);
+  if(data.pin!==h && data.pin!==p && data.passcode!==p){e.textContent='Wrong PIN.';return;}
+  const isAdmin = u==='admin' || u==='admin_user' || data.is_admin===true || data.role==='admin';
+  if(!isAdmin){e.textContent='Not an admin.';return;}
+  e.textContent='';
+  document.getElementById('ls').style.display='none';
+  document.getElementById('app').style.display='block';
+  document.getElementById('anm').textContent=u.toUpperCase();
+  document.getElementById('aav').textContent=u[0].toUpperCase();
+  loadAll();
+}
+function doLogout(){document.getElementById('app').style.display='none';document.getElementById('ls').style.display='flex';}
+document.getElementById('ap').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+document.getElementById('au').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('ap').focus();});
+
+// ─── NAVIGATION ───
+function goPage(el,n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ni').forEach(x=>x.classList.remove('active'));
+  const pg = document.getElementById('page-'+n);
+  if(pg) pg.classList.add('active');
+  el.classList.add('active');
+  if(n==='sessions')loadSessions();
+  if(n==='settings')loadSettings();
+}
+function closeModal(id){document.getElementById(id).classList.remove('open');}
+document.querySelectorAll('.mo').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');});});
+
+// ─── LOAD ALL ───
+async function loadAll(){
+  await Promise.all([loadTeams(),loadPlayers(),loadLeagues(),loadMatches(),loadHighlights(),loadNews(),loadStreams(),loadUsers(),loadNotifications(),loadDashboard()]);
+}
+
+// ─── DASHBOARD ───
+async function loadDashboard(){
+  const[a,b,c,d,e,f,g,h,i]=await Promise.all([
+    sb.from('zeta_teams').select('id',{count:'exact'}),
+    sb.from('zeta_players').select('id',{count:'exact'}),
+    sb.from('zeta_leagues').select('id',{count:'exact'}),
+    sb.from('zeta_matches').select('id',{count:'exact'}),
+    sb.from('zeta_highlights').select('id',{count:'exact'}).eq('published',true),
+    sb.from('zeta_news').select('id',{count:'exact'}).eq('published',true),
+    sb.from('zeta_streams').select('id',{count:'exact'}).neq('deleted',true),
+    sb.from('zeta_users').select('id',{count:'exact'}),
+    sb.from('fifa_stream_sessions').select('id',{count:'exact'}).gte('created_at',new Date(Date.now()-86400000).toISOString())
+  ]);
+  ['zeta_teams','zeta_players','zeta_leagues','zeta_matches','zeta_highlights','zeta_news','streams','users','sessions'].forEach((x,i)=>{
+    document.getElementById('st-'+x).textContent=[a,b,c,d,e,f,g,h,i][i].count??0;
+  });
+  const{data:s}=await sb.from('fifa_stream_sessions').select().order('created_at',{ascending:false}).limit(20);
+  const el=document.getElementById('dash-body');
+  if(!s||!s.length){el.innerHTML='<div class="es"><div class="ic2">📺</div><p>No sessions yet</p></div>';return;}
+  el.innerHTML='<table><thead><tr><th>User</th><th>Stream</th><th>Time</th></tr></thead><tbody>'+s.map(x=>'<tr><td>'+x.username+'</td><td><span class="badge bb">'+(x.stream_id||'-')+'</span></td><td style="color:var(--t2);font-size:12px">'+new Date(x.created_at).toLocaleString()+'</td></tr>').join('')+'</tbody></table>';
+}
+
+// ─── TEAMS ───
+async function loadTeams(){
+  const{data}=await sb.from('zeta_teams').select().order('name');
+  ALL_TEAMS=data||[];
+  renderTeams(ALL_TEAMS);
+  // Update team dropdowns in other modals
+  const opts=ALL_TEAMS.map(t=>`<option value="${t.id}">${t.name}</option>`).join('');
+  document.getElementById('mmatch-ht').innerHTML='<option value="">Select team...</option>'+opts;
+  document.getElementById('mmatch-at').innerHTML='<option value="">Select team...</option>'+opts;
+  document.getElementById('mplayer-tm').innerHTML='<option value="">Select team...</option>'+opts;
+}
+function renderTeams(data){
+  const el=document.getElementById('teams-body');
+  if(!data.length){el.innerHTML='<div class="es"><div class="ic2">🏟️</div><p>No teams</p></div>';return;}
+  el.innerHTML='<table><thead><tr><th>Logo</th><th>Name</th><th>Sport</th><th>Country</th><th>Code</th><th>Color</th><th>Actions</th></tr></thead><tbody>'+
+  data.map(t=>`<tr><td>${t.logo?`<img src="${t.logo}" class="image-preview"/>`:'—'}</td><td><strong>${t.name}</strong></td><td>${t.sport}</td><td>${t.country||'—'}</td><td>${t.short_code||'—'}</td><td><div class="color-swatch" style="background:${t.color||'#7C3AED'}"></div></td><td><button class="btn bgh bsm" onclick='openTeamModal(${JSON.stringify(t).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deleteTeam('${t.id}')">Del</button></td></tr>`).join('')+
+  '</tbody></table>';
+}
+function filterTeams(q){renderTeams(ALL_TEAMS.filter(t=>(t.name||'').toLowerCase().includes(q.toLowerCase())));}
+function openTeamModal(t){
+  document.getElementById('mteam-t').textContent=t?'Edit Team':'Add Team';
+  document.getElementById('mteam-id').value=t?.id||'';
+  document.getElementById('mteam-nm').value=t?.name||'';
+  document.getElementById('mteam-sp').value=t?.sport||'football';
+  document.getElementById('mteam-ct').value=t?.country||'';
+  document.getElementById('mteam-sc').value=t?.short_code||'';
+  document.getElementById('mteam-cl').value=t?.color||'#7C3AED';
+  document.getElementById('mteam-lo').value=t?.logo||'';
+  document.getElementById('mteam-bn').value=t?.team_banner||'';
+  document.getElementById('mteam-er').textContent='';
+  document.getElementById('m-team').classList.add('open');
+}
+async function saveTeam(){
+  const id=document.getElementById('mteam-id').value;
+  const p={name:document.getElementById('mteam-nm').value.trim(),sport:document.getElementById('mteam-sp').value,country:document.getElementById('mteam-ct').value.trim(),short_code:document.getElementById('mteam-sc').value.trim().toUpperCase(),color:document.getElementById('mteam-cl').value.trim()||'#7C3AED',logo:document.getElementById('mteam-lo').value.trim()||null,team_banner:document.getElementById('mteam-bn').value.trim()||null};
+  if(!p.name){document.getElementById('mteam-er').textContent='Name required.';return;}
+  const{error}=id?await sb.from('zeta_teams').update(p).eq('id',id):await sb.from('zeta_teams').insert({...p,created_at:new Date().toISOString()});
+  if(error){document.getElementById('mteam-er').textContent=error.message;return;}
+  closeModal('m-team');loadTeams();loadDashboard();
+}
+async function deleteTeam(id){if(!confirm('Delete team?'))return;await sb.from('zeta_teams').delete().eq('id',id);loadTeams();loadDashboard();}
+
+// ─── PLAYERS ───
+async function loadPlayers(){
+  const{data}=await sb.from('zeta_players').select('*, teams(name, color)').order('name');
+  ALL_PLAYERS=data||[];
+  renderPlayers(ALL_PLAYERS);
+}
+function renderPlayers(data){
+  const el=document.getElementById('players-body');
+  if(!data.length){el.innerHTML='<div class="es"><div class="ic2">⚽</div><p>No players</p></div>';return;}
+  el.innerHTML='<table><thead><tr><th>Photo</th><th>Name</th><th>Team</th><th>Pos</th><th>#</th><th>Rating</th><th>Nat</th><th>Actions</th></tr></thead><tbody>'+
+  data.map(p=>`<tr><td>${p.photo?`<img src="${p.photo}" class="image-preview" style="width:40px;height:40px;border-radius:50%"/>`:'—'}</td><td><strong>${p.name}</strong></td><td>${p.teams?.name||'—'}</td><td>${p.position||'—'}</td><td>${p.jersey_number||'—'}</td><td>${p.rating||'—'}</td><td>${p.nationality||'—'}</td><td><button class="btn bgh bsm" onclick='openPlayerModal(${JSON.stringify(p).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deletePlayer('${p.id}')">Del</button></td></tr>`).join('')+
+  '</tbody></table>';
+}
+function filterPlayers(q){renderPlayers(ALL_PLAYERS.filter(p=>(p.name||'').toLowerCase().includes(q.toLowerCase())));}
+async function openPlayerModal(p){
+  document.getElementById('mplayer-t').textContent=p?'Edit Player':'Add Player';
+  document.getElementById('mplayer-id').value=p?.id||'';
+  document.getElementById('mplayer-nm').value=p?.name||'';
+  document.getElementById('mplayer-nt').value=p?.nationality||'';
+  document.getElementById('mplayer-tm').value=p?.team_id||'';
+  document.getElementById('mplayer-ps').value=p?.position||'';
+  document.getElementById('mplayer-jn').value=p?.jersey_number||'';
+  document.getElementById('mplayer-rt').value=p?.rating||'7.0';
+  document.getElementById('mplayer-ph').value=p?.photo||'';
+  document.getElementById('mplayer-bio').value=p?.bio||'';
+  document.getElementById('mplayer-ap').value=p?.apps||0;
+  document.getElementById('mplayer-gl').value=p?.goals||0;
+  document.getElementById('mplayer-as').value=p?.assists||0;
+  document.getElementById('mplayer-yc').value=p?.yellow_cards||0;
+  document.getElementById('mplayer-rc').value=p?.red_cards||0;
+  document.getElementById('mplayer-career').value=JSON.stringify(p?.career||[],null,2);
+  document.getElementById('mplayer-er').textContent='';
+  document.getElementById('m-player').classList.add('open');
+}
+async function savePlayer(){
+  const id=document.getElementById('mplayer-id').value;
+  let career=[];try{career=JSON.parse(document.getElementById('mplayer-career').value);}catch(e){document.getElementById('mplayer-er').textContent='Invalid career JSON';return;}
+  const p={name:document.getElementById('mplayer-nm').value.trim(),nationality:document.getElementById('mplayer-nt').value.trim(),team_id:document.getElementById('mplayer-tm').value||null,position:document.getElementById('mplayer-ps').value.trim(),jersey_number:parseInt(document.getElementById('mplayer-jn').value)||null,rating:parseFloat(document.getElementById('mplayer-rt').value)||7.0,photo:document.getElementById('mplayer-ph').value.trim()||null,bio:document.getElementById('mplayer-bio').value.trim(),apps:parseInt(document.getElementById('mplayer-ap').value)||0,goals:parseInt(document.getElementById('mplayer-gl').value)||0,assists:parseInt(document.getElementById('mplayer-as').value)||0,yellow_cards:parseInt(document.getElementById('mplayer-yc').value)||0,red_cards:parseInt(document.getElementById('mplayer-rc').value)||0,career:career};
+  if(!p.name){document.getElementById('mplayer-er').textContent='Name required.';return;}
+  const{error}=id?await sb.from('zeta_players').update(p).eq('id',id):await sb.from('zeta_players').insert(p);
+  if(error){document.getElementById('mplayer-er').textContent=error.message;return;}
+  closeModal('m-player');loadPlayers();loadDashboard();
+}
+async function deletePlayer(id){if(!confirm('Delete player?'))return;await sb.from('zeta_players').delete().eq('id',id);loadPlayers();loadDashboard();}
+
+// ─── LEAGUES ───
+async function loadLeagues(){
+  const{data}=await sb.from('zeta_leagues').select().order('name');
+  ALL_LEAGUES=data||[];
+  renderLeagues(ALL_LEAGUES);
+  // Update league dropdowns
+  const opts=ALL_LEAGUES.map(l=>`<option value="${l.id}">${l.name}</option>`).join('');
+  document.getElementById('mmatch-lg').innerHTML='<option value="">Select league...</option>'+opts;
+  document.getElementById('mhl-lg').innerHTML='<option value="">Select league...</option>'+opts;
+}
+function renderLeagues(data){
+  const el=document.getElementById('leagues-body');
+  if(!data.length){el.innerHTML='<div class="es"><div class="ic2">🏆</div><p>No leagues</p></div>';return;}
+  el.innerHTML=data.map(l=>`<div class="league-row"><div class="league-color" style="background:${l.color||'#00D4FF'}"></div><div style="flex:1"><strong>${l.name}</strong><br><small style="color:var(--t2)">${l.country||'—'} • ${l.season||'—'} • ${l.sport} • ${l.type}</small></div><img src="${l.logo||''}" class="image-preview" onerror="this.style.display='none'"/><div><button class="btn bp bsm" onclick="openStandingsModal('${l.id}', '${l.name}')">📊 Standings</button> <button class="btn bgh bsm" onclick='openLeagueModal(${JSON.stringify(l).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deleteLeague('${l.id}')">Del</button></div></div>`).join('');
+}
+async function openStandingsModal(leagueId, leagueName) {
+  document.getElementById('st-league-id').value = leagueId;
+  document.getElementById('st-league-name').textContent = leagueName;
+  document.getElementById('standings-table-body').innerHTML = '<tr><td colspan="6" style="text-align:center;padding:20px;">Loading standings...</td></tr>';
+  openModal('m-standings');
+
+  const { data, error } = await sb.from('zeta_league_standings').select().eq('league_id', leagueId).order('position', { ascending: true });
+  if (error) {
+    alert("Error fetching standings: " + error.message);
+    return;
+  }
+
+  renderStandingsRows(data || []);
+}
+
+function renderStandingsRows(rows) {
+  const tbody = document.getElementById('standings-table-body');
+  tbody.innerHTML = '';
+  
+  if (rows.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:20px;color:var(--t3)">No standings rows. Add your first team row above.</td></tr>';
+    return;
+  }
+
+  rows.forEach((r, index) => {
+    const tr = document.createElement('tr');
+    tr.className = 'standings-edit-row';
+    tr.innerHTML = `
+      <td style="padding:6px;text-align:center;"><input type="number" class="si st-pos" value="${r.position || (index + 1)}" style="width:50px;text-align:center;"/></td>
+      <td style="padding:6px;"><input type="text" class="si st-team" value="${r.team_name || ''}" style="width:100%;"/></td>
+      <td style="padding:6px;text-align:center;"><input type="number" class="si st-played" value="${r.played || 0}" style="width:60px;text-align:center;"/></td>
+      <td style="padding:6px;text-align:center;"><input type="number" class="si st-points" value="${r.points || 0}" style="width:60px;text-align:center;"/></td>
+      <td style="padding:6px;text-align:center;">
+        <select class="si st-zone" style="width:100px;">
+          <option value="none" ${r.zone === 'none' ? 'selected' : ''}>None</option>
+          <option value="cl" ${r.zone === 'cl' ? 'selected' : ''}>CL</option>
+          <option value="el" ${r.zone === 'el' ? 'selected' : ''}>EL</option>
+          <option value="rel" ${r.zone === 'rel' ? 'selected' : ''}>Relegation</option>
+        </select>
+      </td>
+      <td style="padding:6px;text-align:center;"><button class="btn bd bsm" onclick="this.closest('tr').remove()">Remove</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function addStandingsRow() {
+  const tbody = document.getElementById('standings-table-body');
+  if (tbody.children.length === 1 && tbody.children[0].cells.length === 1) {
+    tbody.innerHTML = '';
+  }
+  
+  const tr = document.createElement('tr');
+  tr.className = 'standings-edit-row';
+  const pos = tbody.children.length + 1;
+  tr.innerHTML = `
+    <td style="padding:6px;text-align:center;"><input type="number" class="si st-pos" value="${pos}" style="width:50px;text-align:center;"/></td>
+    <td style="padding:6px;"><input type="text" class="si st-team" placeholder="Team Name" style="width:100%;"/></td>
+    <td style="padding:6px;text-align:center;"><input type="number" class="si st-played" value="0" style="width:60px;text-align:center;"/></td>
+    <td style="padding:6px;text-align:center;"><input type="number" class="si st-points" value="0" style="width:60px;text-align:center;"/></td>
+    <td style="padding:6px;text-align:center;">
+      <select class="si st-zone" style="width:100px;">
+        <option value="none">None</option>
+        <option value="cl">CL</option>
+        <option value="el">EL</option>
+        <option value="rel">Relegation</option>
+      </select>
+    </td>
+    <td style="padding:6px;text-align:center;"><button class="btn bd bsm" onclick="this.closest('tr').remove()">Remove</button></td>
+  `;
+  tbody.appendChild(tr);
+}
+
+async function saveStandings() {
+  const leagueId = document.getElementById('st-league-id').value;
+  if (!leagueId) return;
+
+  const rows = document.querySelectorAll('.standings-edit-row');
+  const standingsData = [];
+  
+  rows.forEach(tr => {
+    const position = parseInt(tr.querySelector('.st-pos').value) || 0;
+    const team_name = tr.querySelector('.st-team').value.trim();
+    const played = parseInt(tr.querySelector('.st-played').value) || 0;
+    const points = parseInt(tr.querySelector('.st-points').value) || 0;
+    const zone = tr.querySelector('.st-zone').value;
+    
+    if (team_name) {
+      standingsData.push({
+        league_id: leagueId,
+        position,
+        team_name,
+        played,
+        points,
+        zone
+      });
+    }
+  });
+
+  const { error: delError } = await sb.from('zeta_league_standings').delete().eq('league_id', leagueId);
+  if (delError) {
+    alert("Error saving standings: " + delError.message);
+    return;
+  }
+
+  if (standingsData.length > 0) {
+    const { error: insError } = await sb.from('zeta_league_standings').insert(standingsData);
+    if (insError) {
+      alert("Error inserting standings: " + insError.message);
+      return;
+    }
+  }
+
+  alert("Standings saved successfully!");
+  closeModal('m-standings');
+}
+function openLeagueModal(l){
+  document.getElementById('mleague-t').textContent=l?'Edit League':'Add League';
+  document.getElementById('mleague-id').value=l?.id||'';
+  document.getElementById('mleague-nm').value=l?.name||'';
+  document.getElementById('mleague-ct').value=l?.country||'';
+  document.getElementById('mleague-sp').value=l?.sport||'football';
+  document.getElementById('mleague-lo').value=l?.logo||'';
+  document.getElementById('mleague-bn').value=l?.league_banner||'';
+  document.getElementById('mleague-er').textContent='';
+  document.getElementById('m-league').classList.add('open');
+}
+async function saveLeague(){
+  const id=document.getElementById('mleague-id').value;
+  const p={name:document.getElementById('mleague-nm').value.trim(),country:document.getElementById('mleague-ct').value.trim(),sport:document.getElementById('mleague-sp').value,logo:document.getElementById('mleague-lo').value.trim()||null,league_banner:document.getElementById('mleague-bn').value.trim()||null};
+  if(!p.name){document.getElementById('mleague-er').textContent='Name required.';return;}
+  const{error}=id?await sb.from('zeta_leagues').update(p).eq('id',id):await sb.from('zeta_leagues').insert({...p,created_at:new Date().toISOString()});
+  if(error){document.getElementById('mleague-er').textContent=error.message;return;}
+  closeModal('m-league');loadLeagues();loadDashboard();
+}
+async function deleteLeague(id){if(!confirm('Delete league?'))return;await sb.from('zeta_leagues').delete().eq('id',id);loadLeagues();loadDashboard();}
+
+// ─── FOTMOB MATCHER ───
+async function fetchFotmobMatches() {
+  const leagueSelect = document.getElementById('fetch-league').value;
+  const leagueId = leagueSelect === 'custom' 
+    ? document.getElementById('fetch-custom-league-id').value.trim() 
+    : leagueSelect;
+  const selectedDateStr = document.getElementById('fetch-date').value; // YYYY-MM-DD
+  const proxyMode = document.getElementById('fetch-proxy').value;
+
+  if (!leagueId) {
+    alert("Please select or enter a League ID.");
+    return;
+  }
+  if (!selectedDateStr) {
+    alert("Please select a date.");
+    return;
+  }
+
+  let url = `https://www.fotmob.com/leagues/${leagueId}/fixtures`;
+  
+  if (proxyMode === 'allorigins') {
+    url = "https://api.allorigins.win/raw?url=" + encodeURIComponent(url);
+  } else if (proxyMode === 'corsproxy') {
+    url = "https://corsproxy.io/?" + encodeURIComponent(url);
+  }
+
+  const resultsDiv = document.getElementById('fetch-results');
+  resultsDiv.innerHTML = '<div class="ld"><div class="sp"></div>Fetching matches...</div>';
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
+    
+    const htmlText = await res.text();
+    const regex = /<script\s+id="__NEXT_DATA__"\s+type="application\/json">([\s\S]*?)<\/script>/i;
+    const match = htmlText.match(regex);
+    
+    if (!match) throw new Error("Could not find match data script block in FotMob response.");
+    
+    const data = JSON.parse(match[1].trim());
+    const pageProps = data.props?.pageProps;
+    if (!pageProps || !pageProps.fixtures) throw new Error("No fixtures data found in page properties.");
+    
+    const leagueName = pageProps.details?.name || "Football Match";
+    const allMatches = pageProps.fixtures.allMatches || [];
+    
+    const targetDate = selectedDateStr;
+    const filteredMatches = allMatches.filter(m => {
+      const utcTime = m.status?.utcTime;
+      if (!utcTime) return false;
+      const dateObj = new Date(utcTime);
+      const year = dateObj.getFullYear();
+      const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const day = String(dateObj.getDate()).padStart(2, '0');
+      const localDateStr = `${year}-${month}-${day}`;
+      const utcDateStr = utcTime.split('T')[0];
+      return localDateStr === targetDate || utcDateStr === targetDate;
+    });
+
+    renderFetchedMatches(filteredMatches, leagueName);
+  } catch (e) {
+    console.error(e);
+    resultsDiv.innerHTML = `<div style="color:var(--accent-red); padding:10px; text-align:center;">Error: ${e.message}<br><small>Try selecting "CorsProxy.io" if it failed due to CORS.</small></div>`;
+  }
+}
+
+function renderFetchedMatches(matches, leagueName) {
+  const container = document.getElementById('fetch-results');
+  if (matches.length === 0) {
+    container.innerHTML = '<div style="text-align:center; padding:15px; color:var(--t3)">No matches found for this date.</div>';
+    return;
+  }
+
+  container.innerHTML = '';
+  matches.forEach(m => {
+    const item = document.createElement('div');
+    item.style.cssText = 'background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:8px; padding:10px; margin-bottom:8px; display:flex; justify-content:space-between; align-items:center;';
+
+    const homeName = m.home.name;
+    const awayName = m.away.name;
+    const homeLogo = `https://images.fotmob.com/image_resources/logo/teamlogo/${m.home.id}_small.png`;
+    const awayLogo = `https://images.fotmob.com/image_resources/logo/teamlogo/${m.away.id}_small.png`;
+    
+    const dateObj = new Date(m.status.utcTime);
+    let hours = dateObj.getHours();
+    const minutes = dateObj.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    const timeStr = `${hours}:${minutes} ${ampm}`;
+    
+    const isLive = m.status.started && !m.status.finished && !m.status.cancelled;
+    const isFinished = m.status.finished;
+    
+    let scoreStr = "";
+    if (m.status.scoreStr) {
+      scoreStr = m.status.scoreStr;
+    } else if (m.status.homeScore !== undefined && m.status.awayScore !== undefined) {
+      scoreStr = `${m.status.homeScore} - ${m.status.awayScore}`;
+    }
+
+    const matchData = {
+      sport: 'football',
+      league_name: leagueName,
+      home_team: homeName,
+      home_logo: homeLogo,
+      away_team: awayName,
+      away_logo: awayLogo,
+      match_time: dateObj.toISOString(),
+      display_time: timeStr,
+      status: isLive ? 'live' : (isFinished ? 'finished' : 'upcoming'),
+      score: scoreStr,
+    };
+
+    const statusBadge = isLive 
+      ? '<span class="badge br">LIVE</span>' 
+      : (isFinished ? '<span class="badge bg">FT</span>' : '<span class="badge bp">UPCOMING</span>');
+
+    item.innerHTML = `
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-size:12px; font-weight:700; color:var(--t2); width:60px;">${timeStr}</div>
+        <div style="display:flex; flex-direction:column; gap:4px;">
+          <div style="display:flex; align-items:center; gap:8px;"><img src="${homeLogo}" style="width:16px;height:16px;"/> <span style="font-weight:600; font-size:13px;">${homeName}</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><img src="${awayLogo}" style="width:16px;height:16px;"/> <span style="font-weight:600; font-size:13px;">${awayName}</span></div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div style="font-weight:800; font-size:15px; color:var(--t1);">${scoreStr}</div>
+        ${statusBadge}
+        <button class="btn bgh bsm" onclick='importMatchToModal(${JSON.stringify(matchData).replace(/"/g, "&quot;")})'>Import</button>
+      </div>
+    `;
+    container.appendChild(item);
+  });
+}
+
+async function findOrCreateLeague(name) {
+  if(!name) return '';
+  let l = ALL_LEAGUES.find(x => x.name.toLowerCase() === name.toLowerCase());
+  if(l) return l.id;
+  const p = {name, sport:'football', type:'league', country:''};
+  const {data, error} = await sb.from('zeta_leagues').insert(p).select().single();
+  if(!error && data) { await loadLeagues(); return data.id; }
+  return '';
+}
+
+async function findOrCreateTeam(name, logo) {
+  if(!name) return '';
+  let t = ALL_TEAMS.find(x => x.name.toLowerCase() === name.toLowerCase());
+  if(t) return t.id;
+  const p = {name, logo, sport:'football'};
+  const {data, error} = await sb.from('zeta_teams').insert(p).select().single();
+  if(!error && data) { await loadTeams(); return data.id; }
+  return '';
+}
+
+async function importMatchToModal(data) {
+  document.getElementById('fetch-results').innerHTML = '<div class="ld"><div class="sp"></div>Mapping Teams/Leagues...</div>';
+  
+  const leagueId = await findOrCreateLeague(data.league_name);
+  const homeId = await findOrCreateTeam(data.home_team, data.home_logo);
+  const awayId = await findOrCreateTeam(data.away_team, data.away_logo);
+  
+  openMatchModal(null);
+  
+  document.getElementById('mmatch-lg').value = leagueId;
+  document.getElementById('mmatch-ht').value = homeId;
+  document.getElementById('mmatch-at').value = awayId;
+  document.getElementById('mmatch-st').value = data.status || 'upcoming';
+  
+  const scores = data.score.split('-');
+  if (scores.length === 2) {
+    document.getElementById('mmatch-hs').value = parseInt(scores[0]) || 0;
+    document.getElementById('mmatch-as').value = parseInt(scores[1]) || 0;
+  }
+  
+  if (data.match_time) {
+    const dt = new Date(data.match_time);
+    dt.setMinutes(dt.getMinutes() - dt.getTimezoneOffset());
+    document.getElementById('mmatch-dt').value = dt.toISOString().slice(0, 16);
+  }
+  
+  document.getElementById('fetch-results').innerHTML = '<div style="text-align:center; padding:15px; color:var(--accent-green)">Teams successfully mapped and loaded into modal! Please review and click Save.</div>';
+}
+
+// ─── MATCHES ───
+async function loadMatches(){
+  const{data,error}=await sb.from('zeta_matches').select('*').order('date',{ascending:false}).limit(200);
+  if(error){console.error('loadMatches error:',error.message);}
+  ALL_MATCHES=data||[];
+  renderMatches(ALL_MATCHES);
+  // Fetch team names separately for dropdown
+  const{data:teamsData}=await sb.from('zeta_teams').select('id,name');
+  const teamsMap={};
+  (teamsData||[]).forEach(t=>{teamsMap[t.id]=t.name;});
+  ALL_TEAMS_MAP=teamsMap;
+  const opts=ALL_MATCHES.map(m=>`<option value="${m.id}">${teamsMap[m.home_team_id]||m.home_team||'Home'} vs ${teamsMap[m.away_team_id]||m.away_team||'Away'}</option>`).join('');
+  const mhlEl=document.getElementById('mhl-mt');
+  if(mhlEl)mhlEl.innerHTML='<option value="">Select match...</option>'+opts;
+}
+function renderMatches(data){
+  const el=document.getElementById('matches-body');
+  if(!el)return;
+  if(!data||!data.length){el.innerHTML='<div class="es"><div class="ic2">📅</div><p>No matches found. Add your first match using the button above.</p></div>';return;}
+  const tm=window.ALL_TEAMS_MAP||{};
+  const sc={'live':'bg','finished':'br','scheduled':'bo','postponed':'bw','cancelled':'br'};
+  el.innerHTML='<table><thead><tr><th>Match</th><th>Date</th><th>Score</th><th>Status</th><th>Venue</th><th>Actions</th></tr></thead><tbody>'+
+  data.map(m=>{
+    const ht=tm[m.home_team_id]||m.home_team||'Home';
+    const at=tm[m.away_team_id]||m.away_team||'Away';
+    const badge=sc[m.status]||'bo';
+    const safeM=JSON.stringify(m).replace(/"/g,'&quot;');
+    return `<tr><td><strong>${ht} vs ${at}</strong></td><td style="color:var(--t2);font-size:12px">${m.date?new Date(m.date).toLocaleString():'—'}</td><td style="font-family:Rajdhani;font-size:18px;font-weight:700">${m.home_score||0} - ${m.away_score||0}</td><td><span class="badge ${badge}">${(m.status||'scheduled').toUpperCase()}</span></td><td style="color:var(--t2);font-size:12px">${m.venue||'—'}</td><td><button class="btn bp bsm" onclick="openMatchCenterModal('${m.id}', '${ht} vs ${at}', '${m.fotmob_id||''}')">⚙️ Match Center</button> <button class="btn bgh bsm" onclick='openMatchModal(JSON.parse(this.dataset.m))' data-m="${safeM}">Edit</button> <button class="btn bd bsm" onclick="deleteMatch('${m.id}')">Del</button></td></tr>`;
+  }).join('')+'</tbody></table>';
+}
+function filterMatches(q){renderMatches(ALL_MATCHES.filter(m=>((m.home_team||'')+(m.away_team||'')).toLowerCase().includes(q.toLowerCase())));}
+function openMatchModal(m){
+  document.getElementById('mmatch-t').textContent=m?'Edit Match':'Add Match';
+  document.getElementById('mmatch-id').value=m?.id||'';
+  document.getElementById('mmatch-ht').value=m?.home_team_id||'';
+  document.getElementById('mmatch-at').value=m?.away_team_id||'';
+  document.getElementById('mmatch-lg').value=m?.league_id||'';
+  document.getElementById('mmatch-dt').value=m?.date?m.date.substring(0,16):'';
+  document.getElementById('mmatch-st').value=m?.status||'scheduled';
+  document.getElementById('mmatch-vn').value=m?.venue||'';
+  document.getElementById('mmatch-hs').value=m?.home_score||0;
+  document.getElementById('mmatch-as').value=m?.away_score||0;
+  document.getElementById('mmatch-te').value=m?.time_elapsed||'';
+  document.getElementById('mmatch-rd').value=m?.round||'';
+  document.getElementById('mmatch-sids').value=(m?.stream_ids||[]).join(',');
+  document.getElementById('mmatch-fmid').value=m?.fotmob_id||'';
+  document.getElementById('mmatch-er').textContent='';
+  document.getElementById('m-match').classList.add('open');
+}
+async function saveMatch(){
+  const id=document.getElementById('mmatch-id').value;
+  const p={home_team_id:document.getElementById('mmatch-ht').value||null,away_team_id:document.getElementById('mmatch-at').value||null,league_id:document.getElementById('mmatch-lg').value||null,date:document.getElementById('mmatch-dt').value||null,status:document.getElementById('mmatch-st').value,venue:document.getElementById('mmatch-vn').value.trim(),home_score:parseInt(document.getElementById('mmatch-hs').value)||0,away_score:parseInt(document.getElementById('mmatch-as').value)||0,time_elapsed:document.getElementById('mmatch-te').value.trim()||null,round:document.getElementById('mmatch-rd').value.trim()||null,stream_ids:document.getElementById('mmatch-sids').value.split(',').map(s=>s.trim()).filter(Boolean),fotmob_id:document.getElementById('mmatch-fmid').value.trim()||null};
+  if(!p.home_team_id||!p.away_team_id){document.getElementById('mmatch-er').textContent='Home and away teams required.';return;}
+  const{error}=id?await sb.from('zeta_matches').update(p).eq('id',id):await sb.from('zeta_matches').insert(p);
+  if(error){document.getElementById('mmatch-er').textContent=error.message;return;}
+  closeModal('m-match');loadMatches();loadDashboard();
+}
+async function deleteMatch(id){if(!confirm('Delete match?'))return;await sb.from('zeta_matches').delete().eq('id',id);loadMatches();loadDashboard();}
+
+// ─── FOTMOB FULL MATCH DATA FETCH ───
+async function fetchFotmobFullData() {
+  const fotmobId = document.getElementById('mmatch-fmid').value.trim();
+  const matchId  = document.getElementById('mmatch-id').value.trim();
+  const leagueId = document.getElementById('mmatch-lg').value.trim();
+  const proxyMode = document.getElementById('mmatch-proxy').value;
+  const statusEl  = document.getElementById('mmatch-fm-status');
+
+  if (!fotmobId) { statusEl.style.color='var(--red)'; statusEl.textContent='⚠ Enter a FotMob Match ID first.'; return; }
+  if (!matchId)  { statusEl.style.color='var(--red)'; statusEl.textContent='⚠ Save the match first to get its DB ID, then fetch.'; return; }
+
+  statusEl.style.color='var(--t3)';
+  statusEl.textContent='⏳ Fetching from FotMob…';
+
+  let apiUrl = `https://www.fotmob.com/api/matchDetails?matchId=${fotmobId}`;
+  if (proxyMode === 'allorigins') apiUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(apiUrl);
+  else if (proxyMode === 'corsproxy') apiUrl = 'https://corsproxy.io/?' + encodeURIComponent(apiUrl);
+
+  let d;
+  try {
+    const res = await fetch(apiUrl);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    d = await res.json();
+  } catch(e) {
+    statusEl.style.color='var(--red)';
+    statusEl.textContent=`❌ Fetch failed: ${e.message}. Try another proxy.`;
+    return;
+  }
+
+  const log = [];
+  let errored = false;
+
+  // ── helper ──
+  const safe = (fn) => { try { return fn(); } catch(_){ return null; } };
+  const num  = v => typeof v==='number' ? v : (parseFloat(v)||0);
+
+  // ────────────────────────────────────────────────
+  // 1. LINEUPS  →  zeta_match_lineups
+  // ────────────────────────────────────────────────
+  try {
+    statusEl.textContent='⏳ Parsing lineups…';
+    const lineup = d?.content?.lineup;
+    if (lineup) {
+      const homeLineup = lineup?.homeTeam || lineup?.home || {};
+      const awayLineup = lineup?.awayTeam || lineup?.away || {};
+
+      const parsePlayers = (team) => {
+        const starters = team?.starters || team?.players || team?.lineup || [];
+        return starters.map(p => ({
+          name:   p.name?.fullName || p.name?.lastName || p.shortName || p.name || '?',
+          num:    (p.shirt || p.jerseyNumber || '').toString(),
+          pos:    p.position || p.positionId || '',
+          x:      safe(()=>num(p.posX)/100) ?? 0.5,
+          y:      safe(()=>num(p.posY)/100) ?? 0.5,
+          rating: safe(()=>num(p.rating?.num || p.rating)) ?? 0,
+        }));
+      };
+
+      const homePlayers = parsePlayers(homeLineup);
+      const awayPlayers = parsePlayers(awayLineup);
+      const homeFormation = homeLineup?.formation || homeLineup?.formationStr || '';
+      const awayFormation = awayLineup?.formation || awayLineup?.formationStr || '';
+
+      const { error } = await sb.from('zeta_match_lineups').upsert({
+        match_id: matchId,
+        home_players: homePlayers,
+        away_players: awayPlayers,
+        home_formation: homeFormation,
+        away_formation: awayFormation,
+      }, { onConflict: 'match_id' });
+      if (error) throw error;
+      log.push(`✅ Lineups (${homePlayers.length} + ${awayPlayers.length} players)`);
+    } else {
+      log.push('ℹ Lineups: not available in FotMob data');
+    }
+  } catch(e) { log.push(`❌ Lineups: ${e.message}`); errored=true; }
+
+  // ────────────────────────────────────────────────
+  // 2. STATS  →  zeta_match_stats
+  // ────────────────────────────────────────────────
+  try {
+    statusEl.textContent='⏳ Parsing stats…';
+    const statsRaw = d?.content?.stats?.Periods?.All?.stats || d?.content?.stats?.stats || [];
+    if (statsRaw.length > 0) {
+      const findStat = (key) => statsRaw.find(s =>
+        s.title?.toLowerCase().includes(key) || s.key?.toLowerCase().includes(key)
+      );
+      const getVal = (s, side) => {
+        if (!s) return 0;
+        const vals = s.stats || s.values || [s.homeValue ?? 0, s.awayValue ?? 0];
+        return num(side === 'home' ? vals[0] : vals[1]);
+      };
+      const poss  = findStat('possession') || findStat('ball possession');
+      const shots = findStat('total shot');
+      const sot   = findStat('shot on target') || findStat('shots on target');
+      const pass  = findStat('pass accuracy') || findStat('accurate pass');
+      const corn  = findStat('corner');
+      const xg    = findStat('xg') || findStat('expected goal');
+      const foul  = findStat('foul');
+      const yc    = findStat('yellow card');
+
+      const payload = {
+        match_id: matchId,
+        possession_home: getVal(poss,'home'), possession_away: getVal(poss,'away'),
+        shots_home: getVal(shots,'home'),     shots_away: getVal(shots,'away'),
+        shots_on_target_home: getVal(sot,'home'), shots_on_target_away: getVal(sot,'away'),
+        pass_accuracy_home: getVal(pass,'home'),  pass_accuracy_away: getVal(pass,'away'),
+        corners_home: getVal(corn,'home'),    corners_away: getVal(corn,'away'),
+        xg_home: getVal(xg,'home'),           xg_away: getVal(xg,'away'),
+        fouls_home: getVal(foul,'home'),      fouls_away: getVal(foul,'away'),
+        yellow_cards_home: getVal(yc,'home'), yellow_cards_away: getVal(yc,'away'),
+      };
+      const { error } = await sb.from('zeta_match_stats').upsert(payload, { onConflict: 'match_id' });
+      if (error) throw error;
+      log.push(`✅ Stats (${statsRaw.length} categories)`);
+    } else {
+      log.push('ℹ Stats: not available yet');
+    }
+  } catch(e) { log.push(`❌ Stats: ${e.message}`); errored=true; }
+
+  // ────────────────────────────────────────────────
+  // 3. COMMENTARY  →  zeta_match_commentary
+  // ────────────────────────────────────────────────
+  try {
+    statusEl.textContent='⏳ Parsing commentary…';
+    const entries = d?.content?.commentary?.entries || d?.content?.matchfacts?.events?.events || [];
+    const commentaryRows = entries
+      .filter(e => e.type === 'commentary' || e.commentary)
+      .map(e => ({
+        match_id:   matchId,
+        min:        (e.time || e.minute || e.timeStr || '').toString(),
+        text:       e.commentary || e.text || e.description || '',
+        type:       e.eventType || e.type || 'normal',
+        time_stamp: e.time !== undefined ? num(e.time) : null,
+      }))
+      .filter(r => r.text);
+
+    if (commentaryRows.length > 0) {
+      // Delete old and insert fresh
+      await sb.from('zeta_match_commentary').delete().eq('match_id', matchId);
+      const { error } = await sb.from('zeta_match_commentary').insert(commentaryRows);
+      if (error) throw error;
+      log.push(`✅ Commentary (${commentaryRows.length} entries)`);
+    } else {
+      log.push('ℹ Commentary: not available yet');
+    }
+  } catch(e) { log.push(`❌ Commentary: ${e.message}`); errored=true; }
+
+  // ────────────────────────────────────────────────
+  // 4. EVENTS (Goals, Cards, Subs)  →  zeta_match_events
+  // ────────────────────────────────────────────────
+  try {
+    statusEl.textContent='⏳ Parsing events…';
+    const allEvents = d?.content?.matchfacts?.events?.events || d?.content?.events || [];
+    const eventTypes = ['goal','yellowcard','redcard','substitution','var'];
+    const eventRows = allEvents
+      .filter(e => eventTypes.some(t => (e.type||e.eventType||'').toLowerCase().includes(t)))
+      .map(e => ({
+        match_id:    matchId,
+        time_stamp:  num(e.time || e.minute || 0),
+        type:        (e.type || e.eventType || 'event').toLowerCase(),
+        player_name: e.player?.name || e.playerName || e.name || '',
+        team:        e.teamId === (d?.general?.homeTeam?.id) ? 'home' : 'away',
+      }));
+
+    if (eventRows.length > 0) {
+      await sb.from('zeta_match_events').delete().eq('match_id', matchId);
+      const { error } = await sb.from('zeta_match_events').insert(eventRows);
+      if (error) throw error;
+      log.push(`✅ Events (${eventRows.length} events)`);
+    } else {
+      log.push('ℹ Events: not available yet');
+    }
+  } catch(e) { log.push(`❌ Events: ${e.message}`); errored=true; }
+
+  // ────────────────────────────────────────────────
+  // 5. STANDINGS  →  zeta_league_standings
+  // ────────────────────────────────────────────────
+  try {
+    statusEl.textContent='⏳ Parsing standings…';
+    const tables = d?.content?.table?.tables || d?.content?.standings?.tables || [];
+    const firstTable = tables[0]?.tableRows || tables[0]?.rows || [];
+
+    if (firstTable.length > 0 && leagueId) {
+      // Determine CL/EL/Relegation zone sizes (top 4 CL, next 2 EL, bottom 3 rel for typical leagues)
+      const total = firstTable.length;
+      const zoneOf = (pos) => {
+        if (pos <= 4) return 'cl';
+        if (pos <= 6) return 'el';
+        if (pos >= total - 2) return 'rel';
+        return 'none';
+      };
+
+      const standingRows = firstTable.map((row, i) => ({
+        league_id:  leagueId,
+        position:   row.idx || row.position || (i + 1),
+        team_name:  row.name || row.shortName || row.teamName || '?',
+        team_logo:  row.id ? `https://images.fotmob.com/image_resources/logo/teamlogo/${row.id}_small.png` : null,
+        played:     num(row.played),
+        won:        num(row.wins),
+        drawn:      num(row.draws),
+        lost:       num(row.losses),
+        gf:         num(row.scoresStr?.split('-')[0]) || 0,
+        ga:         num(row.scoresStr?.split('-')[1]) || 0,
+        gd:         num(row.goalConDiff || row.goalDifference),
+        points:     num(row.pts),
+        zone:       row.qualificationColor ? (
+                      row.qualificationColor === '#FF0000' ? 'rel' :
+                      row.qualificationColor === '#0070B9' ? 'cl' : 'el'
+                    ) : zoneOf(row.idx || (i+1)),
+      }));
+
+      // Delete existing standings for this league then insert fresh
+      await sb.from('zeta_league_standings').delete().eq('league_id', leagueId);
+      const { error } = await sb.from('zeta_league_standings').insert(standingRows);
+      if (error) throw error;
+      log.push(`✅ Standings (${standingRows.length} teams)`);
+    } else if (!leagueId) {
+      log.push('⚠ Standings: select a league in the match form first');
+    } else {
+      log.push('ℹ Standings: not in FotMob match data (fetch from league page instead)');
+    }
+  } catch(e) { log.push(`❌ Standings: ${e.message}`); errored=true; }
+
+  // ── Final status ──
+  statusEl.style.color = errored ? 'var(--acc2)' : 'var(--grn)';
+  statusEl.innerHTML = log.join('<br>');
+}
+
+// ─── MATCH CENTER & FOTMOB AUTO-SYNC ───
+async function openMatchCenterModal(matchId, matchTitle, fotmobId) {
+  document.getElementById('mc-match-id').value = matchId;
+  document.getElementById('mc-match-title').textContent = matchTitle;
+  document.getElementById('mc-fotmob-id').value = fotmobId || '';
+  document.getElementById('mc-sync-status').textContent = '';
+
+  const matchObj = ALL_MATCHES.find(m => m.id === matchId);
+  document.getElementById('mc-referee').value = matchObj?.referee || '';
+  document.getElementById('mc-venue').value = matchObj?.venue || '';
+
+  const { data: statsData } = await sb.from('zeta_match_stats').select('possession_home,possession_away').eq('match_id', matchId).maybeSingle();
+  document.getElementById('mc-poss-home').value = statsData?.possession_home || 50;
+  document.getElementById('mc-poss-away').value = statsData?.possession_away || 50;
+
+  openModal('m-match-center');
+}
+
+async function saveMatchCenterOverview() {
+  const matchId = document.getElementById('mc-match-id').value;
+  const referee = document.getElementById('mc-referee').value.trim();
+  const venue = document.getElementById('mc-venue').value.trim();
+  const fotmobId = document.getElementById('mc-fotmob-id').value.trim();
+  const possHome = parseInt(document.getElementById('mc-poss-home').value) || 50;
+  const possAway = parseInt(document.getElementById('mc-poss-away').value) || 50;
+
+  if (!matchId) return;
+
+  const { error: matchErr } = await sb.from('zeta_matches').update({
+    referee,
+    venue,
+    fotmob_id: fotmobId || null
+  }).eq('id', matchId);
+
+  if (matchErr) {
+    alert("Error: " + matchErr.message);
+    return;
+  }
+
+  const { data: existingStats } = await sb.from('zeta_match_stats').select('id').eq('match_id', matchId).maybeSingle();
+  if (existingStats) {
+    await sb.from('zeta_match_stats').update({
+      possession_home: possHome,
+      possession_away: possAway
+    }).eq('id', existingStats.id);
+  } else {
+    await sb.from('zeta_match_stats').insert({
+      match_id: matchId,
+      possession_home: possHome,
+      possession_away: possAway
+    });
+  }
+
+  alert("Overview saved successfully!");
+  closeModal('m-match-center');
+  loadMatches();
+}
+
+async function syncMatchFromFotmob() {
+  const matchId = document.getElementById('mc-match-id').value;
+  const fotmobId = document.getElementById('mc-fotmob-id').value.trim();
+  const statusEl = document.getElementById('mc-sync-status');
+  const proxyMode = document.getElementById('fetch-proxy')?.value || 'corsproxy';
+
+  if (!matchId) {
+    statusEl.innerHTML = '<span style="color:var(--accent-red)">Error: No match selected.</span>';
+    return;
+  }
+  if (!fotmobId) {
+    statusEl.innerHTML = '<span style="color:var(--accent-red)">Error: Please enter a FotMob Match ID.</span>';
+    return;
+  }
+
+  statusEl.innerHTML = '<div class="ld"><div class="sp"></div>Fetching details from FotMob...</div>';
+
+  let url = `https://www.fotmob.com/api/matchDetails?matchId=${fotmobId}`;
+  if (proxyMode === 'allorigins') {
+    url = "https://api.allorigins.win/raw?url=" + encodeURIComponent(url);
+  } else if (proxyMode === 'corsproxy') {
+    url = "https://corsproxy.io/?" + encodeURIComponent(url);
+  }
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
+    const data = await res.json();
+
+    statusEl.innerHTML = 'Parsing match stats...';
+
+    const infoBox = data.content?.matchFacts?.infoBox || {};
+    const refereeName = infoBox.Referee || '—';
+    const venueName = infoBox.Stadium?.name || data.stadium?.name || '—';
+
+    const statsList = data.content?.stats?.periods?.All?.stats || [];
+    let statsMap = {};
+    statsList.forEach(grp => {
+      if (grp.stats) {
+        grp.stats.forEach(s => {
+          statsMap[s.title.toLowerCase()] = s;
+        });
+      }
+    });
+
+    const getStat = (title, defHome = 0, defAway = 0) => {
+      const s = statsMap[title.toLowerCase()];
+      if (!s) return { home: defHome, away: defAway };
+      let hVal = s.stats[0];
+      let aVal = s.stats[1];
+      if (typeof hVal === 'string') hVal = parseFloat(hVal.replace(/%/g, '')) || 0;
+      if (typeof aVal === 'string') aVal = parseFloat(aVal.replace(/%/g, '')) || 0;
+      return { home: hVal, away: aVal };
+    };
+
+    const poss = getStat('Ball possession', 50, 50);
+    const shots = getStat('Total shots');
+    const targetShots = getStat('Shots on target');
+    const passes = getStat('Passes');
+    const corners = getStat('Corner kicks');
+    const xg = getStat('Expected goals (xG)');
+    const fouls = getStat('Fouls committed');
+    const yellow = getStat('Yellow cards');
+    const red = getStat('Red cards');
+
+    await sb.from('zeta_matches').update({
+      referee: refereeName,
+      venue: venueName,
+      fotmob_id: fotmobId
+    }).eq('id', matchId);
+
+    document.getElementById('mc-referee').value = refereeName;
+    document.getElementById('mc-venue').value = venueName;
+    document.getElementById('mc-poss-home').value = Math.round(poss.home);
+    document.getElementById('mc-poss-away').value = Math.round(poss.away);
+
+    const statsRow = {
+      match_id: matchId,
+      possession_home: Math.round(poss.home),
+      possession_away: Math.round(poss.away),
+      shots_home: Math.round(shots.home),
+      shots_away: Math.round(shots.away),
+      shots_on_target_home: Math.round(targetShots.home),
+      shots_on_target_away: Math.round(targetShots.away),
+      pass_accuracy_home: Math.round(passes.home),
+      pass_accuracy_away: Math.round(passes.away),
+      corners_home: Math.round(corners.home),
+      corners_away: Math.round(corners.away),
+      xg_home: parseFloat(xg.home) || 0.0,
+      xg_away: parseFloat(xg.away) || 0.0,
+      fouls_home: Math.round(fouls.home),
+      fouls_away: Math.round(fouls.away),
+      yellow_cards_home: Math.round(yellow.home),
+      yellow_cards_away: Math.round(yellow.away),
+      red_cards_home: Math.round(red.home),
+      red_cards_away: Math.round(red.away),
+    };
+
+    const { data: existingStats } = await sb.from('zeta_match_stats').select('id').eq('match_id', matchId).maybeSingle();
+    if (existingStats) {
+      await sb.from('zeta_match_stats').update(statsRow).eq('id', existingStats.id);
+    } else {
+      await sb.from('zeta_match_stats').insert(statsRow);
+    }
+
+    statusEl.innerHTML = 'Parsing lineups...';
+
+    const lineups = data.content?.lineup?.lineup || {};
+    const homeForm = lineups.home?.formation || '4-3-3';
+    const awayForm = lineups.away?.formation || '4-3-3';
+
+    const parsePlayers = (playersList) => {
+      return (playersList || []).map(p => {
+        const ratingVal = p.stats?.find(s => s.title === 'Rating')?.value || p.rating?.num || '6.0';
+        return {
+          name: p.name?.fullName || p.name || 'Player',
+          num: (p.shirt || p.number || '0').toString(),
+          pos: p.position || 'MF',
+          x: parseFloat(p.positionX || p.x || 0.5),
+          y: parseFloat(p.positionY || p.y || 0.5),
+          rating: parseFloat(ratingVal) || 6.0
+        };
+      });
+    };
+
+    let homeXI = parsePlayers(lineups.home?.starting11);
+    let awayXI = parsePlayers(lineups.away?.starting11);
+
+    const normalizeCoords = (players) => {
+      if (!players.length) return [];
+      const xs = players.map(p => p.x);
+      const ys = players.map(p => p.y);
+      const minX = Math.min(...xs);
+      const maxX = Math.max(...xs);
+      const minY = Math.min(...ys);
+      const maxY = Math.max(...ys);
+
+      return players.map(p => {
+        let nx = (maxX - minX) > 0 ? (p.x - minX) / (maxX - minX) : 0.5;
+        let ny = (maxY - minY) > 0 ? (p.y - minY) / (maxY - minY) : 0.5;
+        nx = 0.05 + nx * 0.9;
+        ny = 0.05 + ny * 0.9;
+        return { ...p, x: nx, y: ny };
+      });
+    };
+
+    homeXI = normalizeCoords(homeXI);
+    awayXI = normalizeCoords(awayXI);
+
+    const lineupRow = {
+      match_id: matchId,
+      home_formation: homeForm,
+      away_formation: awayForm,
+      home_players: homeXI,
+      away_players: awayXI,
+    };
+
+    const { data: existingLineup } = await sb.from('zeta_match_lineups').select('id').eq('match_id', matchId).maybeSingle();
+    if (existingLineup) {
+      await sb.from('zeta_match_lineups').update(lineupRow).eq('id', existingLineup.id);
+    } else {
+      await sb.from('zeta_match_lineups').insert(lineupRow);
+    }
+
+    statusEl.innerHTML = 'Parsing commentary events...';
+
+    await sb.from('zeta_match_commentary').delete().eq('match_id', matchId);
+
+    const tickerList = data.content?.liveticker?.teams || data.content?.liveticker?.events || [];
+    if (tickerList.length > 0) {
+      const commentaryRows = tickerList.map((evt, idx) => {
+        return {
+          match_id: matchId,
+          min: evt.time || evt.minute || '—',
+          type: evt.type || (evt.isGoal ? 'goal' : evt.isCard ? 'card' : 'info'),
+          text: evt.text || evt.comment || '',
+          time_stamp: new Date(Date.now() - idx * 1000).toISOString()
+        };
+      }).filter(row => row.text.trim().length > 0);
+
+      if (commentaryRows.length > 0) {
+        await sb.from('zeta_match_commentary').insert(commentaryRows);
+      }
+    }
+
+    statusEl.innerHTML = '<span style="color:var(--accent-green);font-weight:700">✅ Successfully synced Stats, Lineups, & Commentary!</span>';
+    loadMatches();
+  } catch (err) {
+    console.error(err);
+    statusEl.innerHTML = `<span style="color:var(--accent-red)">Error: ${err.message}. Try selecting a different proxy.</span>`;
+  }
+}
+
+// ─── HIGHLIGHTS ───
+async function loadHighlights(){
+  const{data}=await sb.from('zeta_highlights').select('*, zeta_matches(home_team_id, away_team_id), zeta_leagues(name)').order('created_at',{ascending:false});
+  ALL_HIGHLIGHTS=data||[];
+  renderHighlights(ALL_HIGHLIGHTS);
+}
+function renderHighlights(data){
+  const el=document.getElementById('highlights-body');
+  if(!data.length){el.innerHTML='<div class="es"><div class="ic2">🎬</div><p>No highlights</p></div>';return;}
+  const tm=window.ALL_TEAMS_MAP||{};
+  el.innerHTML=data.map(h=>{
+    const mn=h.zeta_matches?(tm[h.zeta_matches.home_team_id]||'Home')+' vs '+(tm[h.zeta_matches.away_team_id]||'Away'):'—';
+    const ln=h.zeta_leagues?.name||'—';
+    const safeH=JSON.stringify(h).replace(/"/g,'&quot;');
+    return `<div class="highlight-row"><img src="${h.thumbnail_url||''}" class="highlight-thumb" onerror="this.style.display='none'"/><div class="highlight-info"><div class="highlight-title">${h.title}</div><div class="highlight-meta">${mn} • ${ln} • ${h.duration||'—'} • ${h.views||0} views ${h.badge?`<span class="badge bo">${h.badge}</span>`:''} ${h.is_replay?`<span class="badge bp">Replay</span>`:`<span class="badge bg">Highlight</span>`} ${h.published?'<span class="badge bg">Published</span>':'<span class="badge br">Draft</span>'}</div></div><div><button class="btn bgh bsm" onclick='openHighlightModal(JSON.parse(this.dataset.h))' data-h="${safeH}">Edit</button> <button class="btn bd bsm" onclick="deleteHighlight('${h.id}')">Del</button></div></div>`;
+  }).join('');
+}
+function filterHighlights(q){renderHighlights(ALL_HIGHLIGHTS.filter(h=>(h.title||'').toLowerCase().includes(q.toLowerCase())));}
+function openHighlightModal(h){
+  document.getElementById('mhl-t').textContent=h?'Edit Highlight':'Add Highlight';
+  document.getElementById('mhl-id').value=h?.id||'';
+  document.getElementById('mhl-tt').value=h?.title||'';
+  document.getElementById('mhl-mt').value=h?.match_id||'';
+  document.getElementById('mhl-dr').value=h?.duration||'';
+  document.getElementById('mhl-vw').value=h?.views||0;
+  document.getElementById('mhl-lg').value=h?.league_id||'';
+  document.getElementById('mhl-th').value=h?.thumbnail_url||'';
+  document.getElementById('mhl-vurl').value=h?.video_url||'';
+  document.getElementById('mhl-bg').value=h?.badge||'';
+  document.getElementById('mhl-pub').value=h?.published?'true':'false';
+  document.getElementById('mhl-type').value=h?.is_replay?'replay':'highlight';
+  document.getElementById('mhl-er').textContent='';
+  document.getElementById('m-highlight').classList.add('open');
+}
+async function saveHighlight(){
+  const id=document.getElementById('mhl-id').value;
+  const p={title:document.getElementById('mhl-tt').value.trim(),match_id:document.getElementById('mhl-mt').value||null,duration:document.getElementById('mhl-dr').value.trim(),views:parseInt(document.getElementById('mhl-vw').value)||0,league_id:document.getElementById('mhl-lg').value||null,thumbnail_url:document.getElementById('mhl-th').value.trim()||null,video_url:document.getElementById('mhl-vurl').value.trim()||null,badge:document.getElementById('mhl-bg').value||null,published:document.getElementById('mhl-pub').value==='true',is_replay:document.getElementById('mhl-type').value==='replay'};
+  if(!p.title){document.getElementById('mhl-er').textContent='Title required.';return;}
+  const{error}=id?await sb.from('zeta_highlights').update(p).eq('id',id):await sb.from('zeta_highlights').insert({...p,created_at:new Date().toISOString()});
+  if(error){document.getElementById('mhl-er').textContent=error.message;return;}
+  closeModal('m-highlight');loadHighlights();loadDashboard();
+}
+async function deleteHighlight(id){if(!confirm('Delete highlight?'))return;await sb.from('zeta_highlights').delete().eq('id',id);loadHighlights();loadDashboard();}
+
+// ─── NEWS ───
+async function loadNews(){
+  const{data}=await sb.from('zeta_news').select().order('created_at',{ascending:false});
+  ALL_NEWS=data||[];
+  renderNews(ALL_NEWS);
+}
+function renderNews(data){
+  const el=document.getElementById('news-body');
+  if(!data.length){el.innerHTML='<div class="es"><div class="ic2">📰</div><p>No articles</p></div>';return;}
+  el.innerHTML='<table><thead><tr><th>Title</th><th>Category</th><th>Tag</th><th>Published</th><th>Date</th><th>Actions</th></tr></thead><tbody>'+
+  data.map(n=>`<tr><td><strong>${n.title}</strong></td><td><span class="badge bo">${(n.category||'other').toUpperCase()}</span></td><td><span class="badge bo">${(n.tag||'NEWS').toUpperCase()}</span></td><td>${n.published?'<span class="badge bg">Yes</span>':'<span class="badge br">No</span>'}</td><td style="color:var(--t2);font-size:12px">${n.created_at?new Date(n.created_at).toLocaleDateString():'—'}</td><td><button class="btn bgh bsm" onclick='openNewsModal(${JSON.stringify(n).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deleteNews('${n.id}')">Del</button></td></tr>`).join('')+
+  '</tbody></table>';
+}
+function openNewsModal(n){
+  document.getElementById('mnews-t').textContent=n?'Edit Article':'Add Article';
+  document.getElementById('mnews-id').value=n?.id||'';
+  document.getElementById('mnews-tt').value=n?.title||'';
+  document.getElementById('mnews-co').value=n?.content||'';
+  document.getElementById('mnews-im').value=n?.image||'';
+  document.getElementById('mnews-ca').value=n?.category||'football';
+  document.getElementById('mnews-tg').value=n?.tag||'NEWS';
+  document.getElementById('mnews-pub').value=n?.published?'true':'false';
+  document.getElementById('mnews-er').textContent='';
+  document.getElementById('m-news').classList.add('open');
+}
+async function saveNews(){
+  const id=document.getElementById('mnews-id').value;
+  const p={title:document.getElementById('mnews-tt').value.trim(),content:document.getElementById('mnews-co').value.trim(),image:document.getElementById('mnews-im').value.trim()||null,category:document.getElementById('mnews-ca').value,tag:document.getElementById('mnews-tg').value,published:document.getElementById('mnews-pub').value==='true'};
+  if(!p.title){document.getElementById('mnews-er').textContent='Title required.';return;}
+  const{error}=id?await sb.from('zeta_news').update(p).eq('id',id):await sb.from('zeta_news').insert({...p,created_at:new Date().toISOString()});
+  if(error){document.getElementById('mnews-er').textContent=error.message;return;}
+  closeModal('m-news');loadNews();loadDashboard();
+}
+async function deleteNews(id){if(!confirm('Delete article?'))return;await sb.from('zeta_news').delete().eq('id',id);loadNews();loadDashboard();}
+
+// ─── STREAMS ───
+async function loadStreams(){
+  const{data}=await sb.from('zeta_streams').select().order('created_at',{ascending:false});
+  ALL_STREAMS=data||[];
+  renderStreams(ALL_STREAMS);
+}
+function renderStreams(data){
+  const el=document.getElementById('streams-body');
+  if(!data.length){el.innerHTML='<div class="es"><div class="ic2">📺</div><p>No streams</p></div>';return;}
+  el.innerHTML='<table><thead><tr><th>Label</th><th>Quality</th><th>Theme Color</th><th>Servers JSON / URL</th><th>Status</th><th>Actions</th></tr></thead><tbody>'+
+  data.map(s=>{
+    const safeS=JSON.stringify(s).replace(/"/g,'&quot;');
+    const isJson = s.url && s.url.startsWith('[');
+    const urlDisplay = isJson ? 'JSON Array (' + JSON.parse(s.url).length + ' servers)' : s.url;
+    return `<tr><td><strong>${s.label}</strong></td><td><span class="badge bb">${(s.quality||'1080p').toUpperCase()}</span></td><td><div class="color-swatch" style="background:${s.color||'#00ff88'}"></div></td><td><div class="uc" title="${s.url}">${urlDisplay}</div></td><td><span class="badge ${s.deleted?'br':s.active?'bg':'bw'}">${s.deleted?'HIDDEN':s.active?'LIVE':'OFFLINE'}</span></td><td><button class="btn bgh bsm" onclick='openStreamModal(JSON.parse(this.dataset.s))' data-s="${safeS}">Edit</button> <button class="btn bd bsm" onclick="deleteStream('${s.id}')">Del</button></td></tr>`;
+  }).join('')+
+  '</tbody></table>';
+}
+function filterStreams(q){renderStreams(ALL_STREAMS.filter(s=>(s.label||'').toLowerCase().includes(q.toLowerCase())));}
+function openStreamModal(s){
+  document.getElementById('mstr-t').textContent=s?'Edit Stream':'Add Stream';
+  document.getElementById('mstr-id').value=s?.id||'';
+  document.getElementById('mstr-lb').value=s?.label||'';
+  document.getElementById('mstr-qlt').value=s?.quality||'1080p';
+  document.getElementById('mstr-clr').value=s?.color||'#00ff88';
+  document.getElementById('mstr-ur').value=s?.url||'';
+  document.getElementById('mstr-act').value=s?.active === false ? 'false' : 'true';
+  document.getElementById('mstr-er').textContent='';
+  document.getElementById('m-stream').classList.add('open');
+}
+async function saveStream(){
+  const id=document.getElementById('mstr-id').value;
+  const p={label:document.getElementById('mstr-lb').value.trim(),quality:document.getElementById('mstr-qlt').value.trim()||'1080p',color:document.getElementById('mstr-clr').value.trim()||'#00ff88',url:document.getElementById('mstr-ur').value.trim(),active:document.getElementById('mstr-act').value==='true',deleted:false};
+  if(!p.label||!p.url){document.getElementById('mstr-er').textContent='Label and URL required.';return;}
+  const{error}=id?await sb.from('zeta_streams').update(p).eq('id',id):await sb.from('zeta_streams').insert({...p,created_at:new Date().toISOString()});
+  if(error){document.getElementById('mstr-er').textContent=error.message;return;}
+  closeModal('m-stream');loadStreams();loadDashboard();
+}
+async function deleteStream(id){if(!confirm('Hide stream?'))return;await sb.from('zeta_streams').update({deleted:true}).eq('id',id);loadStreams();}
+
+// ─── NOTIFICATIONS ───
+async function loadNotifications(){
+  const{data}=await sb.from('zeta_notifications').select().order('created_at',{ascending:false}).limit(100);
+  ALL_NOTIFICATIONS=data||[];
+  renderNotifications(ALL_NOTIFICATIONS);
+}
+function renderNotifications(data){
+  const el=document.getElementById('notifications-body');
+  if(!data.length){el.innerHTML='<div class="es"><div class="ic2">🔔</div><p>No notifications</p></div>';return;}
+  el.innerHTML=data.map(n=>`<div class="notification-row"><div class="notification-icon" style="background:${(n.priority==='urgent'? 'var(--red)' : n.priority==='high'? 'var(--acc)' : 'var(--blu)')+"20"};color:${n.priority==='urgent'? 'var(--red)' : n.priority==='high'? 'var(--acc)' : 'var(--blu)'}">${n.category==='zeta_matches'?'⚽':n.category==='zeta_news'?'📰':n.category==='transfers'?'🔁':'⏰'}</div><div class="notification-content"><div class="notification-title">${n.title}</div><div class="notification-body">${n.body}</div><div class="notification-meta">${n.category} • ${n.priority} • ${n.target_audience} • ${n.sent_at?new Date(n.sent_at).toLocaleString():'Pending'}</div></div><div><button class="btn bgh bsm" onclick='openNotificationModal(${JSON.stringify(n).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deleteNotification('${n.id}')">Del</button></div></div>`).join('');
+}
+function openNotificationModal(n){
+  document.getElementById('mnotif-t').textContent=n?'Edit Notification':'Create Notification';
+  document.getElementById('mnotif-id').value=n?.id||'';
+  document.getElementById('mnotif-tt').value=n?.title||'';
+  document.getElementById('mnotif-bd').value=n?.body||'';
+  document.getElementById('mnotif-ca').value=n?.category||'zeta_matches';
+  document.getElementById('mnotif-pr').value=n?.priority||'normal';
+  document.getElementById('mnotif-tg').value=n?.target_audience||'all';
+  document.getElementById('mnotif-st').value=n?.send_at?n.send_at.substring(0,16):'';
+  document.getElementById('mnotif-er').textContent='';
+  document.getElementById('m-notification').classList.add('open');
+}
+async function saveNotification(){
+  const id=document.getElementById('mnotif-id').value;
+  const p={title:document.getElementById('mnotif-tt').value.trim(),body:document.getElementById('mnotif-bd').value.trim(),category:document.getElementById('mnotif-ca').value,priority:document.getElementById('mnotif-pr').value,target_audience:document.getElementById('mnotif-tg').value,send_at:document.getElementById('mnotif-st').value||null};
+  if(!p.title||!p.body){document.getElementById('mnotif-er').textContent='Title and body required.';return;}
+  const{error}=id?await sb.from('zeta_notifications').update(p).eq('id',id):await sb.from('zeta_notifications').insert({...p,created_at:new Date().toISOString()});
+  if(error){document.getElementById('mnotif-er').textContent=error.message;return;}
+  closeModal('m-notification');loadNotifications();
+}
+async function deleteNotification(id){if(!confirm('Delete notification?'))return;await sb.from('zeta_notifications').delete().eq('id',id);loadNotifications();}
+
+// ─── USERS ───
+async function loadUsers(){
+  const{data}=await sb.from('zeta_users').select().order('username');
+  ALL_USERS=data||[];
+  renderUsers(ALL_USERS);
+}
+function renderUsers(data){
+  const el=document.getElementById('users-body');
+  if(!data.length){el.innerHTML='<div class="es"><div class="ic2">👥</div><p>No users</p></div>';return;}
+  el.innerHTML='<table><thead><tr><th>Username</th><th>Expiry</th><th>Max Devices</th><th>Active Devices</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead><tbody>'+
+  data.map(u=>{
+    const dv=Object.keys(u.active_devices||{}).length;
+    const ex=u.expiry_date&&new Date(u.expiry_date)<new Date();
+    const role=u.is_admin?'admin':u.role||'user';
+    return `<tr><td><strong>${u.username}</strong></td><td><span class="badge ${ex?'br':'bg'}">${u.expiry_date?new Date(u.expiry_date).toLocaleDateString():'No expiry'}</span></td><td>${u.max_devices||2}</td><td>${dv}</td><td>${role}</td><td><span class="badge ${u.status==='active'?'bg':'br'}">${u.status||'active'}</span></td><td><button class="btn bgh bsm" onclick='openUserModal(${JSON.stringify(u).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="kickUser('${u.username}')">Kick</button> <button class="btn bd bsm" onclick="deleteUser('${u.id}')">Del</button></td></tr>`;
+  }).join('')+'</tbody></table>';
+}
+function filterUsers(q){renderUsers(ALL_USERS.filter(u=>(u.username||'').toLowerCase().includes(q.toLowerCase())));}
+function openUserModal(u){
+  document.getElementById('musr-t').textContent=u?'Edit User':'Add User';
+  document.getElementById('musr-id').value=u?.id||'';
+  document.getElementById('musr-un').value=u?.username||'';
+  document.getElementById('musr-pn').value='';
+  document.getElementById('musr-md').value=u?.max_devices||2;
+  document.getElementById('musr-ex').value=u?.expiry_date?u.expiry_date.substring(0,10):'';
+  document.getElementById('musr-rl').value=u?.is_admin?'admin':u?.role||'user';
+  document.getElementById('musr-st').value=u?.status||'active';
+  document.getElementById('musr-er').textContent='';
+  document.getElementById('m-usr').classList.add('open');
+}
+async function saveUser(){
+  const id=document.getElementById('musr-id').value;
+  const un=document.getElementById('musr-un').value.trim().toLowerCase();
+  const pn=document.getElementById('musr-pn').value.trim();
+  if(!un){document.getElementById('musr-er').textContent='Username required.';return;}
+  const p={username:un,max_devices:parseInt(document.getElementById('musr-md').value)||2,expiry_date:document.getElementById('musr-ex').value||null,is_admin:document.getElementById('musr-rl').value==='admin',role:document.getElementById('musr-rl').value,status:document.getElementById('musr-st').value};
+  if(pn)p.pin=await h256(pn);
+  const{error}=id?await sb.from('zeta_users').update(p).eq('id',id):await sb.from('zeta_users').insert({...p,active_devices:{}});
+  if(error){document.getElementById('musr-er').textContent=error.message;return;}
+  closeModal('m-usr');loadUsers();
+}
+async function kickUser(u){if(!confirm('Force logout '+u+'?'))return;await sb.from('zeta_users').update({active_devices:{}}).eq('username',u);loadUsers();}
+async function deleteUser(id){if(!confirm('Delete user?'))return;await sb.from('zeta_users').delete().eq('id',id);loadUsers();}
+
+// ─── SESSIONS ───
+async function loadSessions(){
+  const{data}=await sb.from('zeta_users').select('username,active_devices');
+  const el=document.getElementById('sess-body');
+  const ac=(data||[]).filter(u=>Object.keys(u.active_devices||{}).length>0);
+  if(!ac.length){el.innerHTML='<div class="es"><div class="ic2">😴</div><p>No active sessions</p></div>';return;}
+  const now=Date.now();
+  el.innerHTML='<div class="sessgrid">'+ac.map(u=>{
+    const devs=u.active_devices||{};
+    const n=Object.keys(devs).length;
+    const dl=Object.entries(devs).map(([d,t])=>`<div style="font-size:11px;color:var(--t3);margin-top:4px">📱 ${d.substring(0,20)}... (${Math.floor((now-t)/60000)}m ago)</div>`).join('');
+    return `<div class="sesscard"><div style="font-weight:600;font-size:14px;margin-bottom:4px">👤 ${u.username}</div><div style="font-size:11px;color:var(--t2)">${n} device(s) online</div>${dl}<button class="btn bd bsm" style="margin-top:10px" onclick="kickUser('${u.username}')">⏏ Force Logout</button></div>`;
+  }).join('')+'</div>';
+}
+
+// ─── SETTINGS ───
+async function loadSettings(){
+  const [{data: fsData}, {data: zcData}] = await Promise.all([
+    sb.from('fifa_settings').select().eq('id','global').maybeSingle(),
+    sb.from('zeta_config').select().eq('id','global').maybeSingle()
+  ]);
+  const s = fsData || {};
+  const z = zcData || {};
+  document.getElementById('cfg-form').innerHTML=`
+    <h3 style="font-family:Rajdhani;font-size:20px;font-weight:700;margin-bottom:20px">Global Config</h3>
+    
+    <h4 style="margin: 0 0 10px; font-family: Rajdhani; font-size: 16px; color: var(--acc);">App Updates & Maintenance (zeta_config)</h4>
+    <div class="fr">
+      <div class="fg"><label>Maintenance Mode</label><select id="cmm-mode"><option value="false" ${!z.maintenance_mode?'selected':''}>No (Active)</option><option value="true" ${z.maintenance_mode?'selected':''}>Yes (Under Maintenance)</option></select></div>
+      <div class="fg"><label>Force Update</label><select id="cfu"><option value="false" ${!z.force_update?'selected':''}>No</option><option value="true" ${z.force_update?'selected':''}>Yes</option></select></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Minimum App Version</label><input id="cv-min" value="${z.min_version||'1.0.0'}"/></div>
+      <div class="fg"><label>Latest App Version</label><input id="cv-lat" value="${z.latest_version||'1.1.5'}"/></div>
+    </div>
+    <div class="fg"><label>Update Alert Message</label><input id="cmm-msg" value="${z.update_message||''}"/></div>
+    <div class="fr">
+      <div class="fg"><label>Android Store URL</label><input id="cstore-and" value="${z.android_store_url||''}"/></div>
+      <div class="fg"><label>iOS Store URL</label><input id="cstore-ios" value="${z.ios_store_url||''}"/></div>
+    </div>
+    
+    <h4 style="margin: 20px 0 10px; font-family: Rajdhani; font-size: 16px; color: var(--acc);">General Settings (fifa_settings)</h4>
+    <div class="fr">
+      <div class="fg"><label>App Name / Watermark</label><input id="cw" value="${s.watermark||''}"/></div>
+      <div class="fg"><label>Contact WhatsApp</label><input id="cc" value="${s.contact||''}"/></div>
+    </div>
+    <div class="fg"><label>Subscription Price Details</label><input id="cpm" value="${s.price||''}"/></div>
+    
+    <button class="btn bp" style="margin-top:20px;" onclick="saveSettings()">💾 Save Settings</button>
+    <div id="cfg-msg" style="margin-top:12px;font-size:13px"></div>`;
+}
+async function saveSettings(){
+  const m=document.getElementById('cfg-msg');
+  m.style.color='var(--t3)';
+  m.textContent='Saving settings...';
+  
+  const fsParams = {
+    watermark: document.getElementById('cw').value.trim(),
+    contact: document.getElementById('cc').value.trim(),
+    price: document.getElementById('cpm').value.trim()
+  };
+  
+  const zcParams = {
+    maintenance_mode: document.getElementById('cmm-mode').value === 'true',
+    force_update: document.getElementById('cfu').value === 'true',
+    min_version: document.getElementById('cv-min').value.trim(),
+    latest_version: document.getElementById('cv-lat').value.trim(),
+    update_message: document.getElementById('cmm-msg').value.trim(),
+    android_store_url: document.getElementById('cstore-and').value.trim(),
+    ios_store_url: document.getElementById('cstore-ios').value.trim()
+  };
+
+  const [resFs, resZc] = await Promise.all([
+    sb.from('fifa_settings').upsert({id:'global', ...fsParams}),
+    sb.from('zeta_config').upsert({id:'global', ...zcParams})
+  ]);
+  
+  const err = resFs.error || resZc.error;
+  m.style.color=err?'var(--red)':'var(--grn)';
+  m.textContent=err?'Error: '+err.message:'Settings saved successfully!';
+  setTimeout(()=>{if(m)m.textContent='';},3000);
+}
+
+</script>
+</body>
+</html>
