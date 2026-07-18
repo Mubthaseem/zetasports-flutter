@@ -21,6 +21,7 @@ class SupabaseService {
       }
       final away = m['away_team'] ?? m['teams:away'] ?? (m['teams'] is Map ? m['teams']['away'] : null);
       if (away is Map) {
+        m['teams:away'] = away; // Backup map for layout compatibility
         m['away_team'] = away['name'];
         m['away_team_logo'] = away['logo'];
         m['away_team_color'] = away['color'];
@@ -87,6 +88,7 @@ class SupabaseService {
       }
       final away = m['away_team'] ?? m['teams:away'] ?? (m['teams'] is Map ? m['teams']['away'] : null);
       if (away is Map) {
+        m['teams:away'] = away; // Backup map for layout compatibility
         m['away_team'] = away['name'];
         m['away_team_logo'] = away['logo'];
         m['away_team_color'] = away['color'];
@@ -98,6 +100,7 @@ class SupabaseService {
       }
       return m;
     } catch (e) {
+
 
       debugPrint('fetchMatchById: $e');
       return null;
