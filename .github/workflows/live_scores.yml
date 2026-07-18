@@ -1,0 +1,51 @@
+name: Live Score Updater
+
+on:
+  schedule:
+    # Runs every 2 minutes — GitHub Actions minimum is 5 min for schedule,
+    # so we use a matrix trick: run at minute 0, 2, 4 past every 5 minutes.
+    # For true 2-min polling, the workflow calls itself recursively via
+    # workflow_dispatch with a delay. See job below.
+    - cron: '*/5 * * * *'   # Base trigger: every 5 minutes
+  workflow_dispatch:        # Manual trigger from GitHub UI or Admin Panel
+
+permissions:
+  contents: read
+
+jobs:
+  update-live-scores:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4        # Kill if hangs — never exceed cron interval
+
+    strategy:
+      matrix:
+        # Run 3 times per trigger with a delay to approximate every ~2 minutes
+        pass: [1, 2, 3]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Wait before pass ${{ matrix.pass }}
+        if: matrix.pass != 1
+        run: |
+          # Pass 2 waits ~100s, Pass 3 waits ~200s (≈ 2 min apart within 5 min window)
+          WAIT=$(( (${{ matrix.pass }} - 1) * 100 ))
+          echo "⏳ Waiting ${WAIT}s before pass ${{ matrix.pass }}..."
+          sleep $WAIT
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install --prefix scripts
+
+      - name: Run live score updater
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          echo "🚀 Pass ${{ matrix.pass }} — $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          node scripts/live_score_updater.mjs

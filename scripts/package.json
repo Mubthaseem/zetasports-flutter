@@ -1,0 +1,12 @@
+{
+  "name": "zetasports-scripts",
+  "version": "1.0.0",
+  "description": "Server-side scripts for ZetaSports automation",
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.44.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
