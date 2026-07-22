@@ -4,11 +4,27 @@ import json
 import datetime
 import requests
 
-# Configuration (Uses Environment Variables for cloud hosting, falls back to defaults)
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "8611917546:AAH3C1LZ6QhwaSGpPYJTGTXJR52SmO3Va_k")
+# Configuration (Uses Environment Variables for cloud hosting)
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 OWNER_CHAT_ID = os.environ.get("OWNER_CHAT_ID", "1386396531")
 SB_URL = os.environ.get("SUPABASE_URL", "https://voocdrpetiyspuhyeapi.supabase.co")
-SB_KEY = os.environ.get("SUPABASE_KEY", "sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV")
+SB_KEY = os.environ.get("SUPABASE_KEY", "")
+
+if not TELEGRAM_TOKEN or not SB_KEY:
+    # If not running in cloud, try loading from local settings.json for easier testing
+    try:
+        local_settings = os.path.join(os.path.dirname(__file__), "local-agent", "settings.json")
+        if os.path.exists(local_settings):
+            with open(local_settings, "r") as f:
+                cfg = json.load(f)
+                if not TELEGRAM_TOKEN:
+                    TELEGRAM_TOKEN = cfg.get("telegram_token", "")
+                if not SB_KEY:
+                    SB_KEY = cfg.get("supabase_key", "")
+                if SB_URL == "https://voocdrpetiyspuhyeapi.supabase.co":
+                    SB_URL = cfg.get("supabase_url", SB_URL)
+    except Exception:
+        pass
 
 SB_HEADERS = {
     'apikey': SB_KEY,

@@ -2,9 +2,23 @@ import requests
 import json
 import datetime
 
-# Supabase Credentials
+import os
+
+# Load settings to get Supabase credentials
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+SETTINGS_FILE = os.path.join(CURRENT_DIR, 'settings.json')
+
 SB_URL = 'https://voocdrpetiyspuhyeapi.supabase.co'
-SB_KEY = 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV'
+SB_KEY = ''
+
+if os.path.exists(SETTINGS_FILE):
+    try:
+        with open(SETTINGS_FILE, 'r') as f:
+            cfg = json.load(f)
+            SB_URL = cfg.get("supabase_url", SB_URL)
+            SB_KEY = cfg.get("supabase_key", SB_KEY)
+    except Exception:
+        pass
 
 SB_HEADERS = {
     'apikey': SB_KEY,
