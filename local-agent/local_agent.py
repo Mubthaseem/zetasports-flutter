@@ -752,6 +752,81 @@ def process_with_rules(message):
         "💡 *Note:* I will automatically post harvested stream links and health recovery alerts directly to your configured Telegram and WhatsApp groups!"
     )
 
+@app.route('/api/telegram/command', methods=['POST', 'OPTIONS'])
+def telegram_command():
+    if request.method == 'OPTIONS':
+        resp = app.make_default_options_response()
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        resp.headers['Access-Control-Allow-Methods'] = 'POST, OPTIONS'
+        resp.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+        return resp
+    try:
+        data = request.json or {}
+        text = data.get("text", "").strip()
+        if not text:
+            resp = jsonify({"success": False, "error": "Empty command"})
+            resp.headers['Access-Control-Allow-Origin'] = '*'
+            return resp
+            
+        settings = daemon.load_settings()
+        token = settings.get("telegram_token")
+        chat_id = settings.get("telegram_chat_id") or "1386396531"  # Default owner chat ID
+        
+        from telegram_bot import handle_admin_command
+        reply_msg = handle_admin_command(token, chat_id, text)
+        
+        resp = jsonify({
+            "success": True,
+            "reply": reply_msg
+        })
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        return resp
+    except Exception as e:
+        resp = jsonify({"success": False, "error": str(e)})
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        return resp, 500
+
+@app.route('/api/telegram/status', methods=['GET', 'OPTIONS'])
+def telegram_status():
+    if request.method == 'OPTIONS':
+        resp = app.make_default_options_response()
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        resp.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+        resp.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+        return resp
+    try:
+        settings = daemon.load_settings()
+        token = settings.get("telegram_token")
+        chat_id = settings.get("telegram_chat_id") or "1386396531"
+        source_chat = settings.get("telegram_forward_source_id")
+        
+        bot_name = "ZetaSports Admin Bot"
+        is_valid = False
+        if token:
+            try:
+                res = requests.get(f"https://api.telegram.org/bot{token}/getMe", timeout=5)
+                if res.status_code == 200:
+                    bot_name = res.json().get("result", {}).get("first_name", bot_name)
+                    is_valid = True
+            except Exception:
+                pass
+                
+        resp = jsonify({
+            "success": True,
+            "bot_name": bot_name,
+            "token_configured": bool(token),
+            "token_valid": is_valid,
+            "chat_id": chat_id,
+            "source_chat": source_chat,
+            "daemon_running": daemon.running
+        })
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        return resp
+    except Exception as e:
+        resp = jsonify({"success": False, "error": str(e)})
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        return resp, 500
+
 if __name__ == '__main__':
     log_message("Flask Web Controller started.")
     app.run(host='0.0.0.0', port=5000, debug=False)

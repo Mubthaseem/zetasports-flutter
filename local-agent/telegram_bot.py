@@ -48,7 +48,9 @@ def handle_admin_command(token, chat_id, text):
     cmd = parts[0].lower()
     args_str = parts[1].strip() if len(parts) > 1 else ""
 
+    replies = []
     def reply(msg):
+        replies.append(msg)
         send_telegram_alert(token, chat_id, msg)
 
     try:
@@ -346,6 +348,8 @@ def handle_admin_command(token, chat_id, text):
 
     except Exception as e:
         reply(f"💥 Bot error processing command: {e}")
+
+    return "\n\n".join(replies)
 
 def sync_match_from_fotmob(match_id, fotmob_id):
     """Fetches details from FotMob API and writes to Supabase."""

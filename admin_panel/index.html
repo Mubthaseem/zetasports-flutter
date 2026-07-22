@@ -168,6 +168,7 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
         <div class="ni" onclick="goPage(this,'users')"><span class="ic">👥</span>Users</div>
         <div class="ni" onclick="goPage(this,'sessions')"><span class="ic">👁️</span>Sessions</div>
         <div class="ni" onclick="goPage(this,'settings')"><span class="ic">⚙️</span>Settings</div>
+        <div class="ni" onclick="goPage(this,'telegram')"><span class="ic">✈️</span>Telegram Bot</div>
       </div>
       <div class="sf">
         <div class="ab"><div class="av" id="aav">A</div><div><div class="an" id="anm">Admin</div><div class="ar">SUPER ADMIN</div></div></div>
@@ -326,6 +327,67 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
       <div class="page" id="page-settings">
         <div class="ph"><h1>Settings</h1><p>App-wide configuration</p></div>
         <div class="tc" style="padding:28px;max-width:600px"><div id="cfg-form"><div class="ld"><div class="sp"></div>Loading...</div></div></div>
+      </div>
+
+      <!-- TELEGRAM BOT CONSOLE -->
+      <div class="page" id="page-telegram">
+        <div class="ph">
+          <h1>✈️ Telegram Bot Command Center</h1>
+          <p>Interact with your iOS Admin Bot directly from the web panel</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 20px; align-items: start;">
+          <!-- Bot Info & Status Card -->
+          <div class="tc" style="padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+            <div style="text-align: center; padding-bottom: 15px; border-bottom: 1px solid var(--bdr);">
+              <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #0088cc, #00c6ff); color: white; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 12px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,136,204,0.3);" id="tg-bot-avatar">
+                ✈️
+              </div>
+              <h3 id="tg-bot-name" style="margin: 0; font-family: Rajdhani; font-size: 20px;">ZetaSports Bot</h3>
+              <p id="tg-bot-status" style="margin: 4px 0 0; font-size: 12px; color: var(--t3); display: flex; align-items: center; justify-content: center; gap: 6px;">
+                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ff4747;" id="tg-status-dot"></span>
+                Offline
+              </p>
+            </div>
+            
+            <div style="font-size: 13px; display: flex; flex-direction: column; gap: 8px; color: var(--t2); text-align: left;">
+              <div><strong>Owner Chat ID:</strong> <span id="tg-info-chatid" style="font-family: monospace;">-</span></div>
+              <div><strong>Forward Source:</strong> <span id="tg-info-source" style="font-family: monospace;">-</span></div>
+              <div><strong>Daemon Mode:</strong> <span id="tg-info-daemon" class="badge bw">OFF</span></div>
+            </div>
+            
+            <button class="btn bp" onclick="checkTelegramStatus()" style="width: 100%;">⟳ Refresh Connection</button>
+          </div>
+          
+          <!-- Chat Terminal -->
+          <div class="tc" style="height: 520px; display: flex; flex-direction: column; padding: 0; overflow: hidden; border-radius: 12px;">
+            <!-- Chat Header -->
+            <div style="background: var(--card2); border-bottom: 1px solid var(--bdr); padding: 12px 20px; display: flex; align-items: center; gap: 12px; text-align: left;">
+              <div style="font-size: 24px;">💬</div>
+              <div>
+                <h4 style="margin: 0; font-size: 15px; font-family: Rajdhani;">Console chat session</h4>
+                <p style="margin: 0; font-size: 11px; color: var(--t3);">Direct execution context</p>
+              </div>
+            </div>
+            
+            <!-- Chat Messages Container -->
+            <div id="tg-chat-messages" style="flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background: rgba(0,0,0,0.15); text-align: left;">
+              <!-- Bot greeting -->
+              <div class="tg-msg bot" style="display: flex; gap: 10px; max-width: 85%;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: #0088cc; color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; font-weight: bold;">Bot</div>
+                <div style="background: var(--card2); border: 1px solid var(--bdr); padding: 12px 16px; border-radius: 4px 16px 16px 16px; font-size: 14px; line-height: 1.5; color: var(--t1); white-space: pre-wrap;">Welcome to the ZetaSports Telegram Command Console!
+
+Type any command below (e.g. `/help`, `/streams`, `/matches`) to control the application visually. All outputs are executed on your live bot.</div>
+              </div>
+            </div>
+            
+            <!-- Chat Input Footer -->
+            <div style="background: var(--card2); border-top: 1px solid var(--bdr); padding: 12px 20px; display: flex; gap: 10px; align-items: center;">
+              <input id="tg-chat-input" placeholder="Type a slash command here... (e.g. /streams)" style="flex: 1; margin: 0;" onkeydown="if(event.key==='Enter')sendTelegramCommand()"/>
+              <button class="btn bp" onclick="sendTelegramCommand()" style="margin: 0; padding: 10px 20px;">Send ➔</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- AUTOCLIP VIDEO -->
@@ -772,6 +834,7 @@ function goPage(el,n){
   el.classList.add('active');
   if(n==='sessions')loadSessions();
   if(n==='settings')loadSettings();
+  if(n==='telegram')checkTelegramStatus();
 }
 function closeModal(id){document.getElementById(id).classList.remove('open');}
 document.querySelectorAll('.mo').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');});});
@@ -2480,6 +2543,116 @@ function downloadAcBat() {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+
+// ─── TELEGRAM BOT CONSOLE JS ───
+async function checkTelegramStatus() {
+  const nameEl = document.getElementById('tg-bot-name');
+  const statusEl = document.getElementById('tg-bot-status');
+  const chatidEl = document.getElementById('tg-info-chatid');
+  const sourceEl = document.getElementById('tg-info-source');
+  const daemonEl = document.getElementById('tg-info-daemon');
+  
+  try {
+    const res = await fetch('http://127.0.0.1:5000/api/telegram/status');
+    const data = await res.json();
+    if (data.success) {
+      nameEl.textContent = data.bot_name;
+      if (data.token_valid) {
+        statusEl.innerHTML = '<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#00ff88" id="tg-status-dot"></span> Online';
+      } else {
+        statusEl.innerHTML = '<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#ffaa00" id="tg-status-dot"></span> Token Configured';
+      }
+      chatidEl.textContent = data.chat_id || 'Not set';
+      sourceEl.textContent = data.source_chat || 'Not set';
+      daemonEl.textContent = data.daemon_running ? 'RUNNING' : 'OFF';
+      daemonEl.className = `badge ${data.daemon_running ? 'bg' : 'bw'}`;
+    } else {
+      throw new Error(data.error);
+    }
+  } catch (e) {
+    statusEl.innerHTML = '<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#ff4747" id="tg-status-dot"></span> Offline / Unreachable';
+    chatidEl.textContent = '—';
+    sourceEl.textContent = '—';
+    daemonEl.textContent = 'OFF';
+    daemonEl.className = 'badge bw';
+  }
+}
+
+async function sendTelegramCommand() {
+  const inputEl = document.getElementById('tg-chat-input');
+  const text = inputEl.value.trim();
+  if (!text) return;
+  
+  inputEl.value = '';
+  
+  const chatContainer = document.getElementById('tg-chat-messages');
+  const userMsgDiv = document.createElement('div');
+  userMsgDiv.className = 'tg-msg user';
+  userMsgDiv.style.cssText = 'display: flex; gap: 10px; max-width: 80%; margin-left: auto; flex-direction: row-reverse; margin-bottom: 12px;';
+  userMsgDiv.innerHTML = `
+    <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; font-weight: bold;">Me</div>
+    <div style="background: var(--accent); border: 1px solid transparent; padding: 12px 16px; border-radius: 16px 4px 16px 16px; font-size: 14px; line-height: 1.5; color: white; white-space: pre-wrap;">${text}</div>
+  `;
+  chatContainer.appendChild(userMsgDiv);
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+  
+  const botLoadingDiv = document.createElement('div');
+  botLoadingDiv.className = 'tg-msg bot loading-msg';
+  botLoadingDiv.style.cssText = 'display: flex; gap: 10px; max-width: 80%; margin-bottom: 12px;';
+  botLoadingDiv.innerHTML = `
+    <div style="width: 32px; height: 32px; border-radius: 50%; background: #0088cc; color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; font-weight: bold;">Bot</div>
+    <div style="background: var(--card2); border: 1px solid var(--bdr); padding: 12px 16px; border-radius: 4px 16px 16px 16px; font-size: 14px; line-height: 1.5; color: var(--t3);"><div class="ld" style="padding:0;display:inline-flex;gap:4px;"><div class="sp" style="width:14px;height:14px;border-width:2px;margin:0;"></div>typing...</div></div>
+  `;
+  chatContainer.appendChild(botLoadingDiv);
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+  
+  try {
+    const res = await fetch('http://127.0.0.1:5000/api/telegram/command', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: text })
+    });
+    const data = await res.json();
+    
+    botLoadingDiv.remove();
+    
+    const botReplyDiv = document.createElement('div');
+    botReplyDiv.className = 'tg-msg bot';
+    botReplyDiv.style.cssText = 'display: flex; gap: 10px; max-width: 85%; margin-bottom: 12px;';
+    
+    let rawReply = '';
+    if (data.success && data.reply) {
+      rawReply = data.reply;
+    } else {
+      rawReply = `❌ Error: ${data.error || 'No response from command handler'}`;
+    }
+    
+    let formattedReply = rawReply
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<strong>$1</strong>')
+      .replace(/`(.*?)`/g, '<code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;font-family:monospace;font-size:0.9em;color:var(--accent);">$1</code>')
+      .replace(/\n/g, '<br/>');
+      
+    botReplyDiv.innerHTML = `
+      <div style="width: 32px; height: 32px; border-radius: 50%; background: #0088cc; color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; font-weight: bold;">Bot</div>
+      <div style="background: var(--card2); border: 1px solid var(--bdr); padding: 12px 16px; border-radius: 4px 16px 16px 16px; font-size: 14px; line-height: 1.5; color: var(--t1);">${formattedReply}</div>
+    `;
+    chatContainer.appendChild(botReplyDiv);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  } catch (e) {
+    botLoadingDiv.remove();
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'tg-msg bot';
+    errorDiv.style.cssText = 'display: flex; gap: 10px; max-width: 80%; margin-bottom: 12px;';
+    errorDiv.innerHTML = `
+      <div style="width: 32px; height: 32px; border-radius: 50%; background: #ff4747; color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; font-weight: bold;">Bot</div>
+      <div style="background: var(--card2); border: 1px solid var(--bdr); padding: 12px 16px; border-radius: 4px 16px 16px 16px; font-size: 14px; line-height: 1.5; color: var(--red);">❌ Local Agent Unreachable (Offline). Make sure Cooper Daemon is running.</div>
+    `;
+    chatContainer.appendChild(errorDiv);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  }
+}
+
 
 </script>
 </body>
