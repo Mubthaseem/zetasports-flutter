@@ -1,10 +1,14 @@
-import requests
+import os
+import time
 import json
 import datetime
+import requests
 
-# Supabase Credentials
-SB_URL = 'https://voocdrpetiyspuhyeapi.supabase.co'
-SB_KEY = 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV'
+# Configuration (Uses Environment Variables for cloud hosting, falls back to defaults)
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "8611917546:AAH3C1LZ6QhwaSGpPYJTGTXJR52SmO3Va_k")
+OWNER_CHAT_ID = os.environ.get("OWNER_CHAT_ID", "1386396531")
+SB_URL = os.environ.get("SUPABASE_URL", "https://voocdrpetiyspuhyeapi.supabase.co")
+SB_KEY = os.environ.get("SUPABASE_KEY", "sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV")
 
 SB_HEADERS = {
     'apikey': SB_KEY,
@@ -12,106 +16,90 @@ SB_HEADERS = {
     'Content-Type': 'application/json'
 }
 
-def send_telegram_alert(token, chat_id, message):
-    """
-    Sends a notification message to the configured Telegram Chat.
-    """
-    if not token or not chat_id:
-        print("Telegram configuration missing. Alert skipped.")
-        return False
-        
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
+OFFSET_FILE = "telegram_offset.txt"
+
+def send_telegram_message(text):
+    """Sends a message back to the owner."""
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     payload = {
-        'chat_id': chat_id,
-        'text': message,
+        'chat_id': OWNER_CHAT_ID,
+        'text': text,
         'parse_mode': 'Markdown'
     }
-    
     try:
-        response = requests.post(url, json=payload, timeout=10)
-        if response.status_code == 200:
-            print("Telegram alert sent successfully!")
-            return True
-        else:
-            print(f"Failed to send Telegram alert: {response.status_code} - {response.text}")
-            return False
+        requests.post(url, json=payload, timeout=10)
     except Exception as e:
-        print(f"Error sending Telegram alert: {e}")
-        return False
+        print(f"Error sending message: {e}")
 
-def handle_admin_command(token, chat_id, text):
-    """
-    Processes incoming admin commands from the owner.
-    """
+def send_start_menu():
+    """Sends the help menu along with a Telegram WebApp button to open the visual Admin Panel."""
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+    web_app_url = os.environ.get("WEB_APP_URL", "https://mubthaseem.github.io/zetasports-flutter/admin_panel/index.html")
+    
+    help_text = (
+        "☁️ *ZetaSports Cloud Admin Bot* ☁️\n"
+        "Running 24/7 in the cloud without your laptop!\n\n"
+        "📺 *STREAMS MANAGEMENT*\n"
+        "• `/streams` — List all streams\n"
+        "• `/addstream <label> | <url> | [quality] | [color]` — Add stream\n"
+        "• `/editstream <id> | [label=...] | [url=...] | [quality=...] | [color=...] | [active=true/false]` — Edit stream\n"
+        "• `/delstream <id>` — Delete stream\n\n"
+        "⚽ *MATCHES MANAGEMENT*\n"
+        "• `/matches [search]` — List matches\n"
+        "• `/addmatch <home_team_id> | <away_team_id> | <league_id> | <date_time> | [status] | [fotmob_id]` — Add match\n"
+        "• `/editmatch <id> | [status=...] | [home_score=...] | [away_score=...] | [time_elapsed=...] | [round=...] | [stream_ids=...] | [fotmob_id=...]` — Edit match\n"
+        "• `/delmatch <id>` — Delete match\n"
+        "• `/teams [query]` — Search team ID & details\n"
+        "• `/leagues [query]` — Search league ID & details\n\n"
+        "🔄 *FOTMOB SYNC*\n"
+        "• `/sync <match_id> | <fotmob_id>` — Sync live stats, lineup, events, & commentary from FotMob"
+    )
+
+    payload = {
+        'chat_id': OWNER_CHAT_ID,
+        'text': help_text,
+        'parse_mode': 'Markdown',
+        'reply_markup': {
+            'inline_keyboard': [[
+                {
+                    'text': '🚀 Open Visual Admin Panel',
+                    'web_app': {'url': web_app_url}
+                }
+            ]],
+            'keyboard': [[
+                {
+                    'text': '📱 Open Admin Panel',
+                    'web_app': {'url': web_app_url}
+                }
+            ]],
+            'resize_keyboard': True,
+            'persistent': True
+        }
+    }
+    try:
+        requests.post(url, json=payload, timeout=10)
+    except Exception as e:
+        print(f"Error sending start menu: {e}")
+
+def handle_admin_command(text):
+    """Processes incoming admin commands from the owner."""
     text = text.strip()
     parts = text.split(" ", 1)
     cmd = parts[0].lower()
     args_str = parts[1].strip() if len(parts) > 1 else ""
 
-    replies = []
-    def reply(msg):
-        replies.append(msg)
-        send_telegram_alert(token, chat_id, msg)
-
     try:
         if cmd in ["/start", "/help"]:
-            web_app_url = "https://mubthaseem.github.io/zetasports-flutter/admin_panel/index.html"
-            help_text = (
-                "📱 *ZetaSports iOS Admin Panel Bot* 📱\n"
-                "Manage your live streams and matches from Telegram on your phone.\n\n"
-                "📺 *STREAMS MANAGEMENT*\n"
-                "• `/streams` — List all streams\n"
-                "• `/addstream <label> | <url> | [quality] | [color]` — Add stream\n"
-                "• `/editstream <id> | [label=...] | [url=...] | [quality=...] | [color=...] | [active=true/false]` — Edit stream\n"
-                "• `/delstream <id>` — Delete stream\n\n"
-                "⚽ *MATCHES MANAGEMENT*\n"
-                "• `/matches [search]` — List matches\n"
-                "• `/addmatch <home_team_id> | <away_team_id> | <league_id> | <date_time> | [status] | [fotmob_id]` — Add match\n"
-                "• `/editmatch <id> | [status=...] | [home_score=...] | [away_score=...] | [time_elapsed=...] | [round=...] | [stream_ids=...] | [fotmob_id=...]` — Edit match\n"
-                "• `/delmatch <id>` — Delete match\n"
-                "• `/teams [query]` — Search team ID & details\n"
-                "• `/leagues [query]` — Search league ID & details\n\n"
-                "🔄 *FOTMOB SYNC*\n"
-                "• `/sync <match_id> | <fotmob_id>` — Sync live stats, lineup, events, & commentary from FotMob"
-            )
-            replies.append(help_text)
-            
-            # Send message with WebApp markup
-            payload = {
-                'chat_id': chat_id,
-                'text': help_text,
-                'parse_mode': 'Markdown',
-                'reply_markup': {
-                    'inline_keyboard': [[
-                        {
-                            'text': '🚀 Open Visual Admin Panel',
-                            'web_app': {'url': web_app_url}
-                        }
-                    ]],
-                    'keyboard': [[
-                        {
-                            'text': '📱 Open Admin Panel',
-                            'web_app': {'url': web_app_url}
-                        }
-                    ]],
-                    'resize_keyboard': True,
-                    'persistent': True
-                }
-            }
-            try:
-                requests.post(f"https://api.telegram.org/bot{token}/sendMessage", json=payload, timeout=10)
-            except Exception as e:
-                print(f"Error sending start menu: {e}")
+            send_start_menu()
 
-        # ─── STREAMS COMMANDS ───
         elif cmd == "/streams":
             res = requests.get(f"{SB_URL}/rest/v1/zeta_streams?deleted=neq.true&order=created_at.desc", headers=SB_HEADERS, timeout=10)
             if res.status_code != 200:
-                reply(f"❌ Error fetching streams: HTTP {res.status_code}")
+                send_telegram_message(f"❌ Error fetching streams: HTTP {res.status_code}")
                 return
             streams = res.json()
             if not streams:
-                reply("📺 No active streams found.")
+                send_telegram_message("📺 No active streams found.")
                 return
             
             lines = ["📺 *Current Live Streams:*"]
@@ -122,15 +110,15 @@ def handle_admin_command(token, chat_id, text):
                     f"  `{s['id']}`\n"
                     f"  Link: {s['url']}"
                 )
-            reply("\n\n".join(lines))
+            send_telegram_message("\n\n".join(lines))
 
         elif cmd == "/addstream":
             if not args_str:
-                reply("📝 Usage: `/addstream <label> | <url> | [quality] | [color]`")
+                send_telegram_message("📝 Usage: `/addstream <label> | <url> | [quality] | [color]`")
                 return
             args = [a.strip() for a in args_str.split("|")]
             if len(args) < 2:
-                reply("❌ Error: Minimum `label` and `url` required. Split arguments using `|`.")
+                send_telegram_message("❌ Error: Minimum `label` and `url` required. Split arguments using `|`.")
                 return
             
             label = args[0]
@@ -148,18 +136,18 @@ def handle_admin_command(token, chat_id, text):
             }
             res = requests.post(f"{SB_URL}/rest/v1/zeta_streams", headers=SB_HEADERS, json=payload, timeout=10)
             if res.status_code in [200, 201]:
-                reply(f"✅ Stream *{label}* added successfully!")
+                send_telegram_message(f"✅ Stream *{label}* added successfully!")
             else:
-                reply(f"❌ Failed to add stream: HTTP {res.status_code}\n{res.text}")
+                send_telegram_message(f"❌ Failed to add stream: HTTP {res.status_code}\n{res.text}")
 
         elif cmd == "/editstream":
             if not args_str:
-                reply("📝 Usage: `/editstream <id> | [label=...] | [url=...] | [quality=...] | [color=...] | [active=true/false]`")
+                send_telegram_message("📝 Usage: `/editstream <id> | [label=...] | [url=...] | [quality=...] | [color=...] | [active=true/false]`")
                 return
             args = [a.strip() for a in args_str.split("|")]
             stream_id = args[0]
             if len(args) < 2:
-                reply("❌ Error: Specify at least one attribute to update (e.g. `label=New Label`).")
+                send_telegram_message("❌ Error: Specify at least one attribute to update (e.g. `label=New Label`).")
                 return
             
             payload = {}
@@ -173,40 +161,38 @@ def handle_admin_command(token, chat_id, text):
                     payload[k] = v
 
             if not payload:
-                reply("❌ No valid attributes to edit. Example: `label=HD Link | active=true`")
+                send_telegram_message("❌ No valid attributes to edit. Example: `label=HD Link | active=true`")
                 return
 
             res = requests.patch(f"{SB_URL}/rest/v1/zeta_streams?id=eq.{stream_id}", headers=SB_HEADERS, json=payload, timeout=10)
             if res.status_code in [200, 204]:
-                reply(f"✅ Stream `{stream_id}` updated successfully!")
+                send_telegram_message(f"✅ Stream `{stream_id}` updated successfully!")
             else:
-                reply(f"❌ Failed to update stream: HTTP {res.status_code}\n{res.text}")
+                send_telegram_message(f"❌ Failed to update stream: HTTP {res.status_code}\n{res.text}")
 
         elif cmd == "/delstream":
             if not args_str:
-                reply("📝 Usage: `/delstream <id>`")
+                send_telegram_message("📝 Usage: `/delstream <id>`")
                 return
             res = requests.patch(f"{SB_URL}/rest/v1/zeta_streams?id=eq.{args_str}", headers=SB_HEADERS, json={"deleted": True}, timeout=10)
             if res.status_code in [200, 204]:
-                reply(f"✅ Stream `{args_str}` marked as deleted.")
+                send_telegram_message(f"✅ Stream `{args_str}` marked as deleted.")
             else:
-                reply(f"❌ Failed to delete stream: HTTP {res.status_code}\n{res.text}")
+                send_telegram_message(f"❌ Failed to delete stream: HTTP {res.status_code}\n{res.text}")
 
-        # ─── MATCHES COMMANDS ───
         elif cmd == "/matches":
             url = f"{SB_URL}/rest/v1/zeta_matches?order=date.desc"
             if args_str:
-                # Basic search by team name if query matches
                 url += f"&or=(home_team.ilike.*{args_str}*,away_team.ilike.*{args_str}*)"
             url += "&limit=10"
             
             res = requests.get(url, headers=SB_HEADERS, timeout=10)
             if res.status_code != 200:
-                reply(f"❌ Error fetching matches: HTTP {res.status_code}")
+                send_telegram_message(f"❌ Error fetching matches: HTTP {res.status_code}")
                 return
             matches = res.json()
             if not matches:
-                reply("⚽ No matches found.")
+                send_telegram_message("⚽ No matches found.")
                 return
             
             lines = ["⚽ *Recent Matches:*"]
@@ -218,34 +204,33 @@ def handle_admin_command(token, chat_id, text):
                     f"  ID: `{m['id']}`\n"
                     f"  FotMob ID: `{m.get('fotmob_id') or '—'}` | Streams: `{len(m.get('stream_ids') or [])}`"
                 )
-            reply("\n\n".join(lines))
+            send_telegram_message("\n\n".join(lines))
 
         elif cmd == "/addmatch":
             if not args_str:
-                reply("📝 Usage: `/addmatch <home_team_id> | <away_team_id> | <league_id> | <date_time> | [status] | [fotmob_id]`")
+                send_telegram_message("📝 Usage: `/addmatch <home_team_id> | <away_team_id> | <league_id> | <date_time> | [status] | [fotmob_id]`")
                 return
             args = [a.strip() for a in args_str.split("|")]
             if len(args) < 4:
-                reply("❌ Error: Home Team ID, Away Team ID, League ID, and Date Time (YYYY-MM-DD HH:MM) are required.")
+                send_telegram_message("❌ Error: Home Team ID, Away Team ID, League ID, and Date Time (YYYY-MM-DD HH:MM) are required.")
                 return
             
             home_id, away_id, league_id, date_val = args[0], args[1], args[2], args[3]
             status = args[4] if len(args) > 4 else "scheduled"
             fotmob_id = args[5] if len(args) > 5 else None
 
-            # Fetch team and league details from Supabase to fill text fields
             t_res = requests.get(f"{SB_URL}/rest/v1/zeta_teams?id=in.({home_id},{away_id})", headers=SB_HEADERS, timeout=10)
             l_res = requests.get(f"{SB_URL}/rest/v1/zeta_leagues?id=eq.{league_id}", headers=SB_HEADERS, timeout=10)
             
             if t_res.status_code != 200 or l_res.status_code != 200:
-                reply("❌ Error: Invalid team or league IDs. Verify using `/teams` or `/leagues`.")
+                send_telegram_message("❌ Error: Invalid team or league IDs. Verify using `/teams` or `/leagues`.")
                 return
             
             teams = {t["id"]: t for t in t_res.json()}
             leagues = l_res.json()
             
             if home_id not in teams or away_id not in teams or not leagues:
-                reply("❌ Error: Could not find team or league records for the provided IDs.")
+                send_telegram_message("❌ Error: Could not find team or league records for the provided IDs.")
                 return
 
             payload = {
@@ -267,18 +252,18 @@ def handle_admin_command(token, chat_id, text):
 
             res = requests.post(f"{SB_URL}/rest/v1/zeta_matches", headers=SB_HEADERS, json=payload, timeout=10)
             if res.status_code in [200, 201]:
-                reply(f"✅ Match *{teams[home_id]['name']} vs {teams[away_id]['name']}* created!")
+                send_telegram_message(f"✅ Match *{teams[home_id]['name']} vs {teams[away_id]['name']}* created!")
             else:
-                reply(f"❌ Failed to create match: HTTP {res.status_code}\n{res.text}")
+                send_telegram_message(f"❌ Failed to create match: HTTP {res.status_code}\n{res.text}")
 
         elif cmd == "/editmatch":
             if not args_str:
-                reply("📝 Usage: `/editmatch <id> | [status=...] | [home_score=...] | [away_score=...] | [time_elapsed=...] | [round=...] | [stream_ids=...] | [fotmob_id=...]`")
+                send_telegram_message("📝 Usage: `/editmatch <id> | [status=...] | [home_score=...] | [away_score=...] | [time_elapsed=...] | [round=...] | [stream_ids=...] | [fotmob_id=...]`")
                 return
             args = [a.strip() for a in args_str.split("|")]
             match_id = args[0]
             if len(args) < 2:
-                reply("❌ Error: Specify at least one attribute to update.")
+                send_telegram_message("❌ Error: Specify at least one attribute to update.")
                 return
             
             payload = {}
@@ -294,24 +279,24 @@ def handle_admin_command(token, chat_id, text):
                     payload[k] = v
 
             if not payload:
-                reply("❌ No valid attributes to edit. Example: `status=live | time_elapsed=15'`")
+                send_telegram_message("❌ No valid attributes to edit. Example: `status=live | time_elapsed=15'`")
                 return
 
             res = requests.patch(f"{SB_URL}/rest/v1/zeta_matches?id=eq.{match_id}", headers=SB_HEADERS, json=payload, timeout=10)
             if res.status_code in [200, 204]:
-                reply(f"✅ Match `{match_id}` updated successfully!")
+                send_telegram_message(f"✅ Match `{match_id}` updated successfully!")
             else:
-                reply(f"❌ Failed to update match: HTTP {res.status_code}\n{res.text}")
+                send_telegram_message(f"❌ Failed to update match: HTTP {res.status_code}\n{res.text}")
 
         elif cmd == "/delmatch":
             if not args_str:
-                reply("📝 Usage: `/delmatch <id>`")
+                send_telegram_message("📝 Usage: `/delmatch <id>`")
                 return
             res = requests.delete(f"{SB_URL}/rest/v1/zeta_matches?id=eq.{args_str}", headers=SB_HEADERS, timeout=10)
             if res.status_code in [200, 204]:
-                reply(f"✅ Match `{args_str}` deleted.")
+                send_telegram_message(f"✅ Match `{args_str}` deleted.")
             else:
-                reply(f"❌ Failed to delete match: HTTP {res.status_code}\n{res.text}")
+                send_telegram_message(f"❌ Failed to delete match: HTTP {res.status_code}\n{res.text}")
 
         elif cmd == "/teams":
             url = f"{SB_URL}/rest/v1/zeta_teams?order=name.asc"
@@ -321,17 +306,17 @@ def handle_admin_command(token, chat_id, text):
             
             res = requests.get(url, headers=SB_HEADERS, timeout=10)
             if res.status_code != 200:
-                reply(f"❌ Error fetching teams: HTTP {res.status_code}")
+                send_telegram_message(f"❌ Error fetching teams: HTTP {res.status_code}")
                 return
             teams = res.json()
             if not teams:
-                reply("🤷 No matching teams found.")
+                send_telegram_message("🤷 No matching teams found.")
                 return
             
             lines = ["⚽ *Teams List:*"]
             for t in teams:
                 lines.append(f"• *{t['name']}*\n  ID: `{t['id']}`")
-            reply("\n".join(lines))
+            send_telegram_message("\n".join(lines))
 
         elif cmd == "/leagues":
             url = f"{SB_URL}/rest/v1/zeta_leagues?order=name.asc"
@@ -341,43 +326,39 @@ def handle_admin_command(token, chat_id, text):
             
             res = requests.get(url, headers=SB_HEADERS, timeout=10)
             if res.status_code != 200:
-                reply(f"❌ Error fetching leagues: HTTP {res.status_code}")
+                send_telegram_message(f"❌ Error fetching leagues: HTTP {res.status_code}")
                 return
             leagues = res.json()
             if not leagues:
-                reply("🏆 No matching leagues found.")
+                send_telegram_message("🏆 No matching leagues found.")
                 return
             
             lines = ["🏆 *Leagues List:*"]
             for l in leagues:
                 lines.append(f"• *{l['name']}* ({l.get('sport', 'football')})\n  ID: `{l['id']}`")
-            reply("\n".join(lines))
+            send_telegram_message("\n".join(lines))
 
-        # ─── FOTMOB SYNC ───
         elif cmd == "/sync":
             if not args_str:
-                reply("📝 Usage: `/sync <match_id> | <fotmob_id>`")
+                send_telegram_message("📝 Usage: `/sync <match_id> | <fotmob_id>`")
                 return
             args = [a.strip() for a in args_str.split("|")]
             if len(args) < 2:
-                reply("❌ Error: Specify both Match ID and FotMob Match ID. Split with `|`.")
+                send_telegram_message("❌ Error: Specify both Match ID and FotMob Match ID. Split with `|`.")
                 return
             
             match_id = args[0]
             fotmob_id = args[1]
             
-            reply(f"⏳ Syncing match `{match_id}` with FotMob `{fotmob_id}`...")
+            send_telegram_message(f"⏳ Syncing match `{match_id}` with FotMob `{fotmob_id}`...")
             status = sync_match_from_fotmob(match_id, fotmob_id)
-            
             if status == "success":
-                reply("✅ FotMob Sync successful! Stats, Lineups, & Commentary updated.")
+                send_telegram_message("✅ FotMob Sync successful! Stats, Lineups, & Commentary updated.")
             else:
-                reply(f"❌ Sync failed: {status}")
+                send_telegram_message(f"❌ Sync failed: {status}")
 
     except Exception as e:
-        reply(f"💥 Bot error processing command: {e}")
-
-    return "\n\n".join(replies)
+        send_telegram_message(f"💥 Bot error processing command: {e}")
 
 def sync_match_from_fotmob(match_id, fotmob_id):
     """Fetches details from FotMob API and writes to Supabase."""
@@ -385,7 +366,6 @@ def sync_match_from_fotmob(match_id, fotmob_id):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
-    
     try:
         res = requests.get(url, headers=headers, timeout=15)
         if res.status_code != 200:
@@ -570,13 +550,72 @@ def sync_match_from_fotmob(match_id, fotmob_id):
     except Exception as e:
         return str(e)
 
-if __name__ == '__main__':
-    # Quick test
-    import sys
-    if len(sys.argv) >= 3:
-        tok = sys.argv[1]
-        cid = sys.argv[2]
-        msg = "🚀 *ZetaSports Local Agent* test alert!"
-        send_telegram_alert(tok, cid, msg)
-    else:
-        print("Usage: python telegram_bot.py <bot_token> <chat_id>")
+def main():
+    print(f"☁️ ZetaSports Cloud Bot Started. Polling Telegram every 3 seconds...")
+    print(f"Connecting to Supabase URL: {SB_URL}")
+    print(f"Using Telegram Token: {TELEGRAM_TOKEN[:10]}...")
+
+    # Set up offset
+    offset = 0
+    if os.path.exists(OFFSET_FILE):
+        try:
+            with open(OFFSET_FILE, "r") as f:
+                offset = int(f.read().strip())
+        except Exception:
+            pass
+
+    while True:
+        try:
+            url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/getUpdates"
+            params = {"timeout": 10}
+            if offset:
+                params["offset"] = offset
+
+            res = requests.get(url, params=params, timeout=15)
+            if res.status_code != 200:
+                time.sleep(3)
+                continue
+
+            data = res.json()
+            if not data.get("ok"):
+                time.sleep(3)
+                continue
+
+            results = data.get("result", [])
+            for update in results:
+                update_id = update.get("update_id")
+                offset = update_id + 1
+                try:
+                    with open(OFFSET_FILE, "w") as f:
+                        f.write(str(offset))
+                except Exception:
+                    pass
+
+                # Handle text message
+                post = update.get("message")
+                if not post:
+                    continue
+
+                sender = post.get("from", {})
+                sender_id = str(sender.get("id", ""))
+                sender_username = str(sender.get("username", "")).lower()
+
+                # Security check: Only process commands sent by the owner chat ID or username
+                is_owner = (sender_id == OWNER_CHAT_ID or sender_username == "mubthaseem28")
+                if not is_owner:
+                    print(f"Ignored unauthorized message from sender_id={sender_id}, username={sender_username}")
+                    continue
+
+                text = post.get("text", "")
+                if text and text.startswith("/"):
+                    print(f"Processing command: {text}")
+                    handle_admin_command(text)
+
+        except Exception as e:
+            print(f"Polling loop error: {e}")
+            time.sleep(5)
+
+        time.sleep(2)
+
+if __name__ == "__main__":
+    main()
