@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: zetasports-bot
+    env: python
+    buildCommand: pip install requests
+    startCommand: python cloud_telegram_bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: OWNER_CHAT_ID
+        value: "1386396531"
+      - key: SUPABASE_URL
+        value: "https://voocdrpetiyspuhyeapi.supabase.co"
+      - key: WEB_APP_URL
+        value: "https://mubthaseem.github.io/zetasports-flutter/admin_panel/index.html"
