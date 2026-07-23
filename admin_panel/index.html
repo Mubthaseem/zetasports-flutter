@@ -2094,13 +2094,17 @@ function addServerRow(srv) {
         </select>
       </div>
       <div class="fg" style="margin:0"><label>DRM</label>
-        <select class="srv-drm">
+        <select class="srv-drm" onchange="this.closest('.server-row').querySelector('.srv-drm-keys').style.display = this.value !== 'none' ? 'grid' : 'none'">
           <option value="none" ${(srv?.drmType||'none')==='none'?'selected':''}>None (Free)</option>
           <option value="widevine" ${srv?.drmType==='widevine'?'selected':''}>Widevine</option>
           <option value="fairplay" ${srv?.drmType==='fairplay'?'selected':''}>FairPlay</option>
           <option value="playready" ${srv?.drmType==='playready'?'selected':''}>PlayReady</option>
         </select>
       </div>
+    </div>
+    <div class="srv-drm-keys" style="display: ${(srv?.drmType || 'none') !== 'none' ? 'grid' : 'none'}; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px;">
+      <div class="fg" style="margin:0"><label>Key ID (HEX)</label><input class="srv-keyid" value="${srv?.keyId||''}" placeholder="e.g., 065051b9..."/></div>
+      <div class="fg" style="margin:0"><label>Key (HEX)</label><input class="srv-key" value="${srv?.key||''}" placeholder="e.g., 214bd176..."/></div>
     </div>
   `;
   container.appendChild(row);
@@ -2150,8 +2154,16 @@ async function saveStream(){
     const url  = row.querySelector('.srv-url').value.trim();
     const type = row.querySelector('.srv-type').value;
     const drm  = row.querySelector('.srv-drm').value;
+    const keyId = row.querySelector('.srv-keyid') ? row.querySelector('.srv-keyid').value.trim() : '';
+    const key   = row.querySelector('.srv-key') ? row.querySelector('.srv-key').value.trim() : '';
     if (!url) { document.getElementById('mstr-er').textContent = `Server "${name||'?'}" is missing a URL.`; return; }
-    servers.push({serverName: name || 'SERVER', url, type, drmType: drm});
+    
+    const serverObj = { serverName: name || 'SERVER', url, type, drmType: drm };
+    if (drm !== 'none') {
+      serverObj.keyId = keyId;
+      serverObj.key = key;
+    }
+    servers.push(serverObj);
   }
   // Store as JSON if multiple servers, plain URL if only one with no-drm
   const urlValue = servers.length === 1 && servers[0].drmType === 'none' && servers[0].type === 'm3u8'
