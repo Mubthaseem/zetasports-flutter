@@ -365,18 +365,30 @@ class _PlayerScreenState extends State<PlayerScreen>
     <html>
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      <script src="https://ajax.googleapis.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/shaka-player/4.3.5/controls.css" />
       <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: black; overflow: hidden; }
+        .shaka-video-container { width: 100% !important; height: 100% !important; }
         video { width: 100%; height: 100%; object-fit: contain; }
+        /* Custom premium look matching ZetaSports */
+        .shaka-play-button-container { transform: scale(1.2); }
+        .shaka-seek-bar-container { display: none !important; } /* Hide seek bar since it is a live stream */
       </style>
     </head>
     <body>
-      <video id="video" autoplay controls playsinline></video>
+      <div data-shaka-player-container id="video-container" style="width:100%; height:100%;">
+        <video data-shaka-player id="video" autoplay playsinline></video>
+      </div>
       <script>
         async function initPlayer() {
           const video = document.getElementById('video');
+          const videoContainer = document.getElementById('video-container');
           const player = new shaka.Player(video);
+          
+          // Attach UI Overlay
+          const ui = new shaka.ui.Overlay(player, videoContainer, video);
+          const controls = ui.getControls();
           
           player.addEventListener('error', (event) => {
             console.error('Shaka Player Error:', event.detail);
