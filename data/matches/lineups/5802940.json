@@ -1,6 +1,6 @@
 {
   "matchId": "5802940",
-  "updatedAt": "2026-09-19T19:34:02.072Z",
+  "updatedAt": "2026-09-19T21:45:24.113Z",
   "home": {
     "formation": "4-2-3-1",
     "coach": "Paulo Fonseca",
@@ -107,6 +107,46 @@
     ],
     "bench": [
       {
+        "id": "1793640",
+        "name": "Khalis Merah",
+        "number": "18",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1896949",
+        "name": "Kaïl Boudache",
+        "number": "26",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1368710",
+        "name": "Noah Nartey",
+        "number": "99",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1057433",
+        "name": "Tanner Tessmann",
+        "number": "6",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "887704",
+        "name": "Keito Nakamura",
+        "number": "11",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
         "id": "767014",
         "name": "Rémy Descamps",
         "number": "40",
@@ -131,49 +171,9 @@
         "captain": false
       },
       {
-        "id": "1793640",
-        "name": "Khalis Merah",
-        "number": "18",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
         "id": "1512829",
         "name": "Mohamed Ouédraogo",
         "number": "76",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1368710",
-        "name": "Noah Nartey",
-        "number": "99",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1057433",
-        "name": "Tanner Tessmann",
-        "number": "6",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1896949",
-        "name": "Kaïl Boudache",
-        "number": "26",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "887704",
-        "name": "Keito Nakamura",
-        "number": "11",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -286,17 +286,25 @@
     ],
     "bench": [
       {
-        "id": "625422",
-        "name": "Nicolas Lemaître",
-        "number": "16",
+        "id": "813055",
+        "name": "Mousa Tamari",
+        "number": "11",
         "position": "SUB",
         "rating": null,
         "captain": false
       },
       {
-        "id": "1079554",
-        "name": "Anthony Rouault",
-        "number": "24",
+        "id": "1280225",
+        "name": "Estéban Lepaul",
+        "number": "9",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "693171",
+        "name": "Ludovic Blas",
+        "number": "10",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -318,17 +326,17 @@
         "captain": false
       },
       {
-        "id": "693171",
-        "name": "Ludovic Blas",
-        "number": "10",
+        "id": "625422",
+        "name": "Nicolas Lemaître",
+        "number": "16",
         "position": "SUB",
         "rating": null,
         "captain": false
       },
       {
-        "id": "813055",
-        "name": "Mousa Tamari",
-        "number": "11",
+        "id": "1079554",
+        "name": "Anthony Rouault",
+        "number": "24",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -337,14 +345,6 @@
         "id": "765466",
         "name": "Sebastian Szymański",
         "number": "17",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1280225",
-        "name": "Estéban Lepaul",
-        "number": "9",
         "position": "SUB",
         "rating": null,
         "captain": false

@@ -1,65 +1,65 @@
 {
   "matchId": "5802939",
-  "updatedAt": "2026-09-19T19:33:59.950Z",
+  "updatedAt": "2026-09-19T21:45:22.935Z",
   "stats": [
     {
       "title": "Ball possession",
-      "homeValue": 54,
-      "awayValue": 46,
+      "homeValue": 51,
+      "awayValue": 49,
       "type": "number"
     },
     {
       "title": "Expected goals (xG)",
-      "homeValue": "0.28",
-      "awayValue": "0.47",
+      "homeValue": "0.84",
+      "awayValue": "0.97",
       "type": "number"
     },
     {
       "title": "Total shots",
-      "homeValue": 6,
-      "awayValue": 2,
+      "homeValue": 11,
+      "awayValue": 9,
       "type": "number"
     },
     {
       "title": "Shots on target",
-      "homeValue": 5,
-      "awayValue": 0,
+      "homeValue": 7,
+      "awayValue": 2,
       "type": "number"
     },
     {
       "title": "Touches in opposition box",
-      "homeValue": 8,
-      "awayValue": 5,
+      "homeValue": 16,
+      "awayValue": 17,
       "type": "number"
     },
     {
       "title": "Big chances",
-      "homeValue": 0,
-      "awayValue": 1,
+      "homeValue": 1,
+      "awayValue": 2,
       "type": "number"
     },
     {
       "title": "Big chances missed",
       "homeValue": 0,
-      "awayValue": 1,
-      "type": "number"
-    },
-    {
-      "title": "Accurate passes",
-      "homeValue": "216 (86%)",
-      "awayValue": "180 (82%)",
-      "type": "number"
-    },
-    {
-      "title": "Yellow cards",
-      "homeValue": 0,
       "awayValue": 2,
       "type": "number"
     },
     {
+      "title": "Accurate passes",
+      "homeValue": "385 (81%)",
+      "awayValue": "365 (81%)",
+      "type": "number"
+    },
+    {
+      "title": "Yellow cards",
+      "homeValue": 3,
+      "awayValue": 3,
+      "type": "number"
+    },
+    {
       "title": "Corners",
-      "homeValue": 0,
-      "awayValue": 0,
+      "homeValue": 1,
+      "awayValue": 3,
       "type": "number"
     },
     {
@@ -70,25 +70,25 @@
     },
     {
       "title": "Total shots",
-      "homeValue": 6,
-      "awayValue": 2,
+      "homeValue": 11,
+      "awayValue": 9,
       "type": "number"
     },
     {
       "title": "Shots off target",
-      "homeValue": 1,
-      "awayValue": 1,
+      "homeValue": 3,
+      "awayValue": 6,
       "type": "number"
     },
     {
       "title": "Shots on target",
-      "homeValue": 5,
-      "awayValue": 0,
+      "homeValue": 7,
+      "awayValue": 2,
       "type": "number"
     },
     {
       "title": "Blocked shots",
-      "homeValue": 0,
+      "homeValue": 1,
       "awayValue": 1,
       "type": "number"
     },
@@ -100,14 +100,14 @@
     },
     {
       "title": "Shots inside box",
-      "homeValue": 2,
-      "awayValue": 1,
+      "homeValue": 6,
+      "awayValue": 6,
       "type": "number"
     },
     {
       "title": "Shots outside box",
-      "homeValue": 4,
-      "awayValue": 1,
+      "homeValue": 5,
+      "awayValue": 3,
       "type": "number"
     },
     {
@@ -118,32 +118,32 @@
     },
     {
       "title": "Expected goals (xG)",
-      "homeValue": "0.28",
-      "awayValue": "0.47",
+      "homeValue": "0.84",
+      "awayValue": "0.97",
       "type": "number"
     },
     {
       "title": "xG open play",
-      "homeValue": "0.13",
-      "awayValue": "0.47",
+      "homeValue": "0.60",
+      "awayValue": "0.94",
       "type": "number"
     },
     {
       "title": "xG set play",
-      "homeValue": "0.15",
-      "awayValue": "0.00",
+      "homeValue": "0.24",
+      "awayValue": "0.03",
       "type": "number"
     },
     {
       "title": "xG non-penalty",
-      "homeValue": "0.28",
-      "awayValue": "0.47",
+      "homeValue": "0.84",
+      "awayValue": "0.97",
       "type": "number"
     },
     {
       "title": "xG on target (xGOT)",
-      "homeValue": "0.47",
-      "awayValue": "0.00",
+      "homeValue": "1.46",
+      "awayValue": "0.44",
       "type": "number"
     },
     {
@@ -154,50 +154,50 @@
     },
     {
       "title": "Passes",
-      "homeValue": 251,
-      "awayValue": 219,
+      "homeValue": 475,
+      "awayValue": 448,
       "type": "number"
     },
     {
       "title": "Accurate passes",
-      "homeValue": "216 (86%)",
-      "awayValue": "180 (82%)",
+      "homeValue": "385 (81%)",
+      "awayValue": "365 (81%)",
       "type": "number"
     },
     {
       "title": "Own half",
-      "homeValue": 100,
-      "awayValue": 115,
+      "homeValue": 198,
+      "awayValue": 213,
       "type": "number"
     },
     {
       "title": "Opposition half",
-      "homeValue": 116,
-      "awayValue": 65,
+      "homeValue": 187,
+      "awayValue": 152,
       "type": "number"
     },
     {
       "title": "Accurate long balls",
-      "homeValue": "24 (59%)",
-      "awayValue": "12 (55%)",
+      "homeValue": "40 (48%)",
+      "awayValue": "23 (50%)",
       "type": "number"
     },
     {
       "title": "Accurate crosses",
-      "homeValue": "2 (33%)",
-      "awayValue": "1 (50%)",
+      "homeValue": "4 (29%)",
+      "awayValue": "7 (50%)",
       "type": "number"
     },
     {
       "title": "Throws",
-      "homeValue": 9,
-      "awayValue": 9,
+      "homeValue": 16,
+      "awayValue": 19,
       "type": "number"
     },
     {
       "title": "Touches in opposition box",
-      "homeValue": 8,
-      "awayValue": 5,
+      "homeValue": 16,
+      "awayValue": 17,
       "type": "number"
     },
     {
@@ -214,32 +214,32 @@
     },
     {
       "title": "Tackles",
-      "homeValue": 6,
-      "awayValue": 6,
+      "homeValue": 14,
+      "awayValue": 9,
       "type": "number"
     },
     {
       "title": "Interceptions",
-      "homeValue": 4,
-      "awayValue": 6,
+      "homeValue": 11,
+      "awayValue": 12,
       "type": "number"
     },
     {
       "title": "Blocks",
       "homeValue": 1,
-      "awayValue": 0,
+      "awayValue": 1,
       "type": "number"
     },
     {
       "title": "Clearances",
-      "homeValue": 7,
-      "awayValue": 7,
+      "homeValue": 14,
+      "awayValue": 20,
       "type": "number"
     },
     {
       "title": "Keeper saves",
-      "homeValue": 0,
-      "awayValue": 4,
+      "homeValue": 1,
+      "awayValue": 5,
       "type": "number"
     },
     {
@@ -250,26 +250,26 @@
     },
     {
       "title": "Duels won",
-      "homeValue": 21,
-      "awayValue": 25,
+      "homeValue": 45,
+      "awayValue": 52,
       "type": "number"
     },
     {
       "title": "Ground duels won",
-      "homeValue": "14 (54%)",
-      "awayValue": "12 (46%)",
+      "homeValue": "30 (52%)",
+      "awayValue": "29 (49%)",
       "type": "number"
     },
     {
       "title": "Aerial duels won",
-      "homeValue": "7 (35%)",
-      "awayValue": "13 (65%)",
+      "homeValue": "15 (39%)",
+      "awayValue": "23 (61%)",
       "type": "number"
     },
     {
       "title": "Successful dribbles",
-      "homeValue": "0 (0%)",
-      "awayValue": "1 (17%)",
+      "homeValue": "2 (40%)",
+      "awayValue": "8 (50%)",
       "type": "number"
     },
     {
@@ -280,8 +280,8 @@
     },
     {
       "title": "Yellow cards",
-      "homeValue": 0,
-      "awayValue": 2,
+      "homeValue": 3,
+      "awayValue": 3,
       "type": "number"
     },
     {
@@ -292,8 +292,8 @@
     },
     {
       "title": "Fouls committed",
-      "homeValue": 8,
-      "awayValue": 8,
+      "homeValue": 15,
+      "awayValue": 15,
       "type": "number"
     }
   ]

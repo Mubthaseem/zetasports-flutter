@@ -1,6 +1,6 @@
 {
   "matchId": "5868078",
-  "updatedAt": "2026-09-19T19:34:06.659Z",
+  "updatedAt": "2026-09-19T21:45:26.484Z",
   "home": {
     "formation": "4-2-3-1",
     "coach": "Luis García",
@@ -107,6 +107,46 @@
     ],
     "bench": [
       {
+        "id": "837270",
+        "name": "Chidera Ejuke",
+        "number": "21",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1281461",
+        "name": "José Ángel Carmona",
+        "number": "22",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1130991",
+        "name": "Isaac Romero",
+        "number": "16",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "926643",
+        "name": "Alfon González",
+        "number": "7",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "678192",
+        "name": "Jon Guridi",
+        "number": "18",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
         "id": "1484851",
         "name": "Fran González",
         "number": "13",
@@ -118,14 +158,6 @@
         "id": "1413945",
         "name": "Iker Muñoz",
         "number": "34",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1281461",
-        "name": "José Ángel Carmona",
-        "number": "22",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -147,25 +179,9 @@
         "captain": false
       },
       {
-        "id": "926643",
-        "name": "Alfon González",
-        "number": "7",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
         "id": "1132607",
         "name": "Peque Fernández",
         "number": "10",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "678192",
-        "name": "Jon Guridi",
-        "number": "18",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -182,22 +198,6 @@
         "id": "1783498",
         "name": "Nico Guillen",
         "number": "27",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "837270",
-        "name": "Chidera Ejuke",
-        "number": "21",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1130991",
-        "name": "Isaac Romero",
-        "number": "16",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -310,30 +310,6 @@
     ],
     "bench": [
       {
-        "id": "1830259",
-        "name": "Iker Rodríguez",
-        "number": "35",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "169718",
-        "name": "Wojciech Szczęsny",
-        "number": "13",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1254166",
-        "name": "Alejandro Balde",
-        "number": "3",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
         "id": "1598982",
         "name": "Gerard Martín",
         "number": "18",
@@ -342,33 +318,9 @@
         "captain": false
       },
       {
-        "id": "705450",
-        "name": "Jules Koundé",
-        "number": "23",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1815149",
-        "name": "Xavi Espart",
-        "number": "12",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
         "id": "614834",
         "name": "Dani Olmo",
         "number": "20",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1279040",
-        "name": "Gavi",
-        "number": "6",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -393,6 +345,54 @@
         "id": "576165",
         "name": "Gabriel Jesus",
         "number": "9",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1830259",
+        "name": "Iker Rodríguez",
+        "number": "35",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "169718",
+        "name": "Wojciech Szczęsny",
+        "number": "13",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1254166",
+        "name": "Alejandro Balde",
+        "number": "3",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "705450",
+        "name": "Jules Koundé",
+        "number": "23",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1815149",
+        "name": "Xavi Espart",
+        "number": "12",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1279040",
+        "name": "Gavi",
+        "number": "6",
         "position": "SUB",
         "rating": null,
         "captain": false

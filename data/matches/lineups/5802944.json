@@ -1,6 +1,6 @@
 {
   "matchId": "5802944",
-  "updatedAt": "2026-09-19T19:34:04.278Z",
+  "updatedAt": "2026-09-19T21:45:25.199Z",
   "home": {
     "formation": "4-4-2",
     "coach": "Jens Berthel Askou",
@@ -107,6 +107,30 @@
     ],
     "bench": [
       {
+        "id": "1791727",
+        "name": "Alexis Vossah",
+        "number": "6",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1362516",
+        "name": "Santiago Hidalgo",
+        "number": "9",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1717493",
+        "name": "Sion Oppong",
+        "number": "11",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
         "id": "1487879",
         "name": "Mathys Niflore",
         "number": "60",
@@ -118,14 +142,6 @@
         "id": "1469996",
         "name": "David Odogu",
         "number": "19",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1791727",
-        "name": "Alexis Vossah",
-        "number": "6",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -158,22 +174,6 @@
         "id": "1611220",
         "name": "Julián Vignolo",
         "number": "7",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1362516",
-        "name": "Santiago Hidalgo",
-        "number": "9",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1717493",
-        "name": "Sion Oppong",
-        "number": "11",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -286,17 +286,49 @@
     ],
     "bench": [
       {
-        "id": "841705",
-        "name": "Arnaud Bodart",
-        "number": "16",
+        "id": "1816726",
+        "name": "Enzo Koffi",
+        "number": "27",
         "position": "SUB",
         "rating": null,
         "captain": false
       },
       {
-        "id": "1816726",
-        "name": "Enzo Koffi",
-        "number": "27",
+        "id": "1714197",
+        "name": "Sota Nakamura",
+        "number": "30",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1362622",
+        "name": "Junior Mwanga",
+        "number": "6",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1487952",
+        "name": "Ismaïl Bouneb",
+        "number": "44",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1073905",
+        "name": "Rassoul Ndiaye",
+        "number": "14",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "841705",
+        "name": "Arnaud Bodart",
+        "number": "16",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -318,41 +350,9 @@
         "captain": false
       },
       {
-        "id": "1487952",
-        "name": "Ismaïl Bouneb",
-        "number": "44",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1362622",
-        "name": "Junior Mwanga",
-        "number": "6",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
         "id": "1072117",
         "name": "Kaito Mizuta",
         "number": "17",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1073905",
-        "name": "Rassoul Ndiaye",
-        "number": "14",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1714197",
-        "name": "Sota Nakamura",
-        "number": "30",
         "position": "SUB",
         "rating": null,
         "captain": false
