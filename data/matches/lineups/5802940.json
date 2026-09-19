@@ -1,0 +1,362 @@
+{
+  "matchId": "5802940",
+  "updatedAt": "2026-09-19T19:34:02.072Z",
+  "home": {
+    "formation": "4-2-3-1",
+    "coach": "Paulo Fonseca",
+    "starters": [
+      {
+        "id": "651910",
+        "name": "Dominik Greif",
+        "number": "1",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1595629",
+        "name": "Zachary Athekame",
+        "number": "13",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "951498",
+        "name": "Felix Bacher",
+        "number": "20",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "592102",
+        "name": "Moussa Niakhaté",
+        "number": "19",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1060604",
+        "name": "Abner",
+        "number": "16",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1081025",
+        "name": "Mads Bidstrup",
+        "number": "2",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1113724",
+        "name": "Tyler Morton",
+        "number": "23",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1338390",
+        "name": "Ernest Nuamah",
+        "number": "7",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1037539",
+        "name": "Pavel Šulc",
+        "number": "10",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "473852",
+        "name": "Corentin Tolisso",
+        "number": "8",
+        "position": "MF",
+        "rating": null,
+        "captain": true,
+        "grid": ""
+      },
+      {
+        "id": "747767",
+        "name": "Loïs Openda",
+        "number": "17",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      }
+    ],
+    "bench": [
+      {
+        "id": "767014",
+        "name": "Rémy Descamps",
+        "number": "40",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "266105",
+        "name": "Clinton Mata",
+        "number": "22",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1125076",
+        "name": "Ruben Kluivert",
+        "number": "21",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1793640",
+        "name": "Khalis Merah",
+        "number": "18",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1512829",
+        "name": "Mohamed Ouédraogo",
+        "number": "76",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1368710",
+        "name": "Noah Nartey",
+        "number": "99",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1057433",
+        "name": "Tanner Tessmann",
+        "number": "6",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1896949",
+        "name": "Kaïl Boudache",
+        "number": "26",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "887704",
+        "name": "Keito Nakamura",
+        "number": "11",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      }
+    ]
+  },
+  "away": {
+    "formation": "4-1-4-1",
+    "coach": "Franck Haise",
+    "starters": [
+      {
+        "id": "279714",
+        "name": "Brice Samba",
+        "number": "30",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "402419",
+        "name": "Przemysław Frankowski",
+        "number": "95",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1186444",
+        "name": "Charlie Cresswell",
+        "number": "4",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1581722",
+        "name": "Abdelhamid Aït Boudlal",
+        "number": "48",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1233931",
+        "name": "Quentin Merlin",
+        "number": "26",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "562719",
+        "name": "Valentin Rongier",
+        "number": "21",
+        "position": "MF",
+        "rating": null,
+        "captain": true,
+        "grid": ""
+      },
+      {
+        "id": "770340",
+        "name": "Arnaud Nordin",
+        "number": "70",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "317062",
+        "name": "Adrien Thomasson",
+        "number": "28",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "770321",
+        "name": "Mahdi Camara",
+        "number": "45",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1391052",
+        "name": "Eliezer Mayenda",
+        "number": "12",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "972120",
+        "name": "Boulaye Dia",
+        "number": "22",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      }
+    ],
+    "bench": [
+      {
+        "id": "625422",
+        "name": "Nicolas Lemaître",
+        "number": "16",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1079554",
+        "name": "Anthony Rouault",
+        "number": "24",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "924446",
+        "name": "Bryan Reynolds",
+        "number": "14",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1553514",
+        "name": "Mahamadou Nagida",
+        "number": "18",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "693171",
+        "name": "Ludovic Blas",
+        "number": "10",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "813055",
+        "name": "Mousa Tamari",
+        "number": "11",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "765466",
+        "name": "Sebastian Szymański",
+        "number": "17",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1280225",
+        "name": "Estéban Lepaul",
+        "number": "9",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1707955",
+        "name": "Henrick Do Marcolino",
+        "number": "65",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      }
+    ]
+  }
+}

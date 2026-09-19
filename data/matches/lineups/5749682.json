@@ -1,0 +1,442 @@
+{
+  "matchId": "5749682",
+  "updatedAt": "2026-09-19T19:34:14.791Z",
+  "home": {
+    "formation": "3-4-2-1",
+    "coach": "Raffaele Palladino",
+    "starters": [
+      {
+        "id": "178732",
+        "name": "Łukasz Skorupski",
+        "number": "1",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1503574",
+        "name": "Eivind Helland",
+        "number": "5",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "935550",
+        "name": "Torbjørn Heggem",
+        "number": "14",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1173250",
+        "name": "Arthur Theate",
+        "number": "3",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1080669",
+        "name": "Nadir Zortea",
+        "number": "20",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "888921",
+        "name": "Lewis Ferguson",
+        "number": "19",
+        "position": "MF",
+        "rating": null,
+        "captain": true,
+        "grid": ""
+      },
+      {
+        "id": "790732",
+        "name": "Tommaso Pobega",
+        "number": "4",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "873956",
+        "name": "Juan Miranda",
+        "number": "33",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "414245",
+        "name": "Federico Bernardeschi",
+        "number": "10",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1044029",
+        "name": "Nicolò Cambiaghi",
+        "number": "28",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1017401",
+        "name": "Roberto Piccoli",
+        "number": "91",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      }
+    ],
+    "bench": [
+      {
+        "id": "25587",
+        "name": "Lorenzo De Silvestri",
+        "number": "29",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "689680",
+        "name": "Jens Odgaard",
+        "number": "21",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "661761",
+        "name": "Riccardo Orsolini",
+        "number": "7",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "641595",
+        "name": "Nikola Moro",
+        "number": "6",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1014630",
+        "name": "Emil Holm",
+        "number": "2",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1696050",
+        "name": "Massimo Pessina",
+        "number": "25",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1813717",
+        "name": "Ukko Happonen",
+        "number": "72",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1198712",
+        "name": "Martin Vitík",
+        "number": "41",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "814398",
+        "name": "Nicolò Casale",
+        "number": "16",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1333066",
+        "name": "Rahim Alhassane",
+        "number": "23",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "2008804",
+        "name": "Marco Libra",
+        "number": "18",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1661207",
+        "name": "Mikel Amondarain",
+        "number": "8",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1283469",
+        "name": "Oussama El Azzouzi",
+        "number": "17",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1344246",
+        "name": "Jay Enem",
+        "number": "22",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1402900",
+        "name": "Samuel Mbangula",
+        "number": "11",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      }
+    ]
+  },
+  "away": {
+    "formation": "3-5-2",
+    "coach": "Ignazio Abate",
+    "starters": [
+      {
+        "id": "637656",
+        "name": "Lucas Perri",
+        "number": "20",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "705484",
+        "name": "Eray Cömert",
+        "number": "5",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "750880",
+        "name": "Ardian Ismajli",
+        "number": "44",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "941953",
+        "name": "Saúl Coco",
+        "number": "23",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1642351",
+        "name": "Niccolò Fortini",
+        "number": "29",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1014980",
+        "name": "Daniel Bragança",
+        "number": "21",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "577911",
+        "name": "Rolando Mandragora",
+        "number": "8",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1218556",
+        "name": "Kian Fitz-Jim",
+        "number": "28",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1746591",
+        "name": "Alessio Cacciamani",
+        "number": "77",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "469615",
+        "name": "Giovanni Simeone",
+        "number": "18",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "557677",
+        "name": "Nikola Vlašić",
+        "number": "10",
+        "position": "MF",
+        "rating": null,
+        "captain": true,
+        "grid": ""
+      }
+    ],
+    "bench": [
+      {
+        "id": "1112684",
+        "name": "Nathan Patterson",
+        "number": "2",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "823113",
+        "name": "Sandro Kulenović",
+        "number": "17",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1301633",
+        "name": "Emirhan İlkhan",
+        "number": "6",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1231029",
+        "name": "Rafik Belghali",
+        "number": "45",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1110045",
+        "name": "Gaetano Oristanio",
+        "number": "11",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1577119",
+        "name": "Diego Mascardi",
+        "number": "26",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1817264",
+        "name": "Lapo Siviero",
+        "number": "76",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1529222",
+        "name": "Pietro Comuzzo",
+        "number": "15",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "115591",
+        "name": "Ricardo Rodríguez",
+        "number": "13",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "239350",
+        "name": "Cristiano Biraghi",
+        "number": "3",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1421505",
+        "name": "Gvidas Gineitis",
+        "number": "66",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "846761",
+        "name": "Zakaria Aboukhlal",
+        "number": "7",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "116555",
+        "name": "Duván Zapata",
+        "number": "91",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      }
+    ]
+  }
+}

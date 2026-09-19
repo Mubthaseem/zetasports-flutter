@@ -73,3 +73,11 @@ local-agent/token.json
 local-agent/settings.json
 local-agent/agent.log
 local-agent/python-embed/
+
+# Node.js & Web Platform
+node_modules/
+**/node_modules/
+frontend/dist/
+data-pipeline/dist/
+*.tmp.*
+

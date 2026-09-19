@@ -1,0 +1,52 @@
+name: Daily Fixtures Sync
+
+on:
+  schedule:
+    # Runs every 6 hours and at midnight UTC
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: sync-fixtures
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync-fixtures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: data-pipeline/package.json
+
+      - name: Install Dependencies
+        run: npm ci --prefix data-pipeline
+
+      - name: Run Fixtures Synchronization
+        run: npm run sync:fixtures --prefix data-pipeline
+
+      - name: Safe Git Commit & Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/fixtures/ data/competitions.json data/meta.json
+          if git diff --staged --quiet; then
+            echo "✅ No fixture changes detected. Skipping commit."
+          else
+            git commit -m "chore(data): refresh fixtures and competitions [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+            echo "🚀 Fixtures data updated."
+          fi

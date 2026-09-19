@@ -1,0 +1,25 @@
+{
+  "name": "zeta-sports-data-pipeline",
+  "version": "1.0.0",
+  "description": "Zeta Sports Football Data Synchronization Pipeline (GitHub Free Automated)",
+  "main": "dist/sync/sync-all.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "sync:all": "tsx src/sync/sync-all.ts",
+    "sync:live": "tsx src/sync/sync-live.ts",
+    "sync:fixtures": "tsx src/sync/sync-fixtures.ts",
+    "sync:standings": "tsx src/sync/sync-standings.ts",
+    "sync:details": "tsx src/sync/sync-match-details.ts",
+    "sync:news": "tsx src/sync/sync-news.ts",
+    "sync:historical": "tsx src/sync/sync-historical.ts"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}
