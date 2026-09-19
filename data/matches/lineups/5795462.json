@@ -1,22 +1,67 @@
 {
-  "matchId": "5795464",
-  "updatedAt": "2026-09-19T23:36:38.798Z",
+  "matchId": "5795462",
+  "updatedAt": "2026-09-19T23:36:48.351Z",
   "home": {
-    "formation": "4-2-3-1",
-    "coach": "Roberto De Zerbi",
+    "formation": "4-1-4-1",
+    "coach": "Matthias Jaissle",
     "starters": [
       {
-        "id": "1341475",
-        "name": "Antonín Kinský",
-        "number": "31",
+        "id": "1186978",
+        "name": "Lukás Hornícek",
+        "number": "21",
         "position": "MF",
         "rating": null,
         "captain": false,
         "grid": ""
       },
       {
-        "id": "941573",
-        "name": "Pedro Porro",
+        "id": "1296763",
+        "name": "Lewis Miley",
+        "number": "67",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1137407",
+        "name": "Malick Thiaw",
+        "number": "12",
+        "position": "MF",
+        "rating": null,
+        "captain": true,
+        "grid": ""
+      },
+      {
+        "id": "956682",
+        "name": "Sven Botman",
+        "number": "4",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1197655",
+        "name": "Lewis Hall",
+        "number": "3",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1643770",
+        "name": "Sean Steur",
+        "number": "14",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "521148",
+        "name": "Jacob Murphy",
         "number": "23",
         "position": "MF",
         "rating": null,
@@ -24,81 +69,36 @@
         "grid": ""
       },
       {
-        "id": "974618",
-        "name": "Jan Paul van Hecke",
-        "number": "6",
+        "id": "666857",
+        "name": "Yoane Wissa",
+        "number": "9",
         "position": "MF",
         "rating": null,
         "captain": false,
         "grid": ""
       },
       {
-        "id": "1097466",
-        "name": "Micky van de Ven",
-        "number": "37",
-        "position": "MF",
-        "rating": null,
-        "captain": true,
-        "grid": ""
-      },
-      {
-        "id": "357880",
-        "name": "Andrew Robertson",
-        "number": "3",
+        "id": "860975",
+        "name": "Joseph Willock",
+        "number": "28",
         "position": "MF",
         "rating": null,
         "captain": false,
         "grid": ""
       },
       {
-        "id": "620618",
-        "name": "Rodrigo Bentancur",
-        "number": "30",
+        "id": "760359",
+        "name": "Harvey Barnes",
+        "number": "11",
         "position": "MF",
         "rating": null,
         "captain": false,
         "grid": ""
       },
       {
-        "id": "867414",
-        "name": "Sandro Tonali",
-        "number": "16",
-        "position": "MF",
-        "rating": null,
-        "captain": false,
-        "grid": ""
-      },
-      {
-        "id": "1174337",
-        "name": "Sávio",
-        "number": "17",
-        "position": "MF",
-        "rating": null,
-        "captain": false,
-        "grid": ""
-      },
-      {
-        "id": "1356312",
-        "name": "Mateus Fernandes",
-        "number": "18",
-        "position": "MF",
-        "rating": null,
-        "captain": false,
-        "grid": ""
-      },
-      {
-        "id": "839204",
-        "name": "Omar Marmoush",
-        "number": "22",
-        "position": "MF",
-        "rating": null,
-        "captain": false,
-        "grid": ""
-      },
-      {
-        "id": "591734",
-        "name": "Dominic Solanke",
-        "number": "19",
+        "id": "1444231",
+        "name": "Matias Fernandez-Pardo",
+        "number": "20",
         "position": "MF",
         "rating": null,
         "captain": false,
@@ -107,73 +107,73 @@
     ],
     "bench": [
       {
-        "id": "1323305",
-        "name": "Archie Gray",
-        "number": "14",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "891743",
-        "name": "Mohammed Kudus",
-        "number": "20",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "493165",
-        "name": "James Maddison",
-        "number": "10",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "966027",
-        "name": "Conor Gallagher",
-        "number": "8",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1386775",
-        "name": "Lucas Bergvall",
-        "number": "15",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "72241",
-        "name": "Martin Dúbravka",
-        "number": "39",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1052898",
-        "name": "Destiny Udogie",
-        "number": "13",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "785411",
-        "name": "Marcos Senesi",
+        "id": "189982",
+        "name": "Fabian Schär",
         "number": "5",
         "position": "SUB",
         "rating": null,
         "captain": false
       },
       {
-        "id": "683402",
-        "name": "Tosin Adarabioyo",
-        "number": "4",
+        "id": "1624586",
+        "name": "Bazoumana Touré",
+        "number": "17",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1695681",
+        "name": "Aladji Bamba",
+        "number": "8",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "280484",
+        "name": "Nick Pope",
+        "number": "1",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1867092",
+        "name": "Mason Miley",
+        "number": "76",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1655958",
+        "name": "Miodrag Pivaš",
+        "number": "48",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1816289",
+        "name": "Kyran Thompson",
+        "number": "44",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1693396",
+        "name": "Michael Mills",
+        "number": "77",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1622265",
+        "name": "Vakhtang Salia",
+        "number": "49",
         "position": "SUB",
         "rating": null,
         "captain": false
@@ -181,30 +181,57 @@
     ]
   },
   "away": {
-    "formation": "4-2-3-1",
-    "coach": "Unai Emery",
+    "formation": "5-4-1",
+    "coach": "Sergej Jakirović",
     "starters": [
       {
-        "id": "1053679",
-        "name": "Zion Suzuki",
-        "number": "1",
+        "id": "1072068",
+        "name": "Konstantinos Tzolakis",
+        "number": "19",
         "position": "MF",
         "rating": null,
         "captain": false,
         "grid": ""
       },
       {
-        "id": "760320",
-        "name": "Aaron Wan-Bissaka",
-        "number": "29",
+        "id": "410836",
+        "name": "Semi Ajayi",
+        "number": "6",
         "position": "MF",
         "rating": null,
         "captain": false,
         "grid": ""
       },
       {
-        "id": "258269",
-        "name": "Victor Nilsson Lindelöf",
+        "id": "295062",
+        "name": "John Egan",
+        "number": "15",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "1686118",
+        "name": "Lucas Herrington",
+        "number": "22",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "709148",
+        "name": "Lewie Coyle",
+        "number": "2",
+        "position": "MF",
+        "rating": null,
+        "captain": true,
+        "grid": ""
+      },
+      {
+        "id": "933635",
+        "name": "Ryan Giles",
         "number": "3",
         "position": "MF",
         "rating": null,
@@ -212,62 +239,8 @@
         "grid": ""
       },
       {
-        "id": "419664",
-        "name": "Tyrone Mings",
-        "number": "5",
-        "position": "MF",
-        "rating": null,
-        "captain": false,
-        "grid": ""
-      },
-      {
-        "id": "1051097",
-        "name": "Matteo Ruggeri",
-        "number": "13",
-        "position": "MF",
-        "rating": null,
-        "captain": false,
-        "grid": ""
-      },
-      {
-        "id": "816325",
-        "name": "Boubacar Kamara",
-        "number": "8",
-        "position": "MF",
-        "rating": null,
-        "captain": false,
-        "grid": ""
-      },
-      {
-        "id": "1174672",
-        "name": "João Gomes",
-        "number": "35",
-        "position": "MF",
-        "rating": null,
-        "captain": false,
-        "grid": ""
-      },
-      {
-        "id": "356406",
-        "name": "John McGinn",
-        "number": "7",
-        "position": "MF",
-        "rating": null,
-        "captain": true,
-        "grid": ""
-      },
-      {
-        "id": "1520063",
-        "name": "Johan Manzambi",
-        "number": "44",
-        "position": "MF",
-        "rating": null,
-        "captain": false,
-        "grid": ""
-      },
-      {
-        "id": "610184",
-        "name": "Emiliano Buendía",
+        "id": "1231090",
+        "name": "Mohamed Belloumi",
         "number": "10",
         "position": "MF",
         "rating": null,
@@ -275,9 +248,36 @@
         "grid": ""
       },
       {
-        "id": "1197347",
-        "name": "Nicolas Jackson",
-        "number": "11",
+        "id": "807930",
+        "name": "Regan Slater",
+        "number": "27",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "280507",
+        "name": "Matt Crooks",
+        "number": "25",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "812982",
+        "name": "Sorba Thomas",
+        "number": "7",
+        "position": "MF",
+        "rating": null,
+        "captain": false,
+        "grid": ""
+      },
+      {
+        "id": "509151",
+        "name": "Oli McBurnie",
+        "number": "9",
         "position": "MF",
         "rating": null,
         "captain": false,
@@ -286,73 +286,73 @@
     ],
     "bench": [
       {
-        "id": "729731",
-        "name": "Matty Cash",
-        "number": "2",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1607333",
-        "name": "George Hemmings",
-        "number": "53",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "215384",
-        "name": "Ross Barkley",
-        "number": "6",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1593857",
-        "name": "Ibrahim Mbaye",
-        "number": "19",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "749661",
-        "name": "Tammy Abraham",
-        "number": "18",
-        "position": "SUB",
-        "rating": null,
-        "captain": false
-      },
-      {
-        "id": "1340673",
-        "name": "James Wright",
+        "id": "1203512",
+        "name": "Tim Iroegbunam",
         "number": "42",
         "position": "SUB",
         "rating": null,
         "captain": false
       },
       {
-        "id": "966021",
-        "name": "Taylor Harwood-Bellis",
-        "number": "4",
+        "id": "1180718",
+        "name": "Mohamed-Ali Cho",
+        "number": "50",
         "position": "SUB",
         "rating": null,
         "captain": false
       },
       {
-        "id": "1190033",
-        "name": "Lamare Bogarde",
-        "number": "26",
+        "id": "1137106",
+        "name": "Lucas Gourna-Douath",
+        "number": "29",
         "position": "SUB",
         "rating": null,
         "captain": false
       },
       {
-        "id": "1203665",
-        "name": "Alejandro Garnacho",
+        "id": "1705134",
+        "name": "Robinio Vaz",
+        "number": "47",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "956161",
+        "name": "Joe Gelhardt",
+        "number": "11",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "518500",
+        "name": "Dillon Phillips",
+        "number": "12",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "575780",
+        "name": "Paddy McNair",
         "number": "17",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1272349",
+        "name": "Elliot Stroud",
+        "number": "21",
+        "position": "SUB",
+        "rating": null,
+        "captain": false
+      },
+      {
+        "id": "1377949",
+        "name": "Jens Hjertø-Dahl",
+        "number": "14",
         "position": "SUB",
         "rating": null,
         "captain": false

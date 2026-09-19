@@ -1,154 +1,159 @@
 {
-  "matchId": "5868077",
-  "updatedAt": "2026-09-19T23:36:39.777Z",
+  "matchId": "5795457",
+  "updatedAt": "2026-09-19T23:36:46.696Z",
   "events": [
     {
-      "id": "9mqq3edyhsl",
+      "id": "3aq0ropro8i",
       "type": "GOAL",
-      "minute": 16,
+      "minute": 31,
       "teamId": "",
-      "playerName": "Ante Budimir"
+      "playerName": "Pascal Groß",
+      "assistPlayerName": "assist by Charalampos Kostoulas"
     },
     {
-      "id": "hfw9bd0ul8a",
+      "id": "c5xl06kr2bi",
       "type": "GOAL",
-      "minute": 21,
+      "minute": 33,
       "teamId": "",
-      "playerName": "Asier Osambela"
+      "playerName": "Charalampos Kostoulas"
     },
     {
-      "id": "cuud88pzwv",
+      "id": "b3g7p6vti6",
       "type": "GOAL",
-      "minute": 24,
+      "minute": 45,
       "teamId": "",
-      "playerName": "Pathé Ciss"
+      "playerName": "Charalampos Kostoulas",
+      "assistPlayerName": "assist by Diego Gómez"
     },
     {
-      "id": "xc4lma7snck",
+      "id": "cvwfcld2b6d",
       "type": "GOAL",
       "minute": 45,
       "teamId": "",
       "playerName": "Player"
     },
     {
-      "id": "u5w8cxg4nvk",
+      "id": "fxljq1kwjzc",
+      "type": "GOAL",
+      "minute": 45,
+      "teamId": "",
+      "playerName": "Ferdi Kadıoğlu"
+    },
+    {
+      "id": "jnh429g2vuk",
       "type": "GOAL",
       "minute": 45,
       "teamId": "",
       "playerName": "Player"
     },
     {
-      "id": "wv016v8nwo",
+      "id": "acr3sxixky7",
       "type": "GOAL",
-      "minute": 50,
+      "minute": 57,
       "teamId": "",
-      "playerName": "Sergio Camello",
-      "assistPlayerName": "assist by Adrià Pedrosa"
+      "playerName": "Chema Andrés",
+      "assistPlayerName": "assist by Pascal Groß"
     },
     {
-      "id": "q8nrjgqajt",
-      "type": "SUBSTITUTION",
-      "minute": 56,
-      "teamId": "",
-      "playerName": "Player"
-    },
-    {
-      "id": "gtj3y7iiky6",
-      "type": "SUBSTITUTION",
-      "minute": 56,
-      "teamId": "",
-      "playerName": "Player"
-    },
-    {
-      "id": "0ir66bwhyky9",
+      "id": "rwia4cwpi0d",
       "type": "SUBSTITUTION",
       "minute": 60,
       "teamId": "",
       "playerName": "Player"
     },
     {
-      "id": "8j5m19jjhbb",
+      "id": "ej4y9lpgsrk",
+      "type": "SUBSTITUTION",
+      "minute": 60,
+      "teamId": "",
+      "playerName": "Player"
+    },
+    {
+      "id": "q2vl03dy3g",
       "type": "GOAL",
-      "minute": 67,
-      "teamId": "",
-      "playerName": "Jon Moncayola"
-    },
-    {
-      "id": "pkzm57mzbj",
-      "type": "SUBSTITUTION",
-      "minute": 69,
-      "teamId": "",
-      "playerName": "Player"
-    },
-    {
-      "id": "nwwzgbhe3ni",
-      "type": "SUBSTITUTION",
-      "minute": 69,
-      "teamId": "",
-      "playerName": "Player"
-    },
-    {
-      "id": "j1u8mpsr6a",
-      "type": "SUBSTITUTION",
       "minute": 71,
       "teamId": "",
-      "playerName": "Player"
+      "playerName": "Pascal Struijk"
     },
     {
-      "id": "r265rbf08r",
-      "type": "SUBSTITUTION",
-      "minute": 71,
-      "teamId": "",
-      "playerName": "Player"
-    },
-    {
-      "id": "mf07e4e96w",
+      "id": "nifwyo3ngd",
       "type": "SUBSTITUTION",
       "minute": 73,
       "teamId": "",
       "playerName": "Player"
     },
     {
-      "id": "hlhnm8has65",
-      "type": "GOAL",
-      "minute": 77,
-      "teamId": "",
-      "playerName": "Sergio Herrera",
-      "description": {
-        "localizedKey": "not_on_pitch",
-        "defaultText": "Not on pitch"
-      }
-    },
-    {
-      "id": "dp9xqki0ye",
+      "id": "j0ehxiaybee",
       "type": "SUBSTITUTION",
-      "minute": 87,
+      "minute": 73,
       "teamId": "",
       "playerName": "Player"
     },
     {
-      "id": "vv7chzuk0yo",
+      "id": "aakod05stz9",
       "type": "SUBSTITUTION",
-      "minute": 87,
+      "minute": 76,
       "teamId": "",
       "playerName": "Player"
     },
     {
-      "id": "ofcum7vklnr",
+      "id": "maqa8ibpsa9",
+      "type": "SUBSTITUTION",
+      "minute": 76,
+      "teamId": "",
+      "playerName": "Player"
+    },
+    {
+      "id": "053k7ycdgmqs",
+      "type": "SUBSTITUTION",
+      "minute": 81,
+      "teamId": "",
+      "playerName": "Player"
+    },
+    {
+      "id": "4rkocdo41l",
+      "type": "SUBSTITUTION",
+      "minute": 85,
+      "teamId": "",
+      "playerName": "Player"
+    },
+    {
+      "id": "oinbpb4y48q",
+      "type": "SUBSTITUTION",
+      "minute": 86,
+      "teamId": "",
+      "playerName": "Player"
+    },
+    {
+      "id": "oqyskqsk71j",
+      "type": "SUBSTITUTION",
+      "minute": 86,
+      "teamId": "",
+      "playerName": "Player"
+    },
+    {
+      "id": "pzmzleaswtn",
       "type": "GOAL",
       "minute": 90,
       "teamId": "",
       "playerName": "Player"
     },
     {
-      "id": "pf7pe2wax9t",
+      "id": "vgll3y7tnim",
       "type": "GOAL",
       "minute": 90,
       "teamId": "",
-      "playerName": "Alemão"
+      "playerName": "Maxim De Cuyper"
     },
     {
-      "id": "iwh4e7npabi",
+      "id": "s8mw6l1waxc",
+      "type": "GOAL",
+      "minute": 90,
+      "teamId": "",
+      "playerName": "Declan Rice"
+    },
+    {
+      "id": "h193am357mt",
       "type": "GOAL",
       "minute": 90,
       "teamId": "",

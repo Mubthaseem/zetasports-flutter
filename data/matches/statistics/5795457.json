@@ -1,65 +1,65 @@
 {
-  "matchId": "5868077",
-  "updatedAt": "2026-09-19T23:36:39.744Z",
+  "matchId": "5795457",
+  "updatedAt": "2026-09-19T23:36:46.666Z",
   "stats": [
     {
       "title": "Ball possession",
-      "homeValue": 37,
-      "awayValue": 63,
+      "homeValue": 40,
+      "awayValue": 60,
       "type": "number"
     },
     {
       "title": "Expected goals (xG)",
-      "homeValue": "0.53",
-      "awayValue": "1.01",
+      "homeValue": "1.31",
+      "awayValue": "1.63",
       "type": "number"
     },
     {
       "title": "Total shots",
-      "homeValue": 10,
-      "awayValue": 19,
+      "homeValue": 17,
+      "awayValue": 11,
       "type": "number"
     },
     {
       "title": "Shots on target",
-      "homeValue": 3,
+      "homeValue": 5,
       "awayValue": 2,
       "type": "number"
     },
     {
       "title": "Touches in opposition box",
-      "homeValue": 21,
-      "awayValue": 14,
+      "homeValue": 30,
+      "awayValue": 36,
       "type": "number"
     },
     {
       "title": "Big chances",
-      "homeValue": 1,
-      "awayValue": 1,
-      "type": "number"
-    },
-    {
-      "title": "Big chances missed",
-      "homeValue": 0,
-      "awayValue": 0,
-      "type": "number"
-    },
-    {
-      "title": "Accurate passes",
-      "homeValue": "188 (70%)",
-      "awayValue": "395 (83%)",
-      "type": "number"
-    },
-    {
-      "title": "Yellow cards",
       "homeValue": 3,
       "awayValue": 2,
       "type": "number"
     },
     {
-      "title": "Corners",
+      "title": "Big chances missed",
+      "homeValue": 2,
+      "awayValue": 2,
+      "type": "number"
+    },
+    {
+      "title": "Accurate passes",
+      "homeValue": "260 (76%)",
+      "awayValue": "433 (85%)",
+      "type": "number"
+    },
+    {
+      "title": "Yellow cards",
       "homeValue": 4,
-      "awayValue": 4,
+      "awayValue": 1,
+      "type": "number"
+    },
+    {
+      "title": "Corners",
+      "homeValue": 5,
+      "awayValue": 6,
       "type": "number"
     },
     {
@@ -70,44 +70,44 @@
     },
     {
       "title": "Total shots",
-      "homeValue": 10,
-      "awayValue": 19,
+      "homeValue": 17,
+      "awayValue": 11,
       "type": "number"
     },
     {
       "title": "Shots off target",
-      "homeValue": 5,
-      "awayValue": 9,
+      "homeValue": 9,
+      "awayValue": 4,
       "type": "number"
     },
     {
       "title": "Shots on target",
-      "homeValue": 3,
+      "homeValue": 5,
       "awayValue": 2,
       "type": "number"
     },
     {
       "title": "Blocked shots",
-      "homeValue": 2,
-      "awayValue": 8,
+      "homeValue": 3,
+      "awayValue": 5,
       "type": "number"
     },
     {
       "title": "Hit woodwork",
-      "homeValue": 0,
+      "homeValue": 1,
       "awayValue": 0,
       "type": "number"
     },
     {
       "title": "Shots inside box",
-      "homeValue": 9,
-      "awayValue": 6,
+      "homeValue": 10,
+      "awayValue": 10,
       "type": "number"
     },
     {
       "title": "Shots outside box",
-      "homeValue": 1,
-      "awayValue": 13,
+      "homeValue": 7,
+      "awayValue": 1,
       "type": "number"
     },
     {
@@ -118,32 +118,62 @@
     },
     {
       "title": "Expected goals (xG)",
-      "homeValue": "0.53",
-      "awayValue": "1.01",
+      "homeValue": "1.31",
+      "awayValue": "1.63",
       "type": "number"
     },
     {
       "title": "xG open play",
-      "homeValue": "0.39",
-      "awayValue": "0.42",
+      "homeValue": "0.75",
+      "awayValue": "1.08",
       "type": "number"
     },
     {
       "title": "xG set play",
-      "homeValue": "0.14",
-      "awayValue": "0.59",
+      "homeValue": "0.56",
+      "awayValue": "0.55",
       "type": "number"
     },
     {
       "title": "xG non-penalty",
-      "homeValue": "0.53",
-      "awayValue": "1.01",
+      "homeValue": "1.31",
+      "awayValue": "1.63",
       "type": "number"
     },
     {
       "title": "xG on target (xGOT)",
-      "homeValue": "0.79",
-      "awayValue": "0.43",
+      "homeValue": "2.04",
+      "awayValue": "1.08",
+      "type": "number"
+    },
+    {
+      "title": "Physical performance",
+      "homeValue": 0,
+      "awayValue": 0,
+      "type": "number"
+    },
+    {
+      "title": "Distance covered",
+      "homeValue": 118434,
+      "awayValue": 119491,
+      "type": "number"
+    },
+    {
+      "title": "Running distance",
+      "homeValue": 25873,
+      "awayValue": 26734,
+      "type": "number"
+    },
+    {
+      "title": "Sprinting distance",
+      "homeValue": 2104,
+      "awayValue": 1868,
+      "type": "number"
+    },
+    {
+      "title": "Number of sprints",
+      "homeValue": 95,
+      "awayValue": 95,
       "type": "number"
     },
     {
@@ -154,56 +184,56 @@
     },
     {
       "title": "Passes",
-      "homeValue": 269,
-      "awayValue": 474,
+      "homeValue": 343,
+      "awayValue": 511,
       "type": "number"
     },
     {
       "title": "Accurate passes",
-      "homeValue": "188 (70%)",
-      "awayValue": "395 (83%)",
+      "homeValue": "260 (76%)",
+      "awayValue": "433 (85%)",
       "type": "number"
     },
     {
       "title": "Own half",
-      "homeValue": 100,
-      "awayValue": 225,
+      "homeValue": 125,
+      "awayValue": 237,
       "type": "number"
     },
     {
       "title": "Opposition half",
-      "homeValue": 88,
-      "awayValue": 170,
+      "homeValue": 135,
+      "awayValue": 196,
       "type": "number"
     },
     {
       "title": "Accurate long balls",
-      "homeValue": "27 (42%)",
-      "awayValue": "14 (30%)",
+      "homeValue": "22 (38%)",
+      "awayValue": "25 (51%)",
       "type": "number"
     },
     {
       "title": "Accurate crosses",
-      "homeValue": "1 (6%)",
-      "awayValue": "3 (16%)",
+      "homeValue": "6 (40%)",
+      "awayValue": "6 (38%)",
       "type": "number"
     },
     {
       "title": "Throws",
-      "homeValue": 14,
-      "awayValue": 29,
+      "homeValue": 12,
+      "awayValue": 25,
       "type": "number"
     },
     {
       "title": "Touches in opposition box",
-      "homeValue": 21,
-      "awayValue": 14,
+      "homeValue": 30,
+      "awayValue": 36,
       "type": "number"
     },
     {
       "title": "Offsides",
-      "homeValue": 2,
-      "awayValue": 0,
+      "homeValue": 0,
+      "awayValue": 2,
       "type": "number"
     },
     {
@@ -214,31 +244,31 @@
     },
     {
       "title": "Tackles",
-      "homeValue": 9,
-      "awayValue": 21,
+      "homeValue": 19,
+      "awayValue": 13,
       "type": "number"
     },
     {
       "title": "Interceptions",
-      "homeValue": 8,
-      "awayValue": 4,
+      "homeValue": 11,
+      "awayValue": 6,
       "type": "number"
     },
     {
       "title": "Blocks",
-      "homeValue": 8,
-      "awayValue": 1,
+      "homeValue": 5,
+      "awayValue": 2,
       "type": "number"
     },
     {
       "title": "Clearances",
-      "homeValue": 24,
-      "awayValue": 36,
+      "homeValue": 21,
+      "awayValue": 14,
       "type": "number"
     },
     {
       "title": "Keeper saves",
-      "homeValue": 1,
+      "homeValue": 2,
       "awayValue": 2,
       "type": "number"
     },
@@ -250,26 +280,26 @@
     },
     {
       "title": "Duels won",
-      "homeValue": 37,
-      "awayValue": 59,
+      "homeValue": 51,
+      "awayValue": 51,
       "type": "number"
     },
     {
       "title": "Ground duels won",
-      "homeValue": "26 (35%)",
-      "awayValue": "48 (65%)",
+      "homeValue": "32 (48%)",
+      "awayValue": "35 (52%)",
       "type": "number"
     },
     {
       "title": "Aerial duels won",
-      "homeValue": "11 (50%)",
-      "awayValue": "11 (50%)",
+      "homeValue": "19 (54%)",
+      "awayValue": "16 (46%)",
       "type": "number"
     },
     {
       "title": "Successful dribbles",
-      "homeValue": "5 (33%)",
-      "awayValue": "7 (64%)",
+      "homeValue": "4 (29%)",
+      "awayValue": "9 (50%)",
       "type": "number"
     },
     {
@@ -280,8 +310,8 @@
     },
     {
       "title": "Yellow cards",
-      "homeValue": 3,
-      "awayValue": 2,
+      "homeValue": 4,
+      "awayValue": 1,
       "type": "number"
     },
     {
@@ -292,8 +322,8 @@
     },
     {
       "title": "Fouls committed",
-      "homeValue": 21,
-      "awayValue": 13,
+      "homeValue": 13,
+      "awayValue": 11,
       "type": "number"
     }
   ]
