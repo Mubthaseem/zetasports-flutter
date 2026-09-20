@@ -2,10 +2,28 @@
   "competitionId": "57",
   "competitionName": "Eredivisie",
   "season": "2026/2027",
-  "updatedAt": "2026-09-20T10:43:59.473Z",
+  "updatedAt": "2026-09-20T15:32:27.047Z",
   "table": [
     {
       "position": 1,
+      "teamId": "10229",
+      "teamName": "AZ Alkmaar",
+      "shortName": "AZ Alkmaar",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10229.png",
+      "played": 7,
+      "won": 6,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 18,
+      "goalsAgainst": 6,
+      "goalDifference": 12,
+      "points": 19,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 2,
       "teamId": "10235",
       "teamName": "Feyenoord",
       "shortName": "Feyenoord",
@@ -14,46 +32,27 @@
       "won": 5,
       "drawn": 2,
       "lost": 0,
-      "goalsFor": 22,
+      "goalsFor": 25,
       "goalsAgainst": 7,
-      "goalDifference": 15,
+      "goalDifference": 18,
       "points": 17,
-      "form": [
-        "#2AD572"
-      ],
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 2,
-      "teamId": "8640",
-      "teamName": "PSV Eindhoven",
-      "shortName": "PSV Eindhoven",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8640.png",
-      "played": 6,
-      "won": 5,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 22,
-      "goalsAgainst": 7,
-      "goalDifference": 15,
-      "points": 16,
       "form": [
         "#FFD908"
       ]
     },
     {
       "position": 3,
-      "teamId": "10229",
-      "teamName": "AZ Alkmaar",
-      "shortName": "AZ Alkmaar",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10229.png",
-      "played": 6,
+      "teamId": "8640",
+      "teamName": "PSV Eindhoven",
+      "shortName": "PSV Eindhoven",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8640.png",
+      "played": 7,
       "won": 5,
       "drawn": 1,
-      "lost": 0,
-      "goalsFor": 17,
-      "goalsAgainst": 6,
-      "goalDifference": 11,
+      "lost": 1,
+      "goalsFor": 24,
+      "goalsAgainst": 10,
+      "goalDifference": 14,
       "points": 16,
       "form": [
         "#0294F0"
@@ -61,6 +60,24 @@
     },
     {
       "position": 4,
+      "teamId": "8611",
+      "teamName": "FC Twente",
+      "shortName": "FC Twente",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8611.png",
+      "played": 7,
+      "won": 5,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 15,
+      "goalsAgainst": 7,
+      "goalDifference": 8,
+      "points": 16,
+      "form": [
+        "#7FAEFF"
+      ]
+    },
+    {
+      "position": 5,
       "teamId": "8593",
       "teamName": "Ajax",
       "shortName": "Ajax",
@@ -73,24 +90,6 @@
       "goalsAgainst": 9,
       "goalDifference": 12,
       "points": 14,
-      "form": [
-        "#7FAEFF"
-      ]
-    },
-    {
-      "position": 5,
-      "teamId": "8611",
-      "teamName": "FC Twente",
-      "shortName": "FC Twente",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8611.png",
-      "played": 6,
-      "won": 4,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 12,
-      "goalsAgainst": 5,
-      "goalDifference": 7,
-      "points": 13,
       "form": [
         "#7FAEFF"
       ]
@@ -152,14 +151,15 @@
       "teamName": "Go Ahead Eagles",
       "shortName": "Go Ahead Eagles",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6433.png",
-      "played": 6,
+      "played": 7,
       "won": 2,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 1,
-      "goalsFor": 15,
-      "goalsAgainst": 13,
+      "goalsFor": 16,
+      "goalsAgainst": 14,
       "goalDifference": 2,
-      "points": 9
+      "points": 10,
+      "qualificationZone": "Active"
     },
     {
       "position": 10,
@@ -182,32 +182,18 @@
       "teamName": "NEC Nijmegen",
       "shortName": "NEC Nijmegen",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8464.png",
-      "played": 6,
+      "played": 7,
       "won": 2,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 3,
-      "goalsFor": 11,
-      "goalsAgainst": 12,
+      "goalsFor": 12,
+      "goalsAgainst": 13,
       "goalDifference": -1,
-      "points": 7
+      "points": 8,
+      "qualificationZone": "Active"
     },
     {
       "position": 12,
-      "teamId": "6414",
-      "teamName": "Telstar",
-      "shortName": "Telstar",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6414.png",
-      "played": 6,
-      "won": 1,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 5,
-      "goalsAgainst": 11,
-      "goalDifference": -6,
-      "points": 5
-    },
-    {
-      "position": 13,
       "teamId": "8614",
       "teamName": "Sparta Rotterdam",
       "shortName": "Sparta Rotterdam",
@@ -218,6 +204,21 @@
       "lost": 4,
       "goalsFor": 10,
       "goalsAgainst": 17,
+      "goalDifference": -7,
+      "points": 5
+    },
+    {
+      "position": 13,
+      "teamId": "6414",
+      "teamName": "Telstar",
+      "shortName": "Telstar",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6414.png",
+      "played": 7,
+      "won": 1,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 5,
+      "goalsAgainst": 12,
       "goalDifference": -7,
       "points": 5
     },
@@ -247,10 +248,9 @@
       "drawn": 2,
       "lost": 4,
       "goalsFor": 11,
-      "goalsAgainst": 21,
-      "goalDifference": -10,
-      "points": 5,
-      "qualificationZone": "Active"
+      "goalsAgainst": 24,
+      "goalDifference": -13,
+      "points": 5
     },
     {
       "position": 16,

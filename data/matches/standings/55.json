@@ -2,7 +2,7 @@
   "competitionId": "55",
   "competitionName": "Serie A",
   "season": "2026/2027",
-  "updatedAt": "2026-09-20T10:43:33.678Z",
+  "updatedAt": "2026-09-20T15:32:02.740Z",
   "table": [
     {
       "position": 1,
@@ -78,14 +78,14 @@
     },
     {
       "position": 5,
-      "teamId": "10171",
-      "teamName": "Como",
-      "shortName": "Como",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10171.png",
-      "played": 4,
+      "teamId": "9891",
+      "teamName": "Frosinone",
+      "shortName": "Frosinone",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9891.png",
+      "played": 5,
       "won": 3,
       "drawn": 1,
-      "lost": 0,
+      "lost": 1,
       "goalsFor": 9,
       "goalsAgainst": 4,
       "goalDifference": 5,
@@ -96,6 +96,24 @@
     },
     {
       "position": 6,
+      "teamId": "10171",
+      "teamName": "Como",
+      "shortName": "Como",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10171.png",
+      "played": 5,
+      "won": 3,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 9,
+      "goalsAgainst": 6,
+      "goalDifference": 3,
+      "points": 10,
+      "form": [
+        "#02CCF0"
+      ]
+    },
+    {
+      "position": 7,
       "teamId": "8564",
       "teamName": "Milan",
       "shortName": "Milan",
@@ -107,25 +125,7 @@
       "goalsFor": 7,
       "goalsAgainst": 4,
       "goalDifference": 3,
-      "points": 8,
-      "form": [
-        "#02CCF0"
-      ]
-    },
-    {
-      "position": 7,
-      "teamId": "9891",
-      "teamName": "Frosinone",
-      "shortName": "Frosinone",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9891.png",
-      "played": 4,
-      "won": 2,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 7,
-      "goalsAgainst": 4,
-      "goalDifference": 3,
-      "points": 7
+      "points": 8
     },
     {
       "position": 8,
@@ -152,11 +152,10 @@
       "won": 2,
       "drawn": 1,
       "lost": 2,
-      "goalsFor": 6,
-      "goalsAgainst": 5,
+      "goalsFor": 7,
+      "goalsAgainst": 6,
       "goalDifference": 1,
-      "points": 7,
-      "qualificationZone": "Active"
+      "points": 7
     },
     {
       "position": 10,
@@ -235,6 +234,21 @@
     },
     {
       "position": 15,
+      "teamId": "10167",
+      "teamName": "Parma",
+      "shortName": "Parma",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10167.png",
+      "played": 5,
+      "won": 1,
+      "drawn": 1,
+      "lost": 3,
+      "goalsFor": 4,
+      "goalsAgainst": 7,
+      "goalDifference": -3,
+      "points": 4
+    },
+    {
+      "position": 16,
       "teamId": "6504",
       "teamName": "Monza",
       "shortName": "Monza",
@@ -249,7 +263,7 @@
       "points": 4
     },
     {
-      "position": 16,
+      "position": 17,
       "teamId": "8535",
       "teamName": "Fiorentina",
       "shortName": "Fiorentina",
@@ -258,14 +272,13 @@
       "won": 1,
       "drawn": 1,
       "lost": 3,
-      "goalsFor": 5,
-      "goalsAgainst": 11,
+      "goalsFor": 6,
+      "goalsAgainst": 12,
       "goalDifference": -6,
-      "points": 4,
-      "qualificationZone": "Active"
+      "points": 4
     },
     {
-      "position": 17,
+      "position": 18,
       "teamId": "9857",
       "teamName": "Bologna",
       "shortName": "Bologna",
@@ -277,22 +290,7 @@
       "goalsFor": 3,
       "goalsAgainst": 6,
       "goalDifference": -3,
-      "points": 2
-    },
-    {
-      "position": 18,
-      "teamId": "10167",
-      "teamName": "Parma",
-      "shortName": "Parma",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10167.png",
-      "played": 4,
-      "won": 0,
-      "drawn": 1,
-      "lost": 3,
-      "goalsFor": 2,
-      "goalsAgainst": 6,
-      "goalDifference": -4,
-      "points": 1,
+      "points": 2,
       "form": [
         "#FF4646"
       ]
@@ -303,13 +301,13 @@
       "teamName": "Genoa",
       "shortName": "Genoa",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png",
-      "played": 4,
+      "played": 5,
       "won": 0,
       "drawn": 1,
-      "lost": 3,
-      "goalsFor": 2,
-      "goalsAgainst": 8,
-      "goalDifference": -6,
+      "lost": 4,
+      "goalsFor": 3,
+      "goalsAgainst": 10,
+      "goalDifference": -7,
       "points": 1,
       "form": [
         "#FF4646"
