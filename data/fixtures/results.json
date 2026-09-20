@@ -1,12 +1,852 @@
 [
   {
+    "id": "5071371",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T02:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "8314",
+      "name": "Colorado Rapids",
+      "shortName": "Colorado",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8314.png",
+      "score": 3
+    },
+    "awayTeam": {
+      "id": "130394",
+      "name": "Seattle Sounders FC",
+      "shortName": "Seattle Sounders",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
+      "score": 3
+    },
+    "score": {
+      "home": 3,
+      "away": 3
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071377",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T02:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "307690",
+      "name": "Portland Timbers",
+      "shortName": "Portland",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/307690.png",
+      "score": 0
+    },
+    "awayTeam": {
+      "id": "773958",
+      "name": "Atlanta United",
+      "shortName": "Atlanta United",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/773958.png",
+      "score": 1
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071376",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T01:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "915807",
+      "name": "Nashville SC",
+      "shortName": "Nashville SC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/915807.png",
+      "score": 3
+    },
+    "awayTeam": {
+      "id": "6397",
+      "name": "Chicago Fire FC",
+      "shortName": "Chicago",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6397.png",
+      "score": 0
+    },
+    "score": {
+      "home": 3,
+      "away": 0
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071378",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T01:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "6606",
+      "name": "Real Salt Lake",
+      "shortName": "Salt Lake",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6606.png",
+      "score": 0
+    },
+    "awayTeam": {
+      "id": "307691",
+      "name": "Vancouver Whitecaps",
+      "shortName": "Vancouver",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/307691.png",
+      "score": 3
+    },
+    "score": {
+      "home": 0,
+      "away": 3
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071372",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "6399",
+      "name": "FC Dallas",
+      "shortName": "Dallas",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6399.png",
+      "score": 0
+    },
+    "awayTeam": {
+      "id": "1218886",
+      "name": "Austin FC",
+      "shortName": "Austin FC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1218886.png",
+      "score": 0
+    },
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071373",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "8259",
+      "name": "Houston Dynamo FC",
+      "shortName": "Houston",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8259.png",
+      "score": 2
+    },
+    "awayTeam": {
+      "id": "722265",
+      "name": "FC Cincinnati",
+      "shortName": "Cincinnati",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/722265.png",
+      "score": 2
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071375",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "207242",
+      "name": "Minnesota United",
+      "shortName": "Minnesota",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/207242.png",
+      "score": 2
+    },
+    "awayTeam": {
+      "id": "6637",
+      "name": "LA Galaxy",
+      "shortName": "LA Galaxy",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6637.png",
+      "score": 3
+    },
+    "score": {
+      "home": 2,
+      "away": 3
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071374",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "6604",
+      "name": "Sporting Kansas City",
+      "shortName": "Sporting KC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6604.png",
+      "score": 3
+    },
+    "awayTeam": {
+      "id": "191716",
+      "name": "Philadelphia Union",
+      "shortName": "Philadelphia",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/191716.png",
+      "score": 4
+    },
+    "score": {
+      "home": 3,
+      "away": 4
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071379",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "1427963",
+      "name": "St. Louis City",
+      "shortName": "St. Louis City",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1427963.png",
+      "score": 3
+    },
+    "awayTeam": {
+      "id": "56453",
+      "name": "Toronto FC",
+      "shortName": "Toronto",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/56453.png",
+      "score": 1
+    },
+    "score": {
+      "home": 3,
+      "away": 1
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5103636",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-20T00:00:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "10277",
+      "name": "São Paulo",
+      "shortName": "São Paulo",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10277.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "8702",
+      "name": "Internacional",
+      "shortName": "Internacional",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8702.png",
+      "score": 0
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5071368",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "161195",
+      "name": "CF Montréal",
+      "shortName": "Montreal",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/161195.png",
+      "score": 0
+    },
+    "awayTeam": {
+      "id": "6001",
+      "name": "Columbus Crew",
+      "shortName": "Columbus",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6001.png",
+      "score": 2
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071367",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "6602",
+      "name": "DC United",
+      "shortName": "DC United",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6602.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "1323940",
+      "name": "Charlotte FC",
+      "shortName": "Charlotte FC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1323940.png",
+      "score": 2
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071369",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "6580",
+      "name": "New England Revolution",
+      "shortName": "New England",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6580.png",
+      "score": 4
+    },
+    "awayTeam": {
+      "id": "267810",
+      "name": "Orlando City",
+      "shortName": "Orlando",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/267810.png",
+      "score": 2
+    },
+    "score": {
+      "home": 4,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071370",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "6603",
+      "name": "San Jose Earthquakes",
+      "shortName": "San Jose",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6603.png",
+      "score": 2
+    },
+    "awayTeam": {
+      "id": "867280",
+      "name": "Los Angeles FC",
+      "shortName": "LAFC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/867280.png",
+      "score": 2
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5103635",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "10276",
+      "name": "Vasco da Gama",
+      "shortName": "Vasco da Gama",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10276.png",
+      "score": 5
+    },
+    "awayTeam": {
+      "id": "9767",
+      "name": "Coritiba",
+      "shortName": "Coritiba",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9767.png",
+      "score": 0
+    },
+    "score": {
+      "home": 5,
+      "away": 0
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5103643",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-19T21:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "1626",
+      "name": "Remo",
+      "shortName": "Remo",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1626.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "8514",
+      "name": "Santos",
+      "shortName": "Santos",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8514.png",
+      "score": 2
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5103638",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-19T20:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "163782",
+      "name": "Mirassol",
+      "shortName": "Mirassol",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/163782.png",
+      "score": 2
+    },
+    "awayTeam": {
+      "id": "8517",
+      "name": "Botafogo",
+      "shortName": "Botafogo",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8517.png",
+      "score": 0
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5887643",
+    "competitionId": "61",
+    "competitionName": "Liga Portugal",
+    "competitionSlug": "liga-portugal",
+    "country": "Portugal",
+    "round": 7,
+    "utcDate": "2026-09-19T19:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "9768",
+      "name": "Sporting CP",
+      "shortName": "Sporting CP",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9768.png",
+      "score": 2
+    },
+    "awayTeam": {
+      "id": "158085",
+      "name": "Arouca",
+      "shortName": "Arouca",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/158085.png",
+      "score": 2
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:32.572Z"
+  },
+  {
+    "id": "5868078",
+    "competitionId": "87",
+    "competitionName": "LaLiga",
+    "competitionSlug": "laliga",
+    "country": "Spain",
+    "round": 7,
+    "utcDate": "2026-09-19T19:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "8302",
+      "name": "Sevilla",
+      "shortName": "Sevilla",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8302.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "8634",
+      "name": "Barcelona",
+      "shortName": "Barcelona",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8634.png",
+      "score": 3
+    },
+    "score": {
+      "home": 1,
+      "away": 3
+    },
+    "updatedAt": "2026-09-20T04:37:13.297Z"
+  },
+  {
+    "id": "5781758",
+    "competitionId": "57",
+    "competitionName": "Eredivisie",
+    "competitionSlug": "eredivisie",
+    "country": "Netherlands",
+    "round": 7,
+    "utcDate": "2026-09-19T19:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "8525",
+      "name": "Willem II",
+      "shortName": "Willem II",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8525.png",
+      "score": 0
+    },
+    "awayTeam": {
+      "id": "6422",
+      "name": "Fortuna Sittard",
+      "shortName": "Fortuna Sittard",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6422.png",
+      "score": 1
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "updatedAt": "2026-09-20T04:37:31.608Z"
+  },
+  {
+    "id": "5103639",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-19T19:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "10272",
+      "name": "Atlético-MG",
+      "shortName": "Atlético-MG",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10272.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "197693",
+      "name": "Chapecoense",
+      "shortName": "Chapecoense",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/197693.png",
+      "score": 1
+    },
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5749689",
+    "competitionId": "55",
+    "competitionName": "Serie A",
+    "competitionSlug": "serie-a",
+    "country": "Italy",
+    "round": 5,
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "7881",
+      "name": "Venezia",
+      "shortName": "Venezia",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7881.png",
+      "score": 0
+    },
+    "awayTeam": {
+      "id": "8543",
+      "name": "Lazio",
+      "shortName": "Lazio",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8543.png",
+      "score": 2
+    },
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:14.363Z"
+  },
+  {
+    "id": "5802937",
+    "competitionId": "53",
+    "competitionName": "Ligue 1",
+    "competitionSlug": "ligue-1",
+    "country": "France",
+    "round": 5,
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "8121",
+      "name": "Angers",
+      "shortName": "Angers",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8121.png",
+      "score": 2
+    },
+    "awayTeam": {
+      "id": "10242",
+      "name": "Troyes",
+      "shortName": "Troyes",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10242.png",
+      "score": 0
+    },
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "updatedAt": "2026-09-20T04:37:16.158Z"
+  },
+  {
+    "id": "5802939",
+    "competitionId": "53",
+    "competitionName": "Ligue 1",
+    "competitionSlug": "ligue-1",
+    "country": "France",
+    "round": 5,
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "8682",
+      "name": "Le Mans",
+      "shortName": "Le Mans",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8682.png",
+      "score": 2
+    },
+    "awayTeam": {
+      "id": "8689",
+      "name": "Lorient",
+      "shortName": "Lorient",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8689.png",
+      "score": 1
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "updatedAt": "2026-09-20T04:37:16.158Z"
+  },
+  {
+    "id": "5802940",
+    "competitionId": "53",
+    "competitionName": "Ligue 1",
+    "competitionSlug": "ligue-1",
+    "country": "France",
+    "round": 5,
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "9748",
+      "name": "Lyon",
+      "shortName": "Lyon",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9748.png",
+      "score": 4
+    },
+    "awayTeam": {
+      "id": "9851",
+      "name": "Rennes",
+      "shortName": "Rennes",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9851.png",
+      "score": 0
+    },
+    "score": {
+      "home": 4,
+      "away": 0
+    },
+    "updatedAt": "2026-09-20T04:37:16.158Z"
+  },
+  {
+    "id": "5802944",
+    "competitionId": "53",
+    "competitionName": "Ligue 1",
+    "competitionSlug": "ligue-1",
+    "country": "France",
+    "round": 5,
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "9941",
+      "name": "Toulouse",
+      "shortName": "Toulouse",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9941.png",
+      "score": 3
+    },
+    "awayTeam": {
+      "id": "9746",
+      "name": "Le Havre",
+      "shortName": "Le Havre",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9746.png",
+      "score": 2
+    },
+    "score": {
+      "home": 3,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:16.158Z"
+  },
+  {
+    "id": "1000015475",
+    "competitionId": "264",
+    "competitionName": "AFC Champions League",
+    "competitionSlug": "afc-champions-league",
+    "country": "Asia",
+    "round": 6,
+    "utcDate": "2026-09-19T18:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "6351",
+      "name": "Eupen",
+      "shortName": "Eupen",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6351.png",
+      "score": 3
+    },
+    "awayTeam": {
+      "id": "6363",
+      "name": "FC Liège",
+      "shortName": "FC Liège",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6363.png",
+      "score": 1
+    },
+    "score": {
+      "home": 3,
+      "away": 1
+    },
+    "updatedAt": "2026-09-20T04:37:26.525Z"
+  },
+  {
+    "id": "5781757",
+    "competitionId": "57",
+    "competitionName": "Eredivisie",
+    "competitionSlug": "eredivisie",
+    "country": "Netherlands",
+    "round": 7,
+    "utcDate": "2026-09-19T18:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "8593",
+      "name": "Ajax",
+      "shortName": "Ajax",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8593.png",
+      "score": 2
+    },
+    "awayTeam": {
+      "id": "10218",
+      "name": "Excelsior",
+      "shortName": "Excelsior",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10218.png",
+      "score": 2
+    },
+    "score": {
+      "home": 2,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T04:37:31.608Z"
+  },
+  {
     "id": "5887636",
     "competitionId": "61",
     "competitionName": "Liga Portugal",
     "competitionSlug": "liga-portugal",
     "country": "Portugal",
     "round": 7,
-    "utcDate": "2026-09-19T17:00:00.000Z",
+    "utcDate": "2026-09-19T17:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -27,7 +867,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5781756",
@@ -36,7 +876,7 @@
     "competitionSlug": "eredivisie",
     "country": "Netherlands",
     "round": 7,
-    "utcDate": "2026-09-19T16:45:00.000Z",
+    "utcDate": "2026-09-19T16:45:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -57,7 +897,7 @@
       "home": 0,
       "away": 4
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "5795463",
@@ -66,7 +906,7 @@
     "competitionSlug": "premier-league",
     "country": "England",
     "round": 5,
-    "utcDate": "2026-09-19T16:30:00.000Z",
+    "utcDate": "2026-09-19T16:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -87,7 +927,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "5868073",
@@ -96,7 +936,7 @@
     "competitionSlug": "laliga",
     "country": "Spain",
     "round": 7,
-    "utcDate": "2026-09-19T16:30:00.000Z",
+    "utcDate": "2026-09-19T16:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -117,7 +957,7 @@
       "home": 5,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:32.584Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5881177",
@@ -126,7 +966,7 @@
     "competitionSlug": "bundesliga",
     "country": "Germany",
     "round": 4,
-    "utcDate": "2026-09-19T16:30:00.000Z",
+    "utcDate": "2026-09-19T16:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -147,7 +987,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
+    "updatedAt": "2026-09-20T04:37:15.280Z"
   },
   {
     "id": "5749681",
@@ -156,7 +996,7 @@
     "competitionSlug": "serie-a",
     "country": "Italy",
     "round": 5,
-    "utcDate": "2026-09-19T16:00:00.000Z",
+    "utcDate": "2026-09-19T16:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -177,7 +1017,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5802943",
@@ -186,7 +1026,7 @@
     "competitionSlug": "ligue-1",
     "country": "France",
     "round": 5,
-    "utcDate": "2026-09-19T15:15:00.000Z",
+    "utcDate": "2026-09-19T15:15:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -207,7 +1047,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5781755",
@@ -216,7 +1056,7 @@
     "competitionSlug": "eredivisie",
     "country": "Netherlands",
     "round": 7,
-    "utcDate": "2026-09-19T14:30:00.000Z",
+    "utcDate": "2026-09-19T14:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -237,7 +1077,7 @@
       "home": 1,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "5887639",
@@ -246,7 +1086,7 @@
     "competitionSlug": "liga-portugal",
     "country": "Portugal",
     "round": 7,
-    "utcDate": "2026-09-19T14:30:00.000Z",
+    "utcDate": "2026-09-19T14:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -267,7 +1107,7 @@
       "home": 1,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5887640",
@@ -276,7 +1116,7 @@
     "competitionSlug": "liga-portugal",
     "country": "Portugal",
     "round": 7,
-    "utcDate": "2026-09-19T14:30:00.000Z",
+    "utcDate": "2026-09-19T14:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -297,7 +1137,7 @@
       "home": 0,
       "away": 4
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5868071",
@@ -306,7 +1146,7 @@
     "competitionSlug": "laliga",
     "country": "Spain",
     "round": 7,
-    "utcDate": "2026-09-19T14:15:00.000Z",
+    "utcDate": "2026-09-19T14:15:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -327,7 +1167,7 @@
       "home": 0,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:32.584Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5795457",
@@ -336,7 +1176,7 @@
     "competitionSlug": "premier-league",
     "country": "England",
     "round": 5,
-    "utcDate": "2026-09-19T14:00:00.000Z",
+    "utcDate": "2026-09-19T14:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -357,7 +1197,7 @@
       "home": 3,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "5795458",
@@ -366,7 +1206,7 @@
     "competitionSlug": "premier-league",
     "country": "England",
     "round": 5,
-    "utcDate": "2026-09-19T14:00:00.000Z",
+    "utcDate": "2026-09-19T14:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -387,7 +1227,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "5795462",
@@ -396,7 +1236,7 @@
     "competitionSlug": "premier-league",
     "country": "England",
     "round": 5,
-    "utcDate": "2026-09-19T14:00:00.000Z",
+    "utcDate": "2026-09-19T14:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -417,7 +1257,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "1000015476",
@@ -426,7 +1266,7 @@
     "competitionSlug": "afc-champions-league",
     "country": "Asia",
     "round": 6,
-    "utcDate": "2026-09-19T14:00:00.000Z",
+    "utcDate": "2026-09-19T14:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -447,7 +1287,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:52.421Z"
+    "updatedAt": "2026-09-20T04:37:26.525Z"
   },
   {
     "id": "1000015479",
@@ -456,7 +1296,7 @@
     "competitionSlug": "afc-champions-league",
     "country": "Asia",
     "round": 6,
-    "utcDate": "2026-09-19T14:00:00.000Z",
+    "utcDate": "2026-09-19T14:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -477,7 +1317,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:52.421Z"
+    "updatedAt": "2026-09-20T04:37:26.525Z"
   },
   {
     "id": "5881172",
@@ -486,7 +1326,7 @@
     "competitionSlug": "bundesliga",
     "country": "Germany",
     "round": 4,
-    "utcDate": "2026-09-19T13:30:00.000Z",
+    "utcDate": "2026-09-19T13:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -507,7 +1347,7 @@
       "home": 3,
       "away": 4
     },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
+    "updatedAt": "2026-09-20T04:37:15.280Z"
   },
   {
     "id": "5881173",
@@ -516,7 +1356,7 @@
     "competitionSlug": "bundesliga",
     "country": "Germany",
     "round": 4,
-    "utcDate": "2026-09-19T13:30:00.000Z",
+    "utcDate": "2026-09-19T13:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -537,7 +1377,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
+    "updatedAt": "2026-09-20T04:37:15.280Z"
   },
   {
     "id": "5881174",
@@ -546,7 +1386,7 @@
     "competitionSlug": "bundesliga",
     "country": "Germany",
     "round": 4,
-    "utcDate": "2026-09-19T13:30:00.000Z",
+    "utcDate": "2026-09-19T13:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -567,7 +1407,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
+    "updatedAt": "2026-09-20T04:37:15.280Z"
   },
   {
     "id": "5881178",
@@ -576,7 +1416,7 @@
     "competitionSlug": "bundesliga",
     "country": "Germany",
     "round": 4,
-    "utcDate": "2026-09-19T13:30:00.000Z",
+    "utcDate": "2026-09-19T13:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -597,7 +1437,7 @@
       "home": 3,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
+    "updatedAt": "2026-09-20T04:37:15.280Z"
   },
   {
     "id": "5749682",
@@ -606,7 +1446,7 @@
     "competitionSlug": "serie-a",
     "country": "Italy",
     "round": 5,
-    "utcDate": "2026-09-19T13:00:00.000Z",
+    "utcDate": "2026-09-19T13:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -627,7 +1467,7 @@
       "home": 1,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5749688",
@@ -636,7 +1476,7 @@
     "competitionSlug": "serie-a",
     "country": "Italy",
     "round": 5,
-    "utcDate": "2026-09-19T13:00:00.000Z",
+    "utcDate": "2026-09-19T13:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -657,7 +1497,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5868077",
@@ -666,7 +1506,7 @@
     "competitionSlug": "laliga",
     "country": "Spain",
     "round": 7,
-    "utcDate": "2026-09-19T12:00:00.000Z",
+    "utcDate": "2026-09-19T12:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -687,7 +1527,7 @@
       "home": 1,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:32.584Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5795464",
@@ -696,7 +1536,7 @@
     "competitionSlug": "premier-league",
     "country": "England",
     "round": 5,
-    "utcDate": "2026-09-19T11:30:00.000Z",
+    "utcDate": "2026-09-19T11:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -717,7 +1557,7 @@
       "home": 2,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "5071366",
@@ -747,7 +1587,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5795456",
@@ -777,7 +1617,7 @@
       "home": 3,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "5868075",
@@ -807,7 +1647,7 @@
       "home": 1,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:32.584Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5749686",
@@ -837,7 +1677,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5802941",
@@ -867,7 +1707,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5881171",
@@ -897,7 +1737,7 @@
       "home": 7,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
+    "updatedAt": "2026-09-20T04:37:15.280Z"
   },
   {
     "id": "1000015473",
@@ -927,7 +1767,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:52.421Z"
+    "updatedAt": "2026-09-20T04:37:26.525Z"
   },
   {
     "id": "1000015474",
@@ -957,7 +1797,7 @@
       "home": 3,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:52.421Z"
+    "updatedAt": "2026-09-20T04:37:26.525Z"
   },
   {
     "id": "5781754",
@@ -987,7 +1827,7 @@
       "home": 3,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "5868068",
@@ -1017,7 +1857,7 @@
       "home": 1,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:32.584Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "6112354",
@@ -1047,7 +1887,7 @@
       "home": 4,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112299",
@@ -1077,7 +1917,7 @@
       "home": 1,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112324",
@@ -1107,7 +1947,7 @@
       "home": 4,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112253",
@@ -1137,7 +1977,7 @@
       "home": 5,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112377",
@@ -1167,7 +2007,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112272",
@@ -1197,7 +2037,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112283",
@@ -1227,7 +2067,7 @@
       "home": 0,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6099330",
@@ -1257,7 +2097,7 @@
       "home": 5,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "5868063",
@@ -1287,7 +2127,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "6112379",
@@ -1317,7 +2157,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112373",
@@ -1347,7 +2187,7 @@
       "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "5103565",
@@ -1377,7 +2217,7 @@
       "home": 3,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:33.626Z"
   },
   {
     "id": "5868066",
@@ -1407,7 +2247,7 @@
       "home": 7,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "6112254",
@@ -1437,7 +2277,7 @@
       "home": 0,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112310",
@@ -1467,7 +2307,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112244",
@@ -1497,7 +2337,7 @@
       "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112363",
@@ -1527,7 +2367,7 @@
       "home": 0,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112268",
@@ -1557,7 +2397,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112315",
@@ -1587,7 +2427,7 @@
       "home": 0,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112330",
@@ -1617,7 +2457,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6099333",
@@ -1647,7 +2487,7 @@
       "home": 1,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "6099329",
@@ -1677,7 +2517,7 @@
       "home": 2,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "6099338",
@@ -1707,7 +2547,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "6099337",
@@ -1737,7 +2577,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "5868062",
@@ -1767,7 +2607,7 @@
       "home": 4,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5868064",
@@ -1797,7 +2637,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "6112383",
@@ -1827,7 +2667,7 @@
       "home": 1,
       "away": 4
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "6112344",
@@ -1857,7 +2697,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:38.207Z"
+    "updatedAt": "2026-09-20T04:37:17.052Z"
   },
   {
     "id": "5868065",
@@ -1887,7 +2727,7 @@
       "home": 2,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "6099332",
@@ -1917,7 +2757,7 @@
       "home": 2,
       "away": 4
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "6099335",
@@ -1947,7 +2787,7 @@
       "home": 3,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "6099340",
@@ -1977,7 +2817,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "6003659",
@@ -2007,7 +2847,7 @@
       "home": 3,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:47.736Z"
+    "updatedAt": "2026-09-20T04:37:23.478Z"
   },
   {
     "id": "6099343",
@@ -2037,7 +2877,7 @@
       "home": 2,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "6099341",
@@ -2067,7 +2907,7 @@
       "home": 3,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:41.632Z"
+    "updatedAt": "2026-09-20T04:37:20.444Z"
   },
   {
     "id": "5868061",
@@ -2097,7 +2937,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5781718",
@@ -2127,7 +2967,7 @@
       "home": 5,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "5868069",
@@ -2157,7 +2997,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "6003652",
@@ -2187,7 +3027,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:47.736Z"
+    "updatedAt": "2026-09-20T04:37:23.478Z"
   },
   {
     "id": "5103632",
@@ -2217,7 +3057,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:33.626Z"
   },
   {
     "id": "5887629",
@@ -2247,7 +3087,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5887632",
@@ -2277,7 +3117,7 @@
       "home": 3,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5795450",
@@ -2307,7 +3147,7 @@
       "home": 4,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "5868060",
@@ -2337,7 +3177,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5749673",
@@ -2367,7 +3207,7 @@
       "home": 5,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5887634",
@@ -2397,7 +3237,7 @@
       "home": 3,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5749671",
@@ -2427,7 +3267,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5749678",
@@ -2457,7 +3297,7 @@
       "home": 0,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5071365",
@@ -2487,7 +3327,7 @@
       "home": 0,
       "away": 5
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071364",
@@ -2517,7 +3357,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071363",
@@ -2547,7 +3387,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5103624",
@@ -2577,7 +3417,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:33.626Z"
   },
   {
     "id": "5887631",
@@ -2607,7 +3447,7 @@
       "home": 1,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5868058",
@@ -2637,7 +3477,7 @@
       "home": 0,
       "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5103628",
@@ -2667,7 +3507,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:33.626Z"
   },
   {
     "id": "5749677",
@@ -2697,7 +3537,7 @@
       "home": 3,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5802929",
@@ -2727,7 +3567,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5970136",
@@ -2757,7 +3597,7 @@
       "home": 0,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:50.356Z"
+    "updatedAt": "2026-09-20T04:37:25.477Z"
   },
   {
     "id": "5970140",
@@ -2787,7 +3627,7 @@
       "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:50.356Z"
+    "updatedAt": "2026-09-20T04:37:25.477Z"
   },
   {
     "id": "5781743",
@@ -2817,7 +3657,7 @@
       "home": 4,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "1000015469",
@@ -2847,7 +3687,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:52.421Z"
+    "updatedAt": "2026-09-20T04:37:26.525Z"
   },
   {
     "id": "5887628",
@@ -2877,7 +3717,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5887635",
@@ -2907,7 +3747,7 @@
       "home": 3,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5868053",
@@ -2937,7 +3777,7 @@
       "home": 1,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5970143",
@@ -2967,7 +3807,7 @@
       "home": 4,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:50.356Z"
+    "updatedAt": "2026-09-20T04:37:25.477Z"
   },
   {
     "id": "5749676",
@@ -2997,7 +3837,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5795452",
@@ -3027,7 +3867,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "5881163",
@@ -3057,7 +3897,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
+    "updatedAt": "2026-09-20T04:37:15.280Z"
   },
   {
     "id": "5802931",
@@ -3087,7 +3927,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5781749",
@@ -3117,7 +3957,7 @@
       "home": 0,
       "away": 7
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "5868054",
@@ -3147,7 +3987,7 @@
       "home": 2,
       "away": 4
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "1000015470",
@@ -3177,7 +4017,7 @@
       "home": 4,
       "away": 4
     },
-    "updatedAt": "2026-09-19T19:31:52.421Z"
+    "updatedAt": "2026-09-20T04:37:26.525Z"
   },
   {
     "id": "5881168",
@@ -3207,7 +4047,7 @@
       "home": 5,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
+    "updatedAt": "2026-09-20T04:37:15.280Z"
   },
   {
     "id": "5795448",
@@ -3237,7 +4077,7 @@
       "home": 0,
       "away": 5
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "5749675",
@@ -3267,7 +4107,7 @@
       "home": 3,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5802932",
@@ -3297,7 +4137,7 @@
       "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5781744",
@@ -3327,7 +4167,7 @@
       "home": 0,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "5868052",
@@ -3357,7 +4197,7 @@
       "home": 1,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:32.583Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5781745",
@@ -3387,486 +4227,6 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
-  },
-  {
-    "id": "5071359",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-13T02:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6637",
-      "name": "LA Galaxy",
-      "shortName": "LA Galaxy",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6637.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "130394",
-      "name": "Seattle Sounders FC",
-      "shortName": "Seattle Sounders",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
-      "score": 1
-    },
-    "score": {
-      "home": 1,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071361",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-13T02:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6603",
-      "name": "San Jose Earthquakes",
-      "shortName": "San Jose",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6603.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "8259",
-      "name": "Houston Dynamo FC",
-      "shortName": "Houston",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8259.png",
-      "score": 0
-    },
-    "score": {
-      "home": 1,
-      "away": 0
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071356",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-13T01:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8314",
-      "name": "Colorado Rapids",
-      "shortName": "Colorado",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8314.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "161195",
-      "name": "CF Montréal",
-      "shortName": "Montreal",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/161195.png",
-      "score": 0
-    },
-    "score": {
-      "home": 1,
-      "away": 0
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071360",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-13T01:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6606",
-      "name": "Real Salt Lake",
-      "shortName": "Salt Lake",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6606.png",
-      "score": 0
-    },
-    "awayTeam": {
-      "id": "546238",
-      "name": "New York City FC",
-      "shortName": "NYCFC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/546238.png",
-      "score": 2
-    },
-    "score": {
-      "home": 0,
-      "away": 2
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071357",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-13T00:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6399",
-      "name": "FC Dallas",
-      "shortName": "Dallas",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6399.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "307690",
-      "name": "Portland Timbers",
-      "shortName": "Portland",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/307690.png",
-      "score": 1
-    },
-    "score": {
-      "home": 2,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071358",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-13T00:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6604",
-      "name": "Sporting Kansas City",
-      "shortName": "Sporting KC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6604.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "867280",
-      "name": "Los Angeles FC",
-      "shortName": "LAFC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/867280.png",
-      "score": 1
-    },
-    "score": {
-      "home": 3,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071362",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-13T00:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "1427963",
-      "name": "St. Louis City",
-      "shortName": "St. Louis City",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1427963.png",
-      "score": 4
-    },
-    "awayTeam": {
-      "id": "207242",
-      "name": "Minnesota United",
-      "shortName": "Minnesota",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/207242.png",
-      "score": 2
-    },
-    "score": {
-      "home": 4,
-      "away": 2
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5103626",
-    "competitionId": "268",
-    "competitionName": "Brasileirão Série A",
-    "competitionSlug": "serie-a-brazil",
-    "country": "Brazil",
-    "round": 27,
-    "utcDate": "2026-09-13T00:00:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8514",
-      "name": "Santos",
-      "shortName": "Santos",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8514.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "9781",
-      "name": "Cruzeiro",
-      "shortName": "Cruzeiro",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9781.png",
-      "score": 1
-    },
-    "score": {
-      "home": 2,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
-  },
-  {
-    "id": "5071352",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-12T23:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6001",
-      "name": "Columbus Crew",
-      "shortName": "Columbus",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6001.png",
-      "score": 0
-    },
-    "awayTeam": {
-      "id": "6514",
-      "name": "Red Bull New York",
-      "shortName": "NY Red Bulls",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6514.png",
-      "score": 1
-    },
-    "score": {
-      "home": 0,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071353",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-12T23:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6602",
-      "name": "DC United",
-      "shortName": "DC United",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6602.png",
-      "score": 0
-    },
-    "awayTeam": {
-      "id": "773958",
-      "name": "Atlanta United",
-      "shortName": "Atlanta United",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/773958.png",
-      "score": 0
-    },
-    "score": {
-      "home": 0,
-      "away": 0
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071351",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-12T23:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "722265",
-      "name": "FC Cincinnati",
-      "shortName": "Cincinnati",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/722265.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "1323940",
-      "name": "Charlotte FC",
-      "shortName": "Charlotte FC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1323940.png",
-      "score": 3
-    },
-    "score": {
-      "home": 3,
-      "away": 3
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071354",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-12T23:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "960720",
-      "name": "Inter Miami CF",
-      "shortName": "Inter Miami CF",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/960720.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "915807",
-      "name": "Nashville SC",
-      "shortName": "Nashville SC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/915807.png",
-      "score": 2
-    },
-    "score": {
-      "home": 2,
-      "away": 2
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071355",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 25,
-    "utcDate": "2026-09-12T23:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "267810",
-      "name": "Orlando City",
-      "shortName": "Orlando",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/267810.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "56453",
-      "name": "Toronto FC",
-      "shortName": "Toronto",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/56453.png",
-      "score": 0
-    },
-    "score": {
-      "home": 3,
-      "away": 0
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5103625",
-    "competitionId": "268",
-    "competitionName": "Brasileirão Série A",
-    "competitionSlug": "serie-a-brazil",
-    "country": "Brazil",
-    "round": 27,
-    "utcDate": "2026-09-12T23:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8517",
-      "name": "Botafogo",
-      "shortName": "Botafogo",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8517.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "109705",
-      "name": "RB Bragantino",
-      "shortName": "RB Bragantino",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/109705.png",
-      "score": 1
-    },
-    "score": {
-      "home": 1,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
-  },
-  {
-    "id": "5103627",
-    "competitionId": "268",
-    "competitionName": "Brasileirão Série A",
-    "competitionSlug": "serie-a-brazil",
-    "country": "Brazil",
-    "round": 27,
-    "utcDate": "2026-09-12T21:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "10283",
-      "name": "Palmeiras",
-      "shortName": "Palmeiras",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10283.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "10277",
-      "name": "São Paulo",
-      "shortName": "São Paulo",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10277.png",
-      "score": 0
-    },
-    "score": {
-      "home": 2,
-      "away": 0
-    },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
-  },
-  {
-    "id": "5103633",
-    "competitionId": "268",
-    "competitionName": "Brasileirão Série A",
-    "competitionSlug": "serie-a-brazil",
-    "country": "Brazil",
-    "round": 27,
-    "utcDate": "2026-09-12T20:00:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "197693",
-      "name": "Chapecoense",
-      "shortName": "Chapecoense",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/197693.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "8702",
-      "name": "Internacional",
-      "shortName": "Internacional",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8702.png",
-      "score": 2
-    },
-    "score": {
-      "home": 1,
-      "away": 2
-    },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   }
 ]

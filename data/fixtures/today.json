@@ -1,522 +1,12 @@
 [
   {
-    "id": "5795464",
-    "competitionId": "47",
-    "competitionName": "Premier League",
-    "competitionSlug": "premier-league",
-    "country": "England",
-    "round": 5,
-    "utcDate": "2026-09-19T11:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8586",
-      "name": "Tottenham Hotspur",
-      "shortName": "Tottenham",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "10252",
-      "name": "Aston Villa",
-      "shortName": "Aston Villa",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10252.png",
-      "score": 3
-    },
-    "score": {
-      "home": 2,
-      "away": 3
-    },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
-  },
-  {
-    "id": "5868077",
-    "competitionId": "87",
-    "competitionName": "LaLiga",
-    "competitionSlug": "laliga",
-    "country": "Spain",
-    "round": 7,
-    "utcDate": "2026-09-19T12:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8371",
-      "name": "Osasuna",
-      "shortName": "Osasuna",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8371.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "8370",
-      "name": "Rayo Vallecano",
-      "shortName": "Rayo Vallecano",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8370.png",
-      "score": 1
-    },
-    "score": {
-      "home": 1,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:32.584Z"
-  },
-  {
-    "id": "5749682",
-    "competitionId": "55",
-    "competitionName": "Serie A",
-    "competitionSlug": "serie-a",
-    "country": "Italy",
-    "round": 5,
-    "utcDate": "2026-09-19T13:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "9857",
-      "name": "Bologna",
-      "shortName": "Bologna",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9857.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "9804",
-      "name": "Torino",
-      "shortName": "Torino",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9804.png",
-      "score": 1
-    },
-    "score": {
-      "home": 1,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
-  },
-  {
-    "id": "5749688",
-    "competitionId": "55",
-    "competitionName": "Serie A",
-    "competitionSlug": "serie-a",
-    "country": "Italy",
-    "round": 5,
-    "utcDate": "2026-09-19T13:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8600",
-      "name": "Udinese",
-      "shortName": "Udinese",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8600.png",
-      "score": 0
-    },
-    "awayTeam": {
-      "id": "8529",
-      "name": "Cagliari",
-      "shortName": "Cagliari",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8529.png",
-      "score": 1
-    },
-    "score": {
-      "home": 0,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
-  },
-  {
-    "id": "5881172",
-    "competitionId": "54",
-    "competitionName": "Bundesliga",
-    "competitionSlug": "bundesliga",
-    "country": "Germany",
-    "round": 4,
-    "utcDate": "2026-09-19T13:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "9788",
-      "name": "Borussia Mönchengladbach",
-      "shortName": "M'gladbach",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9788.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "9905",
-      "name": "Mainz 05",
-      "shortName": "Mainz",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9905.png",
-      "score": 4
-    },
-    "score": {
-      "home": 3,
-      "away": 4
-    },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
-  },
-  {
-    "id": "5881173",
-    "competitionId": "54",
-    "competitionName": "Bundesliga",
-    "competitionSlug": "bundesliga",
-    "country": "Germany",
-    "round": 4,
-    "utcDate": "2026-09-19T13:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "9810",
-      "name": "Eintracht Frankfurt",
-      "shortName": "Frankfurt",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9810.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "8358",
-      "name": "Freiburg",
-      "shortName": "Freiburg",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8358.png",
-      "score": 2
-    },
-    "score": {
-      "home": 2,
-      "away": 2
-    },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
-  },
-  {
-    "id": "5881174",
-    "competitionId": "54",
-    "competitionName": "Bundesliga",
-    "competitionSlug": "bundesliga",
-    "country": "Germany",
-    "round": 4,
-    "utcDate": "2026-09-19T13:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "9790",
-      "name": "Hamburger SV",
-      "shortName": "Hamburger SV",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9790.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "8722",
-      "name": "1. FC Köln",
-      "shortName": "Köln",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8722.png",
-      "score": 1
-    },
-    "score": {
-      "home": 2,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
-  },
-  {
-    "id": "5881178",
-    "competitionId": "54",
-    "competitionName": "Bundesliga",
-    "competitionSlug": "bundesliga",
-    "country": "Germany",
-    "round": 4,
-    "utcDate": "2026-09-19T13:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8697",
-      "name": "Werder Bremen",
-      "shortName": "Werder Bremen",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8697.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "8406",
-      "name": "Augsburg",
-      "shortName": "Augsburg",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8406.png",
-      "score": 2
-    },
-    "score": {
-      "home": 3,
-      "away": 2
-    },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
-  },
-  {
-    "id": "5795457",
-    "competitionId": "47",
-    "competitionName": "Premier League",
-    "competitionSlug": "premier-league",
-    "country": "England",
-    "round": 5,
-    "utcDate": "2026-09-19T14:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "10204",
-      "name": "Brighton & Hove Albion",
-      "shortName": "Brighton",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10204.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "9825",
-      "name": "Arsenal",
-      "shortName": "Arsenal",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-      "score": 0
-    },
-    "score": {
-      "home": 3,
-      "away": 0
-    },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
-  },
-  {
-    "id": "5795458",
-    "competitionId": "47",
-    "competitionName": "Premier League",
-    "competitionSlug": "premier-league",
-    "country": "England",
-    "round": 5,
-    "utcDate": "2026-09-19T14:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8668",
-      "name": "Everton",
-      "shortName": "Everton",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "9902",
-      "name": "Ipswich Town",
-      "shortName": "Ipswich",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9902.png",
-      "score": 0
-    },
-    "score": {
-      "home": 1,
-      "away": 0
-    },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
-  },
-  {
-    "id": "5795462",
-    "competitionId": "47",
-    "competitionName": "Premier League",
-    "competitionSlug": "premier-league",
-    "country": "England",
-    "round": 5,
-    "utcDate": "2026-09-19T14:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "10261",
-      "name": "Newcastle United",
-      "shortName": "Newcastle",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "8667",
-      "name": "Hull City",
-      "shortName": "Hull",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8667.png",
-      "score": 1
-    },
-    "score": {
-      "home": 2,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
-  },
-  {
-    "id": "1000015476",
-    "competitionId": "264",
-    "competitionName": "AFC Champions League",
-    "competitionSlug": "afc-champions-league",
-    "country": "Asia",
-    "round": 6,
-    "utcDate": "2026-09-19T14:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "1378463",
-      "name": "Genk U23",
-      "shortName": "Genk U23",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1378463.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "149408",
-      "name": "RFC Seraing",
-      "shortName": "RFC Seraing",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/149408.png",
-      "score": 2
-    },
-    "score": {
-      "home": 2,
-      "away": 2
-    },
-    "updatedAt": "2026-09-19T19:31:52.421Z"
-  },
-  {
-    "id": "1000015479",
-    "competitionId": "264",
-    "competitionName": "AFC Champions League",
-    "competitionSlug": "afc-champions-league",
-    "country": "Asia",
-    "round": 6,
-    "utcDate": "2026-09-19T14:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "2263",
-      "name": "Sporting Hasselt",
-      "shortName": "Sporting Hasselt",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2263.png",
-      "score": 0
-    },
-    "awayTeam": {
-      "id": "583877",
-      "name": "Beerschot",
-      "shortName": "Beerschot",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/583877.png",
-      "score": 1
-    },
-    "score": {
-      "home": 0,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:52.421Z"
-  },
-  {
-    "id": "5868071",
-    "competitionId": "87",
-    "competitionName": "LaLiga",
-    "competitionSlug": "laliga",
-    "country": "Spain",
-    "round": 7,
-    "utcDate": "2026-09-19T14:15:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8315",
-      "name": "Athletic Club",
-      "shortName": "Athletic Club",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8315.png",
-      "score": 0
-    },
-    "awayTeam": {
-      "id": "9866",
-      "name": "Deportivo Alavés",
-      "shortName": "Deportivo Alavés",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9866.png",
-      "score": 0
-    },
-    "score": {
-      "home": 0,
-      "away": 0
-    },
-    "updatedAt": "2026-09-19T19:31:32.584Z"
-  },
-  {
-    "id": "5781755",
-    "competitionId": "57",
-    "competitionName": "Eredivisie",
-    "competitionSlug": "eredivisie",
-    "country": "Netherlands",
-    "round": 7,
-    "utcDate": "2026-09-19T14:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "10217",
-      "name": "ADO Den Haag",
-      "shortName": "ADO Den Haag",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10217.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "7788",
-      "name": "Cambuur",
-      "shortName": "Cambuur",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7788.png",
-      "score": 1
-    },
-    "score": {
-      "home": 1,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
-  },
-  {
-    "id": "5887639",
-    "competitionId": "61",
-    "competitionName": "Liga Portugal",
-    "competitionSlug": "liga-portugal",
-    "country": "Portugal",
-    "round": 7,
-    "utcDate": "2026-09-19T14:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "9764",
-      "name": "Gil Vicente",
-      "shortName": "Gil Vicente",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9764.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "10212",
-      "name": "Marítimo",
-      "shortName": "Marítimo",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
-      "score": 1
-    },
-    "score": {
-      "home": 1,
-      "away": 1
-    },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
-  },
-  {
-    "id": "5887640",
-    "competitionId": "61",
-    "competitionName": "Liga Portugal",
-    "competitionSlug": "liga-portugal",
-    "country": "Portugal",
-    "round": 7,
-    "utcDate": "2026-09-19T14:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "10214",
-      "name": "Nacional",
-      "shortName": "Nacional",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10214.png",
-      "score": 0
-    },
-    "awayTeam": {
-      "id": "1634",
-      "name": "Famalicão",
-      "shortName": "Famalicão",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1634.png",
-      "score": 4
-    },
-    "score": {
-      "home": 0,
-      "away": 4
-    },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
-  },
-  {
     "id": "5802943",
     "competitionId": "53",
     "competitionName": "Ligue 1",
     "competitionSlug": "ligue-1",
     "country": "France",
     "round": 5,
-    "utcDate": "2026-09-19T15:15:00.000Z",
+    "utcDate": "2026-09-19T15:15:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -537,7 +27,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5749681",
@@ -546,7 +36,7 @@
     "competitionSlug": "serie-a",
     "country": "Italy",
     "round": 5,
-    "utcDate": "2026-09-19T16:00:00.000Z",
+    "utcDate": "2026-09-19T16:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -567,7 +57,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5795463",
@@ -576,7 +66,7 @@
     "competitionSlug": "premier-league",
     "country": "England",
     "round": 5,
-    "utcDate": "2026-09-19T16:30:00.000Z",
+    "utcDate": "2026-09-19T16:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -597,7 +87,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:29.188Z"
+    "updatedAt": "2026-09-20T04:37:11.138Z"
   },
   {
     "id": "5868073",
@@ -606,7 +96,7 @@
     "competitionSlug": "laliga",
     "country": "Spain",
     "round": 7,
-    "utcDate": "2026-09-19T16:30:00.000Z",
+    "utcDate": "2026-09-19T16:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -627,7 +117,7 @@
       "home": 5,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:32.584Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5881177",
@@ -636,7 +126,7 @@
     "competitionSlug": "bundesliga",
     "country": "Germany",
     "round": 4,
-    "utcDate": "2026-09-19T16:30:00.000Z",
+    "utcDate": "2026-09-19T16:30:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -657,7 +147,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:35.734Z"
+    "updatedAt": "2026-09-20T04:37:15.280Z"
   },
   {
     "id": "5781756",
@@ -666,7 +156,7 @@
     "competitionSlug": "eredivisie",
     "country": "Netherlands",
     "round": 7,
-    "utcDate": "2026-09-19T16:45:00.000Z",
+    "utcDate": "2026-09-19T16:45:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -687,7 +177,7 @@
       "home": 0,
       "away": 4
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "5887636",
@@ -696,7 +186,7 @@
     "competitionSlug": "liga-portugal",
     "country": "Portugal",
     "round": 7,
-    "utcDate": "2026-09-19T17:00:00.000Z",
+    "utcDate": "2026-09-19T17:00:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -717,7 +207,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "1000015475",
@@ -726,28 +216,28 @@
     "competitionSlug": "afc-champions-league",
     "country": "Asia",
     "round": 6,
-    "utcDate": "2026-09-19T18:00:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "71‎’‎",
+    "utcDate": "2026-09-19T18:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6351",
       "name": "Eupen",
       "shortName": "Eupen",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6351.png",
-      "score": 2
+      "score": 3
     },
     "awayTeam": {
       "id": "6363",
       "name": "FC Liège",
       "shortName": "FC Liège",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6363.png",
-      "score": 0
+      "score": 1
     },
     "score": {
-      "home": 2,
-      "away": 0
+      "home": 3,
+      "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:52.421Z"
+    "updatedAt": "2026-09-20T04:37:26.525Z"
   },
   {
     "id": "5781757",
@@ -756,9 +246,9 @@
     "competitionSlug": "eredivisie",
     "country": "Netherlands",
     "round": 7,
-    "utcDate": "2026-09-19T18:00:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "73‎’‎",
+    "utcDate": "2026-09-19T18:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8593",
       "name": "Ajax",
@@ -777,7 +267,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "5749689",
@@ -786,9 +276,9 @@
     "competitionSlug": "serie-a",
     "country": "Italy",
     "round": 5,
-    "utcDate": "2026-09-19T18:45:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "46‎’‎",
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "7881",
       "name": "Venezia",
@@ -801,13 +291,13 @@
       "name": "Lazio",
       "shortName": "Lazio",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8543.png",
-      "score": 0
+      "score": 2
     },
     "score": {
       "home": 0,
-      "away": 0
+      "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:33.820Z"
+    "updatedAt": "2026-09-20T04:37:14.363Z"
   },
   {
     "id": "5802937",
@@ -816,15 +306,15 @@
     "competitionSlug": "ligue-1",
     "country": "France",
     "round": 5,
-    "utcDate": "2026-09-19T18:45:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "HT",
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8121",
       "name": "Angers",
       "shortName": "Angers",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8121.png",
-      "score": 1
+      "score": 2
     },
     "awayTeam": {
       "id": "10242",
@@ -834,10 +324,10 @@
       "score": 0
     },
     "score": {
-      "home": 1,
+      "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5802939",
@@ -846,28 +336,28 @@
     "competitionSlug": "ligue-1",
     "country": "France",
     "round": 5,
-    "utcDate": "2026-09-19T18:45:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "47‎’‎",
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8682",
       "name": "Le Mans",
       "shortName": "Le Mans",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8682.png",
-      "score": 1
+      "score": 2
     },
     "awayTeam": {
       "id": "8689",
       "name": "Lorient",
       "shortName": "Lorient",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8689.png",
-      "score": 0
+      "score": 1
     },
     "score": {
-      "home": 1,
-      "away": 0
+      "home": 2,
+      "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5802940",
@@ -876,15 +366,15 @@
     "competitionSlug": "ligue-1",
     "country": "France",
     "round": 5,
-    "utcDate": "2026-09-19T18:45:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "IR",
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "9748",
       "name": "Lyon",
       "shortName": "Lyon",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9748.png",
-      "score": 2
+      "score": 4
     },
     "awayTeam": {
       "id": "9851",
@@ -894,10 +384,10 @@
       "score": 0
     },
     "score": {
-      "home": 2,
+      "home": 4,
       "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5802944",
@@ -906,28 +396,28 @@
     "competitionSlug": "ligue-1",
     "country": "France",
     "round": 5,
-    "utcDate": "2026-09-19T18:45:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "HT",
+    "utcDate": "2026-09-19T18:45:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "9941",
       "name": "Toulouse",
       "shortName": "Toulouse",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9941.png",
-      "score": 0
+      "score": 3
     },
     "awayTeam": {
       "id": "9746",
       "name": "Le Havre",
       "shortName": "Le Havre",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9746.png",
-      "score": 0
+      "score": 2
     },
     "score": {
-      "home": 0,
-      "away": 0
+      "home": 3,
+      "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:37.139Z"
+    "updatedAt": "2026-09-20T04:37:16.158Z"
   },
   {
     "id": "5868078",
@@ -936,9 +426,9 @@
     "competitionSlug": "laliga",
     "country": "Spain",
     "round": 7,
-    "utcDate": "2026-09-19T19:00:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "30‎’‎",
+    "utcDate": "2026-09-19T19:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8302",
       "name": "Sevilla",
@@ -951,13 +441,13 @@
       "name": "Barcelona",
       "shortName": "Barcelona",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8634.png",
-      "score": 1
+      "score": 3
     },
     "score": {
       "home": 1,
-      "away": 1
+      "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:32.584Z"
+    "updatedAt": "2026-09-20T04:37:13.297Z"
   },
   {
     "id": "5781758",
@@ -966,9 +456,9 @@
     "competitionSlug": "eredivisie",
     "country": "Netherlands",
     "round": 7,
-    "utcDate": "2026-09-19T19:00:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "30‎’‎",
+    "utcDate": "2026-09-19T19:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8525",
       "name": "Willem II",
@@ -981,13 +471,13 @@
       "name": "Fortuna Sittard",
       "shortName": "Fortuna Sittard",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6422.png",
-      "score": 0
+      "score": 1
     },
     "score": {
       "home": 0,
-      "away": 0
+      "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:59.552Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
   },
   {
     "id": "5103639",
@@ -996,28 +486,28 @@
     "competitionSlug": "serie-a-brazil",
     "country": "Brazil",
     "round": 28,
-    "utcDate": "2026-09-19T19:00:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "33‎’‎",
+    "utcDate": "2026-09-19T19:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "10272",
       "name": "Atlético-MG",
       "shortName": "Atlético-MG",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10272.png",
-      "score": 0
+      "score": 1
     },
     "awayTeam": {
       "id": "197693",
       "name": "Chapecoense",
       "shortName": "Chapecoense",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/197693.png",
-      "score": 0
+      "score": 1
     },
     "score": {
-      "home": 0,
-      "away": 0
+      "home": 1,
+      "away": 1
     },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:33.626Z"
   },
   {
     "id": "5887643",
@@ -1026,28 +516,28 @@
     "competitionSlug": "liga-portugal",
     "country": "Portugal",
     "round": 7,
-    "utcDate": "2026-09-19T19:30:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-19T19:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "9768",
       "name": "Sporting CP",
       "shortName": "Sporting CP",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9768.png",
-      "score": null
+      "score": 2
     },
     "awayTeam": {
       "id": "158085",
       "name": "Arouca",
       "shortName": "Arouca",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/158085.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 2
     },
-    "updatedAt": "2026-09-19T19:32:01.290Z"
+    "updatedAt": "2026-09-20T04:37:32.572Z"
   },
   {
     "id": "5103638",
@@ -1056,28 +546,28 @@
     "competitionSlug": "serie-a-brazil",
     "country": "Brazil",
     "round": 28,
-    "utcDate": "2026-09-19T20:00:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-19T20:00:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "163782",
       "name": "Mirassol",
       "shortName": "Mirassol",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/163782.png",
-      "score": null
+      "score": 2
     },
     "awayTeam": {
       "id": "8517",
       "name": "Botafogo",
       "shortName": "Botafogo",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8517.png",
-      "score": null
+      "score": 0
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
     },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:33.626Z"
   },
   {
     "id": "5103643",
@@ -1086,28 +576,28 @@
     "competitionSlug": "serie-a-brazil",
     "country": "Brazil",
     "round": 28,
-    "utcDate": "2026-09-19T21:30:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-19T21:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "1626",
       "name": "Remo",
       "shortName": "Remo",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1626.png",
-      "score": null
+      "score": 1
     },
     "awayTeam": {
       "id": "8514",
       "name": "Santos",
       "shortName": "Santos",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8514.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 2
     },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:33.626Z"
   },
   {
     "id": "5071368",
@@ -1116,28 +606,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-19T23:30:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "161195",
       "name": "CF Montréal",
       "shortName": "Montreal",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/161195.png",
-      "score": null
+      "score": 0
     },
     "awayTeam": {
       "id": "6001",
       "name": "Columbus Crew",
       "shortName": "Columbus",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6001.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071367",
@@ -1146,28 +636,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-19T23:30:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6602",
       "name": "DC United",
       "shortName": "DC United",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6602.png",
-      "score": null
+      "score": 1
     },
     "awayTeam": {
       "id": "1323940",
       "name": "Charlotte FC",
       "shortName": "Charlotte FC",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1323940.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071369",
@@ -1176,28 +666,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-19T23:30:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6580",
       "name": "New England Revolution",
       "shortName": "New England",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6580.png",
-      "score": null
+      "score": 4
     },
     "awayTeam": {
       "id": "267810",
       "name": "Orlando City",
       "shortName": "Orlando",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/267810.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 4,
+      "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071370",
@@ -1206,28 +696,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-19T23:30:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6603",
       "name": "San Jose Earthquakes",
       "shortName": "San Jose",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6603.png",
-      "score": null
+      "score": 2
     },
     "awayTeam": {
       "id": "867280",
       "name": "Los Angeles FC",
       "shortName": "LAFC",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/867280.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5103635",
@@ -1236,28 +726,28 @@
     "competitionSlug": "serie-a-brazil",
     "country": "Brazil",
     "round": 28,
-    "utcDate": "2026-09-19T23:30:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-19T23:30:00Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "10276",
       "name": "Vasco da Gama",
       "shortName": "Vasco da Gama",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10276.png",
-      "score": null
+      "score": 5
     },
     "awayTeam": {
       "id": "9767",
       "name": "Coritiba",
       "shortName": "Coritiba",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9767.png",
-      "score": null
+      "score": 0
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 5,
+      "away": 0
     },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:33.626Z"
   },
   {
     "id": "5103636",
@@ -1266,28 +756,28 @@
     "competitionSlug": "serie-a-brazil",
     "country": "Brazil",
     "round": 28,
-    "utcDate": "2026-09-20T00:00:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-20T00:00:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "10277",
       "name": "São Paulo",
       "shortName": "São Paulo",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10277.png",
-      "score": null
+      "score": 1
     },
     "awayTeam": {
       "id": "8702",
       "name": "Internacional",
       "shortName": "Internacional",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8702.png",
-      "score": null
+      "score": 0
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 0
     },
-    "updatedAt": "2026-09-19T19:32:02.496Z"
+    "updatedAt": "2026-09-20T04:37:33.626Z"
   },
   {
     "id": "5071372",
@@ -1296,28 +786,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-20T00:30:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6399",
       "name": "FC Dallas",
       "shortName": "Dallas",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6399.png",
-      "score": null
+      "score": 0
     },
     "awayTeam": {
       "id": "1218886",
       "name": "Austin FC",
       "shortName": "Austin FC",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1218886.png",
-      "score": null
+      "score": 0
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071373",
@@ -1326,28 +816,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-20T00:30:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8259",
       "name": "Houston Dynamo FC",
       "shortName": "Houston",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8259.png",
-      "score": null
+      "score": 2
     },
     "awayTeam": {
       "id": "722265",
       "name": "FC Cincinnati",
       "shortName": "Cincinnati",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/722265.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 2
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071375",
@@ -1356,28 +846,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-20T00:30:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "207242",
       "name": "Minnesota United",
       "shortName": "Minnesota",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/207242.png",
-      "score": null
+      "score": 2
     },
     "awayTeam": {
       "id": "6637",
       "name": "LA Galaxy",
       "shortName": "LA Galaxy",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6637.png",
-      "score": null
+      "score": 3
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071374",
@@ -1386,28 +876,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-20T00:30:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6604",
       "name": "Sporting Kansas City",
       "shortName": "Sporting KC",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6604.png",
-      "score": null
+      "score": 3
     },
     "awayTeam": {
       "id": "191716",
       "name": "Philadelphia Union",
       "shortName": "Philadelphia",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/191716.png",
-      "score": null
+      "score": 4
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 3,
+      "away": 4
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071379",
@@ -1416,58 +906,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-20T00:30:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-20T00:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "1427963",
       "name": "St. Louis City",
       "shortName": "St. Louis City",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1427963.png",
-      "score": null
+      "score": 3
     },
     "awayTeam": {
       "id": "56453",
       "name": "Toronto FC",
       "shortName": "Toronto",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/56453.png",
-      "score": null
+      "score": 1
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 3,
+      "away": 1
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
-  },
-  {
-    "id": "5071371",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 26,
-    "utcDate": "2026-09-20T01:30:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
-    "homeTeam": {
-      "id": "8314",
-      "name": "Colorado Rapids",
-      "shortName": "Colorado",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8314.png",
-      "score": null
-    },
-    "awayTeam": {
-      "id": "130394",
-      "name": "Seattle Sounders FC",
-      "shortName": "Seattle Sounders",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
-      "score": null
-    },
-    "score": {
-      "home": null,
-      "away": null
-    },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071376",
@@ -1476,28 +936,28 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-20T01:30:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-20T01:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "915807",
       "name": "Nashville SC",
       "shortName": "Nashville SC",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/915807.png",
-      "score": null
+      "score": 3
     },
     "awayTeam": {
       "id": "6397",
       "name": "Chicago Fire FC",
       "shortName": "Chicago",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6397.png",
-      "score": null
+      "score": 0
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 3,
+      "away": 0
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071378",
@@ -1506,28 +966,58 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-20T01:30:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-20T01:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6606",
       "name": "Real Salt Lake",
       "shortName": "Salt Lake",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6606.png",
-      "score": null
+      "score": 0
     },
     "awayTeam": {
       "id": "307691",
       "name": "Vancouver Whitecaps",
       "shortName": "Vancouver",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/307691.png",
-      "score": null
+      "score": 3
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 3
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5071371",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T02:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "8314",
+      "name": "Colorado Rapids",
+      "shortName": "Colorado",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8314.png",
+      "score": 3
+    },
+    "awayTeam": {
+      "id": "130394",
+      "name": "Seattle Sounders FC",
+      "shortName": "Seattle Sounders",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
+      "score": 3
+    },
+    "score": {
+      "home": 3,
+      "away": 3
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   },
   {
     "id": "5071377",
@@ -1536,27 +1026,1137 @@
     "competitionSlug": "mls",
     "country": "USA",
     "round": 26,
-    "utcDate": "2026-09-20T02:30:00Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "utcDate": "2026-09-20T02:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "307690",
       "name": "Portland Timbers",
       "shortName": "Portland",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/307690.png",
-      "score": null
+      "score": 0
     },
     "awayTeam": {
       "id": "773958",
       "name": "Atlanta United",
       "shortName": "Atlanta United",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/773958.png",
+      "score": 1
+    },
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
+  },
+  {
+    "id": "5781750",
+    "competitionId": "57",
+    "competitionName": "Eredivisie",
+    "competitionSlug": "eredivisie",
+    "country": "Netherlands",
+    "round": 7,
+    "utcDate": "2026-09-20T10:15:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "10235",
+      "name": "Feyenoord",
+      "shortName": "Feyenoord",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10235.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "9908",
+      "name": "FC Utrecht",
+      "shortName": "FC Utrecht",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9908.png",
       "score": null
     },
     "score": {
       "home": null,
       "away": null
     },
-    "updatedAt": "2026-09-19T19:31:49.181Z"
+    "updatedAt": "2026-09-20T04:37:31.608Z"
+  },
+  {
+    "id": "5749683",
+    "competitionId": "55",
+    "competitionName": "Serie A",
+    "competitionSlug": "serie-a",
+    "country": "Italy",
+    "round": 5,
+    "utcDate": "2026-09-20T10:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8535",
+      "name": "Fiorentina",
+      "shortName": "Fiorentina",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8535.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "9875",
+      "name": "Napoli",
+      "shortName": "Napoli",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9875.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:14.363Z"
+  },
+  {
+    "id": "5868076",
+    "competitionId": "87",
+    "competitionName": "LaLiga",
+    "competitionSlug": "laliga",
+    "country": "Spain",
+    "round": 7,
+    "utcDate": "2026-09-20T12:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8305",
+      "name": "Getafe",
+      "shortName": "Getafe",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8305.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "9864",
+      "name": "Málaga",
+      "shortName": "Málaga",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9864.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:13.297Z"
+  },
+  {
+    "id": "5781752",
+    "competitionId": "57",
+    "competitionName": "Eredivisie",
+    "competitionSlug": "eredivisie",
+    "country": "Netherlands",
+    "round": 7,
+    "utcDate": "2026-09-20T12:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "10229",
+      "name": "AZ Alkmaar",
+      "shortName": "AZ Alkmaar",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10229.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "6414",
+      "name": "Telstar",
+      "shortName": "Telstar",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6414.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:31.608Z"
+  },
+  {
+    "id": "5781753",
+    "competitionId": "57",
+    "competitionName": "Eredivisie",
+    "competitionSlug": "eredivisie",
+    "country": "Netherlands",
+    "round": 7,
+    "utcDate": "2026-09-20T12:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8611",
+      "name": "FC Twente",
+      "shortName": "FC Twente",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8611.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8640",
+      "name": "PSV Eindhoven",
+      "shortName": "PSV Eindhoven",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8640.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:31.608Z"
+  },
+  {
+    "id": "5795455",
+    "competitionId": "47",
+    "competitionName": "Premier League",
+    "competitionSlug": "premier-league",
+    "country": "England",
+    "round": 5,
+    "utcDate": "2026-09-20T13:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8678",
+      "name": "AFC Bournemouth",
+      "shortName": "Bournemouth",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8678.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8650",
+      "name": "Liverpool",
+      "shortName": "Liverpool",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:11.138Z"
+  },
+  {
+    "id": "5795460",
+    "competitionId": "47",
+    "competitionName": "Premier League",
+    "competitionSlug": "premier-league",
+    "country": "England",
+    "round": 5,
+    "utcDate": "2026-09-20T13:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8463",
+      "name": "Leeds United",
+      "shortName": "Leeds",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8463.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "9826",
+      "name": "Crystal Palace",
+      "shortName": "Crystal Palace",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9826.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:11.138Z"
+  },
+  {
+    "id": "5795461",
+    "competitionId": "47",
+    "competitionName": "Premier League",
+    "competitionSlug": "premier-league",
+    "country": "England",
+    "round": 5,
+    "utcDate": "2026-09-20T13:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8456",
+      "name": "Manchester City",
+      "shortName": "Man City",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8472",
+      "name": "Sunderland",
+      "shortName": "Sunderland",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8472.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:11.138Z"
+  },
+  {
+    "id": "5749684",
+    "competitionId": "55",
+    "competitionName": "Serie A",
+    "competitionSlug": "serie-a",
+    "country": "Italy",
+    "round": 5,
+    "utcDate": "2026-09-20T13:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9891",
+      "name": "Frosinone",
+      "shortName": "Frosinone",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9891.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "10171",
+      "name": "Como",
+      "shortName": "Como",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10171.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:14.363Z"
+  },
+  {
+    "id": "5749687",
+    "competitionId": "55",
+    "competitionName": "Serie A",
+    "competitionSlug": "serie-a",
+    "country": "Italy",
+    "round": 5,
+    "utcDate": "2026-09-20T13:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "10167",
+      "name": "Parma",
+      "shortName": "Parma",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10167.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "10233",
+      "name": "Genoa",
+      "shortName": "Genoa",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:14.363Z"
+  },
+  {
+    "id": "5802938",
+    "competitionId": "53",
+    "competitionName": "Ligue 1",
+    "competitionSlug": "ligue-1",
+    "country": "France",
+    "round": 5,
+    "utcDate": "2026-09-20T13:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8583",
+      "name": "Auxerre",
+      "shortName": "Auxerre",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8583.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8521",
+      "name": "Brest",
+      "shortName": "Brest",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8521.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:16.158Z"
+  },
+  {
+    "id": "5881170",
+    "competitionId": "54",
+    "competitionName": "Bundesliga",
+    "competitionSlug": "bundesliga",
+    "country": "Germany",
+    "round": 4,
+    "utcDate": "2026-09-20T13:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8178",
+      "name": "Bayer Leverkusen",
+      "shortName": "Leverkusen",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8178.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "178475",
+      "name": "RB Leipzig",
+      "shortName": "RB Leipzig",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/178475.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:15.280Z"
+  },
+  {
+    "id": "1000015477",
+    "competitionId": "264",
+    "competitionName": "AFC Champions League",
+    "competitionSlug": "afc-champions-league",
+    "country": "Asia",
+    "round": 6,
+    "utcDate": "2026-09-20T14:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "213307",
+      "name": "KSC Lokeren",
+      "shortName": "KSC Lokeren",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/213307.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8174",
+      "name": "Virton",
+      "shortName": "Virton",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8174.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:26.525Z"
+  },
+  {
+    "id": "5103640",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-20T14:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9769",
+      "name": "Grêmio",
+      "shortName": "Grêmio",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9769.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "10283",
+      "name": "Palmeiras",
+      "shortName": "Palmeiras",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10283.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5868072",
+    "competitionId": "87",
+    "competitionName": "LaLiga",
+    "competitionSlug": "laliga",
+    "country": "Spain",
+    "round": 7,
+    "utcDate": "2026-09-20T14:15:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9906",
+      "name": "Atlético Madrid",
+      "shortName": "Atlético Madrid",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9906.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8633",
+      "name": "Real Madrid",
+      "shortName": "Real Madrid",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:13.297Z"
+  },
+  {
+    "id": "5887637",
+    "competitionId": "61",
+    "competitionName": "Liga Portugal",
+    "competitionSlug": "liga-portugal",
+    "country": "Portugal",
+    "round": 7,
+    "utcDate": "2026-09-20T14:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "1074320",
+      "name": "Estrela da Amadora",
+      "shortName": "Estrela da Amadora",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1074320.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "1786",
+      "name": "Académico Viseu",
+      "shortName": "Académico Viseu",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1786.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:32.572Z"
+  },
+  {
+    "id": "5887644",
+    "competitionId": "61",
+    "competitionName": "Liga Portugal",
+    "competitionSlug": "liga-portugal",
+    "country": "Portugal",
+    "round": 7,
+    "utcDate": "2026-09-20T14:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "7844",
+      "name": "Vitória de Guimarães",
+      "shortName": "Vitória de Guimarães",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7844.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8348",
+      "name": "Moreirense",
+      "shortName": "Moreirense",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8348.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:32.572Z"
+  },
+  {
+    "id": "5781751",
+    "competitionId": "57",
+    "competitionName": "Eredivisie",
+    "competitionSlug": "eredivisie",
+    "country": "Netherlands",
+    "round": 7,
+    "utcDate": "2026-09-20T14:45:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8464",
+      "name": "NEC Nijmegen",
+      "shortName": "NEC Nijmegen",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8464.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "6433",
+      "name": "Go Ahead Eagles",
+      "shortName": "Go Ahead Eagles",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6433.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:31.608Z"
+  },
+  {
+    "id": "5802942",
+    "competitionId": "53",
+    "competitionName": "Ligue 1",
+    "competitionSlug": "ligue-1",
+    "country": "France",
+    "round": 5,
+    "utcDate": "2026-09-20T15:15:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9831",
+      "name": "Nice",
+      "shortName": "Nice",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9831.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8639",
+      "name": "Lille",
+      "shortName": "Lille",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8639.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:16.158Z"
+  },
+  {
+    "id": "5795459",
+    "competitionId": "47",
+    "competitionName": "Premier League",
+    "competitionSlug": "premier-league",
+    "country": "England",
+    "round": 5,
+    "utcDate": "2026-09-20T15:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9879",
+      "name": "Fulham",
+      "shortName": "Fulham",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "10260",
+      "name": "Manchester United",
+      "shortName": "Man United",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10260.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:11.138Z"
+  },
+  {
+    "id": "5881176",
+    "competitionId": "54",
+    "competitionName": "Bundesliga",
+    "competitionSlug": "bundesliga",
+    "country": "Germany",
+    "round": 4,
+    "utcDate": "2026-09-20T15:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "10189",
+      "name": "Schalke 04",
+      "shortName": "Schalke 04",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10189.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8232",
+      "name": "Elversberg",
+      "shortName": "Elversberg",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8232.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:15.280Z"
+  },
+  {
+    "id": "5749685",
+    "competitionId": "55",
+    "competitionName": "Serie A",
+    "competitionSlug": "serie-a",
+    "country": "Italy",
+    "round": 5,
+    "utcDate": "2026-09-20T16:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9885",
+      "name": "Juventus",
+      "shortName": "Juventus",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9885.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8524",
+      "name": "Atalanta",
+      "shortName": "Atalanta",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8524.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:14.363Z"
+  },
+  {
+    "id": "5868074",
+    "competitionId": "87",
+    "competitionName": "LaLiga",
+    "competitionSlug": "laliga",
+    "country": "Spain",
+    "round": 7,
+    "utcDate": "2026-09-20T16:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9783",
+      "name": "Deportivo A Coruña",
+      "shortName": "Deportivo A Coruña",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9783.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8603",
+      "name": "Real Betis",
+      "shortName": "Real Betis",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8603.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:13.297Z"
+  },
+  {
+    "id": "5868080",
+    "competitionId": "87",
+    "competitionName": "LaLiga",
+    "competitionSlug": "laliga",
+    "country": "Spain",
+    "round": 7,
+    "utcDate": "2026-09-20T16:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "10205",
+      "name": "Villarreal",
+      "shortName": "Villarreal",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10205.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8581",
+      "name": "Levante",
+      "shortName": "Levante",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8581.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:13.297Z"
+  },
+  {
+    "id": "5887638",
+    "competitionId": "61",
+    "competitionName": "Liga Portugal",
+    "competitionSlug": "liga-portugal",
+    "country": "Portugal",
+    "round": 7,
+    "utcDate": "2026-09-20T17:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "7842",
+      "name": "Estoril",
+      "shortName": "Estoril",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7842.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "212821",
+      "name": "Casa Pia AC",
+      "shortName": "Casa Pia AC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212821.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:32.572Z"
+  },
+  {
+    "id": "5887642",
+    "competitionId": "61",
+    "competitionName": "Liga Portugal",
+    "competitionSlug": "liga-portugal",
+    "country": "Portugal",
+    "round": 7,
+    "utcDate": "2026-09-20T17:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "1567",
+      "name": "Santa Clara",
+      "shortName": "Santa Clara",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1567.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "10264",
+      "name": "Braga",
+      "shortName": "Braga",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:32.572Z"
+  },
+  {
+    "id": "1000015478",
+    "competitionId": "264",
+    "competitionName": "AFC Champions League",
+    "competitionSlug": "afc-champions-league",
+    "country": "Asia",
+    "round": 6,
+    "utcDate": "2026-09-20T17:15:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "7947",
+      "name": "FCV Dender EH",
+      "shortName": "FCV Dender EH",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7947.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "274583",
+      "name": "Patro Eisden",
+      "shortName": "Patro Eisden",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/274583.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:26.525Z"
+  },
+  {
+    "id": "5881175",
+    "competitionId": "54",
+    "competitionName": "Bundesliga",
+    "competitionSlug": "bundesliga",
+    "country": "Germany",
+    "round": 4,
+    "utcDate": "2026-09-20T17:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8460",
+      "name": "Paderborn",
+      "shortName": "Paderborn",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8460.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8226",
+      "name": "Hoffenheim",
+      "shortName": "Hoffenheim",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8226.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:15.280Z"
+  },
+  {
+    "id": "5749680",
+    "competitionId": "55",
+    "competitionName": "Serie A",
+    "competitionSlug": "serie-a",
+    "country": "Italy",
+    "round": 5,
+    "utcDate": "2026-09-20T18:45:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8564",
+      "name": "Milan",
+      "shortName": "Milan",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8564.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "9888",
+      "name": "Lecce",
+      "shortName": "Lecce",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9888.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:14.363Z"
+  },
+  {
+    "id": "5802945",
+    "competitionId": "53",
+    "competitionName": "Ligue 1",
+    "competitionSlug": "ligue-1",
+    "country": "France",
+    "round": 5,
+    "utcDate": "2026-09-20T18:45:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8592",
+      "name": "Marseille",
+      "shortName": "Marseille",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8592.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "9847",
+      "name": "Paris Saint-Germain",
+      "shortName": "PSG",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:16.158Z"
+  },
+  {
+    "id": "5868079",
+    "competitionId": "87",
+    "competitionName": "LaLiga",
+    "competitionSlug": "laliga",
+    "country": "Spain",
+    "round": 7,
+    "utcDate": "2026-09-20T19:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "10267",
+      "name": "Valencia",
+      "shortName": "Valencia",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10267.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8560",
+      "name": "Real Sociedad",
+      "shortName": "Real Sociedad",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:13.297Z"
+  },
+  {
+    "id": "5103637",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-20T19:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9808",
+      "name": "Corinthians",
+      "shortName": "Corinthians",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9808.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "9863",
+      "name": "Fluminense",
+      "shortName": "Fluminense",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9863.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5103642",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-20T19:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "7733",
+      "name": "Vitória",
+      "shortName": "Vitória",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7733.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "9781",
+      "name": "Cruzeiro",
+      "shortName": "Cruzeiro",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9781.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5887641",
+    "competitionId": "61",
+    "competitionName": "Liga Portugal",
+    "competitionSlug": "liga-portugal",
+    "country": "Portugal",
+    "round": 7,
+    "utcDate": "2026-09-20T19:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9773",
+      "name": "FC Porto",
+      "shortName": "FC Porto",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9773.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "9772",
+      "name": "Benfica",
+      "shortName": "Benfica",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:32.572Z"
+  },
+  {
+    "id": "5103634",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-20T21:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "9770",
+      "name": "Flamengo",
+      "shortName": "Flamengo",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9770.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "109705",
+      "name": "RB Bragantino",
+      "shortName": "RB Bragantino",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/109705.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5103641",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-20T22:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "10273",
+      "name": "Athletico Paranaense",
+      "shortName": "Athletico Paranaense",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10273.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "7877",
+      "name": "Bahia",
+      "shortName": "Bahia",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7877.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:33.626Z"
+  },
+  {
+    "id": "5071380",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 26,
+    "utcDate": "2026-09-20T23:00:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "960720",
+      "name": "Inter Miami CF",
+      "shortName": "Inter Miami CF",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/960720.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "1701119",
+      "name": "San Diego FC",
+      "shortName": "San Diego FC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1701119.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-20T04:37:24.553Z"
   }
 ]
