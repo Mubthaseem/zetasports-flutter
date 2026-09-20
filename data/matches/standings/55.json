@@ -2,7 +2,7 @@
   "competitionId": "55",
   "competitionName": "Serie A",
   "season": "2026/2027",
-  "updatedAt": "2026-09-20T15:32:02.740Z",
+  "updatedAt": "2026-09-20T20:23:46.698Z",
   "table": [
     {
       "position": 1,
@@ -78,6 +78,25 @@
     },
     {
       "position": 5,
+      "teamId": "8564",
+      "teamName": "Milan",
+      "shortName": "Milan",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8564.png",
+      "played": 5,
+      "won": 3,
+      "drawn": 2,
+      "lost": 0,
+      "goalsFor": 10,
+      "goalsAgainst": 4,
+      "goalDifference": 6,
+      "points": 11,
+      "form": [
+        "#0046A7"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 6,
       "teamId": "9891",
       "teamName": "Frosinone",
       "shortName": "Frosinone",
@@ -91,11 +110,26 @@
       "goalDifference": 5,
       "points": 10,
       "form": [
-        "#0046A7"
+        "#02CCF0"
       ]
     },
     {
-      "position": 6,
+      "position": 7,
+      "teamId": "9885",
+      "teamName": "Juventus",
+      "shortName": "Juventus",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9885.png",
+      "played": 5,
+      "won": 3,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 8,
+      "goalsAgainst": 4,
+      "goalDifference": 4,
+      "points": 10
+    },
+    {
+      "position": 8,
       "teamId": "10171",
       "teamName": "Como",
       "shortName": "Como",
@@ -107,40 +141,7 @@
       "goalsFor": 9,
       "goalsAgainst": 6,
       "goalDifference": 3,
-      "points": 10,
-      "form": [
-        "#02CCF0"
-      ]
-    },
-    {
-      "position": 7,
-      "teamId": "8564",
-      "teamName": "Milan",
-      "shortName": "Milan",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8564.png",
-      "played": 4,
-      "won": 2,
-      "drawn": 2,
-      "lost": 0,
-      "goalsFor": 7,
-      "goalsAgainst": 4,
-      "goalDifference": 3,
-      "points": 8
-    },
-    {
-      "position": 8,
-      "teamId": "9885",
-      "teamName": "Juventus",
-      "shortName": "Juventus",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9885.png",
-      "played": 4,
-      "won": 2,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 6,
-      "goalsAgainst": 4,
-      "goalDifference": 2,
-      "points": 7
+      "points": 10
     },
     {
       "position": 9,
@@ -178,13 +179,13 @@
       "teamName": "Atalanta",
       "shortName": "Atalanta",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8524.png",
-      "played": 4,
+      "played": 5,
       "won": 2,
       "drawn": 0,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 5,
-      "goalsAgainst": 5,
-      "goalDifference": 0,
+      "goalsAgainst": 7,
+      "goalDifference": -2,
       "points": 6
     },
     {
@@ -193,14 +194,15 @@
       "teamName": "Lecce",
       "shortName": "Lecce",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9888.png",
-      "played": 4,
+      "played": 5,
       "won": 2,
       "drawn": 0,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 5,
-      "goalsAgainst": 7,
-      "goalDifference": -2,
-      "points": 6
+      "goalsAgainst": 10,
+      "goalDifference": -5,
+      "points": 6,
+      "qualificationZone": "Active"
     },
     {
       "position": 13,

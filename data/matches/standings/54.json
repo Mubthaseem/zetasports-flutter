@@ -2,7 +2,7 @@
   "competitionId": "54",
   "competitionName": "Bundesliga",
   "season": "2026/2027",
-  "updatedAt": "2026-09-20T15:32:04.094Z",
+  "updatedAt": "2026-09-20T20:23:47.930Z",
   "table": [
     {
       "position": 1,
@@ -125,8 +125,7 @@
       "goalsFor": 8,
       "goalsAgainst": 7,
       "goalDifference": 1,
-      "points": 7,
-      "qualificationZone": "Active"
+      "points": 7
     },
     {
       "position": 8,
@@ -186,11 +185,25 @@
       "goalsFor": 3,
       "goalsAgainst": 4,
       "goalDifference": -1,
-      "points": 5,
-      "qualificationZone": "Active"
+      "points": 5
     },
     {
       "position": 12,
+      "teamId": "8460",
+      "teamName": "Paderborn",
+      "shortName": "Paderborn",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8460.png",
+      "played": 4,
+      "won": 1,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 3,
+      "goalsAgainst": 5,
+      "goalDifference": -2,
+      "points": 4
+    },
+    {
+      "position": 13,
       "teamId": "8722",
       "teamName": "1. FC Köln",
       "shortName": "Köln",
@@ -205,22 +218,22 @@
       "points": 4
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "8226",
       "teamName": "Hoffenheim",
       "shortName": "Hoffenheim",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8226.png",
-      "played": 3,
+      "played": 4,
       "won": 1,
       "drawn": 0,
-      "lost": 2,
-      "goalsFor": 6,
-      "goalsAgainst": 7,
-      "goalDifference": -1,
+      "lost": 3,
+      "goalsFor": 7,
+      "goalsAgainst": 10,
+      "goalDifference": -3,
       "points": 3
     },
     {
-      "position": 14,
+      "position": 15,
       "teamId": "10269",
       "teamName": "VfB Stuttgart",
       "shortName": "VfB Stuttgart",
@@ -235,7 +248,7 @@
       "points": 3
     },
     {
-      "position": 15,
+      "position": 16,
       "teamId": "9790",
       "teamName": "Hamburger SV",
       "shortName": "Hamburger SV",
@@ -247,22 +260,7 @@
       "goalsFor": 2,
       "goalsAgainst": 13,
       "goalDifference": -11,
-      "points": 3
-    },
-    {
-      "position": 16,
-      "teamId": "8460",
-      "teamName": "Paderborn",
-      "shortName": "Paderborn",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8460.png",
-      "played": 3,
-      "won": 0,
-      "drawn": 1,
-      "lost": 2,
-      "goalsFor": 0,
-      "goalsAgainst": 4,
-      "goalDifference": -4,
-      "points": 1,
+      "points": 3,
       "form": [
         "#FFA72F"
       ]

@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-09-20T15:32:01.529Z",
+  "updatedAt": "2026-09-20T20:23:44.152Z",
   "table": [
     {
       "position": 1,
@@ -24,22 +24,21 @@
     },
     {
       "position": 2,
-      "teamId": "8633",
-      "teamName": "Real Madrid",
-      "shortName": "Real Madrid",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
+      "teamId": "9906",
+      "teamName": "Atlético Madrid",
+      "shortName": "Atlético Madrid",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9906.png",
       "played": 7,
       "won": 5,
       "drawn": 1,
       "lost": 1,
-      "goalsFor": 17,
-      "goalsAgainst": 6,
-      "goalDifference": 11,
+      "goalsFor": 16,
+      "goalsAgainst": 7,
+      "goalDifference": 9,
       "points": 16,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 3,
@@ -47,36 +46,35 @@
       "teamName": "Real Betis",
       "shortName": "Real Betis",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8603.png",
-      "played": 6,
+      "played": 7,
       "won": 5,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
-      "goalsFor": 8,
-      "goalsAgainst": 6,
+      "goalsFor": 9,
+      "goalsAgainst": 7,
       "goalDifference": 2,
-      "points": 15,
+      "points": 16,
       "form": [
         "#2AD572"
       ]
     },
     {
       "position": 4,
-      "teamId": "9906",
-      "teamName": "Atlético Madrid",
-      "shortName": "Atlético Madrid",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9906.png",
+      "teamId": "8633",
+      "teamName": "Real Madrid",
+      "shortName": "Real Madrid",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
       "played": 7,
-      "won": 4,
-      "drawn": 2,
-      "lost": 1,
-      "goalsFor": 14,
-      "goalsAgainst": 6,
-      "goalDifference": 8,
-      "points": 14,
+      "won": 5,
+      "drawn": 0,
+      "lost": 2,
+      "goalsFor": 18,
+      "goalsAgainst": 8,
+      "goalDifference": 10,
+      "points": 15,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 5,
@@ -120,17 +118,32 @@
       "teamName": "Deportivo A Coruña",
       "shortName": "Deportivo A Coruña",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9783.png",
-      "played": 6,
+      "played": 7,
       "won": 2,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 1,
-      "goalsFor": 9,
-      "goalsAgainst": 7,
+      "goalsFor": 10,
+      "goalsAgainst": 8,
       "goalDifference": 2,
-      "points": 9
+      "points": 10
     },
     {
       "position": 8,
+      "teamId": "10205",
+      "teamName": "Villarreal",
+      "shortName": "Villarreal",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10205.png",
+      "played": 7,
+      "won": 2,
+      "drawn": 2,
+      "lost": 3,
+      "goalsFor": 13,
+      "goalsAgainst": 12,
+      "goalDifference": 1,
+      "points": 8
+    },
+    {
+      "position": 9,
       "teamId": "8315",
       "teamName": "Athletic Club",
       "shortName": "Athletic Club",
@@ -145,7 +158,7 @@
       "points": 8
     },
     {
-      "position": 9,
+      "position": 10,
       "teamId": "8305",
       "teamName": "Getafe",
       "shortName": "Getafe",
@@ -160,7 +173,7 @@
       "points": 8
     },
     {
-      "position": 10,
+      "position": 11,
       "teamId": "8370",
       "teamName": "Rayo Vallecano",
       "shortName": "Rayo Vallecano",
@@ -175,7 +188,23 @@
       "points": 8
     },
     {
-      "position": 11,
+      "position": 12,
+      "teamId": "8560",
+      "teamName": "Real Sociedad",
+      "shortName": "Real Sociedad",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
+      "played": 7,
+      "won": 2,
+      "drawn": 2,
+      "lost": 3,
+      "goalsFor": 7,
+      "goalsAgainst": 12,
+      "goalDifference": -5,
+      "points": 8,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 13,
       "teamId": "8371",
       "teamName": "Osasuna",
       "shortName": "Osasuna",
@@ -190,7 +219,7 @@
       "points": 8
     },
     {
-      "position": 12,
+      "position": 14,
       "teamId": "9910",
       "teamName": "Celta Vigo",
       "shortName": "Celta Vigo",
@@ -205,7 +234,7 @@
       "points": 7
     },
     {
-      "position": 13,
+      "position": 15,
       "teamId": "8558",
       "teamName": "Espanyol",
       "shortName": "Espanyol",
@@ -220,22 +249,7 @@
       "points": 7
     },
     {
-      "position": 14,
-      "teamId": "8560",
-      "teamName": "Real Sociedad",
-      "shortName": "Real Sociedad",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
-      "played": 6,
-      "won": 2,
-      "drawn": 1,
-      "lost": 3,
-      "goalsFor": 6,
-      "goalsAgainst": 11,
-      "goalDifference": -5,
-      "points": 7
-    },
-    {
-      "position": 15,
+      "position": 16,
       "teamId": "8696",
       "teamName": "Racing Santander",
       "shortName": "Racing Santander",
@@ -250,33 +264,18 @@
       "points": 7
     },
     {
-      "position": 16,
-      "teamId": "10205",
-      "teamName": "Villarreal",
-      "shortName": "Villarreal",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10205.png",
-      "played": 6,
-      "won": 1,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 10,
-      "goalsAgainst": 11,
-      "goalDifference": -1,
-      "points": 5
-    },
-    {
       "position": 17,
       "teamId": "8581",
       "teamName": "Levante",
       "shortName": "Levante",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8581.png",
-      "played": 5,
+      "played": 6,
       "won": 1,
       "drawn": 2,
-      "lost": 2,
-      "goalsFor": 7,
-      "goalsAgainst": 9,
-      "goalDifference": -2,
+      "lost": 3,
+      "goalsFor": 8,
+      "goalsAgainst": 12,
+      "goalDifference": -4,
       "points": 5
     },
     {
@@ -303,17 +302,18 @@
       "teamName": "Valencia",
       "shortName": "Valencia",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10267.png",
-      "played": 6,
+      "played": 7,
       "won": 1,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 4,
-      "goalsFor": 2,
-      "goalsAgainst": 10,
+      "goalsFor": 3,
+      "goalsAgainst": 11,
       "goalDifference": -8,
-      "points": 4,
+      "points": 5,
       "form": [
         "#FF4646"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 20,

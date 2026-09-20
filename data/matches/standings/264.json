@@ -2,7 +2,7 @@
   "competitionId": "264",
   "competitionName": "AFC Champions League",
   "season": "2026/2027",
-  "updatedAt": "2026-09-20T15:32:16.906Z",
+  "updatedAt": "2026-09-20T20:24:04.559Z",
   "table": [
     {
       "position": 1,
@@ -24,6 +24,24 @@
     },
     {
       "position": 2,
+      "teamId": "7947",
+      "teamName": "FCV Dender EH",
+      "shortName": "FCV Dender EH",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7947.png",
+      "played": 6,
+      "won": 5,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 8,
+      "goalsAgainst": 2,
+      "goalDifference": 6,
+      "points": 15,
+      "form": [
+        "#FFD908"
+      ]
+    },
+    {
+      "position": 3,
       "teamId": "6351",
       "teamName": "Eupen",
       "shortName": "Eupen",
@@ -41,7 +59,7 @@
       ]
     },
     {
-      "position": 3,
+      "position": 4,
       "teamId": "96953",
       "teamName": "Francs Borains",
       "shortName": "Francs Borains",
@@ -52,24 +70,6 @@
       "lost": 1,
       "goalsFor": 9,
       "goalsAgainst": 4,
-      "goalDifference": 5,
-      "points": 12,
-      "form": [
-        "#FFD908"
-      ]
-    },
-    {
-      "position": 4,
-      "teamId": "7947",
-      "teamName": "FCV Dender EH",
-      "shortName": "FCV Dender EH",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7947.png",
-      "played": 5,
-      "won": 4,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 7,
-      "goalsAgainst": 2,
       "goalDifference": 5,
       "points": 12,
       "form": [
@@ -92,8 +92,7 @@
       "points": 10,
       "form": [
         "#FFD908"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 6,
@@ -108,8 +107,7 @@
       "goalsFor": 13,
       "goalsAgainst": 11,
       "goalDifference": 2,
-      "points": 10,
-      "qualificationZone": "Active"
+      "points": 10
     },
     {
       "position": 7,
@@ -207,13 +205,13 @@
       "teamName": "Patro Eisden",
       "shortName": "Patro Eisden",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/274583.png",
-      "played": 5,
+      "played": 6,
       "won": 1,
       "drawn": 0,
-      "lost": 4,
+      "lost": 5,
       "goalsFor": 7,
-      "goalsAgainst": 11,
-      "goalDifference": -4,
+      "goalsAgainst": 12,
+      "goalDifference": -5,
       "points": 3
     },
     {
