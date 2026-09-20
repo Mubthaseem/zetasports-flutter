@@ -2,10 +2,29 @@
   "competitionId": "57",
   "competitionName": "Eredivisie",
   "season": "2026/2027",
-  "updatedAt": "2026-09-20T03:39:36.427Z",
+  "updatedAt": "2026-09-20T10:43:59.473Z",
   "table": [
     {
       "position": 1,
+      "teamId": "10235",
+      "teamName": "Feyenoord",
+      "shortName": "Feyenoord",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10235.png",
+      "played": 7,
+      "won": 5,
+      "drawn": 2,
+      "lost": 0,
+      "goalsFor": 22,
+      "goalsAgainst": 7,
+      "goalDifference": 15,
+      "points": 17,
+      "form": [
+        "#2AD572"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 2,
       "teamId": "8640",
       "teamName": "PSV Eindhoven",
       "shortName": "PSV Eindhoven",
@@ -19,11 +38,11 @@
       "goalDifference": 15,
       "points": 16,
       "form": [
-        "#2AD572"
+        "#FFD908"
       ]
     },
     {
-      "position": 2,
+      "position": 3,
       "teamId": "10229",
       "teamName": "AZ Alkmaar",
       "shortName": "AZ Alkmaar",
@@ -36,24 +55,6 @@
       "goalsAgainst": 6,
       "goalDifference": 11,
       "points": 16,
-      "form": [
-        "#FFD908"
-      ]
-    },
-    {
-      "position": 3,
-      "teamId": "10235",
-      "teamName": "Feyenoord",
-      "shortName": "Feyenoord",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10235.png",
-      "played": 6,
-      "won": 4,
-      "drawn": 2,
-      "lost": 0,
-      "goalsFor": 20,
-      "goalsAgainst": 7,
-      "goalDifference": 13,
-      "points": 14,
       "form": [
         "#0294F0"
       ]
@@ -207,21 +208,6 @@
     },
     {
       "position": 13,
-      "teamId": "9908",
-      "teamName": "FC Utrecht",
-      "shortName": "FC Utrecht",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9908.png",
-      "played": 6,
-      "won": 1,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 11,
-      "goalsAgainst": 19,
-      "goalDifference": -8,
-      "points": 5
-    },
-    {
-      "position": 14,
       "teamId": "8614",
       "teamName": "Sparta Rotterdam",
       "shortName": "Sparta Rotterdam",
@@ -236,7 +222,7 @@
       "points": 5
     },
     {
-      "position": 15,
+      "position": 14,
       "teamId": "7788",
       "teamName": "Cambuur",
       "shortName": "Cambuur",
@@ -249,6 +235,22 @@
       "goalsAgainst": 19,
       "goalDifference": -9,
       "points": 5
+    },
+    {
+      "position": 15,
+      "teamId": "9908",
+      "teamName": "FC Utrecht",
+      "shortName": "FC Utrecht",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9908.png",
+      "played": 7,
+      "won": 1,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 11,
+      "goalsAgainst": 21,
+      "goalDifference": -10,
+      "points": 5,
+      "qualificationZone": "Active"
     },
     {
       "position": 16,
