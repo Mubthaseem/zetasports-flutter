@@ -1,1 +1,152 @@
-[]
+[
+  {
+    "id": "5802945",
+    "competitionId": "53",
+    "competitionName": "Ligue 1",
+    "competitionSlug": "ligue-1",
+    "country": "France",
+    "round": 5,
+    "utcDate": "2026-09-20T18:45:00.000Z",
+    "status": "IN_PLAY",
+    "minute": "94‎’‎",
+    "homeTeam": {
+      "id": "8592",
+      "name": "Marseille",
+      "shortName": "Marseille",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8592.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "9847",
+      "name": "Paris Saint-Germain",
+      "shortName": "PSG",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
+      "score": 2
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T20:40:01.059Z"
+  },
+  {
+    "id": "5868079",
+    "competitionId": "87",
+    "competitionName": "LaLiga",
+    "competitionSlug": "laliga",
+    "country": "Spain",
+    "round": 7,
+    "utcDate": "2026-09-20T19:00:00.000Z",
+    "status": "IN_PLAY",
+    "minute": "80‎’‎",
+    "homeTeam": {
+      "id": "10267",
+      "name": "Valencia",
+      "shortName": "Valencia",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10267.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "8560",
+      "name": "Real Sociedad",
+      "shortName": "Real Sociedad",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
+      "score": 2
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T20:39:57.947Z"
+  },
+  {
+    "id": "5103637",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-20T19:00:00.000Z",
+    "status": "IN_PLAY",
+    "minute": "79‎’‎",
+    "homeTeam": {
+      "id": "9808",
+      "name": "Corinthians",
+      "shortName": "Corinthians",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9808.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "9863",
+      "name": "Fluminense",
+      "shortName": "Fluminense",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9863.png",
+      "score": 2
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T20:40:18.505Z"
+  },
+  {
+    "id": "5103642",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 28,
+    "utcDate": "2026-09-20T19:00:00.000Z",
+    "status": "IN_PLAY",
+    "minute": "76‎’‎",
+    "homeTeam": {
+      "id": "7733",
+      "name": "Vitória",
+      "shortName": "Vitória",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7733.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "9781",
+      "name": "Cruzeiro",
+      "shortName": "Cruzeiro",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9781.png",
+      "score": 2
+    },
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "updatedAt": "2026-09-20T20:40:18.505Z"
+  },
+  {
+    "id": "5887641",
+    "competitionId": "61",
+    "competitionName": "Liga Portugal",
+    "competitionSlug": "liga-portugal",
+    "country": "Portugal",
+    "round": 7,
+    "utcDate": "2026-09-20T19:30:00.000Z",
+    "status": "IN_PLAY",
+    "minute": "HT",
+    "homeTeam": {
+      "id": "9773",
+      "name": "FC Porto",
+      "shortName": "FC Porto",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9773.png",
+      "score": 1
+    },
+    "awayTeam": {
+      "id": "9772",
+      "name": "Benfica",
+      "shortName": "Benfica",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
+      "score": 0
+    },
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "updatedAt": "2026-09-20T20:40:17.281Z"
+  }
+]
