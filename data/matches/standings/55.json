@@ -2,7 +2,7 @@
   "competitionId": "55",
   "competitionName": "Serie A",
   "season": "2026/2027",
-  "updatedAt": "2026-09-19T19:36:26.796Z",
+  "updatedAt": "2026-09-20T03:39:06.184Z",
   "table": [
     {
       "position": 1,
@@ -42,6 +42,24 @@
     },
     {
       "position": 3,
+      "teamId": "8543",
+      "teamName": "Lazio",
+      "shortName": "Lazio",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8543.png",
+      "played": 5,
+      "won": 4,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 8,
+      "goalsAgainst": 3,
+      "goalDifference": 5,
+      "points": 13,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 4,
       "teamId": "8529",
       "teamName": "Cagliari",
       "shortName": "Cagliari",
@@ -57,25 +75,6 @@
       "form": [
         "#2AD572"
       ]
-    },
-    {
-      "position": 4,
-      "teamId": "8543",
-      "teamName": "Lazio",
-      "shortName": "Lazio",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8543.png",
-      "played": 5,
-      "won": 3,
-      "drawn": 2,
-      "lost": 0,
-      "goalsFor": 6,
-      "goalsAgainst": 3,
-      "goalDifference": 3,
-      "points": 11,
-      "form": [
-        "#2AD572"
-      ],
-      "qualificationZone": "Active"
     },
     {
       "position": 5,
@@ -322,16 +321,15 @@
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7881.png",
       "played": 5,
       "won": 0,
-      "drawn": 1,
-      "lost": 4,
+      "drawn": 0,
+      "lost": 5,
       "goalsFor": 4,
-      "goalsAgainst": 11,
-      "goalDifference": -7,
-      "points": 1,
+      "goalsAgainst": 13,
+      "goalDifference": -9,
+      "points": 0,
       "form": [
         "#FF4646"
-      ],
-      "qualificationZone": "Active"
+      ]
     }
   ]
 }

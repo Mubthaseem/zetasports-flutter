@@ -2,7 +2,7 @@
   "competitionId": "53",
   "competitionName": "Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-09-19T19:36:29.671Z",
+  "updatedAt": "2026-09-20T03:39:09.718Z",
   "table": [
     {
       "position": 1,
@@ -32,14 +32,13 @@
       "won": 3,
       "drawn": 2,
       "lost": 0,
-      "goalsFor": 8,
+      "goalsFor": 10,
       "goalsAgainst": 2,
-      "goalDifference": 6,
+      "goalDifference": 8,
       "points": 11,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 3,
@@ -88,16 +87,33 @@
       "drawn": 1,
       "lost": 1,
       "goalsFor": 8,
-      "goalsAgainst": 7,
-      "goalDifference": 1,
+      "goalsAgainst": 9,
+      "goalDifference": -1,
       "points": 10,
       "form": [
         "#0046A7"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 6,
+      "teamId": "8121",
+      "teamName": "Angers",
+      "shortName": "Angers",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8121.png",
+      "played": 5,
+      "won": 2,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 5,
+      "goalDifference": 1,
+      "points": 7,
+      "form": [
+        "#02CCF0"
+      ]
+    },
+    {
+      "position": 7,
       "teamId": "9848",
       "teamName": "Strasbourg",
       "shortName": "Strasbourg",
@@ -109,26 +125,7 @@
       "goalsFor": 10,
       "goalsAgainst": 10,
       "goalDifference": 0,
-      "points": 7,
-      "form": [
-        "#02CCF0"
-      ]
-    },
-    {
-      "position": 7,
-      "teamId": "8121",
-      "teamName": "Angers",
-      "shortName": "Angers",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8121.png",
-      "played": 5,
-      "won": 2,
-      "drawn": 1,
-      "lost": 2,
-      "goalsFor": 5,
-      "goalsAgainst": 5,
-      "goalDifference": 0,
-      "points": 7,
-      "qualificationZone": "Active"
+      "points": 7
     },
     {
       "position": 8,
@@ -140,11 +137,10 @@
       "won": 1,
       "drawn": 3,
       "lost": 1,
-      "goalsFor": 8,
-      "goalsAgainst": 8,
+      "goalsFor": 9,
+      "goalsAgainst": 9,
       "goalDifference": 0,
-      "points": 6,
-      "qualificationZone": "Active"
+      "points": 6
     },
     {
       "position": 9,
@@ -186,14 +182,28 @@
       "won": 1,
       "drawn": 2,
       "lost": 2,
-      "goalsFor": 4,
-      "goalsAgainst": 5,
+      "goalsFor": 5,
+      "goalsAgainst": 6,
       "goalDifference": -1,
-      "points": 5,
-      "qualificationZone": "Active"
+      "points": 5
     },
     {
       "position": 12,
+      "teamId": "9941",
+      "teamName": "Toulouse",
+      "shortName": "Toulouse",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9941.png",
+      "played": 5,
+      "won": 1,
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 7,
+      "goalsAgainst": 9,
+      "goalDifference": -2,
+      "points": 5
+    },
+    {
+      "position": 13,
       "teamId": "8588",
       "teamName": "Lens",
       "shortName": "Lens",
@@ -208,7 +218,7 @@
       "points": 4
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "10242",
       "teamName": "Troyes",
       "shortName": "Troyes",
@@ -218,13 +228,12 @@
       "drawn": 1,
       "lost": 3,
       "goalsFor": 4,
-      "goalsAgainst": 10,
-      "goalDifference": -6,
-      "points": 4,
-      "qualificationZone": "Active"
+      "goalsAgainst": 11,
+      "goalDifference": -7,
+      "points": 4
     },
     {
-      "position": 14,
+      "position": 15,
       "teamId": "8592",
       "teamName": "Marseille",
       "shortName": "Marseille",
@@ -239,42 +248,7 @@
       "points": 3
     },
     {
-      "position": 15,
-      "teamId": "9746",
-      "teamName": "Le Havre",
-      "shortName": "Le Havre",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9746.png",
-      "played": 5,
-      "won": 0,
-      "drawn": 3,
-      "lost": 2,
-      "goalsFor": 2,
-      "goalsAgainst": 4,
-      "goalDifference": -2,
-      "points": 3,
-      "qualificationZone": "Active"
-    },
-    {
       "position": 16,
-      "teamId": "9941",
-      "teamName": "Toulouse",
-      "shortName": "Toulouse",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9941.png",
-      "played": 5,
-      "won": 0,
-      "drawn": 3,
-      "lost": 2,
-      "goalsFor": 4,
-      "goalsAgainst": 7,
-      "goalDifference": -3,
-      "points": 3,
-      "form": [
-        "#FFA72F"
-      ],
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 17,
       "teamId": "8583",
       "teamName": "Auxerre",
       "shortName": "Auxerre",
@@ -287,6 +261,24 @@
       "goalsAgainst": 11,
       "goalDifference": -6,
       "points": 3,
+      "form": [
+        "#FFA72F"
+      ]
+    },
+    {
+      "position": 17,
+      "teamId": "9746",
+      "teamName": "Le Havre",
+      "shortName": "Le Havre",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9746.png",
+      "played": 5,
+      "won": 0,
+      "drawn": 2,
+      "lost": 3,
+      "goalsFor": 4,
+      "goalsAgainst": 7,
+      "goalDifference": -3,
+      "points": 2,
       "form": [
         "#FF4646"
       ]

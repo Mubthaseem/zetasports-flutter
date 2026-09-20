@@ -2,7 +2,7 @@
   "competitionId": "57",
   "competitionName": "Eredivisie",
   "season": "2026/2027",
-  "updatedAt": "2026-09-19T19:36:59.758Z",
+  "updatedAt": "2026-09-20T03:39:36.427Z",
   "table": [
     {
       "position": 1,
@@ -74,8 +74,7 @@
       "points": 14,
       "form": [
         "#7FAEFF"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 5,
@@ -97,6 +96,24 @@
     },
     {
       "position": 6,
+      "teamId": "6422",
+      "teamName": "Fortuna Sittard",
+      "shortName": "Fortuna Sittard",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6422.png",
+      "played": 7,
+      "won": 4,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 13,
+      "goalsAgainst": 14,
+      "goalDifference": -1,
+      "points": 13,
+      "form": [
+        "#7FAEFF"
+      ]
+    },
+    {
+      "position": 7,
       "teamId": "10218",
       "teamName": "Excelsior",
       "shortName": "Excelsior",
@@ -111,11 +128,10 @@
       "points": 11,
       "form": [
         "#7FAEFF"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
-      "position": 7,
+      "position": 8,
       "teamId": "8674",
       "teamName": "FC Groningen",
       "shortName": "FC Groningen",
@@ -127,26 +143,7 @@
       "goalsFor": 15,
       "goalsAgainst": 13,
       "goalDifference": 2,
-      "points": 11,
-      "form": [
-        "#7FAEFF"
-      ]
-    },
-    {
-      "position": 8,
-      "teamId": "6422",
-      "teamName": "Fortuna Sittard",
-      "shortName": "Fortuna Sittard",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6422.png",
-      "played": 7,
-      "won": 3,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 12,
-      "goalsAgainst": 14,
-      "goalDifference": -2,
-      "points": 11,
-      "qualificationZone": "Active"
+      "points": 11
     },
     {
       "position": 9,
@@ -273,25 +270,6 @@
     },
     {
       "position": 17,
-      "teamId": "8525",
-      "teamName": "Willem II",
-      "shortName": "Willem II",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8525.png",
-      "played": 7,
-      "won": 0,
-      "drawn": 3,
-      "lost": 4,
-      "goalsFor": 6,
-      "goalsAgainst": 19,
-      "goalDifference": -13,
-      "points": 3,
-      "form": [
-        "#FF4646"
-      ],
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 18,
       "teamId": "10217",
       "teamName": "ADO Den Haag",
       "shortName": "ADO Den Haag",
@@ -303,6 +281,24 @@
       "goalsFor": 7,
       "goalsAgainst": 17,
       "goalDifference": -10,
+      "points": 2,
+      "form": [
+        "#FF4646"
+      ]
+    },
+    {
+      "position": 18,
+      "teamId": "8525",
+      "teamName": "Willem II",
+      "shortName": "Willem II",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8525.png",
+      "played": 7,
+      "won": 0,
+      "drawn": 2,
+      "lost": 5,
+      "goalsFor": 6,
+      "goalsAgainst": 20,
+      "goalDifference": -14,
       "points": 2,
       "form": [
         "#FF4646"

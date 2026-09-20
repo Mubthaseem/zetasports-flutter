@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-09-19T19:36:25.153Z",
+  "updatedAt": "2026-09-20T03:39:04.514Z",
   "table": [
     {
       "position": 1,
@@ -11,17 +11,16 @@
       "shortName": "Barcelona",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8634.png",
       "played": 7,
-      "won": 6,
-      "drawn": 1,
+      "won": 7,
+      "drawn": 0,
       "lost": 0,
-      "goalsFor": 29,
+      "goalsFor": 31,
       "goalsAgainst": 7,
-      "goalDifference": 22,
-      "points": 19,
+      "goalDifference": 24,
+      "points": 21,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 2,
@@ -61,25 +60,6 @@
     },
     {
       "position": 4,
-      "teamId": "8302",
-      "teamName": "Sevilla",
-      "shortName": "Sevilla",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8302.png",
-      "played": 7,
-      "won": 4,
-      "drawn": 2,
-      "lost": 1,
-      "goalsFor": 10,
-      "goalsAgainst": 7,
-      "goalDifference": 3,
-      "points": 14,
-      "form": [
-        "#2AD572"
-      ],
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 5,
       "teamId": "9906",
       "teamName": "Atlético Madrid",
       "shortName": "Atlético Madrid",
@@ -91,6 +71,24 @@
       "goalsFor": 14,
       "goalsAgainst": 6,
       "goalDifference": 8,
+      "points": 13,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 5,
+      "teamId": "8302",
+      "teamName": "Sevilla",
+      "shortName": "Sevilla",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8302.png",
+      "played": 7,
+      "won": 4,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 10,
+      "goalsAgainst": 9,
+      "goalDifference": 1,
       "points": 13,
       "form": [
         "#0046A7"
