@@ -1,12 +1,26 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export class DataStorage {
   private baseDir: string;
 
   constructor(baseDir?: string) {
-    // Defaults to <project_root>/data
-    this.baseDir = baseDir || path.resolve(process.cwd(), '../data');
+    if (baseDir) {
+      this.baseDir = baseDir;
+    } else {
+      // Robust detection whether invoked from repo root or inside data-pipeline/
+      const candidates = [
+        path.resolve(process.cwd(), 'data'),
+        path.resolve(process.cwd(), '../data'),
+        path.resolve(__dirname, '../../../data'),
+        path.resolve(__dirname, '../../data')
+      ];
+      this.baseDir = candidates.find(c => fs.existsSync(c)) || path.resolve(process.cwd(), 'data');
+    }
   }
 
   public getBasePath(): string {

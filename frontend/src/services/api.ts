@@ -10,23 +10,41 @@ import {
   SyncMeta
 } from '../types.js';
 
-// Base data path: in Vite dev mode or GitHub pages, public JSON files are under data/
-const DATA_BASE_URL = './data';
+// Live GitHub Raw data endpoint and local fallback
+const RAW_BASE_URL = 'https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data';
+const LOCAL_BASE_URL = './data';
 
 async function fetchJson<T>(path: string): Promise<T | null> {
+  const cacheBuster = `?_t=${Date.now()}`;
+  const isLocalhost = typeof window !== 'undefined' && 
+    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+
+  const primaryUrl = isLocalhost 
+    ? `${LOCAL_BASE_URL}/${path}${cacheBuster}` 
+    : `${RAW_BASE_URL}/${path}${cacheBuster}`;
+
+  const fallbackUrl = isLocalhost 
+    ? `${RAW_BASE_URL}/${path}${cacheBuster}` 
+    : `${LOCAL_BASE_URL}/${path}${cacheBuster}`;
+
   try {
-    // Append timestamp cache buster for live updates
-    const cacheBuster = `?_t=${Date.now()}`;
-    const res = await fetch(`${DATA_BASE_URL}/${path}${cacheBuster}`);
-    if (!res.ok) {
-      if (res.status === 404) return null;
-      throw new Error(`HTTP ${res.status} fetching ${path}`);
+    const res = await fetch(primaryUrl);
+    if (res.ok) {
+      return await res.json() as T;
     }
-    return await res.json() as T;
+  } catch {
+    // Primary failed, continue to fallback
+  }
+
+  try {
+    const res = await fetch(fallbackUrl);
+    if (res.ok) {
+      return await res.json() as T;
+    }
   } catch (err) {
     console.warn(`[DataAPI] Failed to load ${path}:`, err);
-    return null;
   }
+  return null;
 }
 
 export const DataAPI = {
