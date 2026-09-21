@@ -16,9 +16,20 @@ export const FixturesPage: React.FC<Props> = ({
   competitions,
   onSelectMatch
 }) => {
-  const [activeTab, setActiveTab] = React.useState<'today' | 'upcoming'>('today');
+  const [activeTab, setActiveTab] = React.useState<'today' | 'upcoming'>('upcoming');
   const [selectedComp, setSelectedComp] = React.useState<string>('all');
   const [searchTerm, setSearchTerm] = React.useState<string>('');
+  const [selectedDayOffset, setSelectedDayOffset] = React.useState<number | 'all'>('all');
+
+  // Build list of next 5 days
+  const now = new Date();
+  const upcomingDays = Array.from({ length: 6 }, (_, i) => {
+    const d = new Date(now);
+    d.setUTCDate(d.getUTCDate() + i);
+    const dateStr = d.toISOString().slice(0, 10);
+    const label = i === 0 ? 'Today' : i === 1 ? 'Tomorrow' : d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+    return { offset: i, dateStr, label };
+  });
 
   const currentList = activeTab === 'today' ? todayMatches : upcomingMatches;
 
@@ -28,7 +39,14 @@ export const FixturesPage: React.FC<Props> = ({
       m.homeTeam.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       m.awayTeam.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       m.competitionName.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesComp && matchesSearch;
+    
+    let matchesDay = true;
+    if (activeTab === 'upcoming' && selectedDayOffset !== 'all') {
+      const targetDateStr = upcomingDays[selectedDayOffset]?.dateStr;
+      matchesDay = m.utcDate.slice(0, 10) === targetDateStr;
+    }
+
+    return matchesComp && matchesSearch && matchesDay;
   });
 
   return (
@@ -45,10 +63,14 @@ export const FixturesPage: React.FC<Props> = ({
           </p>
         </div>
 
-        {/* Tab Toggle: Today vs Upcoming */}
-        <div className="flex items-center gap-1 bg-zeta-card p-1 rounded-xl border border-zeta-border self-start md:self-auto">
+      {/* Tab Toggle: Today vs Upcoming 5 Days */}
+      <div className="flex flex-wrap items-center gap-2">
+        <div className="flex items-center gap-1 bg-zeta-card p-1 rounded-xl border border-zeta-border">
           <button
-            onClick={() => setActiveTab('today')}
+            onClick={() => {
+              setActiveTab('today');
+              setSelectedDayOffset('all');
+            }}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeTab === 'today'
                 ? 'bg-zeta-blue text-black shadow-glow-blue'
@@ -65,9 +87,39 @@ export const FixturesPage: React.FC<Props> = ({
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            Upcoming 7 Days ({upcomingMatches.length})
+            Upcoming 5 Days ({upcomingMatches.length})
           </button>
         </div>
+
+        {/* Day Pills when in Upcoming Tab */}
+        {activeTab === 'upcoming' && (
+          <div className="flex flex-wrap items-center gap-1.5">
+            <button
+              onClick={() => setSelectedDayOffset('all')}
+              className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
+                selectedDayOffset === 'all'
+                  ? 'bg-zeta-blue/20 text-zeta-blue border-zeta-blue'
+                  : 'bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white'
+              }`}
+            >
+              All 5 Days
+            </button>
+            {upcomingDays.slice(1).map((day) => (
+              <button
+                key={day.offset}
+                onClick={() => setSelectedDayOffset(day.offset)}
+                className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
+                  selectedDayOffset === day.offset
+                    ? 'bg-zeta-blue/20 text-zeta-blue border-zeta-blue'
+                    : 'bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white'
+                }`}
+              >
+                {day.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
       </div>
 
       {/* Filters Bar */}

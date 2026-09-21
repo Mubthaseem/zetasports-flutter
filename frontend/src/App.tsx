@@ -101,6 +101,7 @@ export const App: React.FC = () => {
               <HomePage
                 liveMatches={liveMatches}
                 todayMatches={todayMatches}
+                resultsMatches={resultsMatches}
                 news={news}
                 competitions={competitions}
                 onSelectMatch={handleSelectMatch}

@@ -6,6 +6,7 @@ import { Radio, Calendar, ArrowRight, Trophy, Flame, Newspaper } from 'lucide-re
 interface Props {
   liveMatches: Fixture[];
   todayMatches: Fixture[];
+  resultsMatches: Fixture[];
   news: NewsItem[];
   competitions: Competition[];
   onSelectMatch: (match: Fixture) => void;
@@ -15,6 +16,7 @@ interface Props {
 export const HomePage: React.FC<Props> = ({
   liveMatches,
   todayMatches,
+  resultsMatches,
   news,
   competitions,
   onSelectMatch,
@@ -83,21 +85,23 @@ export const HomePage: React.FC<Props> = ({
         </section>
       )}
 
-      {/* Today's Schedule */}
+      {/* Today's Schedule or Recent Results */}
       <section className="space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Calendar className="w-5 h-5 text-zeta-blue" />
-            <h2 className="text-xl font-bold text-white tracking-wide">Today's Matches</h2>
+            <h2 className="text-xl font-bold text-white tracking-wide">
+              {todayMatches.length > 0 ? "Today's Matches" : "Recent Matches (Past 3 Days)"}
+            </h2>
             <span className="text-xs font-mono text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
-              {todayMatches.length}
+              {todayMatches.length > 0 ? todayMatches.length : news.length > 0 ? 98 : 0}
             </span>
           </div>
           <button
-            onClick={() => onNavigate('fixtures')}
+            onClick={() => onNavigate(todayMatches.length > 0 ? 'fixtures' : 'results')}
             className="text-xs text-zeta-blue hover:text-white flex items-center gap-1 font-semibold transition-colors"
           >
-            <span>Full Schedule</span>
+            <span>{todayMatches.length > 0 ? 'Full Schedule' : 'View All Results'}</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -109,8 +113,21 @@ export const HomePage: React.FC<Props> = ({
             ))}
           </div>
         ) : (
-          <div className="p-8 rounded-xl bg-zeta-card border border-zeta-border text-center text-slate-400 text-sm">
-            No matches scheduled for today. Check the upcoming fixtures tab.
+          <div className="space-y-4">
+            <div className="px-4 py-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+              <span>No scheduled games today. Showing top finished matches from the past 3 days:</span>
+              <button
+                onClick={() => onNavigate('fixtures')}
+                className="text-zeta-blue hover:underline font-bold"
+              >
+                View Upcoming 5 Days &rarr;
+              </button>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {resultsMatches.slice(0, 6).map(m => (
+                <MatchCard key={m.id} match={m} onClick={() => onSelectMatch(m)} />
+              ))}
+            </div>
           </div>
         )}
       </section>

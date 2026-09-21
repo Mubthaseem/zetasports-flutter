@@ -39,10 +39,29 @@ export async function syncFixtures(): Promise<void> {
   // Sort chronologically
   allFixtures.sort((a, b) => new Date(a.utcDate).getTime() - new Date(b.utcDate).getTime());
 
-  // Split into categories
+  // Precise Calendar Windows: Past 3 Days & Upcoming 5 Days
   const nowTime = now.getTime();
-  const oneDayMs = 24 * 60 * 60 * 1000;
-  const sevenDaysMs = 7 * oneDayMs;
+
+  // Past 3 days start (00:00:00 UTC 3 days ago)
+  const past3Days = new Date(now);
+  past3Days.setUTCDate(past3Days.getUTCDate() - 3);
+  past3Days.setUTCHours(0, 0, 0, 0);
+  const past3DaysTime = past3Days.getTime();
+
+  // Upcoming 5 days end (23:59:59 UTC 5 days from now)
+  const next5Days = new Date(now);
+  next5Days.setUTCDate(next5Days.getUTCDate() + 5);
+  next5Days.setUTCHours(23, 59, 59, 999);
+  const next5DaysTime = next5Days.getTime();
+
+  // Start & End of today UTC
+  const todayStart = new Date(now);
+  todayStart.setUTCHours(0, 0, 0, 0);
+  const todayStartTime = todayStart.getTime();
+
+  const todayEnd = new Date(now);
+  todayEnd.setUTCHours(23, 59, 59, 999);
+  const todayEndTime = todayEnd.getTime();
 
   const todayMatches: Fixture[] = [];
   const liveMatches: Fixture[] = [];
@@ -52,41 +71,43 @@ export async function syncFixtures(): Promise<void> {
   for (const f of allFixtures) {
     const fTime = new Date(f.utcDate).getTime();
 
-    // Check if match is live
+    // Check if match is currently live
     if (f.status === 'IN_PLAY' || f.status === 'PAUSED') {
       liveMatches.push(f);
     }
 
-    // Match is today (within 14 hours of now or same date string)
-    const matchDateStr = f.utcDate.slice(0, 10);
-    if (matchDateStr === todayStr || Math.abs(fTime - nowTime) < 14 * 60 * 60 * 1000) {
+    // Today matches (matches scheduled or played on today's calendar date)
+    if (fTime >= todayStartTime && fTime <= todayEndTime) {
       todayMatches.push(f);
     }
 
-    // Upcoming (next 7 days)
-    if (f.status === 'SCHEDULED' && fTime > nowTime && fTime <= nowTime + sevenDaysMs) {
+    // Upcoming matches: From now up to 5 days in future
+    if (fTime > nowTime && fTime <= next5DaysTime) {
       upcomingMatches.push(f);
     }
 
-    // Results (past 7 days, finished)
-    if (f.status === 'FINISHED' && fTime < nowTime && fTime >= nowTime - sevenDaysMs) {
+    // Results: Past 3 days up to now (finished or played)
+    if (fTime >= past3DaysTime && fTime < nowTime) {
       resultsMatches.push(f);
     }
   }
 
-  // Reverse results so most recent are first
+  // Sort upcoming chronologically (closest first)
+  upcomingMatches.sort((a, b) => new Date(a.utcDate).getTime() - new Date(b.utcDate).getTime());
+
+  // Sort results in reverse chronological order (most recent first)
   resultsMatches.sort((a, b) => new Date(b.utcDate).getTime() - new Date(a.utcDate).getTime());
 
   await storage.writeJson('fixtures/today.json', todayMatches);
   await storage.writeJson('fixtures/live.json', liveMatches);
-  await storage.writeJson('fixtures/upcoming.json', upcomingMatches.slice(0, 150));
-  await storage.writeJson('fixtures/results.json', resultsMatches.slice(0, 150));
+  await storage.writeJson('fixtures/upcoming.json', upcomingMatches);
+  await storage.writeJson('fixtures/results.json', resultsMatches);
 
-  console.log(`Saved:
-  - today.json: ${todayMatches.length}
-  - live.json: ${liveMatches.length}
-  - upcoming.json: ${upcomingMatches.length}
-  - results.json: ${resultsMatches.length}`);
+  console.log(`Saved fixtures:
+  - today.json: ${todayMatches.length} (Today's matches)
+  - live.json: ${liveMatches.length} (In-play live)
+  - upcoming.json: ${upcomingMatches.length} (Next 5 days: ${now.toISOString().slice(0, 10)} to ${next5Days.toISOString().slice(0, 10)})
+  - results.json: ${resultsMatches.length} (Past 3 days: ${past3Days.toISOString().slice(0, 10)} to ${now.toISOString().slice(0, 10)})`);
 
   // Update meta.json
   const existingMeta = storage.readJson<SyncMeta>('meta.json');

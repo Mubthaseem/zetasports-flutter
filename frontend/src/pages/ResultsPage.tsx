@@ -12,6 +12,17 @@ interface Props {
 export const ResultsPage: React.FC<Props> = ({ results, competitions, onSelectMatch }) => {
   const [selectedComp, setSelectedComp] = React.useState<string>('all');
   const [searchTerm, setSearchTerm] = React.useState<string>('');
+  const [selectedDayOffset, setSelectedDayOffset] = React.useState<number | 'all'>('all');
+
+  // Build past 3 days list
+  const now = new Date();
+  const pastDays = [1, 2, 3].map((daysAgo) => {
+    const d = new Date(now);
+    d.setUTCDate(d.getUTCDate() - daysAgo);
+    const dateStr = d.toISOString().slice(0, 10);
+    const label = daysAgo === 1 ? 'Yesterday' : `${daysAgo} Days Ago`;
+    return { daysAgo, dateStr, label };
+  });
 
   const filteredResults = results.filter(m => {
     const matchesComp = selectedComp === 'all' || m.competitionId === selectedComp;
@@ -19,7 +30,14 @@ export const ResultsPage: React.FC<Props> = ({ results, competitions, onSelectMa
       m.homeTeam.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       m.awayTeam.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       m.competitionName.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesComp && matchesSearch;
+    
+    let matchesDay = true;
+    if (selectedDayOffset !== 'all') {
+      const targetDateStr = pastDays.find(d => d.daysAgo === selectedDayOffset)?.dateStr;
+      matchesDay = m.utcDate.slice(0, 10) === targetDateStr;
+    }
+
+    return matchesComp && matchesSearch && matchesDay;
   });
 
   return (
@@ -29,15 +47,39 @@ export const ResultsPage: React.FC<Props> = ({ results, competitions, onSelectMa
         <div>
           <h1 className="text-2xl font-black text-white uppercase tracking-wide font-mono flex items-center gap-2">
             <CheckCircle2 className="w-6 h-6 text-zeta-green" />
-            <span>Match Results</span>
+            <span>Match Results (Past 3 Days)</span>
           </h1>
           <p className="text-xs text-slate-400 mt-1">
-            Recent completed match scores and outcomes across all synchronized competitions.
+            Scores and final outcomes from the past 3 days across all 24 tracked competitions.
           </p>
         </div>
-        <span className="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800 self-start sm:self-auto">
-          {results.length} Completed Matches
-        </span>
+
+        {/* Day Pills */}
+        <div className="flex flex-wrap items-center gap-1.5 self-start sm:self-auto">
+          <button
+            onClick={() => setSelectedDayOffset('all')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
+              selectedDayOffset === 'all'
+                ? 'bg-zeta-green text-black font-bold'
+                : 'bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white'
+            }`}
+          >
+            All Past 3 Days ({results.length})
+          </button>
+          {pastDays.map(day => (
+            <button
+              key={day.daysAgo}
+              onClick={() => setSelectedDayOffset(day.daysAgo)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
+                selectedDayOffset === day.daysAgo
+                  ? 'bg-zeta-green text-black font-bold'
+                  : 'bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white'
+              }`}
+            >
+              {day.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Filters */}
