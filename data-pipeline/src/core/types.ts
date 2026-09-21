@@ -169,6 +169,59 @@ export interface NewsItem {
   publishedAt: string;
 }
 
+export interface TeamFormMatch {
+  result: 'W' | 'D' | 'L';
+  score: string;
+  opponentId: string;
+  opponentName: string;
+  opponentLogo: string;
+  isHome: boolean;
+  date: string;
+}
+
+export interface MatchPollFact {
+  oddsType: string;
+  defaultLabel: string;
+  defaultText: string;
+  options: string[];
+}
+
+export interface MatchVenueInfo {
+  name: string;
+  city: string;
+  country: string;
+  capacity?: number;
+  surface?: string;
+}
+
+export interface MatchPreviewData {
+  matchId: string;
+  updatedAt: string;
+  tournament?: {
+    name: string;
+    round?: string;
+  };
+  venue?: MatchVenueInfo;
+  weather?: {
+    temperature: number;
+    description: string;
+  };
+  fifaRank?: {
+    home?: number;
+    away?: number;
+  };
+  teamForm?: {
+    home: TeamFormMatch[];
+    away: TeamFormMatch[];
+  };
+  poll?: {
+    facts: MatchPollFact[];
+  };
+  h2h?: {
+    summary: [number, number, number];
+  };
+}
+
 export interface SyncMeta {
   platform: string;
   version: string;

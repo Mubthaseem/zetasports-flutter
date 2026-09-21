@@ -1,0 +1,69 @@
+{
+  "matchId": "6106267",
+  "updatedAt": "2026-09-21T11:48:24.904Z",
+  "tournament": {
+    "name": "Champions League",
+    "round": "2"
+  },
+  "venue": {
+    "name": "Riyadh Air Metropolitano",
+    "city": "Madrid",
+    "country": "Spain",
+    "capacity": 70692,
+    "surface": "grass"
+  },
+  "fifaRank": {},
+  "teamForm": {
+    "home": [],
+    "away": []
+  },
+  "poll": {
+    "facts": [
+      {
+        "oddsType": "1x2",
+        "defaultLabel": "Who will win?",
+        "defaultText": "Atlético Madrid have 2W, 1D, 2L in five matches while Manchester United have 2W, 1D, 2L.",
+        "options": [
+          "1",
+          "x",
+          "2"
+        ]
+      },
+      {
+        "oddsType": "bts",
+        "defaultLabel": "Will both teams score?",
+        "defaultText": "Atlético Madrid have scored in their last 4 home matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "ou",
+        "defaultLabel": "Will there be more than 2.5 goals?",
+        "defaultText": "Atlético Madrid have scored 6 goals in their last 3 matches, while Manchester United have scored 3.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "dc",
+        "defaultLabel": "Double chance",
+        "defaultText": "Atlético Madrid have 2W, 1D, 2L in five matches while Manchester United have 2W, 1D, 2L.",
+        "options": [
+          "1x",
+          "12",
+          "x2"
+        ]
+      }
+    ]
+  },
+  "h2h": {
+    "summary": [
+      2,
+      1,
+      1
+    ]
+  }
+}

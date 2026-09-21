@@ -1,0 +1,168 @@
+{
+  "matchId": "5181825",
+  "updatedAt": "2026-09-21T11:49:05.861Z",
+  "tournament": {
+    "name": "UEFA Nations League A Grp. 2",
+    "round": "1"
+  },
+  "venue": {
+    "name": "Johan Cruijff ArenA",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "capacity": 55885,
+    "surface": "grass"
+  },
+  "weather": {
+    "temperature": 14,
+    "description": "Partly Cloudy"
+  },
+  "fifaRank": {
+    "home": 9,
+    "away": 12
+  },
+  "teamForm": {
+    "home": [
+      {
+        "result": "W",
+        "score": "2 - 1",
+        "opponentId": "8700",
+        "opponentName": "Uzbekistan",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/8700.png",
+        "isHome": true,
+        "date": "2026-06-08T18:45:00.000Z"
+      },
+      {
+        "result": "D",
+        "score": "2 - 2",
+        "opponentId": "6715",
+        "opponentName": "Japan",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6715.png",
+        "isHome": true,
+        "date": "2026-06-14T20:00:00.000Z"
+      },
+      {
+        "result": "W",
+        "score": "5 - 1",
+        "opponentId": "8520",
+        "opponentName": "Sweden",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/8520.png",
+        "isHome": true,
+        "date": "2026-06-20T17:00:00.000Z"
+      },
+      {
+        "result": "W",
+        "score": "1 - 3",
+        "opponentId": "6719",
+        "opponentName": "Tunisia",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6719.png",
+        "isHome": false,
+        "date": "2026-06-25T23:00:00.000Z"
+      },
+      {
+        "result": "D",
+        "score": "1 - 1",
+        "opponentId": "6262",
+        "opponentName": "Morocco",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6262.png",
+        "isHome": true,
+        "date": "2026-06-30T01:00:00.000Z"
+      }
+    ],
+    "away": [
+      {
+        "result": "W",
+        "score": "1 - 2",
+        "opponentId": "6713",
+        "opponentName": "USA",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6713.png",
+        "isHome": false,
+        "date": "2026-06-06T18:30:00.000Z"
+      },
+      {
+        "result": "W",
+        "score": "7 - 1",
+        "opponentId": "287981",
+        "opponentName": "Curacao",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/287981.png",
+        "isHome": true,
+        "date": "2026-06-14T17:00:00.000Z"
+      },
+      {
+        "result": "W",
+        "score": "2 - 1",
+        "opponentId": "6709",
+        "opponentName": "Ivory Coast",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6709.png",
+        "isHome": true,
+        "date": "2026-06-20T20:00:00.000Z"
+      },
+      {
+        "result": "L",
+        "score": "2 - 1",
+        "opponentId": "6707",
+        "opponentName": "Ecuador",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6707.png",
+        "isHome": false,
+        "date": "2026-06-25T20:00:00.000Z"
+      },
+      {
+        "result": "D",
+        "score": "1 - 1",
+        "opponentId": "6724",
+        "opponentName": "Paraguay",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6724.png",
+        "isHome": true,
+        "date": "2026-06-29T20:30:00.000Z"
+      }
+    ]
+  },
+  "poll": {
+    "facts": [
+      {
+        "oddsType": "1x2",
+        "defaultLabel": "Who will win?",
+        "defaultText": "Germany haven't lost to Netherlands in their last 3 meetings (2W, 1D).",
+        "options": [
+          "1",
+          "x",
+          "2"
+        ]
+      },
+      {
+        "oddsType": "bts",
+        "defaultLabel": "Will both teams score?",
+        "defaultText": "Netherlands have scored in their last 5 matches and Germany have scored in their last 12 matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "ou",
+        "defaultLabel": "Will there be more than 2.5 goals?",
+        "defaultText": "Netherlands have scored 9 goals in their last 3 matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "dc",
+        "defaultLabel": "Double chance",
+        "defaultText": "Germany haven't drawn in their last 12 matches.",
+        "options": [
+          "1x",
+          "12",
+          "x2"
+        ]
+      }
+    ]
+  },
+  "h2h": {
+    "summary": [
+      2,
+      5,
+      5
+    ]
+  }
+}

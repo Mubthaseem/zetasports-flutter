@@ -94,7 +94,12 @@ export const App: React.FC = () => {
 
         {/* If a match is selected, render the dedicated Match Center */}
         {selectedMatch ? (
-          <MatchDetailPage match={selectedMatch} onBack={handleBackFromMatch} />
+          <MatchDetailPage
+            match={selectedMatch}
+            onBack={handleBackFromMatch}
+            onSelectMatch={setSelectedMatch}
+            roundMatches={upcomingMatches.filter(m => m.competitionId === selectedMatch.competitionId && m.id !== selectedMatch.id)}
+          />
         ) : (
           <>
             {activeTab === 'home' && (

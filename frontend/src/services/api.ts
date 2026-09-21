@@ -7,7 +7,8 @@ import {
   CompetitionStandings,
   CompetitionScorers,
   NewsItem,
-  SyncMeta
+  SyncMeta,
+  MatchPreviewData
 } from '../types.js';
 
 // Live GitHub Raw data endpoint and local fallback
@@ -92,7 +93,12 @@ export const DataAPI = {
     return fetchJson<MatchEventsData>(`matches/events/${matchId}.json`);
   },
 
+  async getMatchPreview(matchId: string): Promise<MatchPreviewData | null> {
+    return fetchJson<MatchPreviewData>(`matches/preview/${matchId}.json`);
+  },
+
   async getLatestNews(): Promise<NewsItem[]> {
     return (await fetchJson<NewsItem[]>('news/latest.json')) || [];
   }
 };
+

@@ -6,7 +6,8 @@ import {
   MatchEventsData,
   CompetitionStandings,
   CompetitionScorers,
-  NewsItem
+  NewsItem,
+  MatchPreviewData
 } from '../core/types.js';
 
 export interface IFootballDataProvider {
@@ -66,4 +67,9 @@ export interface IFootballDataProvider {
    * Fetches latest football news articles
    */
   getNews(): Promise<NewsItem[]>;
+
+  /**
+   * Fetches rich match preview data (venue, form, fan poll, fifa rankings)
+   */
+  getMatchPreview?(matchId: string): Promise<MatchPreviewData | null>;
 }

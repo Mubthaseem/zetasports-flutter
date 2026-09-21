@@ -1,0 +1,69 @@
+{
+  "matchId": "6106396",
+  "updatedAt": "2026-09-21T11:48:51.445Z",
+  "tournament": {
+    "name": "Champions League",
+    "round": "2"
+  },
+  "venue": {
+    "name": "Štadión Tehelné pole",
+    "city": "Bratislava",
+    "country": "Slovakia",
+    "capacity": 22500,
+    "surface": "grass"
+  },
+  "fifaRank": {},
+  "teamForm": {
+    "home": [],
+    "away": []
+  },
+  "poll": {
+    "facts": [
+      {
+        "oddsType": "1x2",
+        "defaultLabel": "Who will win?",
+        "defaultText": "Slovan Bratislava haven't lost in 10 matches.",
+        "options": [
+          "1",
+          "x",
+          "2"
+        ]
+      },
+      {
+        "oddsType": "bts",
+        "defaultLabel": "Will both teams score?",
+        "defaultText": "Slovan Bratislava have scored in their last 5 home matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "ou",
+        "defaultLabel": "Will there be more than 2.5 goals?",
+        "defaultText": "Slovan Bratislava have scored 5 goals in their last 3 matches, while VfB Stuttgart have scored 5.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "dc",
+        "defaultLabel": "Double chance",
+        "defaultText": "VfB Stuttgart haven't drawn in their last 4 matches.",
+        "options": [
+          "1x",
+          "12",
+          "x2"
+        ]
+      }
+    ]
+  },
+  "h2h": {
+    "summary": [
+      0,
+      1,
+      2
+    ]
+  }
+}

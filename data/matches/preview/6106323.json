@@ -1,0 +1,62 @@
+{
+  "matchId": "6106323",
+  "updatedAt": "2026-09-21T11:48:30.003Z",
+  "tournament": {
+    "name": "Champions League",
+    "round": "2"
+  },
+  "venue": {
+    "name": "Red Bull Arena",
+    "city": "Leipzig",
+    "country": "Germany",
+    "capacity": 47800,
+    "surface": "grass"
+  },
+  "fifaRank": {},
+  "teamForm": {
+    "home": [],
+    "away": []
+  },
+  "poll": {
+    "facts": [
+      {
+        "oddsType": "1x2",
+        "defaultLabel": "Who will win?",
+        "defaultText": "RB Leipzig have 2W, 0D, 3L in five matches while PSV Eindhoven have 3W, 1D, 1L.",
+        "options": [
+          "1",
+          "x",
+          "2"
+        ]
+      },
+      {
+        "oddsType": "bts",
+        "defaultLabel": "Will both teams score?",
+        "defaultText": "RB Leipzig have scored in their last 3 home matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "ou",
+        "defaultLabel": "Will there be more than 2.5 goals?",
+        "defaultText": "PSV Eindhoven have scored 9 goals in their last 3 matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "dc",
+        "defaultLabel": "Double chance",
+        "defaultText": "RB Leipzig haven't drawn in their last 12 matches.",
+        "options": [
+          "1x",
+          "12",
+          "x2"
+        ]
+      }
+    ]
+  }
+}

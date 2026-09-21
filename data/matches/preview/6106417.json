@@ -1,0 +1,62 @@
+{
+  "matchId": "6106417",
+  "updatedAt": "2026-09-21T11:48:31.523Z",
+  "tournament": {
+    "name": "Champions League",
+    "round": "2"
+  },
+  "venue": {
+    "name": "Lyse Arena",
+    "city": "Stavanger",
+    "country": "Norway",
+    "capacity": 15900,
+    "surface": "artificial turf"
+  },
+  "fifaRank": {},
+  "teamForm": {
+    "home": [],
+    "away": []
+  },
+  "poll": {
+    "facts": [
+      {
+        "oddsType": "1x2",
+        "defaultLabel": "Who will win?",
+        "defaultText": "Bayern München have won their last 7 matches.",
+        "options": [
+          "1",
+          "x",
+          "2"
+        ]
+      },
+      {
+        "oddsType": "bts",
+        "defaultLabel": "Will both teams score?",
+        "defaultText": "Viking have scored in their last 8 matches and Bayern München have scored in their last 12 matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "ou",
+        "defaultLabel": "Will there be more than 2.5 goals?",
+        "defaultText": "Bayern München have scored 11 goals in their last 3 matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "dc",
+        "defaultLabel": "Double chance",
+        "defaultText": "Bayern München haven't drawn in their last 11 matches.",
+        "options": [
+          "1x",
+          "12",
+          "x2"
+        ]
+      }
+    ]
+  }
+}

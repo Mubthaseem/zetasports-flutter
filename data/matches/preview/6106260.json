@@ -1,0 +1,62 @@
+{
+  "matchId": "6106260",
+  "updatedAt": "2026-09-21T11:48:23.597Z",
+  "tournament": {
+    "name": "Champions League",
+    "round": "2"
+  },
+  "venue": {
+    "name": "Emirates Stadium",
+    "city": "London",
+    "country": "England",
+    "capacity": 60704,
+    "surface": "grass"
+  },
+  "fifaRank": {},
+  "teamForm": {
+    "home": [],
+    "away": []
+  },
+  "poll": {
+    "facts": [
+      {
+        "oddsType": "1x2",
+        "defaultLabel": "Who will win?",
+        "defaultText": "Lille haven't lost in 4 matches.",
+        "options": [
+          "1",
+          "x",
+          "2"
+        ]
+      },
+      {
+        "oddsType": "bts",
+        "defaultLabel": "Will both teams score?",
+        "defaultText": "Arsenal have scored in their last 12 matches and Lille have scored in their last 6 matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "ou",
+        "defaultLabel": "Will there be more than 2.5 goals?",
+        "defaultText": "Arsenal have scored 7 goals in their last 3 matches, while Lille have scored 5.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "dc",
+        "defaultLabel": "Double chance",
+        "defaultText": "Arsenal haven't drawn in their last 12 matches.",
+        "options": [
+          "1x",
+          "12",
+          "x2"
+        ]
+      }
+    ]
+  }
+}

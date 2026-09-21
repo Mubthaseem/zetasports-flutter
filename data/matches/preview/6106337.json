@@ -1,0 +1,62 @@
+{
+  "matchId": "6106337",
+  "updatedAt": "2026-09-21T11:48:48.576Z",
+  "tournament": {
+    "name": "Champions League",
+    "round": "2"
+  },
+  "venue": {
+    "name": "Stamford Bridge",
+    "city": "London",
+    "country": "England",
+    "capacity": 40044,
+    "surface": "grass"
+  },
+  "fifaRank": {},
+  "teamForm": {
+    "home": [],
+    "away": []
+  },
+  "poll": {
+    "facts": [
+      {
+        "oddsType": "1x2",
+        "defaultLabel": "Who will win?",
+        "defaultText": "Shakhtar Donetsk have 4W, 0D, 1L in five matches while AEK Athens have 3W, 1D, 1L.",
+        "options": [
+          "1",
+          "x",
+          "2"
+        ]
+      },
+      {
+        "oddsType": "bts",
+        "defaultLabel": "Will both teams score?",
+        "defaultText": "Shakhtar Donetsk have scored 8 goals in their last 3 matches, while AEK Athens have scored 8.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "ou",
+        "defaultLabel": "Will there be more than 2.5 goals?",
+        "defaultText": "Shakhtar Donetsk have scored 8 goals in their last 3 matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "dc",
+        "defaultLabel": "Double chance",
+        "defaultText": "Shakhtar Donetsk haven't drawn in their last 12 matches.",
+        "options": [
+          "1x",
+          "12",
+          "x2"
+        ]
+      }
+    ]
+  }
+}

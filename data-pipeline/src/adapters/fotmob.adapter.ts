@@ -13,7 +13,10 @@ import {
   StatItem,
   MatchEvent,
   StandingRow,
-  TopScorer
+  TopScorer,
+  MatchPreviewData,
+  TeamFormMatch,
+  MatchPollFact
 } from '../core/types.js';
 import { SUPPORTED_COMPETITIONS, CompetitionConfig } from '../config/competitions.js';
 
@@ -257,6 +260,83 @@ export class FotMobAdapter implements IFootballDataProvider {
       matchId,
       updatedAt: new Date().toISOString(),
       events
+    };
+  }
+
+  public async getMatchPreview(matchId: string): Promise<MatchPreviewData | null> {
+    const data = await this.fetchMatchData(matchId);
+    if (!data) return null;
+
+    const infoBox = data.content?.matchFacts?.infoBox;
+    const teamFormRaw = data.content?.matchFacts?.teamForm;
+    const pollRaw = data.content?.matchFacts?.poll;
+    const weatherRaw = data.content?.weather;
+    const h2hRaw = data.content?.h2h;
+    const headerTeams = data.header?.teams || [];
+
+    const parseTeamForm = (matches: any[]): TeamFormMatch[] => {
+      if (!Array.isArray(matches)) return [];
+      return matches.map((m: any) => {
+        const isOurTeam = !!m.home?.isOurTeam;
+        const opponent = isOurTeam ? m.away : m.home;
+        let res: 'W' | 'D' | 'L' = 'D';
+        if (m.resultString === 'W' || m.result === 1) res = 'W';
+        else if (m.resultString === 'L' || m.result === -1) res = 'L';
+
+        return {
+          result: res,
+          score: m.score || '',
+          opponentId: String(opponent?.id || ''),
+          opponentName: opponent?.name || 'Opponent',
+          opponentLogo: m.imageUrl || (opponent?.id ? `https://images.fotmob.com/image_resources/logo/teamlogo/${opponent.id}.png` : ''),
+          isHome: isOurTeam,
+          date: m.date?.utcTime || ''
+        };
+      });
+    };
+
+    const pollFacts: MatchPollFact[] = [];
+    if (pollRaw?.oddspoll?.Facts && Array.isArray(pollRaw.oddspoll.Facts)) {
+      for (const f of pollRaw.oddspoll.Facts) {
+        pollFacts.push({
+          oddsType: f.OddsType || '',
+          defaultLabel: f.DefaultLabel || 'Poll',
+          defaultText: f.defaultText || '',
+          options: f.DefaultLabels || []
+        });
+      }
+    }
+
+    return {
+      matchId,
+      updatedAt: new Date().toISOString(),
+      tournament: infoBox?.Tournament ? {
+        name: infoBox.Tournament.leagueName || '',
+        round: infoBox.Tournament.roundName || String(infoBox.Tournament.round || '')
+      } : undefined,
+      venue: infoBox?.Stadium ? {
+        name: infoBox.Stadium.name || '',
+        city: infoBox.Stadium.city || '',
+        country: infoBox.Stadium.country || '',
+        capacity: infoBox.Stadium.capacity,
+        surface: infoBox.Stadium.surface
+      } : undefined,
+      weather: weatherRaw ? {
+        temperature: weatherRaw.temperature,
+        description: weatherRaw.description || weatherRaw.defaultTitle || ''
+      } : undefined,
+      fifaRank: {
+        home: headerTeams[0]?.fifaRank,
+        away: headerTeams[1]?.fifaRank
+      },
+      teamForm: {
+        home: parseTeamForm(teamFormRaw?.[0]),
+        away: parseTeamForm(teamFormRaw?.[1])
+      },
+      poll: pollFacts.length > 0 ? { facts: pollFacts } : undefined,
+      h2h: h2hRaw?.summary ? {
+        summary: h2hRaw.summary as [number, number, number]
+      } : undefined
     };
   }
 

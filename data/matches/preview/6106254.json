@@ -1,0 +1,69 @@
+{
+  "matchId": "6106254",
+  "updatedAt": "2026-09-21T11:48:42.207Z",
+  "tournament": {
+    "name": "Champions League",
+    "round": "2"
+  },
+  "venue": {
+    "name": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England",
+    "capacity": 61470,
+    "surface": "grass"
+  },
+  "fifaRank": {},
+  "teamForm": {
+    "home": [],
+    "away": []
+  },
+  "poll": {
+    "facts": [
+      {
+        "oddsType": "1x2",
+        "defaultLabel": "Who will win?",
+        "defaultText": "Manchester City have 4W, 0D, 1L in five matches while Paris Saint-Germain have 1W, 3D, 1L.",
+        "options": [
+          "1",
+          "x",
+          "2"
+        ]
+      },
+      {
+        "oddsType": "bts",
+        "defaultLabel": "Will both teams score?",
+        "defaultText": "Manchester City have scored in their last 6 home matches.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "ou",
+        "defaultLabel": "Will there be more than 2.5 goals?",
+        "defaultText": "Manchester City have scored 6 goals in their last 3 matches, while Paris Saint-Germain have scored 4.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "dc",
+        "defaultLabel": "Double chance",
+        "defaultText": "Manchester City haven't drawn in their last 7 matches.",
+        "options": [
+          "1x",
+          "12",
+          "x2"
+        ]
+      }
+    ]
+  },
+  "h2h": {
+    "summary": [
+      4,
+      1,
+      2
+    ]
+  }
+}

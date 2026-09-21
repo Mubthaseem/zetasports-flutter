@@ -1,0 +1,165 @@
+{
+  "matchId": "5071094",
+  "updatedAt": "2026-09-21T11:49:07.051Z",
+  "tournament": {
+    "name": "Major League Soccer",
+    "round": ""
+  },
+  "venue": {
+    "name": "Lumen Field",
+    "city": "Seattle, Washington",
+    "country": "United States",
+    "capacity": 68740,
+    "surface": "artificial turf"
+  },
+  "weather": {
+    "temperature": 18,
+    "description": "Mostly Cloudy"
+  },
+  "fifaRank": {},
+  "teamForm": {
+    "home": [
+      {
+        "result": "D",
+        "score": "1 - 1",
+        "opponentId": "722265",
+        "opponentName": "FC Cincinnati",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/722265.png",
+        "isHome": false,
+        "date": "2026-08-22T23:30:00.000Z"
+      },
+      {
+        "result": "D",
+        "score": "2 - 2",
+        "opponentId": "6397",
+        "opponentName": "Chicago Fire FC",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6397.png",
+        "isHome": true,
+        "date": "2026-08-29T20:30:00.000Z"
+      },
+      {
+        "result": "D",
+        "score": "0 - 0",
+        "opponentId": "6514",
+        "opponentName": "Red Bull New York",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6514.png",
+        "isHome": true,
+        "date": "2026-09-06T00:30:00.000Z"
+      },
+      {
+        "result": "D",
+        "score": "1 - 1",
+        "opponentId": "6637",
+        "opponentName": "LA Galaxy",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/6637.png",
+        "isHome": false,
+        "date": "2026-09-13T02:30:00.000Z"
+      },
+      {
+        "result": "D",
+        "score": "3 - 3",
+        "opponentId": "8314",
+        "opponentName": "Colorado Rapids",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/8314.png",
+        "isHome": false,
+        "date": "2026-09-20T02:30:00.000Z"
+      }
+    ],
+    "away": [
+      {
+        "result": "L",
+        "score": "1 - 0",
+        "opponentId": "8314",
+        "opponentName": "Colorado Rapids",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/8314.png",
+        "isHome": false,
+        "date": "2026-08-30T01:30:00.000Z"
+      },
+      {
+        "result": "D",
+        "score": "2 - 2",
+        "opponentId": "867280",
+        "opponentName": "Los Angeles FC",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/867280.png",
+        "isHome": true,
+        "date": "2026-09-06T01:30:00.000Z"
+      },
+      {
+        "result": "L",
+        "score": "2 - 1",
+        "opponentId": "8259",
+        "opponentName": "Houston Dynamo FC",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/8259.png",
+        "isHome": false,
+        "date": "2026-09-10T00:30:00.000Z"
+      },
+      {
+        "result": "L",
+        "score": "0 - 2",
+        "opponentId": "546238",
+        "opponentName": "New York City FC",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/546238.png",
+        "isHome": true,
+        "date": "2026-09-13T01:30:00.000Z"
+      },
+      {
+        "result": "L",
+        "score": "0 - 3",
+        "opponentId": "307691",
+        "opponentName": "Vancouver Whitecaps",
+        "opponentLogo": "https://images.fotmob.com/image_resources/logo/teamlogo/307691.png",
+        "isHome": true,
+        "date": "2026-09-20T01:30:00.000Z"
+      }
+    ]
+  },
+  "poll": {
+    "facts": [
+      {
+        "oddsType": "1x2",
+        "defaultLabel": "Who will win?",
+        "defaultText": "Seattle Sounders FC haven't lost in 5 matches.",
+        "options": [
+          "1",
+          "x",
+          "2"
+        ]
+      },
+      {
+        "oddsType": "bts",
+        "defaultLabel": "Will both teams score?",
+        "defaultText": "Seattle Sounders FC have an average of 1.33 goals in their last three matches and Real Salt Lake have an average of 0.33.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "ou",
+        "defaultLabel": "Will there be more than 2.5 goals?",
+        "defaultText": "Seattle Sounders FC have an average of 1.33 goals in their last three matches and Real Salt Lake have an average of 0.33.",
+        "options": [
+          "yes",
+          "no"
+        ]
+      },
+      {
+        "oddsType": "dc",
+        "defaultLabel": "Double chance",
+        "defaultText": "Seattle Sounders FC haven't won a match in 8 attempts.",
+        "options": [
+          "1x",
+          "12",
+          "x2"
+        ]
+      }
+    ]
+  },
+  "h2h": {
+    "summary": [
+      16,
+      9,
+      19
+    ]
+  }
+}
