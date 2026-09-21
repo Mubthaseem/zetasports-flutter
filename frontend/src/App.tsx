@@ -77,7 +77,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-broadcast-grid bg-zeta-dark">
+    <div className="min-h-screen flex flex-col bg-broadcast-grid bg-slate-50 text-slate-900">
       <Navbar
         activeTab={selectedMatch ? 'match-detail' : activeTab}
         setActiveTab={(tab) => {

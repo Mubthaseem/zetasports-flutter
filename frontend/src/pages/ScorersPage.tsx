@@ -32,13 +32,13 @@ export const ScorersPage: React.FC<Props> = ({ competitions }) => {
   return (
     <div className="space-y-6">
       {/* Title */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zeta-border">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
-          <h1 className="text-2xl font-black text-white uppercase tracking-wide font-mono flex items-center gap-2">
-            <Flame className="w-6 h-6 text-zeta-blue" />
+          <h1 className="text-2xl font-black text-slate-900 uppercase tracking-wide font-mono flex items-center gap-2">
+            <Flame className="w-6 h-6 text-blue-600" />
             <span>Top Goalscorers</span>
           </h1>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-500 mt-1">
             Golden Boot race, top scorers, and attacking performance leaderboards.
           </p>
         </div>
@@ -46,7 +46,7 @@ export const ScorersPage: React.FC<Props> = ({ competitions }) => {
         <select
           value={selectedCompId}
           onChange={(e) => setSelectedCompId(e.target.value)}
-          className="bg-zeta-card text-slate-200 text-xs font-semibold px-3 py-2 rounded-lg border border-zeta-border focus:outline-none focus:border-zeta-blue"
+          className="bg-white text-slate-800 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus:border-blue-600 shadow-sm"
         >
           {competitions.filter(c => c.hasTopScorers).map(l => (
             <option key={l.id} value={l.id}>{l.name}</option>
@@ -55,13 +55,13 @@ export const ScorersPage: React.FC<Props> = ({ competitions }) => {
       </div>
 
       {/* Scorers Card */}
-      <div className="bg-zeta-card rounded-2xl border border-zeta-border overflow-hidden shadow-lg">
-        <div className="p-4 bg-slate-900/80 border-b border-zeta-border flex items-center justify-between">
+      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-md">
+        <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {selectedComp?.logoUrl && (
               <img src={selectedComp.logoUrl} alt={selectedComp.name} className="w-7 h-7 object-contain" />
             )}
-            <h2 className="text-base font-bold text-white">{selectedComp?.name} — Top Scorers</h2>
+            <h2 className="text-base font-bold text-slate-900">{selectedComp?.name} — Top Scorers</h2>
           </div>
           {scorersData && (
             <span className="text-[11px] font-mono text-slate-500">
@@ -72,34 +72,34 @@ export const ScorersPage: React.FC<Props> = ({ competitions }) => {
 
         {loading ? (
           <div className="py-20 text-center flex flex-col items-center gap-3 text-slate-400">
-            <RefreshCw className="w-6 h-6 animate-spin text-zeta-blue" />
+            <RefreshCw className="w-6 h-6 animate-spin text-blue-600" />
             <span className="text-xs">Loading scorers...</span>
           </div>
         ) : scorersData && scorersData.scorers.length > 0 ? (
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="border-b border-zeta-border text-[11px] uppercase tracking-wider text-slate-400 bg-slate-900/40">
+                <tr className="border-b border-slate-200 text-[11px] uppercase tracking-wider text-slate-600 bg-slate-100/70 font-semibold">
                   <th className="py-3 px-4 w-12 text-center font-mono">Rank</th>
                   <th className="py-3 px-4 font-semibold">Player</th>
                   <th className="py-3 px-4 font-semibold">Club</th>
-                  <th className="py-3 px-4 text-center font-mono font-bold text-zeta-blue">Goals</th>
-                  <th className="py-3 px-4 text-center font-mono text-slate-400">Assists</th>
+                  <th className="py-3 px-4 text-center font-mono font-bold text-blue-600">Goals</th>
+                  <th className="py-3 px-4 text-center font-mono text-slate-500">Assists</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-zeta-border/50">
+              <tbody className="divide-y divide-slate-100">
                 {scorersData.scorers.map((scorer) => (
-                  <tr key={scorer.playerId} className="hover:bg-zeta-cardHover transition-colors">
+                  <tr key={scorer.playerId} className="hover:bg-slate-50 transition-colors">
                     <td className="py-3 px-4 text-center font-mono font-bold text-slate-400">
                       {scorer.rank === 1 ? (
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40">
+                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-100 text-amber-800 border border-amber-300 font-black">
                           1
                         </span>
                       ) : (
                         scorer.rank
                       )}
                     </td>
-                    <td className="py-3 px-4 font-bold text-white">
+                    <td className="py-3 px-4 font-bold text-slate-900">
                       {scorer.playerName}
                     </td>
                     <td className="py-3 px-4">
@@ -114,13 +114,13 @@ export const ScorersPage: React.FC<Props> = ({ competitions }) => {
                             }}
                           />
                         )}
-                        <span className="text-slate-300 font-medium">{scorer.teamName}</span>
+                        <span className="text-slate-700 font-medium">{scorer.teamName}</span>
                       </div>
                     </td>
-                    <td className="py-3 px-4 text-center font-mono font-black text-sm text-zeta-blue">
+                    <td className="py-3 px-4 text-center font-mono font-black text-sm text-blue-600">
                       {scorer.goals}
                     </td>
-                    <td className="py-3 px-4 text-center font-mono text-slate-400">
+                    <td className="py-3 px-4 text-center font-mono text-slate-500">
                       {scorer.assists ?? '-'}
                     </td>
                   </tr>
@@ -129,7 +129,7 @@ export const ScorersPage: React.FC<Props> = ({ competitions }) => {
             </table>
           </div>
         ) : (
-          <div className="p-12 text-center text-xs text-slate-400">
+          <div className="p-12 text-center text-xs text-slate-500">
             Top scorer statistics are currently unavailable for this tournament.
           </div>
         )}

@@ -3,30 +3,30 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
   margin: 0;
-  background-color: #070b13;
-  color: #f1f5f9;
+  background-color: #f8fafc;
+  color: #0f172a;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
 
-/* Custom glow and glassmorphism helpers */
+/* Custom glow and glassmorphism helpers for White Theme */
 .glass-panel {
-  background: rgba(12, 18, 30, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(27, 39, 61, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .glow-blue {
-  box-shadow: 0 0 20px -3px rgba(0, 229, 255, 0.3);
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.15);
 }
 
 .glow-live {
-  box-shadow: 0 0 15px 0 rgba(255, 45, 85, 0.4);
+  box-shadow: 0 2px 10px 0 rgba(239, 68, 68, 0.25);
 }
 
 /* Custom scrollbars */
@@ -36,20 +36,20 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #070b13;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1b273d;
+  background: #cbd5e1;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00e5ff;
+  background: #94a3b8;
 }
 
-/* Subtle broadcast grid background */
+/* Subtle broadcast grid background for light theme */
 .bg-broadcast-grid {
-  background-image: radial-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 0);
-  background-size: 28px 28px;
+  background-image: radial-gradient(rgba(37, 99, 235, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
 }

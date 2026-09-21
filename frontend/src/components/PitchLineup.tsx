@@ -21,20 +21,20 @@ export const PitchLineup: React.FC<Props> = ({ lineups, homeTeamName, awayTeamNa
 
   const renderPlayerDot = (player: LineupPlayer) => (
     <div key={player.id} className="flex flex-col items-center group cursor-pointer">
-      <div className="relative w-9 h-9 rounded-full bg-slate-900 border-2 border-zeta-blue flex items-center justify-center font-bold text-xs text-white shadow-glow-blue transition-transform group-hover:scale-110">
+      <div className="relative w-9 h-9 rounded-full bg-white border-2 border-blue-600 flex items-center justify-center font-bold text-xs text-slate-900 shadow-md transition-transform group-hover:scale-110">
         <span>{player.number}</span>
         {player.captain && (
-          <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-zeta-gold text-black text-[9px] font-black flex items-center justify-center">
+          <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-amber-400 text-slate-950 text-[9px] font-black flex items-center justify-center shadow-sm">
             C
           </span>
         )}
       </div>
-      <span className="mt-1 text-[11px] font-medium text-slate-200 bg-slate-950/80 px-1.5 py-0.5 rounded shadow max-w-[85px] truncate text-center">
+      <span className="mt-1 text-[11px] font-semibold text-slate-900 bg-white/95 px-2 py-0.5 rounded shadow max-w-[85px] truncate text-center">
         {player.name}
       </span>
       {player.rating && (
-        <span className="text-[10px] font-mono text-zeta-green font-bold flex items-center gap-0.5">
-          <Star className="w-2.5 h-2.5 fill-zeta-green" /> {player.rating.toFixed(1)}
+        <span className="text-[10px] font-mono text-emerald-700 font-bold flex items-center gap-0.5 bg-white/90 px-1 rounded shadow-sm mt-0.5">
+          <Star className="w-2.5 h-2.5 fill-emerald-600 text-emerald-600" /> {player.rating.toFixed(1)}
         </span>
       )}
     </div>
@@ -46,20 +46,20 @@ export const PitchLineup: React.FC<Props> = ({ lineups, homeTeamName, awayTeamNa
       <div className="flex items-center justify-center gap-2">
         <button
           onClick={() => setActiveSide('home')}
-          className={`px-4 py-2 rounded-lg text-sm font-bold transition-colors border ${
+          className={`px-4 py-2 rounded-lg text-sm font-bold transition-all border ${
             activeSide === 'home'
-              ? 'bg-zeta-blue/20 text-zeta-blue border-zeta-blue/50 shadow-glow-blue'
-              : 'bg-zeta-card text-slate-400 border-zeta-border hover:text-white'
+              ? 'bg-blue-50 text-blue-700 border-blue-300 shadow-sm'
+              : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
           }`}
         >
           {homeTeamName} ({lineups.home.formation || 'Starting XI'})
         </button>
         <button
           onClick={() => setActiveSide('away')}
-          className={`px-4 py-2 rounded-lg text-sm font-bold transition-colors border ${
+          className={`px-4 py-2 rounded-lg text-sm font-bold transition-all border ${
             activeSide === 'away'
-              ? 'bg-zeta-blue/20 text-zeta-blue border-zeta-blue/50 shadow-glow-blue'
-              : 'bg-zeta-card text-slate-400 border-zeta-border hover:text-white'
+              ? 'bg-blue-50 text-blue-700 border-blue-300 shadow-sm'
+              : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
           }`}
         >
           {awayTeamName} ({lineups.away.formation || 'Starting XI'})
@@ -67,16 +67,16 @@ export const PitchLineup: React.FC<Props> = ({ lineups, homeTeamName, awayTeamNa
       </div>
 
       {/* Visual Pitch Graphic */}
-      <div className="relative w-full max-w-xl mx-auto aspect-[3/4] bg-gradient-to-b from-[#092218] to-[#0d3425] border-2 border-emerald-500/40 rounded-2xl overflow-hidden shadow-2xl p-4 flex flex-col justify-between">
+      <div className="relative w-full max-w-xl mx-auto aspect-[3/4] bg-gradient-to-b from-[#1b6a38] to-[#14532d] border-2 border-emerald-600/40 rounded-2xl overflow-hidden shadow-xl p-4 flex flex-col justify-between">
         {/* Pitch Lines */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Halfway line & circle */}
-          <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-emerald-400/20"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border border-emerald-400/20"></div>
+          <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-white/30"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border border-white/30"></div>
           {/* Top Penalty Box */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-44 h-20 border-b border-x border-emerald-400/20"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-44 h-20 border-b border-x border-white/30"></div>
           {/* Bottom Penalty Box */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-44 h-20 border-t border-x border-emerald-400/20"></div>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-44 h-20 border-t border-x border-white/30"></div>
         </div>
 
         {/* Goalkeeper Row */}
@@ -101,28 +101,28 @@ export const PitchLineup: React.FC<Props> = ({ lineups, homeTeamName, awayTeamNa
       </div>
 
       {/* Coach & Bench */}
-      <div className="max-w-xl mx-auto bg-zeta-card rounded-xl border border-zeta-border p-4 space-y-3">
+      <div className="max-w-xl mx-auto bg-white rounded-xl border border-slate-200 p-4 space-y-3 shadow-sm">
         {activeTeam.coach && (
-          <div className="text-xs text-slate-400 pb-2 border-b border-zeta-border flex items-center justify-between">
-            <span className="font-semibold">Manager / Coach:</span>
-            <span className="text-slate-200 font-medium">{activeTeam.coach}</span>
+          <div className="text-xs text-slate-500 pb-2 border-b border-slate-200 flex items-center justify-between">
+            <span className="font-semibold text-slate-600">Manager / Coach:</span>
+            <span className="text-slate-900 font-bold">{activeTeam.coach}</span>
           </div>
         )}
 
         <div>
-          <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-            <Users className="w-3.5 h-3.5 text-zeta-blue" />
+          <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+            <Users className="w-3.5 h-3.5 text-blue-600" />
             <span>Substitutes</span>
           </div>
           <div className="grid grid-cols-2 gap-2 text-xs">
             {activeTeam.bench.map(p => (
-              <div key={p.id} className="flex items-center justify-between p-2 rounded bg-slate-900/60 border border-slate-800">
+              <div key={p.id} className="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-200">
                 <div className="flex items-center gap-2 truncate">
                   <span className="font-mono text-slate-500 font-bold w-4 text-right">{p.number}</span>
-                  <span className="text-slate-200 truncate">{p.name}</span>
+                  <span className="text-slate-800 font-medium truncate">{p.name}</span>
                 </div>
                 {p.rating && (
-                  <span className="font-mono text-[10px] text-zeta-green font-bold">{p.rating.toFixed(1)}</span>
+                  <span className="font-mono text-[10px] text-emerald-600 font-bold">{p.rating.toFixed(1)}</span>
                 )}
               </div>
             ))}

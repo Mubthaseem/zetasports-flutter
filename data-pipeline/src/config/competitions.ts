@@ -389,5 +389,22 @@ export const SUPPORTED_COMPETITIONS: CompetitionConfig[] = [
     hasLineups: true,
     hasStats: true,
     updatedAt: new Date().toISOString()
+  },
+  {
+    id: '9806',
+    fotmobId: 9806,
+    name: 'UEFA Nations League',
+    slug: 'uefa-nations-league',
+    country: 'Europe',
+    countryCode: 'UEFA',
+    category: 'INTERNATIONAL',
+    tier: 1,
+    logoUrl: 'https://images.fotmob.com/image_resources/logo/leaguelogo/9806.png',
+    hasStandings: true,
+    hasTopScorers: true,
+    hasLineups: true,
+    hasStats: true,
+    updatedAt: new Date().toISOString()
   }
 ];
+

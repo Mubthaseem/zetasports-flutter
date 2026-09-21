@@ -98,6 +98,7 @@
 | **50** | UEFA EURO | International | Europe | Tournament | Yes | Yes | Yes |
 | **44** | Copa América | International | South America | Tournament | Yes | Yes | Yes |
 | **100**| Africa Cup of Nations | International | Africa | Tournament | Yes | Yes | Yes |
+| **9806**| UEFA Nations League | International | Europe | Yes | Yes | Yes | Yes |
 
 ---
 

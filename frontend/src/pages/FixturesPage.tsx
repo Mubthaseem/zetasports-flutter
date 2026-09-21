@@ -52,20 +52,20 @@ export const FixturesPage: React.FC<Props> = ({
   return (
     <div className="space-y-6">
       {/* Page Title & Controls */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-zeta-border">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
-          <h1 className="text-2xl font-black text-white uppercase tracking-wide font-mono flex items-center gap-2">
-            <Calendar className="w-6 h-6 text-zeta-blue" />
+          <h1 className="text-2xl font-black text-slate-900 uppercase tracking-wide font-mono flex items-center gap-2">
+            <Calendar className="w-6 h-6 text-blue-600" />
             <span>Fixtures & Schedule</span>
           </h1>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-500 mt-1">
             Browse match fixtures for today and upcoming matchdays across 24+ global tournaments.
           </p>
         </div>
 
       {/* Tab Toggle: Today vs Upcoming 5 Days */}
       <div className="flex flex-wrap items-center gap-2">
-        <div className="flex items-center gap-1 bg-zeta-card p-1 rounded-xl border border-zeta-border">
+        <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200">
           <button
             onClick={() => {
               setActiveTab('today');
@@ -73,8 +73,8 @@ export const FixturesPage: React.FC<Props> = ({
             }}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeTab === 'today'
-                ? 'bg-zeta-blue text-black shadow-glow-blue'
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-blue-600 text-white shadow-sm'
+                : 'text-slate-600 hover:text-slate-900'
             }`}
           >
             Today ({todayMatches.length})
@@ -83,8 +83,8 @@ export const FixturesPage: React.FC<Props> = ({
             onClick={() => setActiveTab('upcoming')}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeTab === 'upcoming'
-                ? 'bg-zeta-blue text-black shadow-glow-blue'
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-blue-600 text-white shadow-sm'
+                : 'text-slate-600 hover:text-slate-900'
             }`}
           >
             Upcoming 5 Days ({upcomingMatches.length})
@@ -98,8 +98,8 @@ export const FixturesPage: React.FC<Props> = ({
               onClick={() => setSelectedDayOffset('all')}
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
                 selectedDayOffset === 'all'
-                  ? 'bg-zeta-blue/20 text-zeta-blue border-zeta-blue'
-                  : 'bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white'
+                  ? 'bg-blue-50 text-blue-700 border-blue-300 font-bold shadow-sm'
+                  : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
               }`}
             >
               All 5 Days
@@ -110,8 +110,8 @@ export const FixturesPage: React.FC<Props> = ({
                 onClick={() => setSelectedDayOffset(day.offset)}
                 className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
                   selectedDayOffset === day.offset
-                    ? 'bg-zeta-blue/20 text-zeta-blue border-zeta-blue'
-                    : 'bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white'
+                    ? 'bg-blue-50 text-blue-700 border-blue-300 font-bold shadow-sm'
+                    : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                 }`}
               >
                 {day.label}
@@ -132,7 +132,7 @@ export const FixturesPage: React.FC<Props> = ({
             placeholder="Search teams or leagues..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-zeta-card text-xs text-white pl-9 pr-3 py-2 rounded-lg border border-zeta-border focus:outline-none focus:border-zeta-blue"
+            className="w-full bg-white text-xs text-slate-900 pl-9 pr-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus:border-blue-600 shadow-sm"
           />
         </div>
 
@@ -142,7 +142,7 @@ export const FixturesPage: React.FC<Props> = ({
           <select
             value={selectedComp}
             onChange={(e) => setSelectedComp(e.target.value)}
-            className="w-full sm:w-auto bg-zeta-card text-slate-200 text-xs font-semibold px-3 py-2 rounded-lg border border-zeta-border focus:outline-none focus:border-zeta-blue"
+            className="w-full sm:w-auto bg-white text-slate-800 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus:border-blue-600 shadow-sm"
           >
             <option value="all">All Competitions</option>
             {competitions.map(c => (
@@ -160,7 +160,7 @@ export const FixturesPage: React.FC<Props> = ({
           ))}
         </div>
       ) : (
-        <div className="p-10 rounded-xl bg-zeta-card border border-zeta-border text-center text-slate-400 text-sm">
+        <div className="p-10 rounded-xl bg-white border border-slate-200 text-center text-slate-500 text-sm shadow-sm">
           No fixtures match your selected filters.
         </div>
       )}

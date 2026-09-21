@@ -19,14 +19,14 @@ export const StaleDataBanner: React.FC<Props> = ({ meta }) => {
   if (!isStale) return null;
 
   return (
-    <div className="bg-amber-950/70 border border-amber-600/50 text-amber-200 px-4 py-2.5 rounded-lg flex items-center justify-between gap-3 text-sm shadow-md mb-4 backdrop-blur-sm">
+    <div className="bg-amber-50 border border-amber-200 text-amber-900 px-4 py-2.5 rounded-lg flex items-center justify-between gap-3 text-sm shadow-sm mb-4">
       <div className="flex items-center gap-2.5">
-        <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0" />
+        <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
         <span>
           <strong>Data freshness notice:</strong> Match data was last synchronized <strong>{diffMinutes} minutes ago</strong>. Scheduled GitHub Actions workflow may be awaiting run window.
         </span>
       </div>
-      <div className="hidden sm:flex items-center gap-1.5 text-xs text-amber-300/80 font-mono">
+      <div className="hidden sm:flex items-center gap-1.5 text-xs text-amber-700 font-mono">
         <Clock className="w-3.5 h-3.5" />
         <span>{new Date(meta.lastSuccessfulSync).toLocaleTimeString()}</span>
       </div>

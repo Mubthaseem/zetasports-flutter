@@ -23,21 +23,21 @@ export const StatBar: React.FC<Props> = ({ stat }) => {
   return (
     <div className="py-2.5">
       <div className="flex items-center justify-between text-xs font-semibold mb-1.5">
-        <span className="font-mono text-sm text-slate-200">{stat.homeValue}</span>
-        <span className="text-slate-400 uppercase tracking-wider text-[11px] font-bold text-center px-2">
+        <span className="font-mono text-sm font-bold text-slate-800">{stat.homeValue}</span>
+        <span className="text-slate-500 uppercase tracking-wider text-[11px] font-bold text-center px-2">
           {stat.title}
         </span>
-        <span className="font-mono text-sm text-slate-200">{stat.awayValue}</span>
+        <span className="font-mono text-sm font-bold text-slate-800">{stat.awayValue}</span>
       </div>
 
       {/* Comparison Progress Bar */}
-      <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden flex gap-1 p-0.5">
+      <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden flex gap-1 p-0.5">
         <div
-          className="h-full bg-zeta-blue rounded-l-full transition-all duration-500"
+          className="h-full bg-blue-600 rounded-l-full transition-all duration-500"
           style={{ width: `${homePercent}%` }}
         />
         <div
-          className="h-full bg-zeta-neon rounded-r-full transition-all duration-500"
+          className="h-full bg-sky-500 rounded-r-full transition-all duration-500"
           style={{ width: `${awayPercent}%` }}
         />
       </div>

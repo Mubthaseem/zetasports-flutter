@@ -43,13 +43,13 @@ export const ResultsPage: React.FC<Props> = ({ results, competitions, onSelectMa
   return (
     <div className="space-y-6">
       {/* Title */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zeta-border">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
-          <h1 className="text-2xl font-black text-white uppercase tracking-wide font-mono flex items-center gap-2">
-            <CheckCircle2 className="w-6 h-6 text-zeta-green" />
+          <h1 className="text-2xl font-black text-slate-900 uppercase tracking-wide font-mono flex items-center gap-2">
+            <CheckCircle2 className="w-6 h-6 text-emerald-600" />
             <span>Match Results (Past 3 Days)</span>
           </h1>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-500 mt-1">
             Scores and final outcomes from the past 3 days across all 24 tracked competitions.
           </p>
         </div>
@@ -60,8 +60,8 @@ export const ResultsPage: React.FC<Props> = ({ results, competitions, onSelectMa
             onClick={() => setSelectedDayOffset('all')}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
               selectedDayOffset === 'all'
-                ? 'bg-zeta-green text-black font-bold'
-                : 'bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white'
+                ? 'bg-emerald-600 text-white font-bold shadow-sm border-emerald-600'
+                : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
             }`}
           >
             All Past 3 Days ({results.length})
@@ -72,8 +72,8 @@ export const ResultsPage: React.FC<Props> = ({ results, competitions, onSelectMa
               onClick={() => setSelectedDayOffset(day.daysAgo)}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
                 selectedDayOffset === day.daysAgo
-                  ? 'bg-zeta-green text-black font-bold'
-                  : 'bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white'
+                  ? 'bg-emerald-600 text-white font-bold shadow-sm border-emerald-600'
+                  : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
               }`}
             >
               {day.label}
@@ -91,7 +91,7 @@ export const ResultsPage: React.FC<Props> = ({ results, competitions, onSelectMa
             placeholder="Search teams or leagues..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-zeta-card text-xs text-white pl-9 pr-3 py-2 rounded-lg border border-zeta-border focus:outline-none focus:border-zeta-blue"
+            className="w-full bg-white text-xs text-slate-900 pl-9 pr-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus:border-blue-600 shadow-sm"
           />
         </div>
 
@@ -100,7 +100,7 @@ export const ResultsPage: React.FC<Props> = ({ results, competitions, onSelectMa
           <select
             value={selectedComp}
             onChange={(e) => setSelectedComp(e.target.value)}
-            className="w-full sm:w-auto bg-zeta-card text-slate-200 text-xs font-semibold px-3 py-2 rounded-lg border border-zeta-border focus:outline-none focus:border-zeta-blue"
+            className="w-full sm:w-auto bg-white text-slate-800 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus:border-blue-600 shadow-sm"
           >
             <option value="all">All Competitions</option>
             {competitions.map(c => (
@@ -118,7 +118,7 @@ export const ResultsPage: React.FC<Props> = ({ results, competitions, onSelectMa
           ))}
         </div>
       ) : (
-        <div className="p-10 rounded-xl bg-zeta-card border border-zeta-border text-center text-slate-400 text-sm">
+        <div className="p-10 rounded-xl bg-white border border-slate-200 text-center text-slate-500 text-sm shadow-sm">
           No results match your selected filters.
         </div>
       )}

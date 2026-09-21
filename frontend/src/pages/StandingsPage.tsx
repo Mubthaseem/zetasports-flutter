@@ -35,13 +35,13 @@ export const StandingsPage: React.FC<Props> = ({ competitions }) => {
   return (
     <div className="space-y-6">
       {/* Page Title & League Selector */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zeta-border">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
-          <h1 className="text-2xl font-black text-white uppercase tracking-wide font-mono flex items-center gap-2">
-            <Trophy className="w-6 h-6 text-zeta-gold" />
+          <h1 className="text-2xl font-black text-slate-900 uppercase tracking-wide font-mono flex items-center gap-2">
+            <Trophy className="w-6 h-6 text-amber-500" />
             <span>League Standings</span>
           </h1>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-500 mt-1">
             Official league tables, points, goal difference, and qualification zones.
           </p>
         </div>
@@ -50,7 +50,7 @@ export const StandingsPage: React.FC<Props> = ({ competitions }) => {
         <select
           value={selectedCompId}
           onChange={(e) => setSelectedCompId(e.target.value)}
-          className="bg-zeta-card text-slate-200 text-xs font-semibold px-3 py-2 rounded-lg border border-zeta-border focus:outline-none focus:border-zeta-blue"
+          className="bg-white text-slate-800 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus:border-blue-600 shadow-sm"
         >
           {standingsLeagues.map(l => (
             <option key={l.id} value={l.id}>{l.name} ({l.country})</option>
@@ -59,20 +59,20 @@ export const StandingsPage: React.FC<Props> = ({ competitions }) => {
       </div>
 
       {/* Standings Table Card */}
-      <div className="bg-zeta-card rounded-2xl border border-zeta-border overflow-hidden shadow-lg">
+      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-md">
         {/* Table Header Banner */}
-        <div className="p-4 bg-slate-900/80 border-b border-zeta-border flex items-center justify-between">
+        <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {selectedComp?.logoUrl && (
               <img src={selectedComp.logoUrl} alt={selectedComp.name} className="w-7 h-7 object-contain" />
             )}
             <div>
-              <h2 className="text-base font-bold text-white">{selectedComp?.name}</h2>
-              <span className="text-xs text-slate-400 font-mono">Season: {standings?.season || 'Current'}</span>
+              <h2 className="text-base font-bold text-slate-900">{selectedComp?.name}</h2>
+              <span className="text-xs text-slate-500 font-mono">Season: {standings?.season || 'Current'}</span>
             </div>
           </div>
           {standings && (
-            <span className="text-[11px] font-mono text-slate-500">
+            <span className="text-[11px] font-mono text-slate-400">
               Updated: {new Date(standings.updatedAt).toLocaleDateString()}
             </span>
           )}
@@ -80,14 +80,14 @@ export const StandingsPage: React.FC<Props> = ({ competitions }) => {
 
         {loading ? (
           <div className="py-20 text-center flex flex-col items-center gap-3 text-slate-400">
-            <RefreshCw className="w-6 h-6 animate-spin text-zeta-blue" />
+            <RefreshCw className="w-6 h-6 animate-spin text-blue-600" />
             <span className="text-xs">Loading table standings...</span>
           </div>
         ) : standings && standings.table.length > 0 ? (
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="border-b border-zeta-border/80 text-[11px] uppercase tracking-wider text-slate-400 bg-slate-900/40">
+                <tr className="border-b border-slate-200 text-[11px] uppercase tracking-wider text-slate-600 bg-slate-100/70 font-semibold">
                   <th className="py-3 px-3 w-10 text-center font-mono">#</th>
                   <th className="py-3 px-3 font-semibold">Club</th>
                   <th className="py-3 px-2 text-center font-mono">P</th>
@@ -97,24 +97,24 @@ export const StandingsPage: React.FC<Props> = ({ competitions }) => {
                   <th className="py-3 px-2 text-center font-mono hidden sm:table-cell">GF</th>
                   <th className="py-3 px-2 text-center font-mono hidden sm:table-cell">GA</th>
                   <th className="py-3 px-2 text-center font-mono">GD</th>
-                  <th className="py-3 px-3 text-center font-mono font-bold text-white">Pts</th>
+                  <th className="py-3 px-3 text-center font-mono font-bold text-slate-900">Pts</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-zeta-border/50">
+              <tbody className="divide-y divide-slate-100">
                 {standings.table.map((row) => (
                   <tr
                     key={row.teamId}
-                    className="hover:bg-zeta-cardHover/80 transition-colors group"
+                    className="hover:bg-slate-50 transition-colors group"
                   >
                     {/* Position */}
-                    <td className="py-3 px-3 text-center font-mono font-bold text-slate-400 group-hover:text-zeta-blue">
+                    <td className="py-3 px-3 text-center font-mono font-bold text-slate-400 group-hover:text-blue-600">
                       {row.position}
                     </td>
 
                     {/* Team */}
                     <td className="py-3 px-3">
                       <div className="flex items-center gap-2.5">
-                        <div className="w-5 h-5 rounded bg-slate-900 p-0.5 flex items-center justify-center shrink-0">
+                        <div className="w-5 h-5 rounded bg-slate-50 p-0.5 flex items-center justify-center border border-slate-200 shrink-0">
                           {row.logoUrl ? (
                             <img
                               src={row.logoUrl}
@@ -125,26 +125,26 @@ export const StandingsPage: React.FC<Props> = ({ competitions }) => {
                               }}
                             />
                           ) : (
-                            <Shield className="w-3.5 h-3.5 text-slate-500" />
+                            <Shield className="w-3.5 h-3.5 text-slate-400" />
                           )}
                         </div>
-                        <span className="font-semibold text-slate-200 group-hover:text-white transition-colors truncate max-w-[140px] sm:max-w-none">
+                        <span className="font-semibold text-slate-800 group-hover:text-blue-600 transition-colors truncate max-w-[140px] sm:max-w-none">
                           {row.teamName}
                         </span>
                       </div>
                     </td>
 
                     {/* Stats */}
-                    <td className="py-3 px-2 text-center font-mono text-slate-400">{row.played}</td>
-                    <td className="py-3 px-2 text-center font-mono text-slate-300">{row.won}</td>
-                    <td className="py-3 px-2 text-center font-mono text-slate-400">{row.drawn}</td>
-                    <td className="py-3 px-2 text-center font-mono text-slate-400">{row.lost}</td>
-                    <td className="py-3 px-2 text-center font-mono text-slate-400 hidden sm:table-cell">{row.goalsFor}</td>
-                    <td className="py-3 px-2 text-center font-mono text-slate-400 hidden sm:table-cell">{row.goalsAgainst}</td>
-                    <td className="py-3 px-2 text-center font-mono font-semibold text-slate-300">
+                    <td className="py-3 px-2 text-center font-mono text-slate-600">{row.played}</td>
+                    <td className="py-3 px-2 text-center font-mono text-slate-700">{row.won}</td>
+                    <td className="py-3 px-2 text-center font-mono text-slate-600">{row.drawn}</td>
+                    <td className="py-3 px-2 text-center font-mono text-slate-600">{row.lost}</td>
+                    <td className="py-3 px-2 text-center font-mono text-slate-500 hidden sm:table-cell">{row.goalsFor}</td>
+                    <td className="py-3 px-2 text-center font-mono text-slate-500 hidden sm:table-cell">{row.goalsAgainst}</td>
+                    <td className="py-3 px-2 text-center font-mono font-semibold text-slate-700">
                       {row.goalDifference > 0 ? `+${row.goalDifference}` : row.goalDifference}
                     </td>
-                    <td className="py-3 px-3 text-center font-mono font-black text-sm text-zeta-blue">
+                    <td className="py-3 px-3 text-center font-mono font-black text-sm text-blue-600">
                       {row.points}
                     </td>
                   </tr>
@@ -153,7 +153,7 @@ export const StandingsPage: React.FC<Props> = ({ competitions }) => {
             </table>
           </div>
         ) : (
-          <div className="p-12 text-center text-xs text-slate-400">
+          <div className="p-12 text-center text-xs text-slate-500">
             No standings data available for this competition yet.
           </div>
         )}
