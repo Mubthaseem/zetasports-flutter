@@ -3,6 +3,8 @@ import { DataStorage } from '../utils/storage.js';
 import { DataValidator } from '../utils/validator.js';
 import { Fixture, SyncMeta } from '../core/types.js';
 import { SUPPORTED_COMPETITIONS } from '../config/competitions.js';
+import { buildApiBundle } from './build-api-bundle.js';
+
 
 export async function syncFixtures(): Promise<void> {
   console.log('=== [ZETA SPORTS] Starting Fixtures Synchronization ===');
@@ -127,8 +129,11 @@ export async function syncFixtures(): Promise<void> {
   };
   await storage.writeJson('meta.json', meta);
 
+  await buildApiBundle();
+
   console.log('=== Fixtures sync finished successfully! ===');
 }
+
 
 syncFixtures().catch(err => {
   console.error('Fatal fixture sync error:', err);

@@ -1,6 +1,8 @@
 import { FotMobAdapter } from '../adapters/fotmob.adapter.js';
 import { DataStorage } from '../utils/storage.js';
 import { Fixture, SyncMeta } from '../core/types.js';
+import { buildApiBundle } from './build-api-bundle.js';
+
 
 export async function syncLiveScores(): Promise<void> {
   console.log('=== [ZETA SPORTS] Starting Live Scores Synchronization ===');
@@ -42,8 +44,11 @@ export async function syncLiveScores(): Promise<void> {
     await storage.writeJson('meta.json', existingMeta);
   }
 
+  await buildApiBundle();
+
   console.log('=== Live scores sync completed ===');
 }
+
 
 syncLiveScores().catch(err => {
   console.error('Fatal live scores sync error:', err);

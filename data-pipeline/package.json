@@ -12,8 +12,10 @@
     "sync:standings": "tsx src/sync/sync-standings.ts",
     "sync:details": "tsx src/sync/sync-match-details.ts",
     "sync:news": "tsx src/sync/sync-news.ts",
-    "sync:historical": "tsx src/sync/sync-historical.ts"
+    "sync:historical": "tsx src/sync/sync-historical.ts",
+    "build:api": "tsx src/sync/build-api-bundle.ts"
   },
+
   "dependencies": {
     "zod": "^3.22.4"
   },

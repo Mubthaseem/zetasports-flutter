@@ -1,6 +1,8 @@
 import { FotMobAdapter } from '../adapters/fotmob.adapter.js';
 import { DataStorage } from '../utils/storage.js';
 import { DataValidator } from '../utils/validator.js';
+import { buildApiBundle } from './build-api-bundle.js';
+
 
 export async function syncNews(): Promise<void> {
   console.log('=== [ZETA SPORTS] Starting News Synchronization ===');
@@ -32,9 +34,11 @@ export async function syncNews(): Promise<void> {
     console.warn('No valid news retrieved.');
   }
 
-  console.log('=== News sync completed! ===');
+  await buildApiBundle();
 
+  console.log('=== News sync completed! ===');
 }
+
 
 syncNews().catch(err => {
   console.error('Fatal news sync error:', err);
