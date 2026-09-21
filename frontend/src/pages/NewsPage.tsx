@@ -4,9 +4,10 @@ import { Newspaper, ExternalLink, Calendar, Search } from 'lucide-react';
 
 interface Props {
   news: NewsItem[];
+  onSelectArticle?: (item: NewsItem) => void;
 }
 
-export const NewsPage: React.FC<Props> = ({ news }) => {
+export const NewsPage: React.FC<Props> = ({ news, onSelectArticle }) => {
   const [searchTerm, setSearchTerm] = React.useState<string>('');
 
   const filtered = news.filter(n =>
@@ -14,6 +15,15 @@ export const NewsPage: React.FC<Props> = ({ news }) => {
     n.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
     n.source.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const handleCardClick = (item: NewsItem) => {
+    if (onSelectArticle) {
+      onSelectArticle(item);
+    } else {
+      const url = item.sourceUrl.startsWith('http') ? item.sourceUrl : `https://www.fotmob.com${item.sourceUrl}`;
+      window.open(url, '_blank');
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -48,12 +58,10 @@ export const NewsPage: React.FC<Props> = ({ news }) => {
       {/* Articles Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.map(item => (
-          <a
+          <div
             key={item.id}
-            href={item.sourceUrl.startsWith('http') ? item.sourceUrl : `https://www.fotmob.com${item.sourceUrl}`}
-            target="_blank"
-            rel="noreferrer"
-            className="group rounded-2xl overflow-hidden bg-white hover:bg-slate-50 border border-slate-200 hover:border-blue-300 flex flex-col justify-between transition-all duration-200 shadow-sm hover:shadow-md"
+            onClick={() => handleCardClick(item)}
+            className="group rounded-3xl overflow-hidden bg-white hover:bg-slate-50/50 border border-slate-200 hover:border-blue-400 flex flex-col justify-between transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer"
           >
             <div>
               {item.imageUrl && (
@@ -63,35 +71,48 @@ export const NewsPage: React.FC<Props> = ({ news }) => {
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <span className="absolute bottom-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded bg-white/90 text-blue-700 border border-blue-200 shadow-sm backdrop-blur-sm">
+                  <span className="absolute bottom-2.5 left-2.5 text-[10px] font-extrabold px-2.5 py-0.5 rounded-md bg-white/95 text-blue-700 border border-blue-200 shadow-sm backdrop-blur-sm">
                     {item.source}
                   </span>
                 </div>
               )}
-              <div className="p-5">
+              <div className="p-5 space-y-2">
                 <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug line-clamp-3">
                   {item.title}
                 </h3>
                 {item.description && (
-                  <p className="text-xs text-slate-600 mt-2 line-clamp-2 leading-relaxed">
+                  <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
                     {item.description}
                   </p>
                 )}
               </div>
             </div>
 
-            <div className="px-5 pb-4 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-              <span className="flex items-center gap-1 font-mono">
+            <div className="px-5 pb-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+              <span className="flex items-center gap-1 font-medium">
                 <Calendar className="w-3 h-3 text-slate-400" />
                 {new Date(item.publishedAt).toLocaleDateString()}
               </span>
-              <span className="flex items-center gap-1 text-blue-600 font-semibold group-hover:underline">
-                Read Article <ExternalLink className="w-3 h-3" />
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="flex items-center gap-1 text-blue-600 font-bold group-hover:underline">
+                  Read Story
+                </span>
+                <a
+                  href={item.sourceUrl.startsWith('http') ? item.sourceUrl : `https://www.fotmob.com${item.sourceUrl}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  title="Open on publisher website"
+                  className="p-1 rounded-md text-slate-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>
   );
 };
+

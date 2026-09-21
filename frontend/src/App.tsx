@@ -13,10 +13,13 @@ import { MatchDetailPage } from './pages/MatchDetailPage.js';
 import { StandingsPage } from './pages/StandingsPage.js';
 import { ScorersPage } from './pages/ScorersPage.js';
 import { NewsPage } from './pages/NewsPage.js';
+import { ArticlePage } from './pages/ArticlePage.js';
 
 export const App: React.FC = () => {
+
   const [activeTab, setActiveTab] = React.useState<string>('home');
   const [selectedMatch, setSelectedMatch] = React.useState<Fixture | null>(null);
+  const [selectedArticle, setSelectedArticle] = React.useState<NewsItem | null>(null);
 
   const [meta, setMeta] = React.useState<SyncMeta | null>(null);
   const [competitions, setCompetitions] = React.useState<Competition[]>([]);
@@ -79,9 +82,10 @@ export const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-broadcast-grid bg-slate-50 text-slate-900">
       <Navbar
-        activeTab={selectedMatch ? 'match-detail' : activeTab}
+        activeTab={selectedMatch ? 'match-detail' : selectedArticle ? 'news' : activeTab}
         setActiveTab={(tab) => {
           setSelectedMatch(null);
+          setSelectedArticle(null);
           setActiveTab(tab);
         }}
         liveCount={liveMatches.length}
@@ -100,6 +104,13 @@ export const App: React.FC = () => {
             onSelectMatch={setSelectedMatch}
             roundMatches={upcomingMatches.filter(m => m.competitionId === selectedMatch.competitionId && m.id !== selectedMatch.id)}
           />
+        ) : selectedArticle ? (
+          <ArticlePage
+            articleItem={selectedArticle}
+            onBack={() => setSelectedArticle(null)}
+            onSelectArticle={setSelectedArticle}
+            relatedNews={news}
+          />
         ) : (
           <>
             {activeTab === 'home' && (
@@ -111,6 +122,7 @@ export const App: React.FC = () => {
                 news={news}
                 competitions={competitions}
                 onSelectMatch={handleSelectMatch}
+                onSelectArticle={setSelectedArticle}
                 onNavigate={setActiveTab}
               />
             )}
@@ -155,11 +167,12 @@ export const App: React.FC = () => {
             )}
 
             {activeTab === 'news' && (
-              <NewsPage news={news} />
+              <NewsPage news={news} onSelectArticle={setSelectedArticle} />
             )}
           </>
         )}
       </main>
+
 
       <Footer meta={meta} />
     </div>

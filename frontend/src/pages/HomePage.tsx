@@ -11,8 +11,10 @@ interface Props {
   news: NewsItem[];
   competitions: Competition[];
   onSelectMatch: (match: Fixture) => void;
+  onSelectArticle?: (item: NewsItem) => void;
   onNavigate: (tab: string) => void;
 }
+
 
 const TIER_1_COMP_IDS = ['47', '42', '87', '55', '54', '53', '9806', '73'];
 
@@ -24,8 +26,10 @@ export const HomePage: React.FC<Props> = ({
   news,
   competitions,
   onSelectMatch,
+  onSelectArticle,
   onNavigate
 }) => {
+
   const [homeMatchTab, setHomeMatchTab] = React.useState<'upcoming' | 'results'>('upcoming');
 
   // Prioritize Tier 1 tournaments (UEFA Nations League, Premier League, UCL, LaLiga, Serie A)
@@ -258,12 +262,10 @@ export const HomePage: React.FC<Props> = ({
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {news.slice(0, 3).map(item => (
-            <a
+            <div
               key={item.id}
-              href={item.sourceUrl.startsWith('http') ? item.sourceUrl : `https://www.fotmob.com${item.sourceUrl}`}
-              target="_blank"
-              rel="noreferrer"
-              className="group rounded-xl overflow-hidden bg-white hover:bg-slate-50 border border-slate-200 hover:border-blue-300 shadow-sm flex flex-col transition-all"
+              onClick={() => onSelectArticle ? onSelectArticle(item) : onNavigate('news')}
+              className="group rounded-2xl overflow-hidden bg-white hover:bg-slate-50 border border-slate-200 hover:border-blue-300 shadow-sm flex flex-col transition-all cursor-pointer"
             >
               {item.imageUrl && (
                 <div className="aspect-video w-full overflow-hidden bg-slate-100 relative">
@@ -285,9 +287,10 @@ export const HomePage: React.FC<Props> = ({
                   {new Date(item.publishedAt).toLocaleDateString()}
                 </span>
               </div>
-            </a>
+            </div>
           ))}
         </div>
+
       </section>
     </div>
   );

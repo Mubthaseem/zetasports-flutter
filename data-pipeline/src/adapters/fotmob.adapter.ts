@@ -16,7 +16,8 @@ import {
   TopScorer,
   MatchPreviewData,
   TeamFormMatch,
-  MatchPollFact
+  MatchPollFact,
+  NewsArticle
 } from '../core/types.js';
 import { SUPPORTED_COMPETITIONS, CompetitionConfig } from '../config/competitions.js';
 
@@ -437,6 +438,122 @@ export class FotMobAdapter implements IFootballDataProvider {
       return [];
     }
   }
+
+  public async getNewsArticle(item: NewsItem): Promise<NewsArticle> {
+    const cleanSlug = (item.sourceUrl || '').replace(/^\/(news|topnews|embed\/news)\//, '');
+    const fotmobUrl = `https://www.fotmob.com/_next/data/${this.buildId}/en/news/${cleanSlug}.json`;
+
+    // 1. Try FotMob Next.js endpoint for direct articles
+    try {
+      const res = await this.fetchWithRetry(fotmobUrl, 2, 500);
+      if (res.ok) {
+        const json: any = await res.json();
+        const fallback = json?.pageProps?.fallback || {};
+        for (const k of Object.keys(fallback)) {
+          if (k.startsWith('newsArticle:') && fallback[k]) {
+            const art = fallback[k];
+            if (art.html || art.content) {
+              const htmlStr = art.html || art.content || '';
+              const rawMatches = htmlStr.match(/<p[^>]*>([\s\S]*?)<\/p>/gi) || [];
+              const paragraphs = rawMatches
+                .map((p: string) => p.replace(/<[^>]+>/g, '').trim())
+                .filter((p: string) => p.length > 20);
+
+              return {
+                id: item.id,
+                title: art.title || item.title,
+                subtitle: art.subtitle || item.description,
+                source: art.source || item.source,
+                sourceUrl: item.sourceUrl,
+                imageUrl: art.imageUrl || item.imageUrl,
+                publishedAt: art.time || item.publishedAt,
+                paragraphs: paragraphs.length > 0 ? paragraphs : (item.description ? [item.description] : []),
+                html: htmlStr,
+                author: art.author || undefined
+              };
+            }
+          }
+        }
+      }
+    } catch {
+      // Continue to web scraping fallback
+    }
+
+    // 2. Try fetching full web article or embed source
+    let targetUrl = item.sourceUrl.startsWith('http')
+      ? item.sourceUrl
+      : `https://www.fotmob.com${item.sourceUrl}`;
+
+    try {
+      if (item.sourceUrl.includes('/embed/news/')) {
+        const embedRes = await this.fetchWithRetry(targetUrl, 2, 500);
+        const embedHtml = await embedRes.text();
+        const srcMatch = embedHtml.match(/"src":"(https:\/\/[^"]+)"/);
+        if (srcMatch) {
+          targetUrl = srcMatch[1].replace(/\\u0026/g, '&');
+        }
+      }
+
+      const articleRes = await this.fetchWithRetry(targetUrl, 2, 800);
+      if (articleRes.ok) {
+        const pageHtml = await articleRes.text();
+        const rawP = pageHtml.match(/<p[^>]*>([\s\S]*?)<\/p>/gi) || [];
+        const paragraphs = rawP
+          .map((p: string) =>
+            p
+              .replace(/<style[\s\S]*?<\/style>/gi, '')
+              .replace(/<script[\s\S]*?<\/script>/gi, '')
+              .replace(/<[^>]+>/g, '')
+              .replace(/&quot;/g, '"')
+              .replace(/&#39;/g, "'")
+              .replace(/&#8217;/g, "'")
+              .replace(/&#8211;/g, "–")
+              .replace(/&amp;/g, '&')
+              .replace(/&nbsp;/g, ' ')
+              .trim()
+          )
+          .filter(
+            (p: string) =>
+              p.length > 40 &&
+              !p.startsWith('.') &&
+              !p.includes('{') &&
+              !p.includes('}') &&
+              !p.toLowerCase().includes('cookie') &&
+              !p.toLowerCase().includes('privacy policy') &&
+              !p.toLowerCase().includes('rights reserved') &&
+              !p.toLowerCase().includes('sign up for')
+          );
+
+        if (paragraphs.length > 0) {
+          return {
+            id: item.id,
+            title: item.title,
+            subtitle: item.description,
+            source: item.source,
+            sourceUrl: targetUrl,
+            imageUrl: item.imageUrl,
+            publishedAt: item.publishedAt,
+            paragraphs: paragraphs.slice(0, 20)
+          };
+        }
+      }
+
+    } catch {
+      // Fallback
+    }
+
+    return {
+      id: item.id,
+      title: item.title,
+      subtitle: item.description,
+      source: item.source,
+      sourceUrl: item.sourceUrl,
+      imageUrl: item.imageUrl,
+      publishedAt: item.publishedAt,
+      paragraphs: item.description ? [item.description] : []
+    };
+  }
+
 
   private async fetchMatchData(matchId: string): Promise<any> {
     const url = `https://www.fotmob.com/_next/data/${this.buildId}/en/match/${matchId}.json`;

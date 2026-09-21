@@ -7,6 +7,7 @@ import {
   CompetitionStandings,
   CompetitionScorers,
   NewsItem,
+  NewsArticle,
   SyncMeta,
   MatchPreviewData
 } from '../types.js';
@@ -99,6 +100,11 @@ export const DataAPI = {
 
   async getLatestNews(): Promise<NewsItem[]> {
     return (await fetchJson<NewsItem[]>('news/latest.json')) || [];
+  },
+
+  async getNewsArticle(articleId: string): Promise<NewsArticle | null> {
+    return fetchJson<NewsArticle>(`news/articles/${articleId}.json`);
   }
 };
+
 

@@ -159,6 +159,19 @@ export interface NewsItem {
   publishedAt: string;
 }
 
+export interface NewsArticle {
+  id: string;
+  title: string;
+  subtitle?: string;
+  source: string;
+  sourceUrl: string;
+  imageUrl?: string;
+  publishedAt: string;
+  paragraphs: string[];
+  html?: string;
+  author?: string;
+}
+
 export interface SyncMeta {
   platform: string;
   version: string;
