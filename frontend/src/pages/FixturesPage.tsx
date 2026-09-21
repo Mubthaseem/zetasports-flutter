@@ -19,7 +19,7 @@ export const FixturesPage: React.FC<Props> = ({
   const [activeTab, setActiveTab] = React.useState<'today' | 'upcoming'>('upcoming');
   const [selectedComp, setSelectedComp] = React.useState<string>('all');
   const [searchTerm, setSearchTerm] = React.useState<string>('');
-  const [selectedDayOffset, setSelectedDayOffset] = React.useState<number | 'all'>('all');
+  const [selectedDayFilter, setSelectedDayFilter] = React.useState<string>('all');
 
   // Build list of next 5 days
   const now = new Date();
@@ -31,6 +31,9 @@ export const FixturesPage: React.FC<Props> = ({
     return { offset: i, dateStr, label };
   });
 
+  const next5DaysLimit = new Date(now);
+  next5DaysLimit.setDate(next5DaysLimit.getDate() + 5);
+
   const currentList = activeTab === 'today' ? todayMatches : upcomingMatches;
 
   const filteredMatches = currentList.filter(m => {
@@ -41,9 +44,13 @@ export const FixturesPage: React.FC<Props> = ({
       m.competitionName.toLowerCase().includes(searchTerm.toLowerCase());
     
     let matchesDay = true;
-    if (activeTab === 'upcoming' && selectedDayOffset !== 'all') {
-      const targetDateStr = upcomingDays[selectedDayOffset]?.dateStr;
-      matchesDay = m.utcDate.slice(0, 10) === targetDateStr;
+    if (activeTab === 'upcoming') {
+      if (selectedDayFilter === 'next5') {
+        const mDate = new Date(m.utcDate);
+        matchesDay = mDate <= next5DaysLimit;
+      } else if (selectedDayFilter !== 'all') {
+        matchesDay = m.utcDate.slice(0, 10) === selectedDayFilter;
+      }
     }
 
     return matchesComp && matchesSearch && matchesDay;
@@ -63,13 +70,13 @@ export const FixturesPage: React.FC<Props> = ({
           </p>
         </div>
 
-      {/* Tab Toggle: Today vs Upcoming 5 Days */}
+      {/* Tab Toggle: Today vs Upcoming */}
       <div className="flex flex-wrap items-center gap-2">
         <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200">
           <button
             onClick={() => {
               setActiveTab('today');
-              setSelectedDayOffset('all');
+              setSelectedDayFilter('all');
             }}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${
               activeTab === 'today'
@@ -87,7 +94,7 @@ export const FixturesPage: React.FC<Props> = ({
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Upcoming 5 Days ({upcomingMatches.length})
+            All Upcoming ({upcomingMatches.length})
           </button>
         </div>
 
@@ -95,21 +102,31 @@ export const FixturesPage: React.FC<Props> = ({
         {activeTab === 'upcoming' && (
           <div className="flex flex-wrap items-center gap-1.5">
             <button
-              onClick={() => setSelectedDayOffset('all')}
+              onClick={() => setSelectedDayFilter('all')}
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
-                selectedDayOffset === 'all'
+                selectedDayFilter === 'all'
                   ? 'bg-blue-50 text-blue-700 border-blue-300 font-bold shadow-sm'
                   : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
               }`}
             >
-              All 5 Days
+              All Matchdays ({upcomingMatches.length})
+            </button>
+            <button
+              onClick={() => setSelectedDayFilter('next5')}
+              className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
+                selectedDayFilter === 'next5'
+                  ? 'bg-blue-50 text-blue-700 border-blue-300 font-bold shadow-sm'
+                  : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+              }`}
+            >
+              Next 5 Days
             </button>
             {upcomingDays.slice(1).map((day) => (
               <button
                 key={day.offset}
-                onClick={() => setSelectedDayOffset(day.offset)}
+                onClick={() => setSelectedDayFilter(day.dateStr)}
                 className={`px-2.5 py-1 rounded-lg text-xs font-semibold border transition-all ${
-                  selectedDayOffset === day.offset
+                  selectedDayFilter === day.dateStr
                     ? 'bg-blue-50 text-blue-700 border-blue-300 font-bold shadow-sm'
                     : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                 }`}

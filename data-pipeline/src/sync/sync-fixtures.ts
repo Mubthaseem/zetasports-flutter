@@ -39,20 +39,20 @@ export async function syncFixtures(): Promise<void> {
   // Sort chronologically
   allFixtures.sort((a, b) => new Date(a.utcDate).getTime() - new Date(b.utcDate).getTime());
 
-  // Precise Calendar Windows: Past 3 Days & Upcoming 5 Days
+  // Precise Calendar Windows: Past 7 Days & Upcoming 30 Days (all major league upcoming matchdays)
   const nowTime = now.getTime();
 
-  // Past 3 days start (00:00:00 UTC 3 days ago)
-  const past3Days = new Date(now);
-  past3Days.setUTCDate(past3Days.getUTCDate() - 3);
-  past3Days.setUTCHours(0, 0, 0, 0);
-  const past3DaysTime = past3Days.getTime();
+  // Past 7 days start (00:00:00 UTC 7 days ago)
+  const past7Days = new Date(now);
+  past7Days.setUTCDate(past7Days.getUTCDate() - 7);
+  past7Days.setUTCHours(0, 0, 0, 0);
+  const past7DaysTime = past7Days.getTime();
 
-  // Upcoming 5 days end (23:59:59 UTC 5 days from now)
-  const next5Days = new Date(now);
-  next5Days.setUTCDate(next5Days.getUTCDate() + 5);
-  next5Days.setUTCHours(23, 59, 59, 999);
-  const next5DaysTime = next5Days.getTime();
+  // Upcoming 30 days end (23:59:59 UTC 30 days from now - covers next matchday for all leagues including post-international break)
+  const next30Days = new Date(now);
+  next30Days.setUTCDate(next30Days.getUTCDate() + 30);
+  next30Days.setUTCHours(23, 59, 59, 999);
+  const next30DaysTime = next30Days.getTime();
 
   // Start & End of today UTC
   const todayStart = new Date(now);
@@ -81,13 +81,13 @@ export async function syncFixtures(): Promise<void> {
       todayMatches.push(f);
     }
 
-    // Upcoming matches: From now up to 5 days in future
-    if (fTime > nowTime && fTime <= next5DaysTime) {
+    // Upcoming matches: Next 30 days covering next round of Premier League, UCL, La Liga, Serie A, etc.
+    if (fTime > nowTime && fTime <= next30DaysTime) {
       upcomingMatches.push(f);
     }
 
-    // Results: Past 3 days up to now (finished or played)
-    if (fTime >= past3DaysTime && fTime < nowTime) {
+    // Results: Past 7 days (finished or played)
+    if (fTime >= past7DaysTime && fTime < nowTime) {
       resultsMatches.push(f);
     }
   }
@@ -106,8 +106,8 @@ export async function syncFixtures(): Promise<void> {
   console.log(`Saved fixtures:
   - today.json: ${todayMatches.length} (Today's matches)
   - live.json: ${liveMatches.length} (In-play live)
-  - upcoming.json: ${upcomingMatches.length} (Next 5 days: ${now.toISOString().slice(0, 10)} to ${next5Days.toISOString().slice(0, 10)})
-  - results.json: ${resultsMatches.length} (Past 3 days: ${past3Days.toISOString().slice(0, 10)} to ${now.toISOString().slice(0, 10)})`);
+  - upcoming.json: ${upcomingMatches.length} (Next 30 days: ${now.toISOString().slice(0, 10)} to ${next30Days.toISOString().slice(0, 10)})
+  - results.json: ${resultsMatches.length} (Past 7 days: ${past7Days.toISOString().slice(0, 10)} to ${now.toISOString().slice(0, 10)})`);
 
   // Update meta.json
   const existingMeta = storage.readJson<SyncMeta>('meta.json');

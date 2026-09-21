@@ -6,6 +6,7 @@ import { Radio, Calendar, ArrowRight, Trophy, Flame, Newspaper } from 'lucide-re
 interface Props {
   liveMatches: Fixture[];
   todayMatches: Fixture[];
+  upcomingMatches: Fixture[];
   resultsMatches: Fixture[];
   news: NewsItem[];
   competitions: Competition[];
@@ -13,15 +14,39 @@ interface Props {
   onNavigate: (tab: string) => void;
 }
 
+const TIER_1_COMP_IDS = ['47', '42', '87', '55', '54', '53', '9806', '73'];
+
 export const HomePage: React.FC<Props> = ({
   liveMatches,
   todayMatches,
+  upcomingMatches = [],
   resultsMatches,
   news,
   competitions,
   onSelectMatch,
   onNavigate
 }) => {
+  const [homeMatchTab, setHomeMatchTab] = React.useState<'upcoming' | 'results'>('upcoming');
+
+  // Prioritize Tier 1 tournaments (UEFA Nations League, Premier League, UCL, LaLiga, Serie A)
+  const prioritizedUpcoming = React.useMemo(() => {
+    return [...upcomingMatches].sort((a, b) => {
+      const aTier1 = TIER_1_COMP_IDS.includes(a.competitionId) ? 1 : 0;
+      const bTier1 = TIER_1_COMP_IDS.includes(b.competitionId) ? 1 : 0;
+      if (aTier1 !== bTier1) return bTier1 - aTier1;
+      return new Date(a.utcDate).getTime() - new Date(b.utcDate).getTime();
+    });
+  }, [upcomingMatches]);
+
+  const prioritizedResults = React.useMemo(() => {
+    return [...resultsMatches].sort((a, b) => {
+      const aTier1 = TIER_1_COMP_IDS.includes(a.competitionId) ? 1 : 0;
+      const bTier1 = TIER_1_COMP_IDS.includes(b.competitionId) ? 1 : 0;
+      if (aTier1 !== bTier1) return bTier1 - aTier1;
+      return new Date(b.utcDate).getTime() - new Date(a.utcDate).getTime();
+    });
+  }, [resultsMatches]);
+
   return (
     <div className="space-y-10">
       {/* Hero Live Spotlight */}
@@ -72,7 +97,7 @@ export const HomePage: React.FC<Props> = ({
                 onClick={() => onNavigate('fixtures')}
                 className="px-4 py-2 rounded-lg bg-blue-600 text-white font-bold text-sm shadow-sm hover:bg-blue-700 transition-colors"
               >
-                Today's Fixtures
+                Fixtures Schedule
               </button>
               <button
                 onClick={() => onNavigate('standings')}
@@ -85,23 +110,50 @@ export const HomePage: React.FC<Props> = ({
         </section>
       )}
 
-      {/* Today's Schedule or Recent Results */}
+      {/* Today's Schedule or Upcoming/Recent Results */}
       <section className="space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <Calendar className="w-5 h-5 text-blue-600" />
             <h2 className="text-xl font-bold text-slate-900 tracking-wide">
-              {todayMatches.length > 0 ? "Today's Matches" : "Recent Matches (Past 3 Days)"}
+              {todayMatches.length > 0
+                ? "Today's Matches"
+                : homeMatchTab === 'upcoming'
+                ? 'Featured Upcoming Matches'
+                : 'Top Recent Results'}
             </h2>
-            <span className="text-xs font-mono text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
-              {todayMatches.length > 0 ? todayMatches.length : news.length > 0 ? 98 : 0}
-            </span>
           </div>
+
+          {todayMatches.length === 0 && (
+            <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 self-start sm:self-auto">
+              <button
+                onClick={() => setHomeMatchTab('upcoming')}
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                  homeMatchTab === 'upcoming'
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                Upcoming Matchdays ({upcomingMatches.length})
+              </button>
+              <button
+                onClick={() => setHomeMatchTab('results')}
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                  homeMatchTab === 'results'
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                Recent Results ({resultsMatches.length})
+              </button>
+            </div>
+          )}
+
           <button
-            onClick={() => onNavigate(todayMatches.length > 0 ? 'fixtures' : 'results')}
+            onClick={() => onNavigate(todayMatches.length > 0 ? 'fixtures' : homeMatchTab === 'upcoming' ? 'fixtures' : 'results')}
             className="text-xs text-blue-600 hover:text-blue-800 flex items-center gap-1 font-semibold transition-colors"
           >
-            <span>{todayMatches.length > 0 ? 'Full Schedule' : 'View All Results'}</span>
+            <span>{todayMatches.length > 0 ? 'Full Schedule' : homeMatchTab === 'upcoming' ? 'All Fixtures' : 'All Results'}</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -112,19 +164,36 @@ export const HomePage: React.FC<Props> = ({
               <MatchCard key={m.id} match={m} onClick={() => onSelectMatch(m)} />
             ))}
           </div>
-        ) : (
+        ) : homeMatchTab === 'upcoming' ? (
           <div className="space-y-4">
-            <div className="px-4 py-2.5 rounded-xl bg-slate-100 border border-slate-200 text-xs text-slate-600 flex items-center justify-between">
-              <span>No scheduled games today. Showing top finished matches from the past 3 days:</span>
+            <div className="px-4 py-2.5 rounded-xl bg-blue-50/60 border border-blue-100 text-xs text-slate-600 flex items-center justify-between">
+              <span>Next scheduled matchdays across UEFA Nations League, Premier League, UCL, LaLiga, Serie A & more:</span>
               <button
                 onClick={() => onNavigate('fixtures')}
                 className="text-blue-600 hover:underline font-bold"
               >
-                View Upcoming 5 Days &rarr;
+                Explore 300+ Fixtures &rarr;
               </button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {resultsMatches.slice(0, 6).map(m => (
+              {prioritizedUpcoming.slice(0, 6).map(m => (
+                <MatchCard key={m.id} match={m} onClick={() => onSelectMatch(m)} />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            <div className="px-4 py-2.5 rounded-xl bg-slate-100 border border-slate-200 text-xs text-slate-600 flex items-center justify-between">
+              <span>Top results from the past 7 days across European and global tournaments:</span>
+              <button
+                onClick={() => onNavigate('results')}
+                className="text-blue-600 hover:underline font-bold"
+              >
+                View All Results &rarr;
+              </button>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {prioritizedResults.slice(0, 6).map(m => (
                 <MatchCard key={m.id} match={m} onClick={() => onSelectMatch(m)} />
               ))}
             </div>
