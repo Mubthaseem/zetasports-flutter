@@ -2,6 +2,7 @@ import { FotMobAdapter } from '../adapters/fotmob.adapter.js';
 import { DataStorage } from '../utils/storage.js';
 import { DataValidator } from '../utils/validator.js';
 import { SUPPORTED_COMPETITIONS } from '../config/competitions.js';
+import { buildApiBundle } from './build-api-bundle.js';
 
 export async function syncStandings(): Promise<void> {
   console.log('=== [ZETA SPORTS] Starting Standings & Scorers Synchronization ===');
@@ -39,6 +40,13 @@ export async function syncStandings(): Promise<void> {
 
     // Rate limiting delay
     await new Promise(r => setTimeout(r, 400));
+  }
+
+  // Re-build API master and modular bundles
+  try {
+    await buildApiBundle();
+  } catch (err: any) {
+    console.warn('Warning: Failed to update API bundle after standings sync:', err.message);
   }
 
   console.log('=== Standings & Scorers sync completed! ===');

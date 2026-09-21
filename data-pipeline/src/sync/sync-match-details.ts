@@ -1,6 +1,7 @@
 import { FotMobAdapter } from '../adapters/fotmob.adapter.js';
 import { DataStorage } from '../utils/storage.js';
 import { Fixture } from '../core/types.js';
+import { buildApiBundle } from './build-api-bundle.js';
 
 export async function syncMatchDetails(): Promise<void> {
   console.log('=== [ZETA SPORTS] Starting Match Details Synchronization ===');
@@ -77,6 +78,12 @@ export async function syncMatchDetails(): Promise<void> {
     }
   }
 
+  // Re-build API master and modular bundles
+  try {
+    await buildApiBundle();
+  } catch (err: any) {
+    console.warn('Warning: Failed to update API bundle after match details sync:', err.message);
+  }
 
   console.log('=== Match Details sync completed! ===');
 }
