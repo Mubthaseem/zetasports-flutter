@@ -1,55 +1,52 @@
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
-import zlib from 'zlib';
 import { fileURLToPath } from 'url';
-import { promisify } from 'util';
+import { createClient } from '@supabase/supabase-js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const gunzip = promisify(zlib.gunzip);
 const PORT = 7676;
+
+const SUPABASE_URL = process.env.SUPABASE_URL || 'https://voocdrpetiyspuhyeapi.supabase.co';
+const SUPABASE_KEY = process.env.SUPABASE_KEY || 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
+const sb = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const FOTMOB_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
   'Referer': 'https://www.fotmob.com/',
-  'Accept': '*/*',
+  'Accept': 'application/json, text/plain, */*',
   'Accept-Language': 'en-GB,en;q=0.9',
 };
 
-let cachedBuildId = null;
-
-async function getBuildId() {
-  if (cachedBuildId) return cachedBuildId;
+async function fetchFotmob(url) {
+  const startTime = Date.now();
   try {
-    const res = await fetch('https://www.fotmob.com/', { headers: FOTMOB_HEADERS });
-    const html = await res.text();
-    const tag = '__NEXT_DATA__" type="application/json">';
-    const start = html.indexOf(tag) + tag.length;
-    const end = html.indexOf('</script>', start);
-    const data = JSON.parse(html.slice(start, end));
-    cachedBuildId = data.buildId;
-    return cachedBuildId;
-  } catch (e) {
-    console.warn('Fallback buildId due to:', e.message);
-    return 'quX4vmazDEcAFzWw1ZjDZ';
-  }
-}
-
-async function proxyFetch(targetUrl, isGzip = false) {
-  try {
-    const res = await fetch(targetUrl, { headers: FOTMOB_HEADERS });
+    const res = await fetch(url, { headers: FOTMOB_HEADERS });
+    const latency = Date.now() - startTime;
     if (!res.ok) {
-      return { status: res.status, error: `HTTP ${res.status}` };
-    }
-    if (isGzip) {
-      const buf = await res.arrayBuffer();
-      const decompressed = await gunzip(Buffer.from(buf));
-      return { status: 200, data: JSON.parse(decompressed.toString('utf8')) };
+      return {
+        status: res.status,
+        error: `HTTP ${res.status}: ${res.statusText}`,
+        latency,
+        url,
+      };
     }
     const data = await res.json();
-    return { status: 200, data };
+    const size = Buffer.byteLength(JSON.stringify(data));
+    return {
+      status: 200,
+      data,
+      latency,
+      sizeKb: (size / 1024).toFixed(1),
+      url,
+    };
   } catch (e) {
-    return { status: 500, error: e.message };
+    return {
+      status: 500,
+      error: e.message,
+      latency: Date.now() - startTime,
+      url,
+    };
   }
 }
 
@@ -58,11 +55,16 @@ const server = http.createServer(async (req, res) => {
 
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
+  if (req.method === 'OPTIONS') {
+    res.writeHead(204);
+    res.end();
+    return;
+  }
 
-  // Serve HTML UI
+  // 1. Serve UI
   if (url.pathname === '/' || url.pathname === '/index.html') {
     const htmlPath = path.join(__dirname, 'fotmob_api_tester.html');
     if (fs.existsSync(htmlPath)) {
@@ -76,42 +78,112 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // GET /buildid
-  if (url.pathname === '/buildid') {
-    const buildId = await getBuildId();
-    res.setHeader('Content-Type', 'application/json');
-    res.writeHead(200);
-    res.end(JSON.stringify({ buildId }));
-    return;
-  }
-
-  // GET /proxy?url=<encoded_url>&gzip=1
-  if (url.pathname === '/proxy') {
-    const targetUrl = url.searchParams.get('url');
-    const isGzip = url.searchParams.get('gzip') === '1';
-    if (!targetUrl) {
-      res.writeHead(400);
-      res.end(JSON.stringify({ error: 'Missing url param' }));
+  // 2. GET /api/match?id=<matchId>
+  if (url.pathname === '/api/match') {
+    const matchId = url.searchParams.get('id');
+    if (!matchId) {
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Missing match id parameter' }));
       return;
     }
-    try {
-      const result = await proxyFetch(decodeURIComponent(targetUrl), isGzip);
-      res.setHeader('Content-Type', 'application/json');
-      res.writeHead(result.status || 200);
-      res.end(JSON.stringify(result));
-    } catch (e) {
-      res.writeHead(500);
-      res.end(JSON.stringify({ error: e.message }));
-    }
+    const apiUrl = `https://www.fotmob.com/api/data/matchDetails?matchId=${matchId}`;
+    const result = await fetchFotmob(apiUrl);
+    res.writeHead(result.status, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(result));
     return;
   }
 
-  res.writeHead(404);
-  res.end('Not found');
+  // 3. GET /api/tv?id=<matchId>
+  if (url.pathname === '/api/tv') {
+    const matchId = url.searchParams.get('id');
+    const apiUrl = `https://www.fotmob.com/api/data/tvlistings?matchId=${matchId}`;
+    const result = await fetchFotmob(apiUrl);
+    res.writeHead(result.status, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(result));
+    return;
+  }
+
+  // 4. GET /api/matches?date=<YYYYMMDD>
+  if (url.pathname === '/api/matches') {
+    const date = url.searchParams.get('date') || new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    const apiUrl = `https://www.fotmob.com/api/data/matches?date=${date}`;
+    const result = await fetchFotmob(apiUrl);
+    res.writeHead(result.status, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(result));
+    return;
+  }
+
+  // 5. GET /api/allLeagues
+  if (url.pathname === '/api/allLeagues') {
+    const apiUrl = `https://www.fotmob.com/api/data/allLeagues`;
+    const result = await fetchFotmob(apiUrl);
+    res.writeHead(result.status, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(result));
+    return;
+  }
+
+  // 6. POST /api/supabase/push
+  if (url.pathname === '/api/supabase/push' && req.method === 'POST') {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', async () => {
+      try {
+        const { matchId, dataKey, rawJson, phase = 'live' } = JSON.parse(body);
+        if (!matchId || !dataKey || !rawJson) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Missing required fields: matchId, dataKey, rawJson' }));
+          return;
+        }
+
+        const { data, error } = await sb.from('fotmob_raw').upsert(
+          {
+            match_id: String(matchId),
+            data_key: dataKey,
+            raw_json: rawJson,
+            fetched_at: new Date().toISOString(),
+            phase
+          },
+          { onConflict: 'match_id,data_key' }
+        ).select();
+
+        if (error) {
+          res.writeHead(500, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: error.message }));
+        } else {
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ success: true, saved: data }));
+        }
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: err.message }));
+      }
+    });
+    return;
+  }
+
+  // 7. GET /proxy?url=<encodedUrl>
+  if (url.pathname === '/proxy') {
+    const targetUrl = url.searchParams.get('url');
+    if (!targetUrl) {
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Missing url parameter' }));
+      return;
+    }
+    const result = await fetchFotmob(decodeURIComponent(targetUrl));
+    res.writeHead(result.status, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(result));
+    return;
+  }
+
+  res.writeHead(404, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ error: 'Endpoint not found' }));
 });
 
-server.listen(PORT, () => {
-  console.log(`\n✅ ZetaSports FotMob API Tester`);
-  console.log(`   Open: http://localhost:${PORT}`);
-  console.log(`   Press Ctrl+C to stop\n`);
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`\n======================================================`);
+  console.log(`🚀 ZetaSports Advanced FotMob Telemetry & API Hub`);
+  console.log(`   Local URL:    http://localhost:${PORT}`);
+  console.log(`   Network URL:  http://127.0.0.1:${PORT}`);
+  console.log(`   Direct API:   http://localhost:${PORT}/api/match?id=5181862`);
+  console.log(`======================================================\n`);
 });
