@@ -1,0 +1,36 @@
+name: Match Tracker
+
+on:
+  workflow_dispatch:
+    inputs:
+      match_id:
+        description: 'FotMob Match ID (e.g. 5181862)'
+        required: true
+        type: string
+
+jobs:
+  track-match:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180 # Up to 3 hours for live tracking
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Dependencies
+        run: |
+          npm install --prefix scripts
+
+      - name: Run Match Data Fetcher
+        env:
+          MATCH_ID: ${{ github.event.inputs.match_id }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL || 'https://voocdrpetiyspuhyeapi.supabase.co' }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY || secrets.SUPABASE_KEY || 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV' }}
+        run: |
+          echo "🚀 Starting match fetcher for Match ID: ${{ github.event.inputs.match_id }}"
+          node scripts/match_data_fetcher.mjs
