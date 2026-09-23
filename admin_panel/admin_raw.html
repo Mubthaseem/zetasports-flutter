@@ -43,22 +43,29 @@
 }
 
 :root {
-  --bg: #f8fafc;
+  --bg: #f1f5f9;
+  --fifa-navy: #051838;
+  --fifa-navy-deep: #020c1d;
+  --fifa-navy-card: #081d45;
+  --fifa-gold: #d4af37;
+  --fifa-gold-hover: #c59b27;
+  --fifa-gold-light: #fef3c7;
+  --fifa-gold-border: rgba(212, 175, 55, 0.35);
   --card: #ffffff;
   --card2: #f8fafc;
-  --bdr: #e2e8f0;
-  --border: #e2e8f0;
+  --bdr: #cbd5e1;
+  --border: #cbd5e1;
   --surface: #ffffff;
-  --acc: #2563eb;
-  --acc2: #4f46e5;
-  --accent: #2563eb;
-  --primary: #2563eb;
+  --acc: #051838;
+  --acc2: #d4af37;
+  --accent: #d4af37;
+  --primary: #051838;
   --grn: #059669;
-  --red: #e11d48;
-  --blu: #0284c7;
+  --red: #b91c1c;
+  --blu: #0369a1;
   --t1: #0f172a;
-  --t2: #475569;
-  --t3: #94a3b8;
+  --t2: #334155;
+  --t3: #64748b;
 }
 
 * {
@@ -68,7 +75,7 @@
 }
 
 body {
-  background-color: #f8fafc;
+  background-color: #f1f5f9;
   color: #0f172a;
   font-family: var(--font-sans);
   min-height: 100vh;
@@ -98,20 +105,23 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: radial-gradient(circle at 50% 10%, #dbeafe 0%, #f8fafc 60%, #e2e8f0 100%);
+  background: radial-gradient(circle at 50% 10%, #0c2b66 0%, #051838 50%, #020c1d 100%);
   padding: 20px;
 }
 
 .lb {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 28px;
-  padding: 48px 40px;
+  background: rgba(8, 29, 69, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 44px 36px;
   width: 100%;
   max-width: 420px;
-  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.6);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 55, 0.2);
   position: relative;
   overflow: hidden;
+  color: #ffffff;
 }
 
 .lb::before {
@@ -121,7 +131,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #2563eb, #4f46e5, #38bdf8);
+  background: linear-gradient(90deg, #d4af37, #fef3c7, #d4af37);
 }
 
 .ll {
@@ -159,10 +169,10 @@ body {
 .lb input {
   width: 100%;
   padding: 13px 18px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  color: #0f172a;
+  background: rgba(3, 16, 39, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 12px;
+  color: #ffffff;
   font-size: 14px;
   margin-bottom: 16px;
   outline: none;
@@ -171,31 +181,32 @@ body {
 }
 
 .lb input:focus {
-  border-color: #2563eb;
-  background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  border-color: #d4af37;
+  background: rgba(3, 16, 39, 1);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
 }
 
 .lb button {
   width: 100%;
   padding: 14px;
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
-  border: none;
-  border-radius: 14px;
-  color: #ffffff;
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+  border: 1px solid rgba(254, 240, 138, 0.4);
+  border-radius: 12px;
+  color: #051838;
   font-family: var(--font-display);
   font-size: 17px;
   font-weight: 800;
   letter-spacing: 0.08em;
   cursor: pointer;
-  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 10px 24px -5px rgba(212, 175, 55, 0.4);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .lb button:hover {
-  opacity: 0.95;
+  background: linear-gradient(135deg, #fef08a 0%, #d4af37 100%);
+  opacity: 0.98;
   transform: translateY(-1px);
-  box-shadow: 0 14px 24px -5px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 14px 28px -5px rgba(212, 175, 55, 0.55);
 }
 
 .lb button:active {
@@ -222,11 +233,15 @@ body {
   background-color: #f8fafc;
 }
 
+/* =========================================================
+   OFFICIAL FIFA / FEDERATION EXTRANET STYLING
+   ========================================================= */
+
 /* Sidebar */
 .sidebar {
-  width: 260px;
-  background: #ffffff;
-  border-right: 1px solid #e2e8f0;
+  width: 270px;
+  background: #051838;
+  border-right: 1px solid rgba(212, 175, 55, 0.25);
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -234,61 +249,48 @@ body {
   bottom: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: 4px 0 20px 0 rgba(0, 0, 0, 0.25);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sl {
-  padding: 24px 22px 20px;
-  border-bottom: 1px solid #f1f5f9;
+  padding: 22px 20px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   gap: 4px;
+  background: #031027;
 }
 
 .sl h2 {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #0f172a;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-.sl h2 span {
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.sl .tagline {
+  letter-spacing: 0.03em;
+  color: #ffffff;
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 2px;
 }
 
-.sl p {
-  color: #94a3b8;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.sl h2 span {
+  color: #d4af37;
+  background: linear-gradient(135deg, #fcd34d, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .sl .v4-badge {
   display: inline-flex;
   align-items: center;
-  padding: 2px 7px;
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  border-radius: 9999px;
+  padding: 2px 8px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 4px;
   font-size: 9px;
   font-weight: 800;
-  color: #2563eb;
-  letter-spacing: 0.05em;
+  color: #fcd34d;
+  letter-spacing: 0.08em;
 }
 
 .nav {
@@ -304,31 +306,32 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 14px;
+  padding: 11px 14px;
   cursor: pointer;
-  color: #475569;
+  color: #94a3b8;
   font-size: 13px;
   font-weight: 600;
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid transparent;
 }
 
 .ni:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
 }
 
 .ni.active {
-  background: #eff6ff;
-  color: #2563eb;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.18), rgba(2, 75, 160, 0.25));
+  color: #ffffff;
   font-weight: 700;
-  border-color: #dbeafe;
-  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.06);
+  border-left: 3px solid #d4af37;
+  border-color: rgba(212, 175, 55, 0.3) rgba(212, 175, 55, 0.3) rgba(212, 175, 55, 0.3) #d4af37;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .ni .ic {
-  font-size: 17px;
+  font-size: 16px;
   width: 22px;
   text-align: center;
   display: inline-flex;
@@ -338,8 +341,8 @@ body {
 
 .sf {
   padding: 18px 20px;
-  border-top: 1px solid #f1f5f9;
-  background: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #031027;
 }
 
 .ab {
@@ -352,40 +355,40 @@ body {
 .av {
   width: 38px;
   height: 38px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
-  color: #ffffff;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #d4af37, #996515);
+  color: #020d20;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 16px;
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
 }
 
 .an {
   font-size: 13px;
   font-weight: 700;
-  color: #0f172a;
+  color: #ffffff;
   line-height: 1.2;
 }
 
 .ar {
   font-size: 10px;
   font-weight: 700;
-  color: #94a3b8;
-  letter-spacing: 0.05em;
+  color: #fcd34d;
+  letter-spacing: 0.08em;
   margin-top: 2px;
 }
 
 .lob {
   width: 100%;
   padding: 10px 14px;
-  background: #fff1f2;
-  border: 1px solid #fecdd3;
-  border-radius: 12px;
-  color: #e11d48;
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  border-radius: 8px;
+  color: #fca5a5;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
@@ -397,29 +400,29 @@ body {
 }
 
 .lob:hover {
-  background: #ffe4e6;
-  border-color: #fda4af;
-  color: #be123c;
+  background: rgba(220, 38, 38, 0.25);
+  color: #ffffff;
+  border-color: #ef4444;
 }
 
 /* Main Content Area */
 .main {
-  margin-left: 260px;
+  margin-left: 270px;
   flex: 1;
   padding: 32px 36px;
-  background-color: #f8fafc;
+  background-color: #f1f5f9;
   min-height: 100vh;
-  max-width: calc(100vw - 260px);
+  max-width: calc(100vw - 270px);
 }
 
-/* Modern Topbar */
+/* Official Topbar */
 .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 28px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #cbd5e1;
 }
 
 .topbar-left {
@@ -430,24 +433,26 @@ body {
 
 .topbar-mobile-btn {
   display: none;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  background: #051838;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
   padding: 8px 12px;
   font-size: 16px;
   cursor: pointer;
-  color: #0f172a;
+  color: #ffffff;
 }
 
 .topbar-breadcrumbs {
   font-size: 13px;
-  color: #64748b;
-  font-weight: 600;
+  color: #475569;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .topbar-breadcrumbs span {
-  color: #0f172a;
-  font-weight: 700;
+  color: #051838;
+  font-weight: 800;
 }
 
 .topbar-right {
@@ -460,21 +465,22 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 12px;
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  border-radius: 9999px;
+  padding: 6px 14px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 6px;
   font-size: 11px;
-  font-weight: 700;
-  color: #059669;
+  font-weight: 800;
+  color: #166534;
+  letter-spacing: 0.04em;
 }
 
 .live-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  background: #15803d;
+  box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.2);
   animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
@@ -505,18 +511,18 @@ body {
   font-family: var(--font-display);
   font-size: 30px;
   font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #0f172a;
+  letter-spacing: 0.01em;
+  color: #051838;
 }
 
 .ph p {
-  color: #64748b;
+  color: #475569;
   font-size: 13px;
   margin-top: 4px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* Stats Grid */
+/* Institutional Metric Cards */
 .sg {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -526,42 +532,34 @@ body {
 
 .sc {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
   padding: 22px;
-  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.03);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
 
-.sc:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-  border-color: #cbd5e1;
-}
-
-.sc::after {
+.sc::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(180deg, #2563eb, #4f46e5);
-  opacity: 0;
-  transition: opacity 0.2s ease;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #051838, #d4af37);
 }
 
-.sc:hover::after {
-  opacity: 1;
+.sc:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(5, 24, 56, 0.12);
+  border-color: #94a3b8;
 }
 
 .slb {
   color: #64748b;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -570,7 +568,7 @@ body {
   font-size: 38px;
   font-weight: 800;
   margin-top: 6px;
-  color: #0f172a;
+  color: #051838;
   line-height: 1;
 }
 
@@ -581,12 +579,12 @@ body {
   font-weight: 600;
 }
 
-/* Modern Card / Table Container */
+/* Institutional Card / Table Container */
 .tc {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 20px;
-  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
   overflow: hidden;
   margin-bottom: 24px;
 }
@@ -595,9 +593,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 24px;
-  border-bottom: 1px solid #f1f5f9;
-  background: #ffffff;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e2e8f0;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
   gap: 12px;
   flex-wrap: wrap;
 }
@@ -606,8 +604,8 @@ body {
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 800;
-  letter-spacing: -0.01em;
-  color: #0f172a;
+  letter-spacing: 0.02em;
+  color: #051838;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -620,29 +618,29 @@ body {
   flex-wrap: wrap;
 }
 
-/* Tables */
+/* Tables with Official Championship Navy Header & Gold Bar */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
 th {
-  padding: 14px 20px;
+  padding: 13px 18px;
   text-align: left;
   font-size: 11px;
-  color: #64748b;
+  color: #e2e8f0;
   text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  border-bottom: 1px solid #e2e8f0;
-  background: #f8fafc;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: #051838;
+  border-bottom: 2px solid #d4af37;
 }
 
 td {
-  padding: 15px 20px;
+  padding: 14px 18px;
   font-size: 13px;
   color: #0f172a;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
   vertical-align: middle;
 }
 
@@ -654,50 +652,51 @@ tr:hover td {
   background-color: #f8fafc;
 }
 
-/* Modern Badges */
+/* Official Badges */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 3px 10px;
-  border-radius: 9999px;
+  padding: 3px 9px;
+  border-radius: 4px;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-weight: 800;
+  letter-spacing: 0.04em;
   line-height: 1.3;
 }
 
 .bg {
   background: #ecfdf5;
-  color: #059669;
+  color: #065f46;
   border: 1px solid #a7f3d0;
 }
 
 .br {
   background: #fff1f2;
-  color: #e11d48;
+  color: #991b1b;
   border: 1px solid #fecdd3;
 }
 
 .bb, .bo {
   background: #eff6ff;
-  color: #2563eb;
+  color: #1e40af;
   border: 1px solid #bfdbfe;
 }
 
 .bw {
   background: #fffbeb;
-  color: #d97706;
+  color: #92400e;
   border: 1px solid #fde68a;
 }
 
-/* Modern Buttons */
+/* Official Buttons */
 .btn {
   padding: 9px 18px;
-  border-radius: 12px;
-  border: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.04em;
   cursor: pointer;
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
@@ -712,43 +711,44 @@ tr:hover td {
 }
 
 .bp {
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  background: linear-gradient(135deg, #051838, #0a2d6c);
   color: #ffffff;
-  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 2px 6px rgba(5, 24, 56, 0.25);
 }
 
 .bp:hover {
-  background: linear-gradient(135deg, #1d4ed8, #2563eb);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  background: linear-gradient(135deg, #020d20, #051838);
+  border-color: #d4af37;
+  box-shadow: 0 4px 12px rgba(5, 24, 56, 0.35);
 }
 
 .bgh {
-  background: #f8fafc;
+  background: #ffffff;
   color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cbd5e1;
 }
 
 .bgh:hover {
   background: #f1f5f9;
-  border-color: #cbd5e1;
+  border-color: #94a3b8;
 }
 
 .bd {
   background: #fff1f2;
-  color: #e11d48;
+  color: #991b1b;
   border: 1px solid #fecdd3;
 }
 
 .bd:hover {
-  background: #ffe4e6;
-  border-color: #fda4af;
-  color: #be123c;
+  background: #fee2e2;
+  border-color: #f87171;
 }
 
 .bsm {
   padding: 6px 12px;
   font-size: 11px;
-  border-radius: 9px;
+  border-radius: 6px;
 }
 
 /* Modals */
@@ -770,15 +770,25 @@ tr:hover td {
 
 .md {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 24px;
-  padding: 32px;
+  border: 1px solid #cbd5e1;
+  border-radius: 18px;
+  padding: 30px;
   width: 580px;
   max-width: 95vw;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(5, 24, 56, 0.25);
   animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.md::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #051838, #d4af37);
+  border-radius: 18px 18px 0 0;
 }
 
 @keyframes modalPop {
@@ -791,7 +801,7 @@ tr:hover td {
   font-size: 22px;
   font-weight: 800;
   margin-bottom: 22px;
-  color: #0f172a;
+  color: #051838;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -816,8 +826,8 @@ tr:hover td {
   width: 100%;
   padding: 11px 15px;
   background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
   color: #0f172a;
   font-size: 13px;
   outline: none;
@@ -826,9 +836,9 @@ tr:hover td {
 }
 
 .fg input:focus, .fg select:focus, .fg textarea:focus, .ac-input:focus, .si:focus {
-  border-color: #2563eb;
+  border-color: #051838;
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
 }
 
 .fg select option {
@@ -1558,12 +1568,16 @@ tr:hover td {
 <div id="ls">
   <div class="lb">
     <div class="ll">
-      <h1>ZETA<span>SPORTS</span></h1>
-      <p>ADMIN CONTROL PANEL</p>
+      <div style="width:58px;height:58px;border-radius:14px;background:linear-gradient(135deg,#d4af37,#996515);border:2px solid rgba(254,243,199,0.4);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 14px;box-shadow:0 8px 20px -4px rgba(212,175,55,0.45);">🏛️</div>
+      <div style="display:inline-block;padding:2px 8px;background:rgba(212,175,55,0.15);border:1px solid rgba(212,175,55,0.45);border-radius:4px;font-size:9px;font-weight:800;letter-spacing:0.12em;color:#fde047;text-transform:uppercase;margin-bottom:8px;">★ CONFEDERATION CERTIFIED</div>
+      <h1 style="color:#ffffff;">ZETA<span style="color:#d4af37;">SPORTS</span></h1>
+      <p style="color:#94a3b8;font-size:10px;font-weight:700;letter-spacing:0.14em;">CENTRAL GOVERNANCE EXTRANET</p>
     </div>
-    <input id="au" type="text" placeholder="Admin Username" autocomplete="username"/>
-    <input id="ap" type="password" placeholder="4-Digit PIN" maxlength="4" autocomplete="current-password"/>
-    <button onclick="doLogin()">LOGIN →</button>
+    <div style="text-align:left;margin-bottom:6px;font-size:11px;font-weight:800;color:#cbd5e1;text-transform:uppercase;letter-spacing:0.06em;">Official Delegate Identifier</div>
+    <input id="au" type="text" placeholder="Enter delegate username" autocomplete="username"/>
+    <div style="text-align:left;margin-bottom:6px;font-size:11px;font-weight:800;color:#cbd5e1;text-transform:uppercase;letter-spacing:0.06em;">Security Clearance Key / PIN</div>
+    <input id="ap" type="password" placeholder="Enter security clearance key" maxlength="32" autocomplete="current-password"/>
+    <button onclick="doLogin()">AUTHENTICATE DELEGATE →</button>
     <div id="lerr"></div>
   </div>
 </div>
@@ -1573,39 +1587,44 @@ tr:hover td {
     <nav class="sidebar" id="sidebar">
       <div class="sl">
         <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
-          <h2>ZETA<span>SPORTS</span></h2>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:38px;height:38px;border-radius:8px;background:linear-gradient(135deg,#d4af37,#996515);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 10px rgba(212,175,55,0.35);">🏛️</div>
+            <div>
+              <h2 style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:800;letter-spacing:0.04em;color:#ffffff;margin:0;">ZETA<span style="color:#d4af37;">SPORTS</span></h2>
+              <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;color:#94a3b8;text-transform:uppercase;">FEDERATION EXTRANET</div>
+            </div>
+          </div>
           <button class="sidebar-close-btn" onclick="toggleSidebar(false)" aria-label="Close menu">✕</button>
         </div>
-        <div class="tagline">
-          <p>ADMIN CONTROL</p>
-          <span class="v4-badge">TAILWIND v4</span>
+        <div class="tagline" style="margin-top:10px;">
+          <span class="v4-badge">★ CONFEDERATION CERTIFIED</span>
         </div>
       </div>
       <div class="nav">
-        <div class="ni active" onclick="goPage(this,'dashboard')"><span class="ic">📊</span>Dashboard</div>
-        <div class="ni" onclick="goPage(this,'teams')"><span class="ic">🏟️</span>Teams</div>
-        <div class="ni" onclick="goPage(this,'players')"><span class="ic">⚽</span>Players</div>
-        <div class="ni" onclick="goPage(this,'leagues')"><span class="ic">🏆</span>Leagues</div>
-        <div class="ni" onclick="goPage(this,'matches')"><span class="ic">📅</span>Matches</div>
-        <div class="ni" onclick="goPage(this,'highlights')"><span class="ic">🎬</span>Highlights</div>
-        <div class="ni" onclick="goPage(this,'news')"><span class="ic">📰</span>News</div>
-        <div class="ni" onclick="goPage(this,'autoclip')"><span class="ic">⚡</span>AutoClip Video</div>
-        <div class="ni" onclick="goPage(this,'streams')"><span class="ic">📺</span>Live Streams</div>
-        <div class="ni" onclick="goPage(this,'notifications')"><span class="ic">🔔</span>Notifications</div>
-        <div class="ni" onclick="goPage(this,'users')"><span class="ic">👥</span>Users</div>
-        <div class="ni" onclick="goPage(this,'sessions')"><span class="ic">👁️</span>Sessions</div>
-        <div class="ni" onclick="goPage(this,'settings')"><span class="ic">⚙️</span>Settings</div>
-        <div class="ni" onclick="goPage(this,'telegram')"><span class="ic">✈️</span>Telegram Bot</div>
+        <div class="ni active" onclick="goPage(this,'dashboard')"><span class="ic">📊</span>Executive Overview</div>
+        <div class="ni" onclick="goPage(this,'teams')"><span class="ic">🏛️</span>Registered Clubs</div>
+        <div class="ni" onclick="goPage(this,'players')"><span class="ic">⚽</span>Licensed Athletes</div>
+        <div class="ni" onclick="goPage(this,'leagues')"><span class="ic">🏆</span>Sanctioned Leagues</div>
+        <div class="ni" onclick="goPage(this,'matches')"><span class="ic">📅</span>Fixture Protocols</div>
+        <div class="ni" onclick="goPage(this,'highlights')"><span class="ic">🎬</span>Broadcast Media</div>
+        <div class="ni" onclick="goPage(this,'news')"><span class="ic">📰</span>Official Bulletins</div>
+        <div class="ni" onclick="goPage(this,'autoclip')"><span class="ic">⚡</span>AutoClip Highlights</div>
+        <div class="ni" onclick="goPage(this,'streams')"><span class="ic">📺</span>Satellite Channels</div>
+        <div class="ni" onclick="goPage(this,'notifications')"><span class="ic">🔔</span>Official Dispatches</div>
+        <div class="ni" onclick="goPage(this,'users')"><span class="ic">👥</span>Accredited Delegates</div>
+        <div class="ni" onclick="goPage(this,'sessions')"><span class="ic">👁️</span>Security Audit Logs</div>
+        <div class="ni" onclick="goPage(this,'settings')"><span class="ic">⚙️</span>Global Governance</div>
+        <div class="ni" onclick="goPage(this,'telegram')"><span class="ic">✈️</span>Telegram Dispatcher</div>
       </div>
       <div class="sf">
         <div class="ab">
-          <div class="av" id="aav">A</div>
+          <div class="av" id="aav">★</div>
           <div>
-            <div class="an" id="anm">Admin</div>
-            <div class="ar">SUPER ADMIN</div>
+            <div class="an" id="anm">DELEGATE</div>
+            <div class="ar">FEDERATION COMMISSIONER</div>
           </div>
         </div>
-        <button class="lob" onclick="doLogout()">⏏ Logout</button>
+        <button class="lob" onclick="doLogout()">⏏ Terminate Session</button>
       </div>
     </nav>
     <main class="main">
@@ -1614,67 +1633,67 @@ tr:hover td {
         <div class="topbar-left">
           <button class="topbar-mobile-btn" onclick="toggleSidebar()" aria-label="Toggle navigation">☰</button>
           <div class="topbar-breadcrumbs">
-            Admin Panel / <span id="topbar-active-page">Dashboard</span>
+            FEDERATION PROTOCOL / <span id="topbar-active-page">Executive Overview</span>
           </div>
         </div>
         <div class="topbar-right">
           <div class="live-pill">
             <span class="live-dot"></span>
-            <span>Supabase Sync Active</span>
+            <span>REGISTRY SYNCHRONIZED</span>
           </div>
-          <button class="btn bgh bsm" onclick="loadAll()" title="Reload All Data">⟳ Sync Data</button>
+          <button class="btn bgh bsm" onclick="loadAll()" title="Reload All Data">⟳ Sync Registry</button>
         </div>
       </div>
       <!-- DASHBOARD -->
       <div class="page active" id="page-dashboard">
-        <div class="ph"><h1>Dashboard</h1><p>Overview of ZetaSports platform</p></div>
+        <div class="ph"><h1>Executive Overview</h1><p>Central Registry & Competition Operations Governance</p></div>
         <div class="sg">
-          <div class="sc"><div class="slb">Teams</div><div class="sv" id="st-teams">-</div><div class="ss">Registered</div></div>
-          <div class="sc"><div class="slb">Players</div><div class="sv" id="st-players">-</div><div class="ss">Active</div></div>
-          <div class="sc"><div class="slb">Leagues</div><div class="sv" id="st-leagues">-</div><div class="ss">Configured</div></div>
-          <div class="sc"><div class="slb">Matches</div><div class="sv" id="st-matches">-</div><div class="ss">In database</div></div>
-          <div class="sc"><div class="slb">Highlights</div><div class="sv" id="st-highlights">-</div><div class="ss">Published</div></div>
-          <div class="sc"><div class="slb">News Articles</div><div class="sv" id="st-news">-</div><div class="ss">Published</div></div>
-          <div class="sc"><div class="slb">Live Streams</div><div class="sv" id="st-streams">-</div><div class="ss">Channels</div></div>
-          <div class="sc"><div class="slb">Total Users</div><div class="sv" id="st-users">-</div><div class="ss">Accounts</div></div>
-          <div class="sc"><div class="slb">Sessions 24h</div><div class="sv" id="st-sessions">-</div><div class="ss">Views today</div></div>
+          <div class="sc"><div class="slb">Registered Clubs</div><div class="sv" id="st-teams">-</div><div class="ss">Official Registry</div></div>
+          <div class="sc"><div class="slb">Licensed Athletes</div><div class="sv" id="st-players">-</div><div class="ss">Active Passports</div></div>
+          <div class="sc"><div class="slb">Sanctioned Leagues</div><div class="sv" id="st-leagues">-</div><div class="ss">Tournaments Active</div></div>
+          <div class="sc"><div class="slb">Fixture Protocols</div><div class="sv" id="st-matches">-</div><div class="ss">Recorded Matches</div></div>
+          <div class="sc"><div class="slb">Broadcast Media</div><div class="sv" id="st-highlights">-</div><div class="ss">Approved Footage</div></div>
+          <div class="sc"><div class="slb">Official Bulletins</div><div class="sv" id="st-news">-</div><div class="ss">Published Releases</div></div>
+          <div class="sc"><div class="slb">Satellite Feeds</div><div class="sv" id="st-streams">-</div><div class="ss">Authorized Channels</div></div>
+          <div class="sc"><div class="slb">Accredited Accounts</div><div class="sv" id="st-users">-</div><div class="ss">Verified Delegates</div></div>
+          <div class="sc"><div class="slb">Audited Views (24h)</div><div class="sv" id="st-sessions">-</div><div class="ss">Official Traffic</div></div>
         </div>
         <div class="tc">
-          <div class="tt"><h3>Recent Activity</h3><button class="btn bgh bsm" onclick="loadDashboard()">⟳ Refresh</button></div>
-          <div id="dash-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+          <div class="tt"><h3>Official Match Operations Audit</h3><button class="btn bgh bsm" onclick="loadDashboard()">⟳ Refresh Feed</button></div>
+          <div id="dash-body"><div class="ld"><div class="sp"></div>Synchronizing official records...</div></div>
         </div>
       </div>
 
       <!-- TEAMS -->
       <div class="page" id="page-teams">
-        <div class="ph"><h1>Teams</h1><p>Manage team data for all sports</p></div>
+        <div class="ph"><h1>Registered Clubs Registry</h1><p>Official Confederation Affiliated Clubs & Emblems</p></div>
         <div class="tc">
-          <div class="tt"><h3>All Teams</h3><div class="ta"><input class="si" id="flt-teams" placeholder="Search teams..." oninput="filterTeams(this.value)"/><button class="btn bp" onclick="openTeamModal(null)">+ Add Team</button></div></div>
+          <div class="tt"><h3>Official Clubs Roster</h3><div class="ta"><input class="si" id="flt-teams" placeholder="Search registered clubs..." oninput="filterTeams(this.value)"/><button class="btn bp" onclick="openTeamModal(null)">+ Accredit Club</button></div></div>
           <div id="teams-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
       <!-- PLAYERS -->
       <div class="page" id="page-players">
-        <div class="ph"><h1>Players</h1><p>Manage player profiles, stats, and career history</p></div>
+        <div class="ph"><h1>Licensed Athletes & Squads</h1><p>Federation Passport Registry, Career Caps & Squad Status</p></div>
         <div class="tc">
-          <div class="tt"><h3>All Players</h3><div class="ta"><input class="si" id="flt-players" placeholder="Search players..." oninput="filterPlayers(this.value)"/><button class="btn bp" onclick="openPlayerModal(null)">+ Add Player</button></div></div>
+          <div class="tt"><h3>Sanctioned Athletes Roster</h3><div class="ta"><input class="si" id="flt-players" placeholder="Search licensed athletes..." oninput="filterPlayers(this.value)"/><button class="btn bp" onclick="openPlayerModal(null)">+ License Athlete</button></div></div>
           <div id="players-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
       <!-- LEAGUES -->
       <div class="page" id="page-leagues">
-        <div class="ph"><h1>Leagues & Tournaments</h1><p>Manage leagues, seasons, and tournaments</p></div>
+        <div class="ph"><h1>Sanctioned Competitions</h1><p>Accredited Tournaments, Championship Cups & Division Leagues</p></div>
         <div class="tc">
-          <div class="tt"><h3>All Leagues</h3><div class="ta"><button class="btn bp" onclick="openLeagueModal(null)">+ Add League</button></div></div>
+          <div class="tt"><h3>Sanctioned Competitions Roster</h3><div class="ta"><button class="btn bp" onclick="openLeagueModal(null)">+ Sanction Tournament</button></div></div>
           <div id="leagues-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- MATCHES -->
       <div class="page" id="page-matches">
-        <div class="ph"><h1>Matches</h1><p>Manage match fixtures, results, and live data</p></div>
+        <div class="ph"><h1>Fixture Protocols & Match Center</h1><p>Federation Match Schedule, Real-Time Ingestion & Official Pitch Lineups</p></div>
         
         <!-- FOTMOB IMPORTER UI -->
         <div class="tc" style="margin-bottom: 20px; background: rgba(37, 99, 235, 0.05); border: 1px solid rgba(37, 99, 235, 0.2);">
@@ -1746,69 +1765,69 @@ tr:hover td {
 
       <!-- HIGHLIGHTS -->
       <div class="page" id="page-highlights">
-        <div class="ph"><h1>Highlights</h1><p>Manage video highlights and clips</p></div>
+        <div class="ph"><h1>Broadcast Media Protocols</h1><p>Approved Match Footage, Official Summaries & Media Archives</p></div>
         <div class="tc">
-          <div class="tt"><h3>All Highlights</h3><div class="ta"><input class="si" id="flt-highlights" placeholder="Search highlights..." oninput="filterHighlights(this.value)"/><button class="btn bp" onclick="openHighlightModal(null)">+ Add Highlight</button></div></div>
+          <div class="tt"><h3>Official Broadcast Archive</h3><div class="ta"><input class="si" id="flt-highlights" placeholder="Search broadcast media..." oninput="filterHighlights(this.value)"/><button class="btn bp" onclick="openHighlightModal(null)">+ Ingest Media</button></div></div>
           <div id="highlights-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- NEWS -->
       <div class="page" id="page-news">
-        <div class="ph"><h1>News Articles</h1><p>Manage news content and breaking stories</p></div>
+        <div class="ph"><h1>Official Bulletins & Press Dispatches</h1><p>Confederation Communiqués, Disciplinary Notices & Media Releases</p></div>
         <div class="tc">
-          <div class="tt"><h3>All Articles</h3><div class="ta"><button class="btn bp" onclick="openNewsModal(null)">+ Add Article</button></div></div>
+          <div class="tt"><h3>Official Bulletins & Releases</h3><div class="ta"><button class="btn bp" onclick="openNewsModal(null)">+ Issue Bulletin</button></div></div>
           <div id="news-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
       <!-- STREAMS -->
       <div class="page" id="page-streams">
-        <div class="ph"><h1>Live Streams</h1><p>Manage streaming channels and sources</p></div>
+        <div class="ph"><h1>Sanctioned Satellite & Digital Channels</h1><p>Authorized Match Broadcast Servers & DRM Key Protocols</p></div>
         <div class="tc">
-          <div class="tt"><h3>All Streams</h3><div class="ta"><input class="si" id="flt-streams" placeholder="Search streams..." oninput="filterStreams(this.value)"/><button class="btn bp" onclick="openStreamModal(null)">+ Add Stream</button></div></div>
+          <div class="tt"><h3>Sanctioned Transmission Relays</h3><div class="ta"><input class="si" id="flt-streams" placeholder="Search transmission channels..." oninput="filterStreams(this.value)"/><button class="btn bp" onclick="openStreamModal(null)">+ Add Transmission Relay</button></div></div>
           <div id="streams-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- NOTIFICATIONS -->
       <div class="page" id="page-notifications">
-        <div class="ph"><h1>Notifications</h1><p>Manage push notifications and alerts</p></div>
+        <div class="ph"><h1>Official Federation Dispatches</h1><p>Broadcast Alerts, Telegram Relay & Urgent Notice Feeds</p></div>
         <div class="tc">
-          <div class="tt"><h3>All Notifications</h3><div class="ta"><button class="btn bp" onclick="openNotificationModal(null)">+ Create Notification</button></div></div>
+          <div class="tt"><h3>Official Dispatch Registry</h3><div class="ta"><button class="btn bp" onclick="openNotificationModal(null)">+ Broadcast Dispatch</button></div></div>
           <div id="notifications-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- USERS -->
       <div class="page" id="page-users">
-        <div class="ph"><h1>Users</h1><p>Manage subscriber accounts and access</p></div>
+        <div class="ph"><h1>Accredited Delegates Registry</h1><p>Federation Membership Passports, Clearance Levels & Access Registry</p></div>
         <div class="tc">
-          <div class="tt"><h3>All Users</h3><div class="ta"><input class="si" id="flt-users" placeholder="Search users..." oninput="filterUsers(this.value)"/><button class="btn bp" onclick="openUserModal(null)">+ Add User</button></div></div>
+          <div class="tt"><h3>Accredited Delegates & Officials</h3><div class="ta"><input class="si" id="flt-users" placeholder="Search accredited delegates..." oninput="filterUsers(this.value)"/><button class="btn bp" onclick="openUserModal(null)">+ Accredit Delegate</button></div></div>
           <div id="users-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- SESSIONS -->
       <div class="page" id="page-sessions">
-        <div class="ph"><h1>Active Sessions</h1><p>Monitor who is watching now</p></div>
+        <div class="ph"><h1>Security & Audit Intelligence</h1><p>Real-Time Extranet Telemetry & Authenticated Session Traces</p></div>
         <div class="tc">
-          <div class="tt"><h3>Live Viewers</h3><button class="btn bgh bsm" onclick="loadSessions()">⟳ Refresh</button></div>
+          <div class="tt"><h3>Active Extranet Connections</h3><button class="btn bgh bsm" onclick="loadSessions()">⟳ Refresh Registry</button></div>
           <div id="sessions-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- SETTINGS -->
       <div class="page" id="page-settings">
-        <div class="ph"><h1>Settings</h1><p>App-wide configuration</p></div>
+        <div class="ph"><h1>Global Governance Parameters</h1><p>Master Confederation Parameters, API Relays & Security Encryption</p></div>
         <div class="tc" style="padding:28px;max-width:600px"><div id="cfg-form"><div class="ld"><div class="sp"></div>Loading...</div></div></div>
       </div>
 
       <!-- TELEGRAM BOT CONSOLE -->
       <div class="page" id="page-telegram">
         <div class="ph">
-          <h1>✈️ Telegram Bot Command Center</h1>
-          <p>Interact with your iOS Admin Bot directly from the web panel</p>
+          <h1>✈️ Telegram Dispatch Bureau</h1>
+          <p>Instantaneous Notification Channels & Automated Match Status Relays</p>
         </div>
         
         <div class="telegram-layout-grid">
@@ -1868,8 +1887,8 @@ Type any command below (e.g. `/help`, `/streams`, `/matches`) to control the app
       <!-- AUTOCLIP VIDEO -->
       <div class="page" id="page-autoclip">
         <div class="ph">
-          <h1>🎬 AutoClip Highlights</h1>
-          <p>Generate exciting video summaries dynamically based on match events</p>
+          <h1>🎬 Algorithmic Highlight Ingestion</h1>
+          <p>Automated Video Keyframe Generation & Broadcast Timeline Dispatch</p>
         </div>
         <div class="tc" style="padding: 24px; max-width: 800px;">
           <!-- Fetch section -->
@@ -2345,8 +2364,24 @@ function goPage(el,n){
   if(pg) pg.classList.add('active');
   if(el) el.classList.add('active');
   const breadcrumb = document.getElementById('topbar-active-page');
+  const pageTitles = {
+    'dashboard': 'Executive Overview',
+    'teams': 'Registered Clubs Registry',
+    'players': 'Licensed Athletes & Squads',
+    'leagues': 'Sanctioned Competitions',
+    'matches': 'Fixture Protocols & Match Center',
+    'highlights': 'Broadcast Media Protocols',
+    'news': 'Official Bulletins & Press Dispatches',
+    'autoclip': 'AutoClip Highlight Generation',
+    'streams': 'Sanctioned Satellite & Digital Channels',
+    'notifications': 'Official Federation Dispatches',
+    'users': 'Accredited Delegates Registry',
+    'sessions': 'Security & Audit Intelligence',
+    'settings': 'Global Governance Parameters',
+    'telegram': 'Telegram Dispatch Bureau'
+  };
   if(breadcrumb) {
-    breadcrumb.textContent = n.charAt(0).toUpperCase() + n.slice(1);
+    breadcrumb.textContent = pageTitles[n] || (n.charAt(0).toUpperCase() + n.slice(1));
   }
   toggleSidebar(false);
   if(n==='sessions')loadSessions();

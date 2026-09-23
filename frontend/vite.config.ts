@@ -19,8 +19,11 @@ function copyDataPlugin() {
       const adminSrc = path.resolve(__dirname, '../admin_panel');
       const adminDest = path.resolve(__dirname, 'dist/admin');
       if (fs.existsSync(adminSrc)) {
-        fs.cpSync(adminSrc, adminDest, { recursive: true });
-        console.log('[Vite Build] Successfully copied admin_panel/ into dist/admin/');
+        fs.cpSync(adminSrc, adminDest, {
+          recursive: true,
+          filter: (src) => !src.includes('admin_raw.html') && !src.includes('.bak')
+        });
+        console.log('[Vite Build] Successfully copied encrypted admin_panel/ into dist/admin/ (excluded admin_raw.html & backups)');
       }
     }
   };
