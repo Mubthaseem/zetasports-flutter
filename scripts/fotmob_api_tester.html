@@ -460,6 +460,72 @@
   .event-secondary {
     font-size: 0.8rem; color: var(--text-secondary);
   }
+
+  /* Tab Chips & Status Badges */
+  .tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .tab-chip {
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    background: #1e293b;
+    color: var(--text-muted);
+  }
+  .tab-chip.green {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+  }
+  .tab-chip.red {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+  }
+  .tab-chip.blue {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+  }
+
+  /* Tier Info Explainer Banner */
+  .tier-info-banner {
+    display: flex;
+    gap: 16px;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 14px;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  .tier-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+  .tier-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #f8fafc;
+    margin-bottom: 6px;
+  }
+  .tier-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+  .tier-action-btn {
+    background: linear-gradient(135deg, #2563eb, #0284c7);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 0.84rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .tier-action-btn:hover { opacity: 0.9; }
 </style>
 </head>
 <body>
@@ -568,13 +634,34 @@
 
   <!-- Tabs Navigation -->
   <div class="tabs-nav" id="tabsNav" style="display:none;">
-    <button class="tab-btn active" onclick="switchTab('tab-events')">⚡ Events & Goals</button>
-    <button class="tab-btn" onclick="switchTab('tab-stats')">📊 Match Stats & xG</button>
-    <button class="tab-btn" onclick="switchTab('tab-lineups')">📋 Tactical Lineups</button>
-    <button class="tab-btn" onclick="switchTab('tab-shotmap')">🎯 Shot Map & Telemetry</button>
-    <button class="tab-btn" onclick="switchTab('tab-standings')">🏆 League Table</button>
-    <button class="tab-btn" onclick="switchTab('tab-h2h')">⚔️ Head to Head</button>
-    <button class="tab-btn" onclick="switchTab('tab-api')">🔌 API & Supabase</button>
+    <button class="tab-btn active" data-tab="tab-events" onclick="switchTab('tab-events', this)">
+      <span>⚡ Events & Goals</span>
+      <span class="tab-chip" id="badgeTabEvents">0</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-stats" onclick="switchTab('tab-stats', this)">
+      <span>📊 Match Stats & xG</span>
+      <span class="tab-chip" id="badgeTabStats">PRO</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-lineups" onclick="switchTab('tab-lineups', this)">
+      <span>📋 Tactical Lineups</span>
+      <span class="tab-chip" id="badgeTabLineups">Lineup</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-shotmap" onclick="switchTab('tab-shotmap', this)">
+      <span>🎯 Shot Map & Telemetry</span>
+      <span class="tab-chip" id="badgeTabShotmap">Shots</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-standings" onclick="switchTab('tab-standings', this)">
+      <span>🏆 League Table</span>
+      <span class="tab-chip" id="badgeTabStandings">Table</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-h2h" onclick="switchTab('tab-h2h', this)">
+      <span>⚔️ Head to Head</span>
+      <span class="tab-chip" id="badgeTabH2h">H2H</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-api" onclick="switchTab('tab-api', this)">
+      <span>🔌 API & Supabase</span>
+      <span class="tab-chip green">READY</span>
+    </button>
   </div>
 
   <!-- TAB: EVENTS -->
@@ -716,11 +803,13 @@ function setPreset(id) {
   loadMatch();
 }
 
-function switchTab(tabId) {
+function switchTab(tabId, el) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-  event.target.classList.add('active');
-  document.getElementById(tabId).classList.add('active');
+  const btn = el || document.querySelector(`[data-tab="${tabId}"]`);
+  if (btn) btn.classList.add('active');
+  const pane = document.getElementById(tabId);
+  if (pane) pane.classList.add('active');
 }
 
 async function loadMatch() {
@@ -864,6 +953,52 @@ function renderDashboard(data, latency = 120, sizeKb = 35) {
   // Render Shotmap
   renderShotmap(c.shotmap);
 
+  // Dynamic Tab Badges & Status Indicators
+  const eventsCount = mf.events?.events?.length || 0;
+  const bEvents = document.getElementById('badgeTabEvents');
+  if (bEvents) {
+    bEvents.className = eventsCount > 0 ? 'tab-chip green' : 'tab-chip';
+    bEvents.textContent = eventsCount > 0 ? `${eventsCount}` : '0';
+  }
+
+  const hasStats = !!(c.stats?.Periods?.All?.stats?.length);
+  const bStats = document.getElementById('badgeTabStats');
+  if (bStats) {
+    bStats.className = hasStats ? 'tab-chip green' : 'tab-chip red';
+    bStats.textContent = hasStats ? 'AVAILABLE' : 'xG Only';
+  }
+
+  const hasLineup = c.lineup && c.lineup.lineupType !== 'unavailable';
+  const bLineup = document.getElementById('badgeTabLineups');
+  if (bLineup) {
+    bLineup.className = hasLineup ? 'tab-chip green' : 'tab-chip red';
+    bLineup.textContent = hasLineup ? c.lineup.lineupType : 'N/A';
+  }
+
+  const shotsCount = c.shotmap?.shots?.length || 0;
+  const bShotmap = document.getElementById('badgeTabShotmap');
+  if (bShotmap) {
+    bShotmap.className = shotsCount > 0 ? 'tab-chip green' : 'tab-chip red';
+    bShotmap.textContent = shotsCount > 0 ? `${shotsCount} Shots` : 'xG Only';
+  }
+
+  const hasTable = !!(c.table?.teams?.length);
+  const bTable = document.getElementById('badgeTabStandings');
+  if (bTable) {
+    bTable.className = hasTable ? 'tab-chip green' : 'tab-chip';
+    bTable.textContent = hasTable ? 'LIVE' : 'CUP';
+  }
+
+  const hasH2H = !!(c.h2h?.summary);
+  const bH2H = document.getElementById('badgeTabH2h');
+  if (bH2H) {
+    bH2H.className = hasH2H ? 'tab-chip green' : 'tab-chip';
+    bH2H.textContent = hasH2H ? 'HISTORIC' : 'N/A';
+  }
+
+  // Switch to Events tab by default
+  switchTab('tab-events');
+
   // API Explorer Tab
   document.getElementById('apiEndpointText').textContent = `GET https://www.fotmob.com/api/data/matchDetails?matchId=${currentMatchId}`;
   document.getElementById('apiLatency').textContent = `${latency} ms`;
@@ -990,7 +1125,18 @@ function renderStats(statsObj) {
   const allStats = statsObj?.Periods?.All?.stats;
 
   if (!allStats || allStats.length === 0) {
-    container.innerHTML = '<p style="color:var(--text-muted); padding:10px 0;">No in-game stats available for this match tier/phase.</p>';
+    container.innerHTML = `
+      <div class="tier-info-banner">
+        <div class="tier-icon">📊</div>
+        <div>
+          <div class="tier-title">Basic Coverage Tier (No Detailed Stats)</div>
+          <div class="tier-desc">
+            This fixture is tracked under FotMob's <b>Basic Coverage</b> (local cups & lower divisions). Live scores, goal scorers, cards, substitutions, and extra time are fully tracked in the <b>⚡ Events & Goals</b> tab. Detailed statistical telemetry (possession %, xG, duels, passing accuracy) is provided for <b>xG Pro Tier</b> leagues (Premier League, La Liga, Serie A, Champions League, etc.).
+          </div>
+          <button class="tier-action-btn" onclick="setPreset('5795455')">👉 Click to test Liverpool vs Bournemouth (Full Pro Stats & xG)</button>
+        </div>
+      </div>
+    `;
     return;
   }
 
@@ -1032,7 +1178,11 @@ function renderLineups(lineup, homeName, awayName) {
   const awayList = document.getElementById('awayStartersList');
 
   const renderPlayers = (players) => {
-    if (!players || players.length === 0) return '<p style="color:var(--text-muted); font-size:0.85rem;">Lineup not released</p>';
+    if (!players || players.length === 0) return `
+      <div style="padding:14px; background:rgba(255,255,255,0.02); border-radius:10px; color:var(--text-muted); font-size:0.85rem; line-height:1.5;">
+        Lineups unavailable for lower-tier cup match. In-game substitutions and scorers are tracked in the <b>⚡ Events & Goals</b> tab.
+      </div>
+    `;
     return players.map(p => `
       <div class="player-item">
         <div style="display:flex; align-items:center; gap:8px;">
@@ -1090,7 +1240,18 @@ function renderShotmap(shotmap) {
   const container = document.getElementById('shotsContainer');
   const shots = shotmap?.shots;
   if (!shots || shots.length === 0) {
-    container.innerHTML = 'No shot data available for this fixture.';
+    container.innerHTML = `
+      <div class="tier-info-banner">
+        <div class="tier-icon">🎯</div>
+        <div>
+          <div class="tier-title">No Shot Coordinates for Basic Tier</div>
+          <div class="tier-desc">
+            Individual shot coordinates, xG value plots, and block maps are exclusive to FotMob's <b>xG Pro Coverage</b>. All recorded goals for this match are visible under the <b>⚡ Events & Goals</b> tab and on the main scoreboard.
+          </div>
+          <button class="tier-action-btn" onclick="setPreset('5795455')">👉 Click to test Liverpool vs Bournemouth (21 Shot Map Coordinates)</button>
+        </div>
+      </div>
+    `;
     return;
   }
 
