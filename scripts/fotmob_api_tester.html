@@ -392,7 +392,74 @@
     cursor: pointer;
     transition: all 0.2s;
   }
-  .btn-supabase:hover { background: #34d399; }
+  .team-scorers {
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .scorer-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+  }
+  .team-block.away .scorer-item {
+    justify-content: flex-end;
+  }
+  .scorer-time {
+    color: var(--accent-cyan);
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+  }
+
+  /* Timeline Events */
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .timeline-event {
+    display: grid;
+    grid-template-columns: 46px 36px 1fr;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+  }
+  .event-minute {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--accent-cyan);
+    text-align: right;
+  }
+  .event-icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    background: #1e293b;
+  }
+  .event-icon.goal { background: rgba(16, 185, 129, 0.2); }
+  .event-icon.card-yellow { background: rgba(245, 158, 11, 0.2); }
+  .event-icon.card-red { background: rgba(239, 68, 68, 0.2); }
+  .event-icon.sub { background: rgba(59, 130, 246, 0.2); }
+  .event-icon.period { background: rgba(148, 163, 184, 0.2); }
+  .event-desc {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .event-primary {
+    font-weight: 700; font-size: 0.92rem; color: #fff;
+  }
+  .event-secondary {
+    font-size: 0.8rem; color: var(--text-secondary);
+  }
 </style>
 </head>
 <body>
@@ -451,7 +518,10 @@
     <div class="scoreboard">
       <div class="team-block home">
         <img id="homeCrest" class="team-crest" src="" alt="Home" />
-        <div class="team-title" id="homeName">Portugal</div>
+        <div>
+          <div class="team-title" id="homeName">Portugal</div>
+          <div class="team-scorers" id="homeScorers"></div>
+        </div>
       </div>
 
       <div class="score-center">
@@ -460,7 +530,10 @@
       </div>
 
       <div class="team-block away">
-        <div class="team-title" id="awayName">Wales</div>
+        <div style="text-align:right;">
+          <div class="team-title" id="awayName">Wales</div>
+          <div class="team-scorers" id="awayScorers"></div>
+        </div>
         <img id="awayCrest" class="team-crest" src="" alt="Away" />
       </div>
     </div>
@@ -495,7 +568,8 @@
 
   <!-- Tabs Navigation -->
   <div class="tabs-nav" id="tabsNav" style="display:none;">
-    <button class="tab-btn active" onclick="switchTab('tab-stats')">📊 Match Stats & xG</button>
+    <button class="tab-btn active" onclick="switchTab('tab-events')">⚡ Events & Goals</button>
+    <button class="tab-btn" onclick="switchTab('tab-stats')">📊 Match Stats & xG</button>
     <button class="tab-btn" onclick="switchTab('tab-lineups')">📋 Tactical Lineups</button>
     <button class="tab-btn" onclick="switchTab('tab-shotmap')">🎯 Shot Map & Telemetry</button>
     <button class="tab-btn" onclick="switchTab('tab-standings')">🏆 League Table</button>
@@ -503,8 +577,18 @@
     <button class="tab-btn" onclick="switchTab('tab-api')">🔌 API & Supabase</button>
   </div>
 
+  <!-- TAB: EVENTS -->
+  <div id="tab-events" class="tab-pane active">
+    <div class="panel-card">
+      <h3>Match Events Timeline <span id="eventsCountBadge" style="font-size:0.78rem; color:var(--accent-cyan);"></span></h3>
+      <div id="timelineContainer" class="timeline-list">
+        <p style="color:var(--text-muted); font-size:0.9rem;">No match events recorded yet.</p>
+      </div>
+    </div>
+  </div>
+
   <!-- TAB: STATS -->
-  <div id="tab-stats" class="tab-pane active">
+  <div id="tab-stats" class="tab-pane">
     <div class="panel-grid">
       <div class="panel-card" style="grid-column: 1 / -1;">
         <h3>Match Statistics Comparison <span id="statsCoverageBadge" style="font-size:0.75rem; color:var(--accent-cyan);"></span></h3>
@@ -762,6 +846,9 @@ function renderDashboard(data, latency = 120, sizeKb = 35) {
   const weather = c.weather;
   document.getElementById('valWeather').textContent = weather?.temperature ? `${weather.temperature}°C ${weather.desc || ''}` : 'N/A';
 
+  // Render Events Timeline & Scorers
+  renderEventsAndTimeline(mf.events, home.name, away.name);
+
   // Render Stats Bars
   renderStats(c.stats);
 
@@ -782,6 +869,120 @@ function renderDashboard(data, latency = 120, sizeKb = 35) {
   document.getElementById('apiLatency').textContent = `${latency} ms`;
   document.getElementById('apiSize').textContent = `${sizeKb} KB`;
   document.getElementById('rawJsonViewer').textContent = JSON.stringify(data, null, 2);
+}
+
+function renderEventsAndTimeline(eventsData, homeName, awayName) {
+  const events = eventsData?.events || [];
+  const homeScorersEl = document.getElementById('homeScorers');
+  const awayScorersEl = document.getElementById('awayScorers');
+  const timelineContainer = document.getElementById('timelineContainer');
+  const eventsCountBadge = document.getElementById('eventsCountBadge');
+
+  if (eventsCountBadge) {
+    eventsCountBadge.textContent = `${events.length} Events Tracked`;
+  }
+
+  // 1. Extract Goals for Scoreboard (Both Home and Away)
+  const goals = events.filter(e => e.type === 'Goal');
+  const homeGoals = goals.filter(e => e.isHome);
+  const awayGoals = goals.filter(e => !e.isHome);
+
+  const formatScorer = (g) => {
+    const name = g.nameStr || g.fullName || g.player?.name || 'Goal';
+    const min = g.timeStr || g.time;
+    const og = g.ownGoal ? ' <span style="color:#f59e0b;font-weight:700;">(OG)</span>' : '';
+    const pen = (g.penalty || g.goalDescription === 'Penalty') ? ' <span style="color:#06b6d4;font-weight:700;">(Pen)</span>' : '';
+    return `<div class="scorer-item"><span>⚽ <b>${name}</b></span> <span class="scorer-time">${min}'</span>${og}${pen}</div>`;
+  };
+
+  homeScorersEl.innerHTML = homeGoals.map(formatScorer).join('');
+  awayScorersEl.innerHTML = awayGoals.map(formatScorer).join('');
+
+  // 2. Render Full Timeline
+  if (!events || events.length === 0) {
+    timelineContainer.innerHTML = '<p style="color:var(--text-muted); font-size:0.9rem;">No timeline events recorded yet (pre-match or 0-0 without bookings).</p>';
+    return;
+  }
+
+  // Sort events chronologically (1' to 90'+)
+  const sorted = [...events].sort((a, b) => (a.time || 0) - (b.time || 0));
+
+  timelineContainer.innerHTML = sorted.map(e => {
+    const min = e.timeStr || e.time || '-';
+    const teamSide = e.isHome ? homeName : awayName;
+
+    if (e.type === 'Goal') {
+      const name = e.nameStr || e.fullName || e.player?.name || 'Goal';
+      const assist = e.assistStr ? `<span class="event-secondary">Assist: ${e.assistStr}</span>` : '';
+      const og = e.ownGoal ? ' (Own Goal)' : '';
+      const pen = (e.penalty || e.goalDescription === 'Penalty') ? ' (Penalty)' : '';
+      const score = e.newScore ? `[${e.newScore[0]} - ${e.newScore[1]}]` : '';
+
+      return `
+        <div class="timeline-event" style="border-left: 3px solid #10b981; background: rgba(16, 185, 129, 0.05);">
+          <div class="event-minute">${min}'</div>
+          <div class="event-icon goal">⚽</div>
+          <div class="event-desc">
+            <div class="event-primary" style="color:#34d399;">
+              GOAL! ${name}${og}${pen} <span style="color:#94a3b8; font-weight:600; font-size:0.85rem;">${score}</span>
+            </div>
+            <div class="event-secondary">${teamSide} ${assist}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (e.type === 'Card') {
+      const name = e.nameStr || e.fullName || e.player?.name || 'Player';
+      const isRed = (e.card || '').toLowerCase().includes('red');
+      const icon = isRed ? '🟥' : '🟨';
+      const iconClass = isRed ? 'card-red' : 'card-yellow';
+      const reason = e.cardReason ? `<span class="event-secondary">${e.cardReason}</span>` : '';
+
+      return `
+        <div class="timeline-event" style="border-left: 3px solid ${isRed ? '#ef4444' : '#f59e0b'};">
+          <div class="event-minute">${min}'</div>
+          <div class="event-icon ${iconClass}">${icon}</div>
+          <div class="event-desc">
+            <div class="event-primary">${e.card || 'Booking'}: ${name}</div>
+            <div class="event-secondary">${teamSide} ${reason}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (e.type === 'Substitution') {
+      const inPlayer = e.swap?.[0]?.name || 'Player In';
+      const outPlayer = e.swap?.[1]?.name || 'Player Out';
+
+      return `
+        <div class="timeline-event" style="border-left: 3px solid #3b82f6;">
+          <div class="event-minute">${min}'</div>
+          <div class="event-icon sub">🔄</div>
+          <div class="event-desc">
+            <div class="event-primary">Substitution: <span style="color:#34d399;">⬆ ${inPlayer}</span>, <span style="color:#f87171;">⬇ ${outPlayer}</span></div>
+            <div class="event-secondary">${teamSide}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (e.type === 'Half') {
+      const halfName = e.halfStrShort === 'HT' ? 'Half-Time' : (e.halfStrShort === 'FT' ? 'Full-Time' : (e.halfStrShort || 'Period'));
+      return `
+        <div class="timeline-event" style="background: rgba(255,255,255,0.04); border-left: 3px solid #94a3b8;">
+          <div class="event-minute">${min}'</div>
+          <div class="event-icon period">⏸️</div>
+          <div class="event-desc">
+            <div class="event-primary" style="color:#e2e8f0;">${halfName}</div>
+            <div class="event-secondary">Score: ${e.homeScore} - ${e.awayScore}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    return '';
+  }).filter(Boolean).join('');
 }
 
 function renderStats(statsObj) {
