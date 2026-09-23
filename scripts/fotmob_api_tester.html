@@ -526,6 +526,112 @@
     transition: opacity 0.2s;
   }
   .tier-action-btn:hover { opacity: 0.9; }
+
+  /* xG Badge & Performance Center Styles */
+  .xg-score-badge {
+    font-size: 0.88rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    padding: 3px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+  }
+  .xg-card-box {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(6, 182, 212, 0.08));
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+  }
+
+  /* 2D Tactical Pitch Shot Map */
+  .pitch-wrapper {
+    position: relative;
+    background: radial-gradient(circle at center 20%, #0d281a, #05130b);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.6);
+  }
+  .pitch-svg {
+    width: 100%;
+    max-height: 440px;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+  }
+  .shot-node {
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s;
+  }
+  .shot-node:hover {
+    transform-origin: center;
+    transform: scale(1.4);
+    filter: drop-shadow(0 0 10px #fbbf24);
+  }
+  .pitch-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(10, 16, 29, 0.95);
+    border: 1px solid #38bdf8;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: none;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    line-height: 1.4;
+  }
+  .pitch-filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    align-items: center;
+  }
+  .filter-pill {
+    background: #111a2e;
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-pill:hover, .filter-pill.active {
+    background: #2563eb;
+    color: #fff;
+    border-color: #3b82f6;
+  }
+  .pitch-legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 12px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+  }
 </style>
 </head>
 <body>
@@ -566,11 +672,14 @@
     </div>
 
     <div class="presets">
-      <span>Quick Demos:</span>
-      <button class="preset-chip" onclick="setPreset('5181862')">🇵🇹 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Portugal vs Wales (Predicted & Ref Stats)</button>
-      <button class="preset-chip" onclick="setPreset('5795455')">🔴 🍒 Liverpool vs Bournemouth (Premier League xG)</button>
-      <button class="preset-chip" onclick="setPreset('6140728')">🇦🇿 🇹🇯 Azerbaijan vs Tajikistan (Live Today)</button>
-      <button class="preset-chip" onclick="setPreset('6125863')">🇨🇿 🏆 Kladno vs Baník (Czech Cup Lower Tier)</button>
+      <span style="font-weight:700; color:var(--text-muted); display:inline-flex; align-items:center; gap:6px;">
+        <span style="color:#fbbf24;">⚡</span> xG & Telemetry Presets:
+      </span>
+      <button class="preset-chip" style="border-color:#f59e0b; background:rgba(245,158,11,0.15); color:#fef08a; font-weight:800;" onclick="setPreset('4506308')">🟢 [xG AVAILABLE] Liverpool 3-0 Bournemouth (xG 2.06 - 1.08 | 38 Shots)</button>
+      <button class="preset-chip" style="border-color:#38bdf8; background:rgba(56,189,248,0.12); color:#bae6fd; font-weight:700;" onclick="setPreset('4506312')">🟢 [xG AVAILABLE] West Ham 0-3 Chelsea (xG 0.89 - 2.45)</button>
+      <button class="preset-chip" style="border-color:#10b981; background:rgba(16,185,129,0.12); color:#a7f3d0; font-weight:700;" onclick="setPreset('5795455')">🟢 [xG AVAILABLE] Bournemouth vs Liverpool (xG 0.79 - 1.65)</button>
+      <button class="preset-chip" onclick="setPreset('5181862')">🇵🇹 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Portugal vs Wales (Lineups & Referee Stats)</button>
+      <button class="preset-chip" style="color:var(--text-muted); border-style:dashed;" onclick="setPreset('6125863')">⚪ [NO xG] Kladno vs Baník (Basic Cup Tier)</button>
     </div>
   </div>
 
@@ -592,6 +701,7 @@
 
       <div class="score-center">
         <div class="score-display" id="scoreDisplay">0 - 0</div>
+        <div class="xg-score-badge" id="xgScoreBadge" style="display:none;">⚡ xG: 0.00 - 0.00</div>
         <div class="status-text" id="statusText">Kickoff 19:45</div>
       </div>
 
@@ -608,6 +718,10 @@
       <div class="telemetry-item">
         <div class="telemetry-label">Coverage Tier</div>
         <div class="telemetry-val" id="valCoverage">xG Tier</div>
+      </div>
+      <div class="telemetry-item">
+        <div class="telemetry-label">Expected Goals (xG)</div>
+        <div class="telemetry-val" id="valXgMetric" style="color:var(--accent-gold);">xG Pro Tier</div>
       </div>
       <div class="telemetry-item">
         <div class="telemetry-label">Lineup Status</div>
@@ -676,6 +790,7 @@
 
   <!-- TAB: STATS -->
   <div id="tab-stats" class="tab-pane">
+    <div id="xgBannerContainer"></div>
     <div class="panel-grid">
       <div class="panel-card" style="grid-column: 1 / -1;">
         <h3>Match Statistics Comparison <span id="statsCoverageBadge" style="font-size:0.75rem; color:var(--accent-cyan);"></span></h3>
@@ -702,6 +817,71 @@
 
   <!-- TAB: SHOTMAP -->
   <div id="tab-shotmap" class="tab-pane">
+    <div id="shotmapXgOverview"></div>
+
+    <div id="pitchVisualCard" style="display:none;" class="pitch-wrapper">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:1.3rem;">⚽</span>
+          <h3 style="margin:0; font-size:1.05rem; font-weight:800; color:#fff;">2D Tactical Pitch Shot Map</h3>
+        </div>
+        <span style="font-size:0.75rem; color:#38bdf8; background:rgba(56,189,248,0.15); padding:3px 10px; border-radius:12px; border:1px solid rgba(56,189,248,0.3); font-weight:700;">OPTA RADAR COORDS</span>
+      </div>
+
+      <div class="pitch-filter-bar">
+        <button class="filter-pill active" onclick="filterShots('all', this)">All Shots</button>
+        <button class="filter-pill" onclick="filterShots('goals', this)">⚽ Goals</button>
+        <button class="filter-pill" onclick="filterShots('ontarget', this)">🎯 On Target</button>
+        <button class="filter-pill" onclick="filterShots('highxg', this)">🔥 High xG (&gt;0.20)</button>
+        <button class="filter-pill" id="filterHomeBtn" onclick="filterShots('home', this)">Home</button>
+        <button class="filter-pill" id="filterAwayBtn" onclick="filterShots('away', this)">Away</button>
+      </div>
+
+      <div style="position:relative; width:100%;">
+        <svg id="pitchSvg" class="pitch-svg" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="turfGlow" cx="50%" cy="10%" r="80%">
+              <stop offset="0%" stop-color="#0e3321"/>
+              <stop offset="100%" stop-color="#041209"/>
+            </radialGradient>
+            <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <rect x="0" y="0" width="680" height="440" rx="14" fill="url(#turfGlow)" stroke="#1e3a29" stroke-width="2"/>
+          <rect x="20" y="20" width="640" height="400" rx="4" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+          
+          <rect x="290" y="6" width="100" height="14" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2" stroke-dasharray="3,3"/>
+          <line x1="290" y1="20" x2="390" y2="20" stroke="#fbbf24" stroke-width="4"/>
+
+          <rect x="245" y="20" width="190" height="55" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.22)" stroke-width="1.8"/>
+          <rect x="140" y="20" width="400" height="165" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.22)" stroke-width="1.8"/>
+
+          <circle cx="340" cy="110" r="3.5" fill="rgba(255,255,255,0.7)"/>
+          <path d="M 276 185 A 91.5 91.5 0 0 0 404 185" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.8"/>
+
+          <path d="M 20 40 A 20 20 0 0 0 40 20" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.8"/>
+          <path d="M 640 40 A 20 20 0 0 1 660 20" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.8"/>
+
+          <line x1="20" y1="420" x2="660" y2="420" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+          <path d="M 280 420 A 60 60 0 0 1 400 420" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.8"/>
+
+          <g id="svgShotsGroup"></g>
+        </svg>
+
+        <div id="pitchTooltip" class="pitch-tooltip"></div>
+      </div>
+
+      <div class="pitch-legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#10b981; box-shadow:0 0 8px #10b981;"></span> Goal (⚽)</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#38bdf8;"></span> Saved (On Target)</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#fbbf24;"></span> Woodwork (Post/Bar)</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#64748b;"></span> Miss / Blocked</div>
+        <div class="legend-item" style="margin-left:auto;"><span style="color:#fbbf24; font-weight:700;">Bubble Size</span> = Expected Goals (xG Danger)</div>
+      </div>
+    </div>
+
     <div class="panel-card">
       <h3>Shot Map Breakdown & Telemetry</h3>
       <div id="shotsContainer" style="font-size:0.85rem; color:var(--text-secondary);">
@@ -801,6 +981,44 @@ function parseMatchId(val) {
 function setPreset(id) {
   document.getElementById('matchInput').value = id;
   loadMatch();
+}
+
+function extractXg(data) {
+  const c = data.content || {};
+  const stats = c.stats?.Periods?.All?.stats || [];
+  for (const group of stats) {
+    const statItem = group.stats?.find(s => (s.key === 'expected_goals' || s.title?.toLowerCase().includes('expected goals')) && Array.isArray(s.stats) && s.stats[0] !== null);
+    if (statItem) {
+      return { home: statItem.stats[0], away: statItem.stats[1] };
+    }
+  }
+  // Fallback: sum from individual shots in shotmap
+  const shots = c.shotmap?.shots;
+  if (shots && shots.length > 0) {
+    const homeId = data.general?.homeTeam?.id;
+    let homeXg = 0;
+    let awayXg = 0;
+    let found = false;
+    shots.forEach(s => {
+      if (typeof s.expectedGoals === 'number') {
+        found = true;
+        if (s.teamId === homeId) homeXg += s.expectedGoals;
+        else awayXg += s.expectedGoals;
+      }
+    });
+    if (found) {
+      return { home: homeXg.toFixed(2), away: awayXg.toFixed(2) };
+    }
+  }
+  return null;
+}
+
+function extractDetailedXg(data) {
+  const c = data.content || {};
+  const stats = c.stats?.Periods?.All?.stats || [];
+  const xgGroup = stats.find(s => s.title?.toLowerCase().includes('expected goals') || s.key === 'expected_goals');
+  if (!xgGroup || !xgGroup.stats) return null;
+  return xgGroup.stats.filter(s => Array.isArray(s.stats) && s.stats[0] !== null);
 }
 
 function switchTab(tabId, el) {
@@ -935,11 +1153,32 @@ function renderDashboard(data, latency = 120, sizeKb = 35) {
   const weather = c.weather;
   document.getElementById('valWeather').textContent = weather?.temperature ? `${weather.temperature}°C ${weather.desc || ''}` : 'N/A';
 
+  // Extract and Display xG
+  const xg = extractXg(data);
+  const xgScoreBadge = document.getElementById('xgScoreBadge');
+  const valXgMetric = document.getElementById('valXgMetric');
+  if (xg) {
+    if (xgScoreBadge) {
+      xgScoreBadge.style.display = 'inline-block';
+      xgScoreBadge.innerHTML = `⚡ xG: <b>${xg.home} - ${xg.away}</b>`;
+    }
+    if (valXgMetric) {
+      valXgMetric.textContent = `${xg.home} - ${xg.away}`;
+      valXgMetric.style.color = '#fbbf24';
+    }
+  } else {
+    if (xgScoreBadge) xgScoreBadge.style.display = 'none';
+    if (valXgMetric) {
+      valXgMetric.textContent = 'Not Tracked (Basic Tier)';
+      valXgMetric.style.color = 'var(--text-muted)';
+    }
+  }
+
   // Render Events Timeline & Scorers
   renderEventsAndTimeline(mf.events, home.name, away.name);
 
-  // Render Stats Bars
-  renderStats(c.stats);
+  // Render Stats Bars & xG Performance Center
+  renderStats(data);
 
   // Render Lineups
   renderLineups(c.lineup, home.name, away.name);
@@ -951,7 +1190,7 @@ function renderDashboard(data, latency = 120, sizeKb = 35) {
   renderH2H(c.h2h);
 
   // Render Shotmap
-  renderShotmap(c.shotmap);
+  renderShotmap(data);
 
   // Dynamic Tab Badges & Status Indicators
   const eventsCount = mf.events?.events?.length || 0;
@@ -1120,9 +1359,52 @@ function renderEventsAndTimeline(eventsData, homeName, awayName) {
   }).filter(Boolean).join('');
 }
 
-function renderStats(statsObj) {
+function renderStats(data) {
   const container = document.getElementById('statsBarsContainer');
-  const allStats = statsObj?.Periods?.All?.stats;
+  const xgBannerContainer = document.getElementById('xgBannerContainer');
+  const c = data.content || {};
+  const allStats = c.stats?.Periods?.All?.stats;
+
+  // Render Dedicated xG Performance Center if available
+  const detailedXg = extractDetailedXg(data);
+  if (detailedXg && detailedXg.length > 0) {
+    let xgRows = '';
+    detailedXg.forEach(st => {
+      const hVal = parseFloat(st.stats[0]) || 0;
+      const aVal = parseFloat(st.stats[1]) || 0;
+      const tot = (hVal + aVal) || 1;
+      const hPct = Math.round((hVal / tot) * 100);
+      const aPct = 100 - hPct;
+      xgRows += `
+        <div style="margin-bottom:12px;">
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:700; margin-bottom:4px;">
+            <span style="color:#fbbf24;">${st.stats[0]}</span>
+            <span style="color:#94a3b8; font-weight:600; font-size:0.8rem;">${st.title}</span>
+            <span style="color:#38bdf8;">${st.stats[1]}</span>
+          </div>
+          <div style="height:6px; background:#162035; border-radius:3px; overflow:hidden; display:flex;">
+            <div style="background:#f59e0b; width:${hPct}%; height:100%;"></div>
+            <div style="background:#06b6d4; width:${aPct}%; height:100%;"></div>
+          </div>
+        </div>
+      `;
+    });
+
+    xgBannerContainer.innerHTML = `
+      <div class="xg-card-box">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.3rem;">⚡</span>
+            <h4 style="font-size:1.05rem; font-weight:800; color:#fbbf24; text-transform:uppercase; letter-spacing:0.04em;">Expected Goals (xG) Performance Center</h4>
+          </div>
+          <span style="background:rgba(245,158,11,0.2); color:#fbbf24; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:12px; border:1px solid rgba(245,158,11,0.4);">OFFICIAL OPTA / FOTMOB xG</span>
+        </div>
+        ${xgRows}
+      </div>
+    `;
+  } else {
+    xgBannerContainer.innerHTML = '';
+  }
 
   if (!allStats || allStats.length === 0) {
     container.innerHTML = `
@@ -1236,10 +1518,19 @@ function renderH2H(h2h) {
   `;
 }
 
-function renderShotmap(shotmap) {
+let allRawShots = [];
+let currentShotFilter = 'all';
+
+function renderShotmap(data) {
   const container = document.getElementById('shotsContainer');
+  const shotmapXgOverview = document.getElementById('shotmapXgOverview');
+  const pitchVisualCard = document.getElementById('pitchVisualCard');
+  const shotmap = data.content?.shotmap;
   const shots = shotmap?.shots;
+
   if (!shots || shots.length === 0) {
+    shotmapXgOverview.innerHTML = '';
+    if (pitchVisualCard) pitchVisualCard.style.display = 'none';
     container.innerHTML = `
       <div class="tier-info-banner">
         <div class="tier-icon">🎯</div>
@@ -1248,24 +1539,201 @@ function renderShotmap(shotmap) {
           <div class="tier-desc">
             Individual shot coordinates, xG value plots, and block maps are exclusive to FotMob's <b>xG Pro Coverage</b>. All recorded goals for this match are visible under the <b>⚡ Events & Goals</b> tab and on the main scoreboard.
           </div>
-          <button class="tier-action-btn" onclick="setPreset('5795455')">👉 Click to test Liverpool vs Bournemouth (21 Shot Map Coordinates)</button>
+          <button class="tier-action-btn" onclick="setPreset('4506308')">👉 Click to test Liverpool vs Bournemouth (38 Shot Coordinates & Opta xG)</button>
         </div>
       </div>
     `;
     return;
   }
 
-  container.innerHTML = shots.map(s => `
-    <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.04);">
-      <div>
-        <b>${s.min}'</b> ${s.fullName || s.firstName || 'Shooter'} — 
-        <span style="color:${s.eventType === 'Goal' ? 'var(--accent-green)' : 'var(--text-muted)'}; font-weight:600;">${s.eventType}</span>
+  allRawShots = shots;
+  currentShotFilter = 'all';
+  if (pitchVisualCard) pitchVisualCard.style.display = 'block';
+
+  // Update Home / Away filter labels
+  const homeBtn = document.getElementById('filterHomeBtn');
+  const awayBtn = document.getElementById('filterAwayBtn');
+  if (homeBtn) homeBtn.textContent = data.general?.homeTeam?.name || 'Home';
+  if (awayBtn) awayBtn.textContent = data.general?.awayTeam?.name || 'Away';
+
+  // Reset filter pills active state
+  document.querySelectorAll('.pitch-filter-bar .filter-pill').forEach((p, idx) => {
+    if (idx === 0) p.classList.add('active');
+    else p.classList.remove('active');
+  });
+
+  // Summary Metrics Banner for Pro Matches
+  const totalXg = shots.reduce((acc, s) => acc + (s.expectedGoals || 0), 0);
+  const goalsFromShots = shots.filter(s => s.eventType === 'Goal').length;
+  shotmapXgOverview.innerHTML = `
+    <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:16px;">
+      <div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.3); padding:10px 18px; border-radius:12px;">
+        <div style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;">Total Expected Goals (xG)</div>
+        <div style="font-size:1.3rem; font-weight:800; color:#fbbf24;">${totalXg.toFixed(2)}</div>
       </div>
-      <div>
-        xG: <b style="color:var(--accent-gold);">${s.expectedGoals ? s.expectedGoals.toFixed(2) : 'N/A'}</b>
+      <div style="background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); padding:10px 18px; border-radius:12px;">
+        <div style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;">Total Shots Recorded</div>
+        <div style="font-size:1.3rem; font-weight:800; color:#34d399;">${shots.length} shots</div>
+      </div>
+      <div style="background:rgba(6,182,212,0.1); border:1px solid rgba(6,182,212,0.3); padding:10px 18px; border-radius:12px;">
+        <div style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;">Shot Quality Ratio</div>
+        <div style="font-size:1.3rem; font-weight:800; color:#38bdf8;">${goalsFromShots} goals (${(totalXg / shots.length).toFixed(2)} avg xG)</div>
       </div>
     </div>
-  `).join('');
+  `;
+
+  renderFilteredShots(shots);
+}
+
+function filterShots(type, btnEl) {
+  if (btnEl) {
+    document.querySelectorAll('.pitch-filter-bar .filter-pill').forEach(b => b.classList.remove('active'));
+    btnEl.classList.add('active');
+  }
+  currentShotFilter = type;
+  if (!allRawShots || allRawShots.length === 0) return;
+
+  const homeId = currentMatchData?.general?.homeTeam?.id;
+  const awayId = currentMatchData?.general?.awayTeam?.id;
+
+  let filtered = allRawShots;
+  if (type === 'goals') {
+    filtered = allRawShots.filter(s => s.eventType === 'Goal');
+  } else if (type === 'ontarget') {
+    filtered = allRawShots.filter(s => s.isOnTarget || s.eventType === 'Goal' || s.eventType === 'AttemptSaved');
+  } else if (type === 'highxg') {
+    filtered = allRawShots.filter(s => (s.expectedGoals || 0) >= 0.20);
+  } else if (type === 'home') {
+    filtered = allRawShots.filter(s => s.teamId === homeId);
+  } else if (type === 'away') {
+    filtered = allRawShots.filter(s => s.teamId === awayId);
+  }
+
+  renderFilteredShots(filtered);
+}
+
+function renderFilteredShots(shotsList) {
+  const container = document.getElementById('shotsContainer');
+  const svgGroup = document.getElementById('svgShotsGroup');
+  const tooltip = document.getElementById('pitchTooltip');
+
+  if (shotsList.length === 0) {
+    container.innerHTML = '<p style="color:var(--text-muted); padding:12px;">No shots match the selected filter.</p>';
+    if (svgGroup) svgGroup.innerHTML = '';
+    return;
+  }
+
+  // 1. Draw SVG Shot Markers on Tactical Pitch
+  if (svgGroup) {
+    let svgHtml = '';
+    shotsList.forEach((s, idx) => {
+      // FotMob coordinates: x = [105 to ~65], y = [0 to 68]
+      const cx = 20 + Math.max(10, Math.min(630, (s.y / 68) * 640));
+      const cy = 20 + Math.max(10, Math.min(390, (105 - s.x) * 9.5));
+      const xg = s.expectedGoals || 0.05;
+      const r = Math.max(6, Math.min(22, xg * 26 + 5));
+
+      const isGoal = s.eventType === 'Goal';
+      const isOnTarget = s.isOnTarget || s.eventType === 'AttemptSaved';
+      const isPost = s.eventType === 'Post';
+
+      let fill = '#64748b';
+      let stroke = '#94a3b8';
+      let opacity = '0.75';
+      let filter = '';
+
+      if (isGoal) {
+        fill = '#10b981';
+        stroke = '#34d399';
+        opacity = '0.95';
+        filter = 'filter="url(#glowGold)"';
+      } else if (isPost) {
+        fill = '#fbbf24';
+        stroke = '#fde68a';
+        opacity = '0.9';
+      } else if (isOnTarget) {
+        fill = '#38bdf8';
+        stroke = '#bae6fd';
+        opacity = '0.85';
+      }
+
+      svgHtml += `
+        <circle id="shot-circ-${idx}" class="shot-node"
+          cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r.toFixed(1)}"
+          fill="${fill}" stroke="${stroke}" stroke-width="${isGoal ? '2.5' : '1.5'}"
+          opacity="${opacity}" ${filter}
+          data-idx="${idx}" />
+      `;
+    });
+    svgGroup.innerHTML = svgHtml;
+
+    // Attach Tooltip Events to SVG circles
+    shotsList.forEach((s, idx) => {
+      const circ = document.getElementById(`shot-circ-${idx}`);
+      if (circ) {
+        circ.addEventListener('mouseenter', (ev) => {
+          const playerName = s.fullName || s.firstName || 'Shooter';
+          const isGoal = s.eventType === 'Goal';
+          const xgVal = s.expectedGoals ? s.expectedGoals.toFixed(2) : '0.00';
+          const xgotVal = s.expectedGoalsOnTarget ? s.expectedGoalsOnTarget.toFixed(2) : null;
+
+          tooltip.innerHTML = `
+            <div style="font-weight:800; font-size:0.88rem; color:#fff; display:flex; align-items:center; gap:6px;">
+              ${isGoal ? '⚽ ' : ''}<span>${playerName}</span> <span style="color:#38bdf8;">(${s.min}')</span>
+            </div>
+            <div style="margin-top:4px; font-weight:700; color:#fbbf24; font-family:'JetBrains Mono',monospace;">
+              xG: <b>${xgVal}</b> ${xgotVal ? `<span style="color:#34d399; margin-left:6px;">xGOT: ${xgotVal}</span>` : ''}
+            </div>
+            <div style="font-size:0.75rem; color:#94a3b8; margin-top:2px;">
+              ${s.eventType} • ${s.shotType || 'Foot'} • ${s.situation || 'Open Play'}
+            </div>
+          `;
+          tooltip.style.display = 'block';
+
+          const wrapper = document.getElementById('pitchVisualCard');
+          const rect = wrapper.getBoundingClientRect();
+          const left = ev.clientX - rect.left + 15;
+          const top = ev.clientY - rect.top - 10;
+          tooltip.style.left = `${Math.min(rect.width - 220, Math.max(10, left))}px`;
+          tooltip.style.top = `${Math.max(10, top)}px`;
+        });
+
+        circ.addEventListener('mousemove', (ev) => {
+          const wrapper = document.getElementById('pitchVisualCard');
+          const rect = wrapper.getBoundingClientRect();
+          const left = ev.clientX - rect.left + 15;
+          const top = ev.clientY - rect.top - 10;
+          tooltip.style.left = `${Math.min(rect.width - 220, Math.max(10, left))}px`;
+          tooltip.style.top = `${Math.max(10, top)}px`;
+        });
+
+        circ.addEventListener('mouseleave', () => {
+          tooltip.style.display = 'none';
+        });
+      }
+    });
+  }
+
+  // 2. Render List Breakdown
+  container.innerHTML = shotsList.map(s => {
+    const xgVal = s.expectedGoals ? s.expectedGoals.toFixed(2) : '0.00';
+    const isGoal = s.eventType === 'Goal';
+    const xgColor = xgVal > 0.3 ? '#10b981' : (xgVal > 0.1 ? '#f59e0b' : '#94a3b8');
+
+    return `
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.04); background:${isGoal ? 'rgba(16,185,129,0.06)' : 'transparent'}; border-radius:8px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-weight:800; color:var(--accent-cyan); font-size:0.85rem;">${s.min}'</span>
+          <span>${isGoal ? '⚽ ' : ''}<b>${s.fullName || s.firstName || 'Shooter'}</b></span>
+          <span style="font-size:0.75rem; color:var(--text-muted);">${s.eventType} (${s.shotType || 'Open Play'})</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:0.75rem; color:var(--text-muted);">xG:</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-weight:800; color:${xgColor}; background:rgba(255,255,255,0.04); padding:2px 8px; border-radius:6px;">${xgVal}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 function copyCurl() {

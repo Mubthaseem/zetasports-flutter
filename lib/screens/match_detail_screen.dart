@@ -518,6 +518,13 @@ class _MatchDetailScreenState extends State<MatchDetailScreen>
         const SizedBox(height: 14),
         if (_dbStats != null && _dbStats!.isNotEmpty) ...[
           _infoCard('Match Statistics', [
+            if (_dbStats!['xg_home'] != null && _dbStats!['xg_away'] != null)
+              MatchStatBar(
+                title: 'Expected Goals (xG)',
+                homeValue: _dbStats!['xg_home'].toString(),
+                awayValue: _dbStats!['xg_away'].toString(),
+                homeRatio: _ratio(_dbStats!['xg_home'], _dbStats!['xg_away']),
+              ),
             if (_dbStats!['possession_home'] != null)
               MatchStatBar(
                 title: 'Possession',
@@ -716,11 +723,21 @@ class _MatchDetailScreenState extends State<MatchDetailScreen>
     final yAway = s['yellow_cards_away']?.toString() ?? '0';
     final oHome = s['offsides_home']?.toString() ?? '0';
     final oAway = s['offsides_away']?.toString() ?? '0';
+    final xgHome = s['xg_home']?.toString() ?? s['expected_goals_home']?.toString();
+    final xgAway = s['xg_away']?.toString() ?? s['expected_goals_away']?.toString();
+    final hasXg = xgHome != null && xgAway != null && xgHome != 'null' && xgAway != 'null';
 
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
         _infoCard('Match Statistics', [
+          if (hasXg)
+            MatchStatBar(
+              title: 'Expected Goals (xG)',
+              homeValue: xgHome,
+              awayValue: xgAway,
+              homeRatio: _ratio(xgHome, xgAway),
+            ),
           MatchStatBar(
             title: 'Possession',
             homeValue: pHome,
