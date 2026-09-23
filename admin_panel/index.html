@@ -2012,9 +2012,12 @@ Type any command below (e.g. `/help`, `/streams`, `/matches`) to control the app
 </div>
 
 <script>
-const SB_URL='https://voocdrpetiyspuhyeapi.supabase.co';
-const SB_KEY='sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
-const sb=supabase.createClient(SB_URL,SB_KEY);
+const SB_URL = 'https://voocdrpetiyspuhyeapi.supabase.co';
+// Public safe publishable key (Zero secrets in public code)
+const DEFAULT_KEY = 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
+// Reads private key from local browser storage if provided by the admin privately
+const SB_KEY = localStorage.getItem('zeta_private_admin_key') || DEFAULT_KEY;
+const sb = supabase.createClient(SB_URL, SB_KEY);
 
 let ALL_TEAMS=[],ALL_PLAYERS=[],ALL_LEAGUES=[],ALL_MATCHES=[],ALL_HIGHLIGHTS=[],ALL_NEWS=[],ALL_STREAMS=[],ALL_USERS=[],ALL_NOTIFICATIONS=[];
 
@@ -2045,33 +2048,45 @@ async function sbDelete(table, id) {
   if (!res.ok) throw new Error(`Delete failed: HTTP ${res.status}`);
 }
 
-// ─── AUTH ───
+// ─── AUTH & SESSION MANAGEMENT ───
 window.onload = () => {
-  document.getElementById('ls').style.display = 'none';
-  document.getElementById('app').style.display = 'block';
-  loadAll();
+  if (localStorage.getItem('zeta_admin_logged_in') === 'true') {
+    document.getElementById('ls').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    loadAll();
+  } else {
+    document.getElementById('ls').style.display = 'flex';
+    document.getElementById('app').style.display = 'none';
+  }
 };
 async function h256(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
 async function doLogin(){
   const u=document.getElementById('au').value.trim().toLowerCase();
   const p=document.getElementById('ap').value.trim();
   const e=document.getElementById('lerr');
-  e.textContent='Checking...';
+  e.textContent='Checking credentials...';
   const{data}=await sb.from('zeta_users').select().eq('username',u).maybeSingle();
   if(!data){e.textContent='User not found.';return;}
   let h='';
   try { h=await h256(p); } catch(_) {}
   if(data.pin!==h && data.pin!==p && data.passcode!==p){e.textContent='Wrong PIN.';return;}
   const isAdmin = u==='admin' || u==='admin_user' || data.is_admin===true || data.role==='admin';
-  if(!isAdmin){e.textContent='Not an admin.';return;}
+  if(!isAdmin){e.textContent='Access denied: Not an administrator.';return;}
+  
   e.textContent='';
+  localStorage.setItem('zeta_admin_logged_in', 'true');
+  localStorage.setItem('zeta_admin_username', u);
   document.getElementById('ls').style.display='none';
   document.getElementById('app').style.display='block';
   document.getElementById('anm').textContent=u.toUpperCase();
   document.getElementById('aav').textContent=u[0].toUpperCase();
   loadAll();
 }
-function doLogout(){document.getElementById('app').style.display='none';document.getElementById('ls').style.display='flex';}
+function doLogout(){
+  localStorage.removeItem('zeta_admin_logged_in');
+  document.getElementById('app').style.display='none';
+  document.getElementById('ls').style.display='flex';
+}
 document.getElementById('ap').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
 document.getElementById('au').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('ap').focus();});
 

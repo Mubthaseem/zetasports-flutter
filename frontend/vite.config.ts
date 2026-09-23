@@ -15,6 +15,13 @@ function copyDataPlugin() {
         fs.cpSync(srcDir, destDir, { recursive: true });
         console.log('[Vite Build] Successfully copied data/ into dist/data/');
       }
+
+      const adminSrc = path.resolve(__dirname, '../admin_panel');
+      const adminDest = path.resolve(__dirname, 'dist/admin');
+      if (fs.existsSync(adminSrc)) {
+        fs.cpSync(adminSrc, adminDest, { recursive: true });
+        console.log('[Vite Build] Successfully copied admin_panel/ into dist/admin/');
+      }
     }
   };
 }

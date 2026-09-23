@@ -7,6 +7,7 @@ on:
     paths:
       - 'frontend/**'
       - 'data/**'
+      - 'admin_panel/**'
   workflow_dispatch:
 
 permissions:
