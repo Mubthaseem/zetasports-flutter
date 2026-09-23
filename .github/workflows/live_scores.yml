@@ -1,51 +1,63 @@
-name: Live Score Updater
+name: Live Score & Telemetry Synchronizer
 
 on:
   schedule:
-    # Runs every 2 minutes — GitHub Actions minimum is 5 min for schedule,
-    # so we use a matrix trick: run at minute 0, 2, 4 past every 5 minutes.
-    # For true 2-min polling, the workflow calls itself recursively via
-    # workflow_dispatch with a delay. See job below.
-    - cron: '*/5 * * * *'   # Base trigger: every 5 minutes
-  workflow_dispatch:        # Manual trigger from GitHub UI or Admin Panel
+    # Run every 5 minutes (standard GitHub Actions cron interval)
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Manual trigger from GitHub Actions or Admin Panel
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: sync-live-scores
+  cancel-in-progress: false
 
 jobs:
-  update-live-scores:
+  sync-live-everything:
     runs-on: ubuntu-latest
-    timeout-minutes: 4        # Kill if hangs — never exceed cron interval
-
-    strategy:
-      matrix:
-        # Run 3 times per trigger with a delay to approximate every ~2 minutes
-        pass: [1, 2, 3]
+    timeout-minutes: 6
 
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Wait before pass ${{ matrix.pass }}
-        if: matrix.pass != 1
-        run: |
-          # Pass 2 waits ~100s, Pass 3 waits ~200s (≈ 2 min apart within 5 min window)
-          WAIT=$(( (${{ matrix.pass }} - 1) * 100 ))
-          echo "⏳ Waiting ${WAIT}s before pass ${{ matrix.pass }}..."
-          sleep $WAIT
+        with:
+          fetch-depth: 2
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Install dependencies
-        run: npm install --prefix scripts
-
-      - name: Run live score updater
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      - name: Install Dependencies
         run: |
-          echo "🚀 Pass ${{ matrix.pass }} — $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          echo "📦 Installing data-pipeline and scripts dependencies..."
+          npm ci --prefix data-pipeline || npm install --prefix data-pipeline
+          npm install --prefix scripts
+
+      - name: Sync Data Pipeline (Updates GitHub Pages Web Hub data/)
+        run: |
+          echo "🌐 Syncing data/ files for GitHub Pages..."
+          npm run sync:live --prefix data-pipeline
+
+      - name: Run Supabase Live Updater (Updates Supabase for App & Admin Panel)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL || 'https://voocdrpetiyspuhyeapi.supabase.co' }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY || secrets.SUPABASE_KEY || 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV' }}
+        run: |
+          echo "🚀 Updating Supabase matches, standings, and telemetry..."
           node scripts/live_score_updater.mjs
+
+      - name: Commit and Push GitHub Pages Data
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "✅ No data changes detected. Skipping commit."
+          else
+            git commit -m "chore(data): auto-sync live matches and freshness meta [skip ci]"
+            git pull --rebase --autostash origin main || true
+            git push origin main || true
+            echo "🚀 Fresh live data pushed to GitHub repository."
+          fi
