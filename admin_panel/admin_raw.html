@@ -237,11 +237,10 @@ body {
    OFFICIAL FIFA / FEDERATION EXTRANET STYLING
    ========================================================= */
 
-/* Sidebar */
 .sidebar {
-  width: 270px;
-  background: #051838;
-  border-right: 1px solid rgba(212, 175, 55, 0.25);
+  width: 250px;
+  background: #0f172a;
+  border-right: 1px solid #1e293b;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -249,24 +248,19 @@ body {
   bottom: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 4px 0 20px 0 rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.25s ease;
 }
 
 .sl {
-  padding: 22px 20px 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  background: #031027;
+  padding: 20px;
+  border-bottom: 1px solid #1e293b;
+  background: #0f172a;
 }
 
 .sl h2 {
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 800;
-  letter-spacing: 0.03em;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -274,46 +268,29 @@ body {
 }
 
 .sl h2 span {
-  color: #d4af37;
-  background: linear-gradient(135deg, #fcd34d, #d4af37);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.sl .v4-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 8px;
-  background: rgba(212, 175, 55, 0.15);
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  border-radius: 4px;
-  font-size: 9px;
-  font-weight: 800;
-  color: #fcd34d;
-  letter-spacing: 0.08em;
+  color: #38bdf8;
 }
 
 .nav {
   flex: 1;
-  padding: 16px 12px;
+  padding: 14px 10px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .ni {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 11px 14px;
+  padding: 10px 14px;
   cursor: pointer;
   color: #94a3b8;
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 600;
-  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.15s ease;
   border-radius: 8px;
-  border: 1px solid transparent;
 }
 
 .ni:hover {
@@ -322,17 +299,15 @@ body {
 }
 
 .ni.active {
-  background: linear-gradient(90deg, rgba(212, 175, 55, 0.18), rgba(2, 75, 160, 0.25));
-  color: #ffffff;
+  background: #1e293b;
+  color: #38bdf8;
   font-weight: 700;
-  border-left: 3px solid #d4af37;
-  border-color: rgba(212, 175, 55, 0.3) rgba(212, 175, 55, 0.3) rgba(212, 175, 55, 0.3) #d4af37;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-left: 3px solid #38bdf8;
 }
 
 .ni .ic {
   font-size: 16px;
-  width: 22px;
+  width: 20px;
   text-align: center;
   display: inline-flex;
   align-items: center;
@@ -340,69 +315,59 @@ body {
 }
 
 .sf {
-  padding: 18px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background: #031027;
+  padding: 16px 20px;
+  border-top: 1px solid #1e293b;
+  background: #0f172a;
 }
 
 .ab {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .av {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #d4af37, #996515);
-  color: #020d20;
+  background: #2563eb;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
   font-weight: 800;
-  font-size: 16px;
-  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+  font-size: 14px;
 }
 
 .an {
   font-size: 13px;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.2;
 }
 
 .ar {
-  font-size: 10px;
-  font-weight: 700;
-  color: #fcd34d;
-  letter-spacing: 0.08em;
-  margin-top: 2px;
+  font-size: 11px;
+  color: #64748b;
 }
 
 .lob {
   width: 100%;
-  padding: 10px 14px;
-  background: rgba(220, 38, 38, 0.15);
-  border: 1px solid rgba(220, 38, 38, 0.35);
-  border-radius: 8px;
-  color: #fca5a5;
+  padding: 8px 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 6px;
+  color: #f87171;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.15s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
+  transition: all 0.15s ease;
+  text-align: center;
 }
 
 .lob:hover {
-  background: rgba(220, 38, 38, 0.25);
+  background: #ef4444;
   color: #ffffff;
-  border-color: #ef4444;
 }
 
 /* Main Content Area */
@@ -1562,6 +1527,204 @@ tr:hover td {
   transform: scale(1);
 }
 
+/* =========================================================
+   FOTMOB LIVE TELEMETRY & 2D PITCH SHOTMAP STYLES
+   ========================================================= */
+.tel-scoreboard {
+  background: radial-gradient(circle at 50% 10%, #0c2b66 0%, #051838 50%, #020c1d 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 18px;
+  padding: 24px;
+  color: #fff;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.tel-scoreboard::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #d4af37, #38bdf8, #d4af37);
+}
+.tel-score-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.tel-team {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.tel-team.away {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.tel-crest {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+  padding: 4px;
+}
+.tel-team-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.tel-scorers {
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+.tel-score-center {
+  text-align: center;
+  min-width: 140px;
+}
+.tel-score-nums {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #fff;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+.tel-xg-badge {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+}
+.tel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  background: rgba(3, 16, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+.tel-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tel-grid-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.tel-grid-val {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+.tel-tabs-bar {
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+.tel-tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.tel-tab-btn:hover { color: #0f172a; }
+.tel-tab-btn.active {
+  color: #2563eb;
+}
+.tel-tab-btn.active::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0; right: 0; height: 3px;
+  background: #2563eb;
+  border-radius: 3px 3px 0 0;
+}
+.tel-tab-pane { display: none; }
+.tel-tab-pane.active { display: block; }
+
+/* 2D Tactical Pitch */
+.admin-pitch-wrapper {
+  position: relative;
+  background: radial-gradient(circle at center 20%, #0d281a, #05130b);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.6);
+}
+.admin-pitch-svg {
+  width: 100%;
+  max-height: 440px;
+  display: block;
+  margin: 0 auto;
+}
+.admin-shot-node {
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.admin-shot-node:hover {
+  transform-origin: center;
+  transform: scale(1.4);
+  filter: drop-shadow(0 0 10px #fbbf24);
+}
+.admin-pitch-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(10, 16, 29, 0.95);
+  border: 1px solid #38bdf8;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  display: none;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  line-height: 1.4;
+}
+.admin-filter-pill {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #cbd5e1;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.admin-filter-pill:hover, .admin-filter-pill.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #3b82f6;
+}
 </style>
 </head>
 <body>
@@ -1588,43 +1751,41 @@ tr:hover td {
       <div class="sl">
         <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
           <div style="display:flex;align-items:center;gap:10px;">
-            <div style="width:38px;height:38px;border-radius:8px;background:linear-gradient(135deg,#d4af37,#996515);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 10px rgba(212,175,55,0.35);">🏛️</div>
+            <div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#2563eb,#38bdf8);display:flex;align-items:center;justify-content:center;font-size:18px;">⚡</div>
             <div>
-              <h2 style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:800;letter-spacing:0.04em;color:#ffffff;margin:0;">ZETA<span style="color:#d4af37;">SPORTS</span></h2>
-              <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;color:#94a3b8;text-transform:uppercase;">FEDERATION EXTRANET</div>
+              <h2 style="font-family:'Rajdhani',sans-serif;font-size:19px;font-weight:800;letter-spacing:0.02em;color:#ffffff;margin:0;">Zeta<span style="color:#38bdf8;">Sports</span></h2>
+              <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;color:#94a3b8;text-transform:uppercase;">Admin Panel</div>
             </div>
           </div>
           <button class="sidebar-close-btn" onclick="toggleSidebar(false)" aria-label="Close menu">✕</button>
         </div>
-        <div class="tagline" style="margin-top:10px;">
-          <span class="v4-badge">★ CONFEDERATION CERTIFIED</span>
-        </div>
       </div>
       <div class="nav">
-        <div class="ni active" onclick="goPage(this,'dashboard')"><span class="ic">📊</span>Executive Overview</div>
-        <div class="ni" onclick="goPage(this,'teams')"><span class="ic">🏛️</span>Registered Clubs</div>
-        <div class="ni" onclick="goPage(this,'players')"><span class="ic">⚽</span>Licensed Athletes</div>
-        <div class="ni" onclick="goPage(this,'leagues')"><span class="ic">🏆</span>Sanctioned Leagues</div>
-        <div class="ni" onclick="goPage(this,'matches')"><span class="ic">📅</span>Fixture Protocols</div>
-        <div class="ni" onclick="goPage(this,'highlights')"><span class="ic">🎬</span>Broadcast Media</div>
-        <div class="ni" onclick="goPage(this,'news')"><span class="ic">📰</span>Official Bulletins</div>
+        <div class="ni active" onclick="goPage(this,'dashboard')"><span class="ic">📊</span>Dashboard</div>
+        <div class="ni" onclick="goPage(this,'teams')"><span class="ic">🏛️</span>Teams</div>
+        <div class="ni" onclick="goPage(this,'players')"><span class="ic">⚽</span>Players</div>
+        <div class="ni" onclick="goPage(this,'leagues')"><span class="ic">🏆</span>Leagues</div>
+        <div class="ni" onclick="goPage(this,'matches')"><span class="ic">📅</span>Matches</div>
+        <div class="ni" onclick="goPage(this,'telemetry')"><span class="ic">⚡</span>FotMob Live Tracker & xG</div>
+        <div class="ni" onclick="goPage(this,'highlights')"><span class="ic">🎬</span>Highlights</div>
+        <div class="ni" onclick="goPage(this,'news')"><span class="ic">📰</span>News</div>
         <div class="ni" onclick="goPage(this,'autoclip')"><span class="ic">⚡</span>AutoClip Highlights</div>
-        <div class="ni" onclick="goPage(this,'streams')"><span class="ic">📺</span>Satellite Channels</div>
-        <div class="ni" onclick="goPage(this,'notifications')"><span class="ic">🔔</span>Official Dispatches</div>
-        <div class="ni" onclick="goPage(this,'users')"><span class="ic">👥</span>Accredited Delegates</div>
-        <div class="ni" onclick="goPage(this,'sessions')"><span class="ic">👁️</span>Security Audit Logs</div>
-        <div class="ni" onclick="goPage(this,'settings')"><span class="ic">⚙️</span>Global Governance</div>
-        <div class="ni" onclick="goPage(this,'telegram')"><span class="ic">✈️</span>Telegram Dispatcher</div>
+        <div class="ni" onclick="goPage(this,'streams')"><span class="ic">📺</span>Live Streams</div>
+        <div class="ni" onclick="goPage(this,'notifications')"><span class="ic">🔔</span>Notifications</div>
+        <div class="ni" onclick="goPage(this,'users')"><span class="ic">👥</span>Users</div>
+        <div class="ni" onclick="goPage(this,'sessions')"><span class="ic">👁️</span>Active Sessions</div>
+        <div class="ni" onclick="goPage(this,'settings')"><span class="ic">⚙️</span>Settings</div>
+        <div class="ni" onclick="goPage(this,'telegram')"><span class="ic">✈️</span>Telegram Bot</div>
       </div>
       <div class="sf">
         <div class="ab">
-          <div class="av" id="aav">★</div>
+          <div class="av" id="aav" style="background:#2563eb;color:#ffffff;border-radius:8px;">★</div>
           <div>
-            <div class="an" id="anm">DELEGATE</div>
-            <div class="ar">FEDERATION COMMISSIONER</div>
+            <div class="an" id="anm">Admin</div>
+            <div class="ar" style="color:#94a3b8;">Super Admin</div>
           </div>
         </div>
-        <button class="lob" onclick="doLogout()">⏏ Terminate Session</button>
+        <button class="lob" onclick="doLogout()">Logout</button>
       </div>
     </nav>
     <main class="main">
@@ -1633,67 +1794,67 @@ tr:hover td {
         <div class="topbar-left">
           <button class="topbar-mobile-btn" onclick="toggleSidebar()" aria-label="Toggle navigation">☰</button>
           <div class="topbar-breadcrumbs">
-            FEDERATION PROTOCOL / <span id="topbar-active-page">Executive Overview</span>
+            Admin / <span id="topbar-active-page">Dashboard</span>
           </div>
         </div>
         <div class="topbar-right">
           <div class="live-pill">
             <span class="live-dot"></span>
-            <span>REGISTRY SYNCHRONIZED</span>
+            <span>Live Connected</span>
           </div>
-          <button class="btn bgh bsm" onclick="loadAll()" title="Reload All Data">⟳ Sync Registry</button>
+          <button class="btn bgh bsm" onclick="loadAll()" title="Reload All Data">⟳ Sync</button>
         </div>
       </div>
       <!-- DASHBOARD -->
       <div class="page active" id="page-dashboard">
-        <div class="ph"><h1>Executive Overview</h1><p>Central Registry & Competition Operations Governance</p></div>
+        <div class="ph"><h1>Dashboard</h1><p>Overview of matches, teams, and live metrics</p></div>
         <div class="sg">
-          <div class="sc"><div class="slb">Registered Clubs</div><div class="sv" id="st-teams">-</div><div class="ss">Official Registry</div></div>
-          <div class="sc"><div class="slb">Licensed Athletes</div><div class="sv" id="st-players">-</div><div class="ss">Active Passports</div></div>
-          <div class="sc"><div class="slb">Sanctioned Leagues</div><div class="sv" id="st-leagues">-</div><div class="ss">Tournaments Active</div></div>
-          <div class="sc"><div class="slb">Fixture Protocols</div><div class="sv" id="st-matches">-</div><div class="ss">Recorded Matches</div></div>
-          <div class="sc"><div class="slb">Broadcast Media</div><div class="sv" id="st-highlights">-</div><div class="ss">Approved Footage</div></div>
-          <div class="sc"><div class="slb">Official Bulletins</div><div class="sv" id="st-news">-</div><div class="ss">Published Releases</div></div>
-          <div class="sc"><div class="slb">Satellite Feeds</div><div class="sv" id="st-streams">-</div><div class="ss">Authorized Channels</div></div>
-          <div class="sc"><div class="slb">Accredited Accounts</div><div class="sv" id="st-users">-</div><div class="ss">Verified Delegates</div></div>
-          <div class="sc"><div class="slb">Audited Views (24h)</div><div class="sv" id="st-sessions">-</div><div class="ss">Official Traffic</div></div>
+          <div class="sc"><div class="slb">Teams</div><div class="sv" id="st-teams">-</div><div class="ss">Total Teams</div></div>
+          <div class="sc"><div class="slb">Players</div><div class="sv" id="st-players">-</div><div class="ss">Total Players</div></div>
+          <div class="sc"><div class="slb">Leagues</div><div class="sv" id="st-leagues">-</div><div class="ss">Total Leagues</div></div>
+          <div class="sc"><div class="slb">Matches</div><div class="sv" id="st-matches">-</div><div class="ss">Recorded Matches</div></div>
+          <div class="sc"><div class="slb">Highlights</div><div class="sv" id="st-highlights">-</div><div class="ss">Video Clips</div></div>
+          <div class="sc"><div class="slb">News</div><div class="sv" id="st-news">-</div><div class="ss">Articles</div></div>
+          <div class="sc"><div class="slb">Streams</div><div class="sv" id="st-streams">-</div><div class="ss">Live Streams</div></div>
+          <div class="sc"><div class="slb">Users</div><div class="sv" id="st-users">-</div><div class="ss">Subscribers</div></div>
+          <div class="sc"><div class="slb">Active Views (24h)</div><div class="sv" id="st-sessions">-</div><div class="ss">Live Traffic</div></div>
         </div>
         <div class="tc">
-          <div class="tt"><h3>Official Match Operations Audit</h3><button class="btn bgh bsm" onclick="loadDashboard()">⟳ Refresh Feed</button></div>
-          <div id="dash-body"><div class="ld"><div class="sp"></div>Synchronizing official records...</div></div>
+          <div class="tt"><h3>Match Operations</h3><button class="btn bgh bsm" onclick="loadDashboard()">⟳ Refresh Feed</button></div>
+          <div id="dash-body"><div class="ld"><div class="sp"></div>Loading matches...</div></div>
         </div>
       </div>
 
       <!-- TEAMS -->
       <div class="page" id="page-teams">
-        <div class="ph"><h1>Registered Clubs Registry</h1><p>Official Confederation Affiliated Clubs & Emblems</p></div>
+        <div class="ph"><h1>Teams</h1><p>Manage team data for all sports</p></div>
         <div class="tc">
-          <div class="tt"><h3>Official Clubs Roster</h3><div class="ta"><input class="si" id="flt-teams" placeholder="Search registered clubs..." oninput="filterTeams(this.value)"/><button class="btn bp" onclick="openTeamModal(null)">+ Accredit Club</button></div></div>
+          <div class="tt"><h3>All Teams</h3><div class="ta"><input class="si" id="flt-teams" placeholder="Search teams..." oninput="filterTeams(this.value)"/><button class="btn bp" onclick="openTeamModal(null)">+ Add Team</button></div></div>
           <div id="teams-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
       <!-- PLAYERS -->
       <div class="page" id="page-players">
-        <div class="ph"><h1>Licensed Athletes & Squads</h1><p>Federation Passport Registry, Career Caps & Squad Status</p></div>
+        <div class="ph"><h1>Players</h1><p>Manage player profiles, stats, and career history</p></div>
         <div class="tc">
-          <div class="tt"><h3>Sanctioned Athletes Roster</h3><div class="ta"><input class="si" id="flt-players" placeholder="Search licensed athletes..." oninput="filterPlayers(this.value)"/><button class="btn bp" onclick="openPlayerModal(null)">+ License Athlete</button></div></div>
+          <div class="tt"><h3>All Players</h3><div class="ta"><input class="si" id="flt-players" placeholder="Search players..." oninput="filterPlayers(this.value)"/><button class="btn bp" onclick="openPlayerModal(null)">+ Add Player</button></div></div>
           <div id="players-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
       <!-- LEAGUES -->
       <div class="page" id="page-leagues">
-        <div class="ph"><h1>Sanctioned Competitions</h1><p>Accredited Tournaments, Championship Cups & Division Leagues</p></div>
+        <div class="ph"><h1>Leagues & Tournaments</h1><p>Manage leagues, seasons, and tournaments</p></div>
         <div class="tc">
-          <div class="tt"><h3>Sanctioned Competitions Roster</h3><div class="ta"><button class="btn bp" onclick="openLeagueModal(null)">+ Sanction Tournament</button></div></div>
+          <div class="tt"><h3>All Leagues</h3><div class="ta"><button class="btn bp" onclick="openLeagueModal(null)">+ Add League</button></div></div>
           <div id="leagues-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- MATCHES -->
       <div class="page" id="page-matches">
-        <div class="ph"><h1>Fixture Protocols & Match Center</h1><p>Federation Match Schedule, Real-Time Ingestion & Official Pitch Lineups</p></div>
+        <div class="ph"><h1>Matches</h1><p>Manage match fixtures, results, and live data</p></div>
         
         <!-- FOTMOB IMPORTER UI -->
         <div class="tc" style="margin-bottom: 20px; background: rgba(37, 99, 235, 0.05); border: 1px solid rgba(37, 99, 235, 0.2);">
@@ -1763,71 +1924,280 @@ tr:hover td {
         </div>
       </div>
 
+      <!-- FOTMOB TELEMETRY & LIVE TRACKER -->
+      <div class="page" id="page-telemetry">
+        <div class="ph" style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:14px;">
+          <div>
+            <h1>⚡ FotMob Live Tracker & xG Engine</h1>
+            <p>Real-time match ingestion, Opta xG telemetry, 2D tactical pitch, and GitHub Actions live workflow control</p>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+            <button class="btn bp" style="background:linear-gradient(135deg,#f59e0b,#d97706); font-weight:800;" onclick="triggerWorkflowDispatchAdmin()">
+              ⚡ Dispatch Live Sync Workflow
+            </button>
+            <button class="btn bgh" onclick="loadTrackedMatchesAdmin()">
+              🔄 Refresh Active Live
+            </button>
+          </div>
+        </div>
+
+        <!-- Search Bar & Presets -->
+        <div class="tc" style="margin-bottom:20px; padding:18px;">
+          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px;">
+            <div style="flex:1; min-width:280px; position:relative;">
+              <input id="adminMatchInput" class="si" style="width:100%; padding:11px 16px; font-size:14px;"
+                placeholder="Paste FotMob Match ID or URL (e.g. 4506308, 4506312, 5795455)" value="4506308"/>
+            </div>
+            <button class="btn bp" style="padding:11px 22px; font-weight:700;" onclick="loadAdminMatchTelemetry()">
+              Fetch Telemetry ➔
+            </button>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+            <span style="font-size:12px; font-weight:700; color:#64748b;">Quick Demos:</span>
+            <button class="btn bgh" style="font-size:12px; padding:4px 10px; border-color:#f59e0b; color:#d97706;" onclick="setAdminPreset('4506308')">⭐ Liverpool 3-0 Bournemouth (xG 2.06 - 1.08)</button>
+            <button class="btn bgh" style="font-size:12px; padding:4px 10px; border-color:#38bdf8; color:#0284c7;" onclick="setAdminPreset('4506312')">⭐ West Ham 0-3 Chelsea (xG 0.89 - 2.45)</button>
+            <button class="btn bgh" style="font-size:12px; padding:4px 10px; border-color:#10b981; color:#059669;" onclick="setAdminPreset('5795455')">⭐ Bournemouth vs Liverpool (xG 0.79 - 1.65)</button>
+            <button class="btn bgh" style="font-size:12px; padding:4px 10px;" onclick="setAdminPreset('5181862')">🇵🇹 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Portugal vs Wales</button>
+            <button class="btn bgh" style="font-size:12px; padding:4px 10px; border-style:dashed;" onclick="setAdminPreset('6125863')">⚪ Kladno vs Baník (Basic Tier)</button>
+          </div>
+        </div>
+
+        <!-- Telemetry Scoreboard Hero -->
+        <div id="adminTelemetryHero" class="tel-scoreboard" style="display:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+            <div id="adminLeagueBadge" style="font-weight:700; font-size:13px; color:#38bdf8; display:flex; align-items:center; gap:6px;">🏆 League</div>
+            <div id="adminLiveBadge" style="background:#ef4444; color:#fff; font-size:11px; font-weight:800; padding:3px 10px; border-radius:20px;">LIVE</div>
+          </div>
+
+          <div class="tel-score-row">
+            <div class="tel-team home">
+              <img id="adminHomeCrest" class="tel-crest" src="" alt="Home"/>
+              <div>
+                <div id="adminHomeName" class="tel-team-name">Home Team</div>
+                <div id="adminHomeScorers" class="tel-scorers"></div>
+              </div>
+            </div>
+
+            <div class="tel-score-center">
+              <div id="adminScoreDisplay" class="tel-score-nums">0 - 0</div>
+              <div id="adminXgScoreBadge" class="tel-xg-badge" style="display:none;">⚡ xG: 0.00 - 0.00</div>
+              <div id="adminStatusText" style="font-size:12px; color:#94a3b8; margin-top:4px;">Kickoff</div>
+            </div>
+
+            <div class="tel-team away">
+              <img id="adminAwayCrest" class="tel-crest" src="" alt="Away"/>
+              <div>
+                <div id="adminAwayName" class="tel-team-name">Away Team</div>
+                <div id="adminAwayScorers" class="tel-scorers"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Telemetry Grid -->
+          <div class="tel-grid">
+            <div class="tel-grid-item">
+              <span class="tel-grid-lbl">Coverage Tier</span>
+              <span id="adminValCoverage" class="tel-grid-val" style="color:#fbbf24;">xG Pro Tier</span>
+            </div>
+            <div class="tel-grid-item">
+              <span class="tel-grid-lbl">Opta Expected Goals</span>
+              <span id="adminValXgMetric" class="tel-grid-val" style="color:#38bdf8;">2.06 - 1.08</span>
+            </div>
+            <div class="tel-grid-item">
+              <span class="tel-grid-lbl">Lineup Status</span>
+              <span id="adminValLineup" class="tel-grid-val">Confirmed</span>
+            </div>
+            <div class="tel-grid-item">
+              <span class="tel-grid-lbl">Match Referee</span>
+              <span id="adminValReferee" class="tel-grid-val">Michael Oliver</span>
+            </div>
+            <div class="tel-grid-item">
+              <span class="tel-grid-lbl">Stadium & City</span>
+              <span id="adminValVenue" class="tel-grid-val">Anfield, Liverpool</span>
+            </div>
+          </div>
+
+          <!-- Admin Quick Action Controls Bar -->
+          <div style="margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button id="adminTrackMatchBtn" class="btn bp" style="background:#10b981; color:#022c22; font-weight:800;" onclick="adminTrackCurrentMatch()">
+                🟢 Track Live in ZetaSports (Auto-Sync)
+              </button>
+              <button id="adminPushSupabaseBtn" class="btn bp" style="background:#0284c7; font-weight:800;" onclick="adminPushCurrentToSupabase()">
+                💾 Push Full Raw Telemetry to Supabase
+              </button>
+            </div>
+            <div id="adminActionStatus" style="font-size:12px; font-weight:700; color:#38bdf8;"></div>
+          </div>
+        </div>
+
+        <!-- Telemetry Tabs Navigation -->
+        <div id="adminTelTabsWrap" style="display:none;">
+          <div class="tel-tabs-bar">
+            <button class="tel-tab-btn active" data-tab="admin-tab-pitch" onclick="switchAdminTelTab('admin-tab-pitch', this)">🎯 2D Tactical Pitch Shot Map</button>
+            <button class="tel-tab-btn" data-tab="admin-tab-events" onclick="switchAdminTelTab('admin-tab-events', this)">⚡ Events & Goals Timeline</button>
+            <button class="tel-tab-btn" data-tab="admin-tab-stats" onclick="switchAdminTelTab('admin-tab-stats', this)">📊 Match Stats & xG</button>
+            <button class="tel-tab-btn" data-tab="admin-tab-lineups" onclick="switchAdminTelTab('admin-tab-lineups', this)">📋 Lineups</button>
+          </div>
+
+          <!-- TAB 1: 2D Pitch Shot Map -->
+          <div id="admin-tab-pitch" class="tel-tab-pane active">
+            <div id="adminPitchCard" class="admin-pitch-wrapper">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+                <h4 style="margin:0; font-size:15px; font-weight:800; color:#fff;">Opta 2D Radar Shot Locations</h4>
+                <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                  <button class="admin-filter-pill active" onclick="filterAdminShots('all', this)">All</button>
+                  <button class="admin-filter-pill" onclick="filterAdminShots('goals', this)">⚽ Goals</button>
+                  <button class="admin-filter-pill" onclick="filterAdminShots('ontarget', this)">🎯 On Target</button>
+                  <button class="admin-filter-pill" onclick="filterAdminShots('highxg', this)">🔥 High xG (&gt;0.20)</button>
+                  <button class="admin-filter-pill" id="adminFilterHomeBtn" onclick="filterAdminShots('home', this)">Home</button>
+                  <button class="admin-filter-pill" id="adminFilterAwayBtn" onclick="filterAdminShots('away', this)">Away</button>
+                </div>
+              </div>
+
+              <div style="position:relative; width:100%;">
+                <svg id="adminPitchSvg" class="admin-pitch-svg" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <radialGradient id="adminTurfGlow" cx="50%" cy="10%" r="80%">
+                      <stop offset="0%" stop-color="#0e3321"/>
+                      <stop offset="100%" stop-color="#041209"/>
+                    </radialGradient>
+                  </defs>
+                  <rect x="0" y="0" width="680" height="440" rx="14" fill="url(#adminTurfGlow)" stroke="#1e3a29" stroke-width="2"/>
+                  <rect x="20" y="20" width="640" height="400" rx="4" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                  <rect x="290" y="6" width="100" height="14" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="2" stroke-dasharray="3,3"/>
+                  <line x1="290" y1="20" x2="390" y2="20" stroke="#fbbf24" stroke-width="4"/>
+                  <rect x="245" y="20" width="190" height="55" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.22)" stroke-width="1.8"/>
+                  <rect x="140" y="20" width="400" height="165" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.22)" stroke-width="1.8"/>
+                  <circle cx="340" cy="110" r="3.5" fill="rgba(255,255,255,0.7)"/>
+                  <path d="M 276 185 A 91.5 91.5 0 0 0 404 185" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.8"/>
+                  <line x1="20" y1="420" x2="660" y2="420" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                  <path d="M 280 420 A 60 60 0 0 1 400 420" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.8"/>
+                  <g id="adminSvgShotsGroup"></g>
+                </svg>
+                <div id="adminPitchTooltip" class="admin-pitch-tooltip"></div>
+              </div>
+            </div>
+
+            <div class="tc" style="padding:16px;">
+              <h4 style="font-size:14px; font-weight:700; margin-bottom:12px;">Detailed Shots List</h4>
+              <div id="adminShotsListContainer" style="font-size:13px; color:#64748b;">No shots recorded.</div>
+            </div>
+          </div>
+
+          <!-- TAB 2: Events & Goals -->
+          <div id="admin-tab-events" class="tel-tab-pane">
+            <div class="tc" style="padding:20px;">
+              <h4 style="font-size:14px; font-weight:700; margin-bottom:14px;">Match Events Timeline</h4>
+              <div id="adminTimelineContainer" style="display:flex; flex-direction:column; gap:10px;"></div>
+            </div>
+          </div>
+
+          <!-- TAB 3: Stats & xG -->
+          <div id="admin-tab-stats" class="tel-tab-pane">
+            <div class="tc" style="padding:20px;">
+              <div id="adminXgBannerBox" style="margin-bottom:16px;"></div>
+              <h4 style="font-size:14px; font-weight:700; margin-bottom:14px;">Match Statistics</h4>
+              <div id="adminStatsBarsContainer"></div>
+            </div>
+          </div>
+
+          <!-- TAB 4: Lineups -->
+          <div id="admin-tab-lineups" class="tel-tab-pane">
+            <div class="tc" style="padding:20px;">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                <div>
+                  <h4 id="adminHomeLineupHdr" style="font-size:14px; font-weight:700; margin-bottom:10px;">Home Starters</h4>
+                  <div id="adminHomeLineupList"></div>
+                </div>
+                <div>
+                  <h4 id="adminAwayLineupHdr" style="font-size:14px; font-weight:700; margin-bottom:10px;">Away Starters</h4>
+                  <div id="adminAwayLineupList"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Currently Tracked Matches in Supabase -->
+        <div class="tc" style="margin-top:24px;">
+          <div class="tt">
+            <h3>Active Live Matches Tracked in ZetaSports</h3>
+            <div class="ta">
+              <span id="adminTrackedCountBadge" style="font-size:12px; font-weight:700; color:#10b981; background:rgba(16,185,129,0.1); padding:4px 10px; border-radius:12px;">0 Live Matches</span>
+            </div>
+          </div>
+          <div id="adminTrackedMatchesTable">
+            <div class="ld"><div class="sp"></div>Loading tracked live matches...</div>
+          </div>
+        </div>
+      </div>
+
       <!-- HIGHLIGHTS -->
       <div class="page" id="page-highlights">
-        <div class="ph"><h1>Broadcast Media Protocols</h1><p>Approved Match Footage, Official Summaries & Media Archives</p></div>
+        <div class="ph"><h1>Highlights</h1><p>Manage video highlights and clips</p></div>
         <div class="tc">
-          <div class="tt"><h3>Official Broadcast Archive</h3><div class="ta"><input class="si" id="flt-highlights" placeholder="Search broadcast media..." oninput="filterHighlights(this.value)"/><button class="btn bp" onclick="openHighlightModal(null)">+ Ingest Media</button></div></div>
+          <div class="tt"><h3>All Highlights</h3><div class="ta"><input class="si" id="flt-highlights" placeholder="Search highlights..." oninput="filterHighlights(this.value)"/><button class="btn bp" onclick="openHighlightModal(null)">+ Add Highlight</button></div></div>
           <div id="highlights-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- NEWS -->
       <div class="page" id="page-news">
-        <div class="ph"><h1>Official Bulletins & Press Dispatches</h1><p>Confederation Communiqués, Disciplinary Notices & Media Releases</p></div>
+        <div class="ph"><h1>News Articles</h1><p>Manage news content and breaking stories</p></div>
         <div class="tc">
-          <div class="tt"><h3>Official Bulletins & Releases</h3><div class="ta"><button class="btn bp" onclick="openNewsModal(null)">+ Issue Bulletin</button></div></div>
+          <div class="tt"><h3>All Articles</h3><div class="ta"><button class="btn bp" onclick="openNewsModal(null)">+ Add Article</button></div></div>
           <div id="news-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
       <!-- STREAMS -->
       <div class="page" id="page-streams">
-        <div class="ph"><h1>Sanctioned Satellite & Digital Channels</h1><p>Authorized Match Broadcast Servers & DRM Key Protocols</p></div>
+        <div class="ph"><h1>Live Streams</h1><p>Manage streaming channels and sources</p></div>
         <div class="tc">
-          <div class="tt"><h3>Sanctioned Transmission Relays</h3><div class="ta"><input class="si" id="flt-streams" placeholder="Search transmission channels..." oninput="filterStreams(this.value)"/><button class="btn bp" onclick="openStreamModal(null)">+ Add Transmission Relay</button></div></div>
+          <div class="tt"><h3>All Streams</h3><div class="ta"><input class="si" id="flt-streams" placeholder="Search streams..." oninput="filterStreams(this.value)"/><button class="btn bp" onclick="openStreamModal(null)">+ Add Stream</button></div></div>
           <div id="streams-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- NOTIFICATIONS -->
       <div class="page" id="page-notifications">
-        <div class="ph"><h1>Official Federation Dispatches</h1><p>Broadcast Alerts, Telegram Relay & Urgent Notice Feeds</p></div>
+        <div class="ph"><h1>Notifications</h1><p>Manage push notifications and alerts</p></div>
         <div class="tc">
-          <div class="tt"><h3>Official Dispatch Registry</h3><div class="ta"><button class="btn bp" onclick="openNotificationModal(null)">+ Broadcast Dispatch</button></div></div>
+          <div class="tt"><h3>All Notifications</h3><div class="ta"><button class="btn bp" onclick="openNotificationModal(null)">+ Create Notification</button></div></div>
           <div id="notifications-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- USERS -->
       <div class="page" id="page-users">
-        <div class="ph"><h1>Accredited Delegates Registry</h1><p>Federation Membership Passports, Clearance Levels & Access Registry</p></div>
+        <div class="ph"><h1>Users</h1><p>Manage subscriber accounts and access</p></div>
         <div class="tc">
-          <div class="tt"><h3>Accredited Delegates & Officials</h3><div class="ta"><input class="si" id="flt-users" placeholder="Search accredited delegates..." oninput="filterUsers(this.value)"/><button class="btn bp" onclick="openUserModal(null)">+ Accredit Delegate</button></div></div>
+          <div class="tt"><h3>All Users</h3><div class="ta"><input class="si" id="flt-users" placeholder="Search users..." oninput="filterUsers(this.value)"/><button class="btn bp" onclick="openUserModal(null)">+ Add User</button></div></div>
           <div id="users-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- SESSIONS -->
       <div class="page" id="page-sessions">
-        <div class="ph"><h1>Security & Audit Intelligence</h1><p>Real-Time Extranet Telemetry & Authenticated Session Traces</p></div>
+        <div class="ph"><h1>Active Sessions</h1><p>Monitor who is watching now</p></div>
         <div class="tc">
-          <div class="tt"><h3>Active Extranet Connections</h3><button class="btn bgh bsm" onclick="loadSessions()">⟳ Refresh Registry</button></div>
+          <div class="tt"><h3>Live Viewers</h3><button class="btn bgh bsm" onclick="loadSessions()">⟳ Refresh</button></div>
           <div id="sessions-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
         </div>
       </div>
 
       <!-- SETTINGS -->
       <div class="page" id="page-settings">
-        <div class="ph"><h1>Global Governance Parameters</h1><p>Master Confederation Parameters, API Relays & Security Encryption</p></div>
+        <div class="ph"><h1>Settings</h1><p>App-wide configuration</p></div>
         <div class="tc" style="padding:28px;max-width:600px"><div id="cfg-form"><div class="ld"><div class="sp"></div>Loading...</div></div></div>
       </div>
 
       <!-- TELEGRAM BOT CONSOLE -->
       <div class="page" id="page-telegram">
         <div class="ph">
-          <h1>✈️ Telegram Dispatch Bureau</h1>
-          <p>Instantaneous Notification Channels & Automated Match Status Relays</p>
+          <h1>✈️ Telegram Bot Command Center</h1>
+          <p>Interact with your iOS Admin Bot directly from the web panel</p>
         </div>
         
         <div class="telegram-layout-grid">
@@ -1887,8 +2257,8 @@ Type any command below (e.g. `/help`, `/streams`, `/matches`) to control the app
       <!-- AUTOCLIP VIDEO -->
       <div class="page" id="page-autoclip">
         <div class="ph">
-          <h1>🎬 Algorithmic Highlight Ingestion</h1>
-          <p>Automated Video Keyframe Generation & Broadcast Timeline Dispatch</p>
+          <h1>🎬 AutoClip Highlights</h1>
+          <p>Generate exciting video summaries dynamically based on match events</p>
         </div>
         <div class="tc" style="padding: 24px; max-width: 800px;">
           <!-- Fetch section -->
@@ -2365,20 +2735,21 @@ function goPage(el,n){
   if(el) el.classList.add('active');
   const breadcrumb = document.getElementById('topbar-active-page');
   const pageTitles = {
-    'dashboard': 'Executive Overview',
-    'teams': 'Registered Clubs Registry',
-    'players': 'Licensed Athletes & Squads',
-    'leagues': 'Sanctioned Competitions',
-    'matches': 'Fixture Protocols & Match Center',
-    'highlights': 'Broadcast Media Protocols',
-    'news': 'Official Bulletins & Press Dispatches',
-    'autoclip': 'AutoClip Highlight Generation',
-    'streams': 'Sanctioned Satellite & Digital Channels',
-    'notifications': 'Official Federation Dispatches',
-    'users': 'Accredited Delegates Registry',
-    'sessions': 'Security & Audit Intelligence',
-    'settings': 'Global Governance Parameters',
-    'telegram': 'Telegram Dispatch Bureau'
+    'dashboard': 'Dashboard',
+    'teams': 'Teams',
+    'players': 'Players',
+    'leagues': 'Leagues',
+    'matches': 'Matches',
+    'telemetry': 'FotMob Live Tracker & xG',
+    'highlights': 'Highlights',
+    'news': 'News',
+    'autoclip': 'AutoClip Highlights',
+    'streams': 'Live Streams',
+    'notifications': 'Notifications',
+    'users': 'Users',
+    'sessions': 'Active Sessions',
+    'settings': 'Settings',
+    'telegram': 'Telegram Bot'
   };
   if(breadcrumb) {
     breadcrumb.textContent = pageTitles[n] || (n.charAt(0).toUpperCase() + n.slice(1));
@@ -2387,6 +2758,7 @@ function goPage(el,n){
   if(n==='sessions')loadSessions();
   if(n==='settings')loadSettings();
   if(n==='telegram')checkTelegramStatus();
+  if(n==='telemetry')initTelemetryPage();
 }
 function closeModal(id){document.getElementById(id).classList.remove('open');}
 document.querySelectorAll('.mo').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');});});
@@ -4923,11 +5295,766 @@ async function sendTelegramCommand() {
       <div style="width: 32px; height: 32px; border-radius: 50%; background: #ff4747; color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; font-weight: bold;">Bot</div>
       <div style="background: var(--card2); border: 1px solid var(--bdr); padding: 12px 16px; border-radius: 4px 16px 16px 16px; font-size: 14px; line-height: 1.5; color: var(--red);">❌ Local Agent Unreachable (Offline). Make sure Cooper Daemon is running.</div>
     `;
-    chatContainer.appendChild(errorDiv);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
   }
 }
 
+/* ==========================================================================
+   FOTMOB LIVE TELEMETRY, OPTA xG, 2D PITCH & WORKFLOW CONTROLLER
+   ========================================================================== */
+window.currentAdminTelemetryData = null;
+window.currentAdminShots = [];
+window.currentAdminActiveFilter = 'all';
+window.currentAdminMatchMeta = {};
+
+function initTelemetryPage() {
+  loadTrackedMatchesAdmin();
+  const input = document.getElementById('adminMatchInput');
+  if (input && input.value && (!window.currentAdminTelemetryData || document.getElementById('adminTelemetryHero').style.display === 'none')) {
+    loadAdminMatchTelemetry();
+  }
+}
+
+function setAdminPreset(id) {
+  const input = document.getElementById('adminMatchInput');
+  if (input) {
+    input.value = id;
+    loadAdminMatchTelemetry();
+  }
+}
+
+function switchAdminTelTab(tabId, btn) {
+  document.querySelectorAll('.tel-tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tel-tab-pane').forEach(p => p.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  const target = document.getElementById(tabId);
+  if (target) target.classList.add('active');
+}
+
+// ── 1. Fetch & Parse Full Telemetry ─────────────────────────────────────────
+async function loadAdminMatchTelemetry() {
+  const inputEl = document.getElementById('adminMatchInput');
+  let rawInput = (inputEl ? inputEl.value : '4506308').trim();
+  if (!rawInput) rawInput = '4506308';
+  
+  const idMatch = rawInput.match(/(\d{6,9})/);
+  const mId = idMatch ? idMatch[1] : rawInput;
+  
+  const heroEl = document.getElementById('adminTelemetryHero');
+  const tabsEl = document.getElementById('adminTelTabsWrap');
+  const statusEl = document.getElementById('adminActionStatus');
+  if (statusEl) statusEl.textContent = '⏳ Ingesting FotMob match telemetry & Opta radar data...';
+
+  let data = null;
+
+  // Fallback Chain 1: Local Proxy Server (fastest, no CORS)
+  try {
+    const res = await fetch(`http://localhost:7676/api/match?id=${mId}`);
+    if (res.ok) {
+      const json = await res.json();
+      if (json.data && (json.data.header || json.data.content)) {
+        data = json.data;
+      } else if (json.header || json.content) {
+        data = json;
+      }
+    }
+  } catch (e) {}
+
+  // Fallback Chain 2: Direct FotMob Ingestion API
+  if (!data) {
+    try {
+      const res = await fetch(`https://www.fotmob.com/api/data/matchDetails?matchId=${mId}`, {
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) data = await res.json();
+    } catch (e) {}
+  }
+
+  // Fallback Chain 3: CORS Proxy
+  if (!data) {
+    try {
+      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://www.fotmob.com/api/data/matchDetails?matchId=' + mId)}`;
+      const res = await fetch(proxyUrl);
+      if (res.ok) data = await res.json();
+    } catch (e) {}
+  }
+
+  // Fallback Chain 4: Supabase fotmob_raw Database Cache
+  if (!data) {
+    try {
+      const { data: rawRow } = await sb.from('fotmob_raw').select('payload').eq('match_id', mId).eq('data_key', 'match').maybeSingle();
+      if (rawRow && rawRow.payload) data = rawRow.payload;
+    } catch (e) {}
+  }
+
+  if (!data || (!data.header && !data.content)) {
+    if (statusEl) statusEl.innerHTML = `<span style="color:#ef4444;">❌ Could not retrieve match telemetry for ID ${mId}. Verify the match ID is valid.</span>`;
+    return;
+  }
+
+  window.currentAdminTelemetryData = data;
+  const header = data.header || {};
+  const content = data.content || {};
+  const teams = header.teams || [];
+  const statusObj = header.status || {};
+
+  const homeTeam = teams[0] || {};
+  const awayTeam = teams[1] || {};
+  const homeScore = homeTeam.score ?? 0;
+  const awayScore = awayTeam.score ?? 0;
+
+  const homeName = homeTeam.name || 'Home Team';
+  const awayName = awayTeam.name || 'Away Team';
+  const homeLogo = homeTeam.imageUrl || `https://images.fotmob.com/image_resources/logo/teamlogo/${homeTeam.id}_small.png`;
+  const awayLogo = awayTeam.imageUrl || `https://images.fotmob.com/image_resources/logo/teamlogo/${awayTeam.id}_small.png`;
+
+  window.currentAdminMatchMeta = {
+    fotmobId: mId,
+    homeTeam: homeName,
+    awayTeam: awayName,
+    homeScore,
+    awayScore,
+    homeLogo,
+    awayLogo,
+    leagueName: header.leagueName || 'League Match',
+    homeId: homeTeam.id,
+    awayId: awayTeam.id,
+    isFinished: !!statusObj.finished,
+    isLive: !!statusObj.started && !statusObj.finished,
+    statusText: statusObj.reason?.short || (statusObj.finished ? 'FT' : (statusObj.started ? 'LIVE' : 'Upcoming'))
+  };
+
+  // Populate Scoreboard Hero
+  if (heroEl) heroEl.style.display = 'block';
+  if (tabsEl) tabsEl.style.display = 'block';
+
+  document.getElementById('adminLeagueBadge').textContent = `🏆 ${header.leagueName || 'Match Telemetry'}`;
+  const liveBadge = document.getElementById('adminLiveBadge');
+  if (statusObj.finished) {
+    liveBadge.textContent = statusObj.reason?.short || 'FT';
+    liveBadge.style.background = '#64748b';
+  } else if (statusObj.started) {
+    liveBadge.textContent = statusObj.liveTime?.short || 'LIVE';
+    liveBadge.style.background = '#ef4444';
+  } else {
+    liveBadge.textContent = 'UPCOMING';
+    liveBadge.style.background = '#3b82f6';
+  }
+
+  document.getElementById('adminHomeCrest').src = homeLogo;
+  document.getElementById('adminHomeName').textContent = homeName;
+  document.getElementById('adminAwayCrest').src = awayLogo;
+  document.getElementById('adminAwayName').textContent = awayName;
+  document.getElementById('adminScoreDisplay').textContent = `${homeScore} - ${awayScore}`;
+  document.getElementById('adminStatusText').textContent = statusObj.reason?.long || statusObj.reason?.short || (statusObj.finished ? 'Full Time' : 'In Play');
+
+  // Goals & Scorers Extraction
+  const allEvents = content.matchFacts?.events?.events || [];
+  const goalEvents = allEvents.filter(e => e.type === 'Goal');
+  const homeScorersList = [];
+  const awayScorersList = [];
+
+  goalEvents.forEach(g => {
+    const pName = g.player?.name || g.nameStr || 'Goal';
+    const min = g.timeStr || g.time || '';
+    const item = `⚽ ${pName} ${min}'`;
+    if (g.isHome) homeScorersList.push(item);
+    else awayScorersList.push(item);
+  });
+
+  document.getElementById('adminHomeScorers').innerHTML = homeScorersList.join('<br>') || '';
+  document.getElementById('adminAwayScorers').innerHTML = awayScorersList.join('<br>') || '';
+
+  // Extract Shots and Calculate xG
+  const shots = content.shotmap?.shots || [];
+  window.currentAdminShots = shots;
+
+  let homeXg = 0;
+  let awayXg = 0;
+  const statsList = content.stats?.Periods?.All?.stats || [];
+  const allStatItems = [];
+  statsList.forEach(s => { (s.stats || []).forEach(item => allStatItems.push(item)); });
+  const xgItem = allStatItems.find(it => it.title === 'Expected goals (xG)' || (it.key && it.key.toLowerCase().includes('xg')));
+
+  if (xgItem && Array.isArray(xgItem.stats)) {
+    homeXg = parseFloat(xgItem.stats[0]) || 0;
+    awayXg = parseFloat(xgItem.stats[1]) || 0;
+  } else if (shots.length > 0) {
+    shots.forEach(s => {
+      const xg = parseFloat(s.expectedGoals) || 0;
+      if (s.teamId === homeTeam.id) homeXg += xg;
+      else awayXg += xg;
+    });
+  }
+
+  const xgBadge = document.getElementById('adminXgScoreBadge');
+  const xgMetric = document.getElementById('adminValXgMetric');
+  if (shots.length > 0 || xgItem) {
+    const xgText = `⚡ xG: ${homeXg.toFixed(2)} - ${awayXg.toFixed(2)}`;
+    xgBadge.textContent = xgText;
+    xgBadge.style.display = 'inline-block';
+    xgMetric.textContent = `${homeXg.toFixed(2)} - ${awayXg.toFixed(2)}`;
+    document.getElementById('adminValCoverage').innerHTML = '<span style="color:#10b981;font-weight:800;">⚡ Opta xG Pro Radar</span>';
+  } else {
+    xgBadge.style.display = 'none';
+    xgMetric.textContent = 'Not Available';
+    document.getElementById('adminValCoverage').textContent = 'Standard Basic Feed';
+  }
+
+  // Info Box Details
+  const infoBox = content.matchFacts?.infoBox || {};
+  document.getElementById('adminValReferee').textContent = infoBox.Referee?.text || infoBox.Referee || 'FIFA Official';
+  document.getElementById('adminValVenue').textContent = infoBox.Stadium?.name || infoBox.Stadium || 'Main Stadium';
+  document.getElementById('adminValLineup').textContent = content.lineup ? 'Confirmed Official' : 'Unconfirmed';
+
+  // Update Filter Pill Names
+  const fHome = document.getElementById('adminFilterHomeBtn');
+  const fAway = document.getElementById('adminFilterAwayBtn');
+  if (fHome) fHome.textContent = homeName.split(' ')[0];
+  if (fAway) fAway.textContent = awayName.split(' ')[0];
+
+  // Render Sub-Views
+  renderAdminPitch(shots);
+  renderAdminShotsTable(shots);
+  renderAdminEventsTimeline(allEvents);
+  renderAdminStatsTab(statsList, homeXg, awayXg, homeName, awayName);
+  renderAdminLineupsTab(content.lineup);
+
+  if (statusEl) statusEl.innerHTML = `<span style="color:#10b981;">✅ Telemetry ingested successfully (${shots.length} Opta shots, ${allEvents.length} events).</span>`;
+}
+
+// ── 2. Opta 2D Pitch Radar Shot Map ─────────────────────────────────────────
+function renderAdminPitch(shots) {
+  const group = document.getElementById('adminSvgShotsGroup');
+  if (!group) return;
+  group.innerHTML = '';
+  
+  const tooltip = document.getElementById('adminPitchTooltip');
+
+  shots.forEach((s, idx) => {
+    // Coordinate Normalization for Half-Pitch
+    const rawX = s.x != null ? Number(s.x) : 90;
+    const normX = rawX < 52.5 ? (105 - rawX) : rawX;
+    const distFromGoal = Math.max(0, 105 - normX);
+    const svgY = 20 + Math.min(390, (distFromGoal / 52.5) * 390);
+
+    const rawY = s.y != null ? Number(s.y) : 34;
+    const svgX = 20 + Math.max(10, Math.min(630, (rawY / 68) * 640));
+
+    const xg = s.expectedGoals != null ? Number(s.expectedGoals) : 0.05;
+    const r = Math.max(7, Math.min(22, 6 + (xg * 26)));
+
+    const isGoal = s.eventType === 'Goal';
+    const isOnTarget = s.isOnTarget;
+    const isBlocked = s.isBlocked;
+
+    let fill = '#94a3b8';
+    let stroke = '#ffffff';
+    let strokeWidth = '1.5';
+
+    if (isGoal) {
+      fill = '#10b981';
+      stroke = '#fbbf24';
+      strokeWidth = '3';
+    } else if (isOnTarget) {
+      fill = '#38bdf8';
+      stroke = '#ffffff';
+      strokeWidth = '2';
+    } else if (isBlocked) {
+      fill = '#f59e0b';
+      stroke = '#cbd5e1';
+      strokeWidth = '1.5';
+    }
+
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.style.cursor = 'pointer';
+
+    // Shot Marker Circle
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('cx', svgX);
+    circle.setAttribute('cy', svgY);
+    circle.setAttribute('r', r);
+    circle.setAttribute('fill', fill);
+    circle.setAttribute('stroke', stroke);
+    circle.setAttribute('stroke-width', strokeWidth);
+    circle.setAttribute('opacity', isGoal ? '1' : '0.85');
+    g.appendChild(circle);
+
+    // Goal Star/Ball indicator
+    if (isGoal) {
+      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      text.setAttribute('x', svgX);
+      text.setAttribute('y', svgY + 4);
+      text.setAttribute('text-anchor', 'middle');
+      text.setAttribute('font-size', '11');
+      text.textContent = '⚽';
+      g.appendChild(text);
+    }
+
+    // Tooltip Events
+    g.addEventListener('mouseenter', (ev) => {
+      circle.setAttribute('r', r + 4);
+      if (tooltip) {
+        tooltip.innerHTML = `
+          <div style="font-weight:800; font-size:13px; color:#fff; margin-bottom:4px;">${s.playerName || 'Player'} (${s.min}')</div>
+          <div style="font-size:11px; color:#94a3b8; display:flex; justify-content:space-between; gap:12px;">
+            <span>Result: <b style="color:${isGoal ? '#10b981' : '#38bdf8'}">${s.eventType}</b></span>
+            <span>xG: <b style="color:#fbbf24">${xg.toFixed(2)}</b></span>
+          </div>
+          <div style="font-size:10px; color:#64748b; margin-top:3px;">${s.situation || 'RegularPlay'} • ${s.shotType || 'Foot'}</div>
+        `;
+        tooltip.style.display = 'block';
+        const rect = ev.target.getBoundingClientRect();
+        tooltip.style.left = `${ev.clientX - 100}px`;
+        tooltip.style.top = `${ev.clientY - 85}px`;
+      }
+    });
+
+    g.addEventListener('mouseleave', () => {
+      circle.setAttribute('r', r);
+      if (tooltip) tooltip.style.display = 'none';
+    });
+
+    group.appendChild(g);
+  });
+}
+
+function filterAdminShots(type, btnEl) {
+  window.currentAdminActiveFilter = type;
+  document.querySelectorAll('.admin-filter-pill').forEach(b => b.classList.remove('active'));
+  if (btnEl) btnEl.classList.add('active');
+
+  const allShots = window.currentAdminShots || [];
+  const meta = window.currentAdminMatchMeta || {};
+
+  let filtered = allShots;
+  if (type === 'goals') filtered = allShots.filter(s => s.eventType === 'Goal');
+  else if (type === 'ontarget') filtered = allShots.filter(s => s.isOnTarget);
+  else if (type === 'highxg') filtered = allShots.filter(s => (s.expectedGoals || 0) >= 0.20);
+  else if (type === 'home' && meta.homeId) filtered = allShots.filter(s => s.teamId === meta.homeId);
+  else if (type === 'away' && meta.awayId) filtered = allShots.filter(s => s.teamId === meta.awayId);
+
+  renderAdminPitch(filtered);
+  renderAdminShotsTable(filtered);
+}
+
+// ── 3. Detailed Shots Table ─────────────────────────────────────────────────
+function renderAdminShotsTable(shots) {
+  const container = document.getElementById('adminShotsListContainer');
+  if (!container) return;
+  if (shots.length === 0) {
+    container.innerHTML = '<div style="padding:14px; text-align:center; color:#94a3b8;">No shots match the selected filter.</div>';
+    return;
+  }
+
+  let html = `
+    <div style="overflow-x:auto;">
+      <table class="w-full text-left" style="font-size:12px; border-collapse:collapse;">
+        <thead>
+          <tr style="border-bottom:1px solid #334155; color:#94a3b8;">
+            <th style="padding:8px;">Min</th>
+            <th style="padding:8px;">Player</th>
+            <th style="padding:8px;">Outcome</th>
+            <th style="padding:8px;">xG</th>
+            <th style="padding:8px;">xGOT</th>
+            <th style="padding:8px;">Situation</th>
+            <th style="padding:8px;">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+  `;
+
+  shots.forEach(s => {
+    const isGoal = s.eventType === 'Goal';
+    const xg = (s.expectedGoals != null ? Number(s.expectedGoals) : 0).toFixed(2);
+    const xgot = s.expectedGoalsOnTarget != null ? Number(s.expectedGoalsOnTarget).toFixed(2) : '-';
+    const outcomeColor = isGoal ? '#10b981' : (s.isOnTarget ? '#38bdf8' : (s.isBlocked ? '#f59e0b' : '#94a3b8'));
+
+    html += `
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px; font-weight:700; color:#fbbf24;">${s.min}'</td>
+        <td style="padding:8px; font-weight:700; color:#fff;">${s.playerName || 'Player'}</td>
+        <td style="padding:8px; font-weight:700; color:${outcomeColor};">${isGoal ? '⚽ Goal' : s.eventType}</td>
+        <td style="padding:8px; font-weight:700; color:#fbbf24;">${xg}</td>
+        <td style="padding:8px; color:#94a3b8;">${xgot}</td>
+        <td style="padding:8px; color:#cbd5e1;">${s.situation || 'Open Play'}</td>
+        <td style="padding:8px; color:#94a3b8;">${s.shotType || 'Shot'}</td>
+      </tr>
+    `;
+  });
+
+  html += '</tbody></table></div>';
+  container.innerHTML = html;
+}
+
+// ── 4. Events & Goals Timeline ──────────────────────────────────────────────
+function renderAdminEventsTimeline(events) {
+  const container = document.getElementById('adminTimelineContainer');
+  if (!container) return;
+  if (!events || events.length === 0) {
+    container.innerHTML = '<div style="color:#94a3b8; padding:12px;">No match timeline events available.</div>';
+    return;
+  }
+
+  let html = '';
+  events.forEach(e => {
+    const isGoal = e.type === 'Goal';
+    const isCard = e.type === 'Card';
+    const isSub = e.type === 'Substitution';
+    
+    let icon = '⚡';
+    let badgeColor = '#3b82f6';
+    if (isGoal) { icon = '⚽'; badgeColor = '#10b981'; }
+    else if (isCard) { icon = e.card === 'Red' ? '🟥' : '🟨'; badgeColor = e.card === 'Red' ? '#ef4444' : '#f59e0b'; }
+    else if (isSub) { icon = '🔄'; badgeColor = '#64748b'; }
+
+    html += `
+      <div style="display:flex; align-items:center; gap:12px; padding:10px 14px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:10px;">
+        <span style="font-weight:800; font-size:13px; color:#fbbf24; min-width:32px;">${e.timeStr || e.time}'</span>
+        <span style="font-size:16px;">${icon}</span>
+        <div style="flex:1;">
+          <div style="font-weight:700; font-size:13px; color:#fff;">
+            ${e.player?.name || e.nameStr || e.type}
+            ${e.assistInput ? `<span style="font-size:11px; color:#94a3b8; font-weight:normal;"> (${e.assistStr || 'assist by ' + e.assistInput})</span>` : ''}
+          </div>
+          <div style="font-size:11px; color:#64748b;">${e.isHome ? 'Home Team' : 'Away Team'} • ${e.type}</div>
+        </div>
+        ${isGoal && e.newScore ? `<span style="font-size:12px; font-weight:800; color:#10b981; background:rgba(16,185,129,0.1); padding:2px 8px; border-radius:6px;">${e.newScore[0]} - ${e.newScore[1]}</span>` : ''}
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
+// ── 5. Match Statistics & xG Comparison Bars ────────────────────────────────
+function renderAdminStatsTab(statsList, homeXg, awayXg, homeName, awayName) {
+  const banner = document.getElementById('adminXgBannerBox');
+  const container = document.getElementById('adminStatsBarsContainer');
+  if (!container) return;
+
+  if (banner && (homeXg > 0 || awayXg > 0)) {
+    const totalXg = (homeXg + awayXg) || 1;
+    const homePct = Math.round((homeXg / totalXg) * 100);
+    const awayPct = 100 - homePct;
+
+    banner.innerHTML = `
+      <div style="background:radial-gradient(circle at 50% 10%, #0c2b66 0%, #051838 100%); border:1px solid rgba(212,175,55,0.4); border-radius:12px; padding:16px; margin-bottom:18px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span style="font-weight:800; font-size:14px; color:#fff;">Opta Expected Goals (xG) Momentum</span>
+          <span style="font-size:11px; font-weight:800; color:#fbbf24; background:rgba(251,191,36,0.15); padding:2px 8px; border-radius:12px;">PRO METRIC</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-weight:800; font-size:16px; margin-bottom:6px;">
+          <span style="color:#38bdf8;">${homeXg.toFixed(2)} (${homeName})</span>
+          <span style="color:#f59e0b;">${awayXg.toFixed(2)} (${awayName})</span>
+        </div>
+        <div style="height:8px; background:#1e293b; border-radius:4px; display:flex; overflow:hidden;">
+          <div style="width:${homePct}%; background:linear-gradient(90deg,#0284c7,#38bdf8);"></div>
+          <div style="width:${awayPct}%; background:linear-gradient(90deg,#f59e0b,#d97706);"></div>
+        </div>
+      </div>
+    `;
+  }
+
+  let html = '';
+  statsList.forEach(section => {
+    html += `<h5 style="font-size:13px; font-weight:800; color:#94a3b8; text-transform:uppercase; margin:16px 0 8px; letter-spacing:0.05em;">${section.title}</h5>`;
+    (section.stats || []).forEach(item => {
+      const vals = item.stats || [0, 0];
+      const v0 = vals[0] ?? '-';
+      const v1 = vals[1] ?? '-';
+      
+      const num0 = parseFloat(v0) || 0;
+      const num1 = parseFloat(v1) || 0;
+      const total = (num0 + num1) || 1;
+      const p0 = Math.round((num0 / total) * 100);
+      const p1 = 100 - p0;
+
+      html += `
+        <div style="margin-bottom:12px;">
+          <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:4px;">
+            <span style="font-weight:700; color:#fff;">${v0}</span>
+            <span style="color:#94a3b8; font-weight:600;">${item.title}</span>
+            <span style="font-weight:700; color:#fff;">${v1}</span>
+          </div>
+          <div style="height:6px; background:#1e293b; border-radius:3px; display:flex; overflow:hidden;">
+            <div style="width:${p0}%; background:#38bdf8;"></div>
+            <div style="width:${p1}%; background:#f59e0b;"></div>
+          </div>
+        </div>
+      `;
+    });
+  });
+
+  container.innerHTML = html || '<div style="color:#94a3b8;">No detailed stats available.</div>';
+}
+
+// ── 6. Lineups Tab ──────────────────────────────────────────────────────────
+function renderAdminLineupsTab(lineup) {
+  const homeList = document.getElementById('adminHomeLineupList');
+  const awayList = document.getElementById('adminAwayLineupList');
+  if (!homeList || !awayList) return;
+
+  if (!lineup) {
+    homeList.innerHTML = '<div style="color:#94a3b8;">Official lineups not announced yet.</div>';
+    awayList.innerHTML = '<div style="color:#94a3b8;">Official lineups not announced yet.</div>';
+    return;
+  }
+
+  const hStarters = lineup.homeTeam?.starters || [];
+  const aStarters = lineup.awayTeam?.starters || [];
+
+  document.getElementById('adminHomeLineupHdr').textContent = `Home: ${lineup.homeTeam?.formation || 'Starting XI'}`;
+  document.getElementById('adminAwayLineupHdr').textContent = `Away: ${lineup.awayTeam?.formation || 'Starting XI'}`;
+
+  const renderPlayers = (players) => {
+    return players.map(p => `
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:8px 12px; background:rgba(255,255,255,0.03); border-radius:8px; margin-bottom:6px; font-size:12px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-weight:800; color:#fbbf24; min-width:20px;">${p.shirtNumber || '-'}</span>
+          <span style="font-weight:700; color:#fff;">${p.name || `${p.firstName || ''} ${p.lastName || ''}`.trim()}</span>
+        </div>
+        ${p.performance?.rating ? `<span style="font-weight:800; font-size:11px; background:#0284c7; color:#fff; padding:1px 6px; border-radius:4px;">${p.performance.rating}</span>` : ''}
+      </div>
+    `).join('');
+  };
+
+  homeList.innerHTML = renderPlayers(hStarters);
+  awayList.innerHTML = renderPlayers(aStarters);
+}
+
+// ── 7. Track Current Match in ZetaSports Database ───────────────────────────
+async function adminTrackCurrentMatch() {
+  const meta = window.currentAdminMatchMeta;
+  if (!meta || !meta.fotmobId) {
+    alert('⚠️ Please fetch match telemetry first.');
+    return;
+  }
+
+  const statusEl = document.getElementById('adminActionStatus');
+  if (statusEl) statusEl.textContent = '⏳ Saving match to live tracking database...';
+
+  try {
+    const payload = {
+      fotmob_id: meta.fotmobId,
+      home_team: meta.homeTeam,
+      away_team: meta.awayTeam,
+      home_score: meta.homeScore,
+      away_score: meta.awayScore,
+      home_logo: meta.homeLogo,
+      away_logo: meta.awayLogo,
+      league_name: meta.leagueName,
+      status: 'live',
+      is_live_tracked: true,
+      time_elapsed: meta.statusText || 'Live',
+      updated_at: new Date().toISOString()
+    };
+
+    const { data: existing } = await sb.from('zeta_matches').select('id').eq('fotmob_id', meta.fotmobId).maybeSingle();
+    let res;
+    if (existing) {
+      res = await sb.from('zeta_matches').update(payload).eq('id', existing.id);
+    } else {
+      res = await sb.from('zeta_matches').insert(payload);
+    }
+
+    if (res.error) throw res.error;
+
+    if (statusEl) statusEl.innerHTML = `<span style="color:#10b981;font-weight:800;">✅ [${meta.homeTeam} vs ${meta.awayTeam}] is now LIVE TRACKED! GitHub Actions will sync every 5 minutes.</span>`;
+    loadTrackedMatchesAdmin();
+  } catch (err) {
+    if (statusEl) statusEl.innerHTML = `<span style="color:#ef4444;">❌ Error tracking match: ${err.message}</span>`;
+  }
+}
+
+// ── 8. Push Raw Master Payload to Supabase ──────────────────────────────────
+async function adminPushCurrentToSupabase() {
+  const meta = window.currentAdminMatchMeta;
+  const rawData = window.currentAdminTelemetryData;
+  if (!meta || !meta.fotmobId || !rawData) {
+    alert('⚠️ Please fetch match telemetry first.');
+    return;
+  }
+
+  const statusEl = document.getElementById('adminActionStatus');
+  if (statusEl) statusEl.textContent = '⏳ Upserting master telemetry to fotmob_raw & zeta_match_stats...';
+
+  try {
+    // 1. Raw Telemetry Cache
+    await sb.from('fotmob_raw').upsert({
+      match_id: meta.fotmobId,
+      data_key: 'match',
+      payload: rawData,
+      updated_at: new Date().toISOString()
+    }, { onConflict: 'match_id,data_key' });
+
+    // 2. Resolve or Update Zeta Match Row
+    const { data: existing } = await sb.from('zeta_matches').select('id').eq('fotmob_id', meta.fotmobId).maybeSingle();
+    if (existing) {
+      await sb.from('zeta_matches').update({
+        home_score: meta.homeScore,
+        away_score: meta.awayScore,
+        status: meta.isFinished ? 'finished' : 'live',
+        time_elapsed: meta.statusText,
+        updated_at: new Date().toISOString()
+      }).eq('id', existing.id);
+
+      // 3. Stats Upsert
+      const statsList = rawData.content?.stats?.Periods?.All?.stats || [];
+      if (statsList.length > 0) {
+        await sb.from('zeta_match_stats').upsert({
+          match_id: existing.id,
+          stats: statsList
+        }, { onConflict: 'match_id' });
+      }
+    }
+
+    if (statusEl) statusEl.innerHTML = `<span style="color:#10b981;font-weight:800;">✅ Full raw telemetry & Opta stats stored in Supabase successfully!</span>`;
+  } catch (err) {
+    if (statusEl) statusEl.innerHTML = `<span style="color:#ef4444;">❌ Push error: ${err.message}</span>`;
+  }
+}
+
+// ── 9. Load Tracked Live Matches Registry ────────────────────────────────────
+async function loadTrackedMatchesAdmin() {
+  const container = document.getElementById('adminTrackedMatchesTable');
+  const countBadge = document.getElementById('adminTrackedCountBadge');
+  if (!container) return;
+
+  try {
+    const { data: matches, error } = await sb
+      .from('zeta_matches')
+      .select('id, fotmob_id, home_team, away_team, home_score, away_score, status, league_name, is_live_tracked, time_elapsed, date')
+      .or('status.eq.live,is_live_tracked.eq.true')
+      .order('date', { ascending: false });
+
+    if (error) throw error;
+
+    const list = matches || [];
+    if (countBadge) countBadge.textContent = `${list.length} Live Tracked Match(es)`;
+
+    if (list.length === 0) {
+      container.innerHTML = `
+        <div style="padding:28px; text-align:center; color:#94a3b8;">
+          <div style="font-size:24px; margin-bottom:8px;">💤</div>
+          <div style="font-weight:700; color:#fff;">No Live Matches Currently Tracked</div>
+          <div style="font-size:12px; margin-top:4px;">Use the search bar above to fetch and track any live match with 1 click.</div>
+        </div>
+      `;
+      return;
+    }
+
+    let html = `
+      <div style="overflow-x:auto;">
+        <table class="w-full text-left" style="font-size:13px; border-collapse:collapse;">
+          <thead>
+            <tr style="border-bottom:1px solid #334155; color:#94a3b8;">
+              <th style="padding:10px 14px;">Match</th>
+              <th style="padding:10px 14px;">League</th>
+              <th style="padding:10px 14px;">Score</th>
+              <th style="padding:10px 14px;">Time</th>
+              <th style="padding:10px 14px;">FotMob ID</th>
+              <th style="padding:10px 14px; text-align:right;">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+    `;
+
+    list.forEach(m => {
+      html += `
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:10px 14px; font-weight:800; color:#fff;">
+            ${m.home_team || 'Home'} vs ${m.away_team || 'Away'}
+          </td>
+          <td style="padding:10px 14px; color:#38bdf8;">${m.league_name || 'League'}</td>
+          <td style="padding:10px 14px; font-weight:800; color:#10b981;">${m.home_score ?? 0} - ${m.away_score ?? 0}</td>
+          <td style="padding:10px 14px; color:#fbbf24;">${m.time_elapsed || 'Live'}</td>
+          <td style="padding:10px 14px; font-family:monospace; color:#94a3b8;">${m.fotmob_id || '-'}</td>
+          <td style="padding:10px 14px; text-align:right; display:flex; gap:8px; justify-content:flex-end;">
+            <button class="btn bp bsm" style="background:#0284c7; padding:4px 10px;" onclick="setAdminPreset('${m.fotmob_id || m.id}')">
+              🔍 Telemetry
+            </button>
+            <button class="btn bgh bsm" style="color:#ef4444; border-color:rgba(239,68,68,0.4); padding:4px 10px;" onclick="adminUntrackMatch('${m.id}')">
+              Untrack (FT)
+            </button>
+          </td>
+        </tr>
+      `;
+    });
+
+    html += '</tbody></table></div>';
+    container.innerHTML = html;
+  } catch (e) {
+    container.innerHTML = `<div style="color:#ef4444; padding:14px;">Failed to load tracked matches: ${e.message}</div>`;
+  }
+}
+
+async function adminUntrackMatch(matchId) {
+  if (!confirm('Mark match as finished and stop autonomous live tracking?')) return;
+  try {
+    await sb.from('zeta_matches').update({
+      status: 'finished',
+      is_live_tracked: false,
+      updated_at: new Date().toISOString()
+    }).eq('id', matchId);
+    loadTrackedMatchesAdmin();
+  } catch (e) {
+    alert('Error untracking match: ' + e.message);
+  }
+}
+
+// ── 10. Trigger GitHub Actions Live Score Workflow ──────────────────────────
+async function triggerWorkflowDispatchAdmin() {
+  const matchId = (document.getElementById('adminMatchInput')?.value || '').trim();
+  const repoOwner = 'Mubthaseem';
+  const repoName = 'zetasports-flutter';
+  const workflowFile = 'live_scores.yml';
+
+  let pat = localStorage.getItem('GH_ADMIN_PAT');
+  if (!pat) {
+    pat = prompt('Enter your GitHub Personal Access Token (PAT) with repo/workflow permissions to trigger live sync:\n(Saved securely in your browser localStorage)');
+    if (pat) localStorage.setItem('GH_ADMIN_PAT', pat.trim());
+  }
+
+  const statusEl = document.getElementById('adminActionStatus');
+  if (statusEl) statusEl.textContent = '⚡ Dispatching GitHub Actions Live Synchronizer...';
+
+  if (pat) {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/${workflowFile}/dispatches`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${pat.trim()}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ref: 'main',
+          inputs: {
+            match_id: matchId || '',
+            force_sync: true
+          }
+        })
+      });
+
+      if (res.status === 204) {
+        alert('🚀 GitHub Actions Live Workflow Dispatched Successfully!\nTelemetry and scores will sync to GitHub Pages and Supabase in ~15 seconds.');
+        if (statusEl) statusEl.innerHTML = '<span style="color:#10b981;font-weight:800;">🚀 GitHub Actions Live Workflow Dispatched Successfully!</span>';
+        return;
+      } else {
+        const err = await res.text();
+        throw new Error(`GitHub API error (${res.status}): ${err}`);
+      }
+    } catch (e) {
+      console.warn('GitHub dispatch error:', e);
+      alert('GitHub dispatch note: ' + e.message + '\n\nFalling back to direct Supabase live sync!');
+    }
+  }
+
+  // Fallback: If no PAT or API failed, immediately push and refresh
+  await adminTrackCurrentMatch();
+  await adminPushCurrentToSupabase();
+  alert('✅ Match updated in Supabase directly! Scheduled GitHub Actions run will ingest latest data automatically.');
+}
 
 </script>
 </body>

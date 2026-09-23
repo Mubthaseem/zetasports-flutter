@@ -1,5 +1,812 @@
 {
-  "generatedAt": "2026-09-23T10:35:04.842Z",
-  "activeMatchesCount": 0,
-  "matches": []
+  "generatedAt": "2026-09-23T19:37:37.284Z",
+  "activeMatchesCount": 1,
+  "matches": [
+    {
+      "id": "4506308",
+      "matchId": null,
+      "competitionId": "516",
+      "competitionName": "Football League",
+      "competitionSlug": "league",
+      "country": "Algeria",
+      "round": 1,
+      "utcDate": "2024-09-21T14:00:00.000Z",
+      "status": "FINISHED",
+      "minute": "FT",
+      "homeTeam": {
+        "id": "8650",
+        "name": "Liverpool",
+        "shortName": "Liverpool",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8650_small.png",
+        "score": 3
+      },
+      "awayTeam": {
+        "id": "8678",
+        "name": "AFC Bournemouth",
+        "shortName": "AFC Bournemouth",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8678_small.png",
+        "score": 0
+      },
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "lineups": {
+        "home_formation": "4-2-3-1",
+        "away_formation": "4-2-3-1",
+        "coach_home": "Arne Slot",
+        "coach_away": "Andoni Iraola",
+        "players": [
+          {
+            "name": "Caoimhín Kelleher",
+            "number": "62",
+            "position": "11",
+            "rating": "8.8",
+            "is_home": true,
+            "x": 0.5,
+            "y": 0.545
+          },
+          {
+            "name": "Trent Alexander-Arnold",
+            "number": "66",
+            "position": "32",
+            "rating": "8",
+            "is_home": true,
+            "x": 0.125,
+            "y": 0.6314
+          },
+          {
+            "name": "Ibrahima Konaté",
+            "number": "5",
+            "position": "34",
+            "rating": "8.1",
+            "is_home": true,
+            "x": 0.375,
+            "y": 0.6314
+          },
+          {
+            "name": "Virgil van Dijk",
+            "number": "4",
+            "position": "36",
+            "rating": "7.3",
+            "is_home": true,
+            "x": 0.625,
+            "y": 0.6314
+          },
+          {
+            "name": "Andrew Robertson",
+            "number": "26",
+            "position": "38",
+            "rating": "7.8",
+            "is_home": true,
+            "x": 0.875,
+            "y": 0.6314
+          },
+          {
+            "name": "Ryan Gravenberch",
+            "number": "38",
+            "position": "64",
+            "rating": "8.1",
+            "is_home": true,
+            "x": 0.3,
+            "y": 0.71825
+          },
+          {
+            "name": "Alexis Mac Allister",
+            "number": "10",
+            "position": "66",
+            "rating": "8.1",
+            "is_home": true,
+            "x": 0.7,
+            "y": 0.71825
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": "11",
+            "position": "83",
+            "rating": "8.6",
+            "is_home": true,
+            "x": 0.162,
+            "y": 0.8051
+          },
+          {
+            "name": "Dominik Szoboszlai",
+            "number": "8",
+            "position": "85",
+            "rating": "7",
+            "is_home": true,
+            "x": 0.5,
+            "y": 0.8051
+          },
+          {
+            "name": "Luis Díaz",
+            "number": "7",
+            "position": "87",
+            "rating": "9.2",
+            "is_home": true,
+            "x": 0.837,
+            "y": 0.8051
+          },
+          {
+            "name": "Darwin Núñez",
+            "number": "9",
+            "position": "115",
+            "rating": "7.7",
+            "is_home": true,
+            "x": 0.5,
+            "y": 0.8915
+          },
+          {
+            "name": "Kepa Arrizabalaga",
+            "number": "13",
+            "position": "11",
+            "rating": "7.1",
+            "is_home": false,
+            "x": 0.5,
+            "y": 0.045000000000000005
+          },
+          {
+            "name": "Julián Araujo",
+            "number": "22",
+            "position": "32",
+            "rating": "5.3",
+            "is_home": false,
+            "x": 0.125,
+            "y": 0.1314
+          },
+          {
+            "name": "Ilya Zabarnyi",
+            "number": "27",
+            "position": "34",
+            "rating": "6.3",
+            "is_home": false,
+            "x": 0.375,
+            "y": 0.1314
+          },
+          {
+            "name": "Dean Huijsen",
+            "number": "2",
+            "position": "36",
+            "rating": "5.9",
+            "is_home": false,
+            "x": 0.625,
+            "y": 0.1314
+          },
+          {
+            "name": "Miloš Kerkez",
+            "number": "3",
+            "position": "38",
+            "rating": "6.9",
+            "is_home": false,
+            "x": 0.875,
+            "y": 0.1314
+          },
+          {
+            "name": "Ryan Christie",
+            "number": "10",
+            "position": "64",
+            "rating": "6.1",
+            "is_home": false,
+            "x": 0.3,
+            "y": 0.21825
+          },
+          {
+            "name": "Lewis Cook",
+            "number": "4",
+            "position": "66",
+            "rating": "6.8",
+            "is_home": false,
+            "x": 0.7,
+            "y": 0.21825
+          },
+          {
+            "name": "Antoine Semenyo",
+            "number": "24",
+            "position": "83",
+            "rating": "6.7",
+            "is_home": false,
+            "x": 0.162,
+            "y": 0.30510000000000004
+          },
+          {
+            "name": "Justin Kluivert",
+            "number": "19",
+            "position": "85",
+            "rating": "5.9",
+            "is_home": false,
+            "x": 0.5,
+            "y": 0.30510000000000004
+          },
+          {
+            "name": "Marcus Tavernier",
+            "number": "16",
+            "position": "87",
+            "rating": "6.9",
+            "is_home": false,
+            "x": 0.837,
+            "y": 0.30510000000000004
+          },
+          {
+            "name": "Evanilson",
+            "number": "9",
+            "position": "115",
+            "rating": "6.4",
+            "is_home": false,
+            "x": 0.5,
+            "y": 0.3915
+          }
+        ],
+        "substitutes": [
+          {
+            "name": "Curtis Jones",
+            "number": "17",
+            "is_home": true
+          },
+          {
+            "name": "Cody Gakpo",
+            "number": "18",
+            "is_home": true
+          },
+          {
+            "name": "Federico Chiesa",
+            "number": "14",
+            "is_home": true
+          },
+          {
+            "name": "Vítezslav Jaroš",
+            "number": "56",
+            "is_home": true
+          },
+          {
+            "name": "Conor Bradley",
+            "number": "84",
+            "is_home": true
+          },
+          {
+            "name": "Jarell Quansah",
+            "number": "78",
+            "is_home": true
+          },
+          {
+            "name": "Joseph Gomez",
+            "number": "2",
+            "is_home": true
+          },
+          {
+            "name": "Konstantinos Tsimikas",
+            "number": "21",
+            "is_home": true
+          },
+          {
+            "name": "Diogo Jota",
+            "number": "20",
+            "is_home": true
+          },
+          {
+            "name": "Dango Ouattara",
+            "number": "11",
+            "is_home": false
+          },
+          {
+            "name": "Alex Scott",
+            "number": "8",
+            "is_home": false
+          },
+          {
+            "name": "Adam Smith",
+            "number": "15",
+            "is_home": false
+          },
+          {
+            "name": "Luis Sinisterra",
+            "number": "17",
+            "is_home": false
+          },
+          {
+            "name": "Enes Ünal",
+            "number": "26",
+            "is_home": false
+          },
+          {
+            "name": "Mark Travers",
+            "number": "42",
+            "is_home": false
+          },
+          {
+            "name": "James Hill",
+            "number": "23",
+            "is_home": false
+          },
+          {
+            "name": "Marcos Senesi",
+            "number": "5",
+            "is_home": false
+          },
+          {
+            "name": "David Brooks",
+            "number": "7",
+            "is_home": false
+          }
+        ]
+      },
+      "stats": {
+        "home": {
+          "possession": 59,
+          "shots": 19,
+          "shots_on_target": 13,
+          "corners": 3,
+          "fouls": 10,
+          "yellow_cards": 1,
+          "red_cards": 0,
+          "xg": 2.06
+        },
+        "away": {
+          "possession": 41,
+          "shots": 19,
+          "shots_on_target": 6,
+          "corners": 9,
+          "fouls": 12,
+          "yellow_cards": 4,
+          "red_cards": 0,
+          "xg": 1.08
+        }
+      },
+      "events": [
+        {
+          "minute": "1'",
+          "team": "away",
+          "player": "Ryan Christie",
+          "player_name": "Ryan Christie",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "4'",
+          "team": "away",
+          "player": "Antoine Semenyo",
+          "player_name": "Antoine Semenyo",
+          "assist": null,
+          "type": "var",
+          "description": null
+        },
+        {
+          "minute": "18'",
+          "team": "away",
+          "player": "Justin Kluivert",
+          "player_name": "Justin Kluivert",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "26'",
+          "team": "away",
+          "player": "Andoni Iraola",
+          "player_name": "Andoni Iraola",
+          "assist": null,
+          "type": "card",
+          "description": {
+            "localizedKey": "coach",
+            "defaultText": "Coach"
+          }
+        },
+        {
+          "minute": "26'",
+          "team": "home",
+          "player": "Luis Díaz",
+          "player_name": "Luis Díaz",
+          "assist": "assist by Ibrahima Konaté",
+          "type": "goal",
+          "description": null
+        },
+        {
+          "minute": "28'",
+          "team": "home",
+          "player": "Luis Díaz",
+          "player_name": "Luis Díaz",
+          "assist": "assist by Trent Alexander-Arnold",
+          "type": "goal",
+          "description": null
+        },
+        {
+          "minute": "37'",
+          "team": "home",
+          "player": "Darwin Núñez",
+          "player_name": "Darwin Núñez",
+          "assist": "assist by Mohamed Salah",
+          "type": "goal",
+          "description": null
+        },
+        {
+          "minute": "45'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "addedtime",
+          "description": null
+        },
+        {
+          "minute": "45'",
+          "team": "away",
+          "player": "Dean Huijsen",
+          "player_name": "Dean Huijsen",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "45'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "half",
+          "description": null
+        },
+        {
+          "minute": "46'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "60'",
+          "team": "home",
+          "player": "Ibrahima Konaté",
+          "player_name": "Ibrahima Konaté",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "61'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "69'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "70'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "70'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "72'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "72'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "76'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "87'",
+          "team": "away",
+          "player": "Lewis Cook",
+          "player_name": "Lewis Cook",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "addedtime",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "half",
+          "description": null
+        }
+      ],
+      "xg": {
+        "home": 2.06,
+        "away": 1.08
+      },
+      "scorers": {
+        "home": "Luis Díaz 26', Luis Díaz 28', Darwin Núñez 37'",
+        "away": ""
+      },
+      "venue": "Anfield",
+      "referee": "Tony Harrington",
+      "updatedAt": "2026-09-23T19:37:37.283Z"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "team": "USM Alger",
+      "team_name": "USM Alger",
+      "played": 3,
+      "p": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
+      "scoresStr": "5-2",
+      "goal_diff": 3,
+      "gd": "+3",
+      "points": 7,
+      "pts": 7
+    },
+    {
+      "rank": 2,
+      "team": "CR Bélouizdad",
+      "team_name": "CR Bélouizdad",
+      "played": 3,
+      "p": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
+      "scoresStr": "5-3",
+      "goal_diff": 2,
+      "gd": "+2",
+      "points": 7,
+      "pts": 7
+    },
+    {
+      "rank": 3,
+      "team": "MC Oran",
+      "team_name": "MC Oran",
+      "played": 2,
+      "p": 2,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "scoresStr": "3-0",
+      "goal_diff": 3,
+      "gd": "+3",
+      "points": 6,
+      "pts": 6
+    },
+    {
+      "rank": 4,
+      "team": "ES Ben Aknoun",
+      "team_name": "ES Ben Aknoun",
+      "played": 3,
+      "p": 3,
+      "wins": 1,
+      "draws": 2,
+      "losses": 0,
+      "scoresStr": "4-3",
+      "goal_diff": 1,
+      "gd": "+1",
+      "points": 5,
+      "pts": 5
+    },
+    {
+      "rank": 5,
+      "team": "CS Constantine",
+      "team_name": "CS Constantine",
+      "played": 3,
+      "p": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "scoresStr": "5-6",
+      "goal_diff": -1,
+      "gd": "-1",
+      "points": 4,
+      "pts": 4
+    },
+    {
+      "rank": 6,
+      "team": "CR Temouchent",
+      "team_name": "CR Temouchent",
+      "played": 3,
+      "p": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "scoresStr": "2-3",
+      "goal_diff": -1,
+      "gd": "-1",
+      "points": 4,
+      "pts": 4
+    },
+    {
+      "rank": 7,
+      "team": "ES Sétif",
+      "team_name": "ES Sétif",
+      "played": 3,
+      "p": 3,
+      "wins": 1,
+      "draws": 0,
+      "losses": 2,
+      "scoresStr": "5-3",
+      "goal_diff": 2,
+      "gd": "+2",
+      "points": 3,
+      "pts": 3
+    },
+    {
+      "rank": 8,
+      "team": "MC Alger",
+      "team_name": "MC Alger",
+      "played": 1,
+      "p": 1,
+      "wins": 1,
+      "draws": 0,
+      "losses": 0,
+      "scoresStr": "2-0",
+      "goal_diff": 2,
+      "gd": "+2",
+      "points": 3,
+      "pts": 3
+    },
+    {
+      "rank": 9,
+      "team": "JS El Biar",
+      "team_name": "JS El Biar",
+      "played": 3,
+      "p": 3,
+      "wins": 1,
+      "draws": 0,
+      "losses": 2,
+      "scoresStr": "4-4",
+      "goal_diff": 0,
+      "gd": "0",
+      "points": 3,
+      "pts": 3
+    },
+    {
+      "rank": 10,
+      "team": "JS Kabylie",
+      "team_name": "JS Kabylie",
+      "played": 2,
+      "p": 2,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "scoresStr": "1-1",
+      "goal_diff": 0,
+      "gd": "0",
+      "points": 3,
+      "pts": 3
+    },
+    {
+      "rank": 11,
+      "team": "Olympique Akbou",
+      "team_name": "Olympique Akbou",
+      "played": 3,
+      "p": 3,
+      "wins": 1,
+      "draws": 0,
+      "losses": 2,
+      "scoresStr": "4-5",
+      "goal_diff": -1,
+      "gd": "-1",
+      "points": 3,
+      "pts": 3
+    },
+    {
+      "rank": 12,
+      "team": "MB Rouissat",
+      "team_name": "MB Rouissat",
+      "played": 3,
+      "p": 3,
+      "wins": 1,
+      "draws": 0,
+      "losses": 2,
+      "scoresStr": "2-3",
+      "goal_diff": -1,
+      "gd": "-1",
+      "points": 3,
+      "pts": 3
+    },
+    {
+      "rank": 13,
+      "team": "USM Khenchela",
+      "team_name": "USM Khenchela",
+      "played": 2,
+      "p": 2,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "scoresStr": "1-1",
+      "goal_diff": 0,
+      "gd": "0",
+      "points": 2,
+      "pts": 2
+    },
+    {
+      "rank": 14,
+      "team": "US Biskra",
+      "team_name": "US Biskra",
+      "played": 3,
+      "p": 3,
+      "wins": 0,
+      "draws": 2,
+      "losses": 1,
+      "scoresStr": "2-3",
+      "goal_diff": -1,
+      "gd": "-1",
+      "points": 2,
+      "pts": 2
+    },
+    {
+      "rank": 15,
+      "team": "ASO Chlef",
+      "team_name": "ASO Chlef",
+      "played": 3,
+      "p": 3,
+      "wins": 0,
+      "draws": 1,
+      "losses": 2,
+      "scoresStr": "3-7",
+      "goal_diff": -4,
+      "gd": "-4",
+      "points": 1,
+      "pts": 1
+    },
+    {
+      "rank": 16,
+      "team": "JS Saoura",
+      "team_name": "JS Saoura",
+      "played": 2,
+      "p": 2,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "scoresStr": "0-4",
+      "goal_diff": -4,
+      "gd": "-4",
+      "points": 1,
+      "pts": 1
+    }
+  ]
 }

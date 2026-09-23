@@ -5,6 +5,16 @@ on:
     # Run every 5 minutes (standard GitHub Actions cron interval)
     - cron: '*/5 * * * *'
   workflow_dispatch: # Manual trigger from GitHub Actions or Admin Panel
+    inputs:
+      match_id:
+        description: 'FotMob Match ID to sync immediately (e.g. 4506308)'
+        required: false
+        type: string
+      force_sync:
+        description: 'Force poll even if outside standard schedule'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -45,6 +55,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL || 'https://voocdrpetiyspuhyeapi.supabase.co' }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY || secrets.SUPABASE_KEY || 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV' }}
+          MATCH_ID: ${{ inputs.match_id || '' }}
         run: |
           echo "🚀 Updating Supabase matches, standings, and telemetry..."
           node scripts/live_score_updater.mjs

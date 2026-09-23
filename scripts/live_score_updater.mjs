@@ -128,14 +128,19 @@ async function updateStandings(buildId) {
   }
 }
 
-// ── 4. Fetch Deep Match Telemetry ─────────────────────────────────────────────
-async function fetchMatchTelemetry(buildId, fotmobId) {
-  const url = `https://www.fotmob.com/_next/data/${buildId}/en/match/${fotmobId}.json`;
+// ── 4. Fetch Deep Match Telemetry (Direct FotMob API) ──────────────────────────
+async function fetchMatchTelemetry(fotmobId) {
+  const url = `https://www.fotmob.com/api/data/matchDetails?matchId=${fotmobId}`;
   try {
-    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    const res = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+        'Referer': 'https://www.fotmob.com/',
+        'Accept': 'application/json, text/plain, */*'
+      }
+    });
     if (!res.ok) return null;
-    const json = await res.json();
-    return json.pageProps;
+    return await res.json();
   } catch (e) {
     return null;
   }
@@ -211,6 +216,20 @@ async function updateLiveScoresAndTelemetry() {
     }
   }
 
+  if (process.env.MATCH_ID) {
+    const fId = String(process.env.MATCH_ID).trim();
+    if (fId.length > 0) {
+      const existing = targetMap.get(fId) || {};
+      targetMap.set(fId, {
+        ...existing,
+        fotmobId: fId,
+        status: 'live',
+        previousScore: '-'
+      });
+      console.log(`📌 [Workflow Target] Manual MATCH_ID injected: ${fId}`);
+    }
+  }
+
   const activeTargets = Array.from(targetMap.values());
 
   // 💤 5. SMART SLEEP MODE: If 0 tracked matches, exit in ~2 seconds
@@ -261,7 +280,7 @@ async function updateLiveScoresAndTelemetry() {
     const fId = target.fotmobId;
     console.log(`\n🔍 Fetching live telemetry for FotMob ID: ${fId}...`);
 
-    const details = await fetchMatchTelemetry(buildId, fId);
+    const details = await fetchMatchTelemetry(fId);
     if (!details) {
       console.warn(`  ⚠️ Could not fetch details for FotMob match ${fId}`);
       updatedTrackedMatches.push(target);
@@ -376,14 +395,35 @@ async function updateLiveScoresAndTelemetry() {
       }
     }
 
+    // Extract xG
+    let xgHome = null;
+    let xgAway = null;
+    const allStatsPeriods = content.stats?.Periods?.All?.stats || [];
+    for (const group of allStatsPeriods) {
+      const item = group.stats?.find(s => (s.key === 'expected_goals' || s.title?.toLowerCase().includes('expected goals')) && Array.isArray(s.stats));
+      if (item && item.stats[0] !== null) {
+        xgHome = parseFloat(item.stats[0]) || 0;
+        xgAway = parseFloat(item.stats[1]) || 0;
+        break;
+      }
+    }
+    if (xgHome === null && content.shotmap?.shots?.length) {
+      let hX = 0, aX = 0;
+      const hTeamId = details.general?.homeTeam?.id || teams[0]?.id;
+      content.shotmap.shots.forEach(s => {
+        if (s.teamId === hTeamId) hX += (s.expectedGoals || 0);
+        else aX += (s.expectedGoals || 0);
+      });
+      xgHome = parseFloat(hX.toFixed(2));
+      xgAway = parseFloat(aX.toFixed(2));
+    }
+
     // Stats
     let homeStatsObj = null;
     let awayStatsObj = null;
     if (content.stats) {
-      const st = content.stats;
-      const allStats = st.Periods?.All?.stats || [];
       const flat = {};
-      for (const group of allStats) {
+      for (const group of allStatsPeriods) {
         for (const item of (group.stats || [])) {
           if (item.key && Array.isArray(item.stats)) {
             flat[item.key.toLowerCase()] = item.stats;
@@ -404,7 +444,8 @@ async function updateLiveScoresAndTelemetry() {
         corners: getStat('corners', 0),
         fouls: getStat('fouls', 0) || 10,
         yellow_cards: getStat('yellow_cards', 0),
-        red_cards: getStat('red_cards', 0)
+        red_cards: getStat('red_cards', 0),
+        xg: xgHome
       };
 
       awayStatsObj = {
@@ -414,21 +455,37 @@ async function updateLiveScoresAndTelemetry() {
         corners: getStat('corners', 1),
         fouls: getStat('fouls', 1) || 12,
         yellow_cards: getStat('yellow_cards', 1),
-        red_cards: getStat('red_cards', 1)
+        red_cards: getStat('red_cards', 1),
+        xg: xgAway
       };
 
       if (matchId) {
         try {
           await sb.from('zeta_match_stats').upsert({
             match_id: matchId,
+            possession_home: homeStatsObj.possession,
+            possession_away: awayStatsObj.possession,
+            shots_home: homeStatsObj.shots,
+            shots_away: awayStatsObj.shots,
+            shots_on_target_home: homeStatsObj.shots_on_target,
+            shots_on_target_away: awayStatsObj.shots_on_target,
+            corners_home: homeStatsObj.corners,
+            corners_away: awayStatsObj.corners,
+            fouls_home: homeStatsObj.fouls,
+            fouls_away: awayStatsObj.fouls,
+            yellow_cards_home: homeStatsObj.yellow_cards,
+            yellow_cards_away: awayStatsObj.yellow_cards,
+            xg_home: xgHome != null ? xgHome : undefined,
+            xg_away: xgAway != null ? xgAway : undefined,
             home_stats: homeStatsObj,
-            away_stats: awayStatsObj
+            away_stats: awayStatsObj,
+            updated_at: new Date().toISOString()
           }, { onConflict: 'match_id' });
         } catch (e) {}
       }
     }
 
-    // Events
+    // Events & Goal Scorers
     let eventsRows = [];
     const rawEvents = content.matchFacts?.events?.events || content.incidents?.allIncidents || [];
     if (rawEvents.length > 0) {
@@ -451,6 +508,21 @@ async function updateLiveScoresAndTelemetry() {
         } catch (e) {}
       }
     }
+
+    const goalEvents = rawEvents.filter(e => (e.type || e.eventType || '').toLowerCase() === 'goal');
+    const homeScorersList = goalEvents.filter(e => e.isHome).map(g => `${g.nameStr || g.player?.name || 'Goal'} ${g.timeStr || g.time || ''}'${g.ownGoal ? ' (OG)' : ''}`).join(', ');
+    const awayScorersList = goalEvents.filter(e => !e.isHome).map(g => `${g.nameStr || g.player?.name || 'Goal'} ${g.timeStr || g.time || ''}'${g.ownGoal ? ' (OG)' : ''}`).join(', ');
+
+    // Dump master raw JSON into fotmob_raw
+    try {
+      await sb.from('fotmob_raw').upsert({
+        match_id: String(fId),
+        data_key: 'match',
+        raw_json: details,
+        fetched_at: new Date().toISOString(),
+        phase: isFinished ? 'post' : (statusObj.started ? 'live' : 'pre')
+      }, { onConflict: 'match_id,data_key' });
+    } catch (e) {}
 
     // Commentary
     let commentaryRows = [];
@@ -497,7 +569,9 @@ async function updateLiveScoresAndTelemetry() {
           yellow_cards_home: homeStatsObj.yellow_cards,
           yellow_cards_away: awayStatsObj.yellow_cards,
           red_cards_home: homeStatsObj.red_cards,
-          red_cards_away: awayStatsObj.red_cards
+          red_cards_away: awayStatsObj.red_cards,
+          xg_home: xgHome,
+          xg_away: xgAway
         } : undefined,
         match_events: eventsRows,
         updated_at: new Date().toISOString()
@@ -534,7 +608,8 @@ async function updateLiveScoresAndTelemetry() {
       lineups: parsedLineups,
       stats: { home: homeStatsObj, away: awayStatsObj },
       events: eventsRows,
-      commentary: commentaryRows,
+      xg: (xgHome != null && xgAway != null) ? { home: xgHome, away: xgAway } : undefined,
+      scorers: { home: homeScorersList, away: awayScorersList },
       venue: content.matchFacts?.infoBox?.Stadium?.name || undefined,
       referee: typeof content.matchFacts?.infoBox?.Referee === 'string' ? content.matchFacts?.infoBox?.Referee : (content.matchFacts?.infoBox?.Referee?.text || undefined),
       updatedAt: new Date().toISOString()
