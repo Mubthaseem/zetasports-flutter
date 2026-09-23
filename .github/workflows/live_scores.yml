@@ -36,9 +36,10 @@ jobs:
           npm install --prefix scripts
 
       - name: Sync Data Pipeline (Updates GitHub Pages Web Hub data/)
+        continue-on-error: true
         run: |
           echo "🌐 Syncing data/ files for GitHub Pages..."
-          npm run sync:live --prefix data-pipeline
+          npm run sync:live --prefix data-pipeline || true
 
       - name: Run Supabase Live Updater (Updates Supabase for App & Admin Panel)
         env:

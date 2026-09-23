@@ -4,146 +4,1319 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>ZetaSports Admin Panel</title>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rajdhani:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<style>
-:root{
-  --bg:#080b12;--card:#0f1421;--card2:#161d2e;--bdr:#1e2a40;
-  --acc:#ff6b00;--acc2:#ff8c00;--grn:#00e676;--red:#ff3d3d;--blu:#4fc3f7;
-  --t1:#f0f4ff;--t2:#8899bb;--t3:#4a5a7a;
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  
+  --color-indigo-500: #6366f1;
+  --color-indigo-600: #4f46e5;
+  
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  
+  --color-rose-500: #f43f5e;
+  --color-rose-600: #e11d48;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--t1);font-family:Inter,sans-serif;min-height:100vh}
-#ls{display:flex;align-items:center;justify-content:center;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#1a0a00,var(--bg) 70%)}
-.lb{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:48px 40px;width:380px;box-shadow:0 0 60px rgba(255,107,0,.08)}
-.ll{text-align:center;margin-bottom:32px}
-.ll h1{font-family:Rajdhani,sans-serif;font-size:36px;font-weight:700}.ll h1 span{color:var(--acc)}
-.ll p{color:var(--t2);font-size:13px;margin-top:4px}
-.lb input{width:100%;padding:12px 16px;background:var(--card2);border:1px solid var(--bdr);border-radius:10px;color:var(--t1);font-size:14px;margin-bottom:14px;outline:none;font-family:Inter,sans-serif;transition:border-color .2s}
-.lb input:focus{border-color:var(--acc)}
-.lb button{width:100%;padding:13px;background:var(--acc);border:none;border-radius:10px;color:#fff;font-family:Rajdhani,sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;cursor:pointer}
-.lb button:hover{background:var(--acc2)}
-#lerr{color:var(--red);font-size:12px;text-align:center;margin-top:10px;min-height:16px}
-#app{display:none}
-.layout{display:flex;min-height:100vh}
-.sidebar{width:240px;background:var(--card);border-right:1px solid var(--bdr);display:flex;flex-direction:column;position:fixed;height:100vh;z-index:100}
-.sl{padding:24px 20px 20px;border-bottom:1px solid var(--bdr)}
-.sl h2{font-family:Rajdhani,sans-serif;font-size:22px;font-weight:700}.sl h2 span{color:var(--acc)}
-.sl p{color:var(--t3);font-size:10px;letter-spacing:1px;margin-top:2px}
-.nav{flex:1;padding:12px 0;overflow-y:auto}
-.ni{display:flex;align-items:center;gap:12px;padding:11px 20px;cursor:pointer;color:var(--t2);font-size:13px;font-weight:500;transition:all .15s;border-left:3px solid transparent}
-.ni:hover{background:rgba(255,107,0,.06);color:var(--t1)}
-.ni.active{background:rgba(255,107,0,.1);color:var(--acc);border-left-color:var(--acc)}
-.ni .ic{font-size:16px;width:20px;text-align:center}
-.sf{padding:16px 20px;border-top:1px solid var(--bdr)}
-.ab{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.av{width:32px;height:32px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;font-family:Rajdhani,sans-serif;font-weight:700;font-size:14px}
-.an{font-size:12px;font-weight:600}.ar{font-size:10px;color:var(--t3)}
-.lob{width:100%;padding:8px;background:rgba(255,61,61,.1);border:1px solid rgba(255,61,61,.2);border-radius:8px;color:var(--red);font-size:12px;cursor:pointer}
-.lob:hover{background:rgba(255,61,61,.2)}
-.main{margin-left:240px;flex:1;padding:28px}
-.page{display:none}.page.active{display:block}
-.ph{margin-bottom:24px}.ph h1{font-family:Rajdhani,sans-serif;font-size:28px;font-weight:700}.ph p{color:var(--t2);font-size:13px;margin-top:4px}
-.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-bottom:28px}
-.sc{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:20px}
-.slb{color:var(--t2);font-size:11px;letter-spacing:.5px;text-transform:uppercase}
-.sv{font-family:Rajdhani,sans-serif;font-size:36px;font-weight:700;margin-top:4px}
-.ss{color:var(--t3);font-size:11px;margin-top:2px}
-.tc{background:var(--card);border:1px solid var(--bdr);border-radius:14px;overflow:hidden}
-.tt{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--bdr)}
-.tt h3{font-family:Rajdhani,sans-serif;font-size:16px;font-weight:700}
-.ta{display:flex;gap:10px}
-table{width:100%;border-collapse:collapse}
-th{padding:12px 16px;text-align:left;font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--bdr);background:var(--card2)}
-td{padding:13px 16px;font-size:13px;border-bottom:1px solid rgba(30,42,64,.5)}
-tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)}
-.badge{display:inline-block;padding:3px 8px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.5px}
-.bg{background:rgba(0,230,118,.12);color:var(--grn)}
-.br{background:rgba(255,61,61,.12);color:var(--red)}
-.bb{background:rgba(79,195,247,.12);color:var(--blu)}
-.bo{background:rgba(255,107,0,.15);color:var(--acc)}
-.bw{background:rgba(255,200,61,.12);color:var(--acc2)}
-.btn{padding:8px 16px;border-radius:8px;border:none;font-size:12px;font-weight:600;cursor:pointer;transition:all .15s}
-.bp{background:var(--acc);color:#fff}.bp:hover{background:var(--acc2)}
-.bgh{background:var(--card2);color:var(--t2);border:1px solid var(--bdr)}.bgh:hover{color:var(--t1)}
-.bd{background:rgba(255,61,61,.1);color:var(--red);border:1px solid rgba(255,61,61,.2)}.bd:hover{background:rgba(255,61,61,.2)}
-.bsm{padding:5px 10px;font-size:11px}
-.mo{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:1000;backdrop-filter:blur(4px)}
-.mo.open{display:flex}
-.md{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:28px;width:560px;max-width:95vw;max-height:90vh;overflow-y:auto}
-.md h3{font-family:Rajdhani,sans-serif;font-size:20px;font-weight:700;margin-bottom:20px}
-.fg{margin-bottom:16px}
-.fg label{display:block;font-size:11px;color:var(--t2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
-.fg input,.fg select,.fg textarea{width:100%;padding:10px 14px;background:var(--card2);border:1px solid var(--bdr);border-radius:9px;color:var(--t1);font-size:13px;outline:none;font-family:Inter,sans-serif;transition:border-color .2s}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--acc)}
-.fg select option{background:var(--card2)}
-.fg textarea{resize:vertical;min-height:80px}
-.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.ma{display:flex;gap:10px;justify-content:flex-end;margin-top:24px}
-.me{color:var(--red);font-size:12px;margin-top:8px}
-.es{text-align:center;padding:60px 20px;color:var(--t3)}
-.es .ic2{font-size:48px;margin-bottom:12px}
-.ld{text-align:center;padding:40px;color:var(--t3);font-size:14px}
-.sp{width:28px;height:28px;border:3px solid var(--bdr);border-top-color:var(--acc);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 12px}
-@keyframes spin{to{transform:rotate(360deg)}}
-.uc{max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;color:var(--t3)}
-.si{padding:8px 14px;background:var(--card2);border:1px solid var(--bdr);border-radius:8px;color:var(--t1);font-size:13px;outline:none;width:220px}
-.si:focus{border-color:var(--acc)}
-.sessgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;padding:16px}
-.sesscard{background:var(--card2);border:1px solid var(--bdr);border-radius:12px;padding:16px}
-.collapse{padding:10px 16px;background:var(--card2);border-top:1px solid var(--bdr);font-size:11px;color:var(--t2);cursor:pointer;display:flex;align-items:center;gap:6px}
-.collapse:hover{color:var(--t1)}
-.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-family:Rajdhani,sans-serif;font-weight:700;font-size:14px;color:#000}
-.tabbar{display:flex;gap:6px;padding:4px;background:var(--card);border-radius:12px;border:1px solid var(--bdr);margin-bottom:16px}
-.tabi{padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;color:var(--t2);cursor:pointer;transition:all .15s}
-.tabi.active{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#000}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.ac-input{padding:10px 14px;background:var(--card2);border:1px solid var(--bdr);border-radius:9px;color:var(--t1);outline:none;font-family:Inter,sans-serif;transition:border-color .2s}
-.ac-input:focus{border-color:var(--acc)}
-.card{background:var(--card);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
-.card-img{width:100%;height:160px;object-fit:cover}
-.card-body{padding:16px}
-.card-title{font-size:14px;font-weight:700;margin-bottom:8px;color:var(--t1)}
-.card-meta{font-size:11px;color:var(--t3);margin-bottom:4px}
-.card-badges{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
-.card-actions{display:flex;gap:8px}
-.action-btn{flex:1;padding:8px;border-radius:8px;border:none;font-size:11px;font-weight:600;cursor:pointer}
-.color-swatch{width:24px;height:24px;border-radius:6px;border:2px solid var(--bdr)}
-.stats-row{display:flex;gap:12px;margin-top:12px;padding-top:12px;border-top:1px solid var(--bdr)}
-.stat-item{flex:1;text-align:center}
-.stat-val{font-family:Rajdhani,sans-serif;font-size:18px;font-weight:700;color:var(--t1)}
-.stat-label{font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px}
-.toggle{position:relative;width:44px;height:24px;appearance:none;background:var(--card2);border:1px solid var(--bdr);border-radius:12px;cursor:pointer}
-.toggle:checked{background:var(--acc);border-color:var(--acc)}
-.toggle::after{content:'';position:absolute;top:2px;left:2px;width:18px;height:18px;background:#fff;border-radius:50%;transition:left .2s;box-shadow:0 2px 4px rgba(0,0,0,.2)}
-.toggle:checked::after{left:24px}
-.image-preview{width:80px;height:50px;object-fit:cover;border-radius:6px;border:1px solid var(--bdr);background:var(--card2)}
-.empty-state{text-align:center;padding:40px 20px;color:var(--t3)}
-.empty-state .icon{font-size:48px;margin-bottom:12px}
-.league-row{display:flex;align-items:center;gap:12px;padding:12px;background:var(--card);border-radius:10px;border:1px solid var(--bdr);margin-bottom:8px}
-.league-color{width:12px;height:12px;border-radius:50%;flex-shrink:0}
-.player-row{display:flex;align-items:center;gap:12px;padding:12px;background:var(--card);border-radius:10px;border:1px solid var(--bdr);margin-bottom:8px}
-.player-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#000}
-.team-badge{width:40px;height:40px;border-radius:10px;background:var(--card2);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
-.highlight-row{display:flex;gap:12px;padding:12px;background:var(--card);border-radius:10px;border:1px solid var(--bdr);margin-bottom:8px;align-items:center}
-.highlight-thumb{width:120px;height:68px;border-radius:8px;object-fit:cover;flex-shrink:0}
-.highlight-info{flex:1;min-width:0}
-.highlight-title{font-size:13px;font-weight:600;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.highlight-meta{font-size:11px;color:var(--t3)}
-.notification-row{display:flex;gap:12px;padding:12px;background:var(--card);border-radius:10px;border:1px solid var(--bdr);margin-bottom:8px;align-items:flex-start}
-.notification-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.notification-content{flex:1}
-.notification-title{font-size:12px;font-weight:700;margin-bottom:2px}
-.notification-body{font-size:12px;color:var(--t2);margin-bottom:4px}
-.notification-meta{font-size:10px;color:var(--t3)}
-@media(max-width:900px){.sidebar{transform:translateX(-100%);transition:transform .3s}.sidebar.open{transform:translateX(0)}.main{margin-left:0}.mo .md{width:95vw;margin:16px}.fr{grid-template-columns:1fr}}
+
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --card2: #f8fafc;
+  --bdr: #e2e8f0;
+  --border: #e2e8f0;
+  --surface: #ffffff;
+  --acc: #2563eb;
+  --acc2: #4f46e5;
+  --accent: #2563eb;
+  --primary: #2563eb;
+  --grn: #059669;
+  --red: #e11d48;
+  --blu: #0284c7;
+  --t1: #0f172a;
+  --t2: #475569;
+  --t3: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Login Screen */
+#ls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 10%, #dbeafe 0%, #f8fafc 60%, #e2e8f0 100%);
+  padding: 20px;
+}
+
+.lb {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 28px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.lb::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #4f46e5, #38bdf8);
+}
+
+.ll {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.ll h1 {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.ll h1 span {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ll p {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.lb input {
+  width: 100%;
+  padding: 13px 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  color: #0f172a;
+  font-size: 14px;
+  margin-bottom: 16px;
+  outline: none;
+  font-family: var(--font-sans);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lb input:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.lb button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  border: none;
+  border-radius: 14px;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lb button:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px -5px rgba(37, 99, 235, 0.45);
+}
+
+.lb button:active {
+  transform: translateY(0);
+}
+
+#lerr {
+  color: #e11d48;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 14px;
+  min-height: 18px;
+  font-weight: 600;
+}
+
+/* Main App Layout */
+#app {
+  display: none;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sl {
+  padding: 24px 22px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sl h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.sl h2 span {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sl .tagline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.sl p {
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sl .v4-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 9999px;
+  font-size: 9px;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  flex: 1;
+  padding: 16px 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ni {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.ni:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.ni.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 700;
+  border-color: #dbeafe;
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.06);
+}
+
+.ni .ic {
+  font-size: 17px;
+  width: 22px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sf {
+  padding: 18px 20px;
+  border-top: 1px solid #f1f5f9;
+  background: #ffffff;
+}
+
+.ab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.av {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.an {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.ar {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.lob {
+  width: 100%;
+  padding: 10px 14px;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
+  color: #e11d48;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.lob:hover {
+  background: #ffe4e6;
+  border-color: #fda4af;
+  color: #be123c;
+}
+
+/* Main Content Area */
+.main {
+  margin-left: 260px;
+  flex: 1;
+  padding: 32px 36px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  max-width: calc(100vw - 260px);
+}
+
+/* Modern Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topbar-mobile-btn {
+  display: none;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #0f172a;
+}
+
+.topbar-breadcrumbs {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.topbar-breadcrumbs span {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+.page {
+  display: none;
+  animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ph {
+  margin-bottom: 24px;
+}
+
+.ph h1 {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.ph p {
+  color: #64748b;
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Stats Grid */
+.sg {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.sc {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sc:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  border-color: #cbd5e1;
+}
+
+.sc::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #2563eb, #4f46e5);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.sc:hover::after {
+  opacity: 1;
+}
+
+.slb {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sv {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 800;
+  margin-top: 6px;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.ss {
+  color: #94a3b8;
+  font-size: 11px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Modern Card / Table Container */
+.tc {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.03), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.tt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tt h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+td {
+  padding: 15px 20px;
+  font-size: 13px;
+  color: #0f172a;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: #f8fafc;
+}
+
+/* Modern Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.bg {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+.br {
+  background: #fff1f2;
+  color: #e11d48;
+  border: 1px solid #fecdd3;
+}
+
+.bb, .bo {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.bw {
+  background: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+/* Modern Buttons */
+.btn {
+  padding: 9px 18px;
+  border-radius: 12px;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  outline: none;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.bp {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.bp:hover {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.bgh {
+  background: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+}
+
+.bgh:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.bd {
+  background: #fff1f2;
+  color: #e11d48;
+  border: 1px solid #fecdd3;
+}
+
+.bd:hover {
+  background: #ffe4e6;
+  border-color: #fda4af;
+  color: #be123c;
+}
+
+.bsm {
+  padding: 6px 12px;
+  font-size: 11px;
+  border-radius: 9px;
+}
+
+/* Modals */
+.mo {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  padding: 20px;
+}
+
+.mo.open {
+  display: flex;
+}
+
+.md {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 32px;
+  width: 580px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.md h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Form Groups & Inputs */
+.fg {
+  margin-bottom: 18px;
+}
+
+.fg label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fg input, .fg select, .fg textarea, .ac-input, .si {
+  width: 100%;
+  padding: 11px 15px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  color: #0f172a;
+  font-size: 13px;
+  outline: none;
+  font-family: var(--font-sans);
+  transition: all 0.15s ease-in-out;
+}
+
+.fg input:focus, .fg select:focus, .fg textarea:focus, .ac-input:focus, .si:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.fg select option {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.fg textarea {
+  resize: vertical;
+  min-height: 84px;
+}
+
+.fr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.ma {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.me {
+  color: #e11d48;
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.es {
+  text-align: center;
+  padding: 64px 20px;
+  color: #94a3b8;
+}
+
+.es .ic2 {
+  font-size: 52px;
+  margin-bottom: 14px;
+}
+
+.ld {
+  text-align: center;
+  padding: 44px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sp {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 12px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.uc {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.si {
+  width: 240px;
+}
+
+.sessgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.sesscard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.collapse {
+  padding: 12px 18px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  font-size: 12px;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.collapse:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.tabbar {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  background: #f1f5f9;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.tabi {
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.tabi.active {
+  background: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+}
+
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.card-meta {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.card-badges {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.color-swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #e2e8f0;
+}
+
+.stats-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+}
+
+.stat-val {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.toggle {
+  position: relative;
+  width: 46px;
+  height: 26px;
+  appearance: none;
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle:checked {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.toggle:checked::after {
+  left: 22px;
+}
+
+.image-preview {
+  width: 70px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 44px 20px;
+  color: #94a3b8;
+}
+
+.empty-state .icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.league-row, .player-row, .highlight-row, .notification-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 10px;
+  transition: all 0.15s ease-in-out;
+}
+
+.league-row:hover, .player-row:hover, .highlight-row:hover, .notification-row:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+}
+
+.league-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.player-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: var(--font-display);
+}
+
+.team-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.highlight-thumb {
+  width: 120px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.highlight-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.highlight-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #0f172a;
+}
+
+.highlight-meta {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.notification-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 16px;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: #0f172a;
+}
+
+.notification-body {
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.notification-meta {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+@media(max-width:960px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  .main {
+    margin-left: 0;
+    max-width: 100vw;
+    padding: 20px 16px;
+  }
+  .topbar-mobile-btn {
+    display: block;
+  }
+  .mo .md {
+    width: 96vw;
+    margin: 12px;
+    padding: 20px;
+  }
+  .fr {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes shimmerWave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.shimmer-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(30, 41, 59, 0.6) !important;
+}
+
+.shimmer-card::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.07) 50%, transparent 100%);
+  animation: shimmerWave 1.6s infinite;
+}
+
+.lazy-img-fade {
+  opacity: 0;
+  filter: blur(4px);
+  transform: scale(0.97);
+  transition: opacity 0.35s ease-out, filter 0.35s ease-out, transform 0.35s ease-out;
+}
+
+.lazy-img-fade.loaded {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
 </style>
 </head>
 <body>
 <div id="ls">
   <div class="lb">
-    <div class="ll"><h1>ZETA<span>SPORTS</span></h1><p>ADMIN CONTROL PANEL</p></div>
+    <div class="ll">
+      <h1>ZETA<span>SPORTS</span></h1>
+      <p>ADMIN CONTROL PANEL</p>
+    </div>
     <input id="au" type="text" placeholder="Admin Username" autocomplete="username"/>
     <input id="ap" type="password" placeholder="4-Digit PIN" maxlength="4" autocomplete="current-password"/>
     <button onclick="doLogin()">LOGIN →</button>
@@ -153,7 +1326,13 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
 <div id="app">
   <div class="layout">
     <nav class="sidebar" id="sidebar">
-      <div class="sl"><h2>ZETA<span>SPORTS</span></h2><p>ADMIN PANEL v2.0</p></div>
+      <div class="sl">
+        <h2>ZETA<span>SPORTS</span></h2>
+        <div class="tagline">
+          <p>ADMIN CONTROL</p>
+          <span class="v4-badge">TAILWIND v4</span>
+        </div>
+      </div>
       <div class="nav">
         <div class="ni active" onclick="goPage(this,'dashboard')"><span class="ic">📊</span>Dashboard</div>
         <div class="ni" onclick="goPage(this,'teams')"><span class="ic">🏟️</span>Teams</div>
@@ -171,11 +1350,33 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
         <div class="ni" onclick="goPage(this,'telegram')"><span class="ic">✈️</span>Telegram Bot</div>
       </div>
       <div class="sf">
-        <div class="ab"><div class="av" id="aav">A</div><div><div class="an" id="anm">Admin</div><div class="ar">SUPER ADMIN</div></div></div>
+        <div class="ab">
+          <div class="av" id="aav">A</div>
+          <div>
+            <div class="an" id="anm">Admin</div>
+            <div class="ar">SUPER ADMIN</div>
+          </div>
+        </div>
         <button class="lob" onclick="doLogout()">⏏ Logout</button>
       </div>
     </nav>
     <main class="main">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div class="topbar-left">
+          <button class="topbar-mobile-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+          <div class="topbar-breadcrumbs">
+            Admin Panel / <span id="topbar-active-page">Dashboard</span>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <div class="live-pill">
+            <span class="live-dot"></span>
+            <span>Supabase Sync Active</span>
+          </div>
+          <button class="btn bgh bsm" onclick="loadAll()" title="Reload All Data">⟳ Sync Data</button>
+        </div>
+      </div>
       <!-- DASHBOARD -->
       <div class="page active" id="page-dashboard">
         <div class="ph"><h1>Dashboard</h1><p>Overview of ZetaSports platform</p></div>
@@ -201,7 +1402,7 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
         <div class="ph"><h1>Teams</h1><p>Manage team data for all sports</p></div>
         <div class="tc">
           <div class="tt"><h3>All Teams</h3><div class="ta"><input class="si" id="flt-teams" placeholder="Search teams..." oninput="filterTeams(this.value)"/><button class="btn bp" onclick="openTeamModal(null)">+ Add Team</button></div></div>
-          <div id="teams-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+          <div id="teams-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
@@ -210,7 +1411,7 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
         <div class="ph"><h1>Players</h1><p>Manage player profiles, stats, and career history</p></div>
         <div class="tc">
           <div class="tt"><h3>All Players</h3><div class="ta"><input class="si" id="flt-players" placeholder="Search players..." oninput="filterPlayers(this.value)"/><button class="btn bp" onclick="openPlayerModal(null)">+ Add Player</button></div></div>
-          <div id="players-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+          <div id="players-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
@@ -263,9 +1464,35 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
           </div>
         </div>
 
+        <!-- 1-CLICK LIVE MATCH TRACKER & SEARCH -->
+        <div class="tc" style="margin-bottom: 20px; background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(37, 99, 235, 0.05)); border: 1px solid rgba(239, 68, 68, 0.25);">
+          <div class="tt" style="display:flex; justify-content:space-between; align-items:center;">
+            <h3>🔴 1-Click Live Match Tracker (FotMob Global)</h3>
+            <button class="btn bp bsm" onclick="syncAllActiveLiveMatchesNow()" style="background:linear-gradient(135deg,#dc2626,#ef4444);font-weight:700;" title="Instantly sync live scores & stats for all tracked matches">⚡ Instant Sync Now</button>
+          </div>
+          <div style="padding: 16px;">
+            <p style="font-size: 13px; color: var(--t2); margin-bottom: 12px;">Type any club name below to find upcoming or live matches and turn on 1-Click live scores, tactical pitch lineups, and match stats for GitHub Actions.</p>
+            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+              <input class="si" id="fm-club-search-input" placeholder="Search team (e.g. Real Madrid, Arsenal, USM Alger, MC Oran)..." style="flex:1;" onkeydown="if(event.key==='Enter') searchFotmobClubMatches()"/>
+              <button class="btn bp" onclick="searchFotmobClubMatches()">Search Club</button>
+            </div>
+            <div id="fm-search-results" style="max-height: 250px; overflow-y: auto;">
+              <div style="text-align: center; color: var(--t3); padding: 12px; font-size: 13px;">Search a team above to view upcoming/live fixtures and track in 1 click.</div>
+            </div>
+          </div>
+        </div>
+
         <div class="tc">
-          <div class="tt"><h3>All Matches</h3><div class="ta"><input class="si" id="flt-matches" placeholder="Search matches..." oninput="filterMatches(this.value)"/><button class="btn bp" onclick="openMatchModal(null)">+ Add Match</button></div></div>
-          <div id="matches-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+          <div class="tt">
+            <h3>All Matches</h3>
+            <div class="ta">
+              <input class="si" id="flt-matches" placeholder="Search matches..." oninput="filterMatches(this.value)"/>
+              <button class="btn bp" style="background:linear-gradient(135deg,#dc2626,#ef4444);font-weight:700;" onclick="syncAllActiveLiveMatchesNow()" title="Fetch and update live scores for all live matches with FotMob IDs">⚡ Instant Sync Live</button>
+              <button class="btn bp" style="background:linear-gradient(135deg,#059669,#10b981);" onclick="syncAllLiveScores()" title="Fetch and update live scores for all matches with a FotMob ID">🔄 Full Sync</button>
+              <button class="btn bp" onclick="openMatchModal(null)">+ Add Match</button>
+            </div>
+          </div>
+          <div id="matches-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
@@ -283,7 +1510,7 @@ tr:last-child td{border-bottom:none}tr:hover td{background:rgba(255,255,255,.02)
         <div class="ph"><h1>News Articles</h1><p>Manage news content and breaking stories</p></div>
         <div class="tc">
           <div class="tt"><h3>All Articles</h3><div class="ta"><button class="btn bp" onclick="openNewsModal(null)">+ Add Article</button></div></div>
-          <div id="news-body"><div class="ld"><div class="sp"></div>Loading...</div></div>
+          <div id="news-body"><div class="p-2"><table class="w-full"><thead><tr><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-28"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-16"></div></th><th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-24"></div></th></tr></thead><tbody><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr><tr><td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-32"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-20"></div></td><td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card w-16"></div></td><td><div class="flex gap-2"><div class="h-7 w-12 bg-slate-700/60 rounded animate-pulse shimmer-card"></div><div class="h-7 w-12 bg-slate-700/40 rounded animate-pulse shimmer-card"></div></div></td></tr></tbody></table></div></div>
         </div>
       </div>
 
@@ -552,7 +1779,30 @@ Type any command below (e.g. `/help`, `/streams`, `/matches`) to control the app
       <div class="fg"><label>Stream IDs <span style="color:var(--t3);font-size:11px">(pick from Live Streams)</span></label>
         <select id="mmatch-sids" multiple style="min-height:80px;background:var(--card2);border:1px solid var(--bdr);border-radius:8px;color:var(--t1);padding:6px;width:100%"><option disabled>Loading streams...</option></select>
       </div>
-      <div class="fg"><label>FotMob Match ID</label><input id="mmatch-fmid" placeholder="e.g., 4506254"/></div>
+      <div class="fg">
+        <label style="display:flex; justify-content:space-between; align-items:center;">
+          <span>FotMob Match ID (For Live Score)</span>
+          <a href="javascript:void(0)" onclick="searchFotmobIdForModal()" style="font-size:10px; color:var(--acc); text-transform:none; text-decoration:underline; font-weight:700;">🔍 Auto-Search ID</a>
+        </label>
+        <div style="display:flex; gap:6px;">
+          <input id="mmatch-fmid" placeholder="e.g., 4506254" style="flex:1;"/>
+          <button class="btn bgh bsm" type="button" onclick="testFotmobIdInModal()" title="Verify match ID on FotMob">Test ID</button>
+        </div>
+      </div>
+    </div>
+    <!-- Dedicated Match Stream Servers Builder -->
+    <div style="background:var(--card2);border:1px solid var(--bdr);border-radius:12px;padding:14px;margin-bottom:16px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+        <div>
+          <div style="font-size:13px;font-weight:700;color:var(--t1);">📡 Dedicated Match Servers (Web &amp; App Video Players)</div>
+          <div style="font-size:11px;color:var(--t3);margin-top:2px;">Add direct servers for this fixture (Server 1, Server 2, HD, etc.)</div>
+        </div>
+        <button class="btn bp bsm" type="button" onclick="addMatchServerRow()">+ Add Match Server</button>
+      </div>
+      <div id="mmatch-servers" style="display:flex;flex-direction:column;gap:8px;"></div>
+      <div id="mmatch-no-servers" style="text-align:center;padding:14px;color:var(--t3);font-size:12px;border:1px dashed var(--bdr);border-radius:8px;">
+        No direct match servers yet. Click "+ Add Match Server" or pick from global Live Streams above.
+      </div>
     </div>
     <!-- FotMob Full Data Fetch -->
     <div style="background:rgba(255,107,0,.06);border:1px solid rgba(255,107,0,.2);border-radius:12px;padding:14px;margin-bottom:16px;">
@@ -832,12 +2082,53 @@ function goPage(el,n){
   const pg = document.getElementById('page-'+n);
   if(pg) pg.classList.add('active');
   el.classList.add('active');
+  const breadcrumb = document.getElementById('topbar-active-page');
+  if(breadcrumb) {
+    breadcrumb.textContent = n.charAt(0).toUpperCase() + n.slice(1);
+  }
+  const sidebar = document.getElementById('sidebar');
+  if(sidebar && window.innerWidth <= 960) {
+    sidebar.classList.remove('open');
+  }
   if(n==='sessions')loadSessions();
   if(n==='settings')loadSettings();
   if(n==='telegram')checkTelegramStatus();
 }
 function closeModal(id){document.getElementById(id).classList.remove('open');}
 document.querySelectorAll('.mo').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');});});
+
+
+// ─── TAILWIND SKELETON GENERATORS ───
+function getTableSkeletonHtml(columns = 6, rows = 6, hasAvatar = false) {
+  let thead = '<thead><tr>' + Array.from({length: columns}).map((_, i) => 
+    '<th><div class="h-4 bg-slate-700/60 rounded animate-pulse shimmer-card w-20"></div></th>'
+  ).join('') + '</tr></thead>';
+  
+  let tbody = '<tbody>' + Array.from({length: rows}).map(() => {
+    let cells = Array.from({length: columns}).map((_, colIdx) => {
+      if (colIdx === 0 && hasAvatar) {
+        return '<td><div class="w-9 h-9 rounded-full bg-slate-700/60 animate-pulse shimmer-card inline-block"></div></td>';
+      }
+      const widths = ['w-28', 'w-20', 'w-16', 'w-24', 'w-14'];
+      const w = widths[colIdx % widths.length];
+      return '<td><div class="h-4 bg-slate-700/50 rounded animate-pulse shimmer-card ' + w + '"></div></td>';
+    }).join('');
+    return '<tr>' + cells + '</tr>';
+  }).join('') + '</tbody>';
+  
+  return '<table class="w-full">' + thead + tbody + '</table>';
+}
+
+function getCardsSkeletonHtml(count = 4) {
+  return '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">' + 
+    Array.from({length: count}).map(() => 
+      '<div class="p-5 rounded-xl border border-slate-800 bg-slate-900/60 animate-pulse shimmer-card space-y-3">' +
+        '<div class="h-4 w-20 bg-slate-700/60 rounded"></div>' +
+        '<div class="h-8 w-28 bg-slate-700/80 rounded"></div>' +
+        '<div class="h-3 w-16 bg-slate-700/40 rounded"></div>' +
+      '</div>'
+    ).join('') + '</div>';
+}
 
 // ─── LOAD ALL ───
 async function loadAll(){
@@ -846,6 +2137,8 @@ async function loadAll(){
 
 // ─── DASHBOARD ───
 async function loadDashboard(){
+  const _db = document.getElementById("dash-body");
+  if (_db) _db.innerHTML = getCardsSkeletonHtml(4);
   const[a,b,c,d,e,f,g,h,i]=await Promise.all([
     sb.from('zeta_teams').select('id',{count:'exact'}),
     sb.from('zeta_players').select('id',{count:'exact'}),
@@ -869,6 +2162,8 @@ async function loadDashboard(){
 
 // ─── TEAMS ───
 async function loadTeams(){
+  const _tb = document.getElementById("teams-body");
+  if (_tb) _tb.innerHTML = getTableSkeletonHtml(7, 6, true);
   const{data}=await sb.from('zeta_teams').select().order('name');
   ALL_TEAMS=data||[];
   renderTeams(ALL_TEAMS);
@@ -882,7 +2177,7 @@ function renderTeams(data){
   const el=document.getElementById('teams-body');
   if(!data.length){el.innerHTML='<div class="es"><div class="ic2">🏟️</div><p>No teams</p></div>';return;}
   el.innerHTML='<table><thead><tr><th>Logo</th><th>Name</th><th>Sport</th><th>Country</th><th>Code</th><th>Color</th><th>Actions</th></tr></thead><tbody>'+
-  data.map(t=>`<tr><td>${t.logo?`<img src="${t.logo}" class="image-preview"/>`:'—'}</td><td><strong>${t.name}</strong></td><td>${t.sport}</td><td>${t.country||'—'}</td><td>${t.short_code||'—'}</td><td><div class="color-swatch" style="background:${t.color||'#7C3AED'}"></div></td><td><button class="btn bgh bsm" onclick='openTeamModal(${JSON.stringify(t).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deleteTeam('${t.id}')">Del</button></td></tr>`).join('')+
+  data.map(t=>`<tr><td>${t.logo?`<img src="${t.logo}" class="image-preview lazy-img-fade" loading="lazy" onload="this.classList.add(\'loaded\')" onerror="this.style.display=\'none\'"/>`:'—'}</td><td><strong>${t.name}</strong></td><td>${t.sport}</td><td>${t.country||'—'}</td><td>${t.short_code||'—'}</td><td><div class="color-swatch" style="background:${t.color||'#7C3AED'}"></div></td><td><button class="btn bgh bsm" onclick='openTeamModal(${JSON.stringify(t).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deleteTeam('${t.id}')">Del</button></td></tr>`).join('')+
   '</tbody></table>';
 }
 function filterTeams(q){renderTeams(ALL_TEAMS.filter(t=>(t.name||'').toLowerCase().includes(q.toLowerCase())));}
@@ -911,6 +2206,8 @@ async function deleteTeam(id){if(!confirm('Delete team?'))return;await sb.from('
 
 // ─── PLAYERS ───
 async function loadPlayers(){
+  const _pb = document.getElementById("players-body");
+  if (_pb) _pb.innerHTML = getTableSkeletonHtml(8, 6, true);
   const{data}=await sb.from('zeta_players').select('*, teams(name, color)').order('name');
   ALL_PLAYERS=data||[];
   renderPlayers(ALL_PLAYERS);
@@ -919,7 +2216,7 @@ function renderPlayers(data){
   const el=document.getElementById('players-body');
   if(!data.length){el.innerHTML='<div class="es"><div class="ic2">⚽</div><p>No players</p></div>';return;}
   el.innerHTML='<table><thead><tr><th>Photo</th><th>Name</th><th>Team</th><th>Pos</th><th>#</th><th>Rating</th><th>Nat</th><th>Actions</th></tr></thead><tbody>'+
-  data.map(p=>`<tr><td>${p.photo?`<img src="${p.photo}" class="image-preview" style="width:40px;height:40px;border-radius:50%"/>`:'—'}</td><td><strong>${p.name}</strong></td><td>${p.teams?.name||'—'}</td><td>${p.position||'—'}</td><td>${p.jersey_number||'—'}</td><td>${p.rating||'—'}</td><td>${p.nationality||'—'}</td><td><button class="btn bgh bsm" onclick='openPlayerModal(${JSON.stringify(p).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deletePlayer('${p.id}')">Del</button></td></tr>`).join('')+
+  data.map(p=>`<tr><td>${p.photo?`<img src="${p.photo}" class="image-preview lazy-img-fade" loading="lazy" onload="this.classList.add(\'loaded\')" onerror="this.style.display=\'none\'" style="width:40px;height:40px;border-radius:50%;object-fit:cover;"/>`:'—'}</td><td><strong>${p.name}</strong></td><td>${p.teams?.name||'—'}</td><td>${p.position||'—'}</td><td>${p.jersey_number||'—'}</td><td>${p.rating||'—'}</td><td>${p.nationality||'—'}</td><td><button class="btn bgh bsm" onclick='openPlayerModal(${JSON.stringify(p).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deletePlayer('${p.id}')">Del</button></td></tr>`).join('')+
   '</tbody></table>';
 }
 function filterPlayers(q){renderPlayers(ALL_PLAYERS.filter(p=>(p.name||'').toLowerCase().includes(q.toLowerCase())));}
@@ -956,6 +2253,8 @@ async function deletePlayer(id){if(!confirm('Delete player?'))return;await sb.fr
 
 // ─── LEAGUES ───
 async function loadLeagues(){
+  const _lb = document.getElementById("leagues-body");
+  if (_lb) _lb.innerHTML = getCardsSkeletonHtml(4);
   const{data}=await sb.from('zeta_leagues').select().order('name');
   ALL_LEAGUES=data||[];
   renderLeagues(ALL_LEAGUES);
@@ -967,7 +2266,7 @@ async function loadLeagues(){
 function renderLeagues(data){
   const el=document.getElementById('leagues-body');
   if(!data.length){el.innerHTML='<div class="es"><div class="ic2">🏆</div><p>No leagues</p></div>';return;}
-  el.innerHTML=data.map(l=>`<div class="league-row"><div class="league-color" style="background:${l.color||'#00D4FF'}"></div><div style="flex:1"><strong>${l.name}</strong><br><small style="color:var(--t2)">${l.country||'—'} • ${l.season||'—'} • ${l.sport} • ${l.type}</small></div><img src="${l.logo||''}" class="image-preview" onerror="this.style.display='none'"/><div><button class="btn bp bsm" onclick="openStandingsModal('${l.id}', '${l.name}')">📊 Standings</button> <button class="btn bgh bsm" onclick='openLeagueModal(${JSON.stringify(l).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deleteLeague('${l.id}')">Del</button></div></div>`).join('');
+  el.innerHTML=data.map(l=>`<div class="league-row"><div class="league-color" style="background:${l.color||'#00D4FF'}"></div><div style="flex:1"><strong>${l.name}</strong><br><small style="color:var(--t2)">${l.country||'—'} • ${l.season||'—'} • ${l.sport} • ${l.type}</small></div><img src="${l.logo||''}" class="image-preview lazy-img-fade" loading="lazy" onload="this.classList.add(\'loaded\')" onerror="this.style.display='none'"/><div><button class="btn bp bsm" onclick="openStandingsModal('${l.id}', '${l.name}')">📊 Standings</button> <button class="btn bgh bsm" onclick='openLeagueModal(${JSON.stringify(l).replace(/"/g,'"')} )'>Edit</button> <button class="btn bd bsm" onclick="deleteLeague('${l.id}')">Del</button></div></div>`).join('');
 }
 async function openStandingsModal(leagueId, leagueName) {
   document.getElementById('st-league-id').value = leagueId;
@@ -1182,7 +2481,7 @@ function renderFetchedMatches(matches, leagueName) {
   container.innerHTML = '';
   matches.forEach(m => {
     const item = document.createElement('div');
-    item.style.cssText = 'background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:8px; padding:10px; margin-bottom:8px; display:flex; justify-content:space-between; align-items:center;';
+    item.style.cssText = 'background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:12px; padding:12px 14px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;';
 
     const homeName = m.home.name;
     const awayName = m.away.name;
@@ -1208,6 +2507,7 @@ function renderFetchedMatches(matches, leagueName) {
     }
 
     const matchData = {
+      fotmob_id: String(m.id),
       sport: 'football',
       league_name: leagueName,
       home_team: homeName,
@@ -1224,18 +2524,24 @@ function renderFetchedMatches(matches, leagueName) {
       ? '<span class="badge br">LIVE</span>' 
       : (isFinished ? '<span class="badge bg">FT</span>' : '<span class="badge bp">UPCOMING</span>');
 
+    const safeMatchJson = JSON.stringify(matchData).replace(/"/g, "&quot;");
+
     item.innerHTML = `
       <div style="display:flex; align-items:center; gap:12px;">
-        <div style="font-size:12px; font-weight:700; color:var(--t2); width:60px;">${timeStr}</div>
+        <div style="display:flex; flex-direction:column; gap:4px; min-width:85px;">
+          <div style="font-size:12px; font-weight:700; color:var(--t2);">${timeStr}</div>
+          <span class="badge bb font-mono" style="font-size:10px; padding:1px 6px;">🆔 ${m.id}</span>
+        </div>
         <div style="display:flex; flex-direction:column; gap:4px;">
-          <div style="display:flex; align-items:center; gap:8px;"><img src="${homeLogo}" style="width:16px;height:16px;"/> <span style="font-weight:600; font-size:13px;">${homeName}</span></div>
-          <div style="display:flex; align-items:center; gap:8px;"><img src="${awayLogo}" style="width:16px;height:16px;"/> <span style="font-weight:600; font-size:13px;">${awayName}</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><img src="${homeLogo}" class="lazy-img-fade" loading="lazy" onload="this.classList.add(\'loaded\')" style="width:18px;height:18px;border-radius:4px;object-fit:contain;" onerror="this.style.display='none'"/> <span style="font-weight:700; font-size:13px; color:var(--t1);">${homeName}</span></div>
+          <div style="display:flex; align-items:center; gap:8px;"><img src="${awayLogo}" class="lazy-img-fade" loading="lazy" onload="this.classList.add(\'loaded\')" style="width:18px;height:18px;border-radius:4px;object-fit:contain;" onerror="this.style.display='none'"/> <span style="font-weight:700; font-size:13px; color:var(--t1);">${awayName}</span></div>
         </div>
       </div>
-      <div style="display:flex; align-items:center; gap:16px;">
-        <div style="font-weight:800; font-size:15px; color:var(--t1);">${scoreStr}</div>
+      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <div style="font-weight:800; font-size:16px; color:var(--t1); font-family:Rajdhani; min-width:40px; text-align:center;">${scoreStr}</div>
         ${statusBadge}
-        <button class="btn bgh bsm" onclick='importMatchToModal(${JSON.stringify(matchData).replace(/"/g, "&quot;")})'>Import</button>
+        <button class="btn bp bsm" style="background:linear-gradient(135deg,#059669,#10b981);" onclick='directImportWithId(${safeMatchJson})' title="Save directly into database with FotMob ID linked">⚡ 1-Click Import</button>
+        <button class="btn bgh bsm" onclick='importMatchToModal(${safeMatchJson})' title="Review and customize in modal">Edit & Save</button>
       </div>
     `;
     container.appendChild(item);
@@ -1328,10 +2634,12 @@ async function importMatchToModal(data) {
   const sel = document.getElementById('mmatch-sids');
   sel.innerHTML = ALL_STREAMS.filter(s=>!s.deleted).map(s=>`<option value="${s.id}">${s.label} (${s.quality||'1080p'})</option>`).join('') || '<option disabled>No streams yet</option>';
   Array.from(sel.options).forEach(o=>o.selected=false);
-  document.getElementById('mmatch-fmid').value = '';
+  document.getElementById('mmatch-fmid').value = data.fotmob_id || '';
+  document.getElementById('mmatch-servers').innerHTML = '';
+  document.getElementById('mmatch-no-servers').style.display = 'block';
   document.getElementById('mmatch-hs').value = 0;
   document.getElementById('mmatch-as').value = 0;
-  document.getElementById('mmatch-fm-status').textContent = '';
+  document.getElementById('mmatch-fm-status').textContent = data.fotmob_id ? `Linked FotMob ID: ${data.fotmob_id}` : '';
 
   // Set status (map 'upcoming' → 'scheduled')
   const statusMap = {upcoming:'scheduled', live:'live', finished:'finished', postponed:'postponed', cancelled:'cancelled'};
@@ -1361,22 +2669,72 @@ async function importMatchToModal(data) {
     document.getElementById('mmatch-lg').value = leagueId;
     document.getElementById('mmatch-ht').value = homeId;
     document.getElementById('mmatch-at').value = awayId;
-    resultsDiv.innerHTML = `<div style="text-align:center;padding:12px;color:var(--grn)">✅ ${data.home_team} vs ${data.away_team} imported! Review and click Save.</div>`;
+    resultsDiv.innerHTML = `<div style="text-align:center;padding:12px;color:var(--grn);font-weight:700;">✅ ${data.home_team} vs ${data.away_team} imported with FotMob ID ${data.fotmob_id||'—'}! Click Save below.</div>`;
   });
 }
 
+// ─── DIRECT 1-CLICK IMPORT WITH FOTMOB ID ───
+async function directImportWithId(data) {
+  const resultsDiv = document.getElementById('fetch-results');
+  const prevHtml = resultsDiv.innerHTML;
+  resultsDiv.innerHTML = `<div class="ld"><div class="sp"></div>Importing ${data.home_team} vs ${data.away_team} with FotMob ID ${data.fotmob_id}...</div>`;
+
+  try {
+    const leagueId = await findOrCreateLeague(data.league_name);
+    const homeId = await findOrCreateTeam(data.home_team, data.home_logo);
+    const awayId = await findOrCreateTeam(data.away_team, data.away_logo);
+
+    let hs = 0, as = 0;
+    if (data.score) {
+      const scores = data.score.split(' - ').map(s => parseInt(s.trim()));
+      if (scores.length === 2 && !isNaN(scores[0])) {
+        hs = scores[0];
+        as = scores[1];
+      }
+    }
+
+    const statusMap = {upcoming:'scheduled', live:'live', finished:'finished', postponed:'postponed', cancelled:'cancelled'};
+    const matchStatus = statusMap[data.status] || data.status || 'scheduled';
+
+    const p = {
+      home_team_id: homeId || null,
+      away_team_id: awayId || null,
+      league_id: leagueId || null,
+      date: data.match_time || new Date().toISOString(),
+      status: matchStatus,
+      venue: '',
+      home_score: hs,
+      away_score: as,
+      time_elapsed: data.status === 'finished' ? 'FT' : (data.status === 'live' ? 'Live' : null),
+      round: null,
+      stream_ids: [],
+      fotmob_id: String(data.fotmob_id)
+    };
+
+    await sbSave('zeta_matches', p);
+    await loadMatches();
+    await loadDashboard();
+
+    resultsDiv.innerHTML = `<div style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:10px;padding:12px;margin-bottom:12px;color:#059669;font-weight:700;text-align:center;">✅ Successfully saved "${data.home_team} vs ${data.away_team}" with FotMob ID: ${data.fotmob_id}!</div>` + prevHtml;
+  } catch (e) {
+    console.error('directImportWithId error:', e);
+    alert('Import failed: ' + e.message);
+    resultsDiv.innerHTML = prevHtml;
+  }
+}
 
 // ─── MATCHES ───
 async function loadMatches(){
-  // Fetch team names first to ensure map is populated before render
+  const _mb = document.getElementById("matches-body");
+  if (_mb) _mb.innerHTML = getTableSkeletonHtml(6, 6, false);
   const{data:teamsData}=await sb.from('zeta_teams').select('id,name');
   const teamsMap={};
   (teamsData||[]).forEach(t=>{teamsMap[t.id]=t.name;});
   ALL_TEAMS_MAP=teamsMap;
 
-  const{data,error}=await sb.from('zeta_matches').select('*').order('date',{ascending:false}).limit(200);
+  const{data,error}=await sb.from('zeta_matches').select('*').order('date',{ascending:true}).limit(200);
   if(error){console.error('loadMatches error:',error.message);}
-  ALL_MATCHES=data||[];
+  ALL_MATCHES=(data||[]).sort((a,b)=>new Date(a.date||0)-new Date(b.date||0));
   renderMatches(ALL_MATCHES);
 
   const opts=ALL_MATCHES.map(m=>`<option value="${m.id}">${teamsMap[m.home_team_id]||m.home_team||'Home'} vs ${teamsMap[m.away_team_id]||m.away_team||'Away'}</option>`).join('');
@@ -1390,16 +2748,86 @@ function renderMatches(data){
   if(!data||!data.length){el.innerHTML='<div class="es"><div class="ic2">📅</div><p>No matches found. Add your first match using the button above.</p></div>';return;}
   const tm=window.ALL_TEAMS_MAP||{};
   const sc={'live':'bg','finished':'br','scheduled':'bo','postponed':'bw','cancelled':'br'};
-  el.innerHTML='<table><thead><tr><th>Match</th><th>Date</th><th>Score</th><th>Status</th><th>Venue</th><th>Actions</th></tr></thead><tbody>'+
+  el.innerHTML='<table><thead><tr><th>Match</th><th>FotMob ID</th><th>Date</th><th>Score</th><th>Status</th><th>Venue</th><th>Live Sync & Actions</th></tr></thead><tbody>'+
   data.map(m=>{
     const ht=tm[m.home_team_id]||m.home_team||'Home';
     const at=tm[m.away_team_id]||m.away_team||'Away';
     const badge=sc[m.status]||'bo';
     const safeM=JSON.stringify(m).replace(/"/g,'&quot;');
-    return `<tr><td><strong>${ht} vs ${at}</strong></td><td style="color:var(--t2);font-size:12px">${m.date?new Date(m.date).toLocaleString():'—'}</td><td style="font-family:Rajdhani;font-size:18px;font-weight:700">${m.home_score||0} - ${m.away_score||0}</td><td><span class="badge ${badge}">${(m.status||'scheduled').toUpperCase()}</span></td><td style="color:var(--t2);font-size:12px">${m.venue||'—'}</td><td><button class="btn bp bsm" onclick="openMatchCenterModal('${m.id}', '${ht} vs ${at}', '${m.fotmob_id||''}')">⚙️ Match Center</button> <button class="btn bgh bsm" onclick='openMatchModal(JSON.parse(this.dataset.m))' data-m="${safeM}">Edit</button> <button class="btn bd bsm" onclick="deleteMatch('${m.id}')">Del</button></td></tr>`;
+    const fmBadge = m.fotmob_id 
+      ? `<span class="badge bb font-mono" style="font-size:11px;font-weight:700;">🆔 ${m.fotmob_id}</span>` 
+      : `<button class="btn bgh bsm" onclick="quickAttachFotmobId('${m.id}', '${ht} vs ${at}')" style="font-size:10px;padding:3px 8px;border-style:dashed;">+ Set FotMob ID</button>`;
+    
+    const syncBtn = m.fotmob_id
+      ? `<button class="btn bp bsm" onclick="syncSingleLiveScore('${m.id}', '${m.fotmob_id}', this)" style="background:linear-gradient(135deg,#059669,#10b981);" title="Fetch latest live score directly from FotMob">⚡ Live Score</button>`
+      : '';
+
+    const isLive = m.status === 'live';
+    const trackToggleBtn = isLive
+      ? `<button class="btn bsm" onclick="toggleMatchLiveTracking('${m.id}', '${m.fotmob_id||''}', false)" style="background:#ef4444;color:#fff;font-weight:700;box-shadow:0 0 8px rgba(239,68,68,0.6);" title="Stop live tracking this match">⏹️ Stop Live</button>`
+      : `<button class="btn bsm bp" onclick="toggleMatchLiveTracking('${m.id}', '${m.fotmob_id||''}', true)" style="background:linear-gradient(135deg,#dc2626,#ef4444);color:#fff;font-weight:700;" title="Activate 1-Click live tracking in GitHub Actions">🔴 Track Live</button>`;
+
+    return `<tr>
+      <td><strong>${ht} vs ${at}</strong></td>
+      <td>${fmBadge}</td>
+      <td style="color:var(--t2);font-size:12px">${m.date?new Date(m.date).toLocaleString():'—'}</td>
+      <td style="font-family:Rajdhani;font-size:18px;font-weight:700">${m.home_score||0} - ${m.away_score||0}</td>
+      <td><span class="badge ${badge}">${(m.status||'scheduled').toUpperCase()}${m.time_elapsed ? ` (${m.time_elapsed})` : ''}</span></td>
+      <td style="color:var(--t2);font-size:12px">${m.venue||'—'}</td>
+      <td style="white-space:nowrap;display:flex;gap:6px;align-items:center;">
+        ${trackToggleBtn}
+        ${syncBtn}
+        <button class="btn bp bsm" onclick="openMatchCenterModal('${m.id}', '${ht} vs ${at}', '${m.fotmob_id||''}')">⚙️ Center</button>
+        <button class="btn bgh bsm" onclick='openMatchModal(JSON.parse(this.dataset.m))' data-m="${safeM}">Edit</button>
+        <button class="btn bd bsm" onclick="deleteMatch('${m.id}')">Del</button>
+      </td>
+    </tr>`;
   }).join('')+'</tbody></table>';
 }
 function filterMatches(q){renderMatches(ALL_MATCHES.filter(m=>((m.home_team||'')+(m.away_team||'')).toLowerCase().includes(q.toLowerCase())));}
+
+// ─── DEDICATED MATCH SERVER BUILDER ───
+function addMatchServerRow(srv) {
+  const container = document.getElementById('mmatch-servers');
+  document.getElementById('mmatch-no-servers').style.display = 'none';
+  const row = document.createElement('div');
+  row.className = 'match-server-row';
+  row.style.cssText = 'background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:10px;position:relative;';
+  row.innerHTML = `
+    <button type="button" onclick="this.closest('.match-server-row').remove();updateNoMatchServers()" style="position:absolute;top:6px;right:6px;background:rgba(255,61,61,.15);border:1px solid rgba(255,61,61,.3);color:var(--red);border-radius:6px;width:22px;height:22px;cursor:pointer;font-size:13px;line-height:1;">×</button>
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-bottom:8px;margin-right:24px;">
+      <div class="fg" style="margin:0"><label>Server Name</label><input class="msrv-name" value="${srv?.serverName||''}" placeholder="e.g., Server 1 (HD 1080p)"/></div>
+      <div class="fg" style="margin:0"><label>Stream URL</label><input class="msrv-url" value="${srv?.url||''}" placeholder="https://... (.m3u8, .mpd, embed)"/></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <div class="fg" style="margin:0"><label>Format / Type</label>
+        <select class="msrv-type">
+          <option value="m3u8" ${(srv?.type||'m3u8')==='m3u8'?'selected':''}>HLS (.m3u8)</option>
+          <option value="iframe" ${(srv?.type||'m3u8')==='iframe'?'selected':''}>Embed / Iframe Web Player</option>
+          <option value="mpd" ${(srv?.type||'')==='mpd'?'selected':''}>DASH (.mpd)</option>
+          <option value="mp4" ${(srv?.type||'')==='mp4'?'selected':''}>MP4 Video</option>
+        </select>
+      </div>
+      <div class="fg" style="margin:0"><label>DRM Protection</label>
+        <select class="msrv-drm" onchange="this.closest('.match-server-row').querySelector('.msrv-drm-keys').style.display = this.value !== 'none' ? 'grid' : 'none'">
+          <option value="none" ${(srv?.drmType||'none')==='none'?'selected':''}>None (Free / Direct)</option>
+          <option value="clearkey" ${(srv?.drmType||'')==='clearkey'?'selected':''}>ClearKey DRM</option>
+          <option value="widevine" ${(srv?.drmType||'')==='widevine'?'selected':''}>Widevine</option>
+        </select>
+      </div>
+    </div>
+    <div class="msrv-drm-keys" style="display: ${(srv?.drmType || 'none') !== 'none' ? 'grid' : 'none'}; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px;">
+      <div class="fg" style="margin:0"><label>Key ID (HEX)</label><input class="msrv-keyid" value="${srv?.keyId||''}" placeholder="e.g., 065051b9..."/></div>
+      <div class="fg" style="margin:0"><label>Key (HEX)</label><input class="msrv-key" value="${srv?.key||''}" placeholder="e.g., 214bd176..."/></div>
+    </div>
+  `;
+  container.appendChild(row);
+}
+function updateNoMatchServers() {
+  const hasRows = document.getElementById('mmatch-servers').children.length > 0;
+  document.getElementById('mmatch-no-servers').style.display = hasRows ? 'none' : 'block';
+}
+
 function openMatchModal(m){
   document.getElementById('mmatch-t').textContent=m?'Edit Match':'Add Match';
   document.getElementById('mmatch-id').value=m?.id||'';
@@ -1419,13 +2847,79 @@ function openMatchModal(m){
   sel2.innerHTML=ALL_STREAMS.filter(s=>!s.deleted).map(s=>`<option value="${s.id}" ${existingIds.includes(s.id)?'selected':''}>${s.label} (${s.quality||'1080p'})</option>`).join('')||'<option disabled>No streams yet — add streams first</option>';
   document.getElementById('mmatch-fmid').value=m?.fotmob_id||'';
   document.getElementById('mmatch-er').textContent='';
+  document.getElementById('mmatch-fm-status').textContent=m?.fotmob_id?`FotMob ID: ${m.fotmob_id}`:'';
+
+  // Populate Match Servers Builder
+  document.getElementById('mmatch-servers').innerHTML = '';
+  let mServers = [];
+  if (m?.stream_url) {
+    try {
+      const parsed = JSON.parse(m.stream_url);
+      if (Array.isArray(parsed)) {
+        mServers = parsed;
+      } else if (parsed && parsed.url) {
+        mServers = [parsed];
+      }
+    } catch(e) {
+      if (typeof m.stream_url === 'string' && m.stream_url.startsWith('http')) {
+        mServers = [{serverName:'Server 1 (HD)', url: m.stream_url, type: 'm3u8', drmType: 'none'}];
+      }
+    }
+  }
+  if (m?.backup_stream_url) {
+    mServers.push({serverName:'Server 2 (Backup)', url: m.backup_stream_url, type: 'm3u8', drmType: 'none'});
+  }
+
+  if (mServers.length > 0) {
+    document.getElementById('mmatch-no-servers').style.display = 'none';
+    mServers.forEach(srv => addMatchServerRow(srv));
+  } else {
+    document.getElementById('mmatch-no-servers').style.display = 'block';
+  }
+
   document.getElementById('m-match').classList.add('open');
 }
 
 async function saveMatch(){
   const id=document.getElementById('mmatch-id').value;
   const selectedStreamIds = Array.from(document.getElementById('mmatch-sids').selectedOptions).map(o=>o.value);
-  const p={home_team_id:document.getElementById('mmatch-ht').value||null,away_team_id:document.getElementById('mmatch-at').value||null,league_id:document.getElementById('mmatch-lg').value||null,date:document.getElementById('mmatch-dt').value||null,status:document.getElementById('mmatch-st').value,venue:document.getElementById('mmatch-vn').value.trim(),home_score:parseInt(document.getElementById('mmatch-hs').value)||0,away_score:parseInt(document.getElementById('mmatch-as').value)||0,time_elapsed:document.getElementById('mmatch-te').value.trim()||null,round:document.getElementById('mmatch-rd').value.trim()||null,stream_ids:selectedStreamIds,fotmob_id:document.getElementById('mmatch-fmid').value.trim()||null};
+
+  // Collect Match Server Rows
+  const matchServerRows = document.querySelectorAll('#mmatch-servers .match-server-row');
+  const matchServers = [];
+  for (const row of matchServerRows) {
+    const name = row.querySelector('.msrv-name').value.trim();
+    const url  = row.querySelector('.msrv-url').value.trim();
+    const type = row.querySelector('.msrv-type').value;
+    const drm  = row.querySelector('.msrv-drm').value;
+    const keyId = row.querySelector('.msrv-keyid') ? row.querySelector('.msrv-keyid').value.trim() : '';
+    const key   = row.querySelector('.msrv-key') ? row.querySelector('.msrv-key').value.trim() : '';
+    if (url) {
+      const sObj = { serverName: name || ('Server ' + (matchServers.length + 1)), url, type, drmType: drm };
+      if (drm !== 'none') {
+        sObj.keyId = keyId;
+        sObj.key = key;
+      }
+      matchServers.push(sObj);
+    }
+  }
+
+  const p={
+    home_team_id:document.getElementById('mmatch-ht').value||null,
+    away_team_id:document.getElementById('mmatch-at').value||null,
+    league_id:document.getElementById('mmatch-lg').value||null,
+    date:document.getElementById('mmatch-dt').value||null,
+    status:document.getElementById('mmatch-st').value,
+    venue:document.getElementById('mmatch-vn').value.trim(),
+    home_score:parseInt(document.getElementById('mmatch-hs').value)||0,
+    away_score:parseInt(document.getElementById('mmatch-as').value)||0,
+    time_elapsed:document.getElementById('mmatch-te').value.trim()||null,
+    round:document.getElementById('mmatch-rd').value.trim()||null,
+    stream_ids:selectedStreamIds,
+    stream_url: matchServers.length > 0 ? JSON.stringify(matchServers) : null,
+    backup_stream_url: null,
+    fotmob_id:document.getElementById('mmatch-fmid').value.trim()||null
+  };
   if(!p.home_team_id||!p.away_team_id){document.getElementById('mmatch-er').textContent='Home and away teams required.';return;}
   try{
     await sbSave('zeta_matches',p,id||null);
@@ -1433,6 +2927,436 @@ async function saveMatch(){
   }catch(e){document.getElementById('mmatch-er').textContent=e.message;}
 }
 async function deleteMatch(id){if(!confirm('Delete match?'))return;try{await sbDelete('zeta_matches',id);}catch(e){alert(e.message);}loadMatches();loadDashboard();}
+
+// ─── QUICK ATTACH FOTMOB ID TO MATCH ───
+async function quickAttachFotmobId(matchId, matchTitle) {
+  const newId = prompt(`Enter FotMob Match ID for:\n"${matchTitle}"\n(e.g., 3370568, 4506254, 4648719)`);
+  if (!newId || !newId.trim()) return;
+  const cleanId = newId.trim();
+
+  try {
+    const { error } = await sb.from('zeta_matches').update({ fotmob_id: cleanId }).eq('id', matchId);
+    if (error) throw error;
+    
+    const mIndex = ALL_MATCHES.findIndex(x => x.id === matchId);
+    if (mIndex !== -1) {
+      ALL_MATCHES[mIndex].fotmob_id = cleanId;
+      renderMatches(ALL_MATCHES);
+    }
+    
+    if (confirm(`✅ FotMob ID linked successfully: ${cleanId}\n\nWould you like to fetch the live score and minute from FotMob right now?`)) {
+      syncSingleLiveScore(matchId, cleanId);
+    }
+  } catch(e) {
+    alert('Failed to attach FotMob ID: ' + e.message);
+  }
+}
+
+// ─── SYNC SINGLE LIVE SCORE FROM FOTMOB ───
+async function syncSingleLiveScore(matchId, fotmobId, btn = null) {
+  if (!fotmobId) {
+    alert('This match does not have a FotMob ID.');
+    return;
+  }
+  const prevText = btn ? btn.textContent : '';
+  if (btn) {
+    btn.textContent = '⏳ Syncing...';
+    btn.disabled = true;
+  }
+
+  try {
+    const d = await fetchFotmobMatch(fotmobId, 'corsproxy');
+    
+    let homeScore = 0;
+    let awayScore = 0;
+    const headerTeams = d?.header?.teams || [];
+    if (headerTeams.length >= 2) {
+      homeScore = parseInt(headerTeams[0].score) || 0;
+      awayScore = parseInt(headerTeams[1].score) || 0;
+    } else if (d?.general?.homeScore !== undefined && d?.general?.awayScore !== undefined) {
+      homeScore = parseInt(d.general.homeScore) || 0;
+      awayScore = parseInt(d.general.awayScore) || 0;
+    } else if (d?.header?.status?.scoreStr) {
+      const parts = d.header.status.scoreStr.split('-').map(s => parseInt(s.trim()));
+      if (parts.length === 2 && !isNaN(parts[0])) {
+        homeScore = parts[0];
+        awayScore = parts[1];
+      }
+    }
+
+    const headerStatus = d?.header?.status || d?.status || {};
+    const general = d?.general || {};
+    const isFinished = headerStatus.finished || general.finished || false;
+    const isStarted = headerStatus.started || general.started || false;
+    const isCancelled = headerStatus.cancelled || false;
+
+    let newStatus = 'scheduled';
+    let timeElapsed = '';
+
+    if (isFinished) {
+      newStatus = 'finished';
+      timeElapsed = headerStatus.reason?.short || 'FT';
+    } else if (isStarted && !isFinished && !isCancelled) {
+      newStatus = 'live';
+      timeElapsed = headerStatus.liveTime?.short || headerStatus.scoreStr || 'Live';
+    } else if (isCancelled) {
+      newStatus = 'cancelled';
+      timeElapsed = 'Cancelled';
+    }
+
+    const updatePayload = {
+      home_score: homeScore,
+      away_score: awayScore,
+      status: newStatus,
+      time_elapsed: timeElapsed,
+      fotmob_id: String(fotmobId)
+    };
+
+    const { error } = await sb.from('zeta_matches').update(updatePayload).eq('id', matchId);
+    if (error) throw error;
+
+    const mIndex = ALL_MATCHES.findIndex(x => x.id === matchId);
+    if (mIndex !== -1) {
+      ALL_MATCHES[mIndex] = { ...ALL_MATCHES[mIndex], ...updatePayload };
+      renderMatches(ALL_MATCHES);
+    }
+
+    alert(`✅ Live score synced from FotMob!\nScore: ${homeScore} - ${awayScore}\nStatus: ${newStatus.toUpperCase()}${timeElapsed ? ` (${timeElapsed})` : ''}`);
+  } catch (e) {
+    console.error('syncSingleLiveScore error:', e);
+    alert(`❌ Failed to sync from FotMob: ${e.message}\nMake sure the FotMob ID (${fotmobId}) is valid.`);
+  } finally {
+    if (btn) {
+      btn.textContent = prevText;
+      btn.disabled = false;
+    }
+  }
+}
+
+// ─── SYNC ALL LIVE SCORES IN BATCH ───
+async function syncAllLiveScores() {
+  const matchesWithFm = ALL_MATCHES.filter(m => m.fotmob_id);
+  if (matchesWithFm.length === 0) {
+    alert('No matches found with a FotMob ID. Attach FotMob IDs to your matches first using "+ Set FotMob ID" or the FotMob Importer.');
+    return;
+  }
+
+  if (!confirm(`Sync live scores for all ${matchesWithFm.length} match(es) with FotMob IDs now?`)) return;
+
+  let successCount = 0;
+  let errorCount = 0;
+
+  for (const m of matchesWithFm) {
+    try {
+      const d = await fetchFotmobMatch(m.fotmob_id, 'corsproxy');
+      const headerTeams = d?.header?.teams || [];
+      let homeScore = m.home_score || 0;
+      let awayScore = m.away_score || 0;
+      if (headerTeams.length >= 2) {
+        homeScore = parseInt(headerTeams[0].score) || 0;
+        awayScore = parseInt(headerTeams[1].score) || 0;
+      }
+
+      const headerStatus = d?.header?.status || d?.status || {};
+      const general = d?.general || {};
+      const isFinished = headerStatus.finished || general.finished || false;
+      const isStarted = headerStatus.started || general.started || false;
+
+      let status = isFinished ? 'finished' : (isStarted ? 'live' : 'scheduled');
+      let timeElapsed = headerStatus.liveTime?.short || (isFinished ? 'FT' : '');
+
+      await sb.from('zeta_matches').update({
+        home_score: homeScore,
+        away_score: awayScore,
+        status: status,
+        time_elapsed: timeElapsed
+      }).eq('id', m.id);
+
+      successCount++;
+    } catch(e) {
+      console.warn(`Failed to sync match ${m.id} (${m.fotmob_id}):`, e);
+      errorCount++;
+    }
+  }
+
+  await loadMatches();
+  alert(`⚡ Live Sync Complete!\nSuccessfully updated: ${successCount} match(es)\nFailed/Offline: ${errorCount}`);
+}
+
+// ─── 1-CLICK LIVE TRACKING TOGGLE ───
+async function toggleMatchLiveTracking(matchId, fotmobId, isStart) {
+  try {
+    const newStatus = isStart ? 'live' : 'finished';
+    const { error } = await sb.from('zeta_matches').update({
+      status: newStatus,
+      updated_at: new Date().toISOString()
+    }).eq('id', matchId);
+
+    if (error) throw error;
+
+    if (isStart && fotmobId) {
+      syncSingleLiveScore(matchId, fotmobId);
+    }
+
+    const idx = ALL_MATCHES.findIndex(x => x.id === matchId);
+    if (idx !== -1) {
+      ALL_MATCHES[idx].status = newStatus;
+      renderMatches(ALL_MATCHES);
+    }
+
+    alert(isStart 
+      ? "🔴 1-Click Live Tracking ACTIVATED!\nGitHub Actions will now sync real-time scores, lineups, and telemetry every 5 mins."
+      : "⏹️ Live Tracking stopped for this match. Status set to Finished."
+    );
+  } catch (e) {
+    alert("❌ Error toggling live tracking: " + e.message);
+  }
+}
+
+// ─── INSTANT SYNC ACTIVE LIVE MATCHES ───
+async function syncAllActiveLiveMatchesNow() {
+  const liveMatches = ALL_MATCHES.filter(m => m.status === 'live' && m.fotmob_id);
+  if (liveMatches.length === 0) {
+    alert("ℹ️ No matches currently marked as Live. Click '🔴 Track Live' on any match in the table first.");
+    return;
+  }
+
+  let count = 0;
+  for (const m of liveMatches) {
+    try {
+      await syncSingleLiveScore(m.id, m.fotmob_id);
+      count++;
+    } catch(e) {}
+  }
+
+  alert(`⚡ Instant Sync Complete! Refreshed ${count} active live match(es).`);
+}
+
+// ─── SEARCH FOTMOB CLUB MATCHES ───
+async function searchFotmobClubMatches() {
+  const input = document.getElementById('fm-club-search-input');
+  const resultsContainer = document.getElementById('fm-search-results');
+  const q = (input?.value || '').trim();
+
+  if (!q) {
+    alert("Please enter a club or match name to search.");
+    return;
+  }
+
+  resultsContainer.innerHTML = '<div style="text-align:center;padding:16px;color:var(--t2);"><div class="ld"><div class="sp"></div>Searching FotMob...</div></div>';
+
+  try {
+    const localMatches = ALL_MATCHES.filter(m => 
+      ((m.home_team||'') + (m.away_team||'')).toLowerCase().includes(q.toLowerCase())
+    );
+
+    let html = '';
+
+    if (localMatches.length > 0) {
+      html += `<div style="font-size:11px;font-weight:700;color:var(--acc);margin-bottom:8px;text-transform:uppercase;">Matches in Database (${localMatches.length}):</div>`;
+      html += localMatches.slice(0, 5).map(m => {
+        const isLive = m.status === 'live';
+        return `
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:6px;">
+            <div>
+              <div style="font-weight:700;font-size:14px;">${m.home_team} vs ${m.away_team}</div>
+              <div style="font-size:12px;color:var(--t2);">${m.date ? new Date(m.date).toLocaleDateString() : ''} | Status: <span style="font-weight:700;color:${isLive?'#ef4444':'inherit'}">${(m.status||'scheduled').toUpperCase()}</span></div>
+            </div>
+            <div style="display:flex;gap:6px;">
+              ${isLive 
+                ? `<button class="btn bsm" onclick="toggleMatchLiveTracking('${m.id}','${m.fotmob_id||''}',false)" style="background:#ef4444;color:#fff;">⏹️ Stop</button>`
+                : `<button class="btn bsm bp" onclick="toggleMatchLiveTracking('${m.id}','${m.fotmob_id||''}',true)" style="background:linear-gradient(135deg,#dc2626,#ef4444);color:#fff;">🔴 Track Live</button>`
+              }
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(`https://www.fotmob.com/api/search/suggest?term=${encodeURIComponent(q)}`);
+    try {
+      const res = await fetch(proxyUrl);
+      if (res.ok) {
+        const data = await res.json();
+        const teams = data.squad || data.team || [];
+        if (teams.length > 0) {
+          html += `<div style="font-size:11px;font-weight:700;color:var(--grn);margin:12px 0 8px 0;text-transform:uppercase;">Teams on FotMob (${teams.length}):</div>`;
+          html += teams.slice(0, 4).map(t => `
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--card2);border:1px solid var(--bdr);border-radius:8px;margin-bottom:6px;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <img src="https://images.fotmob.com/image_resources/logo/teamlogo/${t.id}_small.png" style="width:24px;height:24px;object-fit:contain;" onerror="this.style.display='none'"/>
+                <span style="font-weight:600;font-size:13px;">${t.text || t.name}</span>
+              </div>
+              <button class="btn bp bsm" onclick="fetchTeamMatchesFromFotmob('${t.id}', '${(t.text||t.name).replace(/'/g, "\\'")}')">View Fixtures</button>
+            </div>
+          `).join('');
+        }
+      }
+    } catch(e) {}
+
+    resultsContainer.innerHTML = html || '<div style="text-align:center;padding:12px;color:var(--t3);font-size:13px;">No matching matches or teams found. Try another search.</div>';
+  } catch (err) {
+    resultsContainer.innerHTML = `<div style="color:var(--red);padding:12px;font-size:13px;">Search error: ${err.message}</div>`;
+  }
+}
+
+// ─── FETCH TEAM MATCHES FROM FOTMOB & TRACK ───
+async function fetchTeamMatchesFromFotmob(teamId, teamName) {
+  const resultsContainer = document.getElementById('fm-search-results');
+  resultsContainer.innerHTML = `<div style="text-align:center;padding:16px;"><div class="ld"><div class="sp"></div>Fetching fixtures for ${teamName}...</div></div>`;
+
+  try {
+    const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(`https://www.fotmob.com/api/teams?id=${teamId}`);
+    const res = await fetch(proxyUrl);
+    if (!res.ok) throw new Error("Could not load team fixtures from FotMob");
+
+    const data = await res.json();
+    const fixtures = data.fixtures?.allFixtures?.fixtures || data.overview?.fixtures || [];
+
+    if (!fixtures.length) {
+      resultsContainer.innerHTML = `<div style="text-align:center;padding:12px;color:var(--t3);">No fixtures found for ${teamName}.</div>`;
+      return;
+    }
+
+    let html = `<div style="font-size:12px;font-weight:700;color:var(--acc);margin-bottom:8px;">Fixtures for ${teamName}:</div>`;
+    html += fixtures.slice(0, 6).map(f => {
+      const hName = f.home?.name || 'Home';
+      const aName = f.away?.name || 'Away';
+      const fId = f.id;
+      const statusText = f.status?.reason?.short || (f.status?.started ? 'Live' : (f.status?.finished ? 'FT' : 'Upcoming'));
+
+      return `
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:6px;">
+          <div>
+            <div style="font-weight:700;font-size:13px;">${hName} vs ${aName}</div>
+            <div style="font-size:11px;color:var(--t2);">ID: ${fId} | ${f.status?.utcTime ? new Date(f.status.utcTime).toLocaleString() : ''} (${statusText})</div>
+          </div>
+          <button class="btn bp bsm" onclick="importAndTrackFotmobMatch('${fId}', '${hName.replace(/'/g, "\\'")}', '${aName.replace(/'/g, "\\'")}', '${f.status?.utcTime || new Date().toISOString()}', '${f.tournament?.name || 'Football'}')" style="background:linear-gradient(135deg,#dc2626,#ef4444);color:#fff;font-weight:700;">🔴 Track Live</button>
+        </div>
+      `;
+    }).join('');
+
+    resultsContainer.innerHTML = html;
+  } catch (err) {
+    resultsContainer.innerHTML = `<div style="color:var(--red);padding:12px;">Failed to load team fixtures: ${err.message}</div>`;
+  }
+}
+
+// ─── 1-CLICK IMPORT & TRACK FROM FOTMOB ───
+async function importAndTrackFotmobMatch(fotmobId, homeTeam, awayTeam, dateStr, leagueName) {
+  try {
+    const { data: existing } = await sb.from('zeta_matches').select('id').eq('fotmob_id', fotmobId).maybeSingle();
+
+    let matchId = existing?.id;
+    if (!matchId) {
+      const { data: inserted, error: insErr } = await sb.from('zeta_matches').insert({
+        home_team: homeTeam,
+        away_team: awayTeam,
+        fotmob_id: fotmobId,
+        date: dateStr,
+        league_name: leagueName,
+        status: 'live',
+        sport: 'Football'
+      }).select('id').single();
+
+      if (insErr) throw insErr;
+      matchId = inserted.id;
+    } else {
+      await sb.from('zeta_matches').update({ status: 'live' }).eq('id', matchId);
+    }
+
+    await syncSingleLiveScore(matchId, fotmobId);
+    await loadMatches();
+
+    alert(`🎉 [${homeTeam} vs ${awayTeam}] is now LIVE TRACKED!\nReal-time telemetry, pitch lineups, and match stats are now active for GitHub Actions.`);
+  } catch (err) {
+    alert("❌ Failed to import and track match: " + err.message);
+  }
+}
+
+
+
+// ─── AUTO-SEARCH FOTMOB MATCH ID IN MODAL ───
+async function searchFotmobIdForModal() {
+  const htId = document.getElementById('mmatch-ht').value;
+  const atId = document.getElementById('mmatch-at').value;
+  const tm = window.ALL_TEAMS_MAP || {};
+  const ht = tm[htId] || '';
+  const at = tm[atId] || '';
+
+  if (!ht && !at) {
+    const manualTerm = prompt('Enter home and away team name to search FotMob for Match ID:\n(e.g., Arsenal vs Chelsea)');
+    if (!manualTerm) return;
+    performFotmobSearch(manualTerm);
+    return;
+  }
+
+  const term = `${ht} ${at}`.trim();
+  performFotmobSearch(term);
+}
+
+async function performFotmobSearch(term) {
+  const statusEl = document.getElementById('mmatch-fm-status');
+  statusEl.style.color = 'var(--acc)';
+  statusEl.textContent = `🔍 Searching FotMob for "${term}"...`;
+
+  try {
+    const url = `https://apigw.fotmob.com/searchapi/suggest?term=${encodeURIComponent(term)}&lang=en`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const suggestions = data.matchSuggest || [];
+    let options = [];
+    suggestions.forEach(s => {
+      (s.options || []).forEach(o => {
+        if (o.payload?.id) {
+          options.push(o.payload);
+        }
+      });
+    });
+
+    if (options.length === 0) {
+      statusEl.style.color = 'var(--red)';
+      statusEl.textContent = `❌ No matches found on FotMob for "${term}". You can manually enter the ID.`;
+      return;
+    }
+
+    const best = options[0];
+    document.getElementById('mmatch-fmid').value = best.id;
+    statusEl.style.color = 'var(--grn)';
+    statusEl.innerHTML = `✅ Found Match ID: <strong>${best.id}</strong> (${best.homeName} vs ${best.awayName}, ${best.leagueName || ''}) - Auto-filled!`;
+  } catch(e) {
+    console.error(e);
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = `Search error: ${e.message}`;
+  }
+}
+
+async function testFotmobIdInModal() {
+  const fmid = document.getElementById('mmatch-fmid').value.trim();
+  const statusEl = document.getElementById('mmatch-fm-status');
+  if (!fmid) {
+    alert('Please enter a FotMob Match ID first.');
+    return;
+  }
+  statusEl.style.color = 'var(--acc)';
+  statusEl.textContent = `⏳ Verifying FotMob ID ${fmid}...`;
+
+  try {
+    const d = await fetchFotmobMatch(fmid, 'corsproxy');
+    const headerTeams = d?.header?.teams || [];
+    const htName = headerTeams[0]?.name || d?.general?.homeTeam?.name || 'Home';
+    const atName = headerTeams[1]?.name || d?.general?.awayTeam?.name || 'Away';
+    const score = d?.header?.status?.scoreStr || (headerTeams.length >= 2 ? `${headerTeams[0].score} - ${headerTeams[1].score}` : 'vs');
+    const status = d?.header?.status?.reason?.short || (d?.header?.status?.started ? 'Live' : 'Upcoming');
+
+    statusEl.style.color = 'var(--grn)';
+    statusEl.innerHTML = `✅ Valid FotMob Match: <strong>${htName} vs ${atName}</strong> (${score}) [${status}]`;
+  } catch(e) {
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = `❌ FotMob ID verification failed: ${e.message}`;
+  }
+}
 
 // ─── HELPERS FOR FOTMOB FETCHING ───
 async function fetchFotmobMatch(fotmobId, proxyMode = 'allorigins') {
@@ -1964,7 +3888,37 @@ async function syncMatchFromFotmob() {
       }
     }
 
-    statusEl.innerHTML = '<span style="color:var(--accent-green);font-weight:700">✅ Successfully synced Stats, Lineups, & Commentary!</span>';
+    // ── Sync Match Preview & Post-Match Articles ──
+    const mf = data.content?.matchFacts || {};
+    const articles = (mf.preReview || []).concat(mf.postReview || []);
+    if (articles.length > 0) {
+      const topArt = articles[0];
+      try {
+        await sb.from('zeta_matches').update({
+          article_title: topArt.title || null,
+          article_summary: topArt.description || null,
+          article_image: topArt.image || null,
+          article_source: topArt.source || 'FotMob',
+          article_url: topArt.shareUrl || null
+        }).eq('id', matchId);
+      } catch(e) {}
+
+      try {
+        await sb.from('zeta_news').insert({
+          title: topArt.title,
+          category: 'match-preview',
+          tag: 'FOTMOB',
+          source: topArt.source || 'FotMob',
+          thumbnail: topArt.image,
+          image: topArt.image,
+          content: topArt.description,
+          published: true,
+          created_at: new Date().toISOString()
+        });
+      } catch(e) {}
+    }
+
+    statusEl.innerHTML = '<span style="color:var(--accent-green);font-weight:700">✅ Successfully synced Stats, Lineups, Articles & Commentary!</span>';
     loadMatches();
   } catch (err) {
     console.error(err);
@@ -1986,7 +3940,7 @@ function renderHighlights(data){
     const mn=h.zeta_matches?(tm[h.zeta_matches.home_team_id]||'Home')+' vs '+(tm[h.zeta_matches.away_team_id]||'Away'):'—';
     const ln=h.zeta_leagues?.name||'—';
     const safeH=JSON.stringify(h).replace(/"/g,'&quot;');
-    return `<div class="highlight-row"><img src="${h.thumbnail_url||''}" class="highlight-thumb" onerror="this.style.display='none'"/><div class="highlight-info"><div class="highlight-title">${h.title}</div><div class="highlight-meta">${mn} • ${ln} • ${h.duration||'—'} • ${h.views||0} views ${h.badge?`<span class="badge bo">${h.badge}</span>`:''} ${h.is_replay?`<span class="badge bp">Replay</span>`:`<span class="badge bg">Highlight</span>`} ${h.published?'<span class="badge bg">Published</span>':'<span class="badge br">Draft</span>'}</div></div><div><button class="btn bgh bsm" onclick='openHighlightModal(JSON.parse(this.dataset.h))' data-h="${safeH}">Edit</button> <button class="btn bd bsm" onclick="deleteHighlight('${h.id}')">Del</button></div></div>`;
+    return `<div class="highlight-row"><img src="${h.thumbnail_url||''}" class="highlight-thumb lazy-img-fade" loading="lazy" onload="this.classList.add(\'loaded\')" onerror="this.style.display='none'"/><div class="highlight-info"><div class="highlight-title">${h.title}</div><div class="highlight-meta">${mn} • ${ln} • ${h.duration||'—'} • ${h.views||0} views ${h.badge?`<span class="badge bo">${h.badge}</span>`:''} ${h.is_replay?`<span class="badge bp">Replay</span>`:`<span class="badge bg">Highlight</span>`} ${h.published?'<span class="badge bg">Published</span>':'<span class="badge br">Draft</span>'}</div></div><div><button class="btn bgh bsm" onclick='openHighlightModal(JSON.parse(this.dataset.h))' data-h="${safeH}">Edit</button> <button class="btn bd bsm" onclick="deleteHighlight('${h.id}')">Del</button></div></div>`;
   }).join('');
 }
 function filterHighlights(q){renderHighlights(ALL_HIGHLIGHTS.filter(h=>(h.title||'').toLowerCase().includes(q.toLowerCase())));}
@@ -2088,6 +4042,7 @@ function addServerRow(srv) {
       <div class="fg" style="margin:0"><label>Type</label>
         <select class="srv-type">
           <option value="m3u8" ${(srv?.type||'m3u8')==='m3u8'?'selected':''}>HLS (m3u8)</option>
+          <option value="iframe" ${(srv?.type||'m3u8')==='iframe'?'selected':''}>Embed / Iframe Web Player</option>
           <option value="mpd" ${srv?.type==='mpd'?'selected':''}>DASH (mpd)</option>
           <option value="mp4" ${srv?.type==='mp4'?'selected':''}>MP4</option>
           <option value="rtmp" ${srv?.type==='rtmp'?'selected':''}>RTMP</option>
@@ -2302,6 +4257,15 @@ async function loadSettings(){
       <div class="fg"><label>iOS Store URL</label><input id="cstore-ios" value="${z.ios_store_url||''}"/></div>
     </div>
     
+    <h4 style="margin: 20px 0 10px; font-family: Rajdhani; font-size: 16px; color: #0284c7;">📢 Telegram Join Channel Alerts (App &amp; Web)</h4>
+    <div class="fr">
+      <div class="fg"><label>Frequent Notification Status</label><select id="ctg-enabled"><option value="true" ${z.telegram_enabled!==false?'selected':''}>Active (Frequent Popups Enabled)</option><option value="false" ${z.telegram_enabled===false?'selected':''}>Disabled (Muted)</option></select></div>
+      <div class="fg"><label>Notification Interval (Minutes)</label><input id="ctg-interval" type="number" min="1" max="60" value="${z.telegram_interval_mins||5}"/></div>
+    </div>
+    <div class="fg"><label>Telegram Channel Invite Link</label><input id="ctg-url" value="${z.telegram_url||'https://t.me/zetasports_official'}" placeholder="https://t.me/your_channel"/></div>
+    <div class="fg"><label>Notification Popup Title</label><input id="ctg-title" value="${z.telegram_title||'📢 Join Our Official Telegram Channel'}" placeholder="Notification Title"/></div>
+    <div class="fg"><label>Notification Message</label><input id="ctg-msg" value="${z.telegram_message||'Get instant live match streams, backup links, and real-time goal alerts directly on Telegram!'}" placeholder="Alert Message"/></div>
+
     <h4 style="margin: 20px 0 10px; font-family: Rajdhani; font-size: 16px; color: var(--acc);">General Settings (fifa_settings)</h4>
     <div class="fr">
       <div class="fg"><label>App Name / Watermark</label><input id="cw" value="${s.watermark||''}"/></div>
@@ -2330,7 +4294,12 @@ async function saveSettings(){
     latest_version: document.getElementById('cv-lat').value.trim(),
     update_message: document.getElementById('cmm-msg').value.trim(),
     android_store_url: document.getElementById('cstore-and').value.trim(),
-    ios_store_url: document.getElementById('cstore-ios').value.trim()
+    ios_store_url: document.getElementById('cstore-ios').value.trim(),
+    telegram_enabled: document.getElementById('ctg-enabled').value === 'true',
+    telegram_interval_mins: parseInt(document.getElementById('ctg-interval').value) || 5,
+    telegram_url: document.getElementById('ctg-url').value.trim(),
+    telegram_title: document.getElementById('ctg-title').value.trim(),
+    telegram_message: document.getElementById('ctg-msg').value.trim()
   };
 
   const [resFs, resZc] = await Promise.all([

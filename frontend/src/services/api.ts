@@ -49,6 +49,23 @@ async function fetchJson<T>(path: string): Promise<T | null> {
   return null;
 }
 
+// In-memory cache for ultra-fast single bundle delivery
+let cachedBundle: { generatedAt: string; matches: any[]; standings?: any } | null = null;
+let lastBundleFetch = 0;
+
+async function getLiveBundle() {
+  const now = Date.now();
+  if (cachedBundle && (now - lastBundleFetch < 15000)) {
+    return cachedBundle;
+  }
+  const bundle = await fetchJson<any>('live_bundle.json');
+  if (bundle) {
+    cachedBundle = bundle;
+    lastBundleFetch = now;
+  }
+  return cachedBundle;
+}
+
 export const DataAPI = {
   async getMeta(): Promise<SyncMeta | null> {
     return fetchJson<SyncMeta>('meta.json');
@@ -63,6 +80,10 @@ export const DataAPI = {
   },
 
   async getLiveFixtures(): Promise<Fixture[]> {
+    const bundle = await getLiveBundle();
+    if (bundle && Array.isArray(bundle.matches) && bundle.matches.length > 0) {
+      return bundle.matches as Fixture[];
+    }
     return (await fetchJson<Fixture[]>('fixtures/live.json')) || [];
   },
 
@@ -75,6 +96,15 @@ export const DataAPI = {
   },
 
   async getStandings(competitionId: string): Promise<CompetitionStandings | null> {
+    const bundle = await getLiveBundle();
+    if (bundle && bundle.standings && (competitionId === '516' || competitionId === 'algerian-ligue-1')) {
+      return {
+        competitionId: '516',
+        competitionName: 'Algerian Ligue 1',
+        updatedAt: bundle.generatedAt,
+        table: bundle.standings
+      } as any;
+    }
     return fetchJson<CompetitionStandings>(`matches/standings/${competitionId}.json`);
   },
 
@@ -83,14 +113,29 @@ export const DataAPI = {
   },
 
   async getMatchLineups(matchId: string): Promise<MatchLineups | null> {
+    const bundle = await getLiveBundle();
+    const found = bundle?.matches?.find((m: any) => String(m.id) === String(matchId) || String(m.matchId) === String(matchId));
+    if (found && found.lineups) {
+      return { matchId, ...found.lineups };
+    }
     return fetchJson<MatchLineups>(`matches/lineups/${matchId}.json`);
   },
 
   async getMatchStats(matchId: string): Promise<MatchStatistics | null> {
+    const bundle = await getLiveBundle();
+    const found = bundle?.matches?.find((m: any) => String(m.id) === String(matchId) || String(m.matchId) === String(matchId));
+    if (found && found.stats) {
+      return { matchId, ...found.stats };
+    }
     return fetchJson<MatchStatistics>(`matches/statistics/${matchId}.json`);
   },
 
   async getMatchEvents(matchId: string): Promise<MatchEventsData | null> {
+    const bundle = await getLiveBundle();
+    const found = bundle?.matches?.find((m: any) => String(m.id) === String(matchId) || String(m.matchId) === String(matchId));
+    if (found && found.events) {
+      return { matchId, events: found.events, updatedAt: found.updatedAt || new Date().toISOString() };
+    }
     return fetchJson<MatchEventsData>(`matches/events/${matchId}.json`);
   },
 

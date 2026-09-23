@@ -1,16 +1,22 @@
 /**
  * live_score_updater.mjs
  *
- * Automated Live Scores & Telemetry Sync Pipeline:
- * - Fetches real-time match scores, elapsed minutes, and status from FotMob.
- * - Updates `zeta_matches` in Supabase.
- * - For active/live/recent matches, fetches real starting XI lineups, stats, commentary, and events from FotMob.
- * - Upserts into `zeta_match_lineups`, `zeta_match_stats`, `zeta_match_commentary`, and `zeta_match_events`.
- * - Updates league standings into `zeta_league_standings`.
- * - Run by GitHub Actions workflow (`.github/workflows/live_scores.yml`) every 5 minutes and on manual dispatch.
+ * Ultra-Fast Admin-Driven Live Tracking & Single Bundle Generator:
+ * 1. 🤖 Auto-Untracks on Full Time (FT) - zero manual cleanup.
+ * 2. ⚡ 1-Click Admin-selected matches only - zero wasted cloud minutes.
+ * 3. 🚀 Compiles `data/live_bundle.json` - site loads everything in 1 request (<100ms).
+ * 4. 📢 Real-Time Goal Alerts to Telegram bot on score changes.
+ * 5. 💤 Smart Sleep Mode - exits in 2 seconds if no matches are live.
  */
 
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { createClient } from '@supabase/supabase-js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const ROOT_DIR = path.resolve(__dirname, '..');
 
 const rawUrl = process.env.SUPABASE_URL?.trim();
 const rawKey = (process.env.SUPABASE_KEY || process.env.SUPABASE_SERVICE_KEY)?.trim();
@@ -20,7 +26,30 @@ const SUPABASE_KEY = rawKey && rawKey.length > 10 ? rawKey : 'sb_publishable_luD
 
 const sb = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-// ── 1. Resolve FotMob Build ID ───────────────────────────────────────────────
+// ── 1. Telegram Goal Alerts Dispatcher ───────────────────────────────────────
+async function sendTelegramAlert(botToken, chatId, messageHtml) {
+  if (!botToken || !chatId) return;
+  try {
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: messageHtml,
+        parse_mode: 'HTML',
+        disable_web_page_preview: true
+      })
+    });
+    if (res.ok) {
+      console.log('  📢 [Telegram] Real-time goal alert dispatched successfully!');
+    }
+  } catch (e) {
+    console.warn('  ⚠️ [Telegram] Note:', e.message);
+  }
+}
+
+// ── 2. Resolve FotMob Build ID ───────────────────────────────────────────────
 async function getFotmobBuildId() {
   try {
     const res = await fetch('https://www.fotmob.com/', {
@@ -35,23 +64,22 @@ async function getFotmobBuildId() {
     return JSON.parse(match[1]).buildId;
   } catch (e) {
     console.warn('⚠️ Could not resolve live buildId, falling back to default:', e.message);
-    return 'EpPOgFXQq60HHZIqYWMD0';
+    return 'quX4vmazDEcAFzWw1ZjDZ';
   }
 }
 
-// ── 2. Sync Standings ────────────────────────────────────────────────────────
+// ── 3. Sync Standings ────────────────────────────────────────────────────────
 async function updateStandings(buildId) {
-  console.log('🔄 [Standings] Fetching Algeria Ligue 1 standings...');
   try {
     const leagueUrl = `https://www.fotmob.com/_next/data/${buildId}/leagues/516/overview/ligue-1.json`;
     const res = await fetch(leagueUrl, {
       headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' }
     });
-    if (!res.ok) return;
+    if (!res.ok) return [];
 
     const data = await res.json();
     const rawTable = data.pageProps?.table?.[0]?.data?.table?.all || [];
-    if (rawTable.length === 0) return;
+    if (rawTable.length === 0) return [];
 
     const formattedTable = rawTable.map((t, idx) => ({
       rank: t.idx || idx + 1,
@@ -81,13 +109,26 @@ async function updateStandings(buildId) {
         standings: formattedTable
       });
     }
-    console.log(`✅ [Standings] Saved ${formattedTable.length} teams to zeta_league_standings.`);
+
+    // Also write to data/matches/standings/516.json
+    const standingsDir = path.join(ROOT_DIR, 'data', 'matches', 'standings');
+    if (!fs.existsSync(standingsDir)) fs.mkdirSync(standingsDir, { recursive: true });
+    fs.writeFileSync(path.join(standingsDir, '516.json'), JSON.stringify({
+      competitionId: "516",
+      competitionName: "Algerian Ligue 1",
+      updatedAt: new Date().toISOString(),
+      table: formattedTable
+    }, null, 2));
+
+    console.log(`✅ [Standings] Synced ${formattedTable.length} teams in Algerian Ligue 1.`);
+    return formattedTable;
   } catch (e) {
     console.warn('⚠️ [Standings] Note:', e.message);
+    return [];
   }
 }
 
-// ── 3. Fetch Deep Match Telemetry ─────────────────────────────────────────────
+// ── 4. Fetch Deep Match Telemetry ─────────────────────────────────────────────
 async function fetchMatchTelemetry(buildId, fotmobId) {
   const url = `https://www.fotmob.com/_next/data/${buildId}/en/match/${fotmobId}.json`;
   try {
@@ -100,127 +141,189 @@ async function fetchMatchTelemetry(buildId, fotmobId) {
   }
 }
 
-// ── 4. Main Live Updater ─────────────────────────────────────────────────────
+// ── 5. Main Execution Engine ─────────────────────────────────────────────────
 async function updateLiveScoresAndTelemetry() {
-  console.log(`\n🚀 ZetaSports Live Updater — ${new Date().toISOString()}`);
+  const startTime = Date.now();
+  console.log(`\n🚀 ZetaSports Autonomous Live Engine — ${new Date().toISOString()}`);
+
+  // Fetch telegram config from Supabase or env
+  let tgBotToken = process.env.TELEGRAM_BOT_TOKEN;
+  let tgChatId = process.env.TELEGRAM_CHAT_ID;
+  try {
+    const { data: cfg } = await sb.from('zeta_config').select('*').eq('id', 'global').maybeSingle();
+    if (cfg) {
+      if (!tgBotToken && cfg.telegram_bot_token) tgBotToken = cfg.telegram_bot_token;
+      if (!tgChatId && cfg.telegram_chat_id) tgChatId = cfg.telegram_chat_id;
+    }
+  } catch (e) {}
+
+  // 1. Read Admin-Selected Tracked Matches
+  const trackedMatchesFilePath = path.join(ROOT_DIR, 'data', 'tracked_matches.json');
+  let trackedConfig = { updatedAt: new Date().toISOString(), trackedMatches: [] };
+  if (fs.existsSync(trackedMatchesFilePath)) {
+    try {
+      trackedConfig = JSON.parse(fs.readFileSync(trackedMatchesFilePath, 'utf8'));
+    } catch (e) {
+      console.warn('⚠️ Could not parse tracked_matches.json:', e.message);
+    }
+  }
+
+  // Also query Supabase for matches marked status = 'live'
+  const { data: dbLiveMatches } = await sb
+    .from('zeta_matches')
+    .select('id, fotmob_id, home_team, away_team, home_logo, away_logo, league_name, status, home_score, away_score, time_elapsed, date')
+    .eq('status', 'live')
+    .not('fotmob_id', 'is', null);
+
+  // Merge unique targets
+  const targetMap = new Map();
+
+  for (const m of (trackedConfig.trackedMatches || [])) {
+    // Only track if active live (not finished or archived)
+    if (m.fotmobId && m.status !== 'archived' && m.status !== 'finished') {
+      targetMap.set(String(m.fotmobId), {
+        fotmobId: String(m.fotmobId),
+        id: m.matchId || null,
+        homeTeam: m.homeTeam,
+        awayTeam: m.awayTeam,
+        status: m.status || 'live',
+        previousScore: `${m.homeScore ?? ''}-${m.awayScore ?? ''}`
+      });
+    }
+  }
+
+  for (const m of (dbLiveMatches || [])) {
+    if (m.fotmob_id) {
+      const fId = String(m.fotmob_id);
+      const existing = targetMap.get(fId) || {};
+      targetMap.set(fId, {
+        ...existing,
+        fotmobId: fId,
+        id: m.id,
+        homeTeam: m.home_team || existing.homeTeam,
+        awayTeam: m.away_team || existing.awayTeam,
+        homeLogo: m.home_logo,
+        awayLogo: m.away_logo,
+        leagueName: m.league_name,
+        status: 'live',
+        previousScore: `${m.home_score ?? ''}-${m.away_score ?? ''}`
+      });
+    }
+  }
+
+  const activeTargets = Array.from(targetMap.values());
+
+  // 💤 5. SMART SLEEP MODE: If 0 tracked matches, exit in ~2 seconds
+  if (activeTargets.length === 0) {
+    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+    console.log(`💤 [Smart Sleep] 0 active live matches. Completed cleanly in ${elapsed}s.`);
+
+    // Keep live.json and live_bundle.json clean
+    const fixturesDir = path.join(ROOT_DIR, 'data', 'fixtures');
+    if (!fs.existsSync(fixturesDir)) fs.mkdirSync(fixturesDir, { recursive: true });
+    fs.writeFileSync(path.join(fixturesDir, 'live.json'), '[]\n');
+
+    const liveBundlePath = path.join(ROOT_DIR, 'data', 'live_bundle.json');
+    fs.writeFileSync(liveBundlePath, JSON.stringify({
+      generatedAt: new Date().toISOString(),
+      activeMatchesCount: 0,
+      matches: []
+    }, null, 2) + '\n');
+
+    const metaJsonPath = path.join(ROOT_DIR, 'data', 'meta.json');
+    if (fs.existsSync(metaJsonPath)) {
+      try {
+        const meta = JSON.parse(fs.readFileSync(metaJsonPath, 'utf8'));
+        meta.lastSuccessfulSync = new Date().toISOString();
+        meta.activeMatchesCount = 0;
+        fs.writeFileSync(metaJsonPath, JSON.stringify(meta, null, 2) + '\n');
+      } catch (e) {}
+    }
+
+    return;
+  }
+
+  console.log(`🎯 Found ${activeTargets.length} admin-selected match(es) for live tracking:`);
+  for (const t of activeTargets) {
+    console.log(`  👉 [${t.fotmobId}] ${t.homeTeam || 'Home'} vs ${t.awayTeam || 'Away'}`);
+  }
 
   const buildId = await getFotmobBuildId();
   console.log(`📡 FotMob Build ID: ${buildId}`);
 
-  // 1. Sync Standings first
-  await updateStandings(buildId);
+  // Sync Ligue 1 standings in background
+  const latestStandings = await updateStandings(buildId);
 
-  // 2. Fetch trackable matches from Supabase
-  const { data: dbMatches, error: dbErr } = await sb
-    .from('zeta_matches')
-    .select('id, fotmob_id, home_team, away_team, status, home_score, away_score, time_elapsed, date')
-    .not('fotmob_id', 'is', null);
+  const bundledLiveMatches = [];
+  const updatedTrackedMatches = [];
 
-  if (dbErr) {
-    console.error('❌ Failed to load matches:', dbErr.message);
-    process.exit(1);
-  }
+  for (const target of activeTargets) {
+    const fId = target.fotmobId;
+    console.log(`\n🔍 Fetching live telemetry for FotMob ID: ${fId}...`);
 
-  console.log(`📋 Total fixtures in DB: ${dbMatches?.length || 0}`);
-
-  // 3. Fetch FotMob Ligue 1 Fixtures & Overview
-  const leagueUrl = `https://www.fotmob.com/_next/data/${buildId}/leagues/516/overview/ligue-1.json`;
-  let fotmobMatchesMap = {};
-
-  try {
-    const lRes = await fetch(leagueUrl, {
-      headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' }
-    });
-    if (lRes.ok) {
-      const lData = await lRes.json();
-      const all = lData.pageProps?.fixtures?.allMatches || [];
-      for (const m of all) {
-        if (m.id) fotmobMatchesMap[m.id.toString()] = m;
-      }
-    }
-  } catch (e) {
-    console.warn('⚠️ League fetch note:', e.message);
-  }
-
-  // 4. Update Match Scores & Status
-  let scoreUpdatesCount = 0;
-  const activeMatchesToDetail = [];
-
-  for (const db of (dbMatches || [])) {
-    const fId = db.fotmob_id?.toString();
-    const fm = fotmobMatchesMap[fId];
-
-    let status = db.status;
-    let timeElapsed = db.time_elapsed;
-    let homeScore = db.home_score;
-    let awayScore = db.away_score;
-    let period = null;
-
-    if (fm && fm.status) {
-      const s = fm.status;
-      if (s.finished) {
-        status = 'finished';
-        timeElapsed = s.reason?.short || 'FT';
-        period = 'Full Time';
-      } else if (s.started) {
-        status = 'live';
-        timeElapsed = s.liveTime?.short || s.liveTime?.long || 'Live';
-        period = s.reason?.short === 'HT' ? 'Half Time' : 'In Play';
-      } else if (s.cancelled) {
-        status = 'cancelled';
-        timeElapsed = 'PP';
-      }
-
-      if (s.scoreStr) {
-        const parts = s.scoreStr.split(' - ').map(x => parseInt(x.trim(), 10));
-        if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
-          homeScore = parts[0];
-          awayScore = parts[1];
-        }
-      }
-
-      const changed =
-        status !== db.status ||
-        timeElapsed !== db.time_elapsed ||
-        homeScore !== db.home_score ||
-        awayScore !== db.away_score;
-
-      if (changed) {
-        await sb.from('zeta_matches').update({
-          status,
-          time_elapsed: timeElapsed,
-          home_score: homeScore,
-          away_score: awayScore,
-          period,
-          updated_at: new Date().toISOString()
-        }).eq('id', db.id);
-
-        scoreUpdatesCount++;
-        console.log(`  ⚡ [${db.home_team} vs ${db.away_team}]: ${status.toUpperCase()} ${homeScore} - ${awayScore} (${timeElapsed})`);
-      }
+    const details = await fetchMatchTelemetry(buildId, fId);
+    if (!details) {
+      console.warn(`  ⚠️ Could not fetch details for FotMob match ${fId}`);
+      updatedTrackedMatches.push(target);
+      continue;
     }
 
-    // Prioritize deep telemetry sync for live or recently finished matches
-    if (status === 'live' || status === 'finished' || db.status === 'live') {
-      activeMatchesToDetail.push({ ...db, currentStatus: status, fId });
+    const header = details.header || {};
+    const content = details.content || {};
+    const teams = header.teams || [];
+    const statusObj = header.status || {};
+
+    let homeScore = 0;
+    let awayScore = 0;
+    if (teams.length >= 2) {
+      homeScore = parseInt(teams[0].score, 10) || 0;
+      awayScore = parseInt(teams[1].score, 10) || 0;
     }
-  }
 
-  console.log(`✅ [Scores] Updated ${scoreUpdatesCount} match scores.`);
+    let status = 'live';
+    let timeElapsed = 'Live';
+    let period = 'In Play';
 
-  // 5. Sync Deep Match Telemetry (Lineups, Stats, Events, Commentary)
-  console.log(`\n🔍 [Telemetry] Syncing lineups, stats, commentary & events for ${activeMatchesToDetail.length} match(es)...`);
+    // 🤖 1. AUTO-UNTRACK ON FULL TIME (FT)
+    let isFinished = false;
+    if (statusObj.finished) {
+      status = 'finished';
+      timeElapsed = statusObj.reason?.short || 'FT';
+      period = 'Full Time';
+      isFinished = true;
+    } else if (statusObj.started) {
+      status = 'live';
+      timeElapsed = statusObj.liveTime?.short || statusObj.liveTime?.long || 'Live';
+      period = statusObj.reason?.short === 'HT' ? 'Half Time' : 'In Play';
+    } else if (statusObj.cancelled) {
+      status = 'cancelled';
+      timeElapsed = 'PP';
+      isFinished = true;
+    }
 
-  for (const m of activeMatchesToDetail.slice(0, 10)) { // sync up to 10 active matches per cycle
-    if (!m.fId) continue;
+    const homeTeamName = teams[0]?.name || target.homeTeam || 'Home Team';
+    const awayTeamName = teams[1]?.name || target.awayTeam || 'Away Team';
+    const homeTeamLogo = teams[0]?.imageUrl || `https://images.fotmob.com/image_resources/logo/teamlogo/${teams[0]?.id}_small.png`;
+    const awayTeamLogo = teams[1]?.imageUrl || `https://images.fotmob.com/image_resources/logo/teamlogo/${teams[1]?.id}_small.png`;
 
-    const details = await fetchMatchTelemetry(buildId, m.fId);
-    if (!details || !details.content) continue;
+    console.log(`  ⚡ Score: ${homeTeamName} ${homeScore} - ${awayScore} ${awayTeamName} (${timeElapsed}) | Status: ${status.toUpperCase()}`);
 
-    const content = details.content;
-    const matchId = m.id;
+    // 📢 4. REAL-TIME GOAL ALERT DISPATCHER
+    const currentScoreStr = `${homeScore}-${awayScore}`;
+    if (target.previousScore && target.previousScore !== '-' && target.previousScore !== currentScoreStr) {
+      const goalMsg = `⚽ <b>GOAL!</b>\n\n<b>${homeTeamName}</b> ${homeScore} - ${awayScore} <b>${awayTeamName}</b>\n⏱ <i>${timeElapsed}</i>\n🏆 ${header.leagueName || 'Match Alert'}\n\n📲 Watch live on ZETA SPORTS!`;
+      await sendTelegramAlert(tgBotToken, tgChatId, goalMsg);
+    }
 
-    // A. LINEUPS -> zeta_match_lineups
+    // Resolve Supabase match ID
+    let matchId = target.id;
+    if (!matchId) {
+      const { data: found } = await sb.from('zeta_matches').select('id').eq('fotmob_id', fId).maybeSingle();
+      if (found) matchId = found.id;
+    }
+
+    // Lineups
+    let parsedLineups = null;
     if (content.lineup) {
       const lu = content.lineup;
       const homeTeam = lu.homeTeam || {};
@@ -235,7 +338,7 @@ async function updateLiveScoresAndTelemetry() {
           rating: p.performance?.rating ? String(p.performance.rating) : '7.0',
           is_home: true,
           x: p.verticalLayout?.x ?? 0.5,
-          y: (p.verticalLayout?.y ? 0.5 + (p.verticalLayout.y * 0.45) : 0.75) // normalize to bottom home pitch
+          y: (p.verticalLayout?.y ? 0.5 + (p.verticalLayout.y * 0.45) : 0.75)
         });
       }
       for (const p of (awayTeam.starters || [])) {
@@ -246,50 +349,36 @@ async function updateLiveScoresAndTelemetry() {
           rating: p.performance?.rating ? String(p.performance.rating) : '7.0',
           is_home: false,
           x: p.verticalLayout?.x ?? 0.5,
-          y: (p.verticalLayout?.y ? (p.verticalLayout.y * 0.45) : 0.25) // normalize to top away pitch
+          y: (p.verticalLayout?.y ? (p.verticalLayout.y * 0.45) : 0.25)
         });
       }
 
       const homeSubs = (homeTeam.subs || []).map(s => ({ name: s.name, number: s.shirtNumber, is_home: true }));
       const awaySubs = (awayTeam.subs || []).map(s => ({ name: s.name, number: s.shirtNumber, is_home: false }));
 
-      const lineupRow = {
-        match_id: matchId,
-        home_lineup: {
-          formation: homeTeam.formation || '4-3-3',
-          coach: homeTeam.coach?.name || null,
-          players: players.filter(p => p.is_home),
-          substitutes: homeSubs
-        },
-        away_lineup: {
-          formation: awayTeam.formation || '4-2-3-1',
-          coach: awayTeam.coach?.name || null,
-          players: players.filter(p => !p.is_home),
-          substitutes: awaySubs
-        }
+      parsedLineups = {
+        home_formation: homeTeam.formation || '4-3-3',
+        away_formation: awayTeam.formation || '4-2-3-1',
+        coach_home: homeTeam.coach?.name || null,
+        coach_away: awayTeam.coach?.name || null,
+        players,
+        substitutes: [...homeSubs, ...awaySubs]
       };
 
-      try {
-        const { error: luErr } = await sb.from('zeta_match_lineups').upsert(lineupRow, { onConflict: 'match_id' });
-        if (luErr) console.warn('⚠️ Lineup subtable note:', luErr.message);
-
-        // Also update direct column on zeta_matches for instant loading
-        await sb.from('zeta_matches').update({
-          lineups: {
-            home_formation: homeTeam.formation || '4-3-3',
-            away_formation: awayTeam.formation || '4-2-3-1',
-            players: players,
-            substitutes: [...homeSubs, ...awaySubs]
-          }
-        }).eq('id', matchId);
-
-        console.log(`  📋 [Lineups] Synced ${players.length} players for ${m.home_team} vs ${m.away_team}`);
-      } catch (e) {
-        console.warn('⚠️ [Lineups] Error:', e.message);
+      if (matchId) {
+        try {
+          await sb.from('zeta_match_lineups').upsert({
+            match_id: matchId,
+            home_lineup: { formation: parsedLineups.home_formation, coach: parsedLineups.coach_home, players: players.filter(p => p.is_home), substitutes: homeSubs },
+            away_lineup: { formation: parsedLineups.away_formation, coach: parsedLineups.coach_away, players: players.filter(p => !p.is_home), substitutes: awaySubs }
+          }, { onConflict: 'match_id' });
+        } catch (e) {}
       }
     }
 
-    // B. STATS -> zeta_match_stats
+    // Stats
+    let homeStatsObj = null;
+    let awayStatsObj = null;
     if (content.stats) {
       const st = content.stats;
       const allStats = st.Periods?.All?.stats || [];
@@ -308,7 +397,7 @@ async function updateLiveScoresAndTelemetry() {
         return 0;
       };
 
-      const homeStatsObj = {
+      homeStatsObj = {
         possession: getStat('ballpossesion', 0) || 50,
         shots: getStat('total_shots', 0),
         shots_on_target: getStat('shotsontarget', 0),
@@ -318,7 +407,7 @@ async function updateLiveScoresAndTelemetry() {
         red_cards: getStat('red_cards', 0)
       };
 
-      const awayStatsObj = {
+      awayStatsObj = {
         possession: getStat('ballpossesion', 1) || 50,
         shots: getStat('total_shots', 1),
         shots_on_target: getStat('shotsontarget', 1),
@@ -328,44 +417,22 @@ async function updateLiveScoresAndTelemetry() {
         red_cards: getStat('red_cards', 1)
       };
 
-      try {
-        const { error: stErr } = await sb.from('zeta_match_stats').upsert({
-          match_id: matchId,
-          home_stats: homeStatsObj,
-          away_stats: awayStatsObj
-        }, { onConflict: 'match_id' });
-        if (stErr) console.warn('⚠️ Stats subtable note:', stErr.message);
-
-        // Also update direct match_stats column on zeta_matches
-        await sb.from('zeta_matches').update({
-          match_stats: {
-            possession_home: homeStatsObj.possession,
-            possession_away: awayStatsObj.possession,
-            shots_home: homeStatsObj.shots,
-            shots_away: awayStatsObj.shots,
-            shots_on_target_home: homeStatsObj.shots_on_target,
-            shots_on_target_away: awayStatsObj.shots_on_target,
-            corners_home: homeStatsObj.corners,
-            corners_away: awayStatsObj.corners,
-            fouls_home: homeStatsObj.fouls,
-            fouls_away: awayStatsObj.fouls,
-            yellow_cards_home: homeStatsObj.yellow_cards,
-            yellow_cards_away: awayStatsObj.yellow_cards,
-            red_cards_home: homeStatsObj.red_cards,
-            red_cards_away: awayStatsObj.red_cards
-          }
-        }).eq('id', matchId);
-
-        console.log(`  📊 [Stats] Synced match statistics for ${m.home_team} vs ${m.away_team}`);
-      } catch (e) {
-        console.warn('⚠️ [Stats] Error:', e.message);
+      if (matchId) {
+        try {
+          await sb.from('zeta_match_stats').upsert({
+            match_id: matchId,
+            home_stats: homeStatsObj,
+            away_stats: awayStatsObj
+          }, { onConflict: 'match_id' });
+        } catch (e) {}
       }
     }
 
-    // C. EVENTS -> zeta_match_events
+    // Events
+    let eventsRows = [];
     const rawEvents = content.matchFacts?.events?.events || content.incidents?.allIncidents || [];
     if (rawEvents.length > 0) {
-      const eventsRows = rawEvents.map(e => ({
+      eventsRows = rawEvents.map(e => ({
         minute: e.time ? `${e.time}'` : `${e.min || 0}'`,
         team: e.isHome ? 'home' : 'away',
         player: e.player?.name || e.playerName || e.nameStr || 'Player',
@@ -375,28 +442,21 @@ async function updateLiveScoresAndTelemetry() {
         description: e.goalDescription || e.cardDescription || null
       }));
 
-      try {
-        const { error: evErr } = await sb.from('zeta_match_events').upsert({
-          match_id: matchId,
-          events: eventsRows
-        }, { onConflict: 'match_id' });
-        if (evErr) console.warn('⚠️ Events subtable note:', evErr.message);
-
-        // Also update direct match_events column on zeta_matches
-        await sb.from('zeta_matches').update({
-          match_events: eventsRows
-        }).eq('id', matchId);
-
-        console.log(`  ⚽ [Events] Synced ${eventsRows.length} timeline events.`);
-      } catch (e) {
-        console.warn('⚠️ [Events] Error:', e.message);
+      if (matchId) {
+        try {
+          await sb.from('zeta_match_events').upsert({
+            match_id: matchId,
+            events: eventsRows
+          }, { onConflict: 'match_id' });
+        } catch (e) {}
       }
     }
 
-    // D. COMMENTARY -> zeta_match_commentary
+    // Commentary
+    let commentaryRows = [];
     const ticker = content.liveticker?.liveticker || [];
     if (ticker.length > 0) {
-      const commentaryRows = ticker.slice(0, 30).map((t, idx) => ({
+      commentaryRows = ticker.slice(0, 30).map((t, idx) => ({
         minute: t.time || `${t.min || 0}'`,
         period: t.period || 'Match',
         type: t.type || 'text',
@@ -404,21 +464,158 @@ async function updateLiveScoresAndTelemetry() {
         order_index: idx
       }));
 
-      try {
-        const { error: cmErr } = await sb.from('zeta_match_commentary').upsert({
-          match_id: matchId,
-          commentary: commentaryRows
-        }, { onConflict: 'match_id' });
-        if (cmErr) console.warn('⚠️ Commentary subtable note:', cmErr.message);
-
-        console.log(`  🎙️ [Commentary] Synced ${commentaryRows.length} commentary lines.`);
-      } catch (e) {
-        console.warn('⚠️ [Commentary] Error:', e.message);
+      if (matchId) {
+        try {
+          await sb.from('zeta_match_commentary').upsert({
+            match_id: matchId,
+            commentary: commentaryRows
+          }, { onConflict: 'match_id' });
+        } catch (e) {}
       }
+    }
+
+    // Update Supabase zeta_matches
+    if (matchId) {
+      await sb.from('zeta_matches').update({
+        status,
+        time_elapsed: timeElapsed,
+        home_score: homeScore,
+        away_score: awayScore,
+        period,
+        lineups: parsedLineups,
+        match_stats: homeStatsObj ? {
+          possession_home: homeStatsObj.possession,
+          possession_away: awayStatsObj.possession,
+          shots_home: homeStatsObj.shots,
+          shots_away: awayStatsObj.shots,
+          shots_on_target_home: homeStatsObj.shots_on_target,
+          shots_on_target_away: awayStatsObj.shots_on_target,
+          corners_home: homeStatsObj.corners,
+          corners_away: awayStatsObj.corners,
+          fouls_home: homeStatsObj.fouls,
+          fouls_away: awayStatsObj.fouls,
+          yellow_cards_home: homeStatsObj.yellow_cards,
+          yellow_cards_away: awayStatsObj.yellow_cards,
+          red_cards_home: homeStatsObj.red_cards,
+          red_cards_away: awayStatsObj.red_cards
+        } : undefined,
+        match_events: eventsRows,
+        updated_at: new Date().toISOString()
+      }).eq('id', matchId);
+    }
+
+    // 🚀 2. BUILD SINGLE PRE-COMPILED BUNDLE OBJECT (< 100ms load)
+    const matchBundle = {
+      id: String(fId),
+      matchId: matchId || null,
+      competitionId: String(header.leagueId || "516"),
+      competitionName: header.leagueName || target.leagueName || "Football League",
+      competitionSlug: (header.leagueName || "league").toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+      country: "Algeria",
+      round: header.round || 1,
+      utcDate: header.status?.utcTime || new Date().toISOString(),
+      status: isFinished ? 'FINISHED' : (period === 'Half Time' ? 'PAUSED' : 'IN_PLAY'),
+      minute: timeElapsed,
+      homeTeam: {
+        id: String(teams[0]?.id || 'home'),
+        name: homeTeamName,
+        shortName: teams[0]?.name || homeTeamName,
+        logoUrl: homeTeamLogo,
+        score: homeScore
+      },
+      awayTeam: {
+        id: String(teams[1]?.id || 'away'),
+        name: awayTeamName,
+        shortName: teams[1]?.name || awayTeamName,
+        logoUrl: awayTeamLogo,
+        score: awayScore
+      },
+      score: { home: homeScore, away: awayScore },
+      lineups: parsedLineups,
+      stats: { home: homeStatsObj, away: awayStatsObj },
+      events: eventsRows,
+      commentary: commentaryRows,
+      venue: content.matchFacts?.infoBox?.Stadium?.name || undefined,
+      referee: typeof content.matchFacts?.infoBox?.Referee === 'string' ? content.matchFacts?.infoBox?.Referee : (content.matchFacts?.infoBox?.Referee?.text || undefined),
+      updatedAt: new Date().toISOString()
+    };
+
+    bundledLiveMatches.push(matchBundle);
+
+    // Auto-untrack logic
+    if (isFinished) {
+      console.log(`  🤖 [Auto-Untrack] Match ${fId} reached ${timeElapsed}. Auto-archiving.`);
+      updatedTrackedMatches.push({
+        ...target,
+        status: 'finished',
+        homeScore,
+        awayScore,
+        timeElapsed,
+        archivedAt: new Date().toISOString()
+      });
+    } else {
+      updatedTrackedMatches.push({
+        ...target,
+        status: 'live',
+        homeScore,
+        awayScore,
+        timeElapsed,
+        previousScore: currentScoreStr
+      });
     }
   }
 
-  console.log(`\n🏁 [ZetaSports] Live sync cycle completed successfully at ${new Date().toISOString()}`);
+  // ── 6. WRITE DATA BUNDLES ──────────────────────────────────────────────────
+  const fixturesDir = path.join(ROOT_DIR, 'data', 'fixtures');
+  if (!fs.existsSync(fixturesDir)) fs.mkdirSync(fixturesDir, { recursive: true });
+
+  // 1. live.json (standard format)
+  fs.writeFileSync(path.join(fixturesDir, 'live.json'), JSON.stringify(bundledLiveMatches.map(m => ({
+    id: m.id,
+    competitionId: m.competitionId,
+    competitionName: m.competitionName,
+    competitionSlug: m.competitionSlug,
+    country: m.country,
+    round: m.round,
+    utcDate: m.utcDate,
+    status: m.status,
+    minute: m.minute,
+    homeTeam: m.homeTeam,
+    awayTeam: m.awayTeam,
+    score: m.score,
+    venue: m.venue,
+    referee: m.referee,
+    updatedAt: m.updatedAt
+  })), null, 2) + '\n');
+
+  // 2. live_bundle.json (Ultra-fast single pre-compiled bundle)
+  const masterBundle = {
+    generatedAt: new Date().toISOString(),
+    activeMatchesCount: bundledLiveMatches.length,
+    matches: bundledLiveMatches,
+    standings: latestStandings
+  };
+  fs.writeFileSync(path.join(ROOT_DIR, 'data', 'live_bundle.json'), JSON.stringify(masterBundle, null, 2) + '\n');
+  console.log(`💾 Pre-compiled single bundle saved to data/live_bundle.json (${bundledLiveMatches.length} matches)`);
+
+  // 3. tracked_matches.json
+  trackedConfig.updatedAt = new Date().toISOString();
+  trackedConfig.trackedMatches = updatedTrackedMatches;
+  fs.writeFileSync(trackedMatchesFilePath, JSON.stringify(trackedConfig, null, 2) + '\n');
+
+  // 4. meta.json
+  const metaJsonPath = path.join(ROOT_DIR, 'data', 'meta.json');
+  if (fs.existsSync(metaJsonPath)) {
+    try {
+      const meta = JSON.parse(fs.readFileSync(metaJsonPath, 'utf8'));
+      meta.lastSuccessfulSync = new Date().toISOString();
+      meta.activeMatchesCount = bundledLiveMatches.length;
+      fs.writeFileSync(metaJsonPath, JSON.stringify(meta, null, 2) + '\n');
+    } catch (e) {}
+  }
+
+  const totalTime = ((Date.now() - startTime) / 1000).toFixed(1);
+  console.log(`\n🏁 [ZetaSports] Autonomous cycle completed in ${totalTime}s.`);
 }
 
 updateLiveScoresAndTelemetry().catch(e => {
