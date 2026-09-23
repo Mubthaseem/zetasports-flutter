@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
   :root {
     --bg-dark: #07090e;
@@ -651,19 +652,51 @@ async function loadMatch() {
   btn.disabled = true;
   btn.innerHTML = '<span>Fetching...</span>';
 
-  try {
-    const res = await fetch(`/api/match?id=${matchId}`);
-    const resJson = await res.json();
+  const startTime = Date.now();
+  let matchData = null;
+  let latency = 0;
+  let sizeKb = 0;
 
-    if (resJson.status !== 200 || !resJson.data) {
-      alert(`Error fetching match details: ${resJson.error || 'Unknown error'}`);
+  try {
+    // 1. Try dedicated endpoint /api/match?id=
+    try {
+      const res = await fetch(`/api/match?id=${matchId}`);
+      if (res.ok) {
+        const resJson = await res.json();
+        if (resJson.data) {
+          matchData = resJson.data;
+          latency = resJson.latency || (Date.now() - startTime);
+          sizeKb = resJson.sizeKb || (JSON.stringify(resJson.data).length / 1024).toFixed(1);
+        }
+      }
+    } catch (e) {
+      // Ignore and fallback to /proxy
+    }
+
+    // 2. Fallback to /proxy?url= (compatible with older server versions in memory)
+    if (!matchData) {
+      const targetUrl = `https://www.fotmob.com/api/data/matchDetails?matchId=${matchId}`;
+      const res = await fetch(`/proxy?url=${encodeURIComponent(targetUrl)}`);
+      if (res.ok) {
+        const j = await res.json();
+        const raw = j.data || j;
+        if (raw && (raw.general || raw.header || raw.content)) {
+          matchData = raw;
+          latency = Date.now() - startTime;
+          sizeKb = (JSON.stringify(raw).length / 1024).toFixed(1);
+        }
+      }
+    }
+
+    if (!matchData) {
+      alert(`Could not retrieve match data for ID: ${matchId}. Please check network connection.`);
       return;
     }
 
-    currentMatchData = resJson.data;
-    renderDashboard(currentMatchData, resJson.latency, resJson.sizeKb);
+    currentMatchData = matchData;
+    renderDashboard(currentMatchData, latency, sizeKb);
   } catch (err) {
-    alert('Failed to connect to proxy server: ' + err.message);
+    alert('Failed to connect: ' + err.message);
   } finally {
     btn.disabled = false;
     btn.innerHTML = '<span>Fetch Telemetry</span> ➔';
@@ -897,27 +930,52 @@ async function pushToSupabase() {
   statusEl.textContent = 'Pushing payload to Supabase fotmob_raw table...';
   statusEl.style.color = '#38bdf8';
 
+  const phase = currentMatchData.general?.finished ? 'post' : (currentMatchData.general?.started ? 'live' : 'pre');
+
   try {
-    const res = await fetch('/api/supabase/push', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        matchId: currentMatchId,
-        dataKey: 'match',
-        rawJson: currentMatchData,
-        phase: currentMatchData.general?.finished ? 'post' : (currentMatchData.general?.started ? 'live' : 'pre')
-      })
-    });
-    const result = await res.json();
-    if (result.success) {
+    let pushed = false;
+    // 1. Try server-side endpoint
+    try {
+      const res = await fetch('/api/supabase/push', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          matchId: currentMatchId,
+          dataKey: 'match',
+          rawJson: currentMatchData,
+          phase
+        })
+      });
+      if (res.ok) {
+        const result = await res.json();
+        if (result.success) pushed = true;
+      }
+    } catch(e) {}
+
+    // 2. Direct client-side Supabase push fallback
+    if (!pushed && window.supabase) {
+      const sbClient = window.supabase.createClient('https://voocdrpetiyspuhyeapi.supabase.co', 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV');
+      const { data, error } = await sbClient.from('fotmob_raw').upsert({
+        match_id: String(currentMatchId),
+        data_key: 'match',
+        raw_json: currentMatchData,
+        fetched_at: new Date().toISOString(),
+        phase
+      }, { onConflict: 'match_id,data_key' });
+
+      if (error) throw new Error(error.message);
+      pushed = true;
+    }
+
+    if (pushed) {
       statusEl.textContent = `✅ Successfully saved to Supabase (match_id: ${currentMatchId}, key: match) at ${new Date().toLocaleTimeString()}`;
       statusEl.style.color = '#10b981';
     } else {
-      statusEl.textContent = `❌ Supabase push error: ${result.error || 'Failed'}`;
-      statusEl.style.color = '#ef4444';
+      statusEl.textContent = `❌ Supabase push notice: Table fotmob_raw may need SQL migration in Supabase Editor.`;
+      statusEl.style.color = '#f59e0b';
     }
   } catch (err) {
-    statusEl.textContent = `❌ Network error: ${err.message}`;
+    statusEl.textContent = `❌ ${err.message}`;
     statusEl.style.color = '#ef4444';
   } finally {
     btn.disabled = false;
