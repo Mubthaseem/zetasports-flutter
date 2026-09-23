@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-09-23T04:28:03.618Z",
+    "generatedAt": "2026-09-23T04:32:23.035Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 100
+      "fullArticlesCount": 101
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,15 @@
     }
   },
   "news": [
+    {
+      "id": "ftbpro_01m34hktp8z3",
+      "title": "5 Things We’ve Learned About Real Madrid—and 1 Question That Still Needs Answering",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m34hktp8z3/5-things-weve-learned-about-real-madridand-1-question-that-still-needs-answering",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_11/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m2zs2s410q4xrt1714.jpg",
+      "publishedAt": "2026-09-23T00:00:00.000Z"
+    },
     {
       "id": "ftbpro_01m34ncdmt3w",
       "title": "Transfer Rumors: Bayern Munich Hatch Haaland Plan; Olise Considers Real Madrid Switch",
@@ -184,15 +193,6 @@
       "sourceUrl": "/embed/news/01m31x8w8t9d/eight-best-games-watch-during-bumper-international-break",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_56/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m31xbfkmhnj5qkrfkz.jpg",
       "publishedAt": "2026-09-22T18:00:01.000Z"
-    },
-    {
-      "id": "194kvzunupcho1w6yo91gg0suu",
-      "title": "Bompastor will not risk James in Champions League as Arsenal clash looms",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/194kvzunupcho1w6yo91gg0suu-bompastor-will-not-risk-james-champions-league-arsenal-clash-looms",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/7c/17/lauren-james_y3gnzfmuidv71je7whi370j8y.jpg?t=-844322784&w=1260&h=708",
-      "publishedAt": "2026-09-22T17:39:20.000Z"
     }
   ],
   "articles": {
@@ -1353,7 +1353,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1330,h_748,x_349,y_142/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m34yek82ahbksvp3jq.jpg",
       "publishedAt": "2026-09-22T19:30:00.000Z",
       "paragraphs": [
-        "By Barnaby Lane3:30 PM EDTHarry Kane (left) and Son Heung-min have 453 goals for Tottenham Hotspur between them. / James Williamson/AMA/Getty ImagesFor all the sharpened barbs fired their way, Tottenham Hotspur boast an illustrious history.",
+        "By Barnaby LaneSep 22, 2026Harry Kane (left) and Son Heung-min have 453 goals for Tottenham Hotspur between them. / James Williamson/AMA/Getty ImagesFor all the sharpened barbs fired their way, Tottenham Hotspur boast an illustrious history.",
         "The Lilywhites have won two First Division titles, eight FA Cups, four League Cups and two UEFA Cups. Even in the modern era, Spurs have won more European titles than a certain set of red-clad neighbors.",
         "That success has been underpinned by the caliber of players to have passed through north London over the decades; world-class wingers, record-breaking goalscorers, midfield maestros and even a future Ballon d’Or winner.",
         "Want an idea of just how much talent Spurs have had over the years? Here’s Sports Illustrated’s breakdown of the best Tottenham Hotspur players of all time.",
@@ -1662,7 +1662,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_3000,h_1687,x_0,y_36/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m31pyerg6wk8cxrvq1.jpg",
       "publishedAt": "2026-09-22T21:00:02.000Z",
       "paragraphs": [
-        "By Barnaby Lane5:00 PM EDTLionel Messi loves yerba mate. / Gustavo Pagano/Getty ImagesLionel Messi has been at the pinnacle of world soccer for more than two decades, from his emergence and subsequent domination with FC Barcelona to his later years with Inter Miami and Argentina, where success and trophies—including a World Cup—have continued to arrive at an astonishing rate.",
+        "By Barnaby LaneSep 22, 2026Lionel Messi loves yerba mate. / Gustavo Pagano/Getty ImagesLionel Messi has been at the pinnacle of world soccer for more than two decades, from his emergence and subsequent domination with FC Barcelona to his later years with Inter Miami and Argentina, where success and trophies—including a World Cup—have continued to arrive at an astonishing rate.",
         "While many, quite rightly, point to the Argentine’s extraordinary natural talent—perhaps the greatest of his generation, if not all time—it hasn’t all come down to ability alone.",
         "State-of-the-art training methods, elite conditioning, injury prevention, physiotherapy and plenty of good, old-fashioned hard work away from the pitch have all played a role in allowing Messi to remain at the very top of the sport for so long.",
         "Then there’s his diet—the often overlooked but crucial piece of the puzzle. What Messi eats and drinks has become increasingly important as the years have gone by, helping him maintain the physical demands required to perform at the highest level well into his 30s.",
@@ -2019,7 +2019,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m34v708pj5k484v7z8.jpg",
       "publishedAt": "2026-09-22T20:00:02.000Z",
       "paragraphs": [
-        "By James Cormack4:00 PM EDTThere have been several high-profile disappointments at the start of the new Premier League season. / David Price/Arsenal FC/Getty Images (Gyökeres), Visionhaus/Getty Images (Wirtz), Dave Howarth/CameraSport/Getty Images (Mbeumo)A new Premier League season represents a fresh start, and there was more time than usual for players to hit the ground running during the campaign’s opening act.",
+        "By James CormackSep 22, 2026There have been several high-profile disappointments at the start of the new Premier League season. / David Price/Arsenal FC/Getty Images (Gyökeres), Visionhaus/Getty Images (Wirtz), Dave Howarth/CameraSport/Getty Images (Mbeumo)A new Premier League season represents a fresh start, and there was more time than usual for players to hit the ground running during the campaign’s opening act.",
         "We were treated to a five-game burst before first international break of the season, with FIFA’s altered calendar combining the September and October windows into one, which leaves us without Premier League soccer until Oct. 10.",
         "So now is the ideal time to reset and take stock of what we’ve enjoyed thus far.",
         "While some have purred at an early juncture, others, including several high-profiles figures, are yet to find their groove. Such indifference is more concerning for some, especially those still keen to prove themselves on English soil.",
@@ -2523,7 +2523,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m34h3c11a3ad9dpmm1.jpg",
       "publishedAt": "2026-09-22T22:00:01.000Z",
       "paragraphs": [
-        "By Grey Whitebloom6:00 PM EDTVAR has been a hot-button issue this season. / Shaun Brooks/CameraSport/Getty ImagesThe legendary Brazilian playwright and sportswriter Nelson Rodrigues was not impressed with the advent of televised matches. “If the videotape shows it’s a penalty then all the worse for the videotape,” he once famously scoffed. “The videotape is stupid.”",
+        "By Grey WhitebloomSep 22, 2026VAR has been a hot-button issue this season. / Shaun Brooks/CameraSport/Getty ImagesThe legendary Brazilian playwright and sportswriter Nelson Rodrigues was not impressed with the advent of televised matches. “If the videotape shows it’s a penalty then all the worse for the videotape,” he once famously scoffed. “The videotape is stupid.”",
         "One can only imagine what he would have made of video assistant referees. The Premier League glitterati certainly don’t approve.",
         "Despite an attempt to implement a “light touch” this season, the English top-flight’s officials have been repeatedly guilty of heavy-handed interventions in the highest profile fixtures of this embryonic campaign. Howard Webb has already made his first groveling apology which has been swiftly rejected while the rest of the division are awaiting their own letters of explanation about a glut of other contentious incidents. The season, lest anyone forget, is just five games old.",
         "Even at this stage of the campaign, the Premier League table would look a lot different had every referee taken the same approach as Rodrigues.",
@@ -2541,6 +2541,37 @@
         "Joško Gvardiol appears to have learned the same deceptive trait. On two separate occasions this season, the Croatian defender has forced an erroneous offside flag in the buildup to a goal. Unlike Haaland’s derby decider, both were right to be awarded. Gvardiol’s stoppage-time winner against Bournemouth set Enzo Maresca up for a perfect start which was taken into the international break by a bonkers win over Sunderland on Sunday, the last goal of which was set up by Gvardiol and scored by Haaland.",
         "Without these retroactive offside reviews, City would be four points worse off and down in third rather than top of the table with an unblemished record. Yet, even Maresca is still arguing with the video tape, raging into the ether about supposedly incorrect decisions from three years ago.",
         "READ THE LATEST PREMIER LEAGUE NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m34hktp8z3": {
+      "id": "ftbpro_01m34hktp8z3",
+      "title": "5 Things We’ve Learned About Real Madrid—and 1 Question That Still Needs Answering",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/five-things-learned-real-madrid-one-question-answering/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_11/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m2zs2s410q4xrt1714.jpg",
+      "publishedAt": "2026-09-23T00:00:00.000Z",
+      "paragraphs": [
+        "By Andrew HeadspeathSep 22, 2026José Mourinho is encountering many of the same problems as his predecessors. / Diego Souto/Getty ImagesWe are almost a fifth of the way into the 2026–27 La Liga season as the first international break hits. It’s been a mixed start for José Mourinho on his return to Real Madrid.",
+        "The manager has enjoyed five wins from seven and benefitted from the flying form of Kylian Mbappé, among other bright spots.",
+        "However, Real Madrid aren’t judged on their ability to blow away Málaga at home, and chastening defeats in the tougher tests away at Real Betis and Atlético Madrid have exposed old flaws.",
+        "A bumpy start might have been tolerated had Barça not obliterated all before them, with Hansi Flick’s unstoppable team zooming into the distance with a six-point lead that already looks hard for anyone to overturn.",
+        "With the honeymoon period over for Mourinho and his remodeled Real Madrid, here are five things we’ve learned from the opening stages of the season—and one lingering question.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Arda Güler is regularly Madrid’s best creative outlet. / Diego Souto/Getty ImagesIn case you didn’t know, Arda Güler is very talented. The 21-year-old won Goal of the Season in La Liga and stole the show in the first leg of the Champions League quarterfinal against Bayern Munich during a breakout year.",
+        "However, his place in the team under new manager going into 2026–27 was unclear with Jude Bellingham the clearly preferred option at No. 10 and record signing Yan Diomande adding further competition on the right.",
+        "In the early weeks of the campaign, Güler has proven himself as important as anyone in terms of creative output.",
+        "The Türkiye international has 28 key passes this season, more than anyone else in La Liga—and one more than Lamine Yamal, despite the Barcelona superstar having played around 230 more minutes.",
+        "In a team that has occasionally lacked a killer instinct, finding space for Güler in the lineup, either on the right or centrally, appears essential.",
+        "Carlos Espí has been Mourinho’s super-sub. / M Gracia Jimenez/Soccrates/Getty ImagesCarlos Espí appeared to have been signed for one of soccer’s more thankless roles this season following his €25 million ($29 million) move from Levante: backup to Mbappé.",
+        "While he will probably never be a starter, the 21-year-old is fast becoming the perfect super-sub and already has two goals in 25 minutes, resulting in four points won. It would have been more too had his spectacular late effort against Real Betis not been chalked off for offside.",
+        "The young striker’s physicality, aerial threat and poacher’s instincts offers something totally different to what Madrid have in the roster and he has already been dubbed “Joselu Junior” by his teammates—in reference to the former striker’s habit for scoring hugely important goals off the bench.",
+        "Yan Diomande became Madrid’s record signing this summer. / Diego Souto/Getty ImagesNot everyone has enjoyed such a lightning start to the season. The club’s new record signing Yan Diomande is still waiting for his big introductory moment.",
+        "The 19-year-old, who became Madrid’s most expensive signing at €125 million ($143 million) upon moving from RB Leipzig, is clearly a future superstar rather than a current one and is being eased into life at the world’s biggest club slowly.",
+        "Mourinho has restricted Diomande to just two starts so far, much to the frustration of some of the more impatient fans who are keen to see their new toy out of the box.",
+        "An assist against Elche showed a glimpse of the Bundesliga Rookie of the Season’s potential but it is unlikely to be the start of an uninterrupted run of starts, with Mourinho typically cautious when it comes to young gems.",
+        "In the manager’s defense, it is only a year and a half since Diomande made his professional debut in a 3–2 defeat for Leganés against Real Madrid.",
+        "Madrid rarely see the best of Mbappé and Vinícius Jr at the same time. / Fran Santiago/Getty ImagesFollowing the derby day defeat to Atlético Madrid, L’Equipe shared a damning graphic showing the average positions of all Real Madrid players. Mbappé and Vinícius Jr were practically on top of one another."
       ]
     },
     "ftbpro_01m34m3n36zr": {
@@ -2582,7 +2613,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m34x2ccze5b1n8rpbr.jpg",
       "publishedAt": "2026-09-22T23:05:00.000Z",
       "paragraphs": [
-        "By SI FC Staff7:05 PM EDTErling Haaland (left) and Michael Olise (right) headline the gossip. / Matt McNulty/Getty Images (Haaland), Ulrik Pedersen/NurPhoto/Getty Images (Olise)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "By SI FC StaffSep 22, 2026Erling Haaland (left) and Michael Olise (right) headline the gossip. / Matt McNulty/Getty Images (Haaland), Ulrik Pedersen/NurPhoto/Getty Images (Olise)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
         "Florian Wirtz continues to be linked with an exit from Liverpool. / Robbie Jay Barratt - AMA/Getty ImagesLiverpool have offered Barcelona the chance to sign attacking midfielder Florian Wirtz in a swap deal that would take Dutch international Frenkie de Jong to Anfield. (Source: El Nacional)",
         "Also on Liverpool’s radar is Benfica right back Daniel Banjaqui. The 18-year-old, who was the subject of a failed bid from Arsenal during the summer, is valued at €50 million ($57 million). (Source: Anfield Watch)",
         "Bayern Munich are ready to join the race for Manchester City striker Erling Haaland further down the line, believing a move could be possible once Harry Kane’s time in Germany comes to an end in a few years. (Source: TEAMtalk)",
@@ -2613,7 +2644,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_762,h_428,x_0,y_41/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m2zyx34w67fp3m1vzk.jpg",
       "publishedAt": "2026-09-22T20:30:00.000Z",
       "paragraphs": [
-        "By Andrew Headspeath4:30 PM EDTMourinho gonna Mourinho / Jose Breton/Pics Action/NurPhoto/Getty ImagesIt was always coming. It was just a question of when, and how, rather than if.",
+        "By Andrew HeadspeathSep 22, 2026Mourinho gonna Mourinho / Jose Breton/Pics Action/NurPhoto/Getty ImagesIt was always coming. It was just a question of when, and how, rather than if.",
         "In the end, José Mourinho’s first rant against refereeing standards—complete with printouts and allusions to a grand conspiracy theory against Real Madrid—arrived in the immediate aftermath of Sunday’s Madrid derby.",
         "The context and the props change—to be fair to Mourinho, it can’t have been easy grappling with the printer and guest Wi-Fi at the Metropolitano—but the strategy stays the same: lose and blame someone else.",
         "It’s the tried and tested approach from Mourinho. But what used to be a three-season process of highs and lows is now being speed run. After Manchester United, Tottenham Hotspur, Roma and Fenerbahçe, he’s learned to jump from ‘honeymoon period’ straight into ‘unhappy marriage’.",
@@ -2696,7 +2727,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m34r2be1y8a6fmpn1v.jpg",
       "publishedAt": "2026-09-22T20:00:01.000Z",
       "paragraphs": [
-        "By Sophia Vesely4:00 PM EDTChris Richards (left) had a thrilling display over the weekend with club side Crystal Palace. / Sebastian Frej/Getty Images (Richards), Jamie Squire/Getty Images (Pochettino), ANP/Getty Images (Pepi)The U.S. men’s national team is back together.",
+        "By Sophia VeselySep 22, 2026Chris Richards (left) had a thrilling display over the weekend with club side Crystal Palace. / Sebastian Frej/Getty Images (Richards), Jamie Squire/Getty Images (Pochettino), ANP/Getty Images (Pepi)The U.S. men’s national team is back together.",
         "The band of 28 Americans touched down in Atlanta on Monday for the start of a two-week, extended international camp, reuniting for the first time since the 2026 World Cup in July.",
         "There was joyful embraces and excited chatter among the Stars and Stripes, but also much work to be done. Mauricio Pochettino’s men have four fall friendlies on the docket, beginning with Peru on Saturday in Orlando. The Argentine boss has called up a dozen newcomers, meaning the 13 returning World Cup stars will have heightened responsibilities in order to catch the debutants up to speed.",
         "Some players are in better positions than others for the weeks of international play ahead, while others are stuck watching from home.",
@@ -2752,7 +2783,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_23/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m34z45h451wg2gt6kg.jpg",
       "publishedAt": "2026-09-22T21:30:00.000Z",
       "paragraphs": [
-        "By Roberto Casillas5:30 PM EDTLewis Hall continues to thrive at Tyneside.  / Serena Taylor/Newcastle United/Getty ImagesNewcastle United left back Lewis Hall was atop Manchester United’s transfer shortlist all summer, but once the dust settled, the only contract the Englishman signed was an extension with the Magpies until 2031, a decision he described as a “no-brainer.”",
+        "By Roberto CasillasSep 22, 2026Lewis Hall continues to thrive at Tyneside.  / Serena Taylor/Newcastle United/Getty ImagesNewcastle United left back Lewis Hall was atop Manchester United’s transfer shortlist all summer, but once the dust settled, the only contract the Englishman signed was an extension with the Magpies until 2031, a decision he described as a “no-brainer.”",
         "Manchester United eyed Hall as the priority target to reinforce the left-back position. The Red Devils, who also explored several alternatives without finding what they were looking for, were keen on taking advantage of the significant talent exodus from St. James’ Park, including the midfield duo of Sandro Tonalli and Bruno Guimarães, Anthony Gordon and manager Eddie Howe.",
         "However, Newcastle had no interest in also losing Hall, who has shone for the club since first arriving on loan from Chelsea in 2023. In the end, they managed to keep the Englishman and, according to him, new manager Matthias Jaissle is largely responsible for the decision to commit.",
         "“After not many conversations [with Jaissle],” Hall confessed to Chronicle Live.",
@@ -2782,7 +2813,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m351kfgd0mt2f3x1fb.jpg",
       "publishedAt": "2026-09-22T21:00:00.000Z",
       "paragraphs": [
-        "By Amanda Langell5:00 PM EDTRuben Amorim (left) and Christian Pulisic are getting on the same page. / Chris Ricco/UEFA/Getty Images (Amorim), Mattia Martegani/NurPhoto/Getty Images (Pulisic)AC Milan manager Ruben Amorim is avoiding the mistakes from his tumultuous time at Manchester United—and that’s great news for Christian Pulisic.",
+        "By Amanda LangellSep 22, 2026Ruben Amorim (left) and Christian Pulisic are getting on the same page. / Chris Ricco/UEFA/Getty Images (Amorim), Mattia Martegani/NurPhoto/Getty Images (Pulisic)AC Milan manager Ruben Amorim is avoiding the mistakes from his tumultuous time at Manchester United—and that’s great news for Christian Pulisic.",
         "The typically stubborn Amorim took a break from his back three obsession to roll out a 4-4-2 at San Siro on Sunday and instantly reaped the rewards of his decision. Milan secured a dominant 3–0 victory, snapping a three-game winless streak and keeping just a second clean sheet of the season.",
         "Amorim also gave Pulisic the nod for the first time in 2026–27 and the American forward repaid his manager’s trust with a goal just 14 minutes into the clash. It marked the first time Pulisic found the back of the net for the Rossoneri since Dec. 28, 2025.",
         "After the emphatic victory, Amorim gave a candid response to his sudden tactical change after he spent his entire tenure at Old Trafford unwilling to budge from his principles, which ultimately led to his dismissal after just 14 months.",
@@ -2812,7 +2843,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2216,h_1246,x_0,y_240/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m355dkcxpx1s6ev8ge.jpg",
       "publishedAt": "2026-09-22T22:30:00.000Z",
       "paragraphs": [
-        "By Ben Steiner6:30 PM EDTSebastian Berhalter (left) and Gio Reyna (right) are two of the older players on the fall USMNT roster.  / Jared C. Tilton/FIFA/Getty ImagesSebastian Berhalter and Gio Reyna are likely still a decade away from retiring from the U.S. men’s national team, but the pair are embracing a newfound role in Mauricio Pochettino’s latest plan, that of veterans.",
+        "By Ben SteinerSep 22, 2026Sebastian Berhalter (left) and Gio Reyna (right) are two of the older players on the fall USMNT roster.  / Jared C. Tilton/FIFA/Getty ImagesSebastian Berhalter and Gio Reyna are likely still a decade away from retiring from the U.S. men’s national team, but the pair are embracing a newfound role in Mauricio Pochettino’s latest plan, that of veterans.",
         "Ahead of four friendlies against Chile, Peru, Canada and Mexico, the USMNT manager named an extremely youthful roster, bringing in only 13 players from the 2026 World Cup squad and calling up 13 players without a previous cap, eight of whom are teenagers.",
         "For 23-year-old Reyna and 25-year-old Berhalter, it’s an entirely new outlook. They’re now the ninth- and tenth-oldest of a 28-man fall squad that is emphasizing drastic youth development ahead of the 2030 World Cup. In comparison, they were the fifth- and eighth-youngest of the 2026 World Cup roster just months ago.",
         "“It makes me feel a little bit old, but it’s nice to have a lot of [the young players] here, and I’m looking forward to getting to know them better on and off the field, try to help them, show them what we built and what we’re striving to build,” Reyna said at the start of camp. He is now up to 43 caps since making his USMNT debut at 17.",
