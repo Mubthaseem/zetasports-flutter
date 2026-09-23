@@ -40,6 +40,12 @@ jobs:
       - name: Install Frontend Dependencies
         run: npm ci --prefix frontend
 
+      - name: Encrypt Admin Panel
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: node scripts/encrypt_admin.mjs
+
       - name: Build Web Application
         run: npm run build --prefix frontend
 
