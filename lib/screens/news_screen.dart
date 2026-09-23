@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import '../theme/tailwind_theme.dart';
 import '../theme/app_theme.dart';
+import '../widgets/tw_card.dart';
+import '../widgets/tw_badge.dart';
 import '../services/firestore_service.dart' show SupabaseService;
 
 class NewsScreen extends StatefulWidget {
@@ -24,7 +28,10 @@ class _NewsScreenState extends State<NewsScreen> {
   }
 
   Future<void> _loadNews() async {
-    setState(() { _loading = true; _error = null; });
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
     try {
       final all = await SupabaseService.fetchNews(publishedOnly: true, limit: 20);
       if (mounted) {
@@ -35,14 +42,23 @@ class _NewsScreenState extends State<NewsScreen> {
         });
       }
     } catch (e) {
-      if (mounted) setState(() { _loading = false; _error = e.toString(); });
+      if (mounted) {
+        setState(() {
+          _loading = false;
+          _error = e.toString();
+        });
+      }
     }
   }
 
   List<Map<String, dynamic>> get _filtered {
-    if (_category == 'Top Stories') return _articles;
-    if (_category == 'Latest') return _articles;
-    return _articles.where((a) => (a['category'] ?? '').toString().toLowerCase() == _category.toLowerCase()).toList();
+    if (_category == 'Top Stories' || _category == 'Latest') return _articles;
+    return _articles
+        .where((a) => (a['category'] ?? '')
+            .toString()
+            .toLowerCase()
+            .contains(_category.toLowerCase()))
+        .toList();
   }
 
   @override
@@ -50,31 +66,38 @@ class _NewsScreenState extends State<NewsScreen> {
     return Scaffold(
       backgroundColor: AppTheme.bg,
       body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: _buildHeader()),
-            SliverToBoxAdapter(child: _buildCategoryChips()),
-            if (_loading) ...[
-              SliverToBoxAdapter(child: _shimmerFeatured()),
-              SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (_, __) => _shimmerArticle(),
-                  childCount: 5,
+        child: RefreshIndicator(
+          color: TwBlue.b600,
+          backgroundColor: Colors.white,
+          onRefresh: _loadNews,
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(child: _buildHeader()),
+              SliverToBoxAdapter(child: _buildCategoryChips()),
+              if (_loading) ...[
+                SliverToBoxAdapter(child: _shimmerFeatured()),
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (_, __) => _shimmerArticle(),
+                    childCount: 5,
+                  ),
                 ),
-              ),
-            ] else if (_error != null) ...[
-              SliverFillRemaining(child: _buildErrorState()),
-            ] else ...[
-              if (_featured != null) SliverToBoxAdapter(child: _buildFeaturedCard()),
-              SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (_, i) => _buildArticleRow(_filtered[i]),
-                  childCount: _filtered.length,
+              ] else if (_error != null) ...[
+                SliverFillRemaining(child: _buildErrorState()),
+              ] else if (_filtered.isEmpty) ...[
+                SliverFillRemaining(child: _buildEmptyState()),
+              ] else ...[
+                if (_featured != null) SliverToBoxAdapter(child: _buildFeaturedCard()),
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (_, i) => _buildArticleRow(_filtered[i]),
+                    childCount: _filtered.length,
+                  ),
                 ),
-              ),
+              ],
+              const SliverToBoxAdapter(child: SizedBox(height: TwSpace.p8)),
             ],
-            const SliverToBoxAdapter(child: SizedBox(height: 24)),
-          ],
+          ),
         ),
       ),
     );
@@ -82,45 +105,64 @@ class _NewsScreenState extends State<NewsScreen> {
 
   Widget _buildHeader() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
+      padding: const EdgeInsets.fromLTRB(TwSpace.p4, TwSpace.p3, TwSpace.p4, TwSpace.p2),
       child: Row(
         children: [
-          Text('News', style: GoogleFonts.outfit(
-            fontSize: 20, fontWeight: FontWeight.w900, color: AppTheme.text1)),
+          Text(
+            'Sports News',
+            style: GoogleFonts.outfit(
+              fontSize: 22,
+              fontWeight: FontWeight.w900,
+              color: TwSlate.s900,
+              letterSpacing: -0.5,
+            ),
+          ),
           const Spacer(),
-          Container(
-            width: 36, height: 36,
-            decoration: BoxDecoration(
-              color: AppTheme.surface, borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: AppTheme.border)),
-            child: const Icon(Icons.search_rounded, color: AppTheme.text2, size: 18)),
+          IconButton(
+            icon: const Icon(Icons.refresh_rounded, color: TwSlate.s700),
+            onPressed: _loadNews,
+          ),
         ],
       ),
     );
   }
 
   Widget _buildCategoryChips() {
-    return SizedBox(
-      height: 38,
-      child: ListView.builder(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+    return Container(
+      height: 44,
+      margin: const EdgeInsets.only(bottom: TwSpace.p3),
+      child: ListView.separated(
+        padding: const EdgeInsets.symmetric(horizontal: TwSpace.p4),
         scrollDirection: Axis.horizontal,
         itemCount: _categories.length,
-        itemBuilder: (_, i) {
-          final c = _categories[i];
-          final sel = c == _category;
+        separatorBuilder: (_, __) => const SizedBox(width: TwSpace.p2),
+        itemBuilder: (context, i) {
+          final cat = _categories[i];
+          final isSelected = _category == cat;
           return GestureDetector(
-            onTap: () => setState(() => _category = c),
-            child: Container(
-              margin: const EdgeInsets.only(right: 8),
+            onTap: () => setState(() => _category = cat),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 180),
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                color: sel ? AppTheme.primary.withOpacity(0.15) : AppTheme.card,
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: sel ? AppTheme.primary : AppTheme.border)),
-              child: Text(c, style: GoogleFonts.outfit(
-                fontSize: 11, fontWeight: FontWeight.w700,
-                color: sel ? AppTheme.primary : AppTheme.text2)),
+                color: isSelected ? TwBlue.b600 : Colors.white,
+                borderRadius: BorderRadius.circular(TwRadius.full),
+                border: Border.all(
+                  color: isSelected ? TwBlue.b600 : TwSlate.s200,
+                  width: 1,
+                ),
+                boxShadow: isSelected ? TwShadows.sm : null,
+              ),
+              child: Center(
+                child: Text(
+                  cat,
+                  style: GoogleFonts.outfit(
+                    color: isSelected ? Colors.white : TwSlate.s700,
+                    fontWeight: isSelected ? FontWeight.w700 : FontWeight.w600,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
             ),
           );
         },
@@ -129,128 +171,180 @@ class _NewsScreenState extends State<NewsScreen> {
   }
 
   Widget _buildFeaturedCard() {
-    final f = _featured!;
+    final item = _featured!;
+    final title = item['title'] ?? 'Featured Story';
+    final imageUrl = item['image_url']?.toString() ?? '';
+    final category = item['category'] ?? 'Headlines';
+
     return Container(
-      margin: const EdgeInsets.fromLTRB(16, 16, 16, 12),
-      decoration: BoxDecoration(
-        color: AppTheme.card,
-        borderRadius: BorderRadius.circular(AppTheme.radiusCard),
-        border: Border.all(color: AppTheme.border)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(23), topRight: Radius.circular(23)),
-            child: Stack(
-              children: [
-                Image.network(f['thumbnail'] ?? f['image'] ?? 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop',
-                  height: 200, width: double.infinity, fit: BoxFit.cover,
-                  color: Colors.black26, colorBlendMode: BlendMode.darken,
-                  errorBuilder: (_, __, ___) => Container(height: 200, color: AppTheme.surface)),
-                Positioned(top: 12, left: 12, child: _tagBadge(f['tag'] ?? 'NEWS')),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(f['title'] ?? '', style: GoogleFonts.outfit(
-                  fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.text1, height: 1.3)),
-                const SizedBox(height: 10),
-                Row(
-                  children: [
-                    Container(
-                      width: 20, height: 20,
-                      decoration: BoxDecoration(
-                        color: AppTheme.primary.withOpacity(0.12),
-                        shape: BoxShape.circle),
-                      child: const Icon(Icons.person_outline_rounded, color: AppTheme.primary, size: 12)),
-                    const SizedBox(width: 6),
-                    Text(f['source'] ?? '', style: GoogleFonts.outfit(
-                      fontSize: 11, fontWeight: FontWeight.w700, color: AppTheme.text2)),
-                    const Spacer(),
-                    const Icon(Icons.schedule_outlined, color: AppTheme.text3, size: 13),
-                    const SizedBox(width: 4),
-                    Text(_formatTime(f['created_at']), style: GoogleFonts.outfit(
-                      fontSize: 11, color: AppTheme.text3)),
-                  ],
+      margin: const EdgeInsets.fromLTRB(TwSpace.p4, 0, TwSpace.p4, TwSpace.p3),
+      child: TwCard(
+        padding: EdgeInsets.zero,
+        onTap: () => _openArticleDetail(item),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (imageUrl.isNotEmpty)
+              ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(TwRadius.xl2),
+                  topRight: Radius.circular(TwRadius.xl2),
                 ),
-              ],
+                child: CachedNetworkImage(
+                  imageUrl: imageUrl,
+                  height: 190,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                  errorWidget: (_, __, ___) => Container(height: 190, color: TwSlate.s200),
+                ),
+              ),
+            Padding(
+              padding: const EdgeInsets.all(TwSpace.p4),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TwBadge(label: category, variant: TwBadgeVariant.primary),
+                  const SizedBox(height: TwSpace.p2),
+                  Text(
+                    title,
+                    style: GoogleFonts.outfit(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w800,
+                      color: TwSlate.s900,
+                      height: 1.3,
+                    ),
+                  ),
+                  const SizedBox(height: TwSpace.p2),
+                  Text(
+                    _formatTime(item['created_at']),
+                    style: GoogleFonts.outfit(fontSize: 12, color: TwSlate.s400),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildArticleRow(Map<String, dynamic> article) {
+  Widget _buildArticleRow(Map<String, dynamic> item) {
+    final title = item['title'] ?? '';
+    final imageUrl = item['image_url']?.toString() ?? '';
+    final category = item['category'] ?? 'Sports';
+
     return Container(
-      margin: const EdgeInsets.fromLTRB(16, 0, 16, 10),
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: AppTheme.card,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppTheme.border)),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _tagBadge(article['tag'] ?? 'NEWS'),
-                const SizedBox(height: 6),
-                Text(article['title'] ?? '', style: GoogleFonts.outfit(
-                  fontSize: 12, fontWeight: FontWeight.w700, color: AppTheme.text1, height: 1.4),
-                  maxLines: 2, overflow: TextOverflow.ellipsis),
-                const SizedBox(height: 8),
-                Row(
-                  children: [
-                    Text(article['source'] ?? '', style: GoogleFonts.outfit(
-                      fontSize: 10, fontWeight: FontWeight.w700, color: AppTheme.text3)),
-                    const SizedBox(width: 8),
-                    Container(width: 3, height: 3,
-                      decoration: const BoxDecoration(color: AppTheme.text3, shape: BoxShape.circle)),
-                    const SizedBox(width: 8),
-                    Text(_formatTime(article['created_at']), style: GoogleFonts.outfit(
-                      fontSize: 10, color: AppTheme.text3)),
-                  ],
+      margin: const EdgeInsets.fromLTRB(TwSpace.p4, 0, TwSpace.p4, TwSpace.p2_5),
+      child: TwCard(
+        padding: const EdgeInsets.all(TwSpace.p3),
+        onTap: () => _openArticleDetail(item),
+        child: Row(
+          children: [
+            if (imageUrl.isNotEmpty)
+              ClipRRect(
+                borderRadius: BorderRadius.circular(TwRadius.lg),
+                child: CachedNetworkImage(
+                  imageUrl: imageUrl,
+                  width: 78,
+                  height: 78,
+                  fit: BoxFit.cover,
+                  errorWidget: (_, __, ___) => Container(width: 78, height: 78, color: TwSlate.s200),
                 ),
-              ],
+              ),
+            const SizedBox(width: TwSpace.p3),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TwBadge(label: category, variant: TwBadgeVariant.neutral),
+                  const SizedBox(height: TwSpace.p1),
+                  Text(
+                    title,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: GoogleFonts.outfit(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
+                      color: TwSlate.s900,
+                      height: 1.3,
+                    ),
+                  ),
+                  const SizedBox(height: TwSpace.p1),
+                  Text(
+                    _formatTime(item['created_at']),
+                    style: GoogleFonts.outfit(fontSize: 11, color: TwSlate.s400),
+                  ),
+                ],
+              ),
             ),
-          ),
-          const SizedBox(width: 12),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.network(
-              article['thumbnail'] ?? article['image'] ?? 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=200&auto=format&fit=crop',
-              width: 76, height: 76, fit: BoxFit.cover,
-              errorBuilder: (_, __, ___) => Container(width: 76, height: 76, color: AppTheme.surface)),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 
-  Widget _tagBadge(String tag) {
-    Color col;
-    switch (tag) {
-      case 'BREAKING': col = AppTheme.danger; break;
-      case 'TRANSFER': col = AppTheme.warning; break;
-      case 'INJURY':   col = const Color(0xFFFF6B35); break;
-      default:         col = AppTheme.primary;
-    }
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
-      decoration: BoxDecoration(
-        color: col.withOpacity(0.15),
-        borderRadius: BorderRadius.circular(5),
-        border: Border.all(color: col.withOpacity(0.3))),
-      child: Text(tag, style: GoogleFonts.outfit(
-        fontSize: 8, fontWeight: FontWeight.w900, color: col, letterSpacing: 0.5)),
+  void _openArticleDetail(Map<String, dynamic> item) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(TwRadius.xl3)),
+      ),
+      builder: (_) => DraggableScrollableSheet(
+        expand: false,
+        initialChildSize: 0.85,
+        maxChildSize: 0.95,
+        minChildSize: 0.5,
+        builder: (_, scrollController) => ListView(
+          controller: scrollController,
+          padding: const EdgeInsets.all(TwSpace.p5),
+          children: [
+            Center(
+              child: Container(
+                width: 40,
+                height: 4,
+                margin: const EdgeInsets.only(bottom: TwSpace.p4),
+                decoration: BoxDecoration(
+                  color: TwSlate.s300,
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+            ),
+            TwBadge(label: item['category'] ?? 'Sports', variant: TwBadgeVariant.primary),
+            const SizedBox(height: TwSpace.p2_5),
+            Text(
+              item['title'] ?? '',
+              style: GoogleFonts.outfit(fontSize: 20, fontWeight: FontWeight.w900, color: TwSlate.s900),
+            ),
+            const SizedBox(height: TwSpace.p2),
+            Text(
+              _formatTime(item['created_at']),
+              style: GoogleFonts.outfit(fontSize: 12, color: TwSlate.s400),
+            ),
+            const SizedBox(height: TwSpace.p4),
+            if (item['image_url'] != null)
+              ClipRRect(
+                borderRadius: BorderRadius.circular(TwRadius.xl),
+                child: CachedNetworkImage(
+                  imageUrl: item['image_url'].toString(),
+                  height: 200,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            const SizedBox(height: TwSpace.p4),
+            Text(
+              item['content'] ?? item['summary'] ?? item['description'] ?? 'No article content available.',
+              style: GoogleFonts.outfit(
+                fontSize: 14,
+                color: TwSlate.s700,
+                height: 1.6,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
@@ -265,46 +359,59 @@ class _NewsScreenState extends State<NewsScreen> {
   }
 
   Widget _shimmerFeatured() => Container(
-    margin: const EdgeInsets.fromLTRB(16, 16, 16, 12),
-    decoration: BoxDecoration(color: AppTheme.card, borderRadius: BorderRadius.circular(AppTheme.radiusCard), border: Border.all(color: AppTheme.border)),
-    child: Column(children: [
-      Container(height: 200, decoration: BoxDecoration(color: AppTheme.surface, borderRadius: const BorderRadius.only(topLeft: Radius.circular(23), topRight: Radius.circular(23)))),
-      Padding(padding: const EdgeInsets.all(16), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Container(height: 20, width: 200, color: AppTheme.surface),
-        const SizedBox(height: 10),
-        Container(height: 14, width: 100, color: AppTheme.surface),
-      ])),
-    ]));
+        margin: const EdgeInsets.fromLTRB(TwSpace.p4, 0, TwSpace.p4, TwSpace.p3),
+        height: 240,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(TwRadius.xl2),
+          border: Border.all(color: TwSlate.s200),
+        ),
+      );
 
   Widget _shimmerArticle() => Container(
-    margin: const EdgeInsets.fromLTRB(16, 0, 16, 10),
-    padding: const EdgeInsets.all(12),
-    decoration: BoxDecoration(color: AppTheme.card, borderRadius: BorderRadius.circular(14), border: Border.all(color: AppTheme.border)),
-    child: Row(children: [
-      Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Container(height: 16, width: 60, color: AppTheme.surface),
-        const SizedBox(height: 6),
-        Container(height: 14, width: 180, color: AppTheme.surface),
-        const SizedBox(height: 8),
-        Container(height: 12, width: 100, color: AppTheme.surface),
-      ])),
-      const SizedBox(width: 12),
-      Container(width: 76, height: 76, color: AppTheme.surface),
-    ]));
+        margin: const EdgeInsets.fromLTRB(TwSpace.p4, 0, TwSpace.p4, TwSpace.p2_5),
+        height: 90,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(TwRadius.xl),
+          border: Border.all(color: TwSlate.s200),
+        ),
+      );
 
   Widget _buildErrorState() => Center(
-    child: Column(mainAxisSize: MainAxisSize.min, children: [
-      Icon(Icons.error_outline_rounded, color: AppTheme.danger, size: 48),
-      const SizedBox(height: 12),
-      Text(_error!, style: GoogleFonts.outfit(color: AppTheme.text2, fontSize: 13)),
-      const SizedBox(height: 16),
-      ElevatedButton(onPressed: _loadNews, child: const Text('Retry')),
-    ]));
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.error_outline_rounded, color: TwRose.r500, size: 48),
+            const SizedBox(height: 12),
+            Text(_error ?? 'Error loading news', style: GoogleFonts.outfit(color: TwSlate.s600, fontSize: 13)),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: _loadNews,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: TwBlue.b600,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(TwRadius.xl)),
+              ),
+              child: const Text('Retry', style: TextStyle(color: Colors.white)),
+            ),
+          ],
+        ),
+      );
 
   Widget _buildEmptyState() => Center(
-    child: Padding(padding: const EdgeInsets.all(32), child: Column(mainAxisSize: MainAxisSize.min, children: [
-      Icon(Icons.article_rounded, color: AppTheme.text3, size: 48),
-      const SizedBox(height: 12),
-      Text('No news available', style: GoogleFonts.outfit(color: AppTheme.text2, fontSize: 13)),
-    ])));
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.article_outlined, color: TwSlate.s300, size: 48),
+              const SizedBox(height: 12),
+              Text(
+                'No news articles found in this category',
+                style: GoogleFonts.outfit(color: TwSlate.s500, fontSize: 13),
+              ),
+            ],
+          ),
+        ),
+      );
 }

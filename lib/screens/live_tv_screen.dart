@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import '../services/firestore_service.dart';
+import '../theme/tailwind_theme.dart';
 import '../theme/app_theme.dart';
+import '../widgets/tw_card.dart';
+import '../widgets/tw_badge.dart';
 import 'player_screen.dart';
 
 class LiveTvScreen extends StatefulWidget {
@@ -24,21 +28,24 @@ class _LiveTvScreenState extends State<LiveTvScreen> {
 
   Future<void> _load() async {
     setState(() => _loading = true);
-    final allStreams = await SupabaseService.fetchStreams(active: true);
-    
-    // Extract unique categories
-    final cats = {'All'};
-    for (var s in allStreams) {
-      if (s['category'] != null && s['category'].toString().isNotEmpty) {
-        cats.add(s['category'].toString().trim());
+    try {
+      final allStreams = await SupabaseService.fetchStreams(active: true);
+
+      final cats = {'All'};
+      for (var s in allStreams) {
+        if (s['category'] != null && s['category'].toString().isNotEmpty) {
+          cats.add(s['category'].toString().trim());
+        }
       }
+
+      setState(() {
+        _streams = allStreams;
+        _categories = cats.toList()..sort();
+        _loading = false;
+      });
+    } catch (_) {
+      if (mounted) setState(() => _loading = false);
     }
-    
-    setState(() {
-      _streams = allStreams;
-      _categories = cats.toList()..sort();
-      _loading = false;
-    });
   }
 
   List<Map<String, dynamic>> get _filteredStreams {
@@ -47,20 +54,34 @@ class _LiveTvScreenState extends State<LiveTvScreen> {
   }
 
   void _openStream(Map<String, dynamic> ch) {
-    final url = ch['url']?.toString() ?? '';
+    final url = ch['url']?.toString() ?? ch['stream_url']?.toString() ?? '';
     if (url.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Stream URL not configured for ${ch['label'] ?? 'this channel'}')),
+        SnackBar(
+          content: Text(
+            'Stream URL not configured for ${ch['label'] ?? 'this channel'}',
+            style: GoogleFonts.outfit(fontWeight: FontWeight.w600),
+          ),
+          backgroundColor: TwRose.r600,
+        ),
       );
       return;
     }
-    Navigator.push(context, MaterialPageRoute(
-      builder: (_) => PlayerScreen(
-        match: {'stream_url': url, 'home_team': ch['label'] ?? 'Channel', 'away_team': '', 'status': 'live'},
-        username: 'ZetaUser',
-        deviceId: 'device_001',
-      )
-    ));
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => PlayerScreen(
+          match: {
+            'stream_url': url,
+            'home_team': ch['label'] ?? 'Channel',
+            'away_team': '',
+            'status': 'live',
+          },
+          username: 'ZetaUser',
+          deviceId: 'device_001',
+        ),
+      ),
+    );
   }
 
   @override
@@ -70,109 +91,180 @@ class _LiveTvScreenState extends State<LiveTvScreen> {
     return Scaffold(
       backgroundColor: AppTheme.bg,
       appBar: AppBar(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: Colors.white,
         elevation: 0,
-        title: Text('Live TV', style: GoogleFonts.outfit(
-          fontWeight: FontWeight.w800, fontSize: 22, color: Colors.white)),
+        scrolledUnderElevation: 1,
+        title: Text(
+          'Live TV Channels',
+          style: GoogleFonts.outfit(
+            fontWeight: FontWeight.w900,
+            fontSize: 22,
+            color: TwSlate.s900,
+            letterSpacing: -0.5,
+          ),
+        ),
         centerTitle: false,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh_rounded, color: TwSlate.s700),
+            onPressed: _load,
+          ),
+          const SizedBox(width: TwSpace.p2),
+        ],
       ),
       body: _loading
-        ? const Center(child: CircularProgressIndicator(color: AppTheme.primary))
-        : Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Filter Chips
-              if (_categories.length > 1)
-                Container(
-                  height: 50,
-                  margin: const EdgeInsets.only(top: 8, bottom: 8),
-                  child: ListView.builder(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: _categories.length,
-                    itemBuilder: (context, index) {
-                      final cat = _categories[index];
-                      final isSelected = _selectedCategory == cat;
-                      return Padding(
-                        padding: const EdgeInsets.only(right: 8),
-                        child: ChoiceChip(
-                          label: Text(cat, style: GoogleFonts.outfit(
-                            color: isSelected ? Colors.black : Colors.white70,
-                            fontWeight: FontWeight.w600,
-                          )),
-                          selected: isSelected,
-                          onSelected: (selected) {
-                            if (selected) setState(() => _selectedCategory = cat);
-                          },
-                          selectedColor: AppTheme.primary,
-                          backgroundColor: AppTheme.surface,
-                          side: BorderSide(color: isSelected ? AppTheme.primary : AppTheme.border),
-                        ),
-                      );
-                    },
-                  ),
-                ),
-                
-              // Grid of Channels
-              Expanded(
-                child: filtered.isEmpty
-                  ? Center(child: Text('No channels found for "$_selectedCategory"', style: GoogleFonts.outfit(color: AppTheme.text3)))
-                  : GridView.builder(
-                      padding: const EdgeInsets.all(16),
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 16,
-                        mainAxisSpacing: 16,
-                        childAspectRatio: 1.2,
-                      ),
-                      itemCount: filtered.length,
+          ? const Center(
+              child: CircularProgressIndicator(
+                strokeWidth: 2,
+                valueColor: AlwaysStoppedAnimation<Color>(TwBlue.b600),
+              ),
+            )
+          : Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Filter Chips
+                if (_categories.length > 1)
+                  Container(
+                    height: 44,
+                    margin: const EdgeInsets.only(top: TwSpace.p3, bottom: TwSpace.p2),
+                    child: ListView.separated(
+                      padding: const EdgeInsets.symmetric(horizontal: TwSpace.p4),
+                      scrollDirection: Axis.horizontal,
+                      itemCount: _categories.length,
+                      separatorBuilder: (_, __) => const SizedBox(width: TwSpace.p2),
                       itemBuilder: (context, index) {
-                        final ch = filtered[index];
-                        final thumbnail = ch['thumbnail']?.toString() ?? '';
+                        final cat = _categories[index];
+                        final isSelected = _selectedCategory == cat;
                         return GestureDetector(
-                          onTap: () => _openStream(ch),
-                          child: Container(
+                          onTap: () => setState(() => _selectedCategory = cat),
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 180),
+                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                             decoration: BoxDecoration(
-                              color: AppTheme.surface,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: AppTheme.border),
-                              boxShadow: const [
-                                BoxShadow(color: Colors.black26, blurRadius: 8, offset: Offset(0, 4))
-                              ]
+                              color: isSelected ? TwBlue.b600 : Colors.white,
+                              borderRadius: BorderRadius.circular(TwRadius.full),
+                              border: Border.all(
+                                color: isSelected ? TwBlue.b600 : TwSlate.s200,
+                                width: 1,
+                              ),
+                              boxShadow: isSelected ? TwShadows.sm : null,
                             ),
-                            clipBehavior: Clip.antiAlias,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Expanded(
-                                  child: thumbnail.isNotEmpty
-                                    ? Image.network(thumbnail, fit: BoxFit.cover,
-                                        errorBuilder: (_, __, ___) => const Icon(Icons.live_tv_rounded, color: AppTheme.primary, size: 40))
-                                    : const Icon(Icons.live_tv_rounded, color: AppTheme.primary, size: 40),
+                            child: Center(
+                              child: Text(
+                                cat,
+                                style: GoogleFonts.outfit(
+                                  color: isSelected ? Colors.white : TwSlate.s700,
+                                  fontWeight: isSelected ? FontWeight.w700 : FontWeight.w600,
+                                  fontSize: 12,
                                 ),
-                                Container(
-                                  padding: const EdgeInsets.all(12),
-                                  color: AppTheme.surface,
-                                  child: Text(
-                                    ch['label']?.toString() ?? 'Channel',
-                                    style: GoogleFonts.outfit(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 14,
-                                    ),
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
-                              ],
+                              ),
                             ),
                           ),
                         );
                       },
                     ),
-              ),
-            ],
-          ),
+                  ),
+
+                // Grid of Channels
+                Expanded(
+                  child: filtered.isEmpty
+                      ? Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Icon(Icons.tv_off_rounded, size: 48, color: TwSlate.s300),
+                              const SizedBox(height: TwSpace.p2),
+                              Text(
+                                'No channels found in "$_selectedCategory"',
+                                style: GoogleFonts.outfit(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                  color: TwSlate.s500,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      : GridView.builder(
+                          padding: const EdgeInsets.all(TwSpace.p4),
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 14,
+                            mainAxisSpacing: 14,
+                            childAspectRatio: 1.15,
+                          ),
+                          itemCount: filtered.length,
+                          itemBuilder: (context, index) {
+                            final ch = filtered[index];
+                            final thumbnail = ch['thumbnail']?.toString() ?? '';
+                            return TwCard(
+                              padding: EdgeInsets.zero,
+                              onTap: () => _openStream(ch),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Expanded(
+                                    child: Stack(
+                                      children: [
+                                        Positioned.fill(
+                                          child: thumbnail.isNotEmpty
+                                              ? CachedNetworkImage(
+                                                  imageUrl: thumbnail,
+                                                  fit: BoxFit.cover,
+                                                  errorWidget: (_, __, ___) => Container(
+                                                    color: TwSlate.s100,
+                                                    child: const Icon(
+                                                      Icons.live_tv_rounded,
+                                                      color: TwBlue.b600,
+                                                      size: 36,
+                                                    ),
+                                                  ),
+                                                )
+                                              : Container(
+                                                  color: TwSlate.s100,
+                                                  child: const Icon(
+                                                    Icons.live_tv_rounded,
+                                                    color: TwBlue.b600,
+                                                    size: 36,
+                                                  ),
+                                                ),
+                                        ),
+                                        const Positioned(
+                                          top: 8,
+                                          right: 8,
+                                          child: TwBadge(
+                                            label: 'HD',
+                                            variant: TwBadgeVariant.primary,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: TwSpace.p3,
+                                      vertical: TwSpace.p2_5,
+                                    ),
+                                    color: Colors.white,
+                                    child: Text(
+                                      ch['label']?.toString() ?? 'Channel',
+                                      style: GoogleFonts.outfit(
+                                        color: TwSlate.s900,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 13,
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        ),
+                ),
+              ],
+            ),
     );
   }
 }

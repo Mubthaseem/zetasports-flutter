@@ -8,7 +8,13 @@ import '../theme/app_theme.dart';
 class PlayerProfileScreen extends StatefulWidget {
   final String playerName;
   final double rating;
-  const PlayerProfileScreen({super.key, required this.playerName, required this.rating});
+  final Map<String, dynamic>? player;
+  const PlayerProfileScreen({
+    super.key,
+    required this.playerName,
+    required this.rating,
+    this.player,
+  });
   @override
   State<PlayerProfileScreen> createState() => _PlayerProfileScreenState();
 }
@@ -29,26 +35,25 @@ class _PlayerProfileScreenState extends State<PlayerProfileScreen>
     super.dispose();
   }
 
-  // Bio data (maps to different players but we show mock for now)
   Map<String, String> get _bio => {
-    'Nationality': 'France 🇫🇷',
-    'Date of Birth': '20 Dec 1998 (25)',
-    'Height': '1.78 m',
-    'Weight': '73 kg',
-    'Preferred Foot': 'Right',
-    'Current Club': 'Real Madrid',
-    'Jersey Number': '9',
-    'Market Value': '€180M',
+    'Nationality': widget.player?['nationality']?.toString() ?? 'International',
+    'Position': widget.player?['position']?.toString() ?? 'Player',
+    'Current Club': widget.player?['team_name']?.toString() ?? widget.player?['club']?.toString() ?? 'Club',
+    'Jersey Number': widget.player?['number']?.toString() ?? widget.player?['jersey_number']?.toString() ?? '-',
+    'Age': widget.player?['age']?.toString() ?? '-',
+    'Height': widget.player?['height']?.toString() ?? '-',
   };
 
-  // Season stats
-  static const _seasonStats = [
-    {'label': 'Goals',     'value': 28, 'max': 40},
-    {'label': 'Assists',   'value': 12, 'max': 20},
-    {'label': 'Rating',    'value': 8,  'max': 10},
-    {'label': 'Chances',   'value': 65, 'max': 100},
-    {'label': 'Duels Won', 'value': 58, 'max': 100},
-  ];
+  List<Map<String, dynamic>> get _seasonStats {
+    final g = int.tryParse(widget.player?['goals']?.toString() ?? '') ?? 0;
+    final a = int.tryParse(widget.player?['assists']?.toString() ?? '') ?? 0;
+    final r = widget.rating;
+    return [
+      {'label': 'Goals', 'value': g, 'max': 30},
+      {'label': 'Assists', 'value': a, 'max': 20},
+      {'label': 'Rating', 'value': r.toInt(), 'max': 10},
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -145,7 +150,7 @@ class _PlayerProfileScreenState extends State<PlayerProfileScreen>
                       Text(widget.playerName, style: GoogleFonts.outfit(
                         fontSize: 20, fontWeight: FontWeight.w900, color: AppTheme.text1)),
                       const SizedBox(height: 4),
-                      Text('Forward • Real Madrid', style: GoogleFonts.outfit(
+                      Text('${widget.player?['position'] ?? 'Player'} • ${widget.player?['team_name'] ?? widget.player?['club'] ?? 'Squad'}', style: GoogleFonts.outfit(
                         fontSize: 12, fontWeight: FontWeight.w600, color: AppTheme.text2)),
                       const SizedBox(height: 8),
                       // Rating pill
@@ -178,13 +183,13 @@ class _PlayerProfileScreenState extends State<PlayerProfileScreen>
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _quickStat('28', 'Goals'),
+                _quickStat('${widget.player?['goals'] ?? 0}', 'Goals'),
                 _divider(),
-                _quickStat('12', 'Assists'),
+                _quickStat('${widget.player?['assists'] ?? 0}', 'Assists'),
                 _divider(),
-                _quickStat('32', 'Matches'),
+                _quickStat('${widget.player?['matches'] ?? widget.player?['appearances'] ?? '-'}', 'Matches'),
                 _divider(),
-                _quickStat('2,880', 'Minutes'),
+                _quickStat('${widget.player?['minutes'] ?? '-'}', 'Minutes'),
               ],
             ),
           ),
@@ -309,85 +314,126 @@ class _PlayerProfileScreenState extends State<PlayerProfileScreen>
   }
 
   Widget _buildMatches() {
-    final matches = [
-      {'opp': 'vs Man City', 'comp': 'Champions League', 'date': '23 Nov 2025', 'rating': 8.7, 'goals': 2},
-      {'opp': 'vs Arsenal',  'comp': 'Premier League',   'date': '10 Nov 2025', 'rating': 7.4, 'goals': 0},
-      {'opp': 'vs PSG',      'comp': 'Champions League', 'date': '02 Nov 2025', 'rating': 9.1, 'goals': 3},
-    ];
+    final matches = (widget.player?['recent_matches'] as List<dynamic>?) ?? [];
+    if (matches.isEmpty) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.sports_soccer_outlined, color: AppTheme.text3, size: 40),
+              const SizedBox(height: 12),
+              Text('No Recent Match Logs', style: GoogleFonts.outfit(
+                fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.text2)),
+              const SizedBox(height: 4),
+              Text('Match appearances and ratings will appear here as matches are played.',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.outfit(fontSize: 11, color: AppTheme.text3)),
+            ],
+          ),
+        ),
+      );
+    }
     return ListView(
       padding: const EdgeInsets.all(16),
-      children: matches.map((m) => Container(
-        margin: const EdgeInsets.only(bottom: 10),
-        padding: const EdgeInsets.all(14),
-        decoration: BoxDecoration(
-          color: AppTheme.card, borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: AppTheme.border)),
-        child: Row(children: [
-          Expanded(child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(m['opp'].toString(), style: GoogleFonts.outfit(
-                fontSize: 13, fontWeight: FontWeight.w800, color: AppTheme.text1)),
-              Text(m['comp'].toString(), style: GoogleFonts.outfit(
-                fontSize: 11, color: AppTheme.text3)),
-              Text(m['date'].toString(), style: GoogleFonts.outfit(
-                fontSize: 10, color: AppTheme.text3)),
-            ],
-          )),
-          if ((m['goals'] as int) > 0)
-            Container(
-              margin: const EdgeInsets.only(right: 8),
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              decoration: BoxDecoration(
-                color: AppTheme.success.withOpacity(0.12),
-                borderRadius: BorderRadius.circular(6)),
-              child: Text('${m['goals']} ⚽', style: GoogleFonts.outfit(
-                fontSize: 11, fontWeight: FontWeight.w700, color: AppTheme.success))),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-            decoration: BoxDecoration(
-              color: (m['rating'] as double) >= 8.0
-                ? AppTheme.success.withOpacity(0.12)
-                : AppTheme.card,
-              borderRadius: BorderRadius.circular(6),
-              border: Border.all(color: AppTheme.border)),
-            child: Text('${m['rating']}', style: GoogleFonts.rajdhani(
-              fontSize: 14, fontWeight: FontWeight.w900,
-              color: (m['rating'] as double) >= 8.0 ? AppTheme.success : AppTheme.text2))),
-        ]),
-      )).toList(),
+      children: matches.map((m) {
+        final match = m is Map ? m : <String, dynamic>{};
+        final goals = int.tryParse(match['goals']?.toString() ?? '') ?? 0;
+        final rating = double.tryParse(match['rating']?.toString() ?? '') ?? 0.0;
+        return Container(
+          margin: const EdgeInsets.only(bottom: 10),
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: AppTheme.card, borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppTheme.border)),
+          child: Row(children: [
+            Expanded(child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(match['opp']?.toString() ?? match['opponent']?.toString() ?? 'Match', style: GoogleFonts.outfit(
+                  fontSize: 13, fontWeight: FontWeight.w800, color: AppTheme.text1)),
+                Text(match['comp']?.toString() ?? match['competition']?.toString() ?? '', style: GoogleFonts.outfit(
+                  fontSize: 11, color: AppTheme.text3)),
+                Text(match['date']?.toString() ?? '', style: GoogleFonts.outfit(
+                  fontSize: 10, color: AppTheme.text3)),
+              ],
+            )),
+            if (goals > 0)
+              Container(
+                margin: const EdgeInsets.only(right: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: AppTheme.success.withOpacity(0.12),
+                  borderRadius: BorderRadius.circular(6)),
+                child: Text('$goals ⚽', style: GoogleFonts.outfit(
+                  fontSize: 11, fontWeight: FontWeight.w700, color: AppTheme.success))),
+            if (rating > 0)
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: rating >= 8.0
+                    ? AppTheme.success.withOpacity(0.12)
+                    : AppTheme.card,
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(color: AppTheme.border)),
+                child: Text(rating.toStringAsFixed(1), style: GoogleFonts.rajdhani(
+                  fontSize: 14, fontWeight: FontWeight.w900,
+                  color: rating >= 8.0 ? AppTheme.success : AppTheme.text2))),
+          ]),
+        );
+      }).toList(),
     );
   }
 
   Widget _buildCareer() {
-    final career = [
-      {'club': 'Real Madrid',    'from': '2024', 'to': 'Present', 'apps': 36, 'goals': 32},
-      {'club': 'Paris SG',       'from': '2017', 'to': '2024',    'apps': 181,'goals': 200},
-      {'club': 'AS Monaco',      'from': '2015', 'to': '2017',    'apps': 69, 'goals': 27},
-    ];
+    final career = (widget.player?['career'] as List<dynamic>?) ?? [];
+    if (career.isEmpty) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.history_toggle_off_rounded, color: AppTheme.text3, size: 40),
+              const SizedBox(height: 12),
+              Text('Career History Not Available', style: GoogleFonts.outfit(
+                fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.text2)),
+              const SizedBox(height: 4),
+              Text('Historical transfer and club records will be synced soon.',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.outfit(fontSize: 11, color: AppTheme.text3)),
+            ],
+          ),
+        ),
+      );
+    }
     return ListView(
       padding: const EdgeInsets.all(16),
-      children: career.map((c) => Container(
-        margin: const EdgeInsets.only(bottom: 10),
-        padding: const EdgeInsets.all(14),
-        decoration: BoxDecoration(
-          color: AppTheme.card, borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: AppTheme.border)),
-        child: Row(children: [
-          Expanded(child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(c['club'].toString(), style: GoogleFonts.outfit(
-                fontSize: 14, fontWeight: FontWeight.w800, color: AppTheme.text1)),
-              Text('${c['from']} – ${c['to']}', style: GoogleFonts.outfit(
-                fontSize: 11, color: AppTheme.text3)),
-            ],
-          )),
-          _statPill('${c['apps']}', 'Apps'),
-          const SizedBox(width: 8),
-          _statPill('${c['goals']}', 'Goals', col: AppTheme.success),
-        ]),
-      )).toList(),
+      children: career.map((c) {
+        final item = c is Map ? c : <String, dynamic>{};
+        return Container(
+          margin: const EdgeInsets.only(bottom: 10),
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: AppTheme.card, borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppTheme.border)),
+          child: Row(children: [
+            Expanded(child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(item['club']?.toString() ?? 'Club', style: GoogleFonts.outfit(
+                  fontSize: 14, fontWeight: FontWeight.w800, color: AppTheme.text1)),
+                Text('${item['from'] ?? ''} – ${item['to'] ?? 'Present'}', style: GoogleFonts.outfit(
+                  fontSize: 11, color: AppTheme.text3)),
+              ],
+            )),
+            _statPill('${item['apps'] ?? '-'}', 'Apps'),
+            const SizedBox(width: 8),
+            _statPill('${item['goals'] ?? '-'}', 'Goals', col: AppTheme.success),
+          ]),
+        );
+      }).toList(),
     );
   }
 

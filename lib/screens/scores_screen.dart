@@ -1,13 +1,15 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import '../theme/tailwind_theme.dart';
 import '../theme/app_theme.dart';
+import '../widgets/tw_card.dart';
+import '../widgets/tw_badge.dart';
+import '../widgets/zeta_skeleton.dart';
 import '../services/firestore_service.dart';
-import '../services/ad_service.dart';
 import 'match_detail_screen.dart';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// SCREEN 2 — LIVE SCORES
-// ─────────────────────────────────────────────────────────────────────────────
 class ScoresScreen extends StatefulWidget {
   const ScoresScreen({super.key});
   @override
@@ -20,12 +22,14 @@ class _ScoresScreenState extends State<ScoresScreen>
   List<Map<String, dynamic>> _matches = [];
   bool _loading = true;
   String? _error;
-  String _statusFilter = 'Live';
+  String _statusFilter = 'Today';
   bool _searchActive = false;
   final _searchCtrl = TextEditingController();
   String _searchQuery = '';
+  Timer? _autoRefreshTimer;
+  RealtimeChannel? _matchChannel;
 
-  final _sports = ['All', 'Football', 'Cricket', 'Basketball', 'Tennis'];
+  final List<String> _sports = ['All', 'Football', 'Cricket', 'Basketball', 'Tennis', 'Baseball'];
   final _statusFilters = ['Today', 'Live', 'Finished', 'Upcoming'];
 
   @override
@@ -36,17 +40,29 @@ class _ScoresScreenState extends State<ScoresScreen>
       if (!_sportTab.indexIsChanging) _loadMatches();
     });
     _loadMatches();
+    _autoRefreshTimer = Timer.periodic(const Duration(seconds: 15), (_) {
+      _silentRefresh();
+    });
+    _subscribeToMatchUpdates();
   }
 
-  @override
-  void dispose() {
-    _sportTab.dispose();
-    _searchCtrl.dispose();
-    super.dispose();
+  void _subscribeToMatchUpdates() {
+    try {
+      _matchChannel = Supabase.instance.client
+          .channel('public:zeta_matches_scores')
+          .onPostgresChanges(
+            event: PostgresChangeEvent.all,
+            schema: 'public',
+            table: 'zeta_matches',
+            callback: (_) {
+              _silentRefresh();
+            },
+          )
+          .subscribe();
+    } catch (_) {}
   }
 
-  Future<void> _loadMatches() async {
-    setState(() { _loading = true; _error = null; });
+  Future<void> _silentRefresh() async {
     try {
       final sport = _sports[_sportTab.index] == 'All'
           ? null
@@ -56,9 +72,54 @@ class _ScoresScreenState extends State<ScoresScreen>
         searchQuery: _searchQuery.isNotEmpty ? _searchQuery : null,
         limit: 150,
       );
-      if (mounted) setState(() { _matches = list; _loading = false; });
+      if (mounted && list.isNotEmpty) {
+        setState(() {
+          _matches = list;
+        });
+      }
+    } catch (_) {}
+  }
+
+  @override
+  void dispose() {
+    _autoRefreshTimer?.cancel();
+    _matchChannel?.unsubscribe();
+    _sportTab.dispose();
+    _searchCtrl.dispose();
+    super.dispose();
+  }
+
+  Future<void> _loadMatches() async {
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
+    try {
+      final sport = _sports[_sportTab.index] == 'All'
+          ? null
+          : _sports[_sportTab.index];
+      final results = await Future.wait([
+        SupabaseService.fetchMatches(
+          sport: sport,
+          searchQuery: _searchQuery.isNotEmpty ? _searchQuery : null,
+          limit: 150,
+        ),
+        Future.delayed(const Duration(milliseconds: 550)), // Smooth skeleton fake loading
+      ]);
+      final list = results[0] as List<Map<String, dynamic>>;
+      if (mounted) {
+        setState(() {
+          _matches = list;
+          _loading = false;
+        });
+      }
     } catch (e) {
-      if (mounted) setState(() { _loading = false; _error = e.toString(); });
+      if (mounted) {
+        setState(() {
+          _loading = false;
+          _error = e.toString();
+        });
+      }
     }
   }
 
@@ -70,30 +131,49 @@ class _ScoresScreenState extends State<ScoresScreen>
         result = _matches.where((m) => m['status'] == 'live').toList();
         break;
       case 'Finished':
-        result = _matches.where((m) => m['status'] == 'finished').toList();
+        result = _matches.where((m) => m['status'] == 'finished' || m['status'] == 'ft').toList();
         break;
       case 'Upcoming':
         result = _matches.where((m) =>
-          m['status'] == 'scheduled' || m['status'] == 'upcoming').toList();
+            m['status'] == 'scheduled' || m['status'] == 'upcoming').toList();
         break;
       case 'Today':
       default:
-        result = _matches.where((m) {
+        final todayMatches = _matches.where((m) {
           final d = m['date'] as String?;
           if (d == null) return false;
           final dt = DateTime.tryParse(d);
-          return dt != null &&
-              dt.year == now.year &&
-              dt.month == now.month &&
-              dt.day == now.day;
+          if (dt == null) return false;
+          return (dt.year == now.year && dt.month == now.month && dt.day == now.day) ||
+                 m['status'] == 'live';
         }).toList();
+
+        if (todayMatches.isNotEmpty) {
+          result = todayMatches;
+        } else {
+          // If no fixtures on exact calendar day, fallback to the latest active matchday fixtures (within 3 days)
+          final recentMatches = _matches.where((m) {
+            final d = m['date'] as String?;
+            if (d == null) return false;
+            final dt = DateTime.tryParse(d);
+            if (dt == null) return false;
+            final diff = now.difference(dt).inDays.abs();
+            return diff <= 3 || m['status'] == 'live';
+          }).toList();
+          result = recentMatches.isNotEmpty ? recentMatches : _matches.take(20).toList();
+        }
+        result.sort((a, b) {
+          final aLive = a['status'] == 'live' ? 1 : 0;
+          final bLive = b['status'] == 'live' ? 1 : 0;
+          return bLive.compareTo(aLive);
+        });
     }
     if (_searchQuery.isNotEmpty) {
       final q = _searchQuery.toLowerCase();
       result = result.where((m) =>
-        (m['home_team'] ?? '').toString().toLowerCase().contains(q) ||
-        (m['away_team'] ?? '').toString().toLowerCase().contains(q) ||
-        (m['league_name'] ?? '').toString().toLowerCase().contains(q)).toList();
+          (m['home_team'] ?? '').toString().toLowerCase().contains(q) ||
+          (m['away_team'] ?? '').toString().toLowerCase().contains(q) ||
+          (m['league_name'] ?? '').toString().toLowerCase().contains(q)).toList();
     }
     return result;
   }
@@ -101,7 +181,7 @@ class _ScoresScreenState extends State<ScoresScreen>
   Map<String, List<Map<String, dynamic>>> get _grouped {
     final groups = <String, List<Map<String, dynamic>>>{};
     for (final m in _filtered) {
-      final key = m['league_name'] ?? 'Other';
+      final key = m['league_name'] ?? 'International';
       groups.putIfAbsent(key, () => []).add(m);
     }
     return groups;
@@ -116,11 +196,11 @@ class _ScoresScreenState extends State<ScoresScreen>
           children: [
             _buildHeader(),
             if (_searchActive) _buildSearchBar(),
-            const SizedBox(height: 10),
+            const SizedBox(height: TwSpace.p2),
             _buildSportTabs(),
-            const SizedBox(height: 10),
+            const SizedBox(height: TwSpace.p2),
             _buildStatusFilters(),
-            const SizedBox(height: 10),
+            const SizedBox(height: TwSpace.p2),
             Expanded(
               child: TabBarView(
                 controller: _sportTab,
@@ -135,30 +215,60 @@ class _ScoresScreenState extends State<ScoresScreen>
 
   Widget _buildHeader() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-      child: Row(children: [
-        Text('Live Scores', style: GoogleFonts.outfit(
-          fontSize: 20, fontWeight: FontWeight.w900, color: AppTheme.text1)),
-        const Spacer(),
-        _iconBtn(Icons.search_rounded, () {
-          setState(() {
-            _searchActive = !_searchActive;
-            if (!_searchActive) {
-              _searchCtrl.clear();
-              _searchQuery = '';
-              _loadMatches();
-            }
-          });
-        }),
-        const SizedBox(width: 8),
-        _iconBtn(Icons.refresh_rounded, _loadMatches),
-      ]),
+      padding: const EdgeInsets.fromLTRB(TwSpace.p4, TwSpace.p3, TwSpace.p4, 0),
+      child: Row(
+        children: [
+          Text(
+            'Live Scores',
+            style: GoogleFonts.outfit(
+              fontSize: 22,
+              fontWeight: FontWeight.w900,
+              color: TwSlate.s900,
+              letterSpacing: -0.5,
+            ),
+          ),
+          const Spacer(),
+          _iconBtn(Icons.search_rounded, () {
+            setState(() {
+              _searchActive = !_searchActive;
+              if (!_searchActive) {
+                _searchCtrl.clear();
+                _searchQuery = '';
+                _loadMatches();
+              }
+            });
+          }),
+          const SizedBox(width: TwSpace.p2),
+          _iconBtn(Icons.refresh_rounded, _loadMatches),
+        ],
+      ),
+    );
+  }
+
+  Widget _iconBtn(IconData icon, VoidCallback onTap) {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(TwRadius.xl),
+        child: Container(
+          width: 38,
+          height: 38,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(TwRadius.xl),
+            border: Border.all(color: TwSlate.s200, width: 1),
+            boxShadow: TwShadows.sm,
+          ),
+          child: Icon(icon, color: TwSlate.s700, size: 18),
+        ),
+      ),
     );
   }
 
   Widget _buildSearchBar() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+      padding: const EdgeInsets.fromLTRB(TwSpace.p4, TwSpace.p2, TwSpace.p4, 0),
       child: TextField(
         controller: _searchCtrl,
         autofocus: true,
@@ -166,13 +276,13 @@ class _ScoresScreenState extends State<ScoresScreen>
           setState(() => _searchQuery = v);
           _loadMatches();
         },
-        style: GoogleFonts.outfit(color: AppTheme.text1, fontSize: 13),
+        style: GoogleFonts.outfit(color: TwSlate.s900, fontSize: 13),
         decoration: InputDecoration(
-          hintText: 'Search teams, leagues...',
-          hintStyle: GoogleFonts.outfit(color: AppTheme.text3, fontSize: 13),
+          hintText: 'Search teams, leagues, tournaments...',
+          hintStyle: GoogleFonts.outfit(color: TwSlate.s400, fontSize: 13),
           filled: true,
-          fillColor: AppTheme.card,
-          prefixIcon: const Icon(Icons.search_rounded, color: AppTheme.text3, size: 18),
+          fillColor: Colors.white,
+          prefixIcon: const Icon(Icons.search_rounded, color: TwSlate.s400, size: 18),
           suffixIcon: _searchQuery.isNotEmpty
               ? GestureDetector(
                   onTap: () {
@@ -180,12 +290,18 @@ class _ScoresScreenState extends State<ScoresScreen>
                     setState(() => _searchQuery = '');
                     _loadMatches();
                   },
-                  child: const Icon(Icons.close_rounded, color: AppTheme.text3, size: 18))
+                  child: const Icon(Icons.close_rounded, color: TwSlate.s400, size: 18),
+                )
               : null,
-          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide.none),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(TwRadius.xl),
+            borderSide: const BorderSide(color: TwSlate.s200, width: 1),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(TwRadius.xl),
+            borderSide: const BorderSide(color: TwBlue.b600, width: 1.5),
+          ),
         ),
       ),
     );
@@ -193,23 +309,26 @@ class _ScoresScreenState extends State<ScoresScreen>
 
   Widget _buildSportTabs() {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16),
-      height: 40,
+      margin: const EdgeInsets.symmetric(horizontal: TwSpace.p4),
+      height: 42,
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(20)),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(TwRadius.full),
+        border: Border.all(color: TwSlate.s200, width: 1),
+      ),
       child: TabBar(
         controller: _sportTab,
-        isScrollable: true,
         indicator: BoxDecoration(
-          gradient: const LinearGradient(colors: [AppTheme.primary, AppTheme.secondary]),
-          borderRadius: BorderRadius.circular(20)),
+          color: TwBlue.b600,
+          borderRadius: BorderRadius.circular(TwRadius.full),
+        ),
         indicatorSize: TabBarIndicatorSize.tab,
-        labelStyle: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.w800),
-        unselectedLabelStyle: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.w600),
-        labelColor: Colors.black,
-        unselectedLabelColor: AppTheme.text2,
+        labelColor: Colors.white,
+        unselectedLabelColor: TwSlate.s600,
+        labelStyle: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.w700),
+        unselectedLabelStyle: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.w500),
         dividerColor: Colors.transparent,
+        padding: const EdgeInsets.all(3),
         tabs: _sports.map((s) => Tab(text: s)).toList(),
       ),
     );
@@ -217,27 +336,39 @@ class _ScoresScreenState extends State<ScoresScreen>
 
   Widget _buildStatusFilters() {
     return SizedBox(
-      height: 34,
-      child: ListView.builder(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+      height: 36,
+      child: ListView.separated(
+        padding: const EdgeInsets.symmetric(horizontal: TwSpace.p4),
         scrollDirection: Axis.horizontal,
         itemCount: _statusFilters.length,
-        itemBuilder: (_, i) {
+        separatorBuilder: (_, __) => const SizedBox(width: TwSpace.p2),
+        itemBuilder: (context, i) {
           final f = _statusFilters[i];
-          final sel = f == _statusFilter;
+          final selected = _statusFilter == f;
           return GestureDetector(
             onTap: () => setState(() => _statusFilter = f),
-            child: Container(
-              margin: const EdgeInsets.only(right: 8),
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 180),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
               decoration: BoxDecoration(
-                color: sel ? AppTheme.primary.withValues(alpha: 0.15) : AppTheme.card,
-                borderRadius: BorderRadius.circular(20),
+                color: selected ? TwSlate.s900 : Colors.white,
+                borderRadius: BorderRadius.circular(TwRadius.full),
                 border: Border.all(
-                  color: sel ? AppTheme.primary : AppTheme.border)),
-              child: Text(f, style: GoogleFonts.outfit(
-                fontSize: 11, fontWeight: FontWeight.w700,
-                color: sel ? AppTheme.primary : AppTheme.text2)),
+                  color: selected ? TwSlate.s900 : TwSlate.s200,
+                  width: 1,
+                ),
+                boxShadow: selected ? TwShadows.sm : null,
+              ),
+              child: Center(
+                child: Text(
+                  f,
+                  style: GoogleFonts.outfit(
+                    fontSize: 12,
+                    fontWeight: selected ? FontWeight.w700 : FontWeight.w600,
+                    color: selected ? Colors.white : TwSlate.s700,
+                  ),
+                ),
+              ),
             ),
           );
         },
@@ -246,228 +377,261 @@ class _ScoresScreenState extends State<ScoresScreen>
   }
 
   Widget _buildMatchList() {
-    return RefreshIndicator(
-      color: AppTheme.primary,
-      backgroundColor: AppTheme.surface,
-      onRefresh: _loadMatches,
-      child: _loading
-          ? _buildShimmer()
-          : _error != null
-              ? _buildError()
-              : _filtered.isEmpty
-                  ? _buildEmpty()
-                  : ListView.builder(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      itemCount: _grouped.length + 1, // +1 for banner ad
-                      itemBuilder: (_, i) {
-                        // Insert banner ad after 3rd group
-                        if (i == 3) {
-                          return const Padding(
-                            padding: EdgeInsets.symmetric(vertical: 8),
-                            child: Center(child: BannerAdWidget()),
-                          );
-                        }
-                        final adjustedIdx = i > 3 ? i - 1 : i;
-                        if (adjustedIdx >= _grouped.length) return const SizedBox.shrink();
-                        final entry = _grouped.entries.elementAt(adjustedIdx);
-                        return _buildLeagueGroup(entry.key, entry.value);
-                      },
-                    ),
-    );
-  }
-
-  Widget _buildLeagueGroup(String league, List<Map<String, dynamic>> matches) {
-    final hasLive = matches.any((m) => m['status'] == 'live');
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
-          child: Row(children: [
-            Container(
-              width: 3, height: 16,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [AppTheme.primary, AppTheme.secondary],
-                  begin: Alignment.topCenter, end: Alignment.bottomCenter),
-                borderRadius: BorderRadius.circular(2))),
-            const SizedBox(width: 8),
-            Expanded(child: Text(league, style: GoogleFonts.outfit(
-              fontSize: 12, fontWeight: FontWeight.w800, color: AppTheme.text2))),
-            if (hasLive)
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                decoration: BoxDecoration(
-                  color: AppTheme.danger.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(4)),
-                child: Text('LIVE', style: GoogleFonts.outfit(
-                  fontSize: 9, fontWeight: FontWeight.w900, color: AppTheme.danger))),
-          ]),
+    if (_loading) {
+      return ListView.builder(
+        padding: const EdgeInsets.only(top: 8),
+        itemCount: 6,
+        itemBuilder: (context, index) => const MatchCardSkeleton(),
+      );
+    }
+    if (_error != null) {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.error_outline_rounded, size: 42, color: TwRose.r500),
+            const SizedBox(height: TwSpace.p2),
+            Text(
+              'Failed to load match scores',
+              style: GoogleFonts.outfit(fontSize: 14, fontWeight: FontWeight.w700, color: TwSlate.s800),
+            ),
+            const SizedBox(height: TwSpace.p3),
+            ElevatedButton(
+              onPressed: _loadMatches,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: TwBlue.b600,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(TwRadius.xl)),
+              ),
+              child: Text('Try Again', style: GoogleFonts.outfit(color: Colors.white)),
+            ),
+          ],
         ),
-        ...matches.map((m) => _buildMatchRow(m)),
-        Divider(color: AppTheme.border, height: 16),
-      ],
-    );
-  }
+      );
+    }
 
-  Widget _buildMatchRow(Map<String, dynamic> m) {
-    final isLive = m['status'] == 'live';
-    final isUpcoming = m['status'] == 'scheduled' || m['status'] == 'upcoming';
-    final homeTeam = m['home_team'] ?? 'TBD';
-    final awayTeam = m['away_team'] ?? 'TBD';
+    final groups = _grouped;
+    if (groups.isEmpty) {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.sports_soccer_rounded, size: 48, color: TwSlate.s300),
+            const SizedBox(height: TwSpace.p3),
+            Text(
+              'No $_statusFilter matches found',
+              style: GoogleFonts.outfit(fontSize: 15, fontWeight: FontWeight.w700, color: TwSlate.s800),
+            ),
+            const SizedBox(height: TwSpace.p1),
+            Text(
+              'Check other categories or sport tabs',
+              style: GoogleFonts.outfit(fontSize: 12, color: TwSlate.s500),
+            ),
+          ],
+        ),
+      );
+    }
 
-    return GestureDetector(
-      onTap: () {
-        AdService.showInterstitial(onDismissed: () {
-          if (mounted) {
-            Navigator.push(context,
-              MaterialPageRoute(builder: (_) => MatchDetailScreen(match: m)));
-          }
-        });
-      },
-      child: Container(
-        margin: const EdgeInsets.only(bottom: 8),
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-        decoration: BoxDecoration(
-          color: AppTheme.card,
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(
-            color: isLive ? AppTheme.danger.withValues(alpha: 0.3) : AppTheme.border,
-            width: isLive ? 1.5 : 1)),
-        child: Row(children: [
-          SizedBox(
-            width: 40,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                if (isLive) ...[
-                  Container(
-                    width: 6, height: 6,
-                    decoration: const BoxDecoration(
-                      color: AppTheme.danger, shape: BoxShape.circle)),
-                  const SizedBox(height: 3),
-                  Text(m['time_elapsed']?.toString() ?? 'LIVE',
-                    style: GoogleFonts.outfit(
-                      color: AppTheme.danger, fontSize: 9, fontWeight: FontWeight.w900)),
-                ] else if (isUpcoming)
-                  Text(m['date'] != null
-                    ? _formatTime(m['date'] as String)
-                    : 'TBD',
-                    style: GoogleFonts.outfit(
-                      color: AppTheme.text3, fontSize: 9, fontWeight: FontWeight.w700),
-                    textAlign: TextAlign.center)
-                else
-                  Text('FT', style: GoogleFonts.outfit(
-                    color: AppTheme.text3, fontSize: 9, fontWeight: FontWeight.w700)),
-              ],
-            ),
-          ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _teamRow(homeTeam, m['home_score'], isLive),
-                const SizedBox(height: 5),
-                _teamRow(awayTeam, m['away_score'], isLive),
-              ],
-            ),
-          ),
-          const Icon(Icons.chevron_right_rounded, color: AppTheme.text3, size: 18),
-        ]),
+    return RefreshIndicator(
+      color: TwBlue.b600,
+      backgroundColor: Colors.white,
+      onRefresh: _loadMatches,
+      child: ListView.builder(
+        padding: const EdgeInsets.symmetric(horizontal: TwSpace.p4, vertical: TwSpace.p2),
+        itemCount: groups.keys.length,
+        itemBuilder: (context, idx) {
+          final league = groups.keys.elementAt(idx);
+          final matches = groups[league]!;
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // League title header
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: TwSpace.p2),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 4,
+                      height: 16,
+                      decoration: BoxDecoration(
+                        color: TwBlue.b600,
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
+                    const SizedBox(width: TwSpace.p2),
+                    Expanded(
+                      child: Text(
+                        league,
+                        style: GoogleFonts.outfit(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w800,
+                          color: TwSlate.s800,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      '${matches.length}',
+                      style: GoogleFonts.outfit(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: TwSlate.s400,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ...matches.map((m) => _buildMatchCard(m)),
+              const SizedBox(height: TwSpace.p2),
+            ],
+          );
+        },
       ),
     );
   }
 
-  Widget _teamRow(String name, dynamic score, bool isLive) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Expanded(child: Text(name, style: GoogleFonts.outfit(
-          fontSize: 12, fontWeight: FontWeight.w700, color: AppTheme.text1),
-          overflow: TextOverflow.ellipsis)),
-        if (score != null)
-          Text('$score', style: GoogleFonts.rajdhani(
-            fontSize: 16, fontWeight: FontWeight.w900,
-            color: isLive ? AppTheme.text1 : AppTheme.text2)),
-      ],
-    );
-  }
-
-  String _formatTime(String dateStr) {
-    try {
-      final dt = DateTime.parse(dateStr).toLocal();
-      final h = dt.hour.toString().padLeft(2, '0');
-      final m = dt.minute.toString().padLeft(2, '0');
-      return '$h:$m';
-    } catch (_) {
-      return 'TBD';
+  Widget _buildMatchCard(Map<String, dynamic> m) {
+    final isLive = m['status'] == 'live';
+    final isFinished = m['status'] == 'finished';
+    final homeScore = m['home_score']?.toString() ?? '-';
+    final awayScore = m['away_score']?.toString() ?? '-';
+    String elapsed;
+    if (isLive) {
+      elapsed = m['time_elapsed']?.toString() ?? 'LIVE';
+    } else if (isFinished) {
+      elapsed = m['time_elapsed']?.toString() ?? 'FT';
+    } else {
+      final t = m['time']?.toString() ?? '';
+      final d = m['date']?.toString() ?? '';
+      if (t.isNotEmpty && t.contains(':') && !t.startsWith('202')) {
+        elapsed = t.length >= 5 ? t.substring(0, 5) : t;
+      } else if (d.contains('T')) {
+        final spl = d.split('T').last;
+        elapsed = (spl.contains(':') && !spl.startsWith('202'))
+            ? (spl.length >= 5 ? spl.substring(0, 5) : spl)
+            : 'SCH';
+      } else if (d.isNotEmpty) {
+        final dt = DateTime.tryParse(d);
+        if (dt != null) {
+          final months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+          elapsed = '${months[dt.month - 1]} ${dt.day}';
+        } else {
+          elapsed = 'SCH';
+        }
+      } else {
+        elapsed = 'SCH';
+      }
     }
-  }
 
-  Widget _iconBtn(IconData icon, VoidCallback onTap) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: 36, height: 36,
-        decoration: BoxDecoration(
-          color: AppTheme.surface, borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: AppTheme.border)),
-        child: Icon(icon, color: AppTheme.text2, size: 18)),
+    return Container(
+      margin: const EdgeInsets.only(bottom: TwSpace.p2),
+      child: TwCard(
+        padding: const EdgeInsets.symmetric(horizontal: TwSpace.p4, vertical: TwSpace.p3),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => MatchDetailScreen(match: m)),
+          );
+        },
+        child: Row(
+          children: [
+            // Status column
+            SizedBox(
+              width: 58,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (isLive)
+                    TwBadge(label: elapsed, variant: TwBadgeVariant.live, pulse: true)
+                  else
+                    Text(
+                      elapsed,
+                      style: GoogleFonts.outfit(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w700,
+                        color: isFinished ? TwSlate.s500 : TwBlue.b600,
+                      ),
+                    ),
+                ],
+              ),
+            ),
+            const SizedBox(width: TwSpace.p2),
+            // Teams column
+            Expanded(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      _buildLogo(m['home_team_logo']),
+                      const SizedBox(width: TwSpace.p2_5),
+                      Expanded(
+                        child: Text(
+                          m['home_team'] ?? 'Home',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.outfit(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: TwSlate.s900,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        homeScore,
+                        style: GoogleFonts.rajdhani(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w900,
+                          color: isLive ? TwRose.r600 : TwSlate.s900,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: TwSpace.p1_5),
+                  Row(
+                    children: [
+                      _buildLogo(m['away_team_logo']),
+                      const SizedBox(width: TwSpace.p2_5),
+                      Expanded(
+                        child: Text(
+                          m['away_team'] ?? 'Away',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.outfit(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: TwSlate.s900,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        awayScore,
+                        style: GoogleFonts.rajdhani(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w900,
+                          color: isLive ? TwRose.r600 : TwSlate.s900,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: TwSpace.p3),
+            Icon(Icons.chevron_right_rounded, color: TwSlate.s300, size: 20),
+          ],
+        ),
+      ),
     );
   }
 
-  Widget _buildShimmer() {
-    return ListView(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      children: List.generate(4, (_) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Container(height: 14, width: 140,
-              decoration: BoxDecoration(
-                color: AppTheme.card, borderRadius: BorderRadius.circular(4)))),
-          ...List.generate(2, (_) => Container(
-            margin: const EdgeInsets.only(bottom: 8), height: 64,
-            decoration: BoxDecoration(
-              color: AppTheme.card, borderRadius: BorderRadius.circular(14)))),
-          Divider(color: AppTheme.border, height: 16),
-        ],
-      )),
-    );
-  }
-
-  Widget _buildError() {
-    return Center(child: Padding(
-      padding: const EdgeInsets.all(24),
-      child: Column(mainAxisSize: MainAxisSize.min, children: [
-        const Icon(Icons.error_outline_rounded, color: AppTheme.danger, size: 48),
-        const SizedBox(height: 12),
-        Text('Failed to load scores', style: GoogleFonts.outfit(
-          fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.text1)),
-        const SizedBox(height: 8),
-        Text(_error!, style: GoogleFonts.outfit(fontSize: 11, color: AppTheme.text2),
-          textAlign: TextAlign.center),
-        const SizedBox(height: 16),
-        ElevatedButton.icon(
-          onPressed: _loadMatches,
-          icon: const Icon(Icons.refresh_rounded),
-          label: const Text('Retry'),
-          style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primary)),
-      ]),
-    ));
-  }
-
-  Widget _buildEmpty() {
-    return Center(child: Column(mainAxisSize: MainAxisSize.min, children: [
-      const Icon(Icons.sports_soccer_rounded, color: AppTheme.text3, size: 52),
-      const SizedBox(height: 16),
-      Text('No $_statusFilter matches found', style: GoogleFonts.outfit(
-        fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.text1)),
-      const SizedBox(height: 6),
-      Text('Pull to refresh or try a different filter',
-        style: GoogleFonts.outfit(fontSize: 12, color: AppTheme.text2)),
-    ]));
+  Widget _buildLogo(dynamic url) {
+    if (url != null && url.toString().isNotEmpty) {
+      return ZetaCachedImage(
+        imageUrl: url.toString(),
+        width: 22,
+        height: 22,
+        shape: BoxShape.circle,
+        errorWidget: Icon(Icons.shield_outlined, size: 20, color: TwSlate.s400),
+      );
+    }
+    return Icon(Icons.shield_outlined, size: 20, color: TwSlate.s400);
   }
 }

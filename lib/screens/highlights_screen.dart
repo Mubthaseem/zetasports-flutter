@@ -211,7 +211,7 @@ class _HighlightsScreenState extends State<HighlightsScreen> {
     final badge = hl['badge']?.toString() ?? '';
     final isTrend  = badge == 'TRENDING';
     final isPopular = badge == 'POPULAR';
-    final badgeCol = isTrend ? AppTheme.danger : AppTheme.warning;
+    final badgeCol = isTrend ? AppTheme.danger : (isPopular ? AppTheme.primary : AppTheme.warning);
     final thumbnail = hl['thumbnail'] ?? hl['thumb_url'] ?? '';
     final duration  = hl['duration'] ?? hl['duration_str'] ?? '';
     final views     = hl['views'] != null ? _formatViews(hl['views']) : '';

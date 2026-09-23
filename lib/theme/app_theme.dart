@@ -1,95 +1,114 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'stitch_theme.dart';
 
 class AppTheme {
-  // ── Brand Colors ────────────────────────────────────────────────────────────
-  static const Color bg         = Color(0xFF07132B); // Background
-  static const Color surface    = Color(0xFF0D1B3E); // Surface
-  static const Color card       = Color(0xFF132347); // Card
-  static const Color primary    = Color(0xFF00D4FF); // Primary Cyan
-  static const Color secondary  = Color(0xFF008CFF); // Secondary Blue
-  static const Color success    = Color(0xFF00FF84); // Success Green
-  static const Color warning    = Color(0xFFFFC83D); // Warning Gold
-  static const Color danger     = Color(0xFFFF4D6D); // Danger/Live Red
-  static const Color text1      = Color(0xFFFFFFFF); // Text Primary
-  static const Color text2      = Color(0xFFA9B4C8); // Text Secondary
-  static const Color text3      = Color(0xFF4A5568); // Text Muted
-  static const Color border     = Color(0x0FFFFFFF); // rgba(255,255,255,0.06)
+  // ── Stitch Brand Colors (ZetaSports Design System) ──────────────────────────
+  static const Color bg         = StitchColors.background;       // #FAF8FF
+  static const Color surface    = StitchColors.surfaceContainerLowest; // #FFFFFF
+  static const Color card       = StitchColors.surfaceContainerLowest; // #FFFFFF
+  static const Color primary    = StitchColors.primaryContainer; // #2563EB (Electric Blue)
+  static const Color secondary  = StitchColors.secondary;        // #006C49
+  static const Color success    = StitchColors.secondaryContainer; // #10B981 (Pitch Emerald)
+  static const Color warning    = Color(0xFFF59E0B);
+  static const Color danger     = StitchColors.tertiary;          // #EF4444 (Crimson)
+  static const Color text1      = StitchColors.onSurface;        // #131B2E (Deep Slate)
+  static const Color text2      = StitchColors.onSurfaceVariant; // #434655
+  static const Color text3      = StitchColors.outline;          // #737686
+  static const Color border     = StitchColors.outlineVariant;   // #E2E8F0
 
-  // Aliases used across existing screens
-  static const Color spaceBlack   = bg;
-  static const Color midnightNavy = surface;
-  static const Color cardBlue     = card;
-  static const Color electricBlue = primary;
-  static const Color iceBlue      = secondary;
-  static const Color neonGreen    = success;
-  static const Color liveRed      = danger;
-  static const Color warningGold  = warning;
-  static const Color accentGlow   = secondary;
-  static const Color borderActive = primary;
+  // Stitch elevated & inverted containers
+  static const Color inverseSurface = StitchColors.inverseSurface; // #131B2E
+  static const Color surfaceContainer = StitchColors.surfaceContainer; // #EAEDFF
+  static const Color surfaceContainerHigh = StitchColors.surfaceContainerHigh; // #E2E7FF
+  static const Color secondaryFixed = StitchColors.secondaryFixed; // #6FFBBE
+
+  // Backwards compatibility aliases
+  static const Color spaceBlack   = StitchColors.inverseSurface;
+  static const Color midnightNavy = StitchColors.background;
+  static const Color cardBlue     = Colors.white;
+  static const Color electricBlue = StitchColors.primaryContainer;
+  static const Color iceBlue      = StitchColors.primary;
+  static const Color neonGreen    = StitchColors.secondaryContainer;
+  static const Color liveRed      = StitchColors.tertiary;
+  static const Color warningGold  = Color(0xFFF59E0B);
+  static const Color accentGlow   = StitchColors.primaryContainer;
+  static const Color borderActive = StitchColors.primaryContainer;
 
   // ── Gradients ───────────────────────────────────────────────────────────────
   static const LinearGradient primaryGrad = LinearGradient(
-    colors: [primary, secondary],
+    colors: [StitchColors.primaryContainer, StitchColors.primary],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
+  static const LinearGradient liveGrad = LinearGradient(
+    colors: [StitchColors.tertiary, StitchColors.tertiaryDark],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
 
   static const LinearGradient heroGrad = LinearGradient(
-    colors: [Color(0xFF000000), Color(0x00000000)],
+    colors: [Color(0xEE131B2E), Color(0x66131B2E), Colors.transparent],
     begin: Alignment.bottomCenter,
     end: Alignment.topCenter,
   );
 
-  // ── Radius ──────────────────────────────────────────────────────────────────
-  static const double radiusCard   = 24;
-  static const double radiusCorner = 20;
-  static const double radiusBtn    = 16;
-  static const double radiusSm     = 10;
+  // ── Radius Scale ────────────────────────────────────────────────────────────
+  static const double radiusCard   = StitchRadius.lg;       // 16.0
+  static const double radiusCorner = StitchRadius.md;       // 12.0
+  static const double radiusBtn    = StitchRadius.defaultR; // 8.0
+  static const double radiusSm     = StitchRadius.sm;       // 4.0
 
-  // ── Typography ──────────────────────────────────────────────────────────────
-  static TextStyle get h1 => GoogleFonts.outfit(
-    fontSize: 28, fontWeight: FontWeight.w900, color: text1, height: 1.1);
-  static TextStyle get h2 => GoogleFonts.outfit(
-    fontSize: 22, fontWeight: FontWeight.w800, color: text1);
-  static TextStyle get h3 => GoogleFonts.outfit(
-    fontSize: 18, fontWeight: FontWeight.w700, color: text1);
-  static TextStyle get h4 => GoogleFonts.outfit(
-    fontSize: 15, fontWeight: FontWeight.w700, color: text1);
-  static TextStyle get body => GoogleFonts.outfit(
-    fontSize: 13, fontWeight: FontWeight.w500, color: text2);
-  static TextStyle get caption => GoogleFonts.outfit(
-    fontSize: 11, fontWeight: FontWeight.w600, color: text2);
-  static TextStyle get label => GoogleFonts.outfit(
-    fontSize: 10, fontWeight: FontWeight.w700, color: text3,
-    letterSpacing: 0.8);
-  static TextStyle get score => GoogleFonts.rajdhani(
-    fontSize: 32, fontWeight: FontWeight.w900, color: text1);
+  // ── Typography (Plus Jakarta Sans & Inter) ───────────────────────────────────
+  static TextStyle get h1 => StitchTypography.headlineLg(color: text1);
+  static TextStyle get h2 => StitchTypography.headlineMd(color: text1);
+  static TextStyle get h3 => StitchTypography.headlineSm(color: text1);
+  static TextStyle get h4 => StitchTypography.bodyLg(color: text1).copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get body => StitchTypography.bodyMd(color: text2);
+  static TextStyle get caption => StitchTypography.bodySm(color: text3);
+  static TextStyle get label => StitchTypography.labelSm(color: text3);
+  static TextStyle get score => StitchTypography.displayScoreMobile(color: text1);
+  static TextStyle get metric => StitchTypography.metricMono(color: text1);
 
-  // ── Theme ───────────────────────────────────────────────────────────────────
+  // ── ThemeData ───────────────────────────────────────────────────────────────
   static ThemeData get theme => ThemeData(
-    brightness: Brightness.dark,
+    useMaterial3: true,
+    brightness: Brightness.light,
     scaffoldBackgroundColor: bg,
     primaryColor: primary,
-    colorScheme: const ColorScheme.dark(
+    colorScheme: const ColorScheme.light(
       primary: primary,
-      secondary: secondary,
+      secondary: success,
       surface: surface,
       onPrimary: Colors.white,
-      onSurface: Colors.white,
+      onSurface: text1,
+      error: danger,
     ),
     appBarTheme: AppBarTheme(
-      backgroundColor: bg,
+      backgroundColor: surface.withValues(alpha: 0.85),
       elevation: 0,
-      scrolledUnderElevation: 0,
+      scrolledUnderElevation: 1,
+      shadowColor: Colors.black.withValues(alpha: 0.04),
       centerTitle: false,
-      titleTextStyle: GoogleFonts.outfit(
-        color: Colors.white, fontSize: 16,
-        fontWeight: FontWeight.w900, letterSpacing: 0.5),
-      iconTheme: const IconThemeData(color: text2),
+      titleTextStyle: GoogleFonts.plusJakartaSans(
+        color: text1,
+        fontSize: 18,
+        fontWeight: FontWeight.w700,
+        letterSpacing: -0.2,
+      ),
+      iconTheme: const IconThemeData(color: text1),
     ),
-    textTheme: GoogleFonts.outfitTextTheme(ThemeData.dark().textTheme),
+    textTheme: GoogleFonts.interTextTheme(ThemeData.light().textTheme),
     cardColor: card,
+    cardTheme: CardThemeData(
+      color: card,
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(radiusCard),
+        side: const BorderSide(color: border, width: 1),
+      ),
+    ),
     dividerColor: border,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: surface,
@@ -97,14 +116,6 @@ class AppTheme {
       unselectedItemColor: text3,
       type: BottomNavigationBarType.fixed,
       elevation: 0,
-    ),
-    chipTheme: ChipThemeData(
-      backgroundColor: card,
-      selectedColor: primary,
-      labelStyle: GoogleFonts.outfit(
-        fontSize: 11, fontWeight: FontWeight.w700, color: text2),
-      side: const BorderSide(color: border),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     ),
   );
 }

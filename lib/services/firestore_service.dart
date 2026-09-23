@@ -33,6 +33,32 @@ class SupabaseService {
       }
       list.add(m);
     }
+    // Smart sort: Live first, upcoming chronologically, recent finished matches descending
+    list.sort((a, b) {
+      final aStatus = (a['status'] ?? '').toString().toLowerCase();
+      final bStatus = (b['status'] ?? '').toString().toLowerCase();
+      final aLive = (aStatus == 'live' || a['is_live'] == true) ? 1 : 0;
+      final bLive = (bStatus == 'live' || b['is_live'] == true) ? 1 : 0;
+      if (aLive != bLive) return bLive.compareTo(aLive);
+
+      final da = a['date'] != null ? DateTime.tryParse(a['date'].toString()) : null;
+      final db = b['date'] != null ? DateTime.tryParse(b['date'].toString()) : null;
+      if (da == null && db == null) return 0;
+      if (da == null) return 1;
+      if (db == null) return -1;
+
+      final aFinished = aStatus == 'finished' || aStatus == 'ft';
+      final bFinished = bStatus == 'finished' || bStatus == 'ft';
+
+      if (!aFinished && bFinished) return -1;
+      if (aFinished && !bFinished) return 1;
+
+      if (!aFinished && !bFinished) {
+        return da.compareTo(db);
+      }
+
+      return db.compareTo(da);
+    });
     return list;
   }
 
@@ -62,7 +88,7 @@ class SupabaseService {
           'zeta_teams!away_team_id.name.ilike.%$searchQuery%,'
           'zeta_leagues!league_id.name.ilike.%$searchQuery%');
       }
-      final res = await q.order('created_at', ascending: true).range(offset, offset + limit - 1);
+      final res = await q.order('date', ascending: true).range(offset, offset + limit - 1);
       return _mapMatchRelations(res);
     } catch (e) {
       debugPrint('fetchMatches: $e');
@@ -167,7 +193,42 @@ class SupabaseService {
           .select()
           .eq('match_id', matchId)
           .maybeSingle();
-      return res;
+      if (res != null) {
+        final map = Map<String, dynamic>.from(res);
+        if (map['players'] == null && (map['home_lineup'] != null || map['away_lineup'] != null)) {
+          final List<Map<String, dynamic>> combined = [];
+          if (map['home_lineup'] is Map) {
+            final hl = map['home_lineup'] as Map;
+            map['home_formation'] ??= hl['formation'];
+            if (hl['players'] is List) {
+              for (var p in hl['players']) {
+                if (p is Map) combined.add({...Map<String, dynamic>.from(p), 'is_home': true});
+              }
+            }
+          } else if (map['home_lineup'] is List) {
+            for (var p in map['home_lineup']) {
+              if (p is Map) combined.add({...Map<String, dynamic>.from(p), 'is_home': true});
+            }
+          }
+
+          if (map['away_lineup'] is Map) {
+            final al = map['away_lineup'] as Map;
+            map['away_formation'] ??= al['formation'];
+            if (al['players'] is List) {
+              for (var p in al['players']) {
+                if (p is Map) combined.add({...Map<String, dynamic>.from(p), 'is_home': false});
+              }
+            }
+          } else if (map['away_lineup'] is List) {
+            for (var p in map['away_lineup']) {
+              if (p is Map) combined.add({...Map<String, dynamic>.from(p), 'is_home': false});
+            }
+          }
+          map['players'] = combined;
+        }
+        return map;
+      }
+      return null;
     } catch (e) {
       debugPrint('fetchLineup: $e');
       return null;
@@ -181,7 +242,29 @@ class SupabaseService {
           .select()
           .eq('match_id', matchId)
           .maybeSingle();
-      return res;
+      if (res != null) {
+        final map = Map<String, dynamic>.from(res);
+        final hs = map['home_stats'];
+        final as = map['away_stats'];
+        if (hs is Map && as is Map) {
+          map['possession_home'] ??= hs['possession'] ?? hs['ballpossesion'];
+          map['possession_away'] ??= as['possession'] ?? as['ballpossesion'];
+          map['shots_home'] ??= hs['shots'] ?? hs['total_shots'];
+          map['shots_away'] ??= as['shots'] ?? as['total_shots'];
+          map['shots_on_target_home'] ??= hs['shots_on_target'] ?? hs['shotsontarget'];
+          map['shots_on_target_away'] ??= as['shots_on_target'] ?? as['shotsontarget'];
+          map['corners_home'] ??= hs['corners'];
+          map['corners_away'] ??= as['corners'];
+          map['fouls_home'] ??= hs['fouls'];
+          map['fouls_away'] ??= as['fouls'];
+          map['yellow_cards_home'] ??= hs['yellow_cards'];
+          map['yellow_cards_away'] ??= as['yellow_cards'];
+          map['red_cards_home'] ??= hs['red_cards'];
+          map['red_cards_away'] ??= as['red_cards'];
+        }
+        return map;
+      }
+      return null;
     } catch (e) {
       debugPrint('fetchMatchStats: $e');
       return null;
@@ -194,7 +277,7 @@ class SupabaseService {
           .from('zeta_match_commentary')
           .select()
           .eq('match_id', matchId);
-      if (res is List && res.isNotEmpty) {
+      if (res.isNotEmpty) {
         final first = res.first;
         if (first['commentary'] is List) {
           return List<Map<String, dynamic>>.from(first['commentary']);
@@ -214,7 +297,7 @@ class SupabaseService {
           .from('zeta_match_events')
           .select()
           .eq('match_id', matchId);
-      if (res is List && res.isNotEmpty) {
+      if (res.isNotEmpty) {
         final first = res.first;
         if (first['events'] is List) {
           return List<Map<String, dynamic>>.from(first['events']);
@@ -228,14 +311,20 @@ class SupabaseService {
     }
   }
 
+  static Future<List<Map<String, dynamic>>> fetchEvents(String matchId) => fetchMatchEvents(matchId);
+
   // ── STANDINGS ──────────────────────────────────────────────────────────────
   static Future<List<Map<String, dynamic>>> fetchLeagueStandings(String leagueId) async {
     try {
-      final res = await _db
+      var res = await _db
           .from('zeta_league_standings')
           .select()
           .eq('league_id', leagueId);
-      if (res is List && res.isNotEmpty) {
+      if (res.isEmpty) {
+        // Graceful fallback to any available league standings
+        res = await _db.from('zeta_league_standings').select().limit(1);
+      }
+      if (res.isNotEmpty) {
         final first = res.first;
         if (first['standings'] is List) {
           return List<Map<String, dynamic>>.from(first['standings']);
@@ -248,6 +337,8 @@ class SupabaseService {
       return [];
     }
   }
+
+  static Future<List<Map<String, dynamic>>> fetchStandings(String leagueId) => fetchLeagueStandings(leagueId);
 
   // ── LEAGUES ────────────────────────────────────────────────────────────────
   static Future<List<Map<String, dynamic>>> fetchLeagues({
@@ -675,5 +766,15 @@ class SupabaseService {
       },
     ).subscribe();
     return channel;
+  }
+
+  static Future<Map<String, dynamic>?> fetchGlobalConfig() async {
+    try {
+      final res = await _db.from('zeta_config').select().eq('id', 'global').maybeSingle();
+      return res != null ? Map<String, dynamic>.from(res) : null;
+    } catch (e) {
+      debugPrint('fetchGlobalConfig: $e');
+      return null;
+    }
   }
 }

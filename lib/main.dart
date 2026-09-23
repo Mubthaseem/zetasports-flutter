@@ -46,7 +46,7 @@ class ZetaSportsApp extends StatelessWidget {
       title: 'ZetaSports',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.theme,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       home: const SplashScreen(),
     );
   }
@@ -390,7 +390,7 @@ class _SplashScreenState extends State<SplashScreen>
                     shape: BoxShape.circle,
                     gradient: RadialGradient(
                       colors: [
-                        AppTheme.primary.withOpacity(0.12 + 0.06 * math.sin(_ctrl.value * math.pi)),
+                        AppTheme.primary.withValues(alpha: 0.10 + 0.05 * math.sin(_ctrl.value * math.pi)),
                         Colors.transparent,
                       ],
                     ),
@@ -409,27 +409,34 @@ class _SplashScreenState extends State<SplashScreen>
                   animation: _ctrl,
                   builder: (_, __) => Transform.scale(
                     scale: _scale.value,
-                    child: Container(
-                      width: 120, height: 120,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        gradient: const LinearGradient(
-                          colors: [AppTheme.primary, AppTheme.secondary],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
+                    child: Opacity(
+                      opacity: _fade.value,
+                      child: Container(
+                        width: 120, height: 120,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: AppTheme.primary.withValues(
+                                  alpha: 0.28 + 0.14 * math.sin(_ctrl.value * math.pi)),
+                              blurRadius: 36,
+                              spreadRadius: 6,
+                            ),
+                          ],
                         ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: AppTheme.primary.withOpacity(
-                                0.3 + 0.2 * math.sin(_ctrl.value * math.pi)),
-                            blurRadius: 48,
-                            spreadRadius: 8,
+                        child: ClipOval(
+                          child: Image.asset(
+                            'assets/images/zetasports_logo.png',
+                            fit: BoxFit.cover,
+                            errorBuilder: (_, __, ___) => Container(
+                              color: AppTheme.primary,
+                              child: Center(
+                                child: Text('Z', style: GoogleFonts.outfit(
+                                  fontSize: 52, fontWeight: FontWeight.w900, color: Colors.white)),
+                              ),
+                            ),
                           ),
-                        ],
-                      ),
-                      child: Center(
-                        child: Text('Z', style: GoogleFonts.outfit(
-                          fontSize: 56, fontWeight: FontWeight.w900, color: Colors.black)),
+                        ),
                       ),
                     ),
                   ),

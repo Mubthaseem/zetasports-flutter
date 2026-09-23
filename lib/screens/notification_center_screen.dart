@@ -156,7 +156,7 @@ class _NotificationCenterScreenState extends State<NotificationCenterScreen> {
                       margin: const EdgeInsets.only(right: 8),
                       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
                       decoration: BoxDecoration(
-                        color: sel ? AppTheme.primary.withOpacity(0.15) : AppTheme.card,
+                        color: sel ? AppTheme.primary.withValues(alpha: 0.12) : AppTheme.card,
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: sel ? AppTheme.primary : AppTheme.border)),
                       child: Text(f, style: GoogleFonts.outfit(
@@ -185,11 +185,11 @@ class _NotificationCenterScreenState extends State<NotificationCenterScreen> {
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
                         color: unread
-                          ? AppTheme.primary.withOpacity(0.04)
+                          ? AppTheme.primary.withValues(alpha: 0.05)
                           : AppTheme.card,
                         borderRadius: BorderRadius.circular(14),
                         border: Border.all(
-                          color: unread ? AppTheme.primary.withOpacity(0.2) : AppTheme.border,
+                          color: unread ? AppTheme.primary.withValues(alpha: 0.25) : AppTheme.border,
                           width: unread ? 1.5 : 1)),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,9 +198,9 @@ class _NotificationCenterScreenState extends State<NotificationCenterScreen> {
                           Container(
                             width: 42, height: 42,
                             decoration: BoxDecoration(
-                              color: col.withOpacity(0.12),
+                              color: col.withValues(alpha: 0.12),
                               borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: col.withOpacity(0.2))),
+                              border: Border.all(color: col.withValues(alpha: 0.2))),
                             child: Icon(n['icon'] as IconData, color: col, size: 20)),
                           const SizedBox(width: 12),
                           Expanded(
