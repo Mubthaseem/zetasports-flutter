@@ -2678,13 +2678,16 @@
     function getMatchLiveInfo(m) {
       if (!m) return { isLive: false, isFinished: false, statusClass: '', statusText: 'SOON', scoreText: 'VS' };
       var rawStatus = (m.status || 'scheduled').toLowerCase();
-      var matchTime = m.date ? new Date(m.date).getTime() : 0;
+      var matchDateStr = m.date || '';
+      if (matchDateStr && matchDateStr.indexOf('Z') === -1 && matchDateStr.indexOf('+') === -1 && matchDateStr.indexOf('T') !== -1) {
+        matchDateStr += (matchDateStr.split(':').length === 2 ? ':00Z' : 'Z');
+      }
+      var matchTime = matchDateStr ? new Date(matchDateStr).getTime() : 0;
       var now = Date.now();
       var diffMin = matchTime > 0 ? Math.floor((now - matchTime) / 60000) : -999;
 
-      var isUpcomingOrScheduled = rawStatus === 'scheduled' || rawStatus === 'upcoming';
-      var isLive = rawStatus === 'live' || (isUpcomingOrScheduled && diffMin >= 0 && diffMin <= 130);
-      var isFinished = rawStatus === 'finished' || (isUpcomingOrScheduled && diffMin > 130);
+      var isLive = rawStatus === 'live' || (rawStatus === 'scheduled' && diffMin >= 0 && diffMin <= 120);
+      var isFinished = rawStatus === 'finished' || rawStatus === 'ft' || (rawStatus === 'scheduled' && diffMin > 140);
 
       var elapsed = m.time_elapsed;
       if (!elapsed && isLive && diffMin >= 0) {
@@ -2694,9 +2697,9 @@
         else elapsed = "90+'";
       }
 
-      var statusClass = isLive ? 'live-badge' : '';
-      var timeDisplay = m.kickoff_ist || (m.date ? new Date(m.date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : 'SOON');
-      var statusText = isLive ? ('LIVE ' + (elapsed ? ' ' + elapsed : '')) : (isFinished ? 'FINISHED' : (m.kickoff_ist || timeDisplay));
+      var statusClass = isLive ? 'live-badge' : (isFinished ? 'finished-badge' : '');
+      var timeDisplay = m.kickoff_ist || (matchDateStr ? new Date(matchDateStr).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : '12:15 AM');
+      var statusText = isLive ? ('LIVE ' + (elapsed ? ' ' + elapsed : '')) : (isFinished ? 'FINISHED' : (m.kickoff_ist || timeDisplay || '12:15 AM'));
       var scoreText = (isLive || isFinished) ? ((m.home_score != null ? m.home_score : 0) + ' - ' + (m.away_score != null ? m.away_score : 0)) : 'VS';
 
       return {
