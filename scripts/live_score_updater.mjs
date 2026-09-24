@@ -71,10 +71,14 @@ async function getFotmobBuildId() {
 // ── 3. Sync Standings ────────────────────────────────────────────────────────
 async function updateStandings(buildId) {
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 3500);
     const leagueUrl = `https://www.fotmob.com/_next/data/${buildId}/leagues/516/overview/ligue-1.json`;
     const res = await fetch(leagueUrl, {
-      headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' }
+      headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' },
+      signal: controller.signal
     });
+    clearTimeout(timeoutId);
     if (!res.ok) return [];
 
     const data = await res.json();
@@ -146,6 +150,63 @@ async function fetchMatchTelemetry(fotmobId) {
   }
 }
 
+// ── 4b. Ensure Relational Teams & Leagues Exist in Supabase ─────────────────
+const teamCache = new Map();
+async function getOrCreateTeam(name, logo, country) {
+  if (!name) return null;
+  const cleanName = name.trim();
+  if (teamCache.has(cleanName)) return teamCache.get(cleanName);
+  try {
+    const { data: existing } = await sb.from('zeta_teams').select('id').eq('name', cleanName).maybeSingle();
+    if (existing) {
+      teamCache.set(cleanName, existing.id);
+      return existing.id;
+    }
+    const { data: created } = await sb.from('zeta_teams').insert({
+      name: cleanName,
+      logo: logo || null,
+      country: country || cleanName,
+      sport: 'football'
+    }).select('id').single();
+    if (created) {
+      teamCache.set(cleanName, created.id);
+      return created.id;
+    }
+  } catch (e) {
+    console.warn(`⚠️ [TeamResolver] Error for ${name}:`, e.message);
+  }
+  return null;
+}
+
+const leagueCache = new Map();
+async function getOrCreateLeague(name, country, logo) {
+  if (!name) return null;
+  const cleanName = name.trim();
+  if (leagueCache.has(cleanName)) return leagueCache.get(cleanName);
+  try {
+    const { data: existing } = await sb.from('zeta_leagues').select('id').eq('name', cleanName).maybeSingle();
+    if (existing) {
+      leagueCache.set(cleanName, existing.id);
+      return existing.id;
+    }
+    const { data: created } = await sb.from('zeta_leagues').insert({
+      name: cleanName,
+      logo: logo || null,
+      country: country || null,
+      sport: 'football',
+      type: 'league',
+      color: '#00D4FF'
+    }).select('id').single();
+    if (created) {
+      leagueCache.set(cleanName, created.id);
+      return created.id;
+    }
+  } catch (e) {
+    console.warn(`⚠️ [LeagueResolver] Error for ${name}:`, e.message);
+  }
+  return null;
+}
+
 // ── 5. Main Execution Engine ─────────────────────────────────────────────────
 async function updateLiveScoresAndTelemetry() {
   const startTime = Date.now();
@@ -173,18 +234,18 @@ async function updateLiveScoresAndTelemetry() {
     }
   }
 
-  // Also query Supabase for matches marked status = 'live'
+  // Also query Supabase for matches marked status in ('live', 'upcoming')
   const { data: dbLiveMatches } = await sb
     .from('zeta_matches')
     .select('id, fotmob_id, home_team, away_team, home_logo, away_logo, league_name, status, home_score, away_score, time_elapsed, date')
-    .eq('status', 'live')
+    .in('status', ['live', 'upcoming'])
     .not('fotmob_id', 'is', null);
 
   // Merge unique targets
   const targetMap = new Map();
 
   for (const m of (trackedConfig.trackedMatches || [])) {
-    // Only track if active live (not finished or archived)
+    // Only track if active live/upcoming (not finished or archived)
     if (m.fotmobId && m.status !== 'archived' && m.status !== 'finished') {
       targetMap.set(String(m.fotmobId), {
         fotmobId: String(m.fotmobId),
@@ -210,14 +271,15 @@ async function updateLiveScoresAndTelemetry() {
         homeLogo: m.home_logo,
         awayLogo: m.away_logo,
         leagueName: m.league_name,
-        status: 'live',
+        status: m.status || 'live',
         previousScore: `${m.home_score ?? ''}-${m.away_score ?? ''}`
       });
     }
   }
 
-  if (process.env.MATCH_ID) {
-    const fId = String(process.env.MATCH_ID).trim();
+  const cliMatchId = process.env.MATCH_ID || process.argv[2];
+  if (cliMatchId) {
+    const fId = String(cliMatchId).trim();
     if (fId.length > 0) {
       const existing = targetMap.get(fId) || {};
       targetMap.set(fId, {
@@ -318,6 +380,10 @@ async function updateLiveScoresAndTelemetry() {
       status = 'cancelled';
       timeElapsed = 'PP';
       isFinished = true;
+    } else {
+      status = 'upcoming';
+      timeElapsed = statusObj.reason?.short || header.status?.startTimeStr || 'Upcoming';
+      period = 'Upcoming';
     }
 
     const homeTeamName = teams[0]?.name || target.homeTeam || 'Home Team';
@@ -546,36 +612,40 @@ async function updateLiveScoresAndTelemetry() {
       }
     }
 
-    // Update Supabase zeta_matches
+    // Resolve relational IDs so Flutter app joins work seamlessly
+    const homeTeamId = await getOrCreateTeam(homeTeamName, homeTeamLogo, homeTeamName);
+    const awayTeamId = await getOrCreateTeam(awayTeamName, awayTeamLogo, awayTeamName);
+    const leagueNameStr = header.leagueName || target.leagueName || 'International';
+    const leagueId = await getOrCreateLeague(leagueNameStr, null, null);
+
+    // Update or Insert Supabase zeta_matches
+    const matchPayload = {
+      fotmob_id: String(fId),
+      home_team: homeTeamName,
+      away_team: awayTeamName,
+      home_logo: homeTeamLogo,
+      away_logo: awayTeamLogo,
+      home_team_id: homeTeamId,
+      away_team_id: awayTeamId,
+      league_id: leagueId,
+      sport: 'football',
+      league_name: leagueNameStr,
+      home_score: homeScore,
+      away_score: awayScore,
+      status,
+      time_elapsed: timeElapsed,
+      period,
+      home_scorers: homeScorersList ? [homeScorersList] : [],
+      away_scorers: awayScorersList ? [awayScorersList] : [],
+      date: header.status?.utcTime || new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    };
+
     if (matchId) {
-      await sb.from('zeta_matches').update({
-        status,
-        time_elapsed: timeElapsed,
-        home_score: homeScore,
-        away_score: awayScore,
-        period,
-        lineups: parsedLineups,
-        match_stats: homeStatsObj ? {
-          possession_home: homeStatsObj.possession,
-          possession_away: awayStatsObj.possession,
-          shots_home: homeStatsObj.shots,
-          shots_away: awayStatsObj.shots,
-          shots_on_target_home: homeStatsObj.shots_on_target,
-          shots_on_target_away: awayStatsObj.shots_on_target,
-          corners_home: homeStatsObj.corners,
-          corners_away: awayStatsObj.corners,
-          fouls_home: homeStatsObj.fouls,
-          fouls_away: awayStatsObj.fouls,
-          yellow_cards_home: homeStatsObj.yellow_cards,
-          yellow_cards_away: awayStatsObj.yellow_cards,
-          red_cards_home: homeStatsObj.red_cards,
-          red_cards_away: awayStatsObj.red_cards,
-          xg_home: xgHome,
-          xg_away: xgAway
-        } : undefined,
-        match_events: eventsRows,
-        updated_at: new Date().toISOString()
-      }).eq('id', matchId);
+      await sb.from('zeta_matches').update(matchPayload).eq('id', matchId);
+    } else {
+      const { data: created } = await sb.from('zeta_matches').insert(matchPayload).select('id').maybeSingle();
+      if (created) matchId = created.id;
     }
 
     // 🚀 2. BUILD SINGLE PRE-COMPILED BUNDLE OBJECT (< 100ms load)
