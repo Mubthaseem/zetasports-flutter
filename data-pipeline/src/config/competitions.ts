@@ -405,6 +405,22 @@ export const SUPPORTED_COMPETITIONS: CompetitionConfig[] = [
     hasLineups: true,
     hasStats: true,
     updatedAt: new Date().toISOString()
+  },
+  {
+    id: '516',
+    fotmobId: 516,
+    name: 'Algerian Ligue 1',
+    slug: 'algerian-ligue-1',
+    country: 'Algeria',
+    countryCode: 'ALG',
+    category: 'DOMESTIC_LEAGUE',
+    tier: 1,
+    logoUrl: 'https://images.fotmob.com/image_resources/logo/leaguelogo/516.png',
+    hasStandings: true,
+    hasTopScorers: true,
+    hasLineups: true,
+    hasStats: true,
+    updatedAt: new Date().toISOString()
   }
 ];
 
