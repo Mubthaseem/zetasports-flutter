@@ -3,17 +3,17 @@
   "meta": {
     "platform": "Zeta Sports Open Football API",
     "version": "1.2.0",
-    "generatedAt": "2026-09-24T17:30:32.697Z",
+    "generatedAt": "2026-09-24T20:45:14.473Z",
     "provider": "FotMob Free Public Gateway",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "competitionsCount": 25,
-      "liveMatches": 0,
+      "liveMatches": 3,
       "todayMatches": 5,
       "upcomingMatches": 457,
       "resultsMatches": 111,
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 180,
+      "fullArticlesCount": 190,
       "standingsLeaguesCount": 19,
       "scorersLeaguesCount": 23,
       "previewsCount": 22,
@@ -421,7 +421,104 @@
       "updatedAt": "2026-09-24T16:58:47.702Z"
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "5181862",
+      "competitionId": "516",
+      "competitionName": "UEFA Nations League A Grp. 4",
+      "competitionSlug": "league",
+      "country": "Algeria",
+      "round": 1,
+      "utcDate": "2026-09-24T18:45:00.000Z",
+      "status": "IN_PLAY",
+      "minute": "Upcoming",
+      "homeTeam": {
+        "id": "8361",
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8361_small.png",
+        "score": 0
+      },
+      "awayTeam": {
+        "id": "5790",
+        "name": "Wales",
+        "shortName": "Wales",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/5790_small.png",
+        "score": 0
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "venue": "Estádio José Alvalade",
+      "referee": "Donatas Rumšas",
+      "updatedAt": "2026-09-24T18:38:13.935Z"
+    },
+    {
+      "id": "5181825",
+      "competitionId": "516",
+      "competitionName": "UEFA Nations League A Grp. 2",
+      "competitionSlug": "league",
+      "country": "Algeria",
+      "round": 1,
+      "utcDate": "2026-09-24T18:45:00.000Z",
+      "status": "IN_PLAY",
+      "minute": "Upcoming",
+      "homeTeam": {
+        "id": "6708",
+        "name": "Netherlands",
+        "shortName": "Netherlands",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6708_small.png",
+        "score": 0
+      },
+      "awayTeam": {
+        "id": "8570",
+        "name": "Germany",
+        "shortName": "Germany",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8570_small.png",
+        "score": 0
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "venue": "Johan Cruijff ArenA",
+      "referee": "Alejandro José Hernández Hernández",
+      "updatedAt": "2026-09-24T18:38:18.628Z"
+    },
+    {
+      "id": "5181861",
+      "competitionId": "516",
+      "competitionName": "UEFA Nations League A Grp. 4",
+      "competitionSlug": "league",
+      "country": "Algeria",
+      "round": 1,
+      "utcDate": "2026-09-24T18:45:00.000Z",
+      "status": "IN_PLAY",
+      "minute": "Upcoming",
+      "homeTeam": {
+        "id": "8492",
+        "name": "Norway",
+        "shortName": "Norway",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8492_small.png",
+        "score": 0
+      },
+      "awayTeam": {
+        "id": "8238",
+        "name": "Denmark",
+        "shortName": "Denmark",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8238_small.png",
+        "score": 0
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "venue": "Ullevaal Stadion",
+      "referee": "Tobias Stieler",
+      "updatedAt": "2026-09-24T18:38:21.580Z"
+    }
+  ],
   "today": [
     {
       "id": "5071094",
@@ -17620,6 +17717,96 @@
   ],
   "news": [
     {
+      "id": "12fytptholf7i1erdgqmlacsmi",
+      "title": "Australia friendlies the beginning of 'new generation' for Brazil, says Ancelotti",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/12fytptholf7i1erdgqmlacsmi-australia-friendlies-beginning-new-generation-brazil-says-ancelotti",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/25/a8/carlo-ancelotti_1uwczot5fuokb15rnzn1y92q2t.png?t=-652696272&w=1260&h=708",
+      "publishedAt": "2026-09-24T20:14:55.000Z"
+    },
+    {
+      "id": "ftbpro_01m39y3skajd",
+      "title": "Ranked: Arsenal Summer Signings’ Start to the Season",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m39y3skajd/ranked-arsenal-summer-signings-start-season",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3a9yrnexr4a035463.jpg",
+      "publishedAt": "2026-09-24T20:00:01.000Z"
+    },
+    {
+      "id": "cyhuti0bvht81ff1qrkw1dqf1",
+      "title": "Zidane: France players are the protagonists, not me",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/cyhuti0bvht81ff1qrkw1dqf1-zidane-france-players-are-protagonists-not-me",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ce/a6/zinedine-zidane_12gueyax63sjg15r1u8hyq648j.jpg?t=-653808272&w=1260&h=708",
+      "publishedAt": "2026-09-24T19:43:56.000Z"
+    },
+    {
+      "id": "ftbpro_01m39s8jvpf9",
+      "title": "‘Really Uncertain’—Why Liverpool Will Be Forced to Axe Star Player Next Summer",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m39s8jvpf9/really-uncertainwhy-liverpool-will-be-forced-axe-star-player-next-summer",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_4409,h_2480,x_0,y_132/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m1xfnrwb29431mkews.jpg",
+      "publishedAt": "2026-09-24T19:30:00.000Z"
+    },
+    {
+      "id": "yyc48whrkuhm14mv9ti4qg6wu",
+      "title": "Smith says focus remains on Charlotte after recording 50th victory",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/yyc48whrkuhm14mv9ti4qg6wu-smith-says-focus-remains-charlotte-after-recording-50th-victory",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e0/da/dean-smith_ntjlyrbvfgt814w7s5uoschlm.png?t=-679180592&w=1260&h=708",
+      "publishedAt": "2026-09-24T19:09:29.000Z"
+    },
+    {
+      "id": "ftbpro_01m39rb55n1a",
+      "title": "‘Wow’—Marc Cucurella Reveals Surprising Reaction to Bernabeu Whistles",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m39rb55n1a/wowmarc-cucurella-reveals-surprising-reaction-bernabeu-whistles",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_27/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m1gyftxc65s7v18wxz.jpg",
+      "publishedAt": "2026-09-24T19:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m3a4w5nky3",
+      "title": "‘Very Similar’—Harry Kane Is Serious About His Future NFL Career",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3a4w5nky3/very-similarharry-kane-is-serious-about-his-future-nfl-career",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_38/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3a5nzpn5hm1t54wrs.jpg",
+      "publishedAt": "2026-09-24T18:30:00.000Z"
+    },
+    {
+      "id": "oa2hmo4uvcgy14ixcazdis5xb",
+      "title": "Belgium and Italy in same situation, says Van Bommel ahead of debut",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/oa2hmo4uvcgy14ixcazdis5xb-belgium-italy-same-situation-says-van-bommel-ahead-debut",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e6/c8/mark-van-bommel_u2sc0vjjcxt4195d989joi0nw.png?t=-665722784&w=1260&h=708",
+      "publishedAt": "2026-09-24T18:06:12.000Z"
+    },
+    {
+      "id": "ftbpro_01m39vxcg036",
+      "title": "Man Utd’s World Record Gareth Bale Bid Finally Revealed",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m39vxcg036/man-utds-world-record-gareth-bale-bid-finally-revealed",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_13/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39x2pnrxkjmxqz0rt.jpg",
+      "publishedAt": "2026-09-24T18:00:02.000Z"
+    },
+    {
+      "id": "162qve87tj1fe1ffb7r6xmge7t",
+      "title": "'Full package' Kane deserves Ballon d'Or recognition, says Tuchel",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/162qve87tj1fe1ffb7r6xmge7t-full-package-kane-deserves-ballon-dor-recognition-says-tuchel",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a6/4e/thomas-tuchel-and-harry-kane_jbw3n7h1rimw1j4go3qvktb4j.jpg?t=-669178784&w=1260&h=708",
+      "publishedAt": "2026-09-24T17:40:11.000Z"
+    },
+    {
       "id": "ftbpro_01m39vt7td3e",
       "title": "USMNT’s Fall Schedule: Winnable Matches and Renewed Rivalries for Pochettino and Co.",
       "description": "SI",
@@ -17708,96 +17895,6 @@
       "sourceUrl": "/news/1t4mz1zeypxyb1g5ybxdunw0es-cucurella-reveals-attempt-try-tempt-rodri-join-real-madrid",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/6b/86/marc-cucurella-and-rodri_m5u6evy8tkh710ynydyvq01xh.png?t=-689992528&w=1260&h=708",
       "publishedAt": "2026-09-24T14:53:19.000Z"
-    },
-    {
-      "id": "ftbpro_01m39cjz7x8v",
-      "title": "Rodri Names His Six-Man Ballon d’Or Shortlist—And There’s a Theme",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m39cjz7x8v/rodri-names-his-six-man-ballon-dor-shortlistand-theres-theme",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_33/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m1pk4wqnk32hk02ep0.jpg",
-      "publishedAt": "2026-09-24T14:45:00.000Z"
-    },
-    {
-      "id": "88619FE4EBEC128B162D526849840C0E",
-      "title": "Man City’s Resilience, Lyon Dominate, Questions for Chelsea & Arsenal: UWCL Matchday 1 Lessons",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/man-citys-resilience-lyon-dominate-questions-for-chelsea-arsenal-uwcl-matchday-1-lessons",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/uwcl-matchday-1-stats-review.jpg",
-      "publishedAt": "2026-09-24T14:12:31.000Z"
-    },
-    {
-      "id": "ktrfhh9h465d1pb339g4qt7bh",
-      "title": "Noonan wants to build on Cincinnati's 'deciding moment' against Houston",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/ktrfhh9h465d1pb339g4qt7bh-noonan-wants-build-cincinnatis-deciding-moment-against-houston",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/18/8c/pat-noonan_1x9ilzg58shxd1p6lttlmeiic9.png?t=-700934336&w=1260&h=708",
-      "publishedAt": "2026-09-24T14:09:11.000Z"
-    },
-    {
-      "id": "1bw4b4j8qe5t618na967le382d",
-      "title": "Alaba joins Udinese as free agent following Real Madrid exit",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1bw4b4j8qe5t618na967le382d-alaba-joins-udinese-free-agent-following-real-madrid-exit",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ff/89/david-alaba_xllzrs7vgl6j1qqemv0fqqeqc.png?t=-700650016&w=640&h=360",
-      "publishedAt": "2026-09-24T13:33:02.000Z"
-    },
-    {
-      "id": "ftbpro_01m39eq34a4k",
-      "title": "Rodri Reveals Why He Chose Barcelona Over Real Madrid—Despite Jose Mourinho ‘Attraction’",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m39eq34a4k/rodri-reveals-why-he-chose-barcelona-over-real-madriddespite-jose-mourinho-attraction",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_32/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m0myz9cfrtx0jgfaft.jpg",
-      "publishedAt": "2026-09-24T13:30:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m35576f0ks",
-      "title": "USMNT Star Reveals Key Reason for World Cup Collapse vs. Belgium",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m35576f0ks/usmnt-star-reveals-key-reason-world-cup-collapse-vs-belgium",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m356h79wyg1gczfe64.jpg",
-      "publishedAt": "2026-09-24T13:00:05.000Z"
-    },
-    {
-      "id": "ftbpro_01m39j7x37fs",
-      "title": "‘Utter Nonsense’—Virgil van Dijk Confronts Journalist Over Shocking World Cup Claim",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m39j7x37fs/utter-nonsensevirgil-van-dijk-confronts-journalist-over-shocking-world-cup-claim",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_84/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39jbpkyp2zp67wfxn.jpg",
-      "publishedAt": "2026-09-24T13:00:03.000Z"
-    },
-    {
-      "id": "1m2z1yz4dy5c51232gpjbghlig",
-      "title": "Guimaraes joined Arsenal for 'new challenge'",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1m2z1yz4dy5c51232gpjbghlig-guimaraes-joined-arsenal-new-challenge",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/1a/ff/guimaraes_18dm711xozch01pnv45xasd5nx.jpg?t=-705770016&w=1260&h=708",
-      "publishedAt": "2026-09-24T12:48:50.000Z"
-    },
-    {
-      "id": "ftbpro_01m39cs0gmzh",
-      "title": "Real Madrid Facing Selection Crisis As Injured Konate Withdraws From France Squad",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m39cs0gmzh/real-madrid-facing-selection-crisis-injured-konate-withdraws-from-france-squad",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_7000,h_3937,x_0,y_322/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39cwb53se1wzdqdva.jpg",
-      "publishedAt": "2026-09-24T12:30:00.000Z"
-    },
-    {
-      "id": "ug574l6kooj1105ktb4v2b5el",
-      "title": "Nashville 'completely aligned' after securing playoff berth, says Callaghan",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/ug574l6kooj1105ktb4v2b5el-nashville-completely-aligned-after-securing-playoff-berth-says-callaghan",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a0/fa/callaghan_1f1nvpt8o2tvy1xxcxpt2njazb.jpg?t=-707348080&w=1260&h=708",
-      "publishedAt": "2026-09-24T12:06:45.000Z"
     }
   ],
   "articles": {
@@ -17920,6 +18017,37 @@
       ],
       "html": "<p>Nadia Nadim says minnows Koge are simply relishing their Women&#39;s Champions League adventure following a narrow defeat to Arsenal.</p>\n\n<p>The Gunners, European champions in 2025, clinched a 1-0 win over the Danish team, who are featuring in just their second Champions League campaign.</p>\n\n<p>Mariona Caldentey&#39;s last-gasp penalty claimed the points for Arsenal, who were wasteful in front of goal.</p>\n\n<p>Arsenal had 19 shots, but got just two of them on target, while they also hit the woodwork.</p>\n\n<p>While Koge suffered late heartbreak,&nbsp;Nadim, who led the visitors&#39; line, was thrilled with her team-mates.</p>\n\n<p>&quot;So proud of the team and the way we conducted ourselves, especially in the first half,&quot; she told ESPN on Disney+.</p>\n\n<p>&quot;We have a young team, a lot of them have no experience playing at this level, good for them to experience what it&#39;s like at this level. Good learning, disappointed they got the goal and penalty in the last minute. That&#39;s a part of the game, could&#39;ve done better, but it&#39;s our first Champions League game and there&#39;s a lot of games left.</p>\n\n<p>&quot;We wanted to be compact and keep the ball, we had people who were comfortable with the ball. We changed in the last 30 minutes, and it didn&#39;t do us well because we couldn&#39;t get out of the pressure.</p>\n\n<p>&quot;Credit to Arsenal, great team, they find each other well. It&#39;s okay, happy for the young players to experience this.</p>\n\n<p>&quot;I enjoy the game. Physically, it&#39;s tough because you&#39;re so low, it becomes hard to be dangerous, takes a toll to try and get in the box the whole time.</p>\n\n<p>&quot;I love football, I love this game. It&#39;s nice to be back here. I always love the Champions League. Now we&#39;re a new team, let&#39;s see where this adventure will take us.&quot;</p>\n\n\n<p>English sides are now unbeaten in their last 11 Champions League games against clubs from Denmark (W8&nbsp;D3), since Arsenal’s 1-5 defeat to Fortuna Hjorring in the 2002-03 semi-final.</p>\n\n<p>This win did see Arsenal snap a run of losing their opening Champions League fixtures in each of the past two seasons.</p>\n\n<p>&quot;We left it late,&quot; said&nbsp;Arsenal defender Steph Catley.</p>\n\n<p>&quot;It&#39;s tough at the moment and in the Champions League there are no easy games. They defended great, we didn&#39;t score early and it didn&#39;t come until the end.</p>\n\n<p>&quot;In the Champions League, you never think it&#39;s an easy day. I was expecting a tough game and it became really difficult but credit to the girls, they did everything and Mariona was very calm in that moment.</p>\n\n<p>&quot;It&#39;s hard to put your finger on it [what is going wrong], it is a bit of a slog and the goals are not coming as freely as they have in the past. It&#39;s not a lack of trying, we&#39;re doing everything we can to put the ball into the back of the net.</p>\n\n<p>&quot;We have great history in this competition and it&#39;s important we are in it every year and challenging to win. We have a real belief that we can go on and win it. It&#39;s a long season and we&#39;re working really hard so to get the wins early on is very important.&quot;</p>\n\n<p>Elsewhere on Tuesday, Real Madrid and Paris Saint-Germain drew 1-1.</p>\n\n<p>Felicia Schroder opened the scoring for Madrid after just two minutes, but&nbsp;Sakina Karchaoui equalised from the penalty spot in the second half.</p>\n"
     },
+    "12fytptholf7i1erdgqmlacsmi": {
+      "id": "12fytptholf7i1erdgqmlacsmi",
+      "title": "Australia friendlies the beginning of 'new generation' for Brazil, says Ancelotti",
+      "subtitle": "Brazil face Australia in their first matches since exiting the World Cup, with Carlo Ancelotti making a string of changes to his squad.",
+      "source": "FotMob",
+      "sourceUrl": "/news/12fytptholf7i1erdgqmlacsmi-australia-friendlies-beginning-new-generation-brazil-says-ancelotti",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/25/a8/carlo-ancelotti_1uwczot5fuokb15rnzn1y92q2t.png?t=-652696272&w=1200&h=630",
+      "publishedAt": "2026-09-24T20:14:55.000Z",
+      "paragraphs": [
+        "Carlo Ancelotti says Brazil&#39;s friendlies during this&nbsp;international break should serve as&nbsp;the beginning for a &quot;new generation&quot;, following their disappointing World Cup campaign.&nbsp;",
+        "Brazil were dumped out of the last 16 at this summer&#39;s World Cup by Norway, which was the earliest they had been eliminated from FIFA&#39;s flagship tournament since 1990.&nbsp;",
+        "Ancelotti has responded by making a raft of changes to his 26-man squad to face Australia (twice) and India, with Casemiro and Fabinho among the big names to miss out.&nbsp;",
+        "In fact, only&nbsp;Gabriel Magalhaes, Marquinhos, Bruno Guimaraes, Danilo Santos, Vinicius Junior, Raphinha, Endrick and Rayan remain from Brazil&#39;s World Cup contingent.&nbsp;",
+        "Ancelotti&#39;s selection is partly built around&nbsp;players who are also eligible for the 2028 Los Angeles Olympics, hoping he can use them as the spine of his squad for the 2030 World Cup.",
+        "The Brazil boss is expecting a tough test in Brazil&#39;s two friendlies against Australia, and he hopes they mark the start of the new era for the Selecao.",
+        "&quot;It&#39;s difficult to say it&#39;s a friendly. For Brazil, it will never be a friendly game,&quot; Ancelotti said. &quot;It will be an important game.",
+        "&quot;A new season, we have a goal to find new players, to find a new generation of players for the World Cup and the Copa America. And we start the game tomorrow.",
+        "&quot;I know that soccer in Australia is not the biggest sport. But they did really well [at the World Cup], and Tony [Popovic, Australia&#39;s coach] did a fantastic job.",
+        "&quot;He organised a fantastic team, really compact, strong defensively, with a fantastic counter-attack. They won a fantastic game against Turkiye, then lost on penalties against Egypt.",
+        "&quot;I think that in modern football, there are no easy games. You have to prepare well for the game; you have to respect the rival and do your best.&quot;",
+        "Australia come into the game fresh from reaching the World Cup knockout stages for the third time in their history, having lost on penalties to Egypt in the round of 32.",
+        "Tony Popovic is preparing Australia for the Asian Cup next January, at which point his contract is set to conclude.&nbsp;",
+        "It will be the first time that Ancelotti has managed a match in Australia, and he is looking forward to reuniting with Popovic, with whom he has a friendship with off the pitch.&nbsp;",
+        "&quot;We are good friends,&quot; Ancelotti said of his relationship with Popovic. &quot;Sometimes we have the possibility to meet to talk about football.",
+        "&quot;We spent time together when I was in Milan; we spent time together in Brisbane. It&#39;s a pleasure to talk about football with him. He&#39;s doing a fantastic job here.",
+        "&quot;A really passionate manager. I hope the best for him. I think the World Cup he had was a really good World Cup. The team showed strong quality, a compact team.",
+        "&quot;We&#39;ve had a fantastic reception, not only from the Brazilian community, but from all the people.",
+        "&quot;The national team of Brazil is really respected everywhere in the world. [It&#39;s] my first time in Australia, so I&#39;m trying my best to enjoy this beautiful country.&quot;"
+      ],
+      "html": "<p>Carlo Ancelotti says Brazil&#39;s friendlies during this&nbsp;international break should serve as&nbsp;the beginning for a &quot;new generation&quot;, following their disappointing World Cup campaign.&nbsp;</p>\n\n<p>Brazil were dumped out of the last 16 at this summer&#39;s World Cup by Norway, which was the earliest they had been eliminated from FIFA&#39;s flagship tournament since 1990.&nbsp;</p>\n\n<p>Ancelotti has responded by making a raft of changes to his 26-man squad to face Australia (twice) and India, with Casemiro and Fabinho among the big names to miss out.&nbsp;</p>\n\n<p>In fact, only&nbsp;Gabriel Magalhaes, Marquinhos, Bruno Guimaraes, Danilo Santos, Vinicius Junior, Raphinha, Endrick and Rayan remain from Brazil&#39;s World Cup contingent.&nbsp;</p>\n\n<p>Ancelotti&#39;s selection is partly built around&nbsp;players who are also eligible for the 2028 Los Angeles Olympics, hoping he can use them as the spine of his squad for the 2030 World Cup.</p>\n\n<p>The Brazil boss is expecting a tough test in Brazil&#39;s two friendlies against Australia, and he hopes they mark the start of the new era for the Selecao.</p>\n\n<p>&quot;It&#39;s difficult to say it&#39;s a friendly. For Brazil, it will never be a friendly game,&quot; Ancelotti said. &quot;It will be an important game.</p>\n\n<p>&quot;A new season, we have a goal to find new players, to find a new generation of players for the World Cup and the Copa America. And we start the game tomorrow.</p>\n\n<p>&quot;I know that soccer in Australia is not the biggest sport. But they did really well [at the World Cup], and Tony [Popovic, Australia&#39;s coach] did a fantastic job.</p>\n\n<p>&quot;He organised a fantastic team, really compact, strong defensively, with a fantastic counter-attack. They won a fantastic game against Turkiye, then lost on penalties against Egypt.</p>\n\n<p>&quot;I think that in modern football, there are no easy games. You have to prepare well for the game; you have to respect the rival and do your best.&quot;</p>\n\n\n<p>Australia come into the game fresh from reaching the World Cup knockout stages for the third time in their history, having lost on penalties to Egypt in the round of 32.</p>\n\n<p>Tony Popovic is preparing Australia for the Asian Cup next January, at which point his contract is set to conclude.&nbsp;</p>\n\n<p>It will be the first time that Ancelotti has managed a match in Australia, and he is looking forward to reuniting with Popovic, with whom he has a friendship with off the pitch.&nbsp;</p>\n\n<p>&quot;We are good friends,&quot; Ancelotti said of his relationship with Popovic. &quot;Sometimes we have the possibility to meet to talk about football.</p>\n\n<p>&quot;We spent time together when I was in Milan; we spent time together in Brisbane. It&#39;s a pleasure to talk about football with him. He&#39;s doing a fantastic job here.</p>\n\n<p>&quot;A really passionate manager. I hope the best for him. I think the World Cup he had was a really good World Cup. The team showed strong quality, a compact team.</p>\n\n<p>&quot;We&#39;ve had a fantastic reception, not only from the Brazilian community, but from all the people.</p>\n\n<p>&quot;The national team of Brazil is really respected everywhere in the world. [It&#39;s] my first time in Australia, so I&#39;m trying my best to enjoy this beautiful country.&quot;</p>\n"
+    },
     "12wp6fcugs0qg1dmw9ecnwclom": {
       "id": "12wp6fcugs0qg1dmw9ecnwclom",
       "title": "Chelsea's Estevao to 'seize every opportunity' after falling behind Palmer, Rogers and Joao Pedro",
@@ -17944,6 +18072,36 @@
         "That injury caused the striker to withdraw from Brazil&#39;s squad, but Estevao will hope to rack up some minutes when the Selecao face Australia (twice) and India in friendlies."
       ],
       "html": "<p>Estevao is determined to &quot;seize every opportunity&quot; he gets at Chelsea, having found himself behind Cole Palmer, Morgan Rogers and Joao Pedro in Xabi Alonso&#39;s pecking order.</p>\n\n<p>The Brazilian arrived at Stamford Bridge from Palmeiras in 2025 and appeared 36 times across all competitions for the Blues in his debut season at Stamford Bridge.</p>\n\n<p>Across those outings, 20 of which were starts, he scored eight goals and laid on three assists, while ranking second for dribbles attempted (133) and third for dribbles completed (58) among all players in Chelsea&#39;s squad, despite his relative lack of gametime.&nbsp;</p>\n\n<p>The 19-year-old would have been hoping to kick on at the start of 2026-27, following Xabi Alonso&#39;s appointment as head coach, but he is yet to provide a goal involvement in six outings and has only started twice.</p>\n\n<p>While Pedro Neto has found a new role at wing-back in Alonso&#39;s 3-4-3 system, the attacking trio of Palmer, Rogers and Joao Pedro have been highly impressive.</p>\n\n<p>Of the Blues&#39; 10 Premier League goals this season, only one – Romeo Lavia&#39;s opening goal in a 4-3 win over Brighton – has not involved at least one of that trio as the scorer or the assister.</p>\n\n<p>Estevao understands the form of Chelsea&#39;s other attackers has limited his opportunities, but he hopes to make a big impression when he gets a chance.&nbsp;</p>\n\n<p>&quot;I think every coach has their own way of playing. Of course, we work every day, I give my best every day, and that&#39;s what I do,&quot; Estevao said at a press conference while on international duty.</p>\n\n<p>&quot;We have quality players at Chelsea, so what I do is focus on what I can control. I try to give my best in training. When I get an opportunity, I try to give my best, day after day.</p>\n\n<p>&quot;I try to seize every opportunity I have, control everything I can, and I leave it in God&#39;s hands, and I trust myself a lot, too.&quot;</p>\n\n\n<p>Estevao has only played 148 minutes in all competitions for Chelsea this term, compared to 578 for Palmer and 552 for Rogers, with those figures making them the Blues&#39; two most-used players.&nbsp;</p>\n\n<p>Joao Pedro has played 377 minutes, having missed last Friday&#39;s 3-0 defeat to Brentford due to a knee issue.</p>\n\n<p>That injury caused the striker to withdraw from Brazil&#39;s squad, but Estevao will hope to rack up some minutes when the Selecao face Australia (twice) and India in friendlies.</p>\n"
+    },
+    "162qve87tj1fe1ffb7r6xmge7t": {
+      "id": "162qve87tj1fe1ffb7r6xmge7t",
+      "title": "'Full package' Kane deserves Ballon d'Or recognition, says Tuchel",
+      "subtitle": "Bayern Munich and England striker Harry Kane is among the Ballon d'Or favourites, and he has the backing of his international manager.",
+      "source": "FotMob",
+      "sourceUrl": "/news/162qve87tj1fe1ffb7r6xmge7t-full-package-kane-deserves-ballon-dor-recognition-says-tuchel",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a6/4e/thomas-tuchel-and-harry-kane_jbw3n7h1rimw1j4go3qvktb4j.jpg?t=-669178784&w=1200&h=630",
+      "publishedAt": "2026-09-24T17:40:11.000Z",
+      "paragraphs": [
+        "England boss Thomas Tuchel firmly believes Harry Kane should win the Ballon d&#39;Or this year, describing the striker as &quot;the full package&quot;.&nbsp;",
+        "Kane is one of three players being tipped to contend for football&#39;s most prestigious individual award next month, alongside Kylian Mbappe and Lamine Yamal.",
+        "That is off the back of a 2025-26 season in which he plundered 65 goals across all competitions for Bayern Munich, before hitting six more to help England finish third at the World Cup, the final tournament to fall in the 2026 Ballon d&#39;Or eligibility period.&nbsp;",
+        "No other player from Europe&#39;s top five leagues scored more than 50 goals in all competitions last term, with Mbappe netting a half-century for Real Madrid.",
+        "But speaking in the build-up to&nbsp;England&#39;s 2026-27 Nations League opener against Spain on Saturday, Tuchel said Kane&#39;s game is about much more than his goals, highlighting his out-of-possession work.",
+        "Asked if Kane was his pick to be crowned the world&#39;s best player, Tuchel told ITV Sport: &quot;Yeah. After this season, yeah.",
+        "&quot;Seventy-plus goals [for club and country], three titles with Bayern Munich, the semi-finals at the World Cup and in the Champions League...",
+        "&quot;He&#39;s getting better and better. I think he added a level of physicality to his match. He&#39;s just so committed to the high press and being involved in every part of the match.",
+        "&quot;Be it in deep build-up, be it in finishing, be it in build-up play in the middle block, be it in defending. He&#39;s just the full package.&quot;",
+        "Last season, Kane recovered possession 124 times for Bayern, with 34 of those regains being in the final third. Those figures put him below Yamal (176 recoveries, 42 in final third) but ahead of Mbappe (65 recoveries, 30 in final third).",
+        "Kane also won 222 duels, less than Yamal&#39;s 381 but more than Mbappe&#39;s 162, and won 20 of his 28 tackles.",
+        "Yamal won 32 of 58 for Barcelona, while Mbappe – somewhat remarkably – only won two of six attempted tackles for Madrid, in 44 games.&nbsp;",
+        "After England fell short in the World Cup semi-finals, losing 2-1 to Argentina having gone ahead through Anthony Gordon&#39;s goal, many questioned whether Kane had played his final game at FIFA&#39;s showpiece tournament.",
+        "He will turn 37 shortly after the conclusion of the 2030 edition, which will be co-hosted by Spain, Portugal and Morocco, but Tuchel feels he has every chance of featuring.",
+        "&quot;Yeah, there&#39;s no problem,&quot; Tuchel said when asked about Kane&#39;s longevity. &quot;Age is age. It doesn&#39;t matter. It&#39;s only about quality, and he has a long way to go.&quot;",
+        "After hosting Spain on Saturday, England continue their Nations League campaign away to Czechia next Tuesday, before visiting Croatia and welcoming Czechia back to Wembley Stadium for a swift return fixture.&nbsp;",
+        "England have won just two of their last 13 games against the reigning World Cup holders, losing nine of those matches (D2).",
+        "However, one of those wins came at home to Spain in November 2011 (1-0), with the other being away to Germany in March 2016 (3-2)."
+      ],
+      "html": "<p>England boss Thomas Tuchel firmly believes Harry Kane should win the Ballon d&#39;Or this year, describing the striker as &quot;the full package&quot;.&nbsp;</p>\n\n<p>Kane is one of three players being tipped to contend for football&#39;s most prestigious individual award next month, alongside Kylian Mbappe and Lamine Yamal.</p>\n\n<p>That is off the back of a 2025-26 season in which he plundered 65 goals across all competitions for Bayern Munich, before hitting six more to help England finish third at the World Cup, the final tournament to fall in the 2026 Ballon d&#39;Or eligibility period.&nbsp;</p>\n\n<p>No other player from Europe&#39;s top five leagues scored more than 50 goals in all competitions last term, with Mbappe netting a half-century for Real Madrid.</p>\n\n<p>But speaking in the build-up to&nbsp;England&#39;s 2026-27 Nations League opener against Spain on Saturday, Tuchel said Kane&#39;s game is about much more than his goals, highlighting his out-of-possession work.</p>\n\n<p>Asked if Kane was his pick to be crowned the world&#39;s best player, Tuchel told ITV Sport: &quot;Yeah. After this season, yeah.</p>\n\n<p>&quot;Seventy-plus goals [for club and country], three titles with Bayern Munich, the semi-finals at the World Cup and in the Champions League...</p>\n\n<p>&quot;He&#39;s getting better and better. I think he added a level of physicality to his match. He&#39;s just so committed to the high press and being involved in every part of the match.</p>\n\n<p>&quot;Be it in deep build-up, be it in finishing, be it in build-up play in the middle block, be it in defending. He&#39;s just the full package.&quot;</p>\n\n\n<p>Last season, Kane recovered possession 124 times for Bayern, with 34 of those regains being in the final third. Those figures put him below Yamal (176 recoveries, 42 in final third) but ahead of Mbappe (65 recoveries, 30 in final third).</p>\n\n<p>Kane also won 222 duels, less than Yamal&#39;s 381 but more than Mbappe&#39;s 162, and won 20 of his 28 tackles.</p>\n\n<p>Yamal won 32 of 58 for Barcelona, while Mbappe – somewhat remarkably – only won two of six attempted tackles for Madrid, in 44 games.&nbsp;</p>\n\n<p>After England fell short in the World Cup semi-finals, losing 2-1 to Argentina having gone ahead through Anthony Gordon&#39;s goal, many questioned whether Kane had played his final game at FIFA&#39;s showpiece tournament.</p>\n\n<p>He will turn 37 shortly after the conclusion of the 2030 edition, which will be co-hosted by Spain, Portugal and Morocco, but Tuchel feels he has every chance of featuring.</p>\n\n<p>&quot;Yeah, there&#39;s no problem,&quot; Tuchel said when asked about Kane&#39;s longevity. &quot;Age is age. It doesn&#39;t matter. It&#39;s only about quality, and he has a long way to go.&quot;</p>\n\n<p>After hosting Spain on Saturday, England continue their Nations League campaign away to Czechia next Tuesday, before visiting Croatia and welcoming Czechia back to Wembley Stadium for a swift return fixture.&nbsp;</p>\n\n<p>England have won just two of their last 13 games against the reigning World Cup holders, losing nine of those matches (D2).</p>\n\n<p>However, one of those wins came at home to Spain in November 2011 (1-0), with the other being away to Germany in March 2016 (3-2).</p>\n"
     },
     "17krq7bj4h1kr121kdkw5s68ve": {
       "id": "17krq7bj4h1kr121kdkw5s68ve",
@@ -19651,6 +19809,36 @@
         "Yamal will be in action for Spain on Saturday, as they go to Wembley to face England in their opening Nations League fixture, defending a 38-game unbeaten run (W29 D9), which is the longest ever streak by a European nation."
       ],
       "html": "<p>Lamine Yamal believes lifting the World Cup with Spain should aid his hopes of winning the Ballon d&#39;Or, with Harry Kane and Kylian Mbappe viewed as his main rivals.&nbsp;</p>\n\n<p>Yamal helped La Roja win their second world title in North America this year, although his individual impact at the tournament was limited after his 2025-26 season was ended prematurely by a hamstring injury.</p>\n\n<p>He registered 24 goals and 17 assists in 45 outings across all competitions last season, helping Barcelona retain their LaLiga title, with his 41 combined goal involvements being the sixth-most of any player from Europe&#39;s top five leagues.&nbsp;</p>\n\n<p>Yamal also attempted (429) and completed (225) the most dribbles of any player, while his 59 chances created following carries were also the most.&nbsp;</p>\n\n<p>On Tuesday, Spain coach Luis de la Fuente declared one of his players should win the prize, just as Rodri did when they triumphed at Euro 2024.</p>\n\n<p>And Yamal, who has not been shy about making his case as the October 26 ceremony inches closer, concurs with that view.&nbsp;</p>\n\n<p>&quot;It&#39;s the award for the best player of the year, a player who is different, who is a pleasure to watch play, the one who has that magic, who makes you smile, who makes you want to watch a game just for him,&quot; Yamal said in an interview with L&#39;Equipe.</p>\n\n<p>&quot;I think my way of playing is my strongest argument and what makes me different.&nbsp;</p>\n\n<p>&quot;It&#39;s very important, in addition to being a good player, that you make your team win.</p>\n\n<p>&quot;The advantage I have is that I have been able to win the World Cup this year and, obviously, that is a plus for me.</p>\n\n<p>&quot;But if a person says, &#39;Lionel Messi deserves it&#39; or &#39;Rodri deserves it&#39;, that&#39;s totally respectable.&quot;</p>\n\n\n<p>Having come through the ranks at Barca, Yamal has faced plenty of comparisons to Messi, who he outshone in the World Cup final as Spain edged out Argentina in extra time.</p>\n\n<p>But the 19-year-old wants to be remembered on his own terms, saying: &quot;I play to make history, so that in 30 years&#39; time, young people will say, &#39;he was really very good too&#39;.&nbsp;&nbsp;</p>\n\n<p>&quot;But I don&#39;t want to compare myself to anyone. I want to be Lamine Yamal, I want to be remembered as Lamine Yamal, and I hope to be among the greats.&quot;</p>\n\n<p>Yamal will be in action for Spain on Saturday, as they go to Wembley to face England in their opening Nations League fixture, defending a 38-game unbeaten run (W29 D9), which is the longest ever streak by a European nation.</p>\n"
+    },
+    "cyhuti0bvht81ff1qrkw1dqf1": {
+      "id": "cyhuti0bvht81ff1qrkw1dqf1",
+      "title": "Zidane: France players are the protagonists, not me",
+      "subtitle": "France will get the Zinedine Zidane era underway in Turkiye on Friday, but the ex-midfield icon does not want to be the star attraction.",
+      "source": "FotMob",
+      "sourceUrl": "/news/cyhuti0bvht81ff1qrkw1dqf1-zidane-france-players-are-protagonists-not-me",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ce/a6/zinedine-zidane_12gueyax63sjg15r1u8hyq648j.jpg?t=-653808272&w=1200&h=630",
+      "publishedAt": "2026-09-24T19:43:56.000Z",
+      "paragraphs": [
+        "Zinedine Zidane insists he will not be the &quot;protagonist&quot; of France&#39;s new era, instead taking a back seat to his star-studded squad.&nbsp;",
+        "France face Turkiye in their Nations League opener at Kocaeli Stadium on Friday, with Zidane managing his country for the first time following 14 years under Didier Deschamps.",
+        "Deschamps led Les Bleus to their second World Cup triumph in 2018 – as well as runner-up finishes at the 2022 edition and at Euro 2016 – during his illustrious spell in charge.",
+        "He oversaw 187 matches in total, having also represented his nation 103 times as a player, with his 26 World Cup games being the most of any coach in the competition&#39;s history.",
+        "Zidane&#39;s appointment, though, has come with much fanfare, given his status as an icon of French football.",
+        "He scored a brace against Brazil in France&#39;s first World Cup final triumph&nbsp;in 1998, while he is also the most recent Frenchman to win the Ballon d&#39;Or, claiming the prize that year.",
+        "And, across two spells as the head coach of Real Madrid, Zidane won three Champions League crowns in a row, two LaLiga titles, two Club World Cups, two UEFA Super Cups and two editions of the Supercopa de Espana.",
+        "Yet the former midfielder does not see himself as the star of the France setup, telling reporters: &quot;After 14 years of Didier, this is new. But the protagonists are the players. I&#39;m going to stay in my role.",
+        "&quot;I feel a huge emotion to be able to be here as a coach, maybe even more than before my first game as a player.&quot;",
+        "One of Zidane&#39;s foremost tasks will be finding a way to keep several big-name attackers happy.",
+        "At this summer&#39;s World Cup, where France finished fourth, Kylian Mbappe set a new record for goal involvements at a single edition (14 – 10 goals, four assists) and became the competition&#39;s all-time leading scorer (22 goals).",
+        "Michael Olise recorded more assists than any other player has had at a single World Cup (seven, since 1966), while Ousmane Dembele scored six goals and assisted two.",
+        "Asked where he would field Dembele in particular, Zidane replied: &quot;You&#39;ll see tomorrow. We have put things in place. The idea is to do interesting things.&nbsp;",
+        "&quot;We&#39;re not going to talk about Zidane&#39;s touch. We only had three training sessions. We put two or three things in place. We will have to be good tomorrow.&quot;",
+        "Adrien Rabiot appeared alongside Zidane at France&#39;s pre-match press conference, and the AC Milan midfielder believes Deschamps&#39; team were tactically outclassed by eventual champions Spain in their World Cup semi-final, which La Roja won 2-0.",
+        "&quot;I&#39;m thinking about the Nations League. We know that things in football move fast,&quot; Rabiot said. &quot;The coach is here for four years. We have to take this competition and use it.&nbsp;",
+        "&quot;It wasn&#39;t a lack of quality. We have no less quality than Spain, with all humility. They were better tactically; they may have prepared better for that match.&nbsp;",
+        "&quot;Spain were able to put us in difficulty. If we play them again, we will have to find the key. We will have to work on this tactical point – we have collective and individual talent.&quot;"
+      ],
+      "html": "<p>Zinedine Zidane insists he will not be the &quot;protagonist&quot; of France&#39;s new era, instead taking a back seat to his star-studded squad.&nbsp;</p>\n\n<p>France face Turkiye in their Nations League opener at Kocaeli Stadium on Friday, with Zidane managing his country for the first time following 14 years under Didier Deschamps.</p>\n\n<p>Deschamps led Les Bleus to their second World Cup triumph in 2018 – as well as runner-up finishes at the 2022 edition and at Euro 2016 – during his illustrious spell in charge.</p>\n\n<p>He oversaw 187 matches in total, having also represented his nation 103 times as a player, with his 26 World Cup games being the most of any coach in the competition&#39;s history.</p>\n\n<p>Zidane&#39;s appointment, though, has come with much fanfare, given his status as an icon of French football.</p>\n\n<p>He scored a brace against Brazil in France&#39;s first World Cup final triumph&nbsp;in 1998, while he is also the most recent Frenchman to win the Ballon d&#39;Or, claiming the prize that year.</p>\n\n<p>And, across two spells as the head coach of Real Madrid, Zidane won three Champions League crowns in a row, two LaLiga titles, two Club World Cups, two UEFA Super Cups and two editions of the Supercopa de Espana.</p>\n\n<p>Yet the former midfielder does not see himself as the star of the France setup, telling reporters: &quot;After 14 years of Didier, this is new. But the protagonists are the players. I&#39;m going to stay in my role.</p>\n\n<p>&quot;I feel a huge emotion to be able to be here as a coach, maybe even more than before my first game as a player.&quot;</p>\n\n<p>One of Zidane&#39;s foremost tasks will be finding a way to keep several big-name attackers happy.</p>\n\n\n<p>At this summer&#39;s World Cup, where France finished fourth, Kylian Mbappe set a new record for goal involvements at a single edition (14 – 10 goals, four assists) and became the competition&#39;s all-time leading scorer (22 goals).</p>\n\n<p>Michael Olise recorded more assists than any other player has had at a single World Cup (seven, since 1966), while Ousmane Dembele scored six goals and assisted two.</p>\n\n<p>Asked where he would field Dembele in particular, Zidane replied: &quot;You&#39;ll see tomorrow. We have put things in place. The idea is to do interesting things.&nbsp;</p>\n\n<p>&quot;We&#39;re not going to talk about Zidane&#39;s touch. We only had three training sessions. We put two or three things in place. We will have to be good tomorrow.&quot;</p>\n\n<p>Adrien Rabiot appeared alongside Zidane at France&#39;s pre-match press conference, and the AC Milan midfielder believes Deschamps&#39; team were tactically outclassed by eventual champions Spain in their World Cup semi-final, which La Roja won 2-0.</p>\n\n<p>&quot;I&#39;m thinking about the Nations League. We know that things in football move fast,&quot; Rabiot said. &quot;The coach is here for four years. We have to take this competition and use it.&nbsp;</p>\n\n<p>&quot;It wasn&#39;t a lack of quality. We have no less quality than Spain, with all humility. They were better tactically; they may have prepared better for that match.&nbsp;</p>\n\n<p>&quot;Spain were able to put us in difficulty. If we play them again, we will have to find the key. We will have to work on this tactical point – we have collective and individual talent.&quot;</p>\n"
     },
     "eytwkdcmcjzb18fk8aiwfoso3": {
       "id": "eytwkdcmcjzb18fk8aiwfoso3",
@@ -22367,6 +22555,65 @@
         "Another loan looks likely. /  Sarah Stier/FIFA/Getty ImagesOpportunities for Real Madrid look to be few and far between again this season."
       ]
     },
+    "ftbpro_01m39rb55n1a": {
+      "id": "ftbpro_01m39rb55n1a",
+      "title": "‘Wow’—Marc Cucurella Reveals Surprising Reaction to Bernabeu Whistles",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/marc-cucurella-reveals-surprising-reaction-bernabeu-whistles/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_27/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m1gyftxc65s7v18wxz.jpg",
+      "publishedAt": "2026-09-24T19:00:00.000Z",
+      "paragraphs": [
+        "By Andrew Headspeath3:00 PM EDTMarc Cucurella’s start at Real Madrid has not been entirely smooth. / Mateo Villalba/Getty ImagesMarc Cucurella has revealed what went through his head the first time he experienced the infamous whistles of the Real Madrid crowd in the 2–1 Champions League win over Inter Milan.",
+        "Despite winning five from seven at the start of the 2026–27 season, Madrid have endured a somewhat bumpy start to their new era.",
+        "José Mourinho arrived during the summer as the club’s new manager, while Cucurella was one of six first-team transfers. However, bruising defeats to Real Betis and Atlético Madrid have dented the club’s hopes of a first La Liga title since 2024, while Los Blancos have kept just one clean sheet so far in 2026–27.",
+        "There has been bubbling discontent from the Bernabéu crowd, with Vinícius Júnior among those targeted with boos and whistled in several outings already this season.",
+        "Marc Cucurella felt the wrath of the fans against Inter. /  Alvaro Medranda/Quality Sport Images/Getty ImagesSpeaking to El Larguero, Cucurella smiled when asked about the famously exacting standards of the Bernabéu.",
+        "“To be honest, I’m already used to it because I’m a player that gets whistled at quite a lot, so it’s nothing new to me,” he joked.",
+        "“But it’s true that it still impacts me a little and I think ‘wow they whistle quickly here.’ I remember the game against Inter, they just kicked off [for the second half] and in the second minute or so, I don’t think we’d even touched the ball, we were defending and the stadium was already whistling ... and I think ‘my God, we haven’t even had time to touch the ball!’”",
+        "He continued: “But, in the end, this crowd has seen a lot of great players and magical nights and I understand it’s a wake-up call in the sense of demanding more from us, knowing we have the talent and we can do more.",
+        "“There’s also the good side. When the stadium pushes you on, it’s impressive. I’m looking forward to having one of those magical nights like I’ve seen on TV and let’s see if I get to experience one myself.”",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Vinícius Jr has been a regular target this season. / Florencia Tan Jun/Getty ImagesCucurella is just the latest in a long line of players to experience the whistles at the Bernabéu.",
+        "The jeering is nothing new, though the crowd’s tolerance levels have gotten shorter in the last two seasons with the club struggling to compete domestically and in Europe.",
+        "For most clubs, the fans animus towards their team is unfathomable given their position. However, there is some context. As the world’s biggest and—by many metrics—most successful soccer club, standards are high at Real Madrid where sometimes it is not enough to simply win, you must win well.",
+        "The disgruntlement at the Bernabéu has been exacerbated by last season’s off-field chaos, which left a bad taste in the mouths of many supporters.",
+        "Certain players are also targeted more than others, with Vinícius Jr. a ‘favorite’ of the boo-boys this season as result of his poor form and protracted contract saga.",
+        "Responding to the fans whistling of the Brazilian in the win over Inter Milan, Mourinho told reporters: “There is a proverb in Portugal: you only throw stones at trees that bear fruit.”",
+        "feed. READ THE LATEST REAL MADRID NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m39s8jvpf9": {
+      "id": "ftbpro_01m39s8jvpf9",
+      "title": "‘Really Uncertain’—Why Liverpool Will Be Forced to Axe Star Player Next Summer",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/liverpool-forced-axe-star-player-next-summer/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_4409,h_2480,x_0,y_132/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m1xfnrwb29431mkews.jpg",
+      "publishedAt": "2026-09-24T19:30:00.000Z",
+      "paragraphs": [
+        "By Ewan Ross-Murray3:30 PM EDTAndoni Iraola has a tough decision to make in the future. / Adam Davy/PA Images/Getty ImagesOne of Liverpool’s two leading goalkeepers are expected to leave the club at the end of the current campaign, creating a major dilemma for Andoni Iraola to address next summer.",
+        "Alisson Becker is currently Liverpool’s undisputed starter between the posts, as he has been since joining the club back in 2018. An extraordinary, trophy-laden spell on Merseyside could come to an end soon, however, with the 33-year-old’s contract expiring next summer.",
+        "The Brazilian, who was recently linked with a move to Juventus, could realistically leave when his deal runs out, and it was expected that Giorgi Mamardashvili would succeed him.",
+        "The former Valencia goalkeeper was signed off the back of an impressive Euro 2024 campaign for Georgia, staying in Spain for one more year until 2025. But he’s yet to convince during his 21 appearances for the Reds. Naturally, that has cast doubt over his long-term future.",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "Speaking on the Walk On podcast, Liverpool correspondent for The Athletic, James Pearce, admitted that one of the club’s goalkeepers appears likely to leave next summer. Either Alisson will depart as a free agent, or Mamardashvili will exit in search of more regular game time.",
+        "“If Alisson does stay, Mamardashvili isn’t going to tolerate being backup for a third successive season,” said Pearce.",
+        "“If Alisson stays, that probably means that Mamardashvili goes, and then they’ve invested a lot of money in this young Belgian goalkeeper, Lucca Brughmans. Then you’ve got [Vítězslav] Jaroš; he’ll be back [from injury] in a few months. They’ve got Ármin Pécsi, who’s out on loan in Austria at the moment.",
+        "“I get the feeling that they’re quite happy with what they’ve got further down the line in terms of five, six, seven years’ time, but the immediate future is really uncertain.”",
+        "Mamardashvili (left) has been unable to match the performances of Alisson (right). / Andrew Powell/Liverpool FC/Getty ImagesOn paper, extending Alisson’s current contract seems a no-brainer. He still ranks among the world’s best goalkeepers when healthy and, despite turning 34 next week, can enjoy at least a few more years at the elite level.",
+        "However, Alisson’s availability is the main barrier to a renewal. With him having been regularly affected by injuries issues in recent years, Liverpool have been forced to call upon his deputy on a frequent basis—whether that’s been Caoimhín Kelleher in the past, or now Mamardashvili.",
+        "Alisson has played no more than 35 games across all competitions in each of his last three seasons, which means he’s missed 73 matches with 11 different injury or illness layoffs. Hamstring problems have been particularly common.",
+        "It makes sense, therefore, for Liverpool to plan without Alisson in their future, but Mamardashvili’s questionable performances in the veteran’s absence have only exacerbated a growing conundrum.",
+        "While an adept shot-stopper capable of making some eye-catching saves, the Georgian’s rogue distribution and penchant for errors have made him an unreliable replacement. Liverpool’s recent Carabao Cup victory over Tottenham Hotspur was the perfect example of Mamardashvili’s duality.",
+        "Choosing between Alisson and Mamardashvili will prove a tough decision.",
+        "18-year-old Lucca Brughmans has enormous potential.  /  JILL DELSAUX/BELGA MAG/Belga/AFP/Getty ImagesThe fact Liverpool splashed big money on 18-year-old goalkeeper Lucca Brughmans over the summer hints at their uncertainty over Alisson and Mamardashvili’s future.",
+        "The precocious teenager has been loaned back to Genk for the current campaign, but there’s a feeling he will be ready to play his part for the Reds next season.",
+        "Brughmans has already made 18 appearances for the Belgian team and will rack up plenty more minutes before the current term concludes. That invaluable experience makes him a candidate to feature as Liverpool’s deputy in the near future, but he certainly won’t be trusted to be the club’s first-choice goalkeeper for some time—barring a truly remarkable season with Genk.",
+        "Pécsi, who was signed in 2025 as a future star, also remains some distance off making a significant impact for Liverpool, and the 21-year-old is currently on loan in Austria with TSV Hartberg—where he’s earned his spot as their primary goalkeeper.",
+        "However, Jaroš, who has been at Liverpool since 2020, appears unlikely to make the cut at Anfield despite loan spells with Sturm Graz and Ajax, and could leave permanently in the near future."
+      ]
+    },
     "ftbpro_01m39vt7td3e": {
       "id": "ftbpro_01m39vt7td3e",
       "title": "USMNT’s Fall Schedule: Winnable Matches and Renewed Rivalries for Pochettino and Co.",
@@ -22396,6 +22643,93 @@
         "Both host nations were eliminated in the round of 16 this summer, but the finishes were not created equal. Canada only won two of their five matches at the 2026 World Cup, and one of those victories came against a Qatar team with nine men.",
         "Past results will cease to matter come October, though, when the two Concacaf teams lock horns in what should be a gritty, tightly-contested match.",
         "feed. READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m39vxcg036": {
+      "id": "ftbpro_01m39vxcg036",
+      "title": "Man Utd’s World Record Gareth Bale Bid Finally Revealed",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/man-utd-world-record-gareth-bale-bid-revealed/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_13/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39x2pnrxkjmxqz0rt.jpg",
+      "publishedAt": "2026-09-24T18:00:02.000Z",
+      "paragraphs": [
+        "By Jamie Spencer2:00 PM EDTGareth Bale won multiple Champions League titles with Real Madrid. /  Laurence Griffiths/Getty ImagesGareth Bale “really wanted” to join Real Madrid in 2013, which meant even Manchester United blowing Los Blancos out of the water with a better offer to Tottenham Hotspur was never going to get the Welsh superstar to Old Trafford.",
+        "Bale reached superstardom for his 2012–13 campaign with Spurs, completing an individual quadruple of PFA Players’ Player of the Year, PFA Young Player of the Year, FWA Footballer of the Year and Premier League Player of the Season only otherwise achieved by Cristiano Ronaldo (2006–07). That was no mean feat considering Robin van Persie scored 26 Premier League goals in his debut season for Manchester United to steer the club to the title.",
+        "Signing Bale made perfect sense for the Red Devils, with Ronaldo sold four years earlier, Ryan Giggs about to turn 40, Nani coming off the back of an injury-blighted season and Shinji Kagawa not a natural winger. So much so, they were willing to pay big, big money.",
+        "The story that United were willing to outbid Real Madrid to make it happen is well established and has been told and retold for 13 years. But André Villas-Boas, who was Spurs’ manager at the time, has now given an insight into the specifics of the offer on the table.",
+        "“Gareth Bale had the offer from Real Madrid. I remember Man United called at the last minute because [Spurs chairman] Daniel Levy came to my office,” the Portuguese explained on The Obi One Podcast, with his former Chelsea player, John Obi Mikel.",
+        "“[Manchester United] were paying 120 [million], and Gareth did not want to go … he wanted to go to Real Madrid. For me, it was indifferent [which club he joined]. We were in Hong Kong during preseason. Gareth was protecting himself because he really wanted this transfer to happen. Real Madrid were pushing a lot.”",
+        "Villas-Boas didn’t specify a currency. But it’s reasonable to believe he was talking in euros, given that was the currency Real Madrid were dealing in.",
+        "Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed",
+        "Real Madrid put down €100 million ($114 million at today’s rate), which was a world record fee surpassing Ronaldo’s 2009 transfer to the Spanish capital. A United offer worth €120 million ($136.5 million) was still a much larger proposal and enough of a statement, whereas £120 million ($159 million today) would have been unnecessarily astronomical.",
+        "The figure of €120 million also appeared sporadically in press reports over the subsequent years whenever interest in Bale was rumored to be rising again.",
+        "“I remember at the end of [Tottenham’s] Asia tour, after the game, he was in the physio room. I went to his physio bed, picked up my pen and wrote ‘Real Madrid’ and ‘Man United’—which one. And he chose. He chose wisely,” Villas-Boas recalled.",
+        "“Without disrespect, but he really wanted that move. I think Real Madrid is the winner of all Champions Leagues—he contributed decisively to winning those titles. It was a difficult decision, but acceptable. David Moyes also wanted him, but Gareth ended up making a good choice. Either of them would have been great choices for sure.”",
+        "Bale was worth paying big money for. / Getty ImagesBale himself spoke about the 2013 saga only a few months ago while a guest on Gary Neville’s Stick to Football. He admitted there was never a chance he was going to Manchester United, even though confirming that the offer to Spurs was indeed bigger.",
+        "“I did talk to United. I spoke with David Moyes. I didn’t speak [with executive vice-chairman Ed Woodward], maybe my agent did. But my heart was set on Madrid anyway.”",
+        "There was another reason Bale didn’t head to Manchester, and perhaps why United felt they needed to offer far more than Real Madrid to even have a chance.",
+        "There was a “gentleman’s agreement” in place with Daniel Levy that he wouldn’t be sold to a domestic rival but could move overseas. “If a team did come in [for me] from Spain, Italy, Germany, wherever, I could potentially go.” Levy employed the same tactic a decade later when Harry Kane joined Bayern Munich, having steadfastly refused to let the striker join Manchester City in 2021.",
+        "The irony is that United, whose record signing remains Paul Pogba’s £89 million ($118 million) transfer from Juventus in 2016, have still never spent as much on a player as they were seemingly willing to for Bale that summer.",
+        "Bale primarily played on the left for Spurs. / FotMobThe summer of 2013 felt like a sliding doors moment for Manchester United. Sir Alex Ferguson had just retired and, outside of the Bale saga, the club was unable to complete a deal for Cristiano Ronaldo that had at one stage looked likely to happen.",
+        "Moyes also wanted Cesc Fàbregas from Barcelona. He stayed but joined Chelsea a year later. Everton’s Leighton Baines was the plan to begin replacing an aging Patrice Evra at left back.",
+        "Signing Bale might later have negated the need to spend big on Ángel Di María in 2014. The Argentine was an exceptional signing on paper but never really wanted to leave Real Madrid. A few blistering performances at the beginning aside, he struggled on the field, didn’t settle off of it, and was gone—to Paris Saint-Germain—just a year later."
+      ]
+    },
+    "ftbpro_01m39y3skajd": {
+      "id": "ftbpro_01m39y3skajd",
+      "title": "Ranked: Arsenal Summer Signings’ Start to the Season",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/ranked-arsenal-summer-signings-start-to-season/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3a9yrnexr4a035463.jpg",
+      "publishedAt": "2026-09-24T20:00:01.000Z",
+      "paragraphs": [
+        "By James Cormack4:00 PM EDTArsenal’s new faces are hoping to help the team defend the Premier League title. / Franco Romano/NurPhoto/Getty Images (Konsa), Joe Prior/Visionhaus/Getty Images (Guimarães), Marc Atkins/Getty Images (Tzolis)The 2025 summer transfer window represented a shift in north London, with Andrea Berta coming to the fore for the first time since his appointment as Arsenal’s sporting director.",
+        "The previous incumbent, Edu Gaspar, had been chastised by supporters despite the role he played alongside Mikel Arteta in shifting a rotten culture at Emirates Stadium and restoring the Gunners among the Premier League’s finest.",
+        "Within a year of Berta’s arrival, Arsenal were champions, but that doesn’t exactly paint a fair picture. In truth, Arsenal’s 2025 summer transfer window, lauded at the time, is aging poorly.",
+        "Their three major signings of the window, Eberechi Eze, Viktor Gyökeres and Martín Zubimendi, no longer find themselves in Arteta’s strongest XI, even if all three contributed to their title success last term.",
+        "The glory papered over potential concerns with the newbies, but Berta won’t have anywhere to hide if Arteta’s project doesn’t continue on its impressive trajectory. The Gunners entered the campaign as the clear favorites, but not because of their own work in the market. It was suggested that the volatility of Arsenal’s most likely challengers in 2026–27 would deny us a title race.",
+        "Sure, Berta has helped bolster Arteta’s defense and midfield, but he couldn’t land the X-factor talent in attack that so many believed the Gunners required after their Champions League final defeat.",
+        "Ultimately, supporters were left content with their summer’s work, but there‘s a sense that the door has been left ajar for potential usurpers. Here’s a ranking of Arsenal’s five summer arrivals after the first month of the new season.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Meslier is Arsenal’s third-choice goalkeeper. / NurPhoto/Getty ImagesAppearances: 0Once a highly-rated shot-stopper at Leeds United, Illan Meslier lost his way at Elland Road and now finds himself third on the depth chart at Arsenal.Some had thought the Frenchman would potentially replace Kepa Arrizabalaga as David Raya’s backup, but Kepa has gotten the nod in the Carabao Cup, suggesting that he remains second-choice. Meslier is yet to make a competitive appearance for his new club.",
+        "Hincapié joined the club permanently. / Franco Romano/NurPhoto/Getty ImagesAppearances: 4There were no surprises when Arsenal completed the permanent signing of Piero Hincapié from Bayer Leverkusen. The Gunners prized him away from the grasp of their fiercest rivals in 2025, signing him on loan for the season with an obligation to buy for £34.5 million ($45.6 million). Hincapié made 39 appearances in all competitions last term, and has suffered due to Riccardo Calafiori’s strong start to the season.The versatile defender has featured just twice in the Premier League, with his only start arriving in the Champions League win over Napoli.",
+        "Guimarães has had fitness issues at the start of his Gunners career. / Alfie Cosgrove/News Images/NurPhoto/Getty ImagesAppearances: 6The departure of Bruno Guimarães completed Newcastle United’s summer exodus. Guimarães has developed into one of the world’s leading midfielders over the past couple of years, and he certainly wasn’t the reason Brazil underwhelmed at the World Cup this summer despite his penalty miss in its round of 16 defeat to Norway. In an inflated midfield market, Arsenal were happy to pay £75 million ($99 million) for the 28-year-old, knowing that he’d immediately make a difference.Well, fitness issues have meant the slick midfielder hasn’t quite had the start he wanted to his Arsenal career, but he nonetheless produced a huge moment at the Stadium of Light to help the Gunners to a gritty win over Newcastle’s bitter rivals Sunderland. He let the Mackems know, too.",
+        "Tzolis has replaced Leandro Trossard. / David Price/Arsenal FC/Getty ImagesAppearances: 8For so long, supporters thought it would be Christos Tzolis and one other. Arsenal tried for Vinícius Júnior, were outbid by Chelsea in the Morgan Rogers race, never made a serious push for Bradley Barcola and were merely teased in their pursuit of Julián Alvarez. Tzolis was signed to replace the clutch Leandro Trossard, who popped up with some big goals down the stretch last season. The Greek international has enjoyed a bright start to his Gunners career, offering a bit more zip and speed than Trossard ever did down the left flank in north London. He’s a canny operator, too, and a smart decision-maker in the final third.Tzolis doesn’t quite boast the star power to carry this attack, and Gabriel Martinelli‘s exit to Saudi Arabia means there’s a big burden for the new signing to carry down Arsenal’s left flank.",
+        "The England international has settled in quickly. / Justin Setterfield/Getty ImagesAppearances: 6Arsenal have altered their transfer policy since Berta came in, attempting to find missing pieces rather than prioritizing players they can develop into stars. Ezri Konsa was a market opportunity the Gunners couldn’t overlook after it became clear that William Saliba would miss a big chunk of the season that lay ahead. Arsenal paid £51 million ($67.4 million) for the experienced England international, so he didn’t come cheap, but Konsa has quickly settled alongside Gabriel. He’s often played as if he’s been at the club for years, ensuring that Saliba’s absence has been barely felt. Well, up until the trip to Brighton & Hove Albion anyway. Saliba will come straight back in once he’s fit, but Arteta could have a dilemma at right back. Konsa can fill in there, too.",
+        "feed. READ THE LATEST ARSENAL NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m3a4w5nky3": {
+      "id": "ftbpro_01m3a4w5nky3",
+      "title": "‘Very Similar’—Harry Kane Is Serious About His Future NFL Career",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/harry-kane-serious-about--nfl-but-dual-mls-career-unlikely/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_38/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3a5nzpn5hm1t54wrs.jpg",
+      "publishedAt": "2026-09-24T18:30:00.000Z",
+      "paragraphs": [
+        "By Jamie Spencer2:30 PM EDTHarry Kane has no plan to quit soccer prematurely. / Harry Langer/picture alliance/Getty ImagesHarry Kane is teasing the possibility of combining future MLS and NFL careers, having long held an ambition to translate soccer skills to being a kicker on the gridiron if the opportunity arises.",
+        "Kane is in the process of extending his contract with Bayern Munich, with an agreement confirmed by the player himself to be “fairly close.” The England captain turns 34 next summer and a new two or three-year extension up to the age of 36 or 37 wouldn’t be a surprise.",
+        "He has no intention of leaving elite soccer any sooner than he has to. “If people know I am still on the top of my game here with football, it is not a conversation that would be had,” Kane clarified, but trying out for the NFL is something he wants to “look at a bit more seriously.”",
+        "He added: “It all depends on what happens in my career over the next five or six years, the motivation and what I want to do.”",
+        "The 2026 Ballon d’Or contender sees it as “a lot more realistic” than his other sporting ambition—to make it as a professional golfer.",
+        "Kane’s love of the NFL dates back to 2011 when he watched a documentary about Tom Brady. He subsequently became a fan of the New England Patriots and now counts Brady among his friends. Kane even named one of dogs Brady and the other Wilson, after now-retired quaterback Russell Wilson.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Kane strikes a soccer ball better than most. / Nicolò Campo/LightRocket/Getty ImagesKane has spent his life kicking a ball. He kicks it hard, far and accurately. It might be a different shape and a different target, but the basic skillset and biomechanics are not all that different.",
+        "“I take penalties and it is a very similar pressure and technique,” Kane said, although he is not pretending it would be a straightforward transition.",
+        "“If I did that, in terms of training, I would be closer to that more than to any other sport. But as I know, with all elite sports, when you watch it on TV, people make it look easy, and you think it is possible, but that is not always the case. If I was to do it, it is something I would take seriously. I would take six months to a year to try and practice before.”",
+        "Kane wouldn’t be the first person from another sport to get to the NFL if he were successful. Football has many skill positions, but also offers opportunities for naturally gifted athletes to learn a role if they have the dedication. Even getting onto a practice squad is an achievement.",
+        "Louis Rees-Zammit was an accomplished rugby player for Wales before earning a place on the practice squads for the Kansas City Chiefs and Jacksonville Jaguars in 2024. Lawrence Okoye, an Olympic discus thrower for Great Britain, got onto the practice squads of seven NFL teams. It’s not uncommon to make a practice squad, but getting onto a full roster is another level of hard.",
+        "The best examples for Kane are soccer players who became kickers. Matt Bahr didn’t play soccer much beyond a collegiate level, a defender for Penn State in the mid-1970s. But he entered the 1979 NFL draft and was a sixth-round pick for the Pittsburgh Steelers. His NFL career lasted 16 years, until 1995, winning Super Bowl XIV with the Steelers and Super Bowl XXV with the New York Giants.",
+        "Right now, former Toronto FC center back Brandon Aubrey—he never made a senior appearance for the MLS team—is a three-time Pro Bowl kicker with the Dallas Cowboys. He played soccer in college at Notre Dame and didn’t enter the NFL until the age of 28.",
+        "Changes to the MLS calendar make things tricky / David Berding/Getty ImagesMajor League Soccer has seen its international profile soar again in the years since Lionel Messi joined Inter Miami. Robert Lewandowski was the latest superstar to join the league this past summer when he signed with the Chicago Fire upon leaving Barcelona.",
+        "Kane wouldn’t rule out extending his soccer career by making a similar move. But, with age a factor and the NFL something he genuinely wants to try, maybe he could do both at the same time?",
+        "“Maybe if I am in the MLS in the future or somewhere like that it might be a thing where you could connect the two, with the seasons,” Kane mused.",
+        "That might once have been a more workable plan. The NFL season runs from September to February, making it one of the shortest across professional team sports. MLS currently runs from February to December. The overlap is therefore minimal—but MLS is changing.",
+        "To align with Europe’s top soccer leagues, 2027 ushers in a new era. The 2026 season will finish as normal, with the regular season wrapping in early November and the playoffs following until the MLS Cup on Dec. 18. Next year, there will be a shortened season from February to May that includes a mini-regular season and playoffs.",
+        "Then a 2027–28 season begins in late summer that is a more direct clash with the NFL. If Kane really wants to try it, his soccer career—by the time he’s ready for MLS would be winding down anyway—might need to be the sacrifice."
       ]
     },
     "fzhafkysws3g1ux8fnmoe3180": {
@@ -22750,6 +23084,39 @@
       ],
       "html": "<p>Eintracht Frankfurt forward Younes Ebnoutalib has highlighted the role Jurgen Klopp played in his choice to represent Germany over Morocco, saying: &quot;When he calls, you can&#39;t say no.&quot;</p>\n\n<p>Klopp has named a larger, 44-man squad for his first international break in charge of Germany, who face the Netherlands in their Nations League opener on Thursday, before taking on Greece twice, either side of a home clash with Serbia.</p>\n\n<p>Sixteen of them are uncapped as Klopp looks to familiarise himself with as many players as possible, with 23-year-old attacker Ebnoutalib among them.</p>\n\n<p>Having joined Eintracht from Elversberg in a €10m deal in January, Ebnoutalib has made a superb start to this season, scoring four goals in as many Bundesliga games.</p>\n\n<p>Only Patrik Schick, Phillip Tietz, Michael Olise and Yuito Suzuki can match that tally, with Ebnoutalib finding the net with all but one of his shots on target (five, from 11 total attempts) and overperforming his figure of 2.85 expected goals (xG).</p>\n\n<p>Ebnoutalib represented Morocco at youth level, but talks with Jurgen Klopp left him in no doubt as to where his international future lay.</p>\n\n<p>&quot;I am very, very proud. There were also talks with Morocco, but they weren&#39;t as intense as with Jurgen,&quot; Ebnoutalib said.</p>\n\n<p>&quot;I&#39;m just proud. You have to say, he is one of the best coaches in the world. And when he calls, you can&#39;t say no.</p>\n\n<p>&quot;The impression is very positive. He is, of course, someone who brings a great deal of experience and already has a certain presence because of what he has achieved over the years.&nbsp;</p>\n\n\n<p>&quot;So, naturally, you have a great deal of respect for him. But he was very nice and very likeable in the conversations.</p>\n\n<p>&quot;He is already very well known for the way he wants to play football, with high pressing, with a lot of energy and power. He has already fired us up.&nbsp;</p>\n\n<p>&quot;I think that&#39;s what he is known for, that he is very good at reaching people and getting them on board. He has certainly got us in the right mindset.&quot;</p>\n\n<p>Klopp has overseen 1,080 matches across his managerial career, winning 588 of those (D256 L236). His 431 games in charge of Liverpool are the third-most by a manager in the club&#39;s history, behind Bill Shankly&#39;s 799 and Bob Paisley&#39;s 523.</p>\n\n<p>Klopp&#39;s 334 Premier League games with the Reds, who won the title under him in 2019-20, are also the fifth-most with a single club in the history of the competition, after Arsene Wenger with Arsenal (828), Alex Ferguson with Manchester United (810), David Moyes with Everton (488) and Pep Guardiola with Manchester City (380).</p>\n\n<p>Defender Philipp Treu is another player hoping to make his senior Germany debut in the coming days, with three of his Freiburg team-mates also called up following their run to the Europa League final last season.</p>\n\n<p>&quot;It&#39;s definitely something where you say, &#39;Hey, it&#39;s cool that I can now train under Jurgen Klopp&#39;,&quot;&nbsp;Treu said of working with Klopp.</p>\n\n<p>&quot;And that&#39;s why I&#39;m just looking forward to being on the pitch with him later, soaking it all in, and just giving it my all.&quot;</p>\n"
     },
+    "oa2hmo4uvcgy14ixcazdis5xb": {
+      "id": "oa2hmo4uvcgy14ixcazdis5xb",
+      "title": "Belgium and Italy in same situation, says Van Bommel ahead of debut",
+      "subtitle": "Mark van Bommel is preparing for his first game in charge of Belgium against Italy, and he believes the two teams are closely matched.",
+      "source": "FotMob",
+      "sourceUrl": "/news/oa2hmo4uvcgy14ixcazdis5xb-belgium-italy-same-situation-says-van-bommel-ahead-debut",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e6/c8/mark-van-bommel_u2sc0vjjcxt4195d989joi0nw.png?t=-665722784&w=1200&h=630",
+      "publishedAt": "2026-09-24T18:06:12.000Z",
+      "paragraphs": [
+        "Mark van Bommel likened the situation surrounding Belgium to the one at Italy as he prepares for his debut in charge of the Red Devils in the Nations League.&nbsp;",
+        "Belgium make the trip to the&nbsp;Stadio Olimpico on Friday to begin their Nations League campaign, with this their first match since exiting the World Cup in the quarter-finals.&nbsp;",
+        "The&nbsp;49-year-old is Belgium&#39;s third managerial change in as many years, and becomes the first Dutchman to take charge of the Red Devils since Dick Advocaat back in 2009.",
+        "Rudi Garcia was dismissed following the World Cup, with Belgium impressing in the group stage before losing late on to eventual tournament winners Spain in the last eight.&nbsp;",
+        "Excluding the third-place play-off match, Belgium have now been eliminated from each of their last four World Cup knockout stage ties against fellow UEFA nations, since beating Spain on penalties at the quarter-final stage of the 1986 tournament.",
+        "That brought an end to Garcia&#39;s reign. He took charge of 20 games, recording 12 wins (D6 L2), to finish with a 60% win rate, with Van Bommel the next man in the hot seat.",
+        "It is Van Bommel&#39;s fourth managerial role, and his first since spending two years in the Belgian Pro League with Royal Antwerp between 2022 and 2024.&nbsp;",
+        "He won 57 of his 107 matches in charge across all competitions (D21 L29), averaging 1.79 points per game along with a 51.4% win rate, while also winning three major titles.&nbsp;",
+        "But he comes up against another manager making his debut in Roberto Mancini, though it is his second stint with the Azzurri after he replaced Gennaro Gattuso following their failure to qualify for a third consecutive World Cup.&nbsp;",
+        "&quot;It&#39;s not easy to prepare the team in four days. We had some meetings with the players to explain what we wanted to do,&quot; Van Bommel said.",
+        "&quot;We want the ball, and if we lose it, to win it back as soon as possible. We want to dominate the game, but it’s not easy when starting a new era.",
+        "&quot;We&#39;re in the Nations League against Italy, France and Turkiye, so there&#39;s no time to experiment, but Italy are in the same situation as us.&quot;",
+        "Van Bommel has named a strong 25-man squad for their clashes with Italy, France (home and away) and Turkiye, though some big names are also missing.&nbsp;",
+        "Thibaut Courtois is unavailable after requesting to be excused from the matches, while Jeremy Doku, Amadou Onana,&nbsp;Alexis Saelemaekers and Thomas Meunier also miss out.&nbsp;",
+        "He chose to name four uncapped players, which include goalkeepers&nbsp;Jari De Busser, Mike Penders and Maarten Vandevoordt, along with young full-back Kyriani Sabbe.&nbsp;",
+        "Kevin De Bruyne is also in despite struggling for fitness with Napoli, with reports saying Van Bommel flew to Italy to convince him to remain a part of the international set-up.&nbsp;",
+        "&quot;Kevin, Lukaku, Tielemans, De Ketelaere, we have several players with a lot of experience, others who are in Serie A, so it&#39;s good that we can adapt to Italian football,&quot; he added.&nbsp;",
+        "&quot;We&#39;ve got players who can bring that experience to the team and help the younger members.&quot;",
+        "Van Bommel revealed he would adopt a 4-3-3 formation against Italy, but said his preparations had been hindered given the uncertainty around Mancini and whether he would change his tactics from his previous stint with Italy.&nbsp;",
+        "&quot;It&#39;s difficult to prepare, because you don&#39;t know what he is going to do. Gattuso was the coach last season. I know Rino and his style of football,&quot; Van Bommel said.",
+        "&quot;It won&#39;t be easy for Italy either. I watched many of Roberto&#39;s games. I&#39;m not sure if he will do the same things, they might have a 4-3-3, we&#39;ll see.&quot;"
+      ],
+      "html": "<p>Mark van Bommel likened the situation surrounding Belgium to the one at Italy as he prepares for his debut in charge of the Red Devils in the Nations League.&nbsp;</p>\n\n<p>Belgium make the trip to the&nbsp;Stadio Olimpico on Friday to begin their Nations League campaign, with this their first match since exiting the World Cup in the quarter-finals.&nbsp;</p>\n\n<p>The&nbsp;49-year-old is Belgium&#39;s third managerial change in as many years, and becomes the first Dutchman to take charge of the Red Devils since Dick Advocaat back in 2009.</p>\n\n<p>Rudi Garcia was dismissed following the World Cup, with Belgium impressing in the group stage before losing late on to eventual tournament winners Spain in the last eight.&nbsp;</p>\n\n<p>Excluding the third-place play-off match, Belgium have now been eliminated from each of their last four World Cup knockout stage ties against fellow UEFA nations, since beating Spain on penalties at the quarter-final stage of the 1986 tournament.</p>\n\n<p>That brought an end to Garcia&#39;s reign. He took charge of 20 games, recording 12 wins (D6 L2), to finish with a 60% win rate, with Van Bommel the next man in the hot seat.</p>\n\n<p>It is Van Bommel&#39;s fourth managerial role, and his first since spending two years in the Belgian Pro League with Royal Antwerp between 2022 and 2024.&nbsp;</p>\n\n<p>He won 57 of his 107 matches in charge across all competitions (D21 L29), averaging 1.79 points per game along with a 51.4% win rate, while also winning three major titles.&nbsp;</p>\n\n<p>But he comes up against another manager making his debut in Roberto Mancini, though it is his second stint with the Azzurri after he replaced Gennaro Gattuso following their failure to qualify for a third consecutive World Cup.&nbsp;</p>\n\n<p>&quot;It&#39;s not easy to prepare the team in four days. We had some meetings with the players to explain what we wanted to do,&quot; Van Bommel said.</p>\n\n<p>&quot;We want the ball, and if we lose it, to win it back as soon as possible. We want to dominate the game, but it’s not easy when starting a new era.</p>\n\n<p>&quot;We&#39;re in the Nations League against Italy, France and Turkiye, so there&#39;s no time to experiment, but Italy are in the same situation as us.&quot;</p>\n\n\n<p>Van Bommel has named a strong 25-man squad for their clashes with Italy, France (home and away) and Turkiye, though some big names are also missing.&nbsp;</p>\n\n<p>Thibaut Courtois is unavailable after requesting to be excused from the matches, while Jeremy Doku, Amadou Onana,&nbsp;Alexis Saelemaekers and Thomas Meunier also miss out.&nbsp;</p>\n\n<p>He chose to name four uncapped players, which include goalkeepers&nbsp;Jari De Busser, Mike Penders and Maarten Vandevoordt, along with young full-back Kyriani Sabbe.&nbsp;</p>\n\n<p>Kevin De Bruyne is also in despite struggling for fitness with Napoli, with reports saying Van Bommel flew to Italy to convince him to remain a part of the international set-up.&nbsp;</p>\n\n<p>&quot;Kevin, Lukaku, Tielemans, De Ketelaere, we have several players with a lot of experience, others who are in Serie A, so it&#39;s good that we can adapt to Italian football,&quot; he added.&nbsp;</p>\n\n<p>&quot;We&#39;ve got players who can bring that experience to the team and help the younger members.&quot;</p>\n\n<p>Van Bommel revealed he would adopt a 4-3-3 formation against Italy, but said his preparations had been hindered given the uncertainty around Mancini and whether he would change his tactics from his previous stint with Italy.&nbsp;</p>\n\n<p>&quot;It&#39;s difficult to prepare, because you don&#39;t know what he is going to do. Gattuso was the coach last season. I know Rino and his style of football,&quot; Van Bommel said.</p>\n\n<p>&quot;It won&#39;t be easy for Italy either. I watched many of Roberto&#39;s games. I&#39;m not sure if he will do the same things, they might have a 4-3-3, we&#39;ll see.&quot;</p>\n"
+    },
     "qhsho3pm0as61xs0e18vg4pe7": {
       "id": "qhsho3pm0as61xs0e18vg4pe7",
       "title": "Van Dijk: Utter nonsense I influenced Netherlands World Cup tactics",
@@ -22944,6 +23311,48 @@
         "And Yamal has been a key part of their sensational attacking start, with only team-mate Raphinha (12) bettering his seven goals in the competition and only Kylian Mbappe (41) having more shots than his 38."
       ],
       "html": "<p>Just over two months&nbsp;on from their heartbreaking defeat to Argentina in the World Cup semi-finals, England are back in action at Wembley Stadium on Sunday.</p>\n\n<p>And their opening game in the 2026-27 Nations League pits them against the team they would have faced in the World Cup final, had Thomas Tuchel&#39;s side not retreated into their own penalty area after Anthony Gordon&#39;s goal and conceded two late goals to Argentina.</p>\n\n<p>Spain travel to London off the back of their second World Cup win, having held Lionel Messi and company to zero shots through 90 minutes of the final – the first time that has ever occurred – before claiming the trophy through Ferran Torres&#39; extra-time goal.</p>\n\n<p>The top two teams in Group A3 will progress to the quarter-finals next March, but with Croatia and Czechia also lurking, the Three Lions and La Roja will have to be switched on.</p>\n\n<p>Who will get off to a positive start? Here, we preview the game using Opta insights.&nbsp;</p>\n\n\n<p><strong>What&#39;s expected?&nbsp;</strong></p>\n\n<p>Saturday&#39;s match looks almost too close to call on paper, and the Opta supercomputer is also struggling.</p>\n\n<p>Across 10,000 pre-match simulations conducted by the predictive model, England were victorious in 33.6% of scenarios.</p>\n\n<p>Spain have the slight edge, with a win probability of 40.2%, with the remaining 26.2% of simulations being drawn.</p>\n\n<p>Spain have won six of their last nine meetings with England across all competitions (D1 L2), most recently triumphing 2-1 in the Euro 2024 final in Berlin.</p>\n\n<p>Their last away game against the Three Lions also ended in a 2-1 victory, at Wembley in the first edition of the Nations League, in September 2018.</p>\n\n\n<p>Gareth Southgate&#39;s England did manage a memorable victory in the reverse fixture of that group, however, with a Raheem Sterling brace and a Marcus Rashford goal sealing a 3-2 triumph in Seville.</p>\n\n<p>But England have only won two of their last 13 games against the reigning World Cup holders, losing nine of those matches (D2).</p>\n\n<p>One of those victories was a 1-0 triumph at home to Spain in November 2011, though, with the other being a 3-2 success in Germany in March 2016.</p>\n\n<p><strong>Tuchel aims to rebuild trust after semi-final collapse</strong></p>\n\n<p>It is now 60 years of hurt for England at major tournaments, with their next shot at silverware coming on home soil at Euro 2028.</p>\n\n<p>And after this year&#39;s World Cup, perhaps more than any other edition in recent history, there was a real feeling of what could have been.</p>\n\n<p>England were in a commanding position when&nbsp;Gordon applied the finishing touch to Morgan Rogers&#39; cross 55 minutes into their tense semi-final clash with the Albiceleste in Atlanta.&nbsp;</p>\n\n<p>They then immediately retreated into their shells, not helped by Tuchel introducing defenders Ezri Konsa, Dan Burn and Nico O&#39;Reilly with his first three substitutions.&nbsp;</p>\n\n<p>Between opening the scoring and conceding an&nbsp;85th-minute equaliser to Enzo Fernandez, the Three Lions had just 11.9% possession, the lowest share ever recorded by a leading team in a World Cup match over a period of at least 10 minutes (since 1966) by a team who were leading. Their leading passer in that period was centre-back Marc Guehi, with six.&nbsp;</p>\n\n\n<p>Defeat felt inevitable from the moment Argentina levelled, and now Tuchel – who faced stern criticism from supporters and the media – has bridges to build.</p>\n\n<p>A win over the World champions would be a fine place to start, and it should be noted that Tuchel has the best win rate of any England manager to ever lead the team for at least 10 matches, at 77% (P22 W17 D2 L3), while the Three Lions have only averaged more goals per game under Walter Winterbottom (2.8) than Tuchel (2.3).</p>\n\n<p>England have also won 10 of their last 11 competitive home matches (L1), including each of their most recent five without conceding. Only once in their history have they previously won six in a row to nil, doing so between March 2015 and March 2017.&nbsp;</p>\n\n<p>But after the meek surrender that ended their World Cup dream, fans will want to see intensity and creativity.&nbsp;</p>\n\n<p>The withdrawals of Declan Rice and Cole Palmer – who scored against Spain in the Euro 2024 final before being overlooked by Tuchel for the World Cup – do not help matters, though Morgan Gibbs-White could now have a chance to impress. His 13 goals in the Premier League this calendar year are the joint-most of any player, alongside Erling Haaland.</p>\n\n<p><strong>Spain out to extend record-breaking run</strong></p>\n\n<p>The mood in Spain&#39;s camp could hardly be more positive coming into this fixture, having followed up their World Cup triumph by handing head coach Luis de la Fuente a six-year contract extension.</p>\n\n<p>They are also defending a 38-match unbeaten run in all competitions, winning 29 games and drawing nine in that time.&nbsp;</p>\n\n<p>It is the longest-ever streak by a European or South American nation, dating back to a 1-0 defeat to Colombia in March 2024, which took place on English soil, at West Ham&#39;s London Stadium.</p>\n\n\n<p>La Roja&#39;s last competitive defeat, which came all the way back in March 2023, also occurred in Britain, as they lost 2-0 to Scotland in a qualifier for Euro 2024. England will hope that is a positive omen.</p>\n\n<p>But this is a truly special Roja side, led by Ballon d&#39;Or contender Lamine Yamal but also boasting plenty of other talent across the board – including World Cup Golden Ball winner Rodri and Young Player of the Tournament Pau Cubarsi.</p>\n\n<p>Aided by Yamal&#39;s brilliance, Spain also reached the final of the 2024-25 Nations League, eventually going down to Portugal on penalties following a 2-2 draw in the final.</p>\n\n<p>Spain&#39;s last five Nations League matches have seen them both score multiple goals and concede multiple goals, which is the longest run by any nation – in any tier – since the tournament&#39;s inception in 2018.</p>\n\n<p>La Roja have reached three of the last four Nations League finals, also losing to France in 2020-21 and beating Croatia on penalties in 2022-23. Excluding spot-kicks, they have lost just one of their last 18 matches in the competition (W10 D7).</p>\n\n<p>And during the last edition of the Nations League, only Cristiano Ronaldo (eight goals) outscored Mikel Oyarzabal (four).&nbsp;</p>\n\n<p>The Real Sociedad forward has 26 goals involvements across his last 25 international appearances (19 goals, seven assists), a run that started with him scoring the winner against England in the Euro 2024 final.</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>England – Jude Bellingham</strong></p>\n\n<p>While England&#39;s attack is spearheaded by one of Yamal&#39;s Ballon d&#39;Or rivals in Harry Kane, Bellingham has been the Three Lions talisman this year, netting seven goals in 10 appearances for England.</p>\n\n<p>David Platt was the last midfielder to find the net more often for them in a single calendar year, back in 1993 (eight).</p>\n\n<p><strong>Spain – Lamine Yamal</strong></p>\n\n<p>Barcelona have scored 31 goals in their first seven games in LaLiga this season, with only Sevilla in 1940-41 (40) ever bettering their tally at this stage.</p>\n\n<p>And Yamal has been a key part of their sensational attacking start, with only team-mate Raphinha (12) bettering his seven goals in the competition and only Kylian Mbappe (41) having more shots than his 38.</p>\n"
+    },
+    "yyc48whrkuhm14mv9ti4qg6wu": {
+      "id": "yyc48whrkuhm14mv9ti4qg6wu",
+      "title": "Smith says focus remains on Charlotte after recording 50th victory",
+      "subtitle": "Dean Smith enjoyed his 50th win in charge of Charlotte FC last weekend, and he will be hoping to add another against the Chicago Fire.",
+      "source": "FotMob",
+      "sourceUrl": "/news/yyc48whrkuhm14mv9ti4qg6wu-smith-says-focus-remains-charlotte-after-recording-50th-victory",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e0/da/dean-smith_ntjlyrbvfgt814w7s5uoschlm.png?t=-679180592&w=1200&h=630",
+      "publishedAt": "2026-09-24T19:09:29.000Z",
+      "paragraphs": [
+        "Dean Smith intends to continue winning at Charlotte FC after claiming his 50th victory in charge of the Crown in all competitions, last time out against D.C. United.&nbsp;",
+        "Smith replaced&nbsp;Christian Lattanzio at Charlotte in December 2023 and has gone on to manage 112 matches for the club, with their results improving year-on-year under him.",
+        "Charlotte have finished fifth and then fourth in the Eastern Conference with Smith at the helm, while they find themselves fourth in the division so far this season.&nbsp;",
+        "However, they have failed to go beyond the first round of the playoffs while Smith has been at the club, something they will be hoping to rectify by the end of the 2026 campaign.&nbsp;",
+        "Ashley Westwood and&nbsp;Allan Saint-Maximin were on target in Smith&#39;s 50th win with Charlotte, with their goals sealing a 2-1 victory over D.C. at Bank of America Stadium.&nbsp;",
+        "Charlotte meet the Chicago Fire this weekend, and while Smith was thrilled with his personal achievement, he said that his main focus remains on the team&#39;s aspirations.&nbsp;",
+        "&quot;[I&#39;m]&nbsp;just pleased,&quot;&nbsp;Smith said. &quot;I mean, it&#39;s 50 wins in 112 games. It&#39;s a good record, but we just want to keep winning them. &nbsp;",
+        "&quot;It&#39;s not about my records, it&#39;s about the club. Every win, you probably don&#39;t enjoy them&nbsp;as much as you should because you&#39;re always thinking about the next game.&nbsp;",
+        "&quot;So, hopefully we can get to the end of the season, and I&#39;m enjoying the win for a special reason. I think we&#39;re getting there. The building blocks have been there.",
+        "&quot;The ideology, everybody knows what is expected of them, so I think that&#39;s the easy part. The hardest part is always recruiting good people and good players.&quot;",
+        "Chicago are just four points behind Charlotte heading into this weekend&#39;s meeting, and they will be seeking a return to winning ways following a 3-0 defeat to Nashville SC.",
+        "Sam Surridge&#39;s 33rd-minute opener was followed up by second-half strikes from&nbsp;Cristian Espinoza and&nbsp;Hany Mukhtar to seal a comfortable triumph for the Eastern&nbsp;leaders.&nbsp;",
+        "The Fire were only able to register an expected goals (xG) total of 0.91 from their nine shots, only one of which was on target, with Gregg Berhalter conceding after the match that his team were simply beaten by stronger opposition.&nbsp;",
+        "&quot;I don&#39;t look at it as if the result was unfortunate for us. We just lost to a better team. It&#39;s really simple,&quot; Berhalter said.&nbsp;",
+        "&quot;I think the most important lesson from this evening is that Nashville are a benchmark for us. This is a team that we want to reach and with which we want to be able to compete.&nbsp;",
+        "&quot;At the beginning, we were a little too conservative. We held on, then we lost a goal. We got back into the game, but then we lost another one.",
+        "&quot;For us, the conclusion is that as a team, we have to improve.&quot;",
+        "The Fire&#39;s task against Charlotte will be made even more difficult, with Noah Allen, Chris Brady, Anzor Mekvabishvili, Puso Dithejane, Robert Lewandowski and Robin Lod all joining up with their respective national teams for the extended international break.&nbsp;",
+        "Charlotte FC –&nbsp;Allan Saint-Maximin",
+        "Since making his debut for Charlotte, only&nbsp;Cavan Sullivan (30),&nbsp;Kristoffer Velde (25) and&nbsp;Guilherme (23) have completed more dribbles in the MLS than&nbsp;Saint-Maximin&#39;s 22.&nbsp;",
+        "The former Newcastle United star also has five assists and one goal for Charlotte in that time, and he will be hoping to make his mark once again for Smith&#39;s side.&nbsp;",
+        "Chicago Fire – Maren Haile-Selassie",
+        "Haile-Selassie has scored eight goals this season for Chicago, the most among players currently on the Fire&#39;s roster.",
+        "Five of those goals have come in road matches this season, including four goals in his last four road matches.",
+        "MATCH PREDICTION: CHARLOTTE FC WIN",
+        "Chicago&nbsp;earned a 2-1 win over Charlotte&nbsp;in the first meeting between the two teams this season back in August. It was the third straight win in the series for the Fire, after they had lost five straight in the fixture entering last season.",
+        "The Fire were shut out for just the second time this regular season in their road loss to Nashville, tied for the fewest games being held scoreless this season with Inter Miami.",
+        "That ended a 21-game run with a goal in league play, as it was the first time Chicago had failed to score since March 7, against the Columbus Crew.&nbsp;",
+        "Charlotte, meanwhile, have recorded their two longest regular-season unbeaten runs in club history from July onward, with a 10-game streak in 2025 and a current eight-match run.",
+        "Over the past two seasons, the Crown have&nbsp;averaged 2.24 points per match from July to October, compared to 1.31 in March through June.&nbsp;"
+      ],
+      "html": "<p>Dean Smith intends to continue winning at Charlotte FC after claiming his 50th victory in charge of the Crown in all competitions, last time out against D.C. United.&nbsp;</p>\n\n<p>Smith replaced&nbsp;Christian Lattanzio at Charlotte in December 2023 and has gone on to manage 112 matches for the club, with their results improving year-on-year under him.</p>\n\n<p>Charlotte have finished fifth and then fourth in the Eastern Conference with Smith at the helm, while they find themselves fourth in the division so far this season.&nbsp;</p>\n\n<p>However, they have failed to go beyond the first round of the playoffs while Smith has been at the club, something they will be hoping to rectify by the end of the 2026 campaign.&nbsp;</p>\n\n<p>Ashley Westwood and&nbsp;Allan Saint-Maximin were on target in Smith&#39;s 50th win with Charlotte, with their goals sealing a 2-1 victory over D.C. at Bank of America Stadium.&nbsp;</p>\n\n<p>Charlotte meet the Chicago Fire this weekend, and while Smith was thrilled with his personal achievement, he said that his main focus remains on the team&#39;s aspirations.&nbsp;</p>\n\n<p>&quot;[I&#39;m]&nbsp;just pleased,&quot;&nbsp;Smith said. &quot;I mean, it&#39;s 50 wins in 112 games. It&#39;s a good record, but we just want to keep winning them. &nbsp;</p>\n\n<p>&quot;It&#39;s not about my records, it&#39;s about the club. Every win, you probably don&#39;t enjoy them&nbsp;as much as you should because you&#39;re always thinking about the next game.&nbsp;</p>\n\n<p>&quot;So, hopefully we can get to the end of the season, and I&#39;m enjoying the win for a special reason. I think we&#39;re getting there. The building blocks have been there.</p>\n\n<p>&quot;The ideology, everybody knows what is expected of them, so I think that&#39;s the easy part. The hardest part is always recruiting good people and good players.&quot;</p>\n\n\n<p>Chicago are just four points behind Charlotte heading into this weekend&#39;s meeting, and they will be seeking a return to winning ways following a 3-0 defeat to Nashville SC.</p>\n\n<p>Sam Surridge&#39;s 33rd-minute opener was followed up by second-half strikes from&nbsp;Cristian Espinoza and&nbsp;Hany Mukhtar to seal a comfortable triumph for the Eastern&nbsp;leaders.&nbsp;</p>\n\n<p>The Fire were only able to register an expected goals (xG) total of 0.91 from their nine shots, only one of which was on target, with Gregg Berhalter conceding after the match that his team were simply beaten by stronger opposition.&nbsp;</p>\n\n<p>&quot;I don&#39;t look at it as if the result was unfortunate for us. We just lost to a better team. It&#39;s really simple,&quot; Berhalter said.&nbsp;</p>\n\n<p>&quot;I think the most important lesson from this evening is that Nashville are a benchmark for us. This is a team that we want to reach and with which we want to be able to compete.&nbsp;</p>\n\n<p>&quot;At the beginning, we were a little too conservative. We held on, then we lost a goal. We got back into the game, but then we lost another one.</p>\n\n<p>&quot;For us, the conclusion is that as a team, we have to improve.&quot;</p>\n\n<p>The Fire&#39;s task against Charlotte will be made even more difficult, with Noah Allen, Chris Brady, Anzor Mekvabishvili, Puso Dithejane, Robert Lewandowski and Robin Lod all joining up with their respective national teams for the extended international break.&nbsp;</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>Charlotte FC –&nbsp;Allan Saint-Maximin</strong></p>\n\n<p>Since making his debut for Charlotte, only&nbsp;Cavan Sullivan (30),&nbsp;Kristoffer Velde (25) and&nbsp;Guilherme (23) have completed more dribbles in the MLS than&nbsp;Saint-Maximin&#39;s 22.&nbsp;</p>\n\n<p>The former Newcastle United star also has five assists and one goal for Charlotte in that time, and he will be hoping to make his mark once again for Smith&#39;s side.&nbsp;</p>\n\n\n<p><strong>Chicago Fire – Maren Haile-Selassie</strong></p>\n\n<p>Haile-Selassie has scored eight goals this season for Chicago, the most among players currently on the Fire&#39;s roster.</p>\n\n<p>Five of those goals have come in road matches this season, including four goals in his last four road matches.</p>\n\n<p><strong>MATCH PREDICTION: CHARLOTTE FC WIN</strong></p>\n\n<p>Chicago&nbsp;earned a 2-1 win over Charlotte&nbsp;in the first meeting between the two teams this season back in August. It was the third straight win in the series for the Fire, after they had lost five straight in the fixture entering last season.</p>\n\n<p>The Fire were shut out for just the second time this regular season in their road loss to Nashville, tied for the fewest games being held scoreless this season with Inter Miami.</p>\n\n<p>That ended a 21-game run with a goal in league play, as it was the first time Chicago had failed to score since March 7, against the Columbus Crew.&nbsp;</p>\n\n<p>Charlotte, meanwhile, have recorded their two longest regular-season unbeaten runs in club history from July onward, with a 10-game streak in 2025 and a current eight-match run.</p>\n\n<p>Over the past two seasons, the Crown have&nbsp;averaged 2.24 points per match from July to October, compared to 1.31 in March through June.&nbsp;</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Charlotte FC – 44.9%</p>\n\n<p>Draw – 23.4%</p>\n\n<p>Chicago Fire – 31.7%</p>\n"
     },
     "yyjyzcfg4gz1v1lygu5o6dxf": {
       "id": "yyjyzcfg4gz1v1lygu5o6dxf",
@@ -27082,7 +27491,7 @@
     "516": {
       "competitionId": "516",
       "competitionName": "Algerian Ligue 1",
-      "updatedAt": "2026-09-23T10:34:49.044Z",
+      "updatedAt": "2026-09-24T18:38:06.235Z",
       "table": [
         {
           "rank": 1,
