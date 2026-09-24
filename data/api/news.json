@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-09-23T22:12:47.533Z",
+    "generatedAt": "2026-09-24T00:49:22.134Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 146
+      "fullArticlesCount": 150
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,42 @@
     }
   },
   "news": [
+    {
+      "id": "ftbpro_01m37bgs66xe",
+      "title": "Netherlands vs. Germany: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m37bgs66xe/netherlands-vs-germany-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m37brbdd8amx9rnphe.jpg",
+      "publishedAt": "2026-09-24T00:00:06.000Z"
+    },
+    {
+      "id": "ftbpro_01m37trs1mn2",
+      "title": "Transfer Rumors: Man Utd Get Left Back Green Light; Bellingham’s Real Madrid Twist",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m37trs1mn2/transfer-rumors-man-utd-get-left-back-green-light-bellinghams-real-madrid-twist",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m383sfwvkfnak63yre.jpg",
+      "publishedAt": "2026-09-23T23:05:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m37pyab7mb",
+      "title": "Jesus Makes Controversial Ronaldo Decision for Portugal’s Clash With Wales",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m37pyab7mb/jesus-makes-controversial-ronaldo-decision-portugals-clash-wales",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_17/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m37snjbqme5qq970zg.jpg",
+      "publishedAt": "2026-09-23T22:30:00.000Z"
+    },
+    {
+      "id": "j3333qh4ryty1vb7sl2pc56j4",
+      "title": "World Cup defeat to Argentina most painful moment of England career, says Kane",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/j3333qh4ryty1vb7sl2pc56j4-world-cup-defeat-argentina-most-painful-moment-england-career-says-kane",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/8f/12/harry-kane_1cz45jmhnru551gdnh180sp9z0.png?t=-721142592&w=1260&h=708",
+      "publishedAt": "2026-09-23T22:27:03.000Z"
+    },
     {
       "id": "ftbpro_01m374s72ynp",
       "title": "Eight World Soccer Stars Who Desperately Need This International Break",
@@ -157,42 +193,6 @@
       "sourceUrl": "/embed/news/01m34z8y6ft9/quiz-name-ballon-dor-top-threes-without-lionel-messi-cristiano-ronaldo",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m37ndxpetv72dkgdwp.png",
       "publishedAt": "2026-09-23T18:00:02.000Z"
-    },
-    {
-      "id": "ftbpro_01m34mvkrt8j",
-      "title": "One Burning Question for Every Premier League Club After Five Games",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m34mvkrt8j/one-burning-question-every-premier-league-club-after-five-games",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_31/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m34s5shfmsak3h6yz4.jpg",
-      "publishedAt": "2026-09-23T18:00:01.000Z"
-    },
-    {
-      "id": "257387683964B2C1903D4A98BE49BBAA",
-      "title": "Pochettino is bringing through the USA’s brightest crop of youngsters since Pulisic and co.",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/topnews/29802-pochettino-is-bringing-through-usas-brightest-crop-youngsters-since-pulisic-co?utm_source=fotmob",
-      "imageUrl": "https://latest.fotmob.com/wp-content/uploads/2026/09/Covers_Pochettino-2309-1.png",
-      "publishedAt": "2026-09-23T18:00:00.000Z"
-    },
-    {
-      "id": "4ugjg5li8qod1oy7dyoc6i1kb",
-      "title": "Juventus goalkeeper Grabara undergoes successful ACL surgery",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/4ugjg5li8qod1oy7dyoc6i1kb-juventus-goalkeeper-grabara-undergoes-successful-acl-surgery",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/22/fc/kamil-grabara_1jrw05dwoaosy1h1eahrjp7ja3.png?t=-760950592&w=1260&h=708",
-      "publishedAt": "2026-09-23T17:47:57.000Z"
-    },
-    {
-      "id": "ftbpro_01m36x5r5nfd",
-      "title": "Ranking Every Signing Made by Liverpool’s Returning Sporting Director Julian Ward",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m36x5r5nfd/ranking-every-signing-made-liverpools-returning-sporting-director-julian-ward",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m374v0xgvg8qjp9842.jpg",
-      "publishedAt": "2026-09-23T17:30:00.000Z"
     }
   ],
   "articles": {
@@ -3784,6 +3784,35 @@
         "Hansi Flick is delighted with his new center forward.  / Joan Valls/Urbanandsport/NurPhoto/Getty ImagesFlick’s decision to move Raphinha to striker is looking like a stroke of genius right now, and the manager emphatically praised his new captain while also detailing why he decided to make him Barça’s new striker."
       ]
     },
+    "ftbpro_01m37bgs66xe": {
+      "id": "ftbpro_01m37bgs66xe",
+      "title": "Netherlands vs. Germany: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/netherlands-vs-germany-preview-predictions-lineups-9-24-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m37brbdd8amx9rnphe.jpg",
+      "publishedAt": "2026-09-24T00:00:06.000Z",
+      "paragraphs": [
+        "By Grey Whitebloom8:00 PM EDTThe Netherlands host Germany in Amsterdam on Thursday evening. / Kristian Skeie/UEFA/Getty Images (Netherlands), Visionhaus/Getty Images (Germany)If the storied rivalry between the Netherlands and Germany needed any more of a lofty billing, Thursday’s Nations League clash between these great European sporting institutions also serves as the setting for the introduction of Xavi Hernández and Jürgen Klopp as international managers.",
+        "Both teams were dumped out of the first World Cup knockout round on penalties in underwhelming circumstances. While there is no shame in losing to Morocco, Ronald Koeman was pilloried for the seemingly defensive approach he took (which was only seconds away from working until Issa Diop’s unlikely stoppage-time equalizer).",
+        "Germany’s exit at the hands of Paraguay was altogether more obviously humiliating. “If we were to do a survey in Germany today, the German people won’t speak very positively about me,” manager Julian Nagelsmann fumed. “We haven’t done much in this tournament for people to celebrate. I know that not everyone in Germany will agree with me staying on.” Turns out the German soccer federation also didn’t agree and promptly hired Klopp.",
+        "Unlike his counterpart in Amsterdam on Thursday night, Xavi was not his new team’s first choice. Both Pep Guardiola and Arne Slot proved unattainable, so the Dutch association settled on Guardiola’s most trusted disciple who grew up preaching from the pulpit of the Netherlands’ greatest sporting philosophy, Johan Cruyff.",
+        "Both will be under pressure to make strong starts, in terms of results as well as performances.",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "Xavi Hernández (left) managed to convince Virgil van Dijk to extend his international career. / Jeroen van den Berg/Soccrates/Getty ImagesEvery soccer match is riddled with its inherent uncertainties but this particular contest contains even more layers of mystery. Xavi and Klopp are not only taking charge of their first matches at these teams, but they have never before managed an international side. There is a completely different rhythm to training sessions and matches, with long stretches of isolation broken up by these discrete bursts of close contact.",
+        "Both managers also happen to be coaches with clearly defined playing principles rather than pragmatist who adapt to the demands of their resources. It remains to be seen how quickly these players can bend to their will.",
+        "The best iterations of Xavi’s Barcelona were actually more defensively resolute than he would care to remember—his only league title was underpinned by 11 wins by a 1–0 scoreline. For all the criticism washing Koeman’s way about his defensive approach, the Dutch technical director, Xavi’s boss, Nigel de Jong admitted: “Dominant ⁠does not always mean playing attacking football; we also ⁠want to be dominant defensively. ​By conceding fewer goals, we want to try to win matches.”",
+        "Klopp is indelibly linked to a chaotic approach but his first focus may very well be on the most fundamental aspect of his game model: work off the ball. With both sides potentially erring on the side of caution in this derby, goals may not be so readily available.",
+        "Xavi’s first Netherlands XI is made up of a shaky midfield. / FotMobThe first box ticked by Xavi was persuading Liverpool captain Virgil van Dijk to extend his international career. It took just “10 seconds” for the 35-year-old to be convinced.",
+        "Mikel Arteta may have needed some cajoling to release his Arsenal fullback Jürrien Timber given he has only just returned from a lengthy groin injury. Xavi warned that he would have to be a “bit careful” with the defender but claimed that he is available, a status which “applies to everyone.”",
+        "Xavi has already been forced to wave goodbye to Roma’s ludicrously in-form forward Donyell Malen, who withdrew with an injury which didn’t convince his new manager. “In my opinion, Donyell is fine; I don’t know how long it will take him to recover, but the injury is not serious.”",
+        "Netherlands predicted lineup vs. Germany (4-3-3): Verbruggen; Dumfries, Van Hecke, Van Dijk, Van de Ven; Veerman, Gravenberch, Reijnders; Summerville, Brobbey, Gakpo.",
+        "Jürgen Klopp has plenty of players to choose from. / FotMobKlopp has taken the unique approach of naming a 44-player roster which has been split in two. This way the new coach can get a look at as many new faces as possible, while also only putting the players through two fixtures—each batch is swapped out after Germany take on the Netherland and Greece in the coming days.",
+        "Bayern Munich’s dextrous forward Lennart Karl has been moved from group one to two to give him an extended rest, but his teammate Jamal Musiala could very well start despite his recent spell of in-match feints.",
+        "Germany predicted lineup vs. Netherlands (4-2-3-1): Neuer; Vagnoman, Tah, Schlotterbeck, Brown; Kimmich, Stach; Gnabry, Musiala, Schade; Havertz.",
+        "feed. READ THE LATEST PREMIER LEAGUE NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
     "ftbpro_01m37cwwkeqw": {
       "id": "ftbpro_01m37cwwkeqw",
       "title": "‘The Team That Runs the Least’—Does it Matter That Real Madrid Don’t Run?",
@@ -3922,6 +3951,63 @@
         "A new stadium will be built nearby to the existing one. / Mark Cosgrove/News Images/NurPhoto/Getty ImagesManchester United are yet to submit a planning application to build a new 100,000-seat stadium that co-owner Sir Jim Ratcliffe wants to be a ‘Wembley of the north.’ Yet it has cost the club a substantial amount of money just to get ready for that stage of the process."
       ]
     },
+    "ftbpro_01m37pyab7mb": {
+      "id": "ftbpro_01m37pyab7mb",
+      "title": "Jesus Makes Controversial Ronaldo Decision for Portugal’s Clash With Wales",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/will-cristiano-ronaldo-play-portugal-vs-wales-9-24-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_17/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m37snjbqme5qq970zg.jpg",
+      "publishedAt": "2026-09-23T22:30:00.000Z",
+      "paragraphs": [
+        "By Amanda Langell6:30 PM EDTCristiano Ronaldo is back with the Portugal national team. / Rico Brouwer/Soccrates/Getty ImagesNew Portugal boss Jorge Jesus made it very clear where Cristiano Ronaldo fits into his plans for the fall international break.",
+        "The manager confirmed the 41-year-old will start against Wales so long as “nothing exceptional happens” in the build-up to Thursday’s UEFA Nations League clash. It would mark the first appearance for Ronaldo—and his teammates—since Portugal lost to Spain in the round of 16 at the 2026 World Cup. It flies in the face of his sister’s retirement prediction during the tournament.",
+        "Jesus’s decision will do nothing to silence the controversy surrounding Ronaldo’s exploits with Portugal. Many believe the national team would be better off without the Real Madrid legend in the XI, an argument that gained even more ground after he only scored three goals at this summer’s showpiece event, two of which came against Uzbekistan in the group stage.",
+        "But Jesus, who led Ronaldo and Al Nassr to Saudi Pro League glory last season, is tuning out the noise. “I notice that your concern is centered on whether Cristiano is ready to play,” he continued. “Cris is a symbol of Portugal, but that does not give him the right to play every match.",
+        "“But to give you an idea, we played a match in Hong Kong without him, and there were 5,000 spectators, and when he played there were 55,000 spectators. He will play [against Wales], and I hope he scores a goal or two and I will substitute him straightaway.”",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Jorge Jesus is hoping to get Portugal back to winning ways. / Patricia de Melo Moreira/AFP/Getty ImagesOpponent",
+        "Cristiano Ronaldo is chasing one more trophy with Portugal. / Ryan Pierse/FIFA/Getty ImagesDoubters and criticism is nothing new to Ronaldo, especially when it comes to the national team. Despite winning everything at the club level between his days at Manchester United, Real Madrid, Juventus and Al Nassr, the five-time Ballon d’Or winner was never able to win a World Cup.",
+        "His greatest rival Lionel Messi finally got over the line with Argentina in 2022 and dragged La Albiceleste to the 2014 and 2026 World Cup finals. It was that win in Qatar for Messi that finally silenced much of the G.O.A.T debate.",
+        "Messi retired from international soccer following this summer’s tournament, but Ronaldo is still leading Portugal’s line despite all the naysayers telling him to hang up his boots.",
+        "Cristiano Ronaldo had a final World Cup to forget. / Ryan Pierse/FIFA/Getty Images“The most important point is to be able, inside the pitch, to score goals and help the team to win games,” Ronaldo said in his pregame press conference.",
+        "“If the manager doesn’t count on me, I can leave today—no problem at all. When I feel that I’m not doing anything here, that I’m not contributing on the pitch, not scoring goals, creating a bad atmosphere, or that they don’t want me here, I’ll be the first to pack my bags.”",
+        "Ronaldo has 146 goals and 233 appearances for the Portugal national team, both records in men’s international soccer. The iconic forward helped his country win the 2016 European Championship, as well as 2018–19 and 2024–25 UEFA Nations League titles.",
+        "As he chases 1,000 career goals, Ronaldo would love nothing more than to bookend his time with the Seleção das Quinas by hoisting one more Nations League trophy.",
+        "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m37trs1mn2": {
+      "id": "ftbpro_01m37trs1mn2",
+      "title": "Transfer Rumors: Man Utd Get Left Back Green Light; Bellingham’s Real Madrid Twist",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/transfer-rumors-man-utd-left-back-green-light-bellingham-twist/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m383sfwvkfnak63yre.jpg",
+      "publishedAt": "2026-09-23T23:05:00.000Z",
+      "paragraphs": [
+        "By SI FC Staff7:05 PM EDTMichael Carrick’s Manchester United and Jude Bellingham (right) headline today’s gossip. / Marc Atkins/Getty Images (Carrick), Maciej Rogowski/SOPA Images/LightRocket/Getty Images (Bellingham)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "Virgil van Dijk’s Liverpool contract expires at the end of the season. / Gareth Copley/Getty ImagesManchester United’s left back search could be coming to an end in January. Crystal Palace’s Tyrick Mitchell wants to make Old Trafford his new home and has already informed the club of his decision. (Source: inindykaila)",
+        "Chelsea’s sights remain on Bournemouth midfielder Alex Scott and Crystal Palace star Adam Wharton. The Blues would take either player in the January transfer window, but are prepared to play the long game if they have to wait until the summer. (Source: CaughtOffside)",
+        "Despite links to Bayern Munich, Florian Wirtz is not in line for a return to Germany. The Liverpool man is too expensive for Vincent Kompany’s side to buy in January. (Source: Christian Falk)",
+        "Bayern Munich instead are focusing their efforts on securing Morgan Gibbs-White’s signature. The German champions are the frontrunners to sign the Nottingham Forest star, who would reunite with England teammate Harry Kane. (Source: talkSPORT)",
+        "Arsenal are expected to make an official offer for 17-year-old midfielder Luca Weinhandl in the winter window. Newcastle United, Brighton & Hove Albion and Aston Villa are also keen on the Sturm Graz gem. (Source: TEAMtalk)",
+        "After 10 seasons at Anfield, Virgil van Dijk is in for a new challenge at the end of the season. Liverpool are not prepared to offer him a contract extension and will instead allow him to leave as a free agent this summer. (Source: Football Insider)",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "Official approaches from Arsenal and United are expected to come this winter for Sunderland striker Brian Brobbey. Chelsea are also in the running after they inquired about the No. 9 this summer. (Source: Hooligan Soccer)",
+        "Tottenham Hotspur’s dreams of signing Raphinha are dead. The forward has pledged his future to Barcelona with a new contract. Spurs were the Premier League side that pushed the hardest—to no avail—to sign the Brazilian this summer. (Source: TEAMtalk)",
+        "Liverpool outcast Federico Chiesa is ready to move on from Merseyside in the January window if his position in the team does not improve. (Source: Calciomercato)",
+        "Speaking of outcasts, Chelsea loanee Alejandro Garnacho is being monitored by clubs in Spain after limited minutes in the early stages of his time at Aston Villa. La Liga could be a potential escape route for the winger. (Source: Daily Mail)",
+        "Aston Villa are hoping to hijack Brighton & Hove Albion’s move for 18-year-old center back Mauro Coronel, whose contract with Club Nacional expires at the end of December. (Source: TEAMtalk)",
+        "Gavi could be on his way out of Catalonia. / Alex Caparros/Getty ImagesDespite Jude Bellingham having two years left on his current contract, Real Madrid are planning to offer the midfield maestro an extension. The renewal could be finalized much quicker than anyone expected—potentially as early as the next two weeks. (Source: Matteo Moretto, via Radio MARCA).",
+        "Barcelona midfielder Gavi is Luis Enrique’s top target for the winter and summer transfer windows. Paris Saint-Germain are considering making a €45 million ($51.2 million) offer for the Spaniard. (Source: Fichajes)",
+        "AC Milan view Real Madrid striker Endrick as the perfect signing. Ruben Amorim has the Brazilian at the top of his transfer wishlist. (Source: Calciomercato)",
+        "Atlético Madrid forward Julián Alvarez will not get his Barcelona wish—at least in January. The Catalans have instead made signing a center back their priority for the winter window. (Source: Fichajes)",
+        "Real Sociedad center back Jon Martín is attracting interest from top clubs across Europe. Arsenal, Chelsea and Liverpool are closely monitoring the 20-year-old, while Real Madrid and Barcelona keep tabs as well. (Source: fussball-news)",
+        "Atlético Madrid are keen on Montpellier striker Laciné Megnan-Pavé. Paris Saint-Germain and Benfica are also monitoring the 16-year-old. (Source: Ekrem Konur)",
+        "feed. READ THE LATEST TRANSFER RUMORS FROM THE PAST FEW DAYS"
+      ]
+    },
     "fzhafkysws3g1ux8fnmoe3180": {
       "id": "fzhafkysws3g1ux8fnmoe3180",
       "title": "De la Fuente promises 'the best is yet to come' for Spain",
@@ -3967,6 +4053,40 @@
         "Malen will sit out the Netherlands&#39;&nbsp;Nations League meetings with Germany, Serbia (twice) and Greece, with Xavi&#39;s Oranje debut on Thursday pitting him against new&nbsp;Nationalelf boss Jurgen Klopp."
       ],
       "html": "<p>The injury that caused Donyell Malen to withdraw from the Netherlands&#39; squad is &quot;not too bad&quot;, head coach Xavi said in a positive update on the Roma forward.</p>\n\n<p>Malen has been in sensational form since swapping Aston Villa for the Italian capital in January.</p>\n\n<p>Since making his Serie A debut on January 18, Malen has scored 20 goals in 23 appearances in the competition, at least twice as many as any other player in that period (Tasos Douvikas and Lautaro Martinez are next with 10).</p>\n\n<p>He has helped the Giallorossi make a flying start to the new campaign under Gian Piero Gasperini, as they sit top of the table on goal difference heading into the international break.</p>\n\n<p>Like Scudetto holders Inter, they opened 2026-27 with four straight victories, though they did let a 2-0 lead slip in Saturday&#39;s head-to-head clash between the top two, a game that saw Malen play the full 90 minutes.</p>\n\n<p>Roma&#39;s supporters face a nervous wait regarding Malen&#39;s condition&nbsp;after he pulled out of Xavi&#39;s first Oranje squad, with reports suggesting it is a knee issue.</p>\n\n<p>But&nbsp;Xavi does not believe it is a serious injury, having discussed the withdrawals of Malen and Justin Kluivert at a press conference on Monday.&nbsp;</p>\n\n<p>&quot;It&#39;s a pity, because Donyell is in splendid form, but it happened at the last moment, the same as Kluivert,&quot; Xavi said. &quot;That&#39;s football, you have to adapt.</p>\n\n<p>&quot;I believe Donyell is okay, that it is not too bad. I don&#39;t know how long it will take for him to recover.&quot;</p>\n\n\n<p>Malen has already scored six goals in Serie A this term, more than any other player, while over-performing his 4.6 expected goals (xG).</p>\n\n<p>He has also had more shots on target (10) than any other player in the division and currently boasts a 57.5 minutes-per-goal rate in the Italian top flight.</p>\n\n<p>Malen will sit out the Netherlands&#39;&nbsp;Nations League meetings with Germany, Serbia (twice) and Greece, with Xavi&#39;s Oranje debut on Thursday pitting him against new&nbsp;Nationalelf boss Jurgen Klopp.</p>\n"
+    },
+    "j3333qh4ryty1vb7sl2pc56j4": {
+      "id": "j3333qh4ryty1vb7sl2pc56j4",
+      "title": "World Cup defeat to Argentina most painful moment of England career, says Kane",
+      "subtitle": "England were beaten in the semi-finals of this summer's World Cup by Argentina, a defeat Harry Kane said still plays on his mind.",
+      "source": "FotMob",
+      "sourceUrl": "/news/j3333qh4ryty1vb7sl2pc56j4-world-cup-defeat-argentina-most-painful-moment-england-career-says-kane",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/8f/12/harry-kane_1cz45jmhnru551gdnh180sp9z0.png?t=-721142592&w=1200&h=630",
+      "publishedAt": "2026-09-23T22:27:03.000Z",
+      "paragraphs": [
+        "Harry Kane described England&#39;s semi-final defeat to Argentina at this summer&#39;s World Cup as the&nbsp;most painful moment of his career with the Three Lions.&nbsp;",
+        "England were on the cusp of reaching the World Cup final for the first time since 1966 when&nbsp;Anthony Gordon turned in&nbsp;Morgan Rogers&#39;s cross in the 55th minute.&nbsp;",
+        "However, two late goals from&nbsp;Enzo Fernandez and&nbsp;Lautaro Martinez completed the turnaround, with Lionel Messi bagging both assists at&nbsp;Mercedes-Benz Stadium.&nbsp;",
+        "Argentina were trailing until the 85th minute against England, the latest a team has been behind but gone on to win in normal time in a World Cup semi-final, making the defeat all the more difficult for Kane.&nbsp;",
+        "Thomas Tuchel came under fire for his tactical approach to the match, electing to replace both Gordon and&nbsp;Declan Rice for more defensive options to try and see the win out.",
+        "England have now been eliminated in each of their last three matches at this stage of a World Cup (1990, 2018, 2026), while Kane has also been involved in the Three Lions&#39; defeats in the European Championship finals against both Italy and Spain.&nbsp;",
+        "However, England&#39;s latest setback hurt him the most, with Kane saying:&nbsp;&quot;I&#39;m so passionate about England, especially because I have been on this journey now.&nbsp;",
+        "&quot;I have been to the finals, to semi-finals and been so close. Each one hurts in a different way. This one hurt, for sure. More than any other one.",
+        "&quot;I would probably say even more than when I missed a penalty in Qatar [in the quarter-final against France] just in the way that it happened.",
+        "&quot;It just felt like it wasn&#39;t us as a team. It wasn&#39;t the team that we wanted to be and said we&#39;d be.",
+        "&quot;I sometimes think when you maybe go against your beliefs, and you lose, it feels 10 times worse than just losing in a way where, if we lose doing it our way, you accept it, take it on the chin and move on.",
+        "&quot;It&#39;s tough and it will still be tough. You have to move on.&quot;",
+        "The result overshadowed a landmark occasion for Kane,&nbsp;who made his 121st appearance in all competitions for England, the outright most of any outfield player for the nation.&nbsp;&nbsp;",
+        "England were, however, able to end the tournament on a high, claiming third place after beating France 6-4 in an enthralling clash at&nbsp;Hard Rock Stadium three days later.&nbsp;",
+        "Tuchel&#39;s side are preparing for their first match since that victory this Saturday, with World Cup champions Spain their opponents in the Nations League at&nbsp;Wembley Stadium.&nbsp;",
+        "England have won just two of their last 13 games against the reigning World Cup holders, losing nine times (D2). Those wins came at home to Spain in November 2011 (1-0) and away to Germany in March 2016 (3-2).",
+        "And Kane said while&nbsp;the pain from such disappointments &quot;stays with you&quot;, England must use it as fuel as they aim to reach the next level on the international stage.&nbsp;",
+        "&quot;It&#39;s something that we haven&#39;t quite been able to do in the latter stages of tournaments against the bigger nations and the better nations,&quot; Kane added.",
+        "&quot;And it may be a mixture of things. It may be personalities, it may be mentality, it may be just the direction and how we want to play in those games.",
+        "&quot;I think it&#39;s conversations that we need to have as a group and team. Not just sit down but as we gradually go through these next games, through this next period of the Nations League, which we want to try and win.",
+        "&quot;We want to try and take that next step because I think that&#39;ll be an important step for us as a team.",
+        "&quot;I know there&#39;s a perception that the Nations League may not be as important, but when you haven&#39;t won for so long, I think just the feeling of winning a trophy with England could then catapult us to head&nbsp;into the Euros in a couple of years.&quot;"
+      ],
+      "html": "<p>Harry Kane described England&#39;s semi-final defeat to Argentina at this summer&#39;s World Cup as the&nbsp;most painful moment of his career with the Three Lions.&nbsp;</p>\n\n<p>England were on the cusp of reaching the World Cup final for the first time since 1966 when&nbsp;Anthony Gordon turned in&nbsp;Morgan Rogers&#39;s cross in the 55th minute.&nbsp;</p>\n\n<p>However, two late goals from&nbsp;Enzo Fernandez and&nbsp;Lautaro Martinez completed the turnaround, with Lionel Messi bagging both assists at&nbsp;Mercedes-Benz Stadium.&nbsp;</p>\n\n<p>Argentina were trailing until the 85th minute against England, the latest a team has been behind but gone on to win in normal time in a World Cup semi-final, making the defeat all the more difficult for Kane.&nbsp;</p>\n\n<p>Thomas Tuchel came under fire for his tactical approach to the match, electing to replace both Gordon and&nbsp;Declan Rice for more defensive options to try and see the win out.</p>\n\n<p>England have now been eliminated in each of their last three matches at this stage of a World Cup (1990, 2018, 2026), while Kane has also been involved in the Three Lions&#39; defeats in the European Championship finals against both Italy and Spain.&nbsp;</p>\n\n<p>However, England&#39;s latest setback hurt him the most, with Kane saying:&nbsp;&quot;I&#39;m so passionate about England, especially because I have been on this journey now.&nbsp;</p>\n\n<p>&quot;I have been to the finals, to semi-finals and been so close. Each one hurts in a different way. This one hurt, for sure. More than any other one.</p>\n\n<p>&quot;I would probably say even more than when I missed a penalty in Qatar [in the quarter-final against France] just in the way that it happened.</p>\n\n<p>&quot;It just felt like it wasn&#39;t us as a team. It wasn&#39;t the team that we wanted to be and said we&#39;d be.</p>\n\n<p>&quot;I sometimes think when you maybe go against your beliefs, and you lose, it feels 10 times worse than just losing in a way where, if we lose doing it our way, you accept it, take it on the chin and move on.</p>\n\n<p>&quot;It&#39;s tough and it will still be tough. You have to move on.&quot;</p>\n\n\n<p>The result overshadowed a landmark occasion for Kane,&nbsp;who made his 121st appearance in all competitions for England, the outright most of any outfield player for the nation.&nbsp;&nbsp;</p>\n\n<p>England were, however, able to end the tournament on a high, claiming third place after beating France 6-4 in an enthralling clash at&nbsp;Hard Rock Stadium three days later.&nbsp;</p>\n\n<p>Tuchel&#39;s side are preparing for their first match since that victory this Saturday, with World Cup champions Spain their opponents in the Nations League at&nbsp;Wembley Stadium.&nbsp;</p>\n\n<p>England have won just two of their last 13 games against the reigning World Cup holders, losing nine times (D2). Those wins came at home to Spain in November 2011 (1-0) and away to Germany in March 2016 (3-2).</p>\n\n<p>And Kane said while&nbsp;the pain from such disappointments &quot;stays with you&quot;, England must use it as fuel as they aim to reach the next level on the international stage.&nbsp;</p>\n\n<p>&quot;It&#39;s something that we haven&#39;t quite been able to do in the latter stages of tournaments against the bigger nations and the better nations,&quot; Kane added.</p>\n\n<p>&quot;And it may be a mixture of things. It may be personalities, it may be mentality, it may be just the direction and how we want to play in those games.</p>\n\n<p>&quot;I think it&#39;s conversations that we need to have as a group and team. Not just sit down but as we gradually go through these next games, through this next period of the Nations League, which we want to try and win.</p>\n\n<p>&quot;We want to try and take that next step because I think that&#39;ll be an important step for us as a team.</p>\n\n<p>&quot;I know there&#39;s a perception that the Nations League may not be as important, but when you haven&#39;t won for so long, I think just the feeling of winning a trophy with England could then catapult us to head&nbsp;into the Euros in a couple of years.&quot;</p>\n"
     },
     "k7w5zq6s68fm1xh6odhr5uuv9": {
       "id": "k7w5zq6s68fm1xh6odhr5uuv9",
