@@ -1,0 +1,3032 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' dir='ltr' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' expr:lang='data:blog.localeUnderscoreDelimited' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta charset='utf-8'/>
+  <meta content='width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover' name='viewport'/>
+  <title><b:if cond='data:blog.pageTitle'><data:blog.pageTitle/><b:else/>ZetaSports — Live Football Scores, Today Matches &amp; Streams</b:if></title>
+  
+  <!-- SEO Meta Tags -->
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+  <b:else/>
+    <meta content='Watch today matches live score, fixtures, results, FotMob live match statistics and HD live sports streams on ZetaSports.' name='description'/>
+  </b:if>
+  <meta content='Live Football, Today Matches, ZetaSports, Korra Online, Yalla Shoot, FotMob Scores, Premier League, Champions League, World Cup' name='keywords'/>
+  
+  <meta expr:content='data:blog.pageTitle' property='og:title'/>
+  <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+  <meta content='website' property='og:type'/>
+  <meta content='ZetaSports' property='og:site_name'/>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=Rajdhani:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <!-- Plyr & HLS.js from jsDelivr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.15/dist/hls.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
+
+  <b:skin><![CDATA[
+  /* Suppress default Blogger chrome */
+  #navbar, .navbar, .navbar-iframe, .header-outer, .footer-outer, .sidebar-container {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+  }
+
+  /* ── KORRA / YALLA SHOOT PRO THEME STYLING ── */
+  * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+  }
+
+  a { color: #000; }
+  
+  body {
+    background: #eceef2;
+    color: #000;
+    font-size: 15px;
+    line-height: 24px;
+    transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+
+  .STING-web-Max-Size {
+    max-width: 1060px;
+    width: 95%;
+    margin: 14px auto;
+    padding: 0 10px;
+  }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  .STING-web-Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+  }
+
+  .STING-web-Header-Right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .STING-web-Header-Logo {
+    padding: 6px 18px;
+    background: #2563eb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 56px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  }
+
+  .STING-web-Header-Logo > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .STING-web-Header-Logo .STING-WEB-SiteName {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .STING-web-Header-Logo .STING-WEB-SiteUrl {
+    font-size: 11px;
+    opacity: 0.85;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .STING-web-Menu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .STING-web-Menu > li > a {
+    color: #334155;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+
+  .STING-web-Menu > li > a:hover,
+  .STING-web-Menu > li.active > a {
+    color: #2563eb;
+    background: #eff6ff;
+  }
+
+  .STING-web-Header-Left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .STING-web-Open-Menu, .STING-web-Open-Dark {
+    height: 38px;
+    width: 38px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    font-size: 18px;
+    transition: all 0.2s;
+  }
+
+  .STING-web-Open-Menu:hover, .STING-web-Open-Dark:hover {
+    background: #e2e8f0;
+  }
+
+  .STING-web-Open-Menu { display: none; }
+
+  /* ── Ad Units ── */
+  .STING-web-Ads {
+    background: #fff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px;
+    margin: 14px auto;
+    max-width: 1000px;
+    width: 95%;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .adsense-leaderboard {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── MATCHES CONTAINER (KORRA / YALLA SHOOT STYLE) ── */
+  .STING-web-Container-Matches {
+    margin: 16px auto;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .STING-web-Container-Matches-Top {
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .STING-web-Title-Box {
+    font-size: 15px;
+    font-weight: 800;
+    background: #2563eb;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .STING-web-Matches-Toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .STING-web-Matches-Toggle > li > a {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    display: block;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .STING-web-Matches-Toggle > .Yesterday-Matches > a {
+    background: #f1f5f9;
+    color: #475569;
+  }
+  .STING-web-Matches-Toggle > .Yesterday-Matches.active > a,
+  .STING-web-Matches-Toggle > .Yesterday-Matches > a:hover {
+    background: #0284c7;
+    color: #fff;
+  }
+
+  .STING-web-Matches-Toggle > .Today-Matches > a {
+    background: #f1f5f9;
+    color: #475569;
+  }
+  .STING-web-Matches-Toggle > .Today-Matches.active > a,
+  .STING-web-Matches-Toggle > .Today-Matches > a:hover {
+    background: #2563eb;
+    color: #fff;
+  }
+
+  .STING-web-Matches-Toggle > .Tomorrow-Matches > a {
+    background: #f1f5f9;
+    color: #475569;
+  }
+  .STING-web-Matches-Toggle > .Tomorrow-Matches.active > a,
+  .STING-web-Matches-Toggle > .Tomorrow-Matches > a:hover {
+    background: #d97706;
+    color: #fff;
+  }
+
+  .STING-web-Matches {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 12px;
+    gap: 10px;
+    min-height: 200px;
+  }
+
+  /* ── INDIVIDUAL MATCH CARD ── */
+  .STING-web-Match {
+    overflow: hidden;
+    text-align: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    border-radius: 10px;
+    transition: all 0.2s;
+  }
+
+  .STING-web-Match:hover {
+    border-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+  }
+
+  .STING-web-Match > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    color: inherit;
+    position: relative;
+  }
+
+  .STING-web-Right-Team,
+  .STING-web-Left-Team {
+    width: 32%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .STING-web-Right-Team { justify-content: flex-start; text-align: left; }
+  .STING-web-Left-Team { justify-content: flex-end; text-align: right; }
+
+  .STING-web-Team-Logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .STING-web-Team-Logo img {
+    max-width: 46px;
+    max-height: 46px;
+    object-fit: contain;
+  }
+
+  .STING-web-Team-NAME {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+
+  .STING-web-Match-Center {
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .STING-web-Match-Timing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  #STING-web-Match-Time {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: #e2e8f0;
+    color: #475569;
+    text-transform: uppercase;
+  }
+
+  .live-badge {
+    background: #e11d48 !important;
+    color: #fff !important;
+    animation: blinker 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes blinker {
+    50% { opacity: 0.6; }
+  }
+
+  #STING-web-Result {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 2px 0;
+  }
+
+  .STING-web-Match-Info {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+  }
+
+  .STING-web-Overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    background: rgba(15, 23, 42, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    border-radius: 10px;
+  }
+
+  .STING-web-Match:hover .STING-web-Overlay {
+    opacity: 1;
+  }
+
+  .STING-web-SVG-Play {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding-left: 3px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ── DEDICATED MATCH PAGE (DOMAIN.COM/TEAM1-VS-TEAM2-ID) ── */
+  #matchView {
+    display: none;
+  }
+
+  .match-page-box {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .match-page-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .match-scoreboard-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px 16px;
+  }
+
+  .team-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+  }
+
+  .team-unit img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+
+  .team-unit h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+    text-align: center;
+  }
+
+  .score-unit {
+    text-align: center;
+    width: 30%;
+  }
+
+  .score-unit .big-score {
+    font-size: 46px;
+    font-weight: 900;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 6px;
+    color: #2563eb;
+  }
+
+  .match-meta-list {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    padding: 16px 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .match-meta-item span {
+    color: #64748b;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+
+  .match-meta-item strong {
+    color: #0f172a;
+    font-weight: 800;
+  }
+
+  /* Watch Button & 5-Second Countdown */
+  .watch-action-box {
+    padding: 24px;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .btn-watch-stream {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 14px 36px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    transition: all 0.2s;
+  }
+
+  .btn-watch-stream:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+  }
+
+  /* Match News Card & Progress Bar */
+  .match-news-card {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  body.Night .match-news-card {
+    background: #0e1424;
+    border-color: #1e293b;
+    color: #e2e8f0;
+  }
+
+  .match-news-title {
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: #0f172a;
+  }
+
+  body.Night .match-news-title {
+    color: #f1f5f9;
+  }
+
+  .match-news-p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 14px;
+  }
+
+  body.Night .match-news-p {
+    color: #94a3b8;
+  }
+
+  .match-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin: 14px 0;
+  }
+
+  .match-stat-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-align: center;
+  }
+
+  body.Night .match-stat-item {
+    background: #131b2e;
+    border-color: #1e293b;
+  }
+
+  .match-stat-val {
+    font-size: 17px;
+    font-weight: 900;
+    color: #2563eb;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .match-stat-lbl {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .progress-bar-wrap {
+    width: 100%;
+    max-width: 320px;
+    height: 6px;
+    background: #cbd5e1;
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 12px auto;
+  }
+
+  body.Night .progress-bar-wrap {
+    background: #1e293b;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    width: 100%;
+    transition: width 1s linear;
+  }
+
+  .status-msg-wrap, .status-msg-body, .status-msg-border {
+    display: none !important;
+  }
+
+  
+  /* ── 8 SECTIONS & 10 FEATURES: MATCH CENTER CSS ── */
+  .match-tabs-header {
+    display: flex;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin: 14px 0;
+    padding: 6px;
+    gap: 6px;
+    scrollbar-width: none;
+  }
+  .match-tabs-header::-webkit-scrollbar { display: none; }
+
+  body.Night .match-tabs-header {
+    background: #0e1424;
+    border-color: #1e293b;
+  }
+
+  .mtab-btn {
+    padding: 9px 16px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748b;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .mtab-btn.active {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.3);
+  }
+
+  body.Night .mtab-btn {
+    color: #94a3b8;
+  }
+  body.Night .mtab-btn.active {
+    background: #2563eb;
+    color: #fff;
+  }
+
+  .mtab-pane {
+    display: none;
+  }
+  .mtab-pane.active {
+    display: block;
+    animation: fadeIn 0.25s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Match Meta Top & Action Row */
+  .match-action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .match-chip-btn {
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #1e293b;
+    transition: all 0.2s;
+  }
+  body.Night .match-chip-btn {
+    background: #0e1424;
+    border-color: #1e293b;
+    color: #e2e8f0;
+  }
+  .match-chip-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+  }
+
+  /* Comparative Statistics Progress Bars */
+  .stat-compare-row {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+  body.Night .stat-compare-row {
+    background: #0e1424;
+    border-color: #1e293b;
+  }
+  .stat-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .stat-dual-bar {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+    display: flex;
+  }
+  body.Night .stat-dual-bar {
+    background: #1e293b;
+  }
+  .stat-bar-h { background: #2563eb; height: 100%; }
+  .stat-bar-a { background: #f43f5e; height: 100%; margin-left: auto; }
+
+  /* Timeline Events Feed */
+  .event-timeline-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  body.Night .event-timeline-card {
+    background: #0e1424;
+    border-color: #1e293b;
+  }
+  .event-min-badge {
+    background: #f1f5f9;
+    color: #0f172a;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    min-width: 44px;
+    text-align: center;
+  }
+  body.Night .event-min-badge {
+    background: #1e293b;
+    color: #f1f5f9;
+  }
+
+  /* Lineup Grid & Squad Cards */
+  .lineup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media(max-width: 700px) { .lineup-grid { grid-template-columns: 1fr; } }
+
+  .squad-card {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+  }
+  body.Night .squad-card {
+    background: #0e1424;
+    border-color: #1e293b;
+  }
+  .player-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+  }
+  body.Night .player-row {
+    border-color: #1e293b;
+  }
+  .player-rating {
+    background: #10b981;
+    color: #fff;
+    font-weight: 800;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  /* Commentary Feed */
+  .comm-item {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  body.Night .comm-item {
+    background: #0e1424;
+    border-color: #1e293b;
+    color: #e2e8f0;
+  }
+
+  /* Articles & News Section */
+  .article-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .article-card {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  body.Night .article-card {
+    background: #0e1424;
+    border-color: #1e293b;
+  }
+  .article-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .article-card-content {
+    padding: 14px;
+  }
+
+  /* Article Modal */
+  .article-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    z-index: 100000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .article-modal-card {
+    background: #fff;
+    border-radius: 18px;
+    max-width: 680px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+  body.Night .article-modal-card {
+    background: #0e1424;
+    color: #e2e8f0;
+  }
+  .article-modal-close {
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 32px; height: 32px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 800;
+    z-index: 10;
+  }
+  .modal-article-img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+  }
+  .modal-article-body p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    font-size: 14px;
+  }
+
+  /* Fan Poll Container */
+  .poll-container {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+    margin: 14px 0;
+  }
+  body.Night .poll-container {
+    background: #0e1424;
+    border-color: #1e293b;
+  }
+  .poll-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .poll-bars {
+    display: flex;
+    height: 24px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .poll-bar-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    transition: width 0.3s;
+  }
+  .poll-btn-group {
+    display: flex;
+    gap: 8px;
+  }
+  .poll-btn {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  body.Night .poll-btn {
+    background: #131b2e;
+    border-color: #1e293b;
+    color: #f1f5f9;
+  }
+  .poll-btn.active {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #2563eb;
+  }
+  body.Night .poll-btn.active {
+    background: #1e3a8a;
+    color: #fff;
+  }
+
+  /* Form Pills */
+  .form-pill {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 11px;
+    margin: 0 2px;
+  }
+  .form-w { background: #10b981; }
+  .form-d { background: #64748b; }
+  .form-l { background: #ef4444; }
+
+  
+  /* ── FREQUENT TELEGRAM NOTIFICATION CARD ── */
+  .zeta-tg-card {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    max-width: 360px;
+    width: calc(100% - 48px);
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0, 136, 204, 0.2);
+    padding: 16px;
+    z-index: 999999;
+    transform: translateY(120px) scale(0.95);
+    opacity: 0;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+  }
+
+  .zeta-tg-card.visible {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body.Night .zeta-tg-card {
+    background: #0e172a;
+    box-shadow: 0 12px 40px -4px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(34, 158, 217, 0.3);
+    color: #f1f5f9;
+  }
+
+  .zeta-tg-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .zeta-tg-badge {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2AABEE, #229ED9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(42, 171, 238, 0.4);
+    flex-shrink: 0;
+  }
+
+  .zeta-tg-icon {
+    font-size: 22px;
+  }
+
+  .zeta-tg-badge-pulse {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 12px;
+    height: 12px;
+    background: #22c55e;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+
+  .zeta-tg-title-box {
+    flex: 1;
+  }
+
+  .zeta-tg-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+  }
+
+  body.Night .zeta-tg-title {
+    color: #f8fafc;
+  }
+
+  .zeta-tg-sub {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0284c7;
+    letter-spacing: 0.2px;
+  }
+
+  .zeta-tg-close {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #94a3b8;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.15s;
+  }
+
+  .zeta-tg-close:hover {
+    background: rgba(0,0,0,0.06);
+    color: #0f172a;
+  }
+
+  body.Night .zeta-tg-close:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  .zeta-tg-body {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #475569;
+    margin-bottom: 14px;
+  }
+
+  body.Night .zeta-tg-body {
+    color: #94a3b8;
+  }
+
+  .zeta-tg-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .zeta-tg-btn {
+    flex: 1;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #0088cc, #229ED9);
+    color: #ffffff !important;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.35);
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+
+  .zeta-tg-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 136, 204, 0.45);
+  }
+
+  .zeta-tg-later-btn {
+    padding: 10px 14px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  body.Night .zeta-tg-later-btn {
+    background: #1e293b;
+    border-color: #334155;
+    color: #94a3b8;
+  }
+
+  .zeta-tg-later-btn:hover {
+    background: #e2e8f0;
+  }
+
+  .countdown-box {
+    display: none;
+    background: #eff6ff;
+    border: 2px dashed #93c5fd;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 12px;
+    color: #1e3a8a;
+  }
+
+  .countdown-timer-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px auto;
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+  }
+
+  /* ── DEDICATED STREAMING PAGE (DOMAIN.COM/STREAM/ID) ── */
+  #streamView {
+    display: none;
+  }
+
+  .stream-player-container {
+    background: #0f172a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+  }
+
+  .stream-player-header {
+    background: #1e293b;
+    padding: 14px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ── EDITORIAL / BLOG POSTS ── */
+  .STING-web-Main {
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin: 18px auto;
+    overflow: hidden;
+  }
+
+  .STING-web-Main-Top {
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .STING-web-WebSite-Title {
+    font-size: 14px;
+    font-weight: 800;
+    background: #0f172a;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 6px;
+  }
+
+  .STING-web-Main-All-Post {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .STING-web-Main-Post {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+
+  .STING-web-Main-Post:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .STING-web-Main-Post a {
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+  }
+
+  .STING-web-Main-Posted-IMG {
+    height: 150px;
+    width: 100%;
+    background: #0f172a;
+    overflow: hidden;
+  }
+
+  .STING-web-Main-Posted-IMG img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .STING-web-Main-Post:hover .STING-web-Main-Posted-IMG img {
+    transform: scale(1.05);
+  }
+
+  .STING-web-Main-Posted-TiTle {
+    padding: 12px 14px;
+  }
+
+  .STING-web-Main-Posted-TiTle h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.4;
+    height: 42px;
+    overflow: hidden;
+  }
+
+  .STING-web-Main-Posted-TiTle .date-badge {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 8px;
+    display: block;
+  }
+
+  /* ── SITE FOOTER & LEGAL PAGES ── */
+  footer {
+    background: #fff;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 30px;
+    padding: 30px 0 16px;
+  }
+
+  .STING-web-Pages-Site {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .STING-web-Links-List {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .STING-web-Links-List-Title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 6px;
+  }
+
+  .STING-web-Links-List-Title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 24px;
+    height: 2.5px;
+    background: #2563eb;
+    border-radius: 2px;
+  }
+
+  .STING-web-Links li {
+    margin-bottom: 8px;
+  }
+
+  .STING-web-Links li a {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .STING-web-Links li a:hover {
+    color: #2563eb;
+  }
+
+  .STING-web-Site-Copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #94a3b8;
+    padding-top: 16px;
+  }
+
+  /* ── NIGHT / DARK MODE ── */
+  body.Night {
+    background: #0b0f19;
+    color: #e2e8f0;
+  }
+
+  body.Night header,
+  body.Night footer,
+  body.Night .STING-web-Container-Matches,
+  body.Night .STING-web-Main,
+  body.Night .match-page-box {
+    background: #131b2e;
+    border-color: #1e293b;
+    color: #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  }
+
+  body.Night .STING-web-Container-Matches-Top,
+  body.Night .STING-web-Main-Top,
+  body.Night .match-meta-list {
+    background: #0e1424;
+    border-color: #1e293b;
+  }
+
+  body.Night .STING-web-Match {
+    background: #0e1424;
+    border-color: #1e293b;
+  }
+
+  body.Night .STING-web-Match:hover {
+    border-color: #3b82f6;
+  }
+
+  body.Night .STING-web-Team-NAME,
+  body.Night #STING-web-Result,
+  body.Night .team-unit h3,
+  body.Night .STING-web-Main-Posted-TiTle h3,
+  body.Night .match-meta-item strong,
+  body.Night .STING-web-Links-List-Title,
+  body.Night a {
+    color: #f1f5f9;
+  }
+
+  body.Night .watch-action-box {
+    background: #131b2e;
+    border-color: #1e293b;
+  }
+
+  body.Night .countdown-box {
+    background: #0e1424;
+    border-color: #1d4ed8;
+    color: #93c5fd;
+  }
+
+  body.Night .STING-web-Menu > li > a {
+    color: #94a3b8;
+  }
+
+  body.Night .STING-web-Open-Menu,
+  body.Night .STING-web-Open-Dark {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+  }
+
+  body.Night .STING-web-Matches-Toggle > li > a {
+    background: #1e293b;
+    color: #94a3b8;
+  }
+
+  body.Night .STING-web-Ads {
+    background: #0e1424;
+    border-color: #334155;
+    color: #64748b;
+  }
+
+  /* ── Responsive Mobile ── */
+  @media screen and (max-width: 768px) {
+    .STING-web-Menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 260px;
+      height: 100vh;
+      background: #fff;
+      z-index: 1000;
+      flex-direction: column;
+      padding: 60px 20px 20px;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+    }
+    body.Night .STING-web-Menu { background: #131b2e; }
+    .STING-web-Menu.open { display: flex; }
+    .STING-web-Open-Menu { display: flex; }
+    .STING-web-Right-Team, .STING-web-Left-Team { width: 34%; gap: 6px; }
+    .STING-web-Team-Logo { width: 36px; height: 36px; }
+    .STING-web-Team-Logo img { max-width: 34px; max-height: 34px; }
+    .STING-web-Team-NAME { font-size: 12px; }
+    #STING-web-Result { font-size: 18px; letter-spacing: 2px; }
+    .STING-web-Title-Box { font-size: 13px; padding: 4px 10px; width: 100%; justify-content: center; }
+    .STING-web-Matches-Toggle { width: 100%; justify-content: center; }
+    .STING-web-Matches-Toggle > li { flex: 1; text-align: center; }
+    .STING-web-Matches-Toggle > li > a { padding: 6px 0; }
+  }
+  ]]></b:skin>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="STING-web-Header STING-web-Max-Size">
+      <div class="STING-web-Header-Right">
+        <div class="STING-web-Header-Logo">
+          <a href="javascript:void(0)" onclick="goHome()">
+            <span class="STING-WEB-SiteName">ZetaSports</span>
+            <span class="STING-WEB-SiteUrl">kora.live</span>
+          </a>
+        </div>
+
+        <ul class="STING-web-Menu" id="mainMenu">
+          <li class="active"><a href="javascript:void(0)" onclick="goHome()">Home</a></li>
+          <li><a href="javascript:void(0)" onclick="filterDate('today')">Today Matches</a></li>
+          <li><a href="javascript:void(0)" onclick="filterDate('live')">Live Now</a></li>
+          <li><a href="javascript:void(0)" onclick="filterDate('yesterday')">Results</a></li>
+          <li><a href="javascript:void(0)" onclick="filterDate('tomorrow')">Tomorrow</a></li>
+        </ul>
+      </div>
+
+      <div class="STING-web-Header-Left">
+        <div class="STING-web-Open-Dark" id="darkToggle" onclick="toggleNightMode()" title="Toggle Dark/Light Mode">
+          🌙
+        </div>
+        <div class="STING-web-Open-Menu" onclick="toggleMenu()" title="Menu">
+          ☰
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Top AdSense Leaderboard (728x90) -->
+  <div class="STING-web-Ads adsense-leaderboard">
+    <span>Advertisement • Top Leaderboard (728x90)</span>
+  </div>
+
+  <!-- VIEW 1: HOME DASHBOARD WITH MATCH CARDS SORTED BY TIME -->
+  <div id="homeView">
+    <div class="STING-web-Container-Matches STING-web-Max-Size">
+      <div class="STING-web-Container-Matches-Top">
+        <h2 class="STING-web-Title-Box">
+          <span>⚡</span>
+          <strong>Today's Fixtures (Chronological Time Order)</strong>
+        </h2>
+        <ul class="STING-web-Matches-Toggle">
+          <li class="Yesterday-Matches" id="tab-yesterday" onclick="filterDate('yesterday')">
+            <a href="javascript:void(0)">Yesterday</a>
+          </li>
+          <li class="Today-Matches active" id="tab-today" onclick="filterDate('today')">
+            <a href="javascript:void(0)">Today</a>
+          </li>
+          <li class="Tomorrow-Matches" id="tab-tomorrow" onclick="filterDate('tomorrow')">
+            <a href="javascript:void(0)">Tomorrow</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="STING-web-Matches" id="matchesList">
+        <div style="text-align:center; padding: 40px 10px; color:#64748b;">
+          <div style="width:30px;height:30px;border:3px solid #cbd5e1;border-top-color:#2563eb;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 10px;"></div>
+          <p style="font-weight:700;font-size:13px;">Loading matches in time order...</p>
+        </div>
+      </div>
+    </div>
+    <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+
+    <div class="STING-web-Ads">
+      <span>Advertisement • Responsive In-Feed</span>
+    </div>
+
+    <!-- Editorial Blog Posts for AdSense -->
+    <div class="STING-web-Main STING-web-Max-Size">
+      <div class="STING-web-Main-Top">
+        <span class="STING-web-WebSite-Title">Sports News &amp; Match Analysis</span>
+        <span style="font-size:12px;color:#64748b;font-weight:600;">Editorial Articles</span>
+      </div>
+
+      <b:section id='main' name='Editorial Blog Posts' showaddelement='yes'>
+        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+          <b:includable id='main'>
+            <div class="STING-web-Main-All-Post">
+              <b:loop values='data:posts' var='post'>
+                <article class="STING-web-Main-Post">
+                  <a expr:href='data:post.url'>
+                    <div class="STING-web-Main-Posted-IMG">
+                      <b:if cond='data:post.firstImageUrl'>
+                        <img expr:src='data:post.firstImageUrl' alt=''/>
+                      <b:else/>
+                        <div style="display:flex;align-items:center;justify-content:center;height:100%;color:#fff;font-weight:800;">ZETASPORTS</div>
+                      </b:if>
+                    </div>
+                    <div class="STING-web-Main-Posted-TiTle">
+                      <h3><data:post.title/></h3>
+                      <span class="date-badge"><data:post.date/></span>
+                    </div>
+                  </a>
+                </article>
+              </b:loop>
+            </div>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+  </div>
+
+  <!-- VIEW 2: DEDICATED MATCH PAGE (domain.com/?match=team1-vs-team2-id) -->
+  <div id="matchView" class="STING-web-Max-Size">
+    <div style="margin-bottom: 14px;">
+      <button onclick="goHome()" style="background:#fff;border:1px solid #cbd5e1;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;">
+        ← Back to All Matches
+      </button>
+    </div>
+
+    <div class="match-page-box" id="matchBox">
+      <!-- Injected Dynamically by JS -->
+    </div>
+
+    <div class="STING-web-Ads">
+      <span>Advertisement • In-Article Unit</span>
+    </div>
+  </div>
+
+  <!-- VIEW 3: DEDICATED STREAMING PAGE (domain.com/?stream=id) -->
+  <div id="streamView" class="STING-web-Max-Size">
+    <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center;">
+      <button onclick="returnToMatch()" style="background:#fff;border:1px solid #cbd5e1;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;">
+        ← Back to Match Details
+      </button>
+      <span style="font-size:12px;font-weight:700;color:#e11d48;display:flex;align-items:center;gap:6px;">
+        <span style="width:8px;height:8px;background:#e11d48;border-radius:50%;display:inline-block;animation:blinker 1s infinite;"></span>
+        LIVE BROADCAST HD
+      </span>
+    </div>
+
+        <div class="stream-player-container">
+      <div class="stream-player-header" style="display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:#1e293b;border-bottom:1px solid #334155;">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <h3 id="streamTitle" style="font-size:16px;font-weight:800;color:#f8fafc;margin:0;">Live Stream Player</h3>
+          <span id="streamBadge" style="font-size:11px;background:#2563eb;color:#fff;padding:3px 8px;border-radius:4px;font-weight:700;letter-spacing:0.5px;">LIVE BROADCAST</span>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <button onclick="reloadCurrentStream()" class="match-chip-btn" style="color:#94a3b8;background:#334155;border:none;font-size:12px;padding:5px 12px;cursor:pointer;" title="Reload Stream">🔄 Reload</button>
+          <button onclick="togglePlayerFullscreen()" class="match-chip-btn" style="color:#94a3b8;background:#334155;border:none;font-size:12px;padding:5px 12px;cursor:pointer;" title="Fullscreen">⛶ Fullscreen</button>
+        </div>
+      </div>
+      <div id="playerFrameWrap" style="aspect-ratio: 16/9; background:#000; position:relative; overflow:hidden;">
+        <!-- Native / HLS HTML5 Video -->
+        <video id="liveVideo" playsinline="playsinline" controls="controls" crossorigin="anonymous" style="width:100%;height:100%;display:block;"></video>
+        <!-- Iframe for Web Embed Streams -->
+        <iframe id="streamIframe" src="" allowfullscreen="true" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" frameborder="0" style="display:none;width:100%;height:100%;border:none;"></iframe>
+        <!-- Clean Offline / No Stream Overlay (Zero Mock Stream!) -->
+        <div id="noStreamAlert" style="display:none;position:absolute;inset:0;background:radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;z-index:10;">
+          <div style="font-size:42px;margin-bottom:12px;">📡</div>
+          <h3 style="font-size:18px;font-weight:800;color:#f8fafc;margin-bottom:8px;">No Live Broadcast Active</h3>
+          <p style="font-size:13px;color:#94a3b8;max-width:460px;margin:0 auto 18px;line-height:1.6;">
+            The live video stream for this fixture has not been published yet or is offline. Official broadcast streams activate 15–30 minutes before kickoff. Join our Telegram for instant stream links!
+          </p>
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+            <a href="https://t.me/zetasports_official" target="_blank" class="match-chip-btn" style="background:#229ED9;color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:9px 18px;font-weight:700;border:none;">
+              📢 Join Telegram for Stream Links
+            </a>
+            <button onclick="reloadCurrentStream()" class="match-chip-btn" style="background:#334155;color:#fff;border:none;padding:9px 18px;font-weight:700;cursor:pointer;">
+              🔄 Refresh Player
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- DYNAMIC MULTI-SERVER SWITCHER BAR -->
+      <div style="display:flex;gap:10px;padding:12px 16px;background:#1e293b;border-top:1px solid #334155;flex-wrap:wrap;align-items:center;justify-content:space-between;">
+        <span style="font-size:12px;color:#94a3b8;font-weight:700;display:flex;align-items:center;gap:6px;">
+          📡 <span id="serverCountLabel">Stream Servers:</span>
+        </span>
+        <div id="serverButtonsList" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <!-- Dynamically populated servers -->
+        </div>
+      </div>
+    </div>
+
+    <div class="STING-web-Ads">
+      <span>Advertisement • Beneath Live Player</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="STING-web-Max-Size">
+      <div class="STING-web-Pages-Site">
+        <div class="STING-web-Links-List">
+          <h4 class="STING-web-Links-List-Title">About ZetaSports</h4>
+          <p style="font-size:13px;color:#64748b;line-height:22px;">
+            ZetaSports is a comprehensive live sports platform providing live scores, match results in chronological time order, and high-definition sports streams.
+          </p>
+        </div>
+
+        <div class="STING-web-Links-List">
+          <h4 class="STING-web-Links-List-Title">Matches &amp; Tournaments</h4>
+          <ul class="STING-web-Links">
+            <li><a href="javascript:void(0)" onclick="goHome();filterDate('today');">Today's Matches</a></li>
+            <li><a href="javascript:void(0)" onclick="goHome();filterDate('live');">Live Score Ticker</a></li>
+            <li><a href="javascript:void(0)" onclick="goHome();filterDate('yesterday');">Yesterday's Results</a></li>
+            <li><a href="javascript:void(0)" onclick="goHome();filterDate('tomorrow');">Tomorrow's Schedule</a></li>
+          </ul>
+        </div>
+
+        <div class="STING-web-Links-List">
+          <h4 class="STING-web-Links-List-Title">AdSense Legal Policies</h4>
+          <ul class="STING-web-Links">
+            <li><a href="/p/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/p/terms-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/p/disclaimer.html">Disclaimer</a></li>
+            <li><a href="/p/dmca.html">DMCA Copyright Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="STING-web-Links-List">
+          <h4 class="STING-web-Links-List-Title">Help &amp; Contact</h4>
+          <ul class="STING-web-Links">
+            <li><a href="/p/about-us.html">About Us</a></li>
+            <li><a href="/p/contact-us.html">Contact Us</a></li>
+            <li><span style="font-weight:700;color:#16a34a;font-size:13px;">● 100% Free Public Access</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="STING-web-Site-Copyright">
+        Copyright © 2026 ZetaSports (korra.world layout) — All rights reserved. Data sorted by Kickoff Time.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT: TIME ORDER SORTING, MATCH DETAILS ROUTE, & 5-SEC STREAM COUNTDOWN -->
+  <script type="text/javascript">
+  //<![CDATA[
+  (function() {
+    var SB_URL = 'https://voocdrpetiyspuhyeapi.supabase.co';
+    var SB_KEY = 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
+    var SB_HEADERS = {
+      'apikey': SB_KEY,
+      'Authorization': 'Bearer ' + SB_KEY
+    };
+
+    var allMatches = [];
+    var allStreams = [];
+    var streamsMap = {};
+    var currentMatchServers = [];
+    var currentServerIndex = 0;
+    var teamsMap = {};
+    var leaguesMap = {};
+    var currentDateFilter = 'today';
+    var plyrInstance = null;
+    var hlsInstance = null;
+    var shakaInstance = null;
+    var currentMatchId = null;
+
+    // ── Helper: Slugify Team Names ──
+    function slugify(text) {
+      return (text || 'match').toString().toLowerCase()
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-');
+    }
+
+    // ── Dark / Night Mode ──
+    window.toggleNightMode = function() {
+      var isNight = document.body.classList.toggle('Night');
+      localStorage.setItem('zeta_night', isNight ? '1' : '0');
+      var dt = document.getElementById('darkToggle');
+      if (dt) dt.textContent = isNight ? '☀️' : '🌙';
+    };
+
+    if (localStorage.getItem('zeta_night') === '1') {
+      document.body.classList.add('Night');
+      var dt = document.getElementById('darkToggle');
+      if (dt) dt.textContent = '☀️';
+    }
+
+    // ── Mobile Menu ──
+    window.toggleMenu = function() {
+      var m = document.getElementById('mainMenu');
+      if (m) m.classList.toggle('open');
+    };
+
+    // ── Date Filters ──
+    window.filterDate = function(day) {
+      currentDateFilter = day;
+      ['yesterday', 'today', 'tomorrow'].forEach(function(d) {
+        var el = document.getElementById('tab-' + d);
+        if (el) el.classList.remove('active');
+      });
+      var activeTab = document.getElementById('tab-' + day);
+      if (activeTab) activeTab.classList.add('active');
+
+      renderMatches();
+    };
+
+    // ── VIEW SWITCHERS & ROUTING ──
+    window.goHome = function() {
+      window.history.pushState(null, '', '/');
+      document.title = 'ZetaSports — Live Football Scores, Today Matches & Streams';
+      showView('home');
+      stopStream();
+    };
+
+    window.returnToMatch = function() {
+      if (currentMatchId) {
+        window.openMatchPage(currentMatchId, true);
+      } else {
+        goHome();
+      }
+    };
+
+    function showView(viewName) {
+      document.getElementById('homeView').style.display = viewName === 'home' ? 'block' : 'none';
+      document.getElementById('matchView').style.display = viewName === 'match' ? 'block' : 'none';
+      document.getElementById('streamView').style.display = viewName === 'stream' ? 'block' : 'none';
+    }
+
+    function extractMatchId(str) {
+      if (!str) return null;
+      var uuidRegex = /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/;
+      var match = str.match(uuidRegex);
+      if (match) return match[0];
+
+      for (var i = 0; i < allMatches.length; i++) {
+        if (str.indexOf(String(allMatches[i].id)) !== -1) {
+          return allMatches[i].id;
+        }
+      }
+      var parts = str.split('-');
+      return parts[parts.length - 1];
+    }
+
+    // ── FEATURE #4: GOAL WHISTLE AUDIO ──
+    window.playGoalWhistle = function() {
+      try {
+        var AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        var ctx = new AudioCtx();
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(850, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(1300, ctx.currentTime + 0.15);
+        osc.frequency.exponentialRampToValueAtTime(750, ctx.currentTime + 0.35);
+        gain.gain.setValueAtTime(0.3, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.4);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.4);
+      } catch(e) {}
+    };
+
+    // ── FEATURE #7: SHAREABLE MATCH LINK ──
+    window.copyMatchLink = function() {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        var toast = document.getElementById('zetaToast');
+        if (!toast) {
+          toast = document.createElement('div');
+          toast.id = 'zetaToast';
+          toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:10px 22px;border-radius:30px;font-size:13px;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,0.3);z-index:99999;transition:opacity 0.3s;';
+          document.body.appendChild(toast);
+        }
+        toast.textContent = '🔗 Match link copied to clipboard!';
+        toast.style.opacity = '1';
+        setTimeout(function() { toast.style.opacity = '0'; }, 2400);
+      });
+    };
+
+    // ── FEATURE #1: INTERACTIVE FAN WIN-PREDICTOR POLL ──
+    window.votePoll = function(matchId, choice) {
+      var key = 'vote_match_' + matchId;
+      if (localStorage.getItem(key)) {
+        alert('You have already voted on this fixture!');
+        return;
+      }
+      localStorage.setItem(key, choice);
+
+      var votes = JSON.parse(localStorage.getItem('poll_counts_' + matchId) || '{"home": 142, "draw": 45, "away": 118}');
+      votes[choice] = (votes[choice] || 0) + 1;
+      localStorage.setItem('poll_counts_' + matchId, JSON.stringify(votes));
+      renderPollUI(matchId, votes, choice);
+    };
+
+    function renderPollUI(matchId, votes, userChoice) {
+      var total = (votes.home || 0) + (votes.draw || 0) + (votes.away || 0);
+      var hPct = Math.round((votes.home / total) * 100) || 33;
+      var dPct = Math.round((votes.draw / total) * 100) || 33;
+      var aPct = 100 - hPct - dPct;
+
+      var container = document.getElementById('pollContainer');
+      if (!container) return;
+
+      container.innerHTML = 
+        '<div class="poll-header">' +
+          '<span>🗳️ Fan Win Predictor Poll (' + total + ' votes)</span>' +
+          (userChoice ? '<span style="color:#10b981;font-size:11px;font-weight:700;">✓ You voted ' + userChoice.toUpperCase() + '</span>' : '') +
+        '</div>' +
+        '<div class="poll-bars">' +
+          '<div class="poll-bar-seg" style="width:' + hPct + '%;background:#2563eb;"><span>Home ' + hPct + '%</span></div>' +
+          '<div class="poll-bar-seg" style="width:' + dPct + '%;background:#64748b;"><span>Draw ' + dPct + '%</span></div>' +
+          '<div class="poll-bar-seg" style="width:' + aPct + '%;background:#f43f5e;"><span>Away ' + aPct + '%</span></div>' +
+        '</div>' +
+        '<div class="poll-btn-group">' +
+          '<button class="poll-btn ' + (userChoice === 'home' ? 'active' : '') + '" onclick="votePoll(\'' + matchId + '\', \'home\')">1 (Home)</button>' +
+          '<button class="poll-btn ' + (userChoice === 'draw' ? 'active' : '') + '" onclick="votePoll(\'' + matchId + '\', \'draw\')">X (Draw)</button>' +
+          '<button class="poll-btn ' + (userChoice === 'away' ? 'active' : '') + '" onclick="votePoll(\'' + matchId + '\', \'away\')">2 (Away)</button>' +
+        '</div>';
+    }
+
+    // ── FEATURE #5: SECTION TAB SWITCHER ──
+    window.switchMatchTab = function(tabName) {
+      var tabs = ['overview', 'timeline', 'stats', 'lineups', 'h2h', 'commentary', 'articles'];
+      tabs.forEach(function(t) {
+        var tabBtn = document.getElementById('mtab-' + t);
+        var tabPane = document.getElementById('mpane-' + t);
+        if (tabBtn) tabBtn.classList.toggle('active', t === tabName);
+        if (tabPane) tabPane.style.display = (t === tabName) ? 'block' : 'none';
+      });
+    };
+
+    // ── FEATURE #9: FULL ARTICLE READER MODAL ──
+    window.openArticleModal = function(title, image, date, fullHtml) {
+      var modal = document.getElementById('articleModal');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'articleModal';
+        modal.className = 'article-modal-overlay';
+        modal.innerHTML = 
+          '<div class="article-modal-card">' +
+            '<div class="article-modal-close" onclick="closeArticleModal()">✕</div>' +
+            '<div id="modalArticleContent"></div>' +
+          '</div>';
+        document.body.appendChild(modal);
+      }
+
+      var contentBox = document.getElementById('modalArticleContent');
+      contentBox.innerHTML = 
+        (image ? '<img src="' + image + '" class="modal-article-img" alt="" />' : '') +
+        '<div style="padding:20px;">' +
+          '<div style="font-size:12px;color:#64748b;font-weight:700;margin-bottom:6px;">' + (date || 'FotMob Editorial Match Report') + '</div>' +
+          '<h2 style="font-size:20px;font-weight:900;line-height:1.4;margin-bottom:14px;">' + title + '</h2>' +
+          '<div class="modal-article-body">' + fullHtml + '</div>' +
+        '</div>';
+
+      modal.style.display = 'flex';
+    };
+
+    window.closeArticleModal = function() {
+      var modal = document.getElementById('articleModal');
+      if (modal) modal.style.display = 'none';
+    };
+
+    // ── ROUTE 1: DEDICATED MATCH DETAILS & 8 SECTIONS (domain.com/team1-vs-team2-id) ──
+    window.openMatchPage = function(matchId, pushState) {
+      var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
+      if (!match) return;
+
+      currentMatchId = match.id;
+      var mServers = getMatchServers(match);
+      var hasLiveStream = mServers.length > 0;
+      stopStream();
+
+      var homeName = match.home_team || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'Home Team';
+      var awayName = match.away_team || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].name) || 'Away Team';
+      var homeLogo = match.home_logo || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png';
+      var awayLogo = match.away_logo || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png';
+      var leagueName = match.league_name || (leaguesMap[match.league_id] && leaguesMap[match.league_id].name) || 'Live Football Match';
+
+      var matchSlug = slugify(homeName) + '-vs-' + slugify(awayName) + '-' + match.id;
+      if (pushState !== false) {
+        window.history.pushState({ matchId: match.id }, '', '/' + matchSlug);
+      }
+      document.title = homeName + ' vs ' + awayName + ' — Live Score, News & Stream | ZetaSports';
+
+      var liveInfo = getMatchLiveInfo(match);
+      var isLive = liveInfo.isLive;
+      var statusClass = liveInfo.statusClass;
+      var statusText = liveInfo.statusText;
+      var scoreText = liveInfo.scoreText;
+      var kickoffFull = match.date ? new Date(match.date).toLocaleString() : 'TBD';
+
+      var box = document.getElementById('matchBox');
+      box.innerHTML = 
+        '<!-- Action Row: Share, Sound, Sync -->' +
+        '<div class="match-action-row">' +
+          '<button class="match-chip-btn" onclick="copyMatchLink()">🔗 Share Match</button>' +
+          '<div style="display:flex;gap:6px;">' +
+            '<button class="match-chip-btn" onclick="playGoalWhistle()">🔔 Goal Alert</button>' +
+            '<button class="match-chip-btn" onclick="syncLiveMatchData(\'' + (match.fotmob_id || '') + '\')">⚡ Live Refresh</button>' +
+          '</div>' +
+        '</div>' +
+
+        '<!-- Section 1: Scoreboard Header -->' +
+        '<div class="match-page-header">' +
+          '<div style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#93c5fd;font-weight:700;margin-bottom:4px;">' + leagueName + '</div>' +
+          '<h1 style="font-size:22px;font-weight:800;">' + homeName + ' vs ' + awayName + '</h1>' +
+          '<div style="margin-top:8px;"><span id="STING-web-Match-Time" class="' + statusClass + '">' + statusText + '</span></div>' +
+        '</div>' +
+
+        '<div class="match-scoreboard-grid">' +
+          '<div class="team-unit">' +
+            '<img src="' + homeLogo + '" alt="' + homeName + '" />' +
+            '<h3>' + homeName + '</h3>' +
+          '</div>' +
+          '<div class="score-unit">' +
+            '<div class="big-score">' + scoreText + '</div>' +
+            '<div style="font-size:12px;color:#64748b;font-weight:700;">' + (isLive ? 'Current Match Score' : 'Kickoff') + '</div>' +
+          '</div>' +
+          '<div class="team-unit">' +
+            '<img src="' + awayLogo + '" alt="' + awayName + '" />' +
+            '<h3>' + awayName + '</h3>' +
+          '</div>' +
+        '</div>' +
+
+        '<div class="match-meta-list">' +
+          '<div class="match-meta-item"><span>Stadium:</span><strong>' + (match.venue || 'National Stadium') + '</strong></div>' +
+          '<div class="match-meta-item"><span>Referee:</span><strong>' + (match.referee || 'FIFA Licensed') + '</strong></div>' +
+          '<div class="match-meta-item"><span>Kickoff Date:</span><strong>' + kickoffFull + '</strong></div>' +
+          '<div class="match-meta-item"><span>Broadcast:</span><strong>1080p 60FPS HD</strong></div>' +
+        '</div>' +
+
+        '<!-- Section 2: 7 Interactive Navigation Tabs -->' +
+        '<div class="match-tabs-header">' +
+          '<button class="mtab-btn active" id="mtab-overview" onclick="switchMatchTab(\'overview\')">📌 Overview</button>' +
+          '<button class="mtab-btn" id="mtab-timeline" onclick="switchMatchTab(\'timeline\')">⏱️ Timeline</button>' +
+          '<button class="mtab-btn" id="mtab-stats" onclick="switchMatchTab(\'stats\')">📊 Statistics</button>' +
+          '<button class="mtab-btn" id="mtab-lineups" onclick="switchMatchTab(\'lineups\')">📋 Lineups</button>' +
+          '<button class="mtab-btn" id="mtab-h2h" onclick="switchMatchTab(\'h2h\')">⚔️ H2H &amp; Form</button>' +
+          '<button class="mtab-btn" id="mtab-commentary" onclick="switchMatchTab(\'commentary\')">🎙️ Commentary</button>' +
+          '<button class="mtab-btn" id="mtab-articles" onclick="switchMatchTab(\'articles\')">📰 Articles &amp; News</button>' +
+        '</div>' +
+
+        '<!-- TAB PANE 1: OVERVIEW -->' +
+        '<div class="mtab-pane active" id="mpane-overview">' +
+          '<div class="watch-action-box" style="border-radius:14px;margin-bottom:14px;">' +
+            '<button class="btn-watch-stream" id="watchBtn" onclick="startStreamCountdown(\'' + match.id + '\')">' +
+              '<span>▶</span> ' + (hasLiveStream ? ('Watch Live Stream HD (' + mServers.length + ' Server' + (mServers.length > 1 ? 's' : '') + ' Online)') : 'Live Match Stream (Starts at Kickoff)') +
+            '</button>' +
+
+            '<div class="countdown-box" id="countdownBox">' +
+              '<div style="font-size:15px;font-weight:800;">Connecting to Live HD Broadcast Server...</div>' +
+              '<div style="font-size:13px;color:#64748b;margin-top:4px;">Redirecting you to stream player at <code>/stream/' + match.id + '</code> in:</div>' +
+              '<div class="countdown-timer-circle" id="countTimer">5</div>' +
+              '<div class="progress-bar-wrap"><div class="progress-bar-fill" id="countBar"></div></div>' +
+              '<div style="font-size:12px;color:#64748b;font-weight:600;">Preparing HD adaptive video feed with zero delay...</div>' +
+            '</div>' +
+          '</div>' +
+
+          '<!-- Fan Prediction Poll (Feature #1) -->' +
+          '<div class="poll-container" id="pollContainer"></div>' +
+
+          '<!-- Match Preview -->' +
+          '<div class="match-news-card">' +
+            '<div class="match-news-title"><span>📰</span> Match Overview &amp; Tactical Preview</div>' +
+            '<p class="match-news-p">' +
+              'Welcome to the match center for <strong>' + homeName + '</strong> vs <strong>' + awayName + '</strong> in the <em>' + leagueName + '</em>. ' +
+              'Both squads enter with high tactical intensity, seeking vital tournament points and table advancement.' +
+            '</p>' +
+            '<div class="match-stats-grid">' +
+              '<div class="match-stat-item"><div class="match-stat-val">1080p 60FPS</div><div class="match-stat-lbl">Broadcasting Quality</div></div>' +
+              '<div class="match-stat-item"><div class="match-stat-val">' + (isLive ? (match.time_elapsed || 'LIVE') : 'Upcoming') + '</div><div class="match-stat-lbl">Match Period</div></div>' +
+              '<div class="match-stat-item"><div class="match-stat-val">HLS Fast CDN</div><div class="match-stat-lbl">Streaming Server</div></div>' +
+              '<div class="match-stat-item"><div class="match-stat-val">' + (scoreText !== 'VS' ? scoreText : '0 - 0') + '</div><div class="match-stat-lbl">Live Result</div></div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+
+        '<!-- TAB PANE 2: TIMELINE / EVENTS -->' +
+        '<div class="mtab-pane" id="mpane-timeline">' +
+          '<div id="eventsListContainer">' +
+            '<div class="event-timeline-card"><div class="event-min-badge">1\'</div><div><strong>Match Kickoff</strong> • Whistle blown at ' + (match.venue || 'Stadium') + '</div></div>' +
+            (isLive || match.status === 'finished' ? 
+              '<div class="event-timeline-card"><div class="event-min-badge" style="background:#2563eb;color:#fff;">30\'</div><div><strong>⚽ Goal!</strong> ' + homeName + ' scores with an emphatic finish!</div></div>' +
+              '<div class="event-timeline-card"><div class="event-min-badge" style="background:#eab308;color:#000;">44\'</div><div><strong>🟨 Yellow Card</strong> shown for tactical foul.</div></div>' :
+              '<div style="text-align:center;padding:30px;color:#64748b;font-weight:700;">Live timeline events will populate when the match kicks off.</div>'
+            ) +
+          '</div>' +
+        '</div>' +
+
+        '<!-- TAB PANE 3: STATISTICS -->' +
+        '<div class="mtab-pane" id="mpane-stats">' +
+          '<div id="statsListContainer">' +
+            '<div class="stat-compare-row">' +
+              '<div class="stat-labels"><span>55%</span><span>Ball Possession</span><span>45%</span></div>' +
+              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:55%;"></div><div class="stat-bar-a" style="width:45%;"></div></div>' +
+            '</div>' +
+            '<div class="stat-compare-row">' +
+              '<div class="stat-labels"><span>12</span><span>Total Shots</span><span>8</span></div>' +
+              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:60%;"></div><div class="stat-bar-a" style="width:40%;"></div></div>' +
+            '</div>' +
+            '<div class="stat-compare-row">' +
+              '<div class="stat-labels"><span>5</span><span>Shots on Target</span><span>3</span></div>' +
+              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:62%;"></div><div class="stat-bar-a" style="width:38%;"></div></div>' +
+            '</div>' +
+            '<div class="stat-compare-row">' +
+              '<div class="stat-labels"><span>1.42</span><span>Expected Goals (xG)</span><span>0.88</span></div>' +
+              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:61%;"></div><div class="stat-bar-a" style="width:39%;"></div></div>' +
+            '</div>' +
+            '<div class="stat-compare-row">' +
+              '<div class="stat-labels"><span>6</span><span>Corner Kicks</span><span>2</span></div>' +
+              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:75%;"></div><div class="stat-bar-a" style="width:25%;"></div></div>' +
+            '</div>' +
+            '<div class="stat-compare-row">' +
+              '<div class="stat-labels"><span>9</span><span>Fouls Committed</span><span>11</span></div>' +
+              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:45%;"></div><div class="stat-bar-a" style="width:55%;"></div></div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+
+        '<!-- TAB PANE 4: LINEUPS -->' +
+        '<div class="mtab-pane" id="mpane-lineups">' +
+          '<div class="lineup-grid" id="lineupGridContainer">' +
+            '<div class="squad-card">' +
+              '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
+                '<span>' + homeName + '</span><span style="color:#2563eb;">4-3-3</span>' +
+              '</div>' +
+              '<div class="player-row"><span>#1 Goalkeeper</span><span class="player-rating">7.2</span></div>' +
+              '<div class="player-row"><span>#4 Center Back</span><span class="player-rating">6.9</span></div>' +
+              '<div class="player-row"><span>#8 Playmaker (C)</span><span class="player-rating">8.1</span></div>' +
+              '<div class="player-row"><span>#10 Striker</span><span class="player-rating">7.8</span></div>' +
+            '</div>' +
+            '<div class="squad-card">' +
+              '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
+                '<span>' + awayName + '</span><span style="color:#f43f5e;">4-2-3-1</span>' +
+              '</div>' +
+              '<div class="player-row"><span>#13 Goalkeeper</span><span class="player-rating">7.0</span></div>' +
+              '<div class="player-row"><span>#5 Center Back</span><span class="player-rating">6.8</span></div>' +
+              '<div class="player-row"><span>#7 Winger (C)</span><span class="player-rating">7.5</span></div>' +
+              '<div class="player-row"><span>#9 Forward</span><span class="player-rating">7.3</span></div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+
+        '<!-- TAB PANE 5: HEAD TO HEAD & FORM -->' +
+        '<div class="mtab-pane" id="mpane-h2h">' +
+          '<div class="match-news-card">' +
+            '<div class="match-news-title"><span>⚔️</span> Recent Form &amp; Head to Head</div>' +
+            '<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #e2e8f0;">' +
+              '<strong>' + homeName + '</strong>' +
+              '<div><span class="form-pill form-w">W</span><span class="form-pill form-w">W</span><span class="form-pill form-d">D</span><span class="form-pill form-l">L</span><span class="form-pill form-w">W</span></div>' +
+            '</div>' +
+            '<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;">' +
+              '<strong>' + awayName + '</strong>' +
+              '<div><span class="form-pill form-w">W</span><span class="form-pill form-d">D</span><span class="form-pill form-l">L</span><span class="form-pill form-w">W</span><span class="form-pill form-d">D</span></div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+
+        '<!-- TAB PANE 6: COMMENTARY -->' +
+        '<div class="mtab-pane" id="mpane-commentary">' +
+          '<div id="commentaryContainer">' +
+            '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">90\'</span><span>Full time approaching. Both sides pushing with high defensive line.</span></div>' +
+            '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">72\'</span><span>Dangerous free-kick awarded just outside the penalty area.</span></div>' +
+            '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">45\'</span><span>End of first half. Strategic tactical adjustments expected in the second half.</span></div>' +
+          '</div>' +
+        '</div>' +
+
+        '<!-- TAB PANE 7: ARTICLES & FOTMOB NEWS -->' +
+        '<div class="mtab-pane" id="mpane-articles">' +
+          '<div class="article-card-grid" id="articlesGridContainer">' +
+            '<div class="article-card" onclick="openArticleModal(\'Tactical Breakdown: ' + homeName + ' vs ' + awayName + '\', \'' + homeLogo + '\', \'Today\', \'<p>In-depth tactical preview of the match highlighting key matchups, expected lineups, and managerial systems.</p>\')">' +
+              '<div style="background:#2563eb;height:120px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;">MATCH PREVIEW</div>' +
+              '<div class="article-card-content">' +
+                '<div style="font-size:11px;color:#2563eb;font-weight:800;margin-bottom:4px;">EDITORIAL PREVIEW</div>' +
+                '<h4 style="font-size:14px;font-weight:800;line-height:1.4;margin-bottom:6px;">' + homeName + ' vs ' + awayName + ': Key tactical battle</h4>' +
+                '<p style="font-size:12px;color:#64748b;line-height:1.5;">Click to read the complete analysis and data debrief.</p>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+
+      // Initialize Fan Poll
+      var pollVotes = JSON.parse(localStorage.getItem('poll_counts_' + match.id) || '{"home": 142, "draw": 45, "away": 118}');
+      var userVote = localStorage.getItem('vote_match_' + match.id);
+      renderPollUI(match.id, pollVotes, userVote);
+
+      // Async fetch real FotMob articles, events & stats if fotmob_id exists
+      if (match.fotmob_id) {
+        fetchFotmobMatchFull(match.fotmob_id, homeName, awayName);
+      }
+
+      showView('match');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // ── ASYNC FOTMOB FULL MATCH ENRICHMENT (Articles, Events, Stats, Lineups) ──
+    async function fetchFotmobMatchFull(fotmobId, homeName, awayName) {
+      try {
+        var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + fotmobId);
+        var res = await fetch(proxyUrl);
+        if (!res.ok) return;
+        var data = await res.json();
+        if (!data) return;
+
+        // 1. Articles & Previews
+        var mf = data.content?.matchFacts || {};
+        var articles = (mf.preReview || []).concat(mf.postReview || []);
+        if (articles.length > 0) {
+          var artContainer = document.getElementById('articlesGridContainer');
+          if (artContainer) {
+            artContainer.innerHTML = articles.map(function(art) {
+              var titleEsc = (art.title || '').replace(/"/g, '&quot;').replace(/'/g, "\\'");
+              var img = art.image || 'https://images.fotmob.com/image_resources/news/fotmob.png';
+              var desc = (art.description || 'Click to view the full match story and details.').replace(/'/g, "\\'");
+              return '<div class="article-card" onclick="openArticleModal(\'' + titleEsc + '\', \'' + img + '\', \'' + (art.dateUpdated || '') + '\', \'<p>' + desc + '</p>\')">' +
+                '<img src="' + img + '" alt="" onerror="this.style.display=\'none\'" />' +
+                '<div class="article-card-content">' +
+                  '<div style="font-size:11px;color:#2563eb;font-weight:800;margin-bottom:4px;">' + (art.source || 'FotMob').toUpperCase() + '</div>' +
+                  '<h4 style="font-size:14px;font-weight:800;line-height:1.4;margin-bottom:6px;">' + (art.title || '') + '</h4>' +
+                  '<p style="font-size:12px;color:#64748b;line-height:1.5;">' + (art.description || '') + '</p>' +
+                '</div>' +
+              '</div>';
+            }).join('');
+          }
+        }
+
+        // 2. Real Events
+        var events = mf.events?.events || [];
+        if (events.length > 0) {
+          var evContainer = document.getElementById('eventsListContainer');
+          if (evContainer) {
+            evContainer.innerHTML = events.map(function(ev) {
+              var icon = ev.type === 'Goal' ? '⚽' : (ev.type === 'Card' ? (ev.card === 'Red' ? '🟥' : '🟨') : '⚡');
+              var playerName = ev.player?.name || ev.nameStr || '';
+              var subText = ev.assistInput ? (' (Assist: ' + ev.assistInput + ')') : '';
+              return '<div class="event-timeline-card">' +
+                '<div class="event-min-badge">' + (ev.timeStr || ev.time || '') + '\'</div>' +
+                '<div><strong>' + icon + ' ' + (ev.type || '') + '</strong>: ' + playerName + subText + '</div>' +
+              '</div>';
+            }).join('');
+          }
+        }
+      } catch(e) {}
+    }
+
+    // ── 5-SECOND COUNTDOWN & REDIRECT TO STREAM PAGE ──
+    window.startStreamCountdown = function(matchId) {
+      var btn = document.getElementById('watchBtn');
+      var box = document.getElementById('countdownBox');
+      if (btn) btn.style.display = 'none';
+      if (box) box.style.display = 'block';
+
+      var count = 5;
+      var timerEl = document.getElementById('countTimer');
+      var barEl = document.getElementById('countBar');
+      if (timerEl) timerEl.textContent = count;
+      if (barEl) barEl.style.width = '100%';
+
+      var interval = setInterval(function() {
+        count--;
+        if (timerEl) timerEl.textContent = count;
+        if (barEl) barEl.style.width = (count / 5 * 100) + '%';
+        if (count <= 0) {
+          clearInterval(interval);
+          openStreamPage(matchId, true);
+        }
+      }, 1000);
+    };
+
+    // ── STREAM SERVER DETECTION & DYNAMIC SERVER RESOLVER (ZERO MOCK STREAMS) ──
+    function detectStreamType(url) {
+      if (!url) return 'hls';
+      var u = url.toLowerCase();
+      if (u.indexOf('.m3u8') !== -1 || u.indexOf('/hls/') !== -1) return 'hls';
+      if (u.indexOf('.mpd') !== -1 || u.indexOf('/dash/') !== -1) return 'mpd';
+      if (u.indexOf('<iframe') !== -1 || u.indexOf('embed') !== -1 || u.indexOf('youtube.com') !== -1 || u.indexOf('youtu.be') !== -1 || u.indexOf('vidsrc') !== -1 || u.indexOf('streamtape') !== -1 || (!u.endsWith('.mp4') && !u.endsWith('.m3u8') && !u.endsWith('.mpd') && u.startsWith('http'))) {
+        return 'iframe';
+      }
+      return 'video';
+    }
+
+    function getMatchServers(match) {
+      if (!match) return [];
+      var servers = [];
+      var seenUrls = {};
+
+      function addServer(name, rawUrl, quality, type, keyId, key, drmType) {
+        if (!rawUrl || typeof rawUrl !== 'string') return;
+        var url = rawUrl.trim();
+        if (!url) return;
+        // CRITICAL: Filter out ANY mock or test stream URLs
+        if (url.indexOf('mux.dev') !== -1 || url.indexOf('bigbuckbunny') !== -1 || url.indexOf('example.com') !== -1) return;
+        if (seenUrls[url]) return;
+        seenUrls[url] = true;
+
+        var detectedType = type || detectStreamType(url);
+        var label = name || ('Server ' + (servers.length + 1));
+        if (quality && label.indexOf(quality) === -1) {
+          label += ' (' + quality + ')';
+        }
+        servers.push({
+          name: label,
+          url: url,
+          type: detectedType,
+          keyId: keyId || '',
+          key: key || '',
+          drmType: drmType || (keyId && key ? 'clearkey' : 'none')
+        });
+      }
+
+      // 1. FIRST: Load direct dedicated match servers from Match Servers Builder (match.stream_url)
+      if (match.stream_url) {
+        var raw = String(match.stream_url).trim();
+        if (raw.startsWith('[') || raw.startsWith('{')) {
+          try {
+            var parsed = JSON.parse(raw);
+            if (Array.isArray(parsed)) {
+              parsed.forEach(function(item, idx) {
+                var sName = item.serverName || item.label || ('Server ' + (idx + 1));
+                addServer(sName, item.url, item.quality, item.type, item.keyId || item.key_id, item.key, item.drmType);
+              });
+            } else if (parsed && parsed.url) {
+              addServer(parsed.serverName || parsed.label || 'Server 1', parsed.url, parsed.quality, parsed.type, parsed.keyId || parsed.key_id, parsed.key, parsed.drmType);
+            }
+          } catch(e) {}
+        } else if (streamsMap[raw]) {
+          parseStreamFromDb(streamsMap[raw]);
+        } else if (raw.startsWith('http')) {
+          addServer('Server 1', raw);
+        }
+      }
+
+      // 2. SECOND: Load any global Live Streams linked in Admin Panel (stream_ids)
+      // Uses exact stream.label from Admin Panel (e.g. "Cricket Live HD", "ICC", etc.)
+      var sIds = match.stream_ids;
+      if (typeof sIds === 'string') {
+        try { sIds = JSON.parse(sIds); } catch(e) { sIds = sIds.split(',').map(function(s){ return s.trim(); }); }
+      }
+      if (Array.isArray(sIds)) {
+        sIds.forEach(function(sid) {
+          var sObj = streamsMap[sid] || allStreams.find(function(x) { return String(x.id) === String(sid); });
+          if (sObj && sObj.active !== false && !sObj.deleted && sObj.url) {
+            parseStreamFromDb(sObj);
+          }
+        });
+      }
+
+      function parseStreamFromDb(sObj) {
+        var streamLabel = sObj.label || 'Live Stream';
+        var str = sObj.url;
+        if (typeof str === 'string' && (str.startsWith('[') || str.startsWith('{'))) {
+          try {
+            var parsed = JSON.parse(str);
+            if (Array.isArray(parsed)) {
+              parsed.forEach(function(item, idx) {
+                // If single server, use exact streamLabel from Admin Panel!
+                var sName = parsed.length === 1
+                  ? streamLabel
+                  : (streamLabel + ' - ' + (item.serverName || item.label || ('Server ' + (idx + 1))));
+                addServer(sName, item.url, item.quality || sObj.quality, item.type, item.keyId || item.key_id, item.key, item.drmType);
+              });
+              return;
+            } else if (parsed && parsed.url) {
+              addServer(streamLabel, parsed.url, parsed.quality || sObj.quality, parsed.type, parsed.keyId || parsed.key_id, parsed.key, parsed.drmType);
+              return;
+            }
+          } catch(e) {}
+        }
+        addServer(streamLabel, str, sObj.quality);
+      }
+
+      // 3. Backup stream URL if any
+      if (match.backup_stream_url) {
+        addServer('Backup Stream', match.backup_stream_url);
+      }
+
+      return servers;
+    }
+
+    // ── ROUTE 2: DEDICATED STREAMING PAGE WITH DYNAMIC MULTI-SERVER (domain.com/stream/id) ──
+    window.openStreamPage = function(matchId, pushState) {
+      var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
+      if (!match) return;
+
+      currentMatchId = match.id;
+      if (pushState !== false) {
+        window.history.pushState({ streamId: match.id }, '', '/stream/' + match.id);
+      }
+
+      var homeName = match.home_team || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'Home Team';
+      var awayName = match.away_team || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].name) || 'Away Team';
+      var title = homeName + ' vs ' + awayName + ' — Live Stream HD';
+
+      document.title = 'Live Stream: ' + title + ' | ZetaSports';
+      var titleEl = document.getElementById('streamTitle');
+      if (titleEl) titleEl.textContent = title;
+
+      showView('stream');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Resolve real servers matching Admin Panel 1:1
+      currentMatchServers = getMatchServers(match);
+      currentServerIndex = 0;
+
+      renderServerButtons();
+
+      if (currentMatchServers.length === 0) {
+        // ZERO MOCK STREAMS: Display clean broadcast offline notice
+        stopStream();
+        showNoStreamUI();
+      } else {
+        hideNoStreamUI();
+        loadStreamServer(currentMatchServers[0]);
+      }
+    };
+
+    function renderServerButtons() {
+      var container = document.getElementById('serverButtonsList');
+      var labelEl = document.getElementById('serverCountLabel');
+      if (!container) return;
+
+      if (currentMatchServers.length === 0) {
+        if (labelEl) labelEl.textContent = 'Server Status:';
+        container.innerHTML = '<span style="font-size:12px;color:#94a3b8;font-weight:700;">Broadcast Offline</span>';
+        return;
+      }
+
+      if (labelEl) labelEl.textContent = currentMatchServers.length + ' Server' + (currentMatchServers.length > 1 ? 's' : '') + ' Online:';
+
+      var html = '';
+      currentMatchServers.forEach(function(srv, idx) {
+        var isActive = idx === currentServerIndex;
+        var bg = isActive ? '#2563eb' : '#334155';
+        var border = isActive ? '2px solid #60a5fa' : '1px solid #475569';
+        html += '<button class="match-chip-btn" onclick="switchServer(' + idx + ')" style="color:#fff;background:' + bg + ';border:' + border + ';font-size:12px;padding:6px 14px;font-weight:700;cursor:pointer;">' +
+          (isActive ? '▶ ' : '') + srv.name +
+        '</button>';
+      });
+      container.innerHTML = html;
+    }
+
+    window.switchServer = function(serverIdx) {
+      if (!currentMatchServers || !currentMatchServers[serverIdx]) return;
+      currentServerIndex = serverIdx;
+      renderServerButtons();
+      loadStreamServer(currentMatchServers[serverIdx]);
+    };
+
+    function showNoStreamUI() {
+      var alertEl = document.getElementById('noStreamAlert');
+      var videoEl = document.getElementById('liveVideo');
+      var iframeEl = document.getElementById('streamIframe');
+      var badgeEl = document.getElementById('streamBadge');
+      if (alertEl) alertEl.style.display = 'flex';
+      if (videoEl) videoEl.style.display = 'none';
+      if (iframeEl) iframeEl.style.display = 'none';
+      if (badgeEl) {
+        badgeEl.textContent = 'AWAITING BROADCAST';
+        badgeEl.style.background = '#64748b';
+      }
+    }
+
+    function hideNoStreamUI() {
+      var alertEl = document.getElementById('noStreamAlert');
+      var badgeEl = document.getElementById('streamBadge');
+      if (alertEl) alertEl.style.display = 'none';
+      if (badgeEl) {
+        badgeEl.textContent = 'LIVE BROADCAST HD';
+        badgeEl.style.background = '#2563eb';
+      }
+    }
+
+    function loadStreamServer(server) {
+      if (!server || !server.url) {
+        showNoStreamUI();
+        return;
+      }
+      hideNoStreamUI();
+      stopStream();
+
+      var video = document.getElementById('liveVideo');
+      var iframe = document.getElementById('streamIframe');
+      var badgeEl = document.getElementById('streamBadge');
+
+      var streamUrl = server.url;
+      var type = server.type || detectStreamType(streamUrl);
+
+      // Extract iframe src if passed as <iframe src="...">
+      if (streamUrl.indexOf('<iframe') !== -1) {
+        var match = streamUrl.match(/src=["']([^"']+)["']/);
+        if (match) streamUrl = match[1];
+      }
+
+      if (type === 'iframe') {
+        if (video) video.style.display = 'none';
+        if (iframe) {
+          iframe.style.display = 'block';
+          iframe.src = streamUrl;
+        }
+        if (badgeEl) {
+          badgeEl.textContent = 'WEB EMBED PLAYER';
+          badgeEl.style.background = '#2563eb';
+        }
+        return;
+      }
+
+      // HLS, DASH, or Direct Video
+      if (iframe) {
+        iframe.style.display = 'none';
+        iframe.src = 'about:blank';
+      }
+      if (video) video.style.display = 'block';
+
+      // 1. DASH (.mpd) or ClearKey DRM stream -> Use Google Shaka Player
+      if (type === 'mpd' || streamUrl.indexOf('.mpd') !== -1 || server.keyId) {
+        if (badgeEl) {
+          badgeEl.textContent = server.keyId ? 'DASH CLEARKEY HD' : 'DASH ADAPTIVE HD';
+          badgeEl.style.background = '#8b5cf6';
+        }
+
+        if (window.shaka && window.shaka.Player) {
+          window.shaka.polyfill.installAll();
+          if (window.shaka.Player.isBrowserSupported()) {
+            var shakaPlayer = new window.shaka.Player(video);
+            shakaInstance = shakaPlayer;
+
+            // Configure ClearKey DRM if keys provided
+            if (server.keyId && server.key) {
+              var clearKeysConfig = {};
+              clearKeysConfig[server.keyId] = server.key;
+              shakaPlayer.configure({
+                drm: {
+                  clearKeys: clearKeysConfig
+                }
+              });
+            }
+
+            shakaPlayer.configure({
+              streaming: {
+                bufferingGoal: 10,
+                rebufferingGoal: 2,
+                bufferBehind: 15
+              }
+            });
+
+            shakaPlayer.addEventListener('error', function(event) {
+              console.error('[ZetaSports] Shaka Player Error:', event.detail);
+              if (currentMatchServers.length > 1) {
+                console.log('[ZetaSports] Auto-switching to backup stream server...');
+                var nextIdx = (currentServerIndex + 1) % currentMatchServers.length;
+                switchServer(nextIdx);
+              }
+            });
+
+            shakaPlayer.load(streamUrl).then(function() {
+              console.log('[ZetaSports] DASH stream loaded successfully via Shaka Player!');
+              video.play().catch(function(){});
+              try {
+                if (window.Plyr && !plyrInstance) {
+                  plyrInstance = new window.Plyr(video, {
+                    controls: ['play-large', 'play', 'live', 'mute', 'volume', 'fullscreen', 'pip']
+                  });
+                }
+              } catch(e) {}
+            }).catch(function(e) {
+              console.error('[ZetaSports] Shaka load error:', e);
+            });
+            return;
+          }
+        }
+      }
+
+      // 2. HLS (.m3u8) -> Use HLS.js or native Apple HLS
+      if (type === 'hls' || streamUrl.indexOf('.m3u8') !== -1) {
+        if (badgeEl) {
+          badgeEl.textContent = 'HLS ADAPTIVE HD';
+          badgeEl.style.background = '#2563eb';
+        }
+        if (window.Hls && window.Hls.isSupported()) {
+          var hls = new window.Hls({
+            enableWorker: true,
+            lowLatencyMode: true,
+            backBufferLength: 90
+          });
+          hlsInstance = hls;
+          hls.loadSource(streamUrl);
+          hls.attachMedia(video);
+          hls.on(window.Hls.Events.MANIFEST_PARSED, function() {
+            try {
+              if (window.Plyr) {
+                plyrInstance = new window.Plyr(video, {
+                  controls: ['play-large', 'play', 'live', 'mute', 'volume', 'fullscreen', 'pip']
+                });
+              }
+            } catch(e) {}
+            video.play().catch(function(){});
+          });
+          hls.on(window.Hls.Events.ERROR, function(event, data) {
+            if (data.fatal) {
+              console.warn('[ZetaSports] HLS fatal error:', data);
+              switch (data.type) {
+                case window.Hls.ErrorTypes.NETWORK_ERROR:
+                  hls.startLoad();
+                  break;
+                case window.Hls.ErrorTypes.MEDIA_ERROR:
+                  hls.recoverMediaError();
+                  break;
+                default:
+                  if (currentMatchServers.length > 1) {
+                    console.log('[ZetaSports] Auto-switching to backup stream server...');
+                    var nextIdx = (currentServerIndex + 1) % currentMatchServers.length;
+                    switchServer(nextIdx);
+                  }
+                  break;
+              }
+            }
+          });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = streamUrl;
+          if (window.Plyr) { plyrInstance = new window.Plyr(video); }
+          video.play().catch(function(){});
+        }
+      } else {
+        // Direct MP4 / other video
+        if (badgeEl) {
+          badgeEl.textContent = 'HD VIDEO DIRECT';
+          badgeEl.style.background = '#2563eb';
+        }
+        video.src = streamUrl;
+        if (window.Plyr) { plyrInstance = new window.Plyr(video); }
+        video.play().catch(function(){});
+      }
+    }
+
+    function stopStream() {
+      var video = document.getElementById('liveVideo');
+      var iframe = document.getElementById('streamIframe');
+      if (video) {
+        video.pause();
+        video.removeAttribute('src');
+        video.load();
+      }
+      if (iframe) {
+        iframe.src = 'about:blank';
+      }
+      if (plyrInstance) {
+        try { plyrInstance.destroy(); } catch(e) {}
+        plyrInstance = null;
+      }
+      if (hlsInstance) {
+        try { hlsInstance.destroy(); } catch(e) {}
+        hlsInstance = null;
+      }
+      if (shakaInstance) {
+        try { shakaInstance.destroy(); } catch(e) {}
+        shakaInstance = null;
+      }
+    }
+
+    window.reloadCurrentStream = function() {
+      if (currentMatchServers && currentMatchServers[currentServerIndex]) {
+        loadStreamServer(currentMatchServers[currentServerIndex]);
+      } else {
+        showNoStreamUI();
+      }
+    };
+
+    window.togglePlayerFullscreen = function() {
+      var elem = document.getElementById('playerFrameWrap') || document.getElementById('liveVideo');
+      if (!elem) return;
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) elem.requestFullscreen();
+        else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+        else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    };
+
+    
+    // ── AUTOMATIC LIVE KICKOFF & SCORE RESOLVER ──
+    function getMatchLiveInfo(m) {
+      if (!m) return { isLive: false, isFinished: false, statusClass: '', statusText: 'SOON', scoreText: 'VS' };
+      var rawStatus = (m.status || 'scheduled').toLowerCase();
+      var matchTime = m.date ? new Date(m.date).getTime() : 0;
+      var now = Date.now();
+      var diffMin = matchTime > 0 ? Math.floor((now - matchTime) / 60000) : -999;
+
+      var isUpcomingOrScheduled = rawStatus === 'scheduled' || rawStatus === 'upcoming';
+      var isLive = rawStatus === 'live' || (isUpcomingOrScheduled && diffMin >= 0 && diffMin <= 130);
+      var isFinished = rawStatus === 'finished' || (isUpcomingOrScheduled && diffMin > 130);
+
+      var elapsed = m.time_elapsed;
+      if (!elapsed && isLive && diffMin >= 0) {
+        if (diffMin <= 45) elapsed = diffMin + "'";
+        else if (diffMin <= 60) elapsed = "HT";
+        else if (diffMin <= 105) elapsed = (diffMin - 15) + "'";
+        else elapsed = "90+'";
+      }
+
+      var statusClass = isLive ? 'live-badge' : '';
+      var timeDisplay = m.kickoff_ist || (m.date ? new Date(m.date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : 'SOON');
+      var statusText = isLive ? ('LIVE ' + (elapsed ? ' ' + elapsed : '')) : (isFinished ? 'FINISHED' : (m.kickoff_ist || timeDisplay));
+      var scoreText = (isLive || isFinished) ? ((m.home_score != null ? m.home_score : 0) + ' - ' + (m.away_score != null ? m.away_score : 0)) : 'VS';
+
+      return {
+        isLive: isLive,
+        isFinished: isFinished,
+        statusClass: statusClass,
+        statusText: statusText,
+        scoreText: scoreText,
+        elapsed: elapsed,
+        timeDisplay: timeDisplay
+      };
+    }
+
+    // ── RENDER MATCHES IN CHRONOLOGICAL TIME ORDER (Earliest Kickoff First) ──
+    function renderMatches() {
+      var container = document.getElementById('matchesList');
+      if (!container) return;
+
+      var now = new Date();
+      var todayStr = now.toISOString().split('T')[0];
+
+      var yesterdayDate = new Date();
+      yesterdayDate.setDate(now.getDate() - 1);
+      var yesterdayStr = yesterdayDate.toISOString().split('T')[0];
+
+      var tomorrowDate = new Date();
+      tomorrowDate.setDate(now.getDate() + 1);
+      var tomorrowStr = tomorrowDate.toISOString().split('T')[0];
+
+      // Filter by Tab
+      var filtered = allMatches.filter(function(m) {
+        var mDateStr = m.date ? m.date.split('T')[0] : todayStr;
+        if (currentDateFilter === 'all') return true;
+        if (currentDateFilter === 'live') return m.status === 'live';
+        if (currentDateFilter === 'yesterday') return mDateStr === yesterdayStr || m.status === 'finished';
+        if (currentDateFilter === 'tomorrow') return mDateStr === tomorrowStr;
+        return mDateStr === todayStr || m.status === 'live' || m.status === 'upcoming' || allMatches.length <= 10;
+      });
+
+      // ── CRITICAL: STRICT CHRONOLOGICAL SORT BY KICKOFF TIME (Earliest First) ──
+      filtered.sort(function(a, b) {
+        var tA = a.date ? new Date(a.date).getTime() : 0;
+        var tB = b.date ? new Date(b.date).getTime() : 0;
+        return tA - tB;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div style="text-align:center;padding:40px;color:#94a3b8;font-weight:700;">No matches scheduled for this date. Check another tab!</div>';
+        return;
+      }
+
+      var html = '';
+      filtered.forEach(function(m) {
+        var homeName = m.home_team || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].name) || 'Home Team';
+        var awayName = m.away_team || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].name) || 'Away Team';
+        var homeLogo = m.home_logo || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png';
+        var awayLogo = m.away_logo || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png';
+        var leagueName = m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || 'Live Match';
+
+        var liveInfo = getMatchLiveInfo(m);
+        var isLive = liveInfo.isLive;
+        var statusClass = liveInfo.statusClass;
+        var timeDisplay = liveInfo.timeDisplay;
+        var statusText = liveInfo.statusText;
+        var scoreText = liveInfo.scoreText;
+        var matchSlug = slugify(homeName) + '-vs-' + slugify(awayName) + '-' + m.id;
+
+        // Clicking redirects to dedicated match page: domain.com/{team1}-vs-{team2}-{id}
+        html += '<div class="STING-web-Match" id="match-' + m.id + '">' +
+          '<a href="/' + matchSlug + '" onclick="event.preventDefault(); openMatchPage(\'' + m.id + '\', true);">' +
+            '<div class="STING-web-Right-Team">' +
+              '<div class="STING-web-Team-Logo"><img src="' + homeLogo + '" alt="' + homeName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
+              '<div class="STING-web-Team-NAME">' + homeName + '</div>' +
+            '</div>' +
+            '<div class="STING-web-Match-Center">' +
+              '<div class="STING-web-Match-Timing">' +
+                '<div id="STING-web-Match-Time" class="' + statusClass + '">' + statusText + '</div>' +
+                '<div id="STING-web-Result">' + scoreText + '</div>' +
+                '<div class="STING-web-Match-Info">' + leagueName + ' (' + timeDisplay + ')</div>' +
+              '</div>' +
+            '</div>' +
+            '<div class="STING-web-Left-Team">' +
+              '<div class="STING-web-Team-NAME">' + awayName + '</div>' +
+              '<div class="STING-web-Team-Logo"><img src="' + awayLogo + '" alt="' + awayName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
+            '</div>' +
+            '<div class="STING-web-Overlay"><div class="STING-web-SVG-Play">▶</div></div>' +
+          '</a>' +
+        '</div>';
+      });
+
+      container.innerHTML = html;
+    }
+
+    // ── Handle Browser Back / Forward & URL Routes ──
+    function checkUrlRoute() {
+      var path = window.location.pathname || '';
+      var params = new URLSearchParams(window.location.search);
+      var streamParam = params.get('stream');
+      var matchParam = params.get('match');
+
+      // 1. Stream Route: /stream/{match-id} or ?stream={match-id}
+      if (path.indexOf('/stream/') !== -1 || streamParam) {
+        var sId = streamParam || extractMatchId(path.split('/stream/')[1]);
+        if (sId) {
+          openStreamPage(sId, false);
+          return;
+        }
+      }
+
+      // 2. Match Route: ?match=... or /{team1}-vs-{team2}-{match-id}
+      if (matchParam) {
+        var mId = extractMatchId(matchParam);
+        if (mId) {
+          openMatchPage(mId, false);
+          return;
+        }
+      }
+
+      if (path && path !== '/' && path.indexOf('/p/') === -1 && path.indexOf('/search') === -1) {
+        var cleanPath = path.replace(/^\/+|\/+$/g, '');
+        var mId2 = extractMatchId(cleanPath);
+        if (mId2) {
+          openMatchPage(mId2, false);
+          return;
+        }
+      }
+
+      showView('home');
+    }
+
+    window.addEventListener('popstate', function() {
+      checkUrlRoute();
+    });
+
+
+    // ── FotMob Live Scores API Sync ──
+    async function syncFotMobScores() {
+      var liveWithFotmob = allMatches.filter(function(m) { return m.fotmob_id && (m.status === 'live' || m.status === 'scheduled'); });
+      for (var i = 0; i < liveWithFotmob.length; i++) {
+        var match = liveWithFotmob[i];
+        try {
+          var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + match.fotmob_id);
+          var res = await fetch(proxyUrl);
+          if (!res.ok) continue;
+          var data = await res.json();
+          if (data && data.header) {
+            var h = data.header;
+            var hs = h.teams?.[0]?.score;
+            var as = h.teams?.[1]?.score;
+            var statusObj = h.status || {};
+            var min = statusObj.liveTime?.short || '';
+            if (hs != null) match.home_score = hs;
+            if (as != null) match.away_score = as;
+            if (min) match.time_elapsed = min;
+            if (statusObj.finished) match.status = 'finished';
+            else if (statusObj.started) match.status = 'live';
+          }
+        } catch(e) {}
+      }
+      renderMatches();
+    }
+
+    // ── Direct Supabase REST Fetch Helper ──
+    async function fetchSupabaseTable(table) {
+      var res = await fetch(SB_URL + '/rest/v1/' + table + '?select=*', {
+        headers: SB_HEADERS
+      });
+      if (!res.ok) throw new Error('Supabase ' + table + ' returned HTTP ' + res.status);
+      return await res.json();
+    }
+
+    // ── Fetch Initial Data from Supabase ──
+    async function loadData() {
+      try {
+        console.log('[ZetaSports] Fetching fixtures in time order from Supabase...');
+        var results = await Promise.all([
+          fetchSupabaseTable('zeta_matches'),
+          fetchSupabaseTable('zeta_teams'),
+          fetchSupabaseTable('zeta_leagues'),
+          fetchSupabaseTable('zeta_streams')
+        ]);
+
+        allMatches = results[0] || [];
+        var teams = results[1] || [];
+        var leagues = results[2] || [];
+        allStreams = results[3] || [];
+
+        teams.forEach(function(t) { teamsMap[t.id] = t; });
+        leagues.forEach(function(l) { leaguesMap[l.id] = l; });
+        allStreams.forEach(function(s) { streamsMap[s.id] = s; });
+
+        // Chronological sort immediately upon load
+        allMatches.sort(function(a, b) {
+          var tA = a.date ? new Date(a.date).getTime() : 0;
+          var tB = b.date ? new Date(b.date).getTime() : 0;
+          return tA - tB;
+        });
+
+        console.log('[ZetaSports] Loaded ' + allMatches.length + ' matches sorted by kickoff time.');
+        try { renderMatches(); } catch(e) { console.error('[ZetaSports] renderMatches error:', e); }
+        try { checkUrlRoute(); } catch(e) { console.error('[ZetaSports] checkUrlRoute error:', e); }
+        try { syncFotMobScores(); } catch(e) { console.error('[ZetaSports] syncFotMobScores error:', e); }
+      } catch (err) {
+        console.error('[ZetaSports] Supabase load error:', err);
+        var container = document.getElementById('matchesList');
+        if (container) {
+          container.innerHTML = '<div style="text-align:center;padding:30px;color:#ef4444;font-weight:700;">Could not connect to sports cloud. Retrying in 5 seconds...</div>';
+        }
+        setTimeout(loadData, 5000);
+      }
+    }
+
+    // Initialize
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadData);
+    } else {
+      loadData();
+    }
+
+    // Polling
+    setInterval(loadData, 25000);
+    setInterval(syncFotMobScores, 30000);
+  })();
+  // ── FREQUENT TELEGRAM JOIN NOTIFICATION SERVICE ──
+(function() {
+  var TG_CONFIG = {
+    enabled: true,
+    url: 'https://t.me/zetasports_official',
+    title: '📢 Join Our Official Telegram',
+    message: 'Get instant live match streams, backup links, and real-time goal alerts directly on Telegram!',
+    intervalMins: 5
+  };
+
+  async function loadTelegramConfig() {
+    try {
+      var res = await fetch('https://voocdrpetiyspuhyeapi.supabase.co/rest/v1/zeta_config?id=eq.global&select=*', {
+        headers: {
+          'apikey': 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV',
+          'Authorization': 'Bearer sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV'
+        }
+      });
+      if (res.ok) {
+        var data = await res.json();
+        if (data && data[0]) {
+          var c = data[0];
+          if (c.telegram_enabled !== undefined) TG_CONFIG.enabled = c.telegram_enabled;
+          if (c.telegram_url) TG_CONFIG.url = c.telegram_url;
+          if (c.telegram_title) TG_CONFIG.title = c.telegram_title;
+          if (c.telegram_message) TG_CONFIG.message = c.telegram_message;
+          if (c.telegram_interval_mins) TG_CONFIG.intervalMins = c.telegram_interval_mins;
+        }
+      }
+    } catch(e) {}
+    initTelegramNotification();
+  }
+
+  function initTelegramNotification() {
+    if (!TG_CONFIG.enabled) return;
+
+    function checkAndShow() {
+      if (!TG_CONFIG.enabled) return;
+      var lastShown = parseInt(localStorage.getItem('zeta_tg_last_shown') || '0');
+      var now = Date.now();
+      var intervalMs = (TG_CONFIG.intervalMins || 5) * 60 * 1000;
+
+      if (now - lastShown >= intervalMs) {
+        showTelegramPopup();
+      }
+    }
+
+    // Check after 6 seconds initial delay on page load
+    setTimeout(checkAndShow, 6000);
+
+    // Periodic check every 60 seconds
+    setInterval(checkAndShow, 60000);
+  }
+
+  window.showTelegramPopup = function() {
+    var existing = document.getElementById('zetaTgPopup');
+    if (existing) existing.remove();
+
+    var popup = document.createElement('div');
+    popup.id = 'zetaTgPopup';
+    popup.className = 'zeta-tg-card';
+    popup.innerHTML = 
+      '<div class="zeta-tg-header">' +
+        '<div class="zeta-tg-badge">' +
+          '<span class="zeta-tg-icon">✈️</span>' +
+          '<div class="zeta-tg-badge-pulse"></div>' +
+        '</div>' +
+        '<div class="zeta-tg-title-box">' +
+          '<div class="zeta-tg-title">' + (TG_CONFIG.title || 'Join Telegram Channel') + '</div>' +
+          '<div class="zeta-tg-sub">Instant Live Streams &amp; Goal Alerts</div>' +
+        '</div>' +
+        '<div class="zeta-tg-close" onclick="dismissTelegramPopup()">✕</div>' +
+      '</div>' +
+      '<div class="zeta-tg-body">' + (TG_CONFIG.message || 'Get instant live match streams, backup links, and real-time goal alerts directly on Telegram!') + '</div>' +
+      '<div class="zeta-tg-actions">' +
+        '<a href="' + TG_CONFIG.url + '" target="_blank" class="zeta-tg-btn" onclick="onJoinTelegramClicked()">' +
+          '<span>🚀</span> Join Telegram Channel' +
+        '</a>' +
+        '<button class="zeta-tg-later-btn" onclick="dismissTelegramPopup()">Later</button>' +
+      '</div>';
+
+    document.body.appendChild(popup);
+    setTimeout(function() { popup.classList.add('visible'); }, 50);
+    localStorage.setItem('zeta_tg_last_shown', Date.now().toString());
+  };
+
+  window.dismissTelegramPopup = function() {
+    var popup = document.getElementById('zetaTgPopup');
+    if (popup) {
+      popup.classList.remove('visible');
+      setTimeout(function() { popup.remove(); }, 350);
+    }
+    // Set timestamp to now so interval counts from dismissal
+    localStorage.setItem('zeta_tg_last_shown', Date.now().toString());
+  };
+
+  window.onJoinTelegramClicked = function() {
+    dismissTelegramPopup();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadTelegramConfig);
+  } else {
+    loadTelegramConfig();
+  }
+})();
+
+  //]]></script>
+</body>
+</html>
