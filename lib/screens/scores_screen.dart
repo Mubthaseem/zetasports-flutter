@@ -144,8 +144,11 @@ class _ScoresScreenState extends State<ScoresScreen>
           if (d == null) return false;
           final dt = DateTime.tryParse(d);
           if (dt == null) return false;
-          return (dt.year == now.year && dt.month == now.month && dt.day == now.day) ||
-                 m['status'] == 'live';
+          final localDt = dt.toLocal();
+          final isSameDayUtc = (dt.year == now.year && dt.month == now.month && dt.day == now.day);
+          final isSameDayLocal = (localDt.year == now.year && localDt.month == now.month && localDt.day == now.day);
+          final isStartsAfterMidnight = localDt.isAfter(now) && localDt.difference(now).inHours <= 14;
+          return isSameDayUtc || isSameDayLocal || isStartsAfterMidnight || m['status'] == 'live';
         }).toList();
 
         if (todayMatches.isNotEmpty) {
@@ -499,25 +502,27 @@ class _ScoresScreenState extends State<ScoresScreen>
     } else if (isFinished) {
       elapsed = m['time_elapsed']?.toString() ?? 'FT';
     } else {
-      final t = m['time']?.toString() ?? '';
-      final d = m['date']?.toString() ?? '';
-      if (t.isNotEmpty && t.contains(':') && !t.startsWith('202')) {
-        elapsed = t.length >= 5 ? t.substring(0, 5) : t;
-      } else if (d.contains('T')) {
-        final spl = d.split('T').last;
-        elapsed = (spl.contains(':') && !spl.startsWith('202'))
-            ? (spl.length >= 5 ? spl.substring(0, 5) : spl)
-            : 'SCH';
-      } else if (d.isNotEmpty) {
-        final dt = DateTime.tryParse(d);
-        if (dt != null) {
-          final months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-          elapsed = '${months[dt.month - 1]} ${dt.day}';
+      if (m['kickoff_ist'] != null && m['kickoff_ist'].toString().isNotEmpty) {
+        elapsed = m['kickoff_ist'].toString();
+      } else {
+        final t = m['time']?.toString() ?? '';
+        final d = m['date']?.toString() ?? '';
+        if (t.isNotEmpty && t.contains(':') && !t.startsWith('202')) {
+          elapsed = t.length >= 5 ? t.substring(0, 5) : t;
+        } else if (d.isNotEmpty) {
+          final dt = DateTime.tryParse(d)?.toLocal();
+          if (dt != null) {
+            final hour = dt.hour;
+            final minute = dt.minute.toString().padLeft(2, '0');
+            final period = hour >= 12 ? 'PM' : 'AM';
+            final h12 = hour == 0 ? 12 : (hour > 12 ? hour - 12 : hour);
+            elapsed = '$h12:$minute $period';
+          } else {
+            elapsed = 'SCH';
+          }
         } else {
           elapsed = 'SCH';
         }
-      } else {
-        elapsed = 'SCH';
       }
     }
 

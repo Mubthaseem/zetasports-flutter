@@ -615,8 +615,17 @@ async function updateLiveScoresAndTelemetry() {
     // Resolve relational IDs so Flutter app joins work seamlessly
     const homeTeamId = await getOrCreateTeam(homeTeamName, homeTeamLogo, homeTeamName);
     const awayTeamId = await getOrCreateTeam(awayTeamName, awayTeamLogo, awayTeamName);
-    const leagueNameStr = header.leagueName || target.leagueName || 'International';
+    const leagueNameStr = details.general?.leagueName || header.leagueName || target.leagueName || 'UEFA Nations League A';
     const leagueId = await getOrCreateLeague(leagueNameStr, null, null);
+
+    let kickoffIst = null;
+    const rawUtc = header.status?.utcTime;
+    if (rawUtc) {
+      try {
+        const utcDate = new Date(rawUtc);
+        kickoffIst = utcDate.toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour: 'numeric', minute: '2-digit', hour12: true });
+      } catch (e) {}
+    }
 
     // Update or Insert Supabase zeta_matches
     const matchPayload = {
@@ -633,7 +642,9 @@ async function updateLiveScoresAndTelemetry() {
       home_score: homeScore,
       away_score: awayScore,
       status,
-      time_elapsed: timeElapsed,
+      time_elapsed: status === 'upcoming' ? (kickoffIst || timeElapsed) : timeElapsed,
+      kickoff_ist: kickoffIst || undefined,
+      venue: content.matchFacts?.infoBox?.Stadium?.name || undefined,
       period,
       home_scorers: homeScorersList ? [homeScorersList] : [],
       away_scorers: awayScorersList ? [awayScorersList] : [],

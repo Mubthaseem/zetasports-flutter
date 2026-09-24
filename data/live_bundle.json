@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-24T17:32:45.123Z",
+  "generatedAt": "2026-09-24T17:47:31.678Z",
   "activeMatchesCount": 3,
   "matches": [
     {
       "id": "5181862",
       "matchId": "0dfda687-3d38-4768-811d-006b80494fdb",
       "competitionId": "516",
-      "competitionName": "International",
+      "competitionName": "UEFA Nations League A",
       "competitionSlug": "league",
       "country": "Algeria",
       "round": 1,
@@ -33,7 +33,7 @@
       },
       "lineups": {
         "home_formation": "4-2-3-1",
-        "away_formation": "4-2-3-1",
+        "away_formation": "4-3-3",
         "coach_home": "Jorge Jesus",
         "coach_away": "Craig Bellamy",
         "players": [
@@ -75,7 +75,7 @@
           },
           {
             "name": "Nuno Mendes",
-            "number": "25",
+            "number": "19",
             "position": "38",
             "rating": "7.0",
             "is_home": true,
@@ -83,8 +83,8 @@
             "y": 0.6314
           },
           {
-            "name": "João Neves",
-            "number": "15",
+            "name": "Rúben Neves",
+            "number": "21",
             "position": "64",
             "rating": "7.0",
             "is_home": true,
@@ -152,25 +152,25 @@
             "rating": "7.0",
             "is_home": false,
             "x": 0.125,
-            "y": 0.1314
+            "y": 0.16065
           },
           {
             "name": "Ben Cabango",
-            "number": "13",
+            "number": "6",
             "position": "34",
             "rating": "7.0",
             "is_home": false,
             "x": 0.375,
-            "y": 0.1314
+            "y": 0.16065
           },
           {
-            "name": "Rhys Norrington-Davies",
-            "number": "18",
+            "name": "Ben Davies",
+            "number": "4",
             "position": "36",
             "rating": "7.0",
             "is_home": false,
             "x": 0.625,
-            "y": 0.1314
+            "y": 0.16065
           },
           {
             "name": "Jay Dasilva",
@@ -179,64 +179,185 @@
             "rating": "7.0",
             "is_home": false,
             "x": 0.875,
-            "y": 0.1314
-          },
-          {
-            "name": "Ethan Ampadu",
-            "number": "5",
-            "position": "64",
-            "rating": "7.0",
-            "is_home": false,
-            "x": 0.3,
-            "y": 0.21825
+            "y": 0.16065
           },
           {
             "name": "Jordan James",
             "number": "17",
-            "position": "66",
+            "position": "73",
             "rating": "7.0",
             "is_home": false,
-            "x": 0.7,
-            "y": 0.21825
+            "x": 0.21,
+            "y": 0.27585
+          },
+          {
+            "name": "Ethan Ampadu",
+            "number": "5",
+            "position": "75",
+            "rating": "7.0",
+            "is_home": false,
+            "x": 0.5,
+            "y": 0.27585
+          },
+          {
+            "name": "Josh Sheehan",
+            "number": "22",
+            "position": "77",
+            "rating": "7.0",
+            "is_home": false,
+            "x": 0.79,
+            "y": 0.27585
+          },
+          {
+            "name": "Lewis Koumas",
+            "number": "9",
+            "position": "103",
+            "rating": "7.0",
+            "is_home": false,
+            "x": 0.21,
+            "y": 0.3915
           },
           {
             "name": "David Brooks",
             "number": "7",
-            "position": "83",
-            "rating": "7.0",
-            "is_home": false,
-            "x": 0.162,
-            "y": 0.30510000000000004
-          },
-          {
-            "name": "Sorba Thomas",
-            "number": "19",
-            "position": "85",
-            "rating": "7.0",
-            "is_home": false,
-            "x": 0.5,
-            "y": 0.30510000000000004
-          },
-          {
-            "name": "Daniel James",
-            "number": "20",
-            "position": "87",
-            "rating": "7.0",
-            "is_home": false,
-            "x": 0.837,
-            "y": 0.30510000000000004
-          },
-          {
-            "name": "Brennan Johnson",
-            "number": "11",
-            "position": "115",
+            "position": "105",
             "rating": "7.0",
             "is_home": false,
             "x": 0.5,
             "y": 0.3915
+          },
+          {
+            "name": "Brennan Johnson",
+            "number": "11",
+            "position": "107",
+            "rating": "7.0",
+            "is_home": false,
+            "x": 0.79,
+            "y": 0.3915
           }
         ],
-        "substitutes": []
+        "substitutes": [
+          {
+            "name": "Rui Silva",
+            "number": "12",
+            "is_home": true
+          },
+          {
+            "name": "Samuel Soares",
+            "number": "22",
+            "is_home": true
+          },
+          {
+            "name": "Diogo Dalot",
+            "number": "2",
+            "is_home": true
+          },
+          {
+            "name": "Nuno Tavares",
+            "number": "5",
+            "is_home": true
+          },
+          {
+            "name": "Tomás Araújo",
+            "number": "4",
+            "is_home": true
+          },
+          {
+            "name": "Bernardo Silva",
+            "number": "10",
+            "is_home": true
+          },
+          {
+            "name": "João Neves",
+            "number": "15",
+            "is_home": true
+          },
+          {
+            "name": "João Palhinha",
+            "number": "6",
+            "is_home": true
+          },
+          {
+            "name": "Trincão",
+            "number": "16",
+            "is_home": true
+          },
+          {
+            "name": "Francisco Conceição",
+            "number": "14",
+            "is_home": true
+          },
+          {
+            "name": "Gonçalo Ramos",
+            "number": "9",
+            "is_home": true
+          },
+          {
+            "name": "Rafael Leão",
+            "number": "17",
+            "is_home": true
+          },
+          {
+            "name": "David Cornell",
+            "number": "1",
+            "is_home": false
+          },
+          {
+            "name": "Tom King",
+            "number": "21",
+            "is_home": false
+          },
+          {
+            "name": "Chris Mepham",
+            "number": "2",
+            "is_home": false
+          },
+          {
+            "name": "Connor Roberts",
+            "number": "14",
+            "is_home": false
+          },
+          {
+            "name": "Rhys Norrington-Davies",
+            "number": "16",
+            "is_home": false
+          },
+          {
+            "name": "Joel Colwill",
+            "number": "23",
+            "is_home": false
+          },
+          {
+            "name": "Liam Cullen",
+            "number": "10",
+            "is_home": false
+          },
+          {
+            "name": "Daniel James",
+            "number": "20",
+            "is_home": false
+          },
+          {
+            "name": "Kieffer Moore",
+            "number": "13",
+            "is_home": false
+          },
+          {
+            "name": "Mark Harris",
+            "number": "18",
+            "is_home": false
+          },
+          {
+            "name": "Sorba Thomas",
+            "number": "19",
+            "is_home": false
+          },
+          {
+            "name": "Wes Burns",
+            "number": "8",
+            "is_home": false
+          }
+        ]
       },
       "stats": {
         "home": null,
@@ -249,13 +370,13 @@
       },
       "venue": "Estádio José Alvalade",
       "referee": "Donatas Rumšas",
-      "updatedAt": "2026-09-24T17:32:41.505Z"
+      "updatedAt": "2026-09-24T17:47:25.522Z"
     },
     {
       "id": "5181825",
       "matchId": "e26ad936-4ac7-450a-8e3e-9765d7eab609",
       "competitionId": "516",
-      "competitionName": "International",
+      "competitionName": "UEFA Nations League A",
       "competitionSlug": "league",
       "country": "Algeria",
       "round": 1,
@@ -332,8 +453,8 @@
             "y": 0.66065
           },
           {
-            "name": "Joey Veerman",
-            "number": "18",
+            "name": "Quinten Timber",
+            "number": "26",
             "position": "73",
             "rating": "7.0",
             "is_home": true,
@@ -485,11 +606,150 @@
             "y": 0.3915
           }
         ],
-        "substitutes": []
+        "substitutes": [
+          {
+            "name": "Mark Flekken",
+            "number": "23",
+            "is_home": true
+          },
+          {
+            "name": "Robin Roefs",
+            "number": "13",
+            "is_home": true
+          },
+          {
+            "name": "Jeremie Frimpong",
+            "number": "12",
+            "is_home": true
+          },
+          {
+            "name": "Jorrel Hato",
+            "number": "3",
+            "is_home": true
+          },
+          {
+            "name": "Lutsharel Geertruida",
+            "number": "2",
+            "is_home": true
+          },
+          {
+            "name": "Nathan Aké",
+            "number": "5",
+            "is_home": true
+          },
+          {
+            "name": "Joey Veerman",
+            "number": "18",
+            "is_home": true
+          },
+          {
+            "name": "Teun Koopmeiners",
+            "number": "20",
+            "is_home": true
+          },
+          {
+            "name": "Guus Til",
+            "number": "16",
+            "is_home": true
+          },
+          {
+            "name": "Mexx Meerdink",
+            "number": "17",
+            "is_home": true
+          },
+          {
+            "name": "Noa Lang",
+            "number": "10",
+            "is_home": true
+          },
+          {
+            "name": "Ruben van Bommel",
+            "number": "21",
+            "is_home": true
+          },
+          {
+            "name": "Alexander Nübel",
+            "number": "21",
+            "is_home": false
+          },
+          {
+            "name": "Finn Dahmen",
+            "number": "12",
+            "is_home": false
+          },
+          {
+            "name": "Josha Vagnoman",
+            "number": "14",
+            "is_home": false
+          },
+          {
+            "name": "Max Rosenfelder",
+            "number": "3",
+            "is_home": false
+          },
+          {
+            "name": "Yann Aurel Bisseck",
+            "number": "2",
+            "is_home": false
+          },
+          {
+            "name": "Anton Stach",
+            "number": "16",
+            "is_home": false
+          },
+          {
+            "name": "Chris Führich",
+            "number": "17",
+            "is_home": false
+          },
+          {
+            "name": "Hennes Behrens",
+            "number": "22",
+            "is_home": false
+          },
+          {
+            "name": "Nadiem Amiri",
+            "number": "11",
+            "is_home": false
+          },
+          {
+            "name": "Serge Gnabry",
+            "number": "20",
+            "is_home": false
+          },
+          {
+            "name": "Yannik Engelhardt",
+            "number": "5",
+            "is_home": false
+          },
+          {
+            "name": "Younes Ebnoutalib",
+            "number": "23",
+            "is_home": false
+          }
+        ]
       },
       "stats": {
-        "home": null,
-        "away": null
+        "home": {
+          "possession": 50,
+          "shots": 0,
+          "shots_on_target": 0,
+          "corners": 0,
+          "fouls": 10,
+          "yellow_cards": 0,
+          "red_cards": 0,
+          "xg": null
+        },
+        "away": {
+          "possession": 50,
+          "shots": 0,
+          "shots_on_target": 0,
+          "corners": 0,
+          "fouls": 12,
+          "yellow_cards": 0,
+          "red_cards": 0,
+          "xg": null
+        }
       },
       "events": [],
       "scorers": {
@@ -498,7 +758,7 @@
       },
       "venue": "Johan Cruijff ArenA",
       "referee": "Alejandro José Hernández Hernández",
-      "updatedAt": "2026-09-24T17:32:43.289Z"
+      "updatedAt": "2026-09-24T17:47:29.351Z"
     },
     {
       "id": "5181861",
@@ -747,7 +1007,7 @@
       },
       "venue": "Ullevaal Stadion",
       "referee": "Tobias Stieler",
-      "updatedAt": "2026-09-24T17:32:45.120Z"
+      "updatedAt": "2026-09-24T17:47:31.674Z"
     }
   ],
   "standings": [
