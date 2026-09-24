@@ -1000,7 +1000,16 @@ function renderSidebarTables() {
       sb.from(t.name).select('id', { count: 'exact', head: true })
         .then(r => {
           const badge = document.getElementById(`badge-${t.name}`);
-          if (badge && r.count != null) badge.textContent = r.count;
+          if (badge) {
+            if (r.error && (r.error.code === 'PGRST205' || (r.error.message && r.error.message.includes('schema cache')))) {
+              badge.textContent = 'Not Created';
+              badge.style.color = 'var(--accent-gold)';
+              badge.style.borderColor = 'rgba(245,158,11,0.4)';
+              badge.style.background = 'rgba(245,158,11,0.1)';
+            } else if (r.count != null) {
+              badge.textContent = r.count;
+            }
+          }
         }).catch(() => {});
     });
   }
@@ -1080,8 +1089,55 @@ async function loadTableData() {
 
     loader.style.display = 'none';
   } catch (err) {
-    loader.innerHTML = `<span style="color:var(--accent-red)">❌ Error querying ${currentTable}: ${err.message}</span>`;
+    const isNotFound = err.message && (err.message.includes('schema cache') || err.message.includes('Could not find the table'));
+    if (isNotFound) {
+      const ddl = getTableDdl(currentTable);
+      loader.innerHTML = `
+        <div style="max-width:680px; margin:30px auto; background:var(--bg-card); border:1px solid rgba(245,158,11,0.4); border-radius:12px; padding:24px; text-align:left; box-shadow:0 10px 25px rgba(0,0,0,0.3);">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+            <span style="font-size:28px;">⚠️</span>
+            <div>
+              <h3 style="font-size:16px; font-weight:800; color:#fff;">Table <code style="color:var(--accent-gold); font-family:var(--font-mono);">${currentTable}</code> Not Created in Supabase Yet</h3>
+              <p style="font-size:12px; color:var(--text-muted); margin-top:3px;">This table is defined in the ZetaSports architecture, but has not yet been executed in your Supabase SQL editor.</p>
+            </div>
+          </div>
+          
+          <div style="margin-top:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="font-size:11px; font-weight:700; color:var(--text-dim); text-transform:uppercase;">Ready-To-Run SQL DDL</span>
+              <button class="btn btn-primary" style="padding:4px 10px; font-size:11px;" onclick="copyTableDdl('${currentTable}')">📋 Copy SQL to Clipboard</button>
+            </div>
+            <pre id="ddlCodeBox" style="background:var(--bg-app); border:1px solid var(--border); border-radius:8px; padding:12px; font-family:var(--font-mono); font-size:11px; line-height:1.45; color:var(--text-main); max-height:220px; overflow:auto;">${escapeHtml(ddl)}</pre>
+          </div>
+
+          <div style="margin-top:18px; padding-top:14px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <span style="font-size:12px; color:var(--text-muted);">Paste and run this query in your Supabase project:</span>
+            <a href="https://supabase.com/dashboard/project/voocdrpetiyspuhyeapi/sql/new" target="_blank" class="btn" style="color:var(--accent); text-decoration:none; font-weight:700;">
+              🚀 Open Supabase SQL Editor ↗
+            </a>
+          </div>
+        </div>
+      `;
+    } else {
+      loader.innerHTML = `<span style="color:var(--accent-red)">❌ Error querying ${currentTable}: ${err.message}</span>`;
+    }
   }
+}
+
+function getTableDdl(name) {
+  if (name === 'fotmob_raw') {
+    return `-- =============================================================================\n-- FOTMOB RAW DATA STORE (fotmob_raw)\n-- =============================================================================\nCREATE TABLE IF NOT EXISTS fotmob_raw (\n    id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),\n    match_id    TEXT NOT NULL,\n    data_key    TEXT NOT NULL,\n    raw_json    JSONB,\n    payload     JSONB,\n    fetched_at  TIMESTAMPTZ DEFAULT NOW(),\n    phase       TEXT DEFAULT 'pre',\n    UNIQUE (match_id, data_key)\n);\n\nCREATE INDEX IF NOT EXISTS idx_fotmob_raw_match ON fotmob_raw(match_id);\nCREATE INDEX IF NOT EXISTS idx_fotmob_raw_key ON fotmob_raw(data_key);\n\nALTER TABLE fotmob_raw ENABLE ROW LEVEL SECURITY;\nDROP POLICY IF EXISTS "Public read fotmob_raw" ON fotmob_raw;\nCREATE POLICY "Public read fotmob_raw" ON fotmob_raw FOR SELECT USING (true);\nDROP POLICY IF EXISTS "Allow write fotmob_raw" ON fotmob_raw;\nCREATE POLICY "Allow write fotmob_raw" ON fotmob_raw FOR ALL USING (true) WITH CHECK (true);`;
+  }
+  return `-- Create generic table template\nCREATE TABLE IF NOT EXISTS ${name} (\n    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),\n    created_at TIMESTAMPTZ DEFAULT NOW(),\n    updated_at TIMESTAMPTZ DEFAULT NOW()\n);\nALTER TABLE ${name} ENABLE ROW LEVEL SECURITY;\nCREATE POLICY "Allow read write ${name}" ON ${name} FOR ALL USING (true) WITH CHECK (true);`;
+}
+
+function copyTableDdl(name) {
+  const ddl = getTableDdl(name);
+  navigator.clipboard.writeText(ddl).then(() => {
+    showToast('📋 Copied SQL DDL to clipboard!');
+  }).catch(() => {
+    showToast('Failed to copy, please select and copy text manually.', 'error');
+  });
 }
 
 // ── 4. Render Grid Table ───────────────────────────────────────────
