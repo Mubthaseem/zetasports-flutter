@@ -2,13 +2,13 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - Matches Feed",
-    "generatedAt": "2026-09-25T03:41:23.969Z",
+    "generatedAt": "2026-09-25T04:36:43.204Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "liveMatches": 0,
-      "todayMatches": 5,
-      "upcomingMatches": 503,
-      "resultsMatches": 125
+      "todayMatches": 2,
+      "upcomingMatches": 543,
+      "resultsMatches": 111
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/matches.json",
@@ -18,165 +18,13 @@
   "live": [],
   "today": [
     {
-      "id": "5071094",
-      "competitionId": "130",
-      "competitionName": "MLS",
-      "competitionSlug": "mls",
-      "country": "USA",
-      "round": 7,
-      "utcDate": "2026-09-24T01:30:00.000Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "130394",
-        "name": "Seattle Sounders FC",
-        "shortName": "Seattle Sounders",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
-        "score": 2
-      },
-      "awayTeam": {
-        "id": "6606",
-        "name": "Real Salt Lake",
-        "shortName": "Salt Lake",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6606.png",
-        "score": 0
-      },
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
-    },
-    {
-      "id": "5181825",
-      "competitionId": "9806",
-      "competitionName": "UEFA Nations League",
-      "competitionSlug": "uefa-nations-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-24T18:45:00.000Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "6708",
-        "name": "Netherlands",
-        "shortName": "Netherlands",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6708.png",
-        "score": 1
-      },
-      "awayTeam": {
-        "id": "8570",
-        "name": "Germany",
-        "shortName": "Germany",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8570.png",
-        "score": 1
-      },
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
-    },
-    {
-      "id": "5181861",
-      "competitionId": "9806",
-      "competitionName": "UEFA Nations League",
-      "competitionSlug": "uefa-nations-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-24T18:45:00.000Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "8492",
-        "name": "Norway",
-        "shortName": "Norway",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8492.png",
-        "score": 3
-      },
-      "awayTeam": {
-        "id": "8238",
-        "name": "Denmark",
-        "shortName": "Denmark",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8238.png",
-        "score": 2
-      },
-      "score": {
-        "home": 3,
-        "away": 2
-      },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
-    },
-    {
-      "id": "5181862",
-      "competitionId": "9806",
-      "competitionName": "UEFA Nations League",
-      "competitionSlug": "uefa-nations-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-24T18:45:00.000Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "8361",
-        "name": "Portugal",
-        "shortName": "Portugal",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8361.png",
-        "score": 1
-      },
-      "awayTeam": {
-        "id": "5790",
-        "name": "Wales",
-        "shortName": "Wales",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/5790.png",
-        "score": 0
-      },
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
-    },
-    {
-      "id": "5181826",
-      "competitionId": "9806",
-      "competitionName": "UEFA Nations League",
-      "competitionSlug": "uefa-nations-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-24T18:45:00.000Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "8205",
-        "name": "Serbia",
-        "shortName": "Serbia",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8205.png",
-        "score": 1
-      },
-      "awayTeam": {
-        "id": "6383",
-        "name": "Greece",
-        "shortName": "Greece",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6383.png",
-        "score": 2
-      },
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
-    }
-  ],
-  "upcoming": [
-    {
       "id": "5181788",
       "competitionId": "9806",
       "competitionName": "UEFA Nations League",
       "competitionSlug": "uefa-nations-league",
       "country": "Europe",
       "round": 1,
-      "utcDate": "2026-09-25T18:45:00Z",
+      "utcDate": "2026-09-25T18:45:00.000Z",
       "status": "SCHEDULED",
       "minute": null,
       "homeTeam": {
@@ -197,7 +45,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181789",
@@ -206,7 +54,7 @@
       "competitionSlug": "uefa-nations-league",
       "country": "Europe",
       "round": 1,
-      "utcDate": "2026-09-25T18:45:00Z",
+      "utcDate": "2026-09-25T18:45:00.000Z",
       "status": "SCHEDULED",
       "minute": null,
       "homeTeam": {
@@ -227,7 +75,69 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
+    }
+  ],
+  "upcoming": [
+    {
+      "id": "5181788",
+      "competitionId": "9806",
+      "competitionName": "UEFA Nations League",
+      "competitionSlug": "uefa-nations-league",
+      "country": "Europe",
+      "round": 1,
+      "utcDate": "2026-09-25T18:45:00.000Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8204",
+        "name": "Italy",
+        "shortName": "Italy",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8204.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8263",
+        "name": "Belgium",
+        "shortName": "Belgium",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8263.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:42.046Z"
+    },
+    {
+      "id": "5181789",
+      "competitionId": "9806",
+      "competitionName": "UEFA Nations League",
+      "competitionSlug": "uefa-nations-league",
+      "country": "Europe",
+      "round": 1,
+      "utcDate": "2026-09-25T18:45:00.000Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "6595",
+        "name": "Turkiye",
+        "shortName": "Turkiye",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6595.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "6723",
+        "name": "France",
+        "shortName": "France",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6723.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181849",
@@ -257,7 +167,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181850",
@@ -287,7 +197,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5071381",
@@ -317,7 +227,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071383",
@@ -347,7 +257,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071382",
@@ -377,7 +287,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071385",
@@ -407,7 +317,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071384",
@@ -437,7 +347,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071386",
@@ -467,7 +377,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071388",
@@ -497,7 +407,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071389",
@@ -527,7 +437,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071391",
@@ -557,7 +467,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071394",
@@ -587,7 +497,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071392",
@@ -617,7 +527,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071390",
@@ -647,7 +557,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071393",
@@ -677,7 +587,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071395",
@@ -707,7 +617,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5181863",
@@ -737,7 +647,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181827",
@@ -767,7 +677,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181828",
@@ -797,7 +707,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181864",
@@ -827,7 +737,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5071387",
@@ -857,7 +767,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5181790",
@@ -887,7 +797,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181791",
@@ -917,7 +827,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181851",
@@ -947,7 +857,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181852",
@@ -977,7 +887,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181865",
@@ -1007,7 +917,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181829",
@@ -1037,7 +947,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181830",
@@ -1067,7 +977,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181866",
@@ -1097,7 +1007,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5071349",
@@ -1127,7 +1037,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5181792",
@@ -1157,7 +1067,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181793",
@@ -1187,7 +1097,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5103566",
@@ -1217,7 +1127,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5181853",
@@ -1247,7 +1157,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181854",
@@ -1277,7 +1187,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5103569",
@@ -1307,7 +1217,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5181831",
@@ -1337,7 +1247,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181832",
@@ -1367,7 +1277,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181867",
@@ -1397,7 +1307,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181868",
@@ -1427,7 +1337,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181794",
@@ -1457,7 +1367,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181795",
@@ -1487,7 +1397,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5989821",
@@ -1517,7 +1427,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989816",
@@ -1547,7 +1457,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5181855",
@@ -1577,7 +1487,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181856",
@@ -1607,7 +1517,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5071211",
@@ -1637,7 +1547,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5989833",
@@ -1667,7 +1577,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989834",
@@ -1697,7 +1607,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989832",
@@ -1727,7 +1637,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989836",
@@ -1757,7 +1667,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989831",
@@ -1787,7 +1697,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989830",
@@ -1817,7 +1727,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989837",
@@ -1847,7 +1757,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989835",
@@ -1877,7 +1787,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5103650",
@@ -1907,7 +1817,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103648",
@@ -1937,7 +1847,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103653",
@@ -1967,7 +1877,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103652",
@@ -1997,7 +1907,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103645",
@@ -2027,7 +1937,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103649",
@@ -2057,7 +1967,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103646",
@@ -2087,7 +1997,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103651",
@@ -2117,7 +2027,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103644",
@@ -2147,7 +2057,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103647",
@@ -2177,7 +2087,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5970150",
@@ -2207,7 +2117,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970146",
@@ -2237,7 +2147,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5887651",
@@ -2267,7 +2177,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5970151",
@@ -2297,7 +2207,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "1000015483",
@@ -2327,7 +2237,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "1000015482",
@@ -2357,7 +2267,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5781762",
@@ -2387,7 +2297,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5881180",
@@ -2417,7 +2327,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5802947",
@@ -2447,7 +2357,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5868086",
@@ -2477,7 +2387,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5887647",
@@ -2507,7 +2417,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5795465",
@@ -2537,7 +2447,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868088",
@@ -2567,7 +2477,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5749693",
@@ -2597,7 +2507,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5881179",
@@ -2627,7 +2537,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881183",
@@ -2657,7 +2567,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881184",
@@ -2687,7 +2597,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881185",
@@ -2717,7 +2627,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881187",
@@ -2747,7 +2657,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5970148",
@@ -2777,7 +2687,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5795466",
@@ -2807,7 +2717,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5795467",
@@ -2837,7 +2747,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5795471",
@@ -2867,7 +2777,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5795474",
@@ -2897,7 +2807,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "1000015480",
@@ -2927,7 +2837,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "1000015484",
@@ -2957,7 +2867,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5868081",
@@ -2987,7 +2897,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5781765",
@@ -3017,7 +2927,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5887648",
@@ -3047,7 +2957,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5970145",
@@ -3077,7 +2987,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5989854",
@@ -3107,7 +3017,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989855",
@@ -3137,7 +3047,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989858",
@@ -3167,7 +3077,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989861",
@@ -3197,7 +3107,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989859",
@@ -3227,7 +3137,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989856",
@@ -3257,7 +3167,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989860",
@@ -3287,7 +3197,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989857",
@@ -3317,7 +3227,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5802948",
@@ -3347,7 +3257,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5749694",
@@ -3377,7 +3287,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5795473",
@@ -3407,7 +3317,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868084",
@@ -3437,7 +3347,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5881186",
@@ -3467,7 +3377,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5781759",
@@ -3497,7 +3407,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5071404",
@@ -3527,7 +3437,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5887650",
@@ -3557,7 +3467,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5970149",
@@ -3587,7 +3497,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "1000015485",
@@ -3617,7 +3527,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5781767",
@@ -3647,7 +3557,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5071398",
@@ -3677,7 +3587,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5749697",
@@ -3707,7 +3617,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802946",
@@ -3737,7 +3647,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5802949",
@@ -3767,7 +3677,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5802950",
@@ -3797,7 +3707,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5802952",
@@ -3827,7 +3737,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5868089",
@@ -3857,7 +3767,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5781764",
@@ -3887,7 +3797,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5887645",
@@ -3917,7 +3827,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5103655",
@@ -3947,7 +3857,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5071396",
@@ -3977,7 +3887,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071397",
@@ -4007,7 +3917,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071399",
@@ -4037,7 +3947,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071400",
@@ -4067,7 +3977,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071402",
@@ -4097,7 +4007,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071403",
@@ -4127,7 +4037,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071401",
@@ -4157,7 +4067,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5103656",
@@ -4187,7 +4097,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5071405",
@@ -4217,7 +4127,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071409",
@@ -4247,7 +4157,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071407",
@@ -4277,7 +4187,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071406",
@@ -4307,7 +4217,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071408",
@@ -4337,7 +4247,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5781761",
@@ -4367,7 +4277,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5749692",
@@ -4397,7 +4307,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5868083",
@@ -4427,7 +4337,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5781763",
@@ -4457,7 +4367,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5781766",
@@ -4487,7 +4397,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5795469",
@@ -4517,7 +4427,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5795470",
@@ -4547,7 +4457,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5749695",
@@ -4577,7 +4487,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5749696",
@@ -4607,7 +4517,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802951",
@@ -4637,7 +4547,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5881181",
@@ -4667,7 +4577,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5970147",
@@ -4697,7 +4607,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "1000015481",
@@ -4727,7 +4637,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5868090",
@@ -4757,7 +4667,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5887652",
@@ -4787,7 +4697,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5781760",
@@ -4817,7 +4727,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5802953",
@@ -4847,7 +4757,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5970144",
@@ -4877,7 +4787,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5795472",
@@ -4907,7 +4817,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5881182",
@@ -4937,7 +4847,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5749698",
@@ -4967,7 +4877,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5868082",
@@ -4997,7 +4907,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5887653",
@@ -5027,7 +4937,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "1000015486",
@@ -5057,7 +4967,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5970152",
@@ -5087,7 +4997,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5749691",
@@ -5117,7 +5027,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802954",
@@ -5147,7 +5057,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5868087",
@@ -5177,7 +5087,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5103659",
@@ -5207,7 +5117,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5887646",
@@ -5237,7 +5147,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5103654",
@@ -5267,7 +5177,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103660",
@@ -5297,7 +5207,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103657",
@@ -5327,7 +5237,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103662",
@@ -5357,7 +5267,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5071410",
@@ -5387,7 +5297,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5989839",
@@ -5417,7 +5327,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989838",
@@ -5447,7 +5357,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989840",
@@ -5477,7 +5387,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989843",
@@ -5507,7 +5417,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989844",
@@ -5537,7 +5447,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989841",
@@ -5567,7 +5477,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989845",
@@ -5597,7 +5507,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989842",
@@ -5627,7 +5537,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5749690",
@@ -5657,7 +5567,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5749699",
@@ -5687,7 +5597,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5795468",
@@ -5717,7 +5627,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868085",
@@ -5747,7 +5657,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5103661",
@@ -5777,7 +5687,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5887649",
@@ -5807,7 +5717,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5103663",
@@ -5837,7 +5747,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103658",
@@ -5867,7 +5777,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "6106414",
@@ -5897,7 +5807,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106424",
@@ -5927,7 +5837,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106260",
@@ -5957,7 +5867,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106267",
@@ -5987,7 +5897,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106338",
@@ -6017,7 +5927,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106251",
@@ -6047,7 +5957,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106323",
@@ -6077,7 +5987,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106417",
@@ -6107,7 +6017,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106328",
@@ -6137,7 +6047,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106309",
@@ -6167,7 +6077,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106405",
@@ -6197,7 +6107,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106284",
@@ -6227,7 +6137,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106315",
@@ -6257,7 +6167,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106254",
@@ -6287,7 +6197,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106299",
@@ -6317,7 +6227,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106274",
@@ -6347,7 +6257,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106337",
@@ -6377,7 +6287,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106396",
@@ -6407,7 +6317,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "5071415",
@@ -6437,7 +6347,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071412",
@@ -6467,7 +6377,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071413",
@@ -6497,7 +6407,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071411",
@@ -6527,7 +6437,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071414",
@@ -6557,7 +6467,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071416",
@@ -6587,7 +6497,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071417",
@@ -6617,7 +6527,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071419",
@@ -6647,7 +6557,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071422",
@@ -6677,7 +6587,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071425",
@@ -6707,7 +6617,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071418",
@@ -6737,7 +6647,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071423",
@@ -6767,7 +6677,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071420",
@@ -6797,7 +6707,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071421",
@@ -6827,7 +6737,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071424",
@@ -6857,7 +6767,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5970155",
@@ -6887,7 +6797,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970158",
@@ -6917,7 +6827,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970156",
@@ -6947,7 +6857,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "6112265",
@@ -6977,7 +6887,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112318",
@@ -7007,7 +6917,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112260",
@@ -7037,7 +6947,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112336",
@@ -7067,7 +6977,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112294",
@@ -7097,7 +7007,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112305",
@@ -7127,7 +7037,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112360",
@@ -7157,7 +7067,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112286",
@@ -7187,7 +7097,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112541",
@@ -7217,7 +7127,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112553",
@@ -7247,7 +7157,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112413",
@@ -7277,7 +7187,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112523",
@@ -7307,7 +7217,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112478",
@@ -7337,7 +7247,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112473",
@@ -7367,7 +7277,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112549",
@@ -7397,7 +7307,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112415",
@@ -7427,7 +7337,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112521",
@@ -7457,7 +7367,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112505",
@@ -7487,7 +7397,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "5970153",
@@ -7517,7 +7427,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "6112328",
@@ -7547,7 +7457,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112247",
@@ -7577,7 +7487,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112346",
@@ -7607,7 +7517,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112291",
@@ -7637,7 +7547,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112279",
@@ -7667,7 +7577,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112353",
@@ -7697,7 +7607,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112341",
@@ -7727,7 +7637,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112274",
@@ -7757,7 +7667,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112369",
@@ -7787,7 +7697,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112309",
@@ -7817,7 +7727,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112387",
@@ -7847,7 +7757,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112493",
@@ -7877,7 +7787,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112422",
@@ -7907,7 +7817,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112402",
@@ -7937,7 +7847,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112482",
@@ -7967,7 +7877,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112398",
@@ -7997,7 +7907,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112497",
@@ -8027,7 +7937,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112491",
@@ -8057,7 +7967,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "5970159",
@@ -8087,7 +7997,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970160",
@@ -8117,7 +8027,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5989848",
@@ -8147,7 +8057,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989853",
@@ -8177,7 +8087,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989849",
@@ -8207,7 +8117,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989847",
@@ -8237,7 +8147,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989851",
@@ -8267,7 +8177,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989846",
@@ -8297,7 +8207,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989852",
@@ -8327,7 +8237,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989850",
@@ -8357,7 +8267,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5970157",
@@ -8387,7 +8297,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5781769",
@@ -8417,7 +8327,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5881191",
@@ -8447,7 +8357,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5749704",
@@ -8477,7 +8387,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802957",
@@ -8507,7 +8417,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5868093",
@@ -8537,7 +8447,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5103671",
@@ -8567,7 +8477,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103669",
@@ -8597,7 +8507,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103672",
@@ -8627,7 +8537,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103665",
@@ -8657,7 +8567,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103667",
@@ -8687,7 +8597,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103664",
@@ -8717,7 +8627,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103670",
@@ -8747,7 +8657,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103668",
@@ -8777,7 +8687,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103673",
@@ -8807,7 +8717,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103666",
@@ -8837,7 +8747,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5795478",
@@ -8867,7 +8777,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868094",
@@ -8897,7 +8807,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5749709",
@@ -8927,7 +8837,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5881192",
@@ -8957,7 +8867,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881193",
@@ -8987,7 +8897,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881194",
@@ -9017,7 +8927,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881195",
@@ -9047,7 +8957,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881196",
@@ -9077,7 +8987,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5795476",
@@ -9107,7 +9017,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5795479",
@@ -9137,7 +9047,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5795481",
@@ -9167,7 +9077,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868100",
@@ -9197,7 +9107,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5781776",
@@ -9227,7 +9137,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5989869",
@@ -9257,7 +9167,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989863",
@@ -9287,7 +9197,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989868",
@@ -9317,7 +9227,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989864",
@@ -9347,7 +9257,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989866",
@@ -9377,7 +9287,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989862",
@@ -9407,7 +9317,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989867",
@@ -9437,7 +9347,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989865",
@@ -9467,7 +9377,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5802962",
@@ -9497,7 +9407,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5970161",
@@ -9527,7 +9437,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5749702",
@@ -9557,7 +9467,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5795482",
@@ -9587,7 +9497,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868091",
@@ -9617,7 +9527,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5881189",
@@ -9647,7 +9557,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5970154",
@@ -9677,7 +9587,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5781774",
@@ -9707,7 +9617,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5071432",
@@ -9737,7 +9647,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5749701",
@@ -9767,7 +9677,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802958",
@@ -9797,7 +9707,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5802963",
@@ -9827,7 +9737,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5868099",
@@ -9857,7 +9767,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5781768",
@@ -9887,7 +9797,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5071427",
@@ -9917,7 +9827,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071426",
@@ -9947,7 +9857,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071428",
@@ -9977,7 +9887,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071429",
@@ -10007,7 +9917,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071431",
@@ -10037,7 +9947,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071430",
@@ -10067,7 +9977,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071433",
@@ -10097,7 +10007,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071434",
@@ -10127,7 +10037,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071435",
@@ -10157,7 +10067,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071436",
@@ -10187,7 +10097,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071437",
@@ -10217,7 +10127,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071438",
@@ -10247,7 +10157,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071439",
@@ -10277,7 +10187,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5781775",
@@ -10307,7 +10217,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5749708",
@@ -10337,7 +10247,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5868097",
@@ -10367,7 +10277,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5781771",
@@ -10397,7 +10307,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5795475",
@@ -10427,7 +10337,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5795477",
@@ -10457,7 +10367,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5795480",
@@ -10487,7 +10397,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5749703",
@@ -10517,7 +10427,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802955",
@@ -10547,7 +10457,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5881188",
@@ -10577,7 +10487,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5868092",
@@ -10607,7 +10517,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5781772",
@@ -10637,7 +10547,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5802956",
@@ -10667,7 +10577,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5802959",
@@ -10697,7 +10607,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5802961",
@@ -10727,7 +10637,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5795483",
@@ -10757,7 +10667,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5881190",
@@ -10787,7 +10697,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5749700",
@@ -10817,7 +10727,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5868096",
@@ -10847,7 +10757,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5970165",
@@ -10877,7 +10787,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5781773",
@@ -10907,7 +10817,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5781770",
@@ -10937,7 +10847,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5749705",
@@ -10967,7 +10877,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802960",
@@ -10997,7 +10907,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5868098",
@@ -11027,7 +10937,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5071440",
@@ -11057,7 +10967,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5970166",
@@ -11087,7 +10997,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970162",
@@ -11117,7 +11027,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5749706",
@@ -11147,7 +11057,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5970167",
@@ -11177,7 +11087,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970169",
@@ -11207,7 +11117,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5749707",
@@ -11237,7 +11147,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5795484",
@@ -11267,7 +11177,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868095",
@@ -11297,7 +11207,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5970163",
@@ -11327,7 +11237,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970170",
@@ -11357,7 +11267,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "6106333",
@@ -11387,7 +11297,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106422",
@@ -11417,7 +11327,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "5970168",
@@ -11447,7 +11357,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970164",
@@ -11477,7 +11387,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "6106287",
@@ -11507,7 +11417,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106248",
@@ -11537,7 +11447,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106257",
@@ -11567,7 +11477,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106234",
@@ -11597,7 +11507,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106277",
@@ -11627,7 +11537,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106320",
@@ -11657,7 +11567,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106397",
@@ -11687,7 +11597,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106410",
@@ -11717,7 +11627,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106312",
@@ -11747,7 +11657,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "5868067",
@@ -11777,7 +11687,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "6106285",
@@ -11807,7 +11717,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106238",
@@ -11837,7 +11747,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106297",
@@ -11867,7 +11777,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106252",
@@ -11897,7 +11807,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106300",
@@ -11927,7 +11837,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106244",
@@ -11957,7 +11867,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "6106281",
@@ -11987,7 +11897,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:57.546Z"
+      "updatedAt": "2026-09-25T04:36:15.995Z"
     },
     {
       "id": "5071323",
@@ -12017,7 +11927,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5970174",
@@ -12047,7 +11957,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "6112498",
@@ -12077,7 +11987,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "5970173",
@@ -12107,7 +12017,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "6112382",
@@ -12137,7 +12047,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112293",
@@ -12167,7 +12077,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112281",
@@ -12197,7 +12107,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112251",
@@ -12227,7 +12137,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112320",
@@ -12257,7 +12167,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112370",
@@ -12287,7 +12197,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112314",
@@ -12317,7 +12227,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112289",
@@ -12347,7 +12257,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112531",
@@ -12377,7 +12287,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112408",
@@ -12407,7 +12317,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112545",
@@ -12437,7 +12347,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112475",
@@ -12467,7 +12377,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112552",
@@ -12497,7 +12407,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112536",
@@ -12527,7 +12437,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112526",
@@ -12557,7 +12467,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112419",
@@ -12587,7 +12497,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112502",
@@ -12617,7 +12527,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "5970171",
@@ -12647,7 +12557,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "6112326",
@@ -12677,7 +12587,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112356",
@@ -12707,7 +12617,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112300",
@@ -12737,7 +12647,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112350",
@@ -12767,7 +12677,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112339",
@@ -12797,7 +12707,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112374",
@@ -12827,7 +12737,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112335",
@@ -12857,7 +12767,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112267",
@@ -12887,7 +12797,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112342",
@@ -12917,7 +12827,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112285",
@@ -12947,7 +12857,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:20.224Z"
     },
     {
       "id": "6112534",
@@ -12977,7 +12887,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112393",
@@ -13007,7 +12917,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112487",
@@ -13037,7 +12947,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112390",
@@ -13067,7 +12977,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112406",
@@ -13097,7 +13007,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112484",
@@ -13127,7 +13037,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112399",
@@ -13157,7 +13067,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "6112540",
@@ -13187,7 +13097,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:04.939Z"
+      "updatedAt": "2026-09-25T04:36:21.037Z"
     },
     {
       "id": "5970172",
@@ -13217,7 +13127,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970175",
@@ -13247,7 +13157,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5970177",
@@ -13277,7 +13187,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "1000015491",
@@ -13307,7 +13217,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "1000015487",
@@ -13337,7 +13247,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5781781",
@@ -13367,7 +13277,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5881205",
@@ -13397,7 +13307,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5749718",
@@ -13427,7 +13337,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802966",
@@ -13457,7 +13367,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5795491",
@@ -13487,7 +13397,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868101",
@@ -13517,7 +13427,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5887662",
@@ -13547,7 +13457,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5103683",
@@ -13577,7 +13487,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103681",
@@ -13607,7 +13517,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103679",
@@ -13637,7 +13547,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103674",
@@ -13667,7 +13577,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103680",
@@ -13697,7 +13607,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103678",
@@ -13727,7 +13637,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103677",
@@ -13757,7 +13667,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103676",
@@ -13787,7 +13697,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103675",
@@ -13817,7 +13727,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103682",
@@ -13847,7 +13757,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5795486",
@@ -13877,7 +13787,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868107",
@@ -13907,7 +13817,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5749711",
@@ -13937,7 +13847,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5749712",
@@ -13967,7 +13877,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5881197",
@@ -13997,7 +13907,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881199",
@@ -14027,7 +13937,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881202",
@@ -14057,7 +13967,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881203",
@@ -14087,7 +13997,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881204",
@@ -14117,7 +14027,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5795485",
@@ -14147,7 +14057,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5795488",
@@ -14177,7 +14087,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5970181",
@@ -14207,7 +14117,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "1000015489",
@@ -14237,7 +14147,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "1000015488",
@@ -14267,7 +14177,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5868106",
@@ -14297,7 +14207,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5781784",
@@ -14327,7 +14237,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5887655",
@@ -14357,7 +14267,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5989877",
@@ -14387,7 +14297,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989870",
@@ -14417,7 +14327,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989873",
@@ -14447,7 +14357,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989876",
@@ -14477,7 +14387,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989874",
@@ -14507,7 +14417,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989871",
@@ -14537,7 +14447,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989875",
@@ -14567,7 +14477,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989872",
@@ -14597,7 +14507,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5970176",
@@ -14627,7 +14537,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "5802971",
@@ -14657,7 +14567,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5749717",
@@ -14687,7 +14597,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5795487",
@@ -14717,7 +14627,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.308Z"
     },
     {
       "id": "5868110",
@@ -14747,7 +14657,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5881198",
@@ -14777,7 +14687,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5781785",
@@ -14807,7 +14717,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5887654",
@@ -14837,7 +14747,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5071444",
@@ -14867,7 +14777,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5970179",
@@ -14897,7 +14807,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:12.418Z"
+      "updatedAt": "2026-09-25T04:36:27.072Z"
     },
     {
       "id": "1000015490",
@@ -14927,7 +14837,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5749715",
@@ -14957,7 +14867,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802967",
@@ -14987,7 +14897,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5868103",
@@ -15017,7 +14927,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.858Z"
     },
     {
       "id": "5781779",
@@ -15047,7 +14957,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5071442",
@@ -15077,7 +14987,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5887657",
@@ -15107,7 +15017,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5071445",
@@ -15137,7 +15047,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071441",
@@ -15167,7 +15077,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071443",
@@ -15197,7 +15107,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071446",
@@ -15227,7 +15137,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
     },
     {
       "id": "5071447",
@@ -15257,7 +15167,1207 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.038Z"
+    },
+    {
+      "id": "5071448",
+      "competitionId": "130",
+      "competitionName": "MLS",
+      "competitionSlug": "mls",
+      "country": "USA",
+      "round": 31,
+      "utcDate": "2026-10-25T01:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8314",
+        "name": "Colorado Rapids",
+        "shortName": "Colorado",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8314.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "307691",
+        "name": "Vancouver Whitecaps",
+        "shortName": "Vancouver",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/307691.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:26.038Z"
+    },
+    {
+      "id": "5071449",
+      "competitionId": "130",
+      "competitionName": "MLS",
+      "competitionSlug": "mls",
+      "country": "USA",
+      "round": 31,
+      "utcDate": "2026-10-25T01:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "6399",
+        "name": "FC Dallas",
+        "shortName": "Dallas",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6399.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "6603",
+        "name": "San Jose Earthquakes",
+        "shortName": "San Jose",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6603.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:26.038Z"
+    },
+    {
+      "id": "5071450",
+      "competitionId": "130",
+      "competitionName": "MLS",
+      "competitionSlug": "mls",
+      "country": "USA",
+      "round": 31,
+      "utcDate": "2026-10-25T01:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8259",
+        "name": "Houston Dynamo FC",
+        "shortName": "Houston",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8259.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "207242",
+        "name": "Minnesota United",
+        "shortName": "Minnesota",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/207242.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:26.038Z"
+    },
+    {
+      "id": "5071453",
+      "competitionId": "130",
+      "competitionName": "MLS",
+      "competitionSlug": "mls",
+      "country": "USA",
+      "round": 31,
+      "utcDate": "2026-10-25T01:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "6606",
+        "name": "Real Salt Lake",
+        "shortName": "Salt Lake",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6606.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "1427963",
+        "name": "St. Louis City",
+        "shortName": "St. Louis City",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1427963.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:26.038Z"
+    },
+    {
+      "id": "5071451",
+      "competitionId": "130",
+      "competitionName": "MLS",
+      "competitionSlug": "mls",
+      "country": "USA",
+      "round": 31,
+      "utcDate": "2026-10-25T01:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "6604",
+        "name": "Sporting Kansas City",
+        "shortName": "Sporting KC",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6604.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "1218886",
+        "name": "Austin FC",
+        "shortName": "Austin FC",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1218886.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:26.038Z"
+    },
+    {
+      "id": "5071452",
+      "competitionId": "130",
+      "competitionName": "MLS",
+      "competitionSlug": "mls",
+      "country": "USA",
+      "round": 31,
+      "utcDate": "2026-10-25T02:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "307690",
+        "name": "Portland Timbers",
+        "shortName": "Portland",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/307690.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "1323940",
+        "name": "Charlotte FC",
+        "shortName": "Charlotte FC",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1323940.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:26.038Z"
+    },
+    {
+      "id": "5071454",
+      "competitionId": "130",
+      "competitionName": "MLS",
+      "competitionSlug": "mls",
+      "country": "USA",
+      "round": 31,
+      "utcDate": "2026-10-25T02:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "1701119",
+        "name": "San Diego FC",
+        "shortName": "San Diego FC",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1701119.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "130394",
+        "name": "Seattle Sounders FC",
+        "shortName": "Seattle Sounders",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:26.038Z"
+    },
+    {
+      "id": "5781780",
+      "competitionId": "57",
+      "competitionName": "Eredivisie",
+      "competitionSlug": "eredivisie",
+      "country": "Netherlands",
+      "round": 10,
+      "utcDate": "2026-10-25T11:15:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "6422",
+        "name": "Fortuna Sittard",
+        "shortName": "Fortuna Sittard",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6422.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "10218",
+        "name": "Excelsior",
+        "shortName": "Excelsior",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10218.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:33.093Z"
+    },
+    {
+      "id": "5749714",
+      "competitionId": "55",
+      "competitionName": "Serie A",
+      "competitionSlug": "serie-a",
+      "country": "Italy",
+      "round": 8,
+      "utcDate": "2026-10-25T11:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8636",
+        "name": "Inter",
+        "shortName": "Inter",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8636.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8535",
+        "name": "Fiorentina",
+        "shortName": "Fiorentina",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8535.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:17.691Z"
+    },
+    {
+      "id": "5868102",
+      "competitionId": "87",
+      "competitionName": "LaLiga",
+      "competitionSlug": "laliga",
+      "country": "Spain",
+      "round": 10,
+      "utcDate": "2026-10-25T13:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8315",
+        "name": "Athletic Club",
+        "shortName": "Athletic Club",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8315.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8305",
+        "name": "Getafe",
+        "shortName": "Getafe",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8305.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:16.858Z"
+    },
+    {
+      "id": "5781777",
+      "competitionId": "57",
+      "competitionName": "Eredivisie",
+      "competitionSlug": "eredivisie",
+      "country": "Netherlands",
+      "round": 10,
+      "utcDate": "2026-10-25T13:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8464",
+        "name": "NEC Nijmegen",
+        "shortName": "NEC Nijmegen",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8464.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8674",
+        "name": "FC Groningen",
+        "shortName": "FC Groningen",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8674.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:33.093Z"
+    },
+    {
+      "id": "5781783",
+      "competitionId": "57",
+      "competitionName": "Eredivisie",
+      "competitionSlug": "eredivisie",
+      "country": "Netherlands",
+      "round": 10,
+      "utcDate": "2026-10-25T13:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8640",
+        "name": "PSV Eindhoven",
+        "shortName": "PSV Eindhoven",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8640.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "10235",
+        "name": "Feyenoord",
+        "shortName": "Feyenoord",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10235.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:33.093Z"
+    },
+    {
+      "id": "5795489",
+      "competitionId": "47",
+      "competitionName": "Premier League",
+      "competitionSlug": "premier-league",
+      "country": "England",
+      "round": 8,
+      "utcDate": "2026-10-25T14:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "9826",
+        "name": "Crystal Palace",
+        "shortName": "Crystal Palace",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9826.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "10261",
+        "name": "Newcastle United",
+        "shortName": "Newcastle",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:15.308Z"
+    },
+    {
+      "id": "5795490",
+      "competitionId": "47",
+      "competitionName": "Premier League",
+      "competitionSlug": "premier-league",
+      "country": "England",
+      "round": 8,
+      "utcDate": "2026-10-25T14:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8667",
+        "name": "Hull City",
+        "shortName": "Hull",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8667.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "9937",
+        "name": "Brentford",
+        "shortName": "Brentford",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9937.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:15.308Z"
+    },
+    {
+      "id": "5795492",
+      "competitionId": "47",
+      "competitionName": "Premier League",
+      "competitionSlug": "premier-league",
+      "country": "England",
+      "round": 8,
+      "utcDate": "2026-10-25T14:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8650",
+        "name": "Liverpool",
+        "shortName": "Liverpool",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "10204",
+        "name": "Brighton & Hove Albion",
+        "shortName": "Brighton",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10204.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:15.308Z"
+    },
+    {
+      "id": "5795493",
+      "competitionId": "47",
+      "competitionName": "Premier League",
+      "competitionSlug": "premier-league",
+      "country": "England",
+      "round": 8,
+      "utcDate": "2026-10-25T14:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "10260",
+        "name": "Manchester United",
+        "shortName": "Man United",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10260.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8678",
+        "name": "AFC Bournemouth",
+        "shortName": "Bournemouth",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8678.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:15.308Z"
+    },
+    {
+      "id": "5749710",
+      "competitionId": "55",
+      "competitionName": "Serie A",
+      "competitionSlug": "serie-a",
+      "country": "Italy",
+      "round": 8,
+      "utcDate": "2026-10-25T14:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8524",
+        "name": "Atalanta",
+        "shortName": "Atalanta",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8524.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "9891",
+        "name": "Frosinone",
+        "shortName": "Frosinone",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9891.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:17.691Z"
+    },
+    {
+      "id": "5749713",
+      "competitionId": "55",
+      "competitionName": "Serie A",
+      "competitionSlug": "serie-a",
+      "country": "Italy",
+      "round": 8,
+      "utcDate": "2026-10-25T14:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "10233",
+        "name": "Genoa",
+        "shortName": "Genoa",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "7881",
+        "name": "Venezia",
+        "shortName": "Venezia",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7881.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:17.691Z"
+    },
+    {
+      "id": "5802969",
+      "competitionId": "53",
+      "competitionName": "Ligue 1",
+      "competitionSlug": "ligue-1",
+      "country": "France",
+      "round": 8,
+      "utcDate": "2026-10-25T14:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "9829",
+        "name": "Monaco",
+        "shortName": "Monaco",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9829.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8639",
+        "name": "Lille",
+        "shortName": "Lille",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8639.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:19.314Z"
+    },
+    {
+      "id": "5881201",
+      "competitionId": "54",
+      "competitionName": "Bundesliga",
+      "competitionSlug": "bundesliga",
+      "country": "Germany",
+      "round": 7,
+      "utcDate": "2026-10-25T14:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8226",
+        "name": "Hoffenheim",
+        "shortName": "Hoffenheim",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8226.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8178",
+        "name": "Bayer Leverkusen",
+        "shortName": "Leverkusen",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8178.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:18.493Z"
+    },
+    {
+      "id": "1000015492",
+      "competitionId": "264",
+      "competitionName": "AFC Champions League",
+      "competitionSlug": "afc-champions-league",
+      "country": "Asia",
+      "round": 8,
+      "utcDate": "2026-10-25T15:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "6351",
+        "name": "Eupen",
+        "shortName": "Eupen",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6351.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "583877",
+        "name": "Beerschot",
+        "shortName": "Beerschot",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/583877.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:27.800Z"
+    },
+    {
+      "id": "5868104",
+      "competitionId": "87",
+      "competitionName": "LaLiga",
+      "competitionSlug": "laliga",
+      "country": "Spain",
+      "round": 10,
+      "utcDate": "2026-10-25T15:15:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "9910",
+        "name": "Celta Vigo",
+        "shortName": "Celta Vigo",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9910.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8603",
+        "name": "Real Betis",
+        "shortName": "Real Betis",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8603.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:16.858Z"
+    },
+    {
+      "id": "5887656",
+      "competitionId": "61",
+      "competitionName": "Liga Portugal",
+      "competitionSlug": "liga-portugal",
+      "country": "Portugal",
+      "round": 9,
+      "utcDate": "2026-10-25T15:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "7842",
+        "name": "Estoril",
+        "shortName": "Estoril",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7842.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8348",
+        "name": "Moreirense",
+        "shortName": "Moreirense",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8348.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:33.813Z"
+    },
+    {
+      "id": "5781778",
+      "competitionId": "57",
+      "competitionName": "Eredivisie",
+      "competitionSlug": "eredivisie",
+      "country": "Netherlands",
+      "round": 10,
+      "utcDate": "2026-10-25T15:45:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8614",
+        "name": "Sparta Rotterdam",
+        "shortName": "Sparta Rotterdam",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8614.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8593",
+        "name": "Ajax",
+        "shortName": "Ajax",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8593.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:33.093Z"
+    },
+    {
+      "id": "5802964",
+      "competitionId": "53",
+      "competitionName": "Ligue 1",
+      "competitionSlug": "ligue-1",
+      "country": "France",
+      "round": 8,
+      "utcDate": "2026-10-25T16:15:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8121",
+        "name": "Angers",
+        "shortName": "Angers",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8121.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8689",
+        "name": "Lorient",
+        "shortName": "Lorient",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8689.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:19.314Z"
+    },
+    {
+      "id": "5802965",
+      "competitionId": "53",
+      "competitionName": "Ligue 1",
+      "competitionSlug": "ligue-1",
+      "country": "France",
+      "round": 8,
+      "utcDate": "2026-10-25T16:15:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8583",
+        "name": "Auxerre",
+        "shortName": "Auxerre",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8583.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8682",
+        "name": "Le Mans",
+        "shortName": "Le Mans",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8682.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:19.314Z"
+    },
+    {
+      "id": "5802968",
+      "competitionId": "53",
+      "competitionName": "Ligue 1",
+      "competitionSlug": "ligue-1",
+      "country": "France",
+      "round": 8,
+      "utcDate": "2026-10-25T16:15:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8592",
+        "name": "Marseille",
+        "shortName": "Marseille",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8592.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "9746",
+        "name": "Le Havre",
+        "shortName": "Le Havre",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9746.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:19.314Z"
+    },
+    {
+      "id": "5802970",
+      "competitionId": "53",
+      "competitionName": "Ligue 1",
+      "competitionSlug": "ligue-1",
+      "country": "France",
+      "round": 8,
+      "utcDate": "2026-10-25T16:15:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "9851",
+        "name": "Rennes",
+        "shortName": "Rennes",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9851.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "9848",
+        "name": "Strasbourg",
+        "shortName": "Strasbourg",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9848.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:19.314Z"
+    },
+    {
+      "id": "5795494",
+      "competitionId": "47",
+      "competitionName": "Premier League",
+      "competitionSlug": "premier-league",
+      "country": "England",
+      "round": 8,
+      "utcDate": "2026-10-25T16:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8472",
+        "name": "Sunderland",
+        "shortName": "Sunderland",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8472.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8463",
+        "name": "Leeds United",
+        "shortName": "Leeds",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8463.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:15.308Z"
+    },
+    {
+      "id": "5881200",
+      "competitionId": "54",
+      "competitionName": "Bundesliga",
+      "competitionSlug": "bundesliga",
+      "country": "Germany",
+      "round": 7,
+      "utcDate": "2026-10-25T16:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8358",
+        "name": "Freiburg",
+        "shortName": "Freiburg",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8358.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "9823",
+        "name": "Bayern München",
+        "shortName": "Bayern München",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9823.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:18.493Z"
+    },
+    {
+      "id": "5749716",
+      "competitionId": "55",
+      "competitionName": "Serie A",
+      "competitionSlug": "serie-a",
+      "country": "Italy",
+      "round": 8,
+      "utcDate": "2026-10-25T17:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "9888",
+        "name": "Lecce",
+        "shortName": "Lecce",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9888.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "9885",
+        "name": "Juventus",
+        "shortName": "Juventus",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9885.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:17.691Z"
+    },
+    {
+      "id": "5868108",
+      "competitionId": "87",
+      "competitionName": "LaLiga",
+      "competitionSlug": "laliga",
+      "country": "Spain",
+      "round": 10,
+      "utcDate": "2026-10-25T17:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8560",
+        "name": "Real Sociedad",
+        "shortName": "Real Sociedad",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8581",
+        "name": "Levante",
+        "shortName": "Levante",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8581.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:16.858Z"
+    },
+    {
+      "id": "5887658",
+      "competitionId": "61",
+      "competitionName": "Liga Portugal",
+      "competitionSlug": "liga-portugal",
+      "country": "Portugal",
+      "round": 9,
+      "utcDate": "2026-10-25T18:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "10214",
+        "name": "Nacional",
+        "shortName": "Nacional",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10214.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "10264",
+        "name": "Braga",
+        "shortName": "Braga",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:33.813Z"
+    },
+    {
+      "id": "5887659",
+      "competitionId": "61",
+      "competitionName": "Liga Portugal",
+      "competitionSlug": "liga-portugal",
+      "country": "Portugal",
+      "round": 9,
+      "utcDate": "2026-10-25T18:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "7841",
+        "name": "Rio Ave",
+        "shortName": "Rio Ave",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7841.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "1634",
+        "name": "Famalicão",
+        "shortName": "Famalicão",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1634.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:33.813Z"
+    },
+    {
+      "id": "1000015493",
+      "competitionId": "264",
+      "competitionName": "AFC Champions League",
+      "competitionSlug": "afc-champions-league",
+      "country": "Asia",
+      "round": 8,
+      "utcDate": "2026-10-25T18:15:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "6363",
+        "name": "FC Liège",
+        "shortName": "FC Liège",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6363.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "274583",
+        "name": "Patro Eisden",
+        "shortName": "Patro Eisden",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/274583.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:27.800Z"
+    },
+    {
+      "id": "5781782",
+      "competitionId": "57",
+      "competitionName": "Eredivisie",
+      "competitionSlug": "eredivisie",
+      "country": "Netherlands",
+      "round": 10,
+      "utcDate": "2026-10-25T19:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "10229",
+        "name": "AZ Alkmaar",
+        "shortName": "AZ Alkmaar",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10229.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8611",
+        "name": "FC Twente",
+        "shortName": "FC Twente",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8611.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:33.093Z"
+    },
+    {
+      "id": "5749719",
+      "competitionId": "55",
+      "competitionName": "Serie A",
+      "competitionSlug": "serie-a",
+      "country": "Italy",
+      "round": 8,
+      "utcDate": "2026-10-25T19:45:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8600",
+        "name": "Udinese",
+        "shortName": "Udinese",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8600.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8564",
+        "name": "Milan",
+        "shortName": "Milan",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8564.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:17.691Z"
+    },
+    {
+      "id": "5802972",
+      "competitionId": "53",
+      "competitionName": "Ligue 1",
+      "competitionSlug": "ligue-1",
+      "country": "France",
+      "round": 8,
+      "utcDate": "2026-10-25T19:45:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "9847",
+        "name": "Paris Saint-Germain",
+        "shortName": "PSG",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "9748",
+        "name": "Lyon",
+        "shortName": "Lyon",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9748.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:19.314Z"
+    },
+    {
+      "id": "5868105",
+      "competitionId": "87",
+      "competitionName": "LaLiga",
+      "competitionSlug": "laliga",
+      "country": "Spain",
+      "round": 10,
+      "utcDate": "2026-10-25T20:00:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "8634",
+        "name": "Barcelona",
+        "shortName": "Barcelona",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8634.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "8633",
+        "name": "Real Madrid",
+        "shortName": "Real Madrid",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:16.858Z"
+    },
+    {
+      "id": "5887661",
+      "competitionId": "61",
+      "competitionName": "Liga Portugal",
+      "competitionSlug": "liga-portugal",
+      "country": "Portugal",
+      "round": 9,
+      "utcDate": "2026-10-25T20:30:00Z",
+      "status": "SCHEDULED",
+      "minute": null,
+      "homeTeam": {
+        "id": "9768",
+        "name": "Sporting CP",
+        "shortName": "Sporting CP",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9768.png",
+        "score": null
+      },
+      "awayTeam": {
+        "id": "1786",
+        "name": "Académico Viseu",
+        "shortName": "Académico Viseu",
+        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1786.png",
+        "score": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      },
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     }
   ],
   "results": [
@@ -15268,7 +16378,7 @@
       "competitionSlug": "uefa-nations-league",
       "country": "Europe",
       "round": 1,
-      "utcDate": "2026-09-24T18:45:00.000Z",
+      "utcDate": "2026-09-24T18:45:00Z",
       "status": "FINISHED",
       "minute": "FT",
       "homeTeam": {
@@ -15289,7 +16399,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181861",
@@ -15298,7 +16408,7 @@
       "competitionSlug": "uefa-nations-league",
       "country": "Europe",
       "round": 1,
-      "utcDate": "2026-09-24T18:45:00.000Z",
+      "utcDate": "2026-09-24T18:45:00Z",
       "status": "FINISHED",
       "minute": "FT",
       "homeTeam": {
@@ -15319,7 +16429,7 @@
         "home": 3,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181862",
@@ -15328,7 +16438,7 @@
       "competitionSlug": "uefa-nations-league",
       "country": "Europe",
       "round": 1,
-      "utcDate": "2026-09-24T18:45:00.000Z",
+      "utcDate": "2026-09-24T18:45:00Z",
       "status": "FINISHED",
       "minute": "FT",
       "homeTeam": {
@@ -15349,7 +16459,7 @@
         "home": 1,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5181826",
@@ -15358,7 +16468,7 @@
       "competitionSlug": "uefa-nations-league",
       "country": "Europe",
       "round": 1,
-      "utcDate": "2026-09-24T18:45:00.000Z",
+      "utcDate": "2026-09-24T18:45:00Z",
       "status": "FINISHED",
       "minute": "FT",
       "homeTeam": {
@@ -15379,7 +16489,7 @@
         "home": 1,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:30.297Z"
+      "updatedAt": "2026-09-25T04:36:42.046Z"
     },
     {
       "id": "5071094",
@@ -15388,7 +16498,7 @@
       "competitionSlug": "mls",
       "country": "USA",
       "round": 7,
-      "utcDate": "2026-09-24T01:30:00.000Z",
+      "utcDate": "2026-09-24T01:30:00Z",
       "status": "FINISHED",
       "minute": "FT",
       "homeTeam": {
@@ -15409,7 +16519,7 @@
         "home": 2,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5989695",
@@ -15439,7 +16549,7 @@
         "home": null,
         "away": null
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989699",
@@ -15469,7 +16579,7 @@
         "home": 0,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5071380",
@@ -15499,7 +16609,7 @@
         "home": 2,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5103641",
@@ -15529,7 +16639,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103634",
@@ -15559,7 +16669,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5887641",
@@ -15589,7 +16699,7 @@
         "home": 3,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5868079",
@@ -15619,7 +16729,7 @@
         "home": 2,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5103637",
@@ -15649,7 +16759,7 @@
         "home": 1,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103642",
@@ -15679,7 +16789,7 @@
         "home": 1,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5749680",
@@ -15709,7 +16819,7 @@
         "home": 3,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802945",
@@ -15739,7 +16849,7 @@
         "home": 1,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5881175",
@@ -15769,7 +16879,7 @@
         "home": 3,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "1000015478",
@@ -15799,7 +16909,7 @@
         "home": 1,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5887638",
@@ -15829,7 +16939,7 @@
         "home": 1,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5887642",
@@ -15859,7 +16969,7 @@
         "home": 0,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5868074",
@@ -15889,7 +16999,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5868080",
@@ -15919,7 +17029,7 @@
         "home": 3,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5749685",
@@ -15949,7 +17059,7 @@
         "home": 2,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5795459",
@@ -15979,7 +17089,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "5881176",
@@ -16009,7 +17119,7 @@
         "home": 0,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5802942",
@@ -16039,7 +17149,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5781751",
@@ -16069,7 +17179,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5887637",
@@ -16099,7 +17209,7 @@
         "home": 0,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5887644",
@@ -16129,7 +17239,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5868072",
@@ -16159,7 +17269,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "1000015477",
@@ -16189,7 +17299,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5103640",
@@ -16219,7 +17329,7 @@
         "home": 0,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5881170",
@@ -16249,7 +17359,7 @@
         "home": 2,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5795455",
@@ -16279,7 +17389,7 @@
         "home": 0,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "5795460",
@@ -16309,7 +17419,7 @@
         "home": 0,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "5795461",
@@ -16339,7 +17449,7 @@
         "home": 5,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "5749684",
@@ -16369,7 +17479,7 @@
         "home": 2,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5749687",
@@ -16399,7 +17509,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802938",
@@ -16429,7 +17539,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5781752",
@@ -16459,7 +17569,7 @@
         "home": 1,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5781753",
@@ -16489,7 +17599,7 @@
         "home": 3,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5868076",
@@ -16519,7 +17629,7 @@
         "home": 1,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5749683",
@@ -16549,7 +17659,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5781750",
@@ -16579,7 +17689,7 @@
         "home": 5,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5071371",
@@ -16609,7 +17719,7 @@
         "home": 3,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071377",
@@ -16639,7 +17749,7 @@
         "home": 0,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071376",
@@ -16669,7 +17779,7 @@
         "home": 3,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071378",
@@ -16699,7 +17809,7 @@
         "home": 0,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071372",
@@ -16729,7 +17839,7 @@
         "home": 0,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071373",
@@ -16759,7 +17869,7 @@
         "home": 2,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071375",
@@ -16789,7 +17899,7 @@
         "home": 2,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071374",
@@ -16819,7 +17929,7 @@
         "home": 3,
         "away": 4
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071379",
@@ -16849,7 +17959,7 @@
         "home": 3,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5103636",
@@ -16879,7 +17989,7 @@
         "home": 1,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5071368",
@@ -16909,7 +18019,7 @@
         "home": 0,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071367",
@@ -16939,7 +18049,7 @@
         "home": 1,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071369",
@@ -16969,7 +18079,7 @@
         "home": 4,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5071370",
@@ -16999,7 +18109,7 @@
         "home": 2,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5103635",
@@ -17029,7 +18139,7 @@
         "home": 5,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103643",
@@ -17059,7 +18169,7 @@
         "home": 1,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5103638",
@@ -17089,7 +18199,7 @@
         "home": 2,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5887643",
@@ -17119,7 +18229,7 @@
         "home": 2,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5868078",
@@ -17149,7 +18259,7 @@
         "home": 1,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5781758",
@@ -17179,7 +18289,7 @@
         "home": 0,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5103639",
@@ -17209,7 +18319,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:21.840Z"
+      "updatedAt": "2026-09-25T04:36:34.604Z"
     },
     {
       "id": "5749689",
@@ -17239,7 +18349,7 @@
         "home": 0,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802937",
@@ -17269,7 +18379,7 @@
         "home": 2,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5802939",
@@ -17299,7 +18409,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5802940",
@@ -17329,7 +18439,7 @@
         "home": 4,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5802944",
@@ -17359,7 +18469,7 @@
         "home": 3,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "1000015475",
@@ -17389,7 +18499,7 @@
         "home": 3,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5781757",
@@ -17419,7 +18529,7 @@
         "home": 2,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5989825",
@@ -17449,7 +18559,7 @@
         "home": 5,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5887636",
@@ -17479,7 +18589,7 @@
         "home": 1,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5781756",
@@ -17509,7 +18619,7 @@
         "home": 0,
         "away": 4
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5795463",
@@ -17539,7 +18649,7 @@
         "home": 0,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "5868073",
@@ -17569,7 +18679,7 @@
         "home": 5,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5881177",
@@ -17599,7 +18709,7 @@
         "home": 0,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5749681",
@@ -17629,7 +18739,7 @@
         "home": 2,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802943",
@@ -17659,7 +18769,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5989829",
@@ -17689,7 +18799,7 @@
         "home": 2,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5781755",
@@ -17719,7 +18829,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5887639",
@@ -17749,7 +18859,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5887640",
@@ -17779,7 +18889,7 @@
         "home": 0,
         "away": 4
       },
-      "updatedAt": "2026-09-24T21:25:20.938Z"
+      "updatedAt": "2026-09-25T04:36:33.813Z"
     },
     {
       "id": "5868071",
@@ -17809,7 +18919,7 @@
         "home": 0,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5795457",
@@ -17839,7 +18949,7 @@
         "home": 3,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "5795458",
@@ -17869,7 +18979,7 @@
         "home": 1,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "5795462",
@@ -17899,7 +19009,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "1000015476",
@@ -17929,7 +19039,7 @@
         "home": 2,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "1000015479",
@@ -17959,7 +19069,7 @@
         "home": 0,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5881172",
@@ -17989,7 +19099,7 @@
         "home": 3,
         "away": 4
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881173",
@@ -18019,7 +19129,7 @@
         "home": 2,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881174",
@@ -18049,7 +19159,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5881178",
@@ -18079,7 +19189,7 @@
         "home": 3,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "5749682",
@@ -18109,7 +19219,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5749688",
@@ -18139,7 +19249,7 @@
         "home": 0,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5868077",
@@ -18169,7 +19279,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5795464",
@@ -18199,7 +19309,7 @@
         "home": 2,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "5071366",
@@ -18229,7 +19339,7 @@
         "home": 0,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:11.234Z"
+      "updatedAt": "2026-09-25T04:36:26.037Z"
     },
     {
       "id": "5989824",
@@ -18259,7 +19369,7 @@
         "home": 0,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5795456",
@@ -18289,7 +19399,7 @@
         "home": 3,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:24:56.785Z"
+      "updatedAt": "2026-09-25T04:36:15.307Z"
     },
     {
       "id": "5868075",
@@ -18319,7 +19429,7 @@
         "home": 1,
         "away": 3
       },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
+      "updatedAt": "2026-09-25T04:36:16.857Z"
     },
     {
       "id": "5749686",
@@ -18349,7 +19459,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:00.368Z"
+      "updatedAt": "2026-09-25T04:36:17.691Z"
     },
     {
       "id": "5802941",
@@ -18379,7 +19489,7 @@
         "home": 2,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:03.287Z"
+      "updatedAt": "2026-09-25T04:36:19.314Z"
     },
     {
       "id": "5881171",
@@ -18409,7 +19519,7 @@
         "home": 7,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:01.974Z"
+      "updatedAt": "2026-09-25T04:36:18.493Z"
     },
     {
       "id": "1000015473",
@@ -18439,7 +19549,7 @@
         "home": 2,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "1000015474",
@@ -18469,7 +19579,7 @@
         "home": 3,
         "away": 2
       },
-      "updatedAt": "2026-09-24T21:25:13.765Z"
+      "updatedAt": "2026-09-25T04:36:27.800Z"
     },
     {
       "id": "5781754",
@@ -18499,7 +19609,7 @@
         "home": 3,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:19.904Z"
+      "updatedAt": "2026-09-25T04:36:33.093Z"
     },
     {
       "id": "5989822",
@@ -18529,7 +19639,7 @@
         "home": 2,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989828",
@@ -18559,7 +19669,7 @@
         "home": 4,
         "away": 0
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     },
     {
       "id": "5989827",
@@ -18589,427 +19699,7 @@
         "home": 1,
         "away": 1
       },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
-    },
-    {
-      "id": "5868068",
-      "competitionId": "87",
-      "competitionName": "LaLiga",
-      "competitionSlug": "laliga",
-      "country": "Spain",
-      "round": 6,
-      "utcDate": "2026-09-17T19:30:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "9864",
-        "name": "Málaga",
-        "shortName": "Málaga",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9864.png",
-        "score": 1
-      },
-      "awayTeam": {
-        "id": "10205",
-        "name": "Villarreal",
-        "shortName": "Villarreal",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10205.png",
-        "score": 3
-      },
-      "score": {
-        "home": 1,
-        "away": 3
-      },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
-    },
-    {
-      "id": "6112354",
-      "competitionId": "73",
-      "competitionName": "UEFA Europa League",
-      "competitionSlug": "europa-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-17T19:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "10188",
-        "name": "Beşiktaş",
-        "shortName": "Beşiktaş",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10188.png",
-        "score": 4
-      },
-      "awayTeam": {
-        "id": "8592",
-        "name": "Marseille",
-        "shortName": "Marseille",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8592.png",
-        "score": 1
-      },
-      "score": {
-        "home": 4,
-        "away": 1
-      },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
-    },
-    {
-      "id": "6112299",
-      "competitionId": "73",
-      "competitionName": "UEFA Europa League",
-      "competitionSlug": "europa-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-17T19:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "9925",
-        "name": "Celtic",
-        "shortName": "Celtic",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9925.png",
-        "score": 1
-      },
-      "awayTeam": {
-        "id": "8222",
-        "name": "Ferencváros",
-        "shortName": "Ferencváros",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8222.png",
-        "score": 3
-      },
-      "score": {
-        "home": 1,
-        "away": 3
-      },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
-    },
-    {
-      "id": "6112324",
-      "competitionId": "73",
-      "competitionName": "UEFA Europa League",
-      "competitionSlug": "europa-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-17T19:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "9826",
-        "name": "Crystal Palace",
-        "shortName": "Crystal Palace",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9826.png",
-        "score": 4
-      },
-      "awayTeam": {
-        "id": "2182",
-        "name": "Lech Poznań",
-        "shortName": "Lech Poznań",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2182.png",
-        "score": 0
-      },
-      "score": {
-        "home": 4,
-        "away": 0
-      },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
-    },
-    {
-      "id": "6112253",
-      "competitionId": "73",
-      "competitionName": "UEFA Europa League",
-      "competitionSlug": "europa-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-17T19:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "9885",
-        "name": "Juventus",
-        "shortName": "Juventus",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9885.png",
-        "score": 5
-      },
-      "awayTeam": {
-        "id": "8464",
-        "name": "NEC Nijmegen",
-        "shortName": "NEC Nijmegen",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8464.png",
-        "score": 0
-      },
-      "score": {
-        "home": 5,
-        "away": 0
-      },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
-    },
-    {
-      "id": "6112377",
-      "competitionId": "73",
-      "competitionName": "UEFA Europa League",
-      "competitionSlug": "europa-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-17T19:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "8476",
-        "name": "Lillestrøm",
-        "shortName": "Lillestrøm",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8476.png",
-        "score": 1
-      },
-      "awayTeam": {
-        "id": "212820",
-        "name": "Torreense",
-        "shortName": "Torreense",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212820.png",
-        "score": 2
-      },
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
-    },
-    {
-      "id": "6112272",
-      "competitionId": "73",
-      "competitionName": "UEFA Europa League",
-      "competitionSlug": "europa-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-17T19:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "8560",
-        "name": "Real Sociedad",
-        "shortName": "Real Sociedad",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
-        "score": 1
-      },
-      "awayTeam": {
-        "id": "8678",
-        "name": "AFC Bournemouth",
-        "shortName": "Bournemouth",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8678.png",
-        "score": 2
-      },
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
-    },
-    {
-      "id": "6112283",
-      "competitionId": "73",
-      "competitionName": "UEFA Europa League",
-      "competitionSlug": "europa-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-17T19:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "6033",
-        "name": "Viktoria Plzeň",
-        "shortName": "Viktoria Plzeň",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6033.png",
-        "score": 0
-      },
-      "awayTeam": {
-        "id": "7978",
-        "name": "Union St.Gilloise",
-        "shortName": "Union St.Gilloise",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7978.png",
-        "score": 3
-      },
-      "score": {
-        "home": 0,
-        "away": 3
-      },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
-    },
-    {
-      "id": "5989823",
-      "competitionId": "516",
-      "competitionName": "Algerian Ligue 1",
-      "competitionSlug": "algerian-ligue-1",
-      "country": "Algeria",
-      "round": 3,
-      "utcDate": "2026-09-17T19:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "319205",
-        "name": "CR Temouchent",
-        "shortName": "CR Temouchent",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/319205.png",
-        "score": 1
-      },
-      "awayTeam": {
-        "id": "101630",
-        "name": "JS Kabylie",
-        "shortName": "JS Kabylie",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101630.png",
-        "score": 0
-      },
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
-    },
-    {
-      "id": "6099330",
-      "competitionId": "133",
-      "competitionName": "Carabao Cup",
-      "competitionSlug": "efl-cup",
-      "country": "England",
-      "round": 3,
-      "utcDate": "2026-09-17T18:30:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "8456",
-        "name": "Manchester City",
-        "shortName": "Man City",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
-        "score": 5
-      },
-      "awayTeam": {
-        "id": "9850",
-        "name": "Norwich City",
-        "shortName": "Norwich",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9850.png",
-        "score": 0
-      },
-      "score": {
-        "home": 5,
-        "away": 0
-      },
-      "updatedAt": "2026-09-24T21:25:06.732Z"
-    },
-    {
-      "id": "5868063",
-      "competitionId": "87",
-      "competitionName": "LaLiga",
-      "competitionSlug": "laliga",
-      "country": "Spain",
-      "round": 6,
-      "utcDate": "2026-09-17T17:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "8603",
-        "name": "Real Betis",
-        "shortName": "Real Betis",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8603.png",
-        "score": 1
-      },
-      "awayTeam": {
-        "id": "8305",
-        "name": "Getafe",
-        "shortName": "Getafe",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8305.png",
-        "score": 0
-      },
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "updatedAt": "2026-09-24T21:24:59.134Z"
-    },
-    {
-      "id": "5989826",
-      "competitionId": "516",
-      "competitionName": "Algerian Ligue 1",
-      "competitionSlug": "algerian-ligue-1",
-      "country": "Algeria",
-      "round": 3,
-      "utcDate": "2026-09-17T17:00:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "316409",
-        "name": "US Biskra",
-        "shortName": "US Biskra",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/316409.png",
-        "score": 0
-      },
-      "awayTeam": {
-        "id": "101633",
-        "name": "CR Bélouizdad",
-        "shortName": "CR Bélouizdad",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101633.png",
-        "score": 1
-      },
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "updatedAt": "2026-09-24T21:25:31.416Z"
-    },
-    {
-      "id": "6112379",
-      "competitionId": "73",
-      "competitionName": "UEFA Europa League",
-      "competitionSlug": "europa-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-17T16:45:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "8632",
-        "name": "Levski Sofia",
-        "shortName": "Levski Sofia",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8632.png",
-        "score": 0
-      },
-      "awayTeam": {
-        "id": "10013",
-        "name": "Salzburg",
-        "shortName": "Salzburg",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10013.png",
-        "score": 1
-      },
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "updatedAt": "2026-09-24T21:25:04.035Z"
-    },
-    {
-      "id": "6112373",
-      "competitionId": "73",
-      "competitionName": "UEFA Europa League",
-      "competitionSlug": "europa-league",
-      "country": "Europe",
-      "round": 1,
-      "utcDate": "2026-09-17T16:45:00Z",
-      "status": "FINISHED",
-      "minute": "FT",
-      "homeTeam": {
-        "id": "7753",
-        "name": "OFI Crete",
-        "shortName": "OFI Crete",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7753.png",
-        "score": 2
-      },
-      "awayTeam": {
-        "id": "8226",
-        "name": "Hoffenheim",
-        "shortName": "Hoffenheim",
-        "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8226.png",
-        "score": 0
-      },
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "updatedAt": "2026-09-24T21:25:04.036Z"
+      "updatedAt": "2026-09-25T04:36:42.887Z"
     }
   ]
 }
