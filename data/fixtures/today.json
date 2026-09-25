@@ -7,27 +7,27 @@
     "country": "Europe",
     "round": 1,
     "utcDate": "2026-09-25T18:45:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8204",
       "name": "Italy",
       "shortName": "Italy",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8204.png",
-      "score": null
+      "score": 0
     },
     "awayTeam": {
       "id": "8263",
       "name": "Belgium",
       "shortName": "Belgium",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8263.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 2
     },
-    "updatedAt": "2026-09-25T17:01:38.497Z"
+    "updatedAt": "2026-09-25T21:26:19.404Z"
   },
   {
     "id": "5181789",
@@ -37,26 +37,26 @@
     "country": "Europe",
     "round": 1,
     "utcDate": "2026-09-25T18:45:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6595",
       "name": "Turkiye",
       "shortName": "Turkiye",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6595.png",
-      "score": null
+      "score": 0
     },
     "awayTeam": {
       "id": "6723",
       "name": "France",
       "shortName": "France",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6723.png",
-      "score": null
+      "score": 1
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "updatedAt": "2026-09-25T17:01:38.497Z"
+    "updatedAt": "2026-09-25T21:26:19.404Z"
   }
 ]
