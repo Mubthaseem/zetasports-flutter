@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-09-25T04:36:43.204Z",
+    "generatedAt": "2026-09-25T04:41:17.061Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 200
+      "fullArticlesCount": 203
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,33 @@
     }
   },
   "news": [
+    {
+      "id": "ftbpro_01m3aj2xj6ny",
+      "title": "‘Offers’—Martinelli’s Agent Reveals Premier League Interest During Arsenal Exit",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3aj2xj6ny/offersmartinellis-agent-reveals-premier-league-interest-during-arsenal-exit",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_937,h_527,x_87,y_33/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3akajhaz01th5kqfs.jpg",
+      "publishedAt": "2026-09-25T01:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m39a9aefbe",
+      "title": "Turkiye vs. France—Nations League: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m39a9aefbe/turkiye-vs-francenations-league-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39bvb158m7rgn5zc5.jpg",
+      "publishedAt": "2026-09-25T01:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m39kcyg2jt",
+      "title": "Italy vs. Belgium—Nations League: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m39kcyg2jt/italy-vs-belgiumnations-league-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3ae64m9446xm0enjq.jpg",
+      "publishedAt": "2026-09-25T00:00:01.000Z"
+    },
     {
       "id": "ftbpro_01m39txyn35c",
       "title": "Transfer Rumors: Chelsea Plot Ronaldo Move; European Giants Want Gyokeres",
@@ -166,33 +193,6 @@
       "sourceUrl": "/embed/news/01m3a4w5nky3/very-similarharry-kane-is-serious-about-his-future-nfl-career",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_38/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3a5nzpn5hm1t54wrs.jpg",
       "publishedAt": "2026-09-24T18:30:00.000Z"
-    },
-    {
-      "id": "oa2hmo4uvcgy14ixcazdis5xb",
-      "title": "Belgium and Italy in same situation, says Van Bommel ahead of debut",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/oa2hmo4uvcgy14ixcazdis5xb-belgium-italy-same-situation-says-van-bommel-ahead-debut",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e6/c8/mark-van-bommel_u2sc0vjjcxt4195d989joi0nw.png?t=-665722784&w=1260&h=708",
-      "publishedAt": "2026-09-24T18:06:12.000Z"
-    },
-    {
-      "id": "ftbpro_01m39vxcg036",
-      "title": "Man Utd’s World Record Gareth Bale Bid Finally Revealed",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m39vxcg036/man-utds-world-record-gareth-bale-bid-finally-revealed",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_13/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39x2pnrxkjmxqz0rt.jpg",
-      "publishedAt": "2026-09-24T18:00:02.000Z"
-    },
-    {
-      "id": "162qve87tj1fe1ffb7r6xmge7t",
-      "title": "'Full package' Kane deserves Ballon d'Or recognition, says Tuchel",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/162qve87tj1fe1ffb7r6xmge7t-full-package-kane-deserves-ballon-dor-recognition-says-tuchel",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a6/4e/thomas-tuchel-and-harry-kane_jbw3n7h1rimw1j4go3qvktb4j.jpg?t=-669178784&w=1260&h=708",
-      "publishedAt": "2026-09-24T17:40:11.000Z"
     }
   ],
   "articles": {
@@ -4842,6 +4842,37 @@
         "feed. READ THE LATEST REAL MADRID NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m39a9aefbe": {
+      "id": "ftbpro_01m39a9aefbe",
+      "title": "Turkiye vs. France—Nations League: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/turkiye-vs-france-nations-league-preview-predictions-and-lineups-9-25-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39bvb158m7rgn5zc5.jpg",
+      "publishedAt": "2026-09-25T01:00:00.000Z",
+      "paragraphs": [
+        "By Ewan Ross-MurraySep 24, 2026France begin their UEFA Nations League campaign on the road. / Alex Nicodim/NurPhoto/Getty Images (Türkiye); FRANCK FIFE/AFP/Getty Images (France).France plays its first fixture under new manager Zinedine Zidane when taking on Türkiye in its UEFA Nations League opener on Friday.",
+        "Didier Deschamps departed after finishing fourth at the 2026 World Cup and Zidane finally took the position he’s waited so long for. The legendary French midfielder had been out of work for five years following two remarkable stints with Real Madrid, patiently waiting for a chance to coach Les Bleus.",
+        "Zidane will be desperate to make a winning start to his reign against awkward opposition, with Belgium and Italy residing alongside Türkiye in France’s Nations League group. This is the first of four matches the 54-year-old will oversee during an extended three-week international period.",
+        "Türkiye resisted the temptation to change their head coach after an extremely underwhelming World Cup campaign which saw them crash out of the group stage behind the USMNT, Australia and Paraguay. Vincenzo Montella will demand mass improvements from his players ahead of a battle with the two-time world champions on home soil.",
+        "Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed",
+        "France enters a new era with a raft of superstars. / Roger Wimmer/ISI Photos/Getty Images“I know what the fans want to see: to keep watching the France national team winning matches,” Zidane enthused last week. Well, few past coaches of Les Bleus have been handed a tougher start to their tenure with the Türkiye clash followed by meetings with Italy and Belgium (twice).",
+        "This international window should offer a strong indicator as to what Zidane’s France will look like. Accused of being carried by a generational roster as Real Madrid boss, now is his opportunity to set out a clear style and direction for his team.",
+        "Of course, he once again boasts a plethora of superstars. Kylian Mbappé leads a familiar all-star offense containing Ousmane Dembélé, Bradley Barcola, Michael Olise and Désiré Doué, while there’s no shortage of talent in defense and midfield.",
+        "That firepower should prove too much for Türkiye, even if Arda Güler performs at his peak. While there are expected to be some teething problems early in the Zidane era, he should begin with victory.",
+        "Türkiye is without some key players. / FotMobTürkiye’s task is made all the harder by the absences of Hakan Çalhanoğlu and Kenan Yıldız through injury, meaning Montella will be without two key performers and 139 caps worth of experience.",
+        "Elsewhere, Kaan Ayhan, Çağlar Söyüncü and Mert Müldür are all missing in defense from the World Cup roster, with the latter sidelined with a meniscus injury until later this year.",
+        "Okan Kocuk, Adil Demirbağ, Bartuğ Elmaz, Melih Kabasakal and İlhan Fakılı are all hoping to make their senior debuts across the next four matches.",
+        "Montella will lean on the creativity of Güler against France, with the playmaker coming up against several of his Real Madrid clubmates.",
+        "Türkiye predicted lineup vs. France (4-3-3): Çakır; Çelik, Demiral, Bardakcı, Kadıoğlu; Kökçü, Özcan, Yüksek; Güler, Yılmaz, Aktürkoğlu.",
+        "France is missing a few key defenders. / FotMobZidane was already without William Saliba in the heart of his defense, but his options were further depleted by Ibrahima Konaté pulling out of the squad through injury. Manchester United’s Leny Yoro has replaced the Real Madrid defender.",
+        "Aurélien Tchouaméni was omitted after only just returning from injury, while Lucas Digne, Malo Gusto, N’Golo Kanté and Marcus Thuram have all been dropped from the roster.",
+        "There is a recall for Bournemouth’s Adrien Truffert, who should immediately come into the XI at left back, while Eduardo Camavinga has also been selected again after missing the World Cup.",
+        "Yoro, Jérémy Jacquet, Esteban Lepaul, Lucas Da Cunha and Andy Diouf are all outfield players hopeful of making their debuts.",
+        "Zidane has hinted at using Mbappé from the left-hand side for France, with Dembélé instead operating in the false nine role which has brought him so much success at Paris Saint-Germain. However, it remains to be seen if those changes will take place against Türkiye.",
+        "France predicted lineup vs. Türkiye (4-2-3-1): Maignan; Koundé, Upamecano, Lacroix, Truffert; Rabiot, Camavinga; Dembélé, Olise, Doué; Mbappé."
+      ]
+    },
     "ftbpro_01m39cjz7x8v": {
       "id": "ftbpro_01m39cjz7x8v",
       "title": "Rodri Names His Six-Man Ballon d’Or Shortlist—And There’s a Theme",
@@ -4882,7 +4913,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39ncbgbdk0xdfq7h8.jpg",
       "publishedAt": "2026-09-24T21:00:01.000Z",
       "paragraphs": [
-        "By James Cormack5:00 PM EDTBrazil faces off against Australia. / Joe Prior/Visionhaus/Getty Images (Australia), Visionhaus/Getty Images (Brazil)Keen to start afresh after its worst World Cup performance in 36 years, Brazil begins a new tournament cycle with three friendlies during the first international break of the 2026–27 season.",
+        "By James CormackSep 24, 2026Brazil faces off against Australia. / Joe Prior/Visionhaus/Getty Images (Australia), Visionhaus/Getty Images (Brazil)Keen to start afresh after its worst World Cup performance in 36 years, Brazil begins a new tournament cycle with three friendlies during the first international break of the 2026–27 season.",
         "The five-time world champions are touring Down Under and playing the lowly ranked India for the first time ever, and the first of their two meetings with Australia takes place at the Queensland Country Bank Stadium on Friday.",
         "The stoic Carlo Ancelotti was supposed to mask the deficiencies of Brazil’s World Cup roster and guide the Seleção to a sixth title. However, Ancelotti’s side struggled to convince for much of their stay in North America and were eventually dumped out of the competition after losing 2–1 to Norway in the round of 16.",
         "Australia also left the U.S. disappointed, despite reaching the knockout stages. Tony Popovic’s side didn’t quite capture the imagination compared to four years before in Qatar, and they were cruelly eliminated by Egypt on penalties in the round of 32.",
@@ -4991,6 +5022,37 @@
         "Another loan looks likely. /  Sarah Stier/FIFA/Getty ImagesOpportunities for Real Madrid look to be few and far between again this season."
       ]
     },
+    "ftbpro_01m39kcyg2jt": {
+      "id": "ftbpro_01m39kcyg2jt",
+      "title": "Italy vs. Belgium—Nations League: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/italy-vs-belgium-nations-league-preview-predictions-lineups-9-25-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3ae64m9446xm0enjq.jpg",
+      "publishedAt": "2026-09-25T00:00:01.000Z",
+      "paragraphs": [
+        "By James CormackSep 24, 2026Two European heavyweights looking for a strong start. / Visionhaus/Getty Images (Italy), Kristian Skeie/UEFA/Getty Images (Belgium)Italy has pivoted to familiarity after yet another World Cup absence, with Roberto Mancini, the man who led the Azzurri to Euro 2020 glory, back for the 2026–27 UEFA Nations League.",
+        "Italy’s campaign starts against Belgium at the Stadio Olimpico in Rome, having twice finished third in this competition’s short history.",
+        "While the Azzurri reverted to a manager who led the most successful period since the 2006 World Cup, Belgium has opted for something new. Rudi Garcia’s side exceeded expectations at the World Cup this summer, reaching the quarterfinals before losing admirably to eventual winners Spain.",
+        "Garcia, somewhat surprisingly, decided to leave his post after the tournament, and, resisting the temptation to rehire the newly available Roberto Martínez, the Royal Belgian FA decided to appoint former Netherlands midfielder Mark van Bommel.",
+        "Unlike Mancini, this is Van Bommel’s first taste of international management, having previously led PSV Eindhoven, Wolfsburg and Royal Antwerp with varying degrees of success.",
+        "Friday’s bout kicks off a busy period for both teams, with three more outings upcoming for both. France and Türkiye are the other two teams in Nations League Group A1.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Mancini faces another new manager, Mark van Bommel, in Friday’s bout. / FIGC/Getty ImagesThe Italian Football Federation (FIGC) got itself into a right mess in the summer, and were forced to changed tack completely after Paolo Maldini left his role as technical director after just a couple of weeks.",
+        "Maldini had tried to tempt Carlo Ancelotti and Pep Guardiola, but was eventually content with Andrea Pirlo. However, the former midfielder’s ties to a Russian betting company saw him withdraw from the race, and Maldini subsequently resigned.",
+        "So, Italy turned back to Mancini. The suave 61-year-old has been forgiven for his Middle Eastern venture, and has already proven once that he’s capable of reigniting the Italian national team.",
+        "Mancini is set to hand a debut to Alessandro Romano in midfield. / FotMobItaly is without the suspended Alessandro Bastoni, who was sent off in the World Cup playoff defeat to Bosnia & Herzegovina, resulting in missing out for the third straight time.",
+        "Giorgio Scalvini is likely to be available despite missing training on Tuesday, but Diego Coppola is set to partner Gianluca Mancini in Bastoni’s absence.",
+        "Brentford’s Michael Kayode is pushing for a start over Napoli captain Giovanni Di Lorenzo, as is the in-form Davide Frattesi in midfield. Mancini is poised to hand 20-year-old Alessandro Romano his first cap on Friday alongside Nicolò Barella and Sandro Tonali in the engine room.",
+        "Daniel Maldini, son of Paolo, could start on the left, despite his recent car accident, while Francesco Pio Esposito is battling Moise Kean for the starting berth up top. Nicolò Zaniolo’s slow start to the season means Bologna’s Nicolò Cambiaghi may complete Italy’s attack.",
+        "Italy predicted lineup vs. Belgium (4-3-3): Donnarumma; Di Lorenzo, Mancini, Coppola, Calafiori; Romano, Barella, Tonali; Cambiaghi, Esposito, Maldini.",
+        "Van Bommel picks his first XI as Belgium boss. / FotMobVan Bommel has called up 28 players, but Belgium is without two key players at both ends of the pitch. Goalkeeper Thibaut Courtois ruled himself out of selection for the Red Devils‘ upcoming games, and Jérémy Doku has been struggling with a calf injury at the start of the new season.",
+        "Fortunately, Belgium is well stocked in reserve. Manchester United‘s Senne Lammens is poised to start in goal, while Paris Saint-Germain winger Mika Godts will line up down the left-hand side.",
+        "Alexis Saelemaekers and Thomas Meunier missed out on selection, while Axel Witsel ended his international career after the World Cup. Romelu Lukaku has been included, but his minutes will be carefully managed by Van Bommel, who is set to deploy a 4-3-3 at the start of his reign.",
+        "Belgium predicted lineup vs. Italy (4-3-3): Lammens; Castagne, De Winter, Theate, De Cuyper; Tielemans, Lavia, De Bruyne, Lukebakio, De Ketelaere, Godts.",
+        "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
     "ftbpro_01m39rb55n1a": {
       "id": "ftbpro_01m39rb55n1a",
       "title": "‘Wow’—Marc Cucurella Reveals Surprising Reaction to Bernabeu Whistles",
@@ -5059,7 +5121,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3a1qrbyyxhkj3n9y2.jpg",
       "publishedAt": "2026-09-24T23:05:00.000Z",
       "paragraphs": [
-        "By SI FC Staff7:05 PM EDTCristiano Ronaldo (left) and Viktor Gyökeres (right) headline the gossip. / Fayez NURELDINE/AFP/Getty Images (Ronaldo), Marc Atkins/Getty Images (Gyökeres)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "By SI FC StaffSep 24, 2026Cristiano Ronaldo (left) and Viktor Gyökeres (right) headline the gossip. / Fayez NURELDINE/AFP/Getty Images (Ronaldo), Marc Atkins/Getty Images (Gyökeres)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
         "Dominic Calvert-Lewin has been linked with Man Utd. / Daniel Bartel/Getty ImagesDespite reports to the contrary, Manchester United are not planning a move to sign Leeds United striker Dominic Calvert-Lewin. (Source: Football Insider)",
         "Chelsea are looking into a deal to sign Al Nassr striker Cristiano Ronaldo once the January transfer window opens. (Source: Match Fire)",
         "Atalanta are close to securing a new contract for center back Giorgio Scalvini, but that has not impacted ongoing transfer interest from Chelsea, Newcastle United and Tottenham Hotspur. (Source: TEAMtalk)",
@@ -5152,7 +5214,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3a9yrnexr4a035463.jpg",
       "publishedAt": "2026-09-24T20:00:01.000Z",
       "paragraphs": [
-        "By James Cormack4:00 PM EDTArsenal’s new faces are hoping to help the team defend the Premier League title. / Franco Romano/NurPhoto/Getty Images (Konsa), Joe Prior/Visionhaus/Getty Images (Guimarães), Marc Atkins/Getty Images (Tzolis)The 2025 summer transfer window represented a shift in north London, with Andrea Berta coming to the fore for the first time since his appointment as Arsenal’s sporting director.",
+        "By James CormackSep 24, 2026Arsenal’s new faces are hoping to help the team defend the Premier League title. / Franco Romano/NurPhoto/Getty Images (Konsa), Joe Prior/Visionhaus/Getty Images (Guimarães), Marc Atkins/Getty Images (Tzolis)The 2025 summer transfer window represented a shift in north London, with Andrea Berta coming to the fore for the first time since his appointment as Arsenal’s sporting director.",
         "The previous incumbent, Edu Gaspar, had been chastised by supporters despite the role he played alongside Mikel Arteta in shifting a rotten culture at Emirates Stadium and restoring the Gunners among the Premier League’s finest.",
         "Within a year of Berta’s arrival, Arsenal were champions, but that doesn’t exactly paint a fair picture. In truth, Arsenal’s 2025 summer transfer window, lauded at the time, is aging poorly.",
         "Their three major signings of the window, Eberechi Eze, Viktor Gyökeres and Martín Zubimendi, no longer find themselves in Arteta’s strongest XI, even if all three contributed to their title success last term.",
@@ -5177,7 +5239,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39ztp2f0gdra5x8t1.jpg",
       "publishedAt": "2026-09-24T22:00:01.000Z",
       "paragraphs": [
-        "By Ewan Ross-Murray6:00 PM EDTSome of the Premier League’s big-hitters have made slow starts. / Michael Regan/Getty Images (De Zerbi), Nick Potts/PA Images/Getty Images (Carrick)The cut-throat nature of the Premier League means it’s only a matter of time before the first manager is marched to the metaphorical guillotine.",
+        "By Ewan Ross-MurraySep 24, 2026Some of the Premier League’s big-hitters have made slow starts. / Michael Regan/Getty Images (De Zerbi), Nick Potts/PA Images/Getty Images (Carrick)The cut-throat nature of the Premier League means it’s only a matter of time before the first manager is marched to the metaphorical guillotine.",
         "There were 11 managers fired during a tumultuous 2025–26 campaign in England’s top flight, two of which had already been dismissed by the time October rolled around.",
         "While no manager has yet been canned this campaign, the vultures are already circling above Premier League touchlines up and down the country.",
         "The opening weeks of the new season have been arduous for a number of the division’s tacticians, who now have a point to prove when club soccer returns next month.",
@@ -5239,7 +5301,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_107/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3ae6pfcf366wcg9wp.jpg",
       "publishedAt": "2026-09-24T21:15:42.000Z",
       "paragraphs": [
-        "By Amanda Langell5:15 PM EDTFederico Higuaín previously played for the Crew from 2012 to 2019. / Andrew Katsampes/ISI Photos/Getty ImagesMajor League soccer manager Federico Higuaín has been fired by the Columbus Crew for telling a female referee, “Don’t forget, this is a man’s game.”",
+        "By Amanda LangellSep 24, 2026Federico Higuaín previously played for the Crew from 2012 to 2019. / Andrew Katsampes/ISI Photos/Getty ImagesMajor League soccer manager Federico Higuaín has been fired by the Columbus Crew for telling a female referee, “Don’t forget, this is a man’s game.”",
         "Higuaín, the brother of former Real Madrid and Argentina striker Gonzalo, was sent off during an MLS NEXT PRO match last month when he refused to let go of the referee’s hand. He then uttered the aforementioned sexist statement at the official before he was sent packing.",
         "The league only hit Higuaín, who served as Columbus Crew’s reserve team manager, with a two-game ban. The lax punishment prompted widespread backlash, led by the Professional Soccer Referees Association (PSRA).",
         "Columbus Crew then cut ties with Higuaín. “We determined it’s in the best interest of our Club, players and support staff to dismiss Federico Higuaín from his responsibilities,” said Crew general manager Issa Tall in a club statement.",
@@ -5267,7 +5329,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_33/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3ahja61k7gqcx1dha.jpg",
       "publishedAt": "2026-09-24T21:30:00.000Z",
       "paragraphs": [
-        "By Amanda Langell5:30 PM EDTKai Havertz appears to have suffered an injury while on international duty. / Marc Atkins/Getty Images)Arsenal are suddenly sweating over the fitness of star striker Kai Havertz.",
+        "By Amanda LangellSep 24, 2026Kai Havertz appears to have suffered an injury while on international duty. / Marc Atkins/Getty Images)Arsenal are suddenly sweating over the fitness of star striker Kai Havertz.",
         "The 27-year-old only lasted 30 minutes in Germany’s UEFA Nations League clash with the Netherlands on Thursday. Havertz got the nod from new manager Jürgen Klopp to lead Die Mannschaft’s line, but he was soon down on the ground in agony.",
         "The Germany international was on the receiving end of a reckless challenge from Quinten Timber, who is the brother of Havertz’s Arsenal teammate, Jurriën. The Netherlands midfielder caught Havertz studs up on the knee, earning himself a yellow card.",
         "Havertz received medical attention on the pitch before being forced to come off, sparking concern throughout Germany and north London as he headed straight down the tunnel.",
@@ -5285,6 +5347,37 @@
         "The No. 9 has zero goals to his name so far in 2026–27 and has even been linked with a transfer out of north London. Havertz, meanwhile, has found the back of the net in three of his seven appearances.",
         "Another option for Arteta is Mikel Merino. The midfielder knows a thing or two about filling in as a makeshift striker. He found great success doing just that for Arsenal last season, as well as Spain at the 2026 World Cup during the summer.",
         "feed. READ THE LATEST ARSENAL NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m3aj2xj6ny": {
+      "id": "ftbpro_01m3aj2xj6ny",
+      "title": "‘Offers’—Martinelli’s Agent Reveals Premier League Interest During Arsenal Exit",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/gabriel-martinelli-agent-rewriting-narrative-after-arsenal-exit/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_937,h_527,x_87,y_33/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3akajhaz01th5kqfs.jpg",
+      "publishedAt": "2026-09-25T01:00:00.000Z",
+      "paragraphs": [
+        "By Jamie SpencerSep 24, 2026Gabriel Martinelli joined Al Hilal in early September. / Abdullah Ahmed/Getty ImagesGabriel Martinelli left the Premier League to “clear his head” and for a “change scenery,” his agent now claims after being sold by Arsenal to Al Hilal during the summer transfer window.",
+        "There were “offers” to stay in England, his agent Marcos Casseb told Brazilian media outlet Itatiaia, although he did not name any clubs involved. The same, he said, was true of Germany’s Bundesliga and Serie A in Italy. The interview reads like an attempt to rewrite the narrative surrounding the Brazilian winger, who was being pushed to the fringes at Arsenal.",
+        "“We think his cycle at Arsenal had ended,” Casseb said. “It was seven years, he arrived there at 18, and Arsenal went through a huge rebuild.",
+        "“Last year they were Premier League champions. I think he completed his cycle. He arrived young. He was the only player who was there before [Mikel] Arteta, apart from [Bukayo] Saka.”",
+        "Arteta’s burning ambition saw Martinelli become collateral damage.",
+        "The Gunners won the Premier League last season but fell short in the Champions League. Arteta wants to defend the domestic title, which Arsenal haven’t done since 1935, and crown his team European champions, which Arsenal have never done. Martinelli, dropped last season, was identified as someone to upgrade.",
+        "While Christos Tzolis replaced Leandro Trossard, the Gunners tried and failed to sign Morgan Rogers, Bradley Barcola and Vinícius Júnior. Selling Martinelli was still deemed beneficial even though a superstar winger didn’t arrive.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "The Brazilian stopped getting picked once preseason finished. / Marc Atkins/Getty ImagesIt was widely reported during the summer that Martinelli rejected Galatasaray. The reason given was that he saw his career continuing in a bigger European league. As Fabrizio Romano put it, he “never considered a move to Türkiye at this stage of his career a realistic option.”",
+        "In mid-August, reputable reporting suggested Martinelli was “not pushing to leave” Arsenal. But, if it came to it, he wanted to join a club in England, Spain, France, Germany or Italy. Soon afterwards, he didn’t even make the bench for Arsenal’s first three matches of the season. The club could get good money by selling and Arteta was sending a clear message.",
+        "Martinelli wound up moving to Saudi Arabia, where enormous tax-free salaries lure players out of Europe but cannot make up for the much reduced global appeal and significantly lower competitive quality; after seven rounds of matches, one out of three clubs in the 18-team division is still winless so far this season. If Martinelli saw himself as being above Türkiye’s Süper Lig, the Saudi Pro League was objectively not a better alternative from a pure soccer perspective.",
+        "The way Casseb tells it now is offering a different spin. “We thought it was time for him to move, and the club also saw it that way. It was a very good departure for him and for Arsenal.”",
+        "Gabriel Martinelli (left) helped Arsenal win the Premier League last season.  / Stuart MacFarlane/Arsenal FC/Getty ImagesIt certainly was for Arsenal. The Gunners almost doubled their club-record sale by raising £60 million ($79.3 million) from Martinelli’s transfer, breaking the embarrassingly old mark set nine years earlier when Alex Oxlade-Chamberlain joined Liverpool.",
+        "“Did he get offers? He did yeah,” Casseb declared. “We had offers from Italian clubs, we had offers from German clubs and we had offers from other Premier League clubs but it was a moment when I think he needed and he also wanted to clear his head a bit, to change scenery.",
+        "“He went to the biggest club in Asia to be part of a very ambitious project. You can see it in the players that they have brought in, three players who were at the World Cup, each with their respective national teams and three players that are under 27.",
+        "“That’s a trend in Arab football right now, they’re changing the way they want to sign players. They’ve been trying to do that—lower the average age of the league—and their project has attracted a lot of attention. I think it was really important for a change of scenery.”",
+        "Martinelli has been more miss than hit so far. / Abdullah Ahmed/Getty ImagesSince joining Al Hilal, Martinelli has started three out of four games. There were initial concerns that he might have to share minutes with fellow new arrival Crysencio Summerville, with both competing for starts on the left wing. Martinelli has instead moved to the right.",
+        "He scored a hat-trick in just 54 minutes on the pitch when Al Hilal thrashed 17th-place Al Taawoun 6–0 on Sept. 12. Martinelli has been much less effective in his other appearances.",
+        "An AFC Champions League Elite debut in a win against Qatar’s Al Gharafa last week produced no goals, no assists, no chances created and only a single shot on target. It was a similar story when Al Hilal suffered a surprising home defeat to Neom five days prior.",
+        "Martinelli started only once for Brazil at the 2026 World Cup and is off the roster for the September-October international window. There’s an element of Carlo Ancelotti using these friendly matches to experiment, but it’s equally notable that it wasn’t key players who were sacrificed to open it up and make that possible—Vinícius Jr, Raphinha, Gabriel, Marquinhos and Bruno Guimarães were all selected as normal."
       ]
     },
     "fzhafkysws3g1ux8fnmoe3180": {
