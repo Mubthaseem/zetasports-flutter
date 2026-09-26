@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-09-26T20:58:08.115Z",
+    "generatedAt": "2026-09-26T22:38:34.848Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 284
+      "fullArticlesCount": 291
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,69 @@
     }
   },
   "news": [
+    {
+      "id": "ftbpro_01m3fn8zy2ft",
+      "title": "England vs. Spain Player Ratings: Errors, Substitutes Decide Five-Goal Thriller",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3fn8zy2ft/england-vs-spain-player-ratings-errors-substitutes-decide-five-goal-thriller",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_82/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3frsb3d24rteba30a.jpg",
+      "publishedAt": "2026-09-26T21:38:27.000Z"
+    },
+    {
+      "id": "mmi7g1n06ape19ev8uvfhbhip",
+      "title": "Xavi confident Zirkzee can 'help Netherlands enormously'",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/mmi7g1n06ape19ev8uvfhbhip-xavi-confident-zirkzee-can-help-netherlands-enormously",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/54/ce/zirkzee_1rm2f51xdkl341n6nj8g183v2k.jpg?t=-467934592&w=1260&h=708",
+      "publishedAt": "2026-09-26T21:29:31.000Z"
+    },
+    {
+      "id": "ftbpro_01m3fb3n4pka",
+      "title": "‘Thank You’—Lamine Yamal Details Emotional Embrace With Lionel Messi After World Cup Final",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3fb3n4pka/thank-youlamine-yamal-details-emotional-embrace-lionel-messi-after-world-cup-final",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_55/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3fgr8mn7j01bx31t4.jpg",
+      "publishedAt": "2026-09-26T21:00:01.000Z"
+    },
+    {
+      "id": "1k36x0k0emsqb12pwrssuggwq0",
+      "title": "England 2-3 Spain: Oyarzabal completes comeback to seal world champions victory",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1k36x0k0emsqb12pwrssuggwq0-england-2-3-spain-oyarzabal-completes-comeback-seal-world-champions-victory",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/c2/f9/oyarzabal_mzhs667d79am1lmdgbkyqpjus.jpg?t=-471592016&w=1260&h=708",
+      "publishedAt": "2026-09-26T20:50:06.000Z"
+    },
+    {
+      "id": "i2t4lgiizda51ai6125dalujy",
+      "title": "Mbappe suffered knee hyperextension with France",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/i2t4lgiizda51ai6125dalujy-mbappe-suffered-knee-hyperextension-france",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/bf/ad/mbappe_kxbm3my7g06p1i1lifrf9zlss.jpg?t=-477292080&w=640&h=360",
+      "publishedAt": "2026-09-26T20:15:33.000Z"
+    },
+    {
+      "id": "ftbpro_01m3f5qtqnw5",
+      "title": "‘Good Enough’—Man City Receive Surprise Defense From Long-Time Premier League Rival",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3f5qtqnw5/good-enoughman-city-receive-surprise-defense-from-long-time-premier-league-rival",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_77/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3faazcnj2h400rp73.jpg",
+      "publishedAt": "2026-09-26T20:00:00.000Z"
+    },
+    {
+      "id": "i19e037wx0lw15bn8hvvtpqdz",
+      "title": "London City 'building something special' after going second in WSL",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/i19e037wx0lw15bn8hvvtpqdz-london-city-building-something-special-after-going-second-wsl",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a4/50/london-city_qm8dbtrpwix918rpfj80jisic.jpg?t=-481040784&w=1260&h=708",
+      "publishedAt": "2026-09-26T19:40:49.000Z"
+    },
     {
       "id": "ftbpro_01m3fh2n2ztq",
       "title": "USMNT vs. Peru: Confirmed Lineups for International Friendly",
@@ -130,69 +193,6 @@
       "sourceUrl": "/embed/news/01m3f07w25eb/so-many-thingsman-city-chairman-speaks-out-premier-league-investigation",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1854,h_1042,x_0,y_197/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3f0eazz6vvjgjee3h.jpg",
       "publishedAt": "2026-09-26T14:31:48.000Z"
-    },
-    {
-      "id": "ftbpro_01m3ex5hv797",
-      "title": "‘It’s a Very Long Story’—Cody Gakpo Reflects on Almost Leaving Liverpool for Man City",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3ex5hv797/its-very-long-storycody-gakpo-reflects-almost-leaving-liverpool-man-city",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_75/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3exhbfxdf56p2697s.jpg",
-      "publishedAt": "2026-09-26T14:00:03.000Z"
-    },
-    {
-      "id": "2yffltvwa5kz1bc6i3oz1pawx",
-      "title": "Sarr's move to Liverpool was 'never going to happen', says Parish",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/2yffltvwa5kz1bc6i3oz1pawx-sarrs-move-liverpool-was-never-going-happen-says-parish",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/9f/e1/ismaila-sarr_47nryexqkuib1k75kwsua11nx.png?t=-536590848&w=1260&h=708",
-      "publishedAt": "2026-09-26T13:42:03.000Z"
-    },
-    {
-      "id": "ftbpro_01m3es5mrkr2",
-      "title": "Chelsea Star Leaves International Duty on Crutches in Fresh Injury Blow to Xabi Alonso",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3es5mrkr2/chelsea-star-leaves-international-duty-crutches-fresh-injury-blow-xabi-alonso",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_40/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3esbkdw9hmpgfgjx9.jpg",
-      "publishedAt": "2026-09-26T13:30:00.000Z"
-    },
-    {
-      "id": "6xyp8t0o0jmn1u6k76r836lkm",
-      "title": "De Ketelaere reveals talks were held with PSG over summer transfer",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/6xyp8t0o0jmn1u6k76r836lkm-de-ketelaere-reveals-talks-were-held-psg-over-summer-transfer",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/12/32/charles-de-ketelaere_1aq8tr10ivosm1quhrepyultpp.png?t=-545178272&w=1260&h=708",
-      "publishedAt": "2026-09-26T12:25:36.000Z"
-    },
-    {
-      "id": "ftbpro_01m3chs16s6d",
-      "title": "The Clubs That Would Be Crowned Premier League Champions If Man City Are Stripped of Titles",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3chs16s6d/clubs-that-would-be-crowned-premier-league-champions-if-man-city-are-stripped-titles",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_23/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3envtevxqrdvymfh4.jpg",
-      "publishedAt": "2026-09-26T12:00:02.000Z"
-    },
-    {
-      "id": "1fovopk176myj14sm66idi1vin",
-      "title": "Mendez predicts 'big things' for Columbus ahead of trip to Inter Miami",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1fovopk176myj14sm66idi1vin-mendez-predicts-big-things-columbus-ahead-trip-inter-miami",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/fa/ec/brais-mendez_3jdc1e6i3e2r1r44r83hld2k6.png?t=-561252848&w=1260&h=708",
-      "publishedAt": "2026-09-26T11:45:32.000Z"
-    },
-    {
-      "id": "ftbpro_01m3entz9b4v",
-      "title": "‘We Trusted the Club’—Rodri Breaks Silence on Man City’s Guilty Verdict",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3entz9b4v/we-trusted-clubrodri-breaks-silence-man-citys-guilty-verdict",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2369,h_1332,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3ep4byccgf9fda05x.jpg",
-      "publishedAt": "2026-09-26T11:45:00.000Z"
     }
   ],
   "articles": {
@@ -1087,6 +1087,38 @@
         "United face Tottenham, who are still winless and prop up the table, in their next Premier League game on October 10."
       ],
       "html": "<p>Michael Carrick understands the &quot;emotional&quot; reactions to Manchester United&#39;s recent struggles, after his decision to withdraw Kobbie Mainoo against Fulham was booed by their travelling fans.</p>\n\n<p>With just five points on the board after five games, United have made their joint-worst start to a Premier League campaign, having also taken five at this stage of 2014-15.</p>\n\n<p>Things could have been worse for the Red Devils at Craven Cottage on Sunday, too, as Matheus Cunha&#39;s deflected strike snatched a point in the 89th minute, after Lisandro Martinez&#39;s calamitous own goal had put them on the back foot.</p>\n\n<p>With United 1-0 down and chasing the game, Carrick&#39;s choice to replace Mainoo with Mason Mount in the 80th minute was loudly jeered by the away end.</p>\n\n<p>Mainoo had completed 64 of his 68 passes, 27 of which were in the final third, with only Bryan Mbeumo (100%) and Harry Maguire (95.8%) bettering his 94.1% pass accuracy among United&#39;s starters.</p>\n\n<p>But Carrick feels that reaction came from a place of frustration and understands the disgruntled feeling among the fanbase.</p>\n\n<p>&quot;There are always going to be certain reactions when you&#39;re making changes,&quot; Carrick said. &quot;I&#39;ve spoken to Kobbie after the game and he&#39;s absolutely fine.</p>\n\n<p>&quot;I understand at times when we are chasing the game, everyone&#39;s a little bit emotional. The supporters are – as they should be – desperate for us to do the right thing.</p>\n\n<p>&quot;But I don&#39;t take any negatives or offence to it. I think we&#39;ve just got to try and keep doing the right things to get back into the game.</p>\n\n<p>&quot;The supporters were unbelievable, I have to say, all the way through. They stuck with the boys and supported them.&nbsp;</p>\n\n<p>&quot;At least we&#39;ve given them something small at the end to take from it, and I&#39;m sure there&#39;s more to come.&quot;</p>\n\n<p>With United 12th in the Premier League table going into the extended international break, the Opta supercomputer only assigns them a 17% chance of qualifying for the Champions League, but Carrick is sure there are plenty of twists and turns ahead.</p>\n\n\n<p>&quot;It&#39;s still a big season ahead,&quot; Carrick said. &quot;It&#39;s a long season, and you&#39;re going to have these spells through a season. That&#39;s part of the journey. It&#39;s not a sprint; it&#39;s a long effort.</p>\n\n<p>&quot;I&#39;m not playing it down. We wanted more points, so I&#39;m not saying everything&#39;s great. I understand the frustration. We wanted to be better, and we wanted to do other things.</p>\n\n<p>&quot;But deflation is certainly not what we have within the club and within the group. The players didn&#39;t have that on the pitch, and that&#39;s what will carry us through the season, without a doubt.&quot;</p>\n\n<p>United face Tottenham, who are still winless and prop up the table, in their next Premier League game on October 10.</p>\n"
+    },
+    "1k36x0k0emsqb12pwrssuggwq0": {
+      "id": "1k36x0k0emsqb12pwrssuggwq0",
+      "title": "England 2-3 Spain: Oyarzabal completes comeback to seal world champions victory",
+      "subtitle": "England mounted a first-half comeback to lead at the break, but Spain refused to give up and completed their own turnaround to earn the win.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1k36x0k0emsqb12pwrssuggwq0-england-2-3-spain-oyarzabal-completes-comeback-seal-world-champions-victory",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/c2/f9/oyarzabal_mzhs667d79am1lmdgbkyqpjus.jpg?t=-471592016&w=1200&h=630",
+      "publishedAt": "2026-09-26T20:50:06.000Z",
+      "paragraphs": [
+        "Mikel Oyarzabal scored the winner against England once again as Spain came from behind to win 3-2 in their Nations League opener.",
+        "Lamine Yamal gave the world champions an early lead before Anthony Gordon and Harry Kane flipped the script before the break.",
+        "But after Kane missed a penalty, Spain rallied to earn three points in their first match since the World Cup final, with Alex Baena equalising before Oyarzabal securing the victory, just as he did in the Euro 2024 final.",
+        "Spain made the perfect start at Wembley, with Marc Guehi dispossessed as he turned back towards his own goal. Yamal picked his pocket and ruthlessly punished the mistake, turning his shot in off the inside of the far post just two minutes in.",
+        "Ferran Torres then saw a goal disallowed shortly after; Fabian Ruiz bent a lovely cross into the box, but the striker&#39;s diving header was ruled out for offside.",
+        "Ferran then saw two golden opportunities go begging, with James Trafford making himself big to smother a one-on-one shot, before firing wide from a similar position.",
+        "An exquisite Yamal backheel slipped in Dani Olmo, who fired wide from a tight angle, before Kane bent one wide at the other end in England&#39;s first clear-cut opener.",
+        "But England needed just four minutes to flip the game on its head. Nico Williams&#39;&nbsp;slip opened the door for a pacy counter-attack, and Gordon played a one-two with Jude Bellingham before slotting it past Unai Simon from the edge of the box 36 minutes in.",
+        "And with Spain on the ropes, Kane met Nico O&#39;Reilly&#39;s chipped cross after getting in front of Aymeric Laporte, and Marc Cucurella could only help it in off his thigh.",
+        "England started brightly after the break, with Bellingham winning a penalty after going down under Rodri&#39;s challenge. But Kane could not take advantage, smashing it against the crossbar after his standing foot slipped.",
+        "Spain made that reprieve count on the hour, with another helping hand from England. O&#39;Reilly&#39;s loose pass went straight to Olmo, who picked out Baena to fire past Trafford.",
+        "And his fellow substitute secured the victory in the 74th minute; Baena cut open England&#39;s defence with his throughball and Oyarzabal lifted a lovely dink over Trafford when he rushed off his line.&nbsp;",
+        "Spain find another gear after England put on some pressure",
+        "It was not all smooth sailing for Spain, with their lengthy unbeaten streak also coming under some pressure, but&nbsp;La Roja are now unbeaten in their last 39 matches in all competitions (W30 D9, in 90 minutes), extending the longest-ever such run by a European nation.",
+        "But they conceded two goals in the first half of an official match for the first time since October 2018, when they let in three at the Benito Villamarin against England, also in the Nations League.",
+        "Spain also conceded more goals&nbsp;in the first 45 minutes (two) than they did in the entirety of their World Cup-winning campaign (one).",
+        "While they had their wobbles, they made a stunning start, with Yamal scoring the third-quickest goal England have ever conceded at Wembley, while he is the youngest player to score against the Three Lions in a competitive match at the stadium in the last 20 years (19 years, 75 days).",
+        "It is a&nbsp;disappointing loss for England, but they made sure Spain knew they were in a fight.",
+        "The hosts had 12 shots, with four of those on target, though they only accumulated 1.51 expected goals (xG). Spain, by contrast, had 15 attempts worth 1.99 xG, with five on target.",
+        "England also caused their own problems, though, making two errors leading to goal in a competitive match for the first time since June 2019 against the Netherlands, also in the Nations League."
+      ],
+      "html": "<p>Mikel Oyarzabal scored the winner against England once again as Spain came from behind to win 3-2 in their Nations League opener.</p>\n\n<p>Lamine Yamal gave the world champions an early lead before Anthony Gordon and Harry Kane flipped the script before the break.</p>\n\n<p>But after Kane missed a penalty, Spain rallied to earn three points in their first match since the World Cup final, with Alex Baena equalising before Oyarzabal securing the victory, just as he did in the Euro 2024 final.</p>\n\n<p>Spain made the perfect start at Wembley, with Marc Guehi dispossessed as he turned back towards his own goal. Yamal picked his pocket and ruthlessly punished the mistake, turning his shot in off the inside of the far post just two minutes in.</p>\n\n<p>Ferran Torres then saw a goal disallowed shortly after; Fabian Ruiz bent a lovely cross into the box, but the striker&#39;s diving header was ruled out for offside.</p>\n\n<p>Ferran then saw two golden opportunities go begging, with James Trafford making himself big to smother a one-on-one shot, before firing wide from a similar position.</p>\n\n<p>An exquisite Yamal backheel slipped in Dani Olmo, who fired wide from a tight angle, before Kane bent one wide at the other end in England&#39;s first clear-cut opener.</p>\n\n<p>But England needed just four minutes to flip the game on its head. Nico Williams&#39;&nbsp;slip opened the door for a pacy counter-attack, and Gordon played a one-two with Jude Bellingham before slotting it past Unai Simon from the edge of the box 36 minutes in.</p>\n\n<p>And with Spain on the ropes, Kane met Nico O&#39;Reilly&#39;s chipped cross after getting in front of Aymeric Laporte, and Marc Cucurella could only help it in off his thigh.</p>\n\n<p>England started brightly after the break, with Bellingham winning a penalty after going down under Rodri&#39;s challenge. But Kane could not take advantage, smashing it against the crossbar after his standing foot slipped.</p>\n\n<p>Spain made that reprieve count on the hour, with another helping hand from England. O&#39;Reilly&#39;s loose pass went straight to Olmo, who picked out Baena to fire past Trafford.</p>\n\n<p>And his fellow substitute secured the victory in the 74th minute; Baena cut open England&#39;s defence with his throughball and Oyarzabal lifted a lovely dink over Trafford when he rushed off his line.&nbsp;</p>\n\n\n<p><strong>Spain find another gear after England put on some pressure</strong></p>\n\n<p>It was not all smooth sailing for Spain, with their lengthy unbeaten streak also coming under some pressure, but&nbsp;La Roja are now unbeaten in their last 39 matches in all competitions (W30 D9, in 90 minutes), extending the longest-ever such run by a European nation.</p>\n\n<p>But they conceded two goals in the first half of an official match for the first time since October 2018, when they let in three at the Benito Villamarin against England, also in the Nations League.</p>\n\n<p>Spain also conceded more goals&nbsp;in the first 45 minutes (two) than they did in the entirety of their World Cup-winning campaign (one).</p>\n\n<p>While they had their wobbles, they made a stunning start, with Yamal scoring the third-quickest goal England have ever conceded at Wembley, while he is the youngest player to score against the Three Lions in a competitive match at the stadium in the last 20 years (19 years, 75 days).</p>\n\n<p>It is a&nbsp;disappointing loss for England, but they made sure Spain knew they were in a fight.</p>\n\n<p>The hosts had 12 shots, with four of those on target, though they only accumulated 1.51 expected goals (xG). Spain, by contrast, had 15 attempts worth 1.99 xG, with five on target.</p>\n\n<p>England also caused their own problems, though, making two errors leading to goal in a competitive match for the first time since June 2019 against the Netherlands, also in the Nations League.</p>\n"
     },
     "1krsbncizt2sz1vrqelj0p9i2y": {
       "id": "1krsbncizt2sz1vrqelj0p9i2y",
@@ -7241,6 +7273,32 @@
         "READ THE LATEST REAL MADRID NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
+    "ftbpro_01m3f5qtqnw5": {
+      "id": "ftbpro_01m3f5qtqnw5",
+      "title": "‘Good Enough’—Man City Receive Surprise Defense From Long-Time Premier League Rival",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/man-city-surprise-defense-long-time-premier-league-rival/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_77/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3faazcnj2h400rp73.jpg",
+      "publishedAt": "2026-09-26T20:00:00.000Z",
+      "paragraphs": [
+        "By Roberto Casillas4:00 PM EDTAndrew Robertson (middle) had countless battles against Man City during his time at Liverpool.             / Carl Recine/Getty Images Tottenham Hotspur left back Andy Robertson believes that it would be wrong to blame Manchester City players for the club being found guilty of breaching financial fair play regulations, stating “the players showed they were good enough on the pitch.”",
+        "Man City are in the eye of the storm after being found guilty of 114 of the 115 financial charges against them between 2009–2018 following an investigation.",
+        "Deliberations remain ongoing regarding what punishment City’s charges will merit, yet the club is expected to appeal any punishment given it remains steadfast on its innocent stance. Still, the news took over the soccer world during the infancy of the international break.",
+        "“The consequences City are staring down look stark.”Manchester City could face a range of punishments over the 115 Premier League charges. From financial penalties and points deductions to suspension, expulsion and potentially even the stripping of titles.Sports Illustrated… pic.twitter.com/BU5ksJAzt2",
+        "Robertson, who spent nine seasons at Liverpool—City’s main Premier League rival over the past decade—before joining Tottenham this summer, shared his thoughts on the verdict while on international duty with Scotland.",
+        "“I think you can hear the shock in my voice,” Robertson said. “The case has obviously been going on. For me, the players showed they were good enough on the pitch.",
+        "“I don’t know too much about the charges and stuff like that. But they had an incredible team, one that I loved battling against. I don’t think when it comes to these things that players are ever to blame. That’s all I can focus on.”",
+        "Other players, such as former Man City star Rodri, have also come out in defense of the club.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Jürgen Klopp’s Liverpool had a fierce rivalry with Manchester City.  / James Gill/Danehouse/Getty Images Robertson may be focusing on ensuring Man City players aren’t blamed for the guilty verdict, but he didn’t share his thoughts on the Citizens potentially getting retroactively stripped of their titles won during the era in which the breaches took place.",
+        "Although this punishment appears extremely unlikely, Robertson’s former Liverpool boss Jürgen Klopp already revealed what he’d do if the Reds are retroactively named Premier League champions.",
+        "“If it would happen, I told all the people that want it to book a flight, I buy the beer,” Klopp said in 2024 after leaving Liverpool. “Whatever we have to celebrate we will do it, we would have our own parade in my garden.”",
+        "Still, the only Premier League title Liverpool could potentially win retroactively is when they came second to City in 2013–14 under Brendan Rogers. Klopp’s Liverpool were runner-ups to Pep Guardiola’s City in 2018–19 and 2021–22, both seasons outside of the period when City’s financial breaches occurred.",
+        "Regardless of what the final outcome is, significant sanctions could be looming on City’s horizon.",
+        "feed. READ THE LATEST MAN CITY NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
     "ftbpro_01m3f843c8p1": {
       "id": "ftbpro_01m3f843c8p1",
       "title": "Bayern Munich ‘Lining Up’ Dani Olmo for January Transfer",
@@ -7296,6 +7354,37 @@
         "Next.  The USMNT Future Is Bright—And His Name Is Cavan Sullivan.  The USMNT Future Is Bright—And His Name Is Cavan Sullivan. dark"
       ]
     },
+    "ftbpro_01m3fb3n4pka": {
+      "id": "ftbpro_01m3fb3n4pka",
+      "title": "‘Thank You’—Lamine Yamal Details Emotional Embrace With Lionel Messi After World Cup Final",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/thank-you-lamine-yamal-emotional-embrace-lionel-messi-world-cup-final/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_55/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3fgr8mn7j01bx31t4.jpg",
+      "publishedAt": "2026-09-26T21:00:01.000Z",
+      "paragraphs": [
+        "By Roberto Casillas5:00 PM EDTLamine Yamal (front) went over to Lionel Messi after the final whistle. / Hector Vivas/FIFA/Getty ImagesA little over two months after the 2026 World Cup final, Lamine Yamal finally revealed that he simply wanted to thank Lionel Messi “for everything he did for soccer” when he went over to embrace him after Spain’s victory.",
+        "Yamal’s Spain dethroned Messi’s Argentina as world champions with a 1–0 win in the 2026 World Cup final. Following the match, the teenager went over to hug the defeated soccer legend and say a few words.",
+        "“Nothing, just thank you very much for everything you did for soccer,” 19-year-old Yamal confessed to The Guardian. “That he should know that he’s always been the best. This I didn’t tell him, all I said was something short, but I’ve always thought he’s the best even before he won a World Cup and the Copa América.",
+        "“When it seemed like things weren’t going well, he was still the best, no doubts. So I just went over to him and told him that he’s the best and thank you for everything you’ve done for soccer.",
+        "“In the end I always try to stay away from what is ‘cute’ in soccer, of things that look nice for pictures.  It just came from within. I saw him there and I went over to thank him for what he’s done for soccer, and it came from inside of me.”",
+        "The image of the two greats embracing will live on forever in soccer history, as will the first picture the two of them took together.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Lionel Messi famously bathed a baby Lamine Yamal almost 20 years ago.  / Robbie Jay Barratt/AMA/Getty Images By now, the picture of a young Messi bathing a baby Yamal for a UNICEF photoshoot in 2007 is legendary. A simply unbelievable image many even considered to be AI generated, too good to be true.",
+        "But the picture is very much real, and it’s been everywhere since Yamal took over as the next Barcelona great and inherited Messi’s No. 10. When asked why the picture hadn’t been produced earlier, the teenager revealed he tried to keep the existence of the photo hidden for a very long time.",
+        "“Because I told him [his dad] not to [post the picture],” Yamal admitted. “He put it on Facebook once, and I told him to take it down. Comparisons were too easy, that was all people would talk about. I wanted to be Lamine. I didn’t want to be Messi.",
+        "“I just wanted to get where I could get. I asked him to wait. When I’m Lamine, do what you want.”",
+        "The picture inevitably saw the light of day, but by then, Yamal had already established himself as a world-class player with the potential to dominate the sport for the next decade-plus. Now, even he acknowledges the beauty in having two iconic pictures with the greatest of all time.",
+        "“Then in the end, the picture of him bathing me and the one of the hug [after the World Cup final] end up looking really nice.”",
+        "The script writes itself. pic.twitter.com/yoWWvlXUTd",
+        "Yamal and Messi sharing the pitch together for the first—and likely only—time in their career on soccer’s grandest stage was a thing of a Hollywood movie. The G.O.A.T. and the potential future G.O.A.T. battled for the most prestigious trophy in the sport.",
+        "In Yamal’s eyes, Spain won that game even before Ferran Torres scored the late winner. Rather, the final was decided the moment Enzo Fernández got sent off right before extra-time. “We knew it was impossible they would score, and with the ball against 10, very difficult for us not to” Yamal said.",
+        "After over two decades of dominating the sport, it was almost poetic that Messi’s last-ever official international defeat came at the hands of Spain and the player touted to inherit his throne.",
+        "It was the greatest player of all time making way for the player many already consider the best in the world. The greatest player in Barcelona history vacating his throne for the present and future of the Blaugrana. And one embrace between the two that will live on forever in soccer history.",
+        "Playing Yamal Is Fairytale End to Messi’s World Cup Career. dark. Next. Playing Yamal Is Fairytale End to Messi’s World Cup Career",
+        "feed. READ THE LATEST BARCELONA NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
     "ftbpro_01m3fbq1xs5j": {
       "id": "ftbpro_01m3fbq1xs5j",
       "title": "‘I Want to Play’—Viktor Gyokeres Airs Arsenal Frustration",
@@ -7333,11 +7422,46 @@
         "By Sophia Vesely3:34 PM EDTMauricio Pochettino is known for his tactical experimentation. / Jamie Squire/Getty ImagesThe U.S. men’s national team is back in action for the first time since the 2026 FIFA World Cup, reuniting for the expanded, two-week September–October international window.",
         "The Stars and Stripes kick off the four-match slate of friendlies on Saturday in Orlando with a clash against South American foe Peru.",
         "USMNT manager Mauricio Pochettino stunned the nation last week, announcing a completely-overhauled roster for the fall, naming just half of the stars that featured for him on soccer’s grandest stage two months ago. Instead, Pochettino opted to select 13 uncapped players, including eight teenagers, to rep the senior squad, and he will waste no time putting them to the test.",
-        "Although several players are making their national team debut, the No. 16 globally-ranked Stars and Stripes will still be expected to walk away with victory against the No. 52-ranked team that has won just twice in its last 16 games, dating back to 2024.",
+        "Three newcomers cracked the starting lineup, and several more are anticipated to make their senior debuts. Nevertheless, the No. 16 globally-ranked Stars and Stripes will still be expected to walk away with victory against the No. 52-ranked team that has won just twice in its last 16 games, dating back to 2024.",
         "Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed",
-        "YOUR O-TOWN ELEVEN. #USMNT x The @HomeDepot pic.twitter.com/w7RLQcNaqT",
-        "Starting XI: Freese; Freeman, Trusty, G. Campbell, Miller; Musah, Adams (C), Tillman; Sullivan, Ellis, Reyna",
-        "Subs: Brady (GK), Kochen (GK), Schwake (GK), Dest, Pierre, Richards, A. Robinson, M. Robinson, Westfield, Albert, Berhalter, Gozo, Raines, Mehmeti, Hall, C. Campbell, Downs."
+        "Cavan Sullivan (right) is an exciting addition to Pochettino’s roster, / Taylor Banner/USSF/Getty ImagesAmerican fans will be most excited to see 16-year-old phenom Cavan Sullivan. When the Philadelphia Union attacker steps onto the pitch, he will become the youngest player to debut for the senior national team since 16-year-old prodigy Freddy Adu back in 2006. He is widely expected to become the next big legend of the team, perhaps the greatest player the Stars and Stripes have ever had.",
+        "Sullivan is joined in the starting lineup by fellow newcomers 18-year-old Peyton Miller and 19-year-old Justin Ellis, both of whom have similarly stamped their names all over Major League Soccer this season.",
+        "Pochettino has trialed a new lineup. / FotMobStarting XI: Freese; Freeman, Trusty, G. Campbell, Miller; Adams (C), Musah, Tillman; Sullivan, Ellis, Reyna",
+        "Subs: Brady (GK), Kochen (GK), Schwake (GK), Dest, Pierre, A. Robinson, M. Robinson, Westfield, Albert, Berhalter, Gozo, Raines, Mehmeti, Hall, Downs.",
+        "Starting XI: Gallese (GK); Sonne, Araujo, Garcés, López; Cartagena, Yotún (C), Vélez; Magallanes, Lapadula, Vidales",
+        "Subs: Cordova, Romero, Mora, Barco, Pretell, Ugarriza, Noriega, Huamán, Concha, Valera, Inga, Soyer, Zegarra",
+        "READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m3fn8zy2ft": {
+      "id": "ftbpro_01m3fn8zy2ft",
+      "title": "England vs. Spain Player Ratings: Errors, Substitutes Decide Five-Goal Thriller",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/england-vs-spain-player-ratings-errors-substitutes-five-goal-thriller/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_82/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3frsb3d24rteba30a.jpg",
+      "publishedAt": "2026-09-26T21:38:27.000Z",
+      "paragraphs": [
+        "By Jamie Spencer5:38 PM EDTMikel Oyarzabal scored the second-half winner. / Rob Newell/CameraSport/Getty ImagesSpain came from behind against England to win 3–2 on Saturday, kicking off the 2026–27 UEFA Nations League with a win just over two months on from lifting the World Cup.",
+        "Lamine Yamal gave La Roja a dream start inside the opening two minutes at Wembley Stadium, although it wasn’t a moment of typically-crafted genius from the teen starlet. Marc Guéhi allowed himself to be caught on the ball in a dangerous area by Yamal, who gleefully accepted the invitation to advance and score.",
+        "England didn’t initially have much in response, and Spain actually scored again when Ferran Torres’s volley was disallowed by an offside flag. The same player, who got the winner in the World Cup final in July, was then guilty of missing two one vs. one chances that would have given his team a huge lead well before halftime.",
+        "Dani Olmo missed the target with a good chance after 34 minutes, but England then leveled. It was a rapid counter after a Spain set piece, with Anthony Gordon making it possible by flicking a pass to Jude Bellingham and then sprinting ahead. The Real Madrid midfielder returned the favor, and the Barcelona winger slid the ball past Unai Simón.",
+        "Spain looked rattled, and England took advantage. Harry Kane sent a shot so close to the target that some fans inside Wembley cheered in celebration, not realizing it was just the wrong side of the post. Then, Kane put the Three Lions in front with 40 minutes played, meeting Nico O’Reilly’s cross with his head. Marc Cucurella stood between the ball and the goal but couldn’t adjust his body in time to do anything more than help it on its way.",
+        "A VAR review awarded England a penalty early in the second half after Rodri fouled Bellingham, but Kane slipped as he struck the spot kick, and it rose too high, striking the crossbar. That proved to be a turning point because Spain pulled level six minutes later. Álex Baena applied the finishing touch right after being subbed into the game, but it was another goal created by an England mistake, with Nico O’Reilly the guilty party for an errant pass.",
+        "Spain retook the lead with just over 15 minutes of the 90 remaining. Mikel Oyarzabal, who broke English hearts with the winner in the Euro 2024 final, delicately chipped the ball over Trafford after being played in by Baena.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "The game was there for England. / Mike Egerton/PA Images/Getty ImagesEngland has only itself to blame.",
+        "This was an opportunity to make a statement against the best team in the world, and Thomas Tuchel’s Three Lions blew it in more ways than one.",
+        "While Oyarzabal’s winning goal was beautifully crafted, Spain was gifted its first two of the night. La Roja are so good that they don’t need a helping hand, let alone two.",
+        "England did well to get in front following the Yamal opener, on course for a first Wembley win after conceding the first goal in just shy of three years. Kane’s penalty would have given Spain a mountain to climb to claw back a two-goal deficit in 36 mintes and serve as a real test of its mettle.",
+        "Spain was staring down the barrel of a first defeat since March 2024—a 1–0 friendly loss against Colombia that also happened to be in London. But this is probably why Luis de la Fuente’s team is the champion of the world and of Europe. Spain is now 39 games unbeaten, extending the world record set in the World Cup final against Argentina.",
+        "England, meanwhile, couldn’t finish the job in the World Cup semifinal against Argentina, and couldn’t finish the job here either.",
+        "Spain was gifted its first goal inside two minutes. / Bradley Collyer/PA Images/Getty Images*Ratings provided by FotMob*",
+        "GK: James Trafford—5.1: A slightly surprising selection given Jordan Pickford’s undisputed No. 1 status for the last eight years. Strong save to deny Torres early on. Hit the ground too easily when Oyarzabal scored, making it easier for the forward.",
+        "RB: Jarell Quansah—5.7: Favored over former clubmate Trent Alexander-Arnold but this wasn’t his best game.",
+        "CB: Ezri Konsa—5.7: No center back will walk away pleased from conceding three goals.",
+        "CB: Marc Guéhi—5.3: Gave away the 2nd-minute goal by turning his way backwards into danger when there was open space in front of him.",
+        "LB: Nico O’Reilly—5.8: Made England’s second goal with a sprint into space and a cross from the left, but was then responsible for Spain making it 2–2."
       ]
     },
     "fzhafkysws3g1ux8fnmoe3180": {
@@ -7416,6 +7540,53 @@
         "&quot;At that point, it turned into that, and we knew what game we had to play. We&#39;re strong, and we know we can play different styles, so in the end we just had to fight it out.&quot;"
       ],
       "html": "<p>Wieke Kaptein expressed her relief at beginning Chelsea&#39;s Women&#39;s Champions League campaign with a win after battling their way past&nbsp;Austria Wien on Wednesday.&nbsp;</p>\n\n<p>Kaptein&#39;s stunning 11th-minute goal proved to be the difference as Chelsea claimed a 1-0 victory, but tournament debutants Wien had several chances to at least earn a point.&nbsp;</p>\n\n<p>After&nbsp;Alyssa Thompson shot wide shortly after Kaptein&#39;s fine finish, Wien looked the more likely to alter the scoreline, bringing some good saves out of&nbsp;Livia Peng throughout.&nbsp;</p>\n\n<p>Virginia Kirchberger turned over from close range before Louise Schoffel&#39;s effort whistled past the bottom-left corner as the visitors started to dominate at the end of the first half.</p>\n\n<p>Peng had to be on her toes to deny&nbsp;Valentina Potzl and&nbsp;Modesta Uka, with the latter also curling a shot onto the left post in Wien&#39;s best chance of earning a deserved draw.</p>\n\n<p>Sonia Bompastor&#39;s side were only able to muster an expected goals (xG) total of 1.4&nbsp;from their 13 shots, while Wien registered a tally of 0.9 xG&nbsp;from two more attempts.&nbsp;</p>\n\n<p>Kaptein acknowledged the difficulties her side faced against Wien, suggesting that her team should have capitalised on their early dominance by scoring more.&nbsp;</p>\n\n<p>&quot;It was a tough game. They put pressure on us and made it a little bit more difficult,&quot; Kaptein told Disney+.</p>\n\n<p>&quot;We could have scored more goals, and we needed to punish them more. Overall, we won, it&#39;s good, and now we need to focus on the next game.</p>\n\n<p>&quot;For sure [relief]. In the last 10 minutes, we were fighting. We stuck together as a team, but we could have kept the ball a bit better.</p>\n\n<p>&quot;They are a good team, and they are not in the Champions League&nbsp;for nothing. They were really dangerous in our half. But we need to look at ourselves as we could have punished them a little bit more.&quot;</p>\n\n\n<p>Chelsea&#39;s victory followed an unconvincing 2-0 triumph against Birmingham City in the Women&#39;s Super League last weekend, which continued their unbeaten start in the league.&nbsp;</p>\n\n<p>After beginning their campaign with a frustrating 1-1 draw with Aston Villa, the Blues thumped Manchester United 5-0 but have been far from their best in their last two matches.&nbsp;</p>\n\n<p>They face their sternest test this Sunday against Arsenal, who are two points behind them in the WSL after taking five points from their opening three games.&nbsp;</p>\n\n<p>However, Thompson believes their hard-fought victory against Wien is something Chelsea can build on ahead of their return to domestic action.&nbsp;</p>\n\n<p>&quot;The team came together in the end, and we fought as much as we could. It&#39;s a good test for us, for our first game to have a physical battle,&quot;&nbsp;Thompson said.</p>\n\n<p>&quot;We are going to play so many different teams and styles during the Champions League, so every test is great for us, and we came out with the three points, so it was a good win.</p>\n\n<p>&quot;The level dropped a little bit, and we were losing tackles, but we got back into the game and were ready for the physical fight.</p>\n\n<p>&quot;At that point, it turned into that, and we knew what game we had to play. We&#39;re strong, and we know we can play different styles, so in the end we just had to fight it out.&quot;</p>\n"
+    },
+    "i19e037wx0lw15bn8hvvtpqdz": {
+      "id": "i19e037wx0lw15bn8hvvtpqdz",
+      "title": "London City 'building something special' after going second in WSL",
+      "subtitle": "Alexia Putellas scored her first Women's Super League goal for London City Lionesses, helping them to a third win of the season.",
+      "source": "FotMob",
+      "sourceUrl": "/news/i19e037wx0lw15bn8hvvtpqdz-london-city-building-something-special-after-going-second-wsl",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a4/50/london-city_qm8dbtrpwix918rpfj80jisic.jpg?t=-481040784&w=1200&h=630",
+      "publishedAt": "2026-09-26T19:40:49.000Z",
+      "paragraphs": [
+        "Alexia Putellas says London City Lionesses want to &quot;build something special&quot;&nbsp;after a 2-0 win over Brighton moved them up to second in the Women&#39;s Super League.",
+        "Putellas scored her first league goal since joining the Lionesses to help them to the victory that sees them move within three points of leaders Manchester City.",
+        "London City dominated throughout and got their reward for their bright start in the 29th minute, with Putellas picking out the bottom corner from the edge of the area after some sloppy Brighton defending.",
+        "The Seagulls almost equalised shortly after, with Emily Murphy&#39;s looping header hitting the crossbar, and Kiko Seike could only fire wide on the rebound.",
+        "Freya Godfrey also hit the woodwork for London City in the second half, but Lucia Corrales made sure of all three points in the 92nd minute by turning in Delphine Cascarino&#39;s cross following a counter-attack.",
+        "Putellas has been vocal about her hopes of big achievements with London City this season, and she is thrilled to be off the mark for her new club.",
+        "&quot;I&#39;m so happy, I&#39;m so proud. The most important thing is we got three points here,&quot; she told Sky Sports.",
+        "&quot;We are trying to be unpredictable. We can score through possession and counter-attacks; we can do both. I think we achieved that.",
+        "&quot;It&#39;s a new challenge for everyone; we want to build something special here, and we have to keep pushing and showing up for each other. We want to give our best this season.",
+        "&quot;It&#39;s the beginning; we just have begun. There&#39;s a lot of points yet. We have to improve the same details; we&#39;ll be there [around the top of the table] for sure.&quot;",
+        "London City only just edged the shot count (11 to 10) but had three shots on target compared to Brighton&#39;s one.",
+        "The visitors also accumulated a higher expected goals total, racking up 1.6 xG, while the Lionesses accumulated 1.3.",
+        "London City could drop back down the table by the end of the weekend, with five WSL matches being played on Sunday, but head coach Eder Maestre is confident they can continue to cause problems for the top teams.",
+        "&quot;We have the underdog mentality; we&#39;re humble but have the target to reach those limits,&quot; she told Sky Sports.",
+        "&quot;It&#39;s temporary, but we&#39;re dreaming big, so hopefully we can be in that position later in the competition.&quot;"
+      ],
+      "html": "<p>Alexia Putellas says London City Lionesses want to &quot;build something special&quot;&nbsp;after a 2-0 win over Brighton moved them up to second in the Women&#39;s Super League.</p>\n\n<p>Putellas scored her first league goal since joining the Lionesses to help them to the victory that sees them move within three points of leaders Manchester City.</p>\n\n<p>London City dominated throughout and got their reward for their bright start in the 29th minute, with Putellas picking out the bottom corner from the edge of the area after some sloppy Brighton defending.</p>\n\n<p>The Seagulls almost equalised shortly after, with Emily Murphy&#39;s looping header hitting the crossbar, and Kiko Seike could only fire wide on the rebound.</p>\n\n<p>Freya Godfrey also hit the woodwork for London City in the second half, but Lucia Corrales made sure of all three points in the 92nd minute by turning in Delphine Cascarino&#39;s cross following a counter-attack.</p>\n\n<p>Putellas has been vocal about her hopes of big achievements with London City this season, and she is thrilled to be off the mark for her new club.</p>\n\n<p>&quot;I&#39;m so happy, I&#39;m so proud. The most important thing is we got three points here,&quot; she told Sky Sports.</p>\n\n<p>&quot;We are trying to be unpredictable. We can score through possession and counter-attacks; we can do both. I think we achieved that.</p>\n\n<p>&quot;It&#39;s a new challenge for everyone; we want to build something special here, and we have to keep pushing and showing up for each other. We want to give our best this season.</p>\n\n<p>&quot;It&#39;s the beginning; we just have begun. There&#39;s a lot of points yet. We have to improve the same details; we&#39;ll be there [around the top of the table] for sure.&quot;</p>\n\n\n<p>London City only just edged the shot count (11 to 10) but had three shots on target compared to Brighton&#39;s one.</p>\n\n<p>The visitors also accumulated a higher expected goals total, racking up 1.6 xG, while the Lionesses accumulated 1.3.</p>\n\n<p>London City could drop back down the table by the end of the weekend, with five WSL matches being played on Sunday, but head coach Eder Maestre is confident they can continue to cause problems for the top teams.</p>\n\n<p>&quot;We have the underdog mentality; we&#39;re humble but have the target to reach those limits,&quot; she told Sky Sports.</p>\n\n<p>&quot;It&#39;s temporary, but we&#39;re dreaming big, so hopefully we can be in that position later in the competition.&quot;</p>\n"
+    },
+    "i2t4lgiizda51ai6125dalujy": {
+      "id": "i2t4lgiizda51ai6125dalujy",
+      "title": "Mbappe suffered knee hyperextension with France",
+      "subtitle": "France will be without Kylian Mbappe for the rest of the international break, with Real Madrid confirming the diagnosis of the injury.",
+      "source": "FotMob",
+      "sourceUrl": "/news/i2t4lgiizda51ai6125dalujy-mbappe-suffered-knee-hyperextension-france",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/bf/ad/mbappe_kxbm3my7g06p1i1lifrf9zlss.jpg?t=-477292080&w=1200&h=630",
+      "publishedAt": "2026-09-26T20:15:33.000Z",
+      "paragraphs": [
+        "Real Madrid have confirmed that Kylian Mbappe has been diagnosed with hyperextension in his left knee.",
+        "Mbappe scored the winner for France in a narrow 1-0 victory over Turkiye, securing Zinedine Zidane a victory in his first match in charge.",
+        "However, he pulled up immediately after scoring and was taken off five minutes later, with France confirming that he had withdrawn from the squad to return to Madrid for treatment following the match.",
+        "France initially revealed their captain had suffered a tendon injury following the game, with Zidane saying &quot;it&#39;s not going well&quot; when asked about it.",
+        "While Madrid have not revealed how long he will be sidelined for, Spanish media are&nbsp;reporting he is only set for around two weeks on the sidelines.",
+        "Mbappe has already netted six goals in LaLiga this season, making him the first player to score that many goals in Madrid&#39;s opening five league matches since Karim Benzema in 2021-22 (also six).",
+        "It remains to be seen if he will be available for their first match after the international break against Villarreal on October 10.",
+        "Madrid then face Roma in the Champions League four days later before welcoming Sevilla to the Bernabeu the following weekend."
+      ],
+      "html": "<p>Real Madrid have confirmed that Kylian Mbappe has been diagnosed with hyperextension in his left knee.</p>\n\n<p>Mbappe scored the winner for France in a narrow 1-0 victory over Turkiye, securing Zinedine Zidane a victory in his first match in charge.</p>\n\n<p>However, he pulled up immediately after scoring and was taken off five minutes later, with France confirming that he had withdrawn from the squad to return to Madrid for treatment following the match.</p>\n\n<p>France initially revealed their captain had suffered a tendon injury following the game, with Zidane saying &quot;it&#39;s not going well&quot; when asked about it.</p>\n\n<p>While Madrid have not revealed how long he will be sidelined for, Spanish media are&nbsp;reporting he is only set for around two weeks on the sidelines.</p>\n\n\n<p>Mbappe has already netted six goals in LaLiga this season, making him the first player to score that many goals in Madrid&#39;s opening five league matches since Karim Benzema in 2021-22 (also six).</p>\n\n<p>It remains to be seen if he will be available for their first match after the international break against Villarreal on October 10.</p>\n\n<p>Madrid then face Roma in the Champions League four days later before welcoming Sevilla to the Bernabeu the following weekend.</p>\n"
     },
     "j3333qh4ryty1vb7sl2pc56j4": {
       "id": "j3333qh4ryty1vb7sl2pc56j4",
@@ -7547,6 +7718,33 @@
         "Montreal, meanwhile, will be out to end their poor run at Stade Saputo. Only Minnesota United (two) have fewer home wins in the MLS this season than Montreal (three), who last won in front of their home crowd on May 9 against Orlando City."
       ],
       "html": "<p>Pat Noonan believes FC Cincinnati&#39;s last-gasp draw against the Houston Dynamo could be a &quot;deciding moment&quot;&nbsp;in their quest to reach the playoffs this season.</p>\n\n<p>Cincinnati found themselves 2-0 down after 51 minutes at Shell Energy Stadium thanks to goals from Guilherme and Mateusz Bogusz, the latter scoring from the penalty spot.</p>\n\n<p>Bryan Ramirez halved the deficit in the 73rd minute before Kevin Denkey scored a spot-kick in the seventh minute of second-half stoppage time to seal a share of the spoils.</p>\n\n<p>It was a result that kept Cincinnati ninth in the Eastern Conference, but the likes of New York City FC, D.C. United and Toronto FC are all chasing Noonan&#39;s side.&nbsp;</p>\n\n<p>Cincinnati make the trip to Stade Saputo this weekend to face&nbsp;struggling CF Montreal, and Noonan believes his team&#39;s latest stalemate could be a solid foundation to build on.</p>\n\n<p>&quot;I think it could be a deciding moment in this stretch run,&quot;&nbsp;Noonan said. &quot;We have nine games left in the season, and every game is going to be so important to pick up points.</p>\n\n<p>&quot;And that&#39;s because of the position that we&#39;re in, where we&#39;re fighting for a playoff spot. This isn&#39;t about everything being pretty now, or style.</p>\n\n<p>&quot;We were able to get an important point, and so, for the psyche of the group and how to be on the road, like I said, against a strong opponent and push the game like that.</p>\n\n<p>&quot;How do we get more of that urgency, but not recklessness?&quot;</p>\n\n\n<p>Montreal, meanwhile, will just want the 2026 season to come to an end after they were beaten 2-0 by the Columbus Crew in their last league match.</p>\n\n<p>Only Sporting Kansas City (17) have lost more MLS matches this season than Montreal (15), who find themselves rooted to the bottom of the East on&nbsp;21 points from 26 games.</p>\n\n<p>It&#39;s also been a disappointing start to Alexis Sanchez&#39;s Montreal career, as he has failed to register a single goal contribution in his seven matches for the club.</p>\n\n<p>During their defeat to Columbus, Sanchez&#39;s frustrations were evident as his team struggled to create any opportunities whenever they got the chance to go forward.</p>\n\n<p>Interim boss Philippe Eullaffroy understood the Chilean&#39;s concerns about the team, but he said Sanchez remained committed to the cause and was just showing his passion.</p>\n\n<p>&quot;Alexis would like the team to play faster forward and use more space behind the defenders. I agree, and I ask for it, but it is not happening,&quot; Eullaffroy conceded.</p>\n\n<p>&quot;After the game, he was upset and tense about the development of the second half, as were several of his team-mates.&quot;</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>Montreal – Prince Owusu</strong></p>\n\n<p>In a season of frustration for Montreal, Owusu has been the only shining light, scoring 13 goals in 24 league appearances so far this season.</p>\n\n<p>Owusu also has a good record against Montreal. He has scored three goals in six MLS outings against them, only managing to find the back of the net more against D.C. (four).</p>\n\n<p><strong>Cincinnati – Kevin Denkey</strong></p>\n\n<p>With Denkey unavailable after being selected to represent Togo during the international break,&nbsp;Evander will be the man Cincinnati will turn to in the final third.&nbsp;</p>\n\n<p>Only Inter Miami&#39;s Lionel Messi (33) has more goal involvements in the MLS this season than Evander&#39;s 25 (13 goals, 12 assists).&nbsp;</p>\n\n\n<p><strong>MATCH PREDICTION: DRAW</strong></p>\n\n<p>Cincinnati earned a draw when trailing by two goals for the eighth time in the club&#39;s MLS era (since 2019) against Houston last time out. Three of those occurrences have happened this season and in all three of those occurrences in 2026, they had trailed by two goals in the second half.</p>\n\n<p>But they will be hoping for a better result here. They have a good record against Montreal, winning their last four MLS meetings against them.</p>\n\n<p>And Noonan&#39;s side will be desperate for a win. They are without a victory in their last five league matches (D3 L2) since a 2-1 triumph over NYCFC on August 19.</p>\n\n<p>Montreal, meanwhile, will be out to end their poor run at Stade Saputo. Only Minnesota United (two) have fewer home wins in the MLS this season than Montreal (three), who last won in front of their home crowd on May 9 against Orlando City.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Montreal – 36.6%</p>\n\n<p>Draw – 23.5%</p>\n\n<p>Cincinnati – 39.9%</p>\n"
+    },
+    "mmi7g1n06ape19ev8uvfhbhip": {
+      "id": "mmi7g1n06ape19ev8uvfhbhip",
+      "title": "Xavi confident Zirkzee can 'help Netherlands enormously'",
+      "subtitle": "Joshua Zirkzee received a surprise call-up to replace the injured Brian Brobbey, and Xavi is excited to see how he can help the Netherlands.",
+      "source": "FotMob",
+      "sourceUrl": "/news/mmi7g1n06ape19ev8uvfhbhip-xavi-confident-zirkzee-can-help-netherlands-enormously",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/54/ce/zirkzee_1rm2f51xdkl341n6nj8g183v2k.jpg?t=-467934592&w=1200&h=630",
+      "publishedAt": "2026-09-26T21:29:31.000Z",
+      "paragraphs": [
+        "Xavi believes Joshua Zirkzee suits the Netherlands&#39;&nbsp;new style after calling him up to the squad as an injury replacement.",
+        "Brian Brobbey left the Netherlands camp after their 1-1 draw with Germany in their Nations League opener, with Zirkzee receiving his first call-up in just under two years.",
+        "Zirkzee has six Netherlands caps to his name, with his last call-up to the squad coming in November 2024.",
+        "The decision was questioned, with Zirkzee only making four substitute appearances for Manchester United this season without scoring.",
+        "Memphis Depay and Wout Weghorst are the other more commonly picked options in that position, but Xavi is confident Zirkzee will slot into his team.",
+        "&quot;He can be very important for us. I think he&#39;s a good player. He can help us enormously,&quot; Xavi said.",
+        "&quot;Our striker must understand our system and our ideas. He can help us more than the others at the moment. We focus on the players we select.&quot;",
+        "The Netherlands needed a 92nd-minute equaliser from Cody Gakpo to snatch a point against Germany, but Xavi will feel it is the least they deserved after a dominant second-half performance.",
+        "The Oranje finished that&nbsp;game with 3.2 expected goals (xG) from 22 shots, 10 of which were on target, as Germany were indebted to Marc ter Stegen&#39;s nine saves.",
+        "Xavi&#39;s side are now on a four-match winless streak in the Nations League, something the Spaniard will be looking to put right away to Serbia on Sunday.",
+        "&quot;We have to win. It is an important match for the placement,&quot; Xavi said.",
+        "&quot;[On Sunday], we will determine the line-up. I am happy with all the players who are available at the moment.",
+        "&quot;Serbia play very differently. It will be a tough match against a physical team. They play a lot of long balls. We have to be prepared for that.",
+        "&quot;The goal is to win and take the three points.&quot;",
+        "Serbia lost their Nations League opener 2-1 to Greece and sit bottom of Group A2, just behind the Netherlands."
+      ],
+      "html": "<p>Xavi believes Joshua Zirkzee suits the Netherlands&#39;&nbsp;new style after calling him up to the squad as an injury replacement.</p>\n\n<p>Brian Brobbey left the Netherlands camp after their 1-1 draw with Germany in their Nations League opener, with Zirkzee receiving his first call-up in just under two years.</p>\n\n<p>Zirkzee has six Netherlands caps to his name, with his last call-up to the squad coming in November 2024.</p>\n\n<p>The decision was questioned, with Zirkzee only making four substitute appearances for Manchester United this season without scoring.</p>\n\n<p>Memphis Depay and Wout Weghorst are the other more commonly picked options in that position, but Xavi is confident Zirkzee will slot into his team.</p>\n\n<p>&quot;He can be very important for us. I think he&#39;s a good player. He can help us enormously,&quot; Xavi said.</p>\n\n<p>&quot;Our striker must understand our system and our ideas. He can help us more than the others at the moment. We focus on the players we select.&quot;</p>\n\n\n<p>The Netherlands needed a 92nd-minute equaliser from Cody Gakpo to snatch a point against Germany, but Xavi will feel it is the least they deserved after a dominant second-half performance.</p>\n\n<p>The Oranje finished that&nbsp;game with 3.2 expected goals (xG) from 22 shots, 10 of which were on target, as Germany were indebted to Marc ter Stegen&#39;s nine saves.</p>\n\n<p>Xavi&#39;s side are now on a four-match winless streak in the Nations League, something the Spaniard will be looking to put right away to Serbia on Sunday.</p>\n\n<p>&quot;We have to win. It is an important match for the placement,&quot; Xavi said.</p>\n\n<p>&quot;[On Sunday], we will determine the line-up. I am happy with all the players who are available at the moment.</p>\n\n<p>&quot;Serbia play very differently. It will be a tough match against a physical team. They play a lot of long balls. We have to be prepared for that.</p>\n\n<p>&quot;The goal is to win and take the three points.&quot;</p>\n\n<p>Serbia lost their Nations League opener 2-1 to Greece and sit bottom of Group A2, just behind the Netherlands.</p>\n"
     },
     "mr1iggwb17y81ahlcehafr1g3": {
       "id": "mr1iggwb17y81ahlcehafr1g3",
