@@ -27,7 +27,7 @@
       "home": 3,
       "away": 3
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   },
   {
     "id": "5071388",
@@ -57,7 +57,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   },
   {
     "id": "5071389",
@@ -87,7 +87,7 @@
       "home": 0,
       "away": 2
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   },
   {
     "id": "5071391",
@@ -117,7 +117,7 @@
       "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   },
   {
     "id": "5071394",
@@ -147,7 +147,7 @@
       "home": 3,
       "away": 1
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   },
   {
     "id": "5071392",
@@ -177,7 +177,7 @@
       "home": 3,
       "away": 0
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   },
   {
     "id": "5071390",
@@ -207,7 +207,7 @@
       "home": 3,
       "away": 2
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   },
   {
     "id": "5071393",
@@ -237,7 +237,7 @@
       "home": 3,
       "away": 1
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   },
   {
     "id": "5071395",
@@ -267,7 +267,7 @@
       "home": 3,
       "away": 3
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   },
   {
     "id": "5181863",
@@ -277,14 +277,14 @@
     "country": "Europe",
     "round": 2,
     "utcDate": "2026-09-27T16:00:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "HT",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8238",
       "name": "Denmark",
       "shortName": "Denmark",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8238.png",
-      "score": 0
+      "score": 2
     },
     "awayTeam": {
       "id": "5790",
@@ -294,10 +294,10 @@
       "score": 0
     },
     "score": {
-      "home": 0,
+      "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-09-27T16:50:22.524Z"
+    "updatedAt": "2026-09-27T21:14:13.554Z"
   },
   {
     "id": "5181827",
@@ -307,27 +307,27 @@
     "country": "Europe",
     "round": 2,
     "utcDate": "2026-09-27T16:00:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "HT",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8205",
       "name": "Serbia",
       "shortName": "Serbia",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8205.png",
-      "score": 0
+      "score": 1
     },
     "awayTeam": {
       "id": "6708",
       "name": "Netherlands",
       "shortName": "Netherlands",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6708.png",
-      "score": 1
+      "score": 2
     },
     "score": {
-      "home": 0,
-      "away": 1
+      "home": 1,
+      "away": 2
     },
-    "updatedAt": "2026-09-27T16:50:22.524Z"
+    "updatedAt": "2026-09-27T21:14:13.554Z"
   },
   {
     "id": "5181828",
@@ -337,27 +337,27 @@
     "country": "Europe",
     "round": 2,
     "utcDate": "2026-09-27T18:45:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8570",
       "name": "Germany",
       "shortName": "Germany",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8570.png",
-      "score": null
+      "score": 0
     },
     "awayTeam": {
       "id": "6383",
       "name": "Greece",
       "shortName": "Greece",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6383.png",
-      "score": null
+      "score": 1
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
     },
-    "updatedAt": "2026-09-27T16:50:22.524Z"
+    "updatedAt": "2026-09-27T21:14:13.554Z"
   },
   {
     "id": "5181864",
@@ -367,27 +367,27 @@
     "country": "Europe",
     "round": 2,
     "utcDate": "2026-09-27T18:45:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8492",
       "name": "Norway",
       "shortName": "Norway",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8492.png",
-      "score": null
+      "score": 1
     },
     "awayTeam": {
       "id": "8361",
       "name": "Portugal",
       "shortName": "Portugal",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8361.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 2
     },
-    "updatedAt": "2026-09-27T16:50:22.524Z"
+    "updatedAt": "2026-09-27T21:14:13.554Z"
   },
   {
     "id": "5071387",
@@ -417,6 +417,6 @@
       "home": null,
       "away": null
     },
-    "updatedAt": "2026-09-27T16:50:01.391Z"
+    "updatedAt": "2026-09-27T21:13:57.439Z"
   }
 ]
