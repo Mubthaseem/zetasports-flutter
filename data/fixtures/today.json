@@ -1,422 +1,62 @@
 [
   {
-    "id": "5071386",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T00:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "1218886",
-      "name": "Austin FC",
-      "shortName": "Austin FC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1218886.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "1701119",
-      "name": "San Diego FC",
-      "shortName": "San Diego FC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1701119.png",
-      "score": 3
-    },
-    "score": {
-      "home": 3,
-      "away": 3
-    },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
-  },
-  {
-    "id": "5071388",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T00:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6399",
-      "name": "FC Dallas",
-      "shortName": "Dallas",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6399.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "867280",
-      "name": "Los Angeles FC",
-      "shortName": "LAFC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/867280.png",
-      "score": 0
-    },
-    "score": {
-      "home": 1,
-      "away": 0
-    },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
-  },
-  {
-    "id": "5071389",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T00:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8259",
-      "name": "Houston Dynamo FC",
-      "shortName": "Houston",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8259.png",
-      "score": 0
-    },
-    "awayTeam": {
-      "id": "6604",
-      "name": "Sporting Kansas City",
-      "shortName": "Sporting KC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6604.png",
-      "score": 2
-    },
-    "score": {
-      "home": 0,
-      "away": 2
-    },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
-  },
-  {
-    "id": "5071391",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T00:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "915807",
-      "name": "Nashville SC",
-      "shortName": "Nashville SC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/915807.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "56453",
-      "name": "Toronto FC",
-      "shortName": "Toronto",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/56453.png",
-      "score": 0
-    },
-    "score": {
-      "home": 2,
-      "away": 0
-    },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
-  },
-  {
-    "id": "5071394",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T00:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "130394",
-      "name": "Seattle Sounders FC",
-      "shortName": "Seattle Sounders",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "207242",
-      "name": "Minnesota United",
-      "shortName": "Minnesota",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/207242.png",
-      "score": 1
-    },
-    "score": {
-      "home": 3,
-      "away": 1
-    },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
-  },
-  {
-    "id": "5071392",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T01:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6606",
-      "name": "Real Salt Lake",
-      "shortName": "Salt Lake",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6606.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "6580",
-      "name": "New England Revolution",
-      "shortName": "New England",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6580.png",
-      "score": 0
-    },
-    "score": {
-      "home": 3,
-      "away": 0
-    },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
-  },
-  {
-    "id": "5071390",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T02:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6637",
-      "name": "LA Galaxy",
-      "shortName": "LA Galaxy",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6637.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "8314",
-      "name": "Colorado Rapids",
-      "shortName": "Colorado",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8314.png",
-      "score": 2
-    },
-    "score": {
-      "home": 3,
-      "away": 2
-    },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
-  },
-  {
-    "id": "5071393",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T02:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6603",
-      "name": "San Jose Earthquakes",
-      "shortName": "San Jose",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6603.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "307690",
-      "name": "Portland Timbers",
-      "shortName": "Portland",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/307690.png",
-      "score": 1
-    },
-    "score": {
-      "home": 3,
-      "away": 1
-    },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
-  },
-  {
-    "id": "5071395",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T02:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "307691",
-      "name": "Vancouver Whitecaps",
-      "shortName": "Vancouver",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/307691.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "6602",
-      "name": "DC United",
-      "shortName": "DC United",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6602.png",
-      "score": 3
-    },
-    "score": {
-      "home": 3,
-      "away": 3
-    },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
-  },
-  {
-    "id": "5181863",
+    "id": "5181790",
     "competitionId": "9806",
     "competitionName": "UEFA Nations League",
     "competitionSlug": "uefa-nations-league",
     "country": "Europe",
     "round": 2,
-    "utcDate": "2026-09-27T16:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8238",
-      "name": "Denmark",
-      "shortName": "Denmark",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8238.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "5790",
-      "name": "Wales",
-      "shortName": "Wales",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/5790.png",
-      "score": 0
-    },
-    "score": {
-      "home": 2,
-      "away": 0
-    },
-    "updatedAt": "2026-09-27T21:14:13.554Z"
-  },
-  {
-    "id": "5181827",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 2,
-    "utcDate": "2026-09-27T16:00:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8205",
-      "name": "Serbia",
-      "shortName": "Serbia",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8205.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "6708",
-      "name": "Netherlands",
-      "shortName": "Netherlands",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6708.png",
-      "score": 2
-    },
-    "score": {
-      "home": 1,
-      "away": 2
-    },
-    "updatedAt": "2026-09-27T21:14:13.554Z"
-  },
-  {
-    "id": "5181828",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 2,
-    "utcDate": "2026-09-27T18:45:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8570",
-      "name": "Germany",
-      "shortName": "Germany",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8570.png",
-      "score": 0
-    },
-    "awayTeam": {
-      "id": "6383",
-      "name": "Greece",
-      "shortName": "Greece",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6383.png",
-      "score": 1
-    },
-    "score": {
-      "home": 0,
-      "away": 1
-    },
-    "updatedAt": "2026-09-27T21:14:13.554Z"
-  },
-  {
-    "id": "5181864",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 2,
-    "utcDate": "2026-09-27T18:45:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8492",
-      "name": "Norway",
-      "shortName": "Norway",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8492.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "8361",
-      "name": "Portugal",
-      "shortName": "Portugal",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8361.png",
-      "score": 2
-    },
-    "score": {
-      "home": 1,
-      "away": 2
-    },
-    "updatedAt": "2026-09-27T21:14:13.554Z"
-  },
-  {
-    "id": "5071387",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-27T23:00:00.000Z",
+    "utcDate": "2026-09-28T18:45:00.000Z",
     "status": "SCHEDULED",
     "minute": null,
     "homeTeam": {
-      "id": "6001",
-      "name": "Columbus Crew",
-      "shortName": "Columbus",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6001.png",
+      "id": "8263",
+      "name": "Belgium",
+      "shortName": "Belgium",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8263.png",
       "score": null
     },
     "awayTeam": {
-      "id": "960720",
-      "name": "Inter Miami CF",
-      "shortName": "Inter Miami CF",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/960720.png",
+      "id": "6723",
+      "name": "France",
+      "shortName": "France",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6723.png",
       "score": null
     },
     "score": {
       "home": null,
       "away": null
     },
-    "updatedAt": "2026-09-27T21:13:57.439Z"
+    "updatedAt": "2026-09-28T05:02:08.160Z"
+  },
+  {
+    "id": "5181791",
+    "competitionId": "9806",
+    "competitionName": "UEFA Nations League",
+    "competitionSlug": "uefa-nations-league",
+    "country": "Europe",
+    "round": 2,
+    "utcDate": "2026-09-28T18:45:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "6595",
+      "name": "Turkiye",
+      "shortName": "Turkiye",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6595.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8204",
+      "name": "Italy",
+      "shortName": "Italy",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8204.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-09-28T05:02:08.160Z"
   }
 ]
