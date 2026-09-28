@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-09-28T05:02:09.126Z",
+    "generatedAt": "2026-09-28T05:07:44.405Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 339
+      "fullArticlesCount": 342
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,33 @@
     }
   },
   "news": [
+    {
+      "id": "ftbpro_01m3c93gs7dq",
+      "title": "Six Soccer Players Who Became NFL Stars",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3c93gs7dq/six-soccer-players-who-became-nfl-stars",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_932,h_524,x_31,y_94/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3fe0ks7mkf4wfdk9c.jpg",
+      "publishedAt": "2026-09-28T02:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m3hrz6y2vc",
+      "title": "‘I Lost 99% of Everything’—Real Madrid, Brazil Legend Opens Up on Crisis",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3hrz6y2vc/i-lost-99-everythingreal-madrid-brazil-legend-opens-up-crisis",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_31/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3hsjge3y351gm01rf.jpg",
+      "publishedAt": "2026-09-28T01:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m3h98n68jk",
+      "title": "Belgium vs. France—Nations League: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3h98n68jk/belgium-vs-francenations-league-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3jay8812g20ksvbrq.jpg",
+      "publishedAt": "2026-09-28T00:00:00.000Z"
+    },
     {
       "id": "ftbpro_01m3ht9jde6a",
       "title": "Transfer Rumors: Man Utd Break the Bank for World Cup Winner; Mourinho’s Liverpool Raid",
@@ -166,33 +193,6 @@
       "sourceUrl": "/news/4ap1n1mxoqqa13sntb2jdzqjl-zidane-backs-dembele-lead-france-mbappes-absence",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/46/65/zinedine-zidane-and-ousmane-dembele_1adakf1kt3f6i1gq6sh5pllzpj.png?t=-416414592&w=1260&h=708",
       "publishedAt": "2026-09-27T17:05:13.000Z"
-    },
-    {
-      "id": "ftbpro_01m3hk5gcdev",
-      "title": "Ex-Man Utd, Chelsea Star Drops Hilarious Three-Word Response to Man City Charges",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3hk5gcdev/ex-man-utd-chelsea-star-drops-hilarious-three-word-response-man-city-charges",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3hkq735savey0rmrd.jpg",
-      "publishedAt": "2026-09-27T17:00:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m3hpncyf2v",
-      "title": "‘He Can Do Better’—Portugal Boss Hits Ronaldo With Firm Reality Check",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3hpncyf2v/he-can-do-betterportugal-boss-hits-ronaldo-firm-reality-check",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_960,h_540,x_1,y_30/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3hpzrdjjahc58stpe.jpg",
-      "publishedAt": "2026-09-27T16:15:00.000Z"
-    },
-    {
-      "id": "tafeaa7zwemq1wkj09tgzehu3",
-      "title": "'This time we will win' – Montella promisies Turkiye victory against Italy",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/tafeaa7zwemq1wkj09tgzehu3-this-time-we-will-win-montella-promisies-turkiye-victory-against-italy",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/c1/7b/vincenzo-montella_1hptz7s8cqu5x13mhcmfixl268.png?t=-422412592&w=1260&h=708",
-      "publishedAt": "2026-09-27T15:47:26.000Z"
     }
   ],
   "articles": {
@@ -7052,6 +7052,37 @@
         "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
+    "ftbpro_01m3c93gs7dq": {
+      "id": "ftbpro_01m3c93gs7dq",
+      "title": "Six Soccer Players Who Became NFL Stars",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/soccer-players-became-nfl-stars/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_932,h_524,x_31,y_94/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3fe0ks7mkf4wfdk9c.jpg",
+      "publishedAt": "2026-09-28T02:00:00.000Z",
+      "paragraphs": [
+        "By Ewan Ross-MurraySep 27, 2026Brandon Aubrey was at an MLS club before eventually ending up with the Dallas Cowboys. / Sam Hodde/Getty Images.Despite sharing a name, there’s little that connects football—or “soccer”—and American football beyond the need for an adept kicker.",
+        "The ability to cleanly strike the ball—whether spherical or elliptical—is essential to success, and that has resulted in a handful of soccer stars transferring their skills stateside over the years.",
+        "While an infrequently-trodden path, some players have delved into the NFL late in their sporting careers, defying the odds to achieve great things on the gridiron.",
+        "With that in mind, here are some examples of soccer players who migrated to American football.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Toni Fritsch played in 125 NFL games after a soccer career in Austria. /  Focus on Sport/Getty ImagesToni Fritsch is one of few sportsmen to have successfully straddled two wildly-different disciplines.",
+        "The former Rapid Wien striker enjoyed a trophy-laden stint in his native Austria between 1963 and 1971, winning five major trophies at the club level alongside making nine appearances for the national team. He scored just twice on the international stage, but it proved a memorable brace to conquer England—for which he earned the nickname ‘Wembley Toni’—just a year before the Three Lions won the World Cup.",
+        "But after being identified as the perfect kicker by the Dallas Cowboys during one of their European scouting missions in 1971, Fritsch ventured to the United States in search of even greater fame. The NFL’s first Austrian player was part of the Cowboys’ Super Bowl-winning team in his rookie year, before further spells at the San Diego Chargers, Houston Oilers and New Orleans Saints.",
+        "Horst Mühlmann (left) had represented several German teams before joining the NFL. / Clifton Boutelle/Getty ImagesAfter failing to make headway with boyhood club Borussia Dortmund as a burgeoning soccer star, Horst Mühlmann swapped Ruhr derby allegiances by teaming up with Schalke in 1961. The goalkeeper would spend five seasons in Gelsenkirchen, before eventually joining American outfit Kansas City Spurs of the North American Soccer League (NASL) toward the end of the decade.",
+        "Once in Kansas City, the 29-year-old Mühlmann soon ignited his football career with the Kansas City Chiefs, before becoming the kicker for the Cincinnati Bengals later that year in 1969. Renowned for his powerful and clean kicks, he spent five years in Ohio before being traded to the Philadelphia Eagles in 1975.",
+        "Matt Bahr won two Super Bowls. / George Gojkovich/Getty ImagesMatt Bahr’s professional soccer career was rather unspectacular. He spent brief spells with the NASL’s Colorado Caribous and Tulsa Roughnecks as he sought to follow in the footsteps of his father Walter Bahr—former captain of the USMNT—but it wasn’t long before he switched sports.",
+        "Bahr was drafted by the Pittsburgh Steelers in 1979—one of six NFL franchises he played for over a 16-year NFL career—and immediately won the Super Bowl as a rookie kicker. But his greatest moment would arrive with the New York Giants in 1991 when he scored the winning field goal in a 20–19 win over the Buffalo Bills in Super Bowl XXV.",
+        "Chris Bahr, like his brother, enjoyed a prosperous NFL career.  / Owen Shaw/Getty ImagesChris Bahr enjoyed a similar sporting career to his brother, Matt. After an unremarkable spell with the NASL’s Philadelphia Atoms, he swapped soccer for American football when he was drafted by the Cincinnati Bengals as a kicker in 1976.",
+        "Just like his brother, Bahr won the Super Bowl twice—first triumphing with the Oakland Raiders in 1980 (Super Bowl XV) and then again in the 1983 season (Super Bowl XVIII) after the franchise had moved to Los Angeles. He ended his NFL career with the San Diego Chargers.",
+        "Toni Linhart, a Pro Bowler in 1976 and 1977 for the Baltimore #Colts, was a member of the Austrian national soccer team before coming to America in 1972 and tagging on with the Saints as a placekicker. Linhart led the NFL in scoring in 1976. pic.twitter.com/NdYkJLlm6X",
+        "Somewhat surprisingly, Fristch wasn’t the only Austrian to trade soccer in his homeland for a shot at the NFL. Toni Linhart trod that particular path at the same time as his compatriot, although he failed to win the Super Bowl and played 43 games fewer.",
+        "Linhart journeyed to the U.S. after professional soccer spells with Wiener Sport-Club and First Vienna. The defender-turned-kicker represented the New Orleans Saints, Baltimore Colts and New York Jets across a seven-year career, even finishing as the NFL’s leading scorer in 1976.",
+        "Brandon Aubrey is one of the modern converts. / Cooper Neill/Getty ImagesBrandon Aubrey is the most recent player to make the move from soccer to American football. Despite signing for Major League Soccer outfit Toronto FC in 2017, the center back never made a senior appearance, only playing for their reserve team as well as the Philadelphia Union’s reserve team.",
+        "However, after becoming a free agent in 2018, he focused his attention on American football, teaming up with UFL team Birmingham Stallions to improve his skills as a kicker. He was picked up by the Dallas Cowboys in 2023—where he instantly became the NFL’s leading points scorer in his first year (157).",
+        "Clive Allen played in NFL Europe. / Nigel Cairns/Mirrorpix/Getty ImagesThere is a fairly-lengthy list of soccer stars who played in NFL Europe—a developmental league for the NFL which existed between 1991–2007."
+      ]
+    },
     "ftbpro_01m3caaqsxs5": {
       "id": "ftbpro_01m3caaqsxs5",
       "title": "Man Utd Star Sends Curious Demand to Carrick Which Only Makes His Life Harder",
@@ -8208,6 +8239,37 @@
         "feed. READ THE LATEST LIVERPOOL NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m3h98n68jk": {
+      "id": "ftbpro_01m3h98n68jk",
+      "title": "Belgium vs. France—Nations League: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/belgium-vs-france-nations-league-preview-predictions-lineups-9-28-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3jay8812g20ksvbrq.jpg",
+      "publishedAt": "2026-09-28T00:00:00.000Z",
+      "paragraphs": [
+        "By Barnaby LaneSep 27, 2026Belgium host France in what should be a must-see battle on Monday. / Kristian Skeie/UEFA/Getty Images (Belgium), Franck Fife/AFP/Getty Images (France)Once known as the Match Sympathique—roughly, “the Friendly Match”—Belgium vs. France has long been a meeting between close neighbors. These days, though, there is considerably more at stake than bragging rights.",
+        "The two European heavyweights meet in League A, Group A1 on Monday night, with both looking to make it two wins from two in the 2026–27 UEFA Nations League.",
+        "Both sides made impressive starts to the campaign. Belgium traveled to Italy and came away with a 2–0 victory, with young forward Mika Godts opening the scoring before Dodi Lukébakio sealed the points with a superb solo effort. France, meanwhile, gave new manager Zinedine Zidane a winning start, edging Türkiye 1–0 thanks to a Kylian Mbappé goal.",
+        "Mbappé’s night ended on a sour note, however, as the France captain picked up an injury shortly after scoring. He will now miss Monday’s meeting in Brussels, leaving Zidane without his biggest attacking star as France attempt to extend its remarkable recent record against its neighbors.",
+        "With two new managers, two winning starts and plenty of attacking talent on both sides, Monday’s meeting promises to be anything but sympathique.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Mbappé is out. / Ali Atmaca/Anadolu/Getty ImagesMbappé is out, and of course Zidane, his France teammates and the supporters will feel his absence. But the truth is, Les Bleus have more than enough firepower to cope without their talisman.",
+        "From Michael Olise and Ousmane Dembélé to Rayan Cherki, Bradley Barcola and Désiré Doué, Zidane arguably has one of the deepest attacking arsenals in world soccer at his disposal. Losing Mbappé is a major blow, but France still has an absurd amount of quality to call upon.",
+        "And while France has lost twice in its 21 games without Mbappé, it has generally coped well in his absence. In fact, Les Bleus have not lost a game he has missed since 2023, when they were beaten 1–0 by Germany in a friendly.",
+        "Belgium has plenty of firepower of its own, with the brilliant Godts, the ever-reliable Romelu Lukaku and bags of pace in Malick Fofana and Loïs Openda. But there are still questions at the other end of the pitch. The team’s defensive record at the 2026 World Cup was hardly watertight, with Belgium keeping just one clean sheet on its way to the quarterfinals, where it was ultimately beaten by Spain.",
+        "Against a France side packed with attacking talent—even without Mbappé—that could prove decisive.",
+        "Belgium is likely to be unchanged. / FotMobUnlike France, Belgium has no major new injury concerns heading into the clash, so Mark van Bommel is likely to stick with the same side that beat Italy 2–0.",
+        "That would see Nathan Ngoy partner Brandon Mechele in central defense, with Timothy Castagne and Maxim De Cuyper occupying the fullback positions.",
+        "With Leandro Trossard still sidelined as he continues his recovery from a heel issue, Godts should start on the left of a three-man attacking unit alongside Kevin De Bruyne and Diego Moreira, with Charles De Ketelaere leading the line.",
+        "Belgium predicted lineup vs. France (4-2-3-1): Lammens; Castagne, Mechele, Ngoy, De Cuyper; De Bruyne, Moreira, Godts; De Ketelaere.",
+        "Dembélé will likely play up front. / FotMobWith Mbappé unavailable, Ousmane Dembélé could move into a central role, with Michael Olise and Désiré Doué providing the attacking width.",
+        "In midfield, Manu Koné is expected to anchor the trio alongside Adrien Rabiot, while Manchester City playmaker Cherki should operate further forward as the creative spark.",
+        "Zidane has little reason to make wholesale changes after France kept a clean sheet against Türkiye. Adrien Truffert, Maxence Lacroix, Dayot Upamecano and Jules Koundé could therefore retain their places in defense, with Mike Maignan continuing in goal.",
+        "France predicted lineup vs. Belgium (4-2-1-3): Maignan; Koundé, Upamecano, Lacroix, Truffert; Rabiot, Koné, Cherki; Olise, Dembélé, Doué.",
+        "feed. READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
     "ftbpro_01m3hc1a35g1": {
       "id": "ftbpro_01m3hc1a35g1",
       "title": "‘Hate Me’—Yamal’s Defiant Ballon d’Or Message After Record-Breaking Wembley Night",
@@ -8417,7 +8479,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2330,h_1310,x_101,y_129/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3hw65037s5xrt2s6h.jpg",
       "publishedAt": "2026-09-27T20:00:00.000Z",
       "paragraphs": [
-        "By Grey Whitebloom4:00 PM EDTMalik Tillman (center) rightfully took the accolades on Saturday. / Rich Storry/Getty ImagesMalik Tillman became the first U.S. men’s international to score in three consecutive appearances for the Stars and Stripes since Clint Dempsey achieved the feat all the way back in 2016.",
+        "By Grey WhitebloomSep 27, 2026Malik Tillman (center) rightfully took the accolades on Saturday. / Rich Storry/Getty ImagesMalik Tillman became the first U.S. men’s international to score in three consecutive appearances for the Stars and Stripes since Clint Dempsey achieved the feat all the way back in 2016.",
         "The forward’s crisp penalty in the second half of Saturday’s resounding 4–1 win over Peru got lost in the flood of accolades for Mauricio Pochettino’s impressive youngsters. Amid the hype over Cavan Sullivan and a wash of debutants, Tillman was responsible for a memorable piece of consistency the national team hasn’t seen in a decade.",
         "Tillman was one of the clear success stories from a World Cup campaign on home soil with mixed conclusions.",
         "While Christian Pulisic’s tournament was effectively curtailed at the halftime interval of the opening match, the versatile Bayer Leverkusen schemer was reliably impressive. Tillman ended the tournament with back-to-back direct free-kick goals in the knockout rounds, matching a feat only ever achieved once before in the competition’s history, and began life post-World Cup with another accomplished set piece.",
@@ -8433,6 +8495,28 @@
         "READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
+    "ftbpro_01m3hrz6y2vc": {
+      "id": "ftbpro_01m3hrz6y2vc",
+      "title": "‘I Lost 99% of Everything’—Real Madrid, Brazil Legend Opens Up on Crisis",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/real-madrid-brazil-legend-opens-up-on-crisis/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_31/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3hsjge3y351gm01rf.jpg",
+      "publishedAt": "2026-09-28T01:00:00.000Z",
+      "paragraphs": [
+        "By Barnaby LaneSep 27, 2026Roberto Carlos says he nearly lost everything. / Oscar J. Barroso/Europa Press/Getty ImagesLegendary Real Madrid and Brazil fullback Roberto Carlos revealed he lost almost his entire fortune earned during his soccer career due to problems involving his former agent and family issues.",
+        "Speaking at the Football Summit in Portugal, the 53-year-old said almost all of the money he made during his playing days—estimated at more than $183 million (€160 million)—was wiped out.",
+        "“I had problems with people who left me with zero money. Because of agents and family issues, I lost 99% of everything I had earned in football,” he said.",
+        "“I had a very serious family problem,” Carlos added, before describing the moment he realized the extent of what had happened: “On Thursday, I went to bed at midnight and on Friday, I received a pile of documents I knew nothing about. That’s when I realized I had lost my entire history.”",
+        "Carlos did not name the agent involved or explain exactly where his money went.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Roberto Carlos is hoping his mistakes can help the next generation. / Manuel Velasquez/FIFA/Getty ImagesCarlos took the opportunity to urge younger players to learn from his mistakes.",
+        "“I made mistakes, and therefore, I ask younger players not to do the same,” he said. “I always thought about future plans after my playing career. It’s about building a history as a player and leveraging your image. When I decided to leave football, I already had my sporting director’s license and was working with many brands.”",
+        "One of the most decorated fullbacks of his generation, Carlos won the World Cup with Brazil in 2002, along with three Champions League trophies and four La Liga titles with Real Madrid during his 24-year playing career.",
+        "Since retiring in the 2010s, he has enjoyed a varied career away from the pitch, working with several media brands before taking on a more permanent role as a Real Madrid ambassador.",
+        "READ THE LATEST REAL MADRID NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
     "ftbpro_01m3hsrpqzyn": {
       "id": "ftbpro_01m3hsrpqzyn",
       "title": "Justin Ellis: From MLS Afterthought to USMNT Goalscorer in Six Months",
@@ -8442,7 +8526,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_107/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3hw21jw2fwevt90cx.jpg",
       "publishedAt": "2026-09-27T19:00:00.000Z",
       "paragraphs": [
-        "By Amanda Langell3:00 PM EDTJustin Ellis marked his USMNT debut with a goal. / Mark Thorstenson/ISI Photos/Getty ImagesJustin Ellis was overcome with emotion when he scored his first goal for the U.S. men’s national team on Saturday.",
+        "By Amanda LangellSep 27, 2026Justin Ellis marked his USMNT debut with a goal. / Mark Thorstenson/ISI Photos/Getty ImagesJustin Ellis was overcome with emotion when he scored his first goal for the U.S. men’s national team on Saturday.",
         "The largely-unknown 19-year-old sent a glancing header past goalkeeper Pedro Gallese to get the Stars and Stripes on the scoresheet inside of four minutes against Peru. It was an electric start for Mauricio Pochettino’s men—and a dream moment for Ellis in his first-ever match representing the nation’s senior squad.",
         "The striker was quickly swarmed by his teammates before taking in the moment with the crowd at Inter.co Stadium, a venue he knows well as an Orlando City homegrown product.",
         "It’s hard to believe that just six months ago, Ellis was not even playing first-team soccer with the MLS outfit.",
@@ -8473,7 +8557,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3j2vbv5d8c0ancf7v.jpg",
       "publishedAt": "2026-09-27T23:05:00.000Z",
       "paragraphs": [
-        "By SI FC Staff7:05 PM EDTNico Williams (left) and José Mourinho headline today’s gossip. / Marc Atkins/Getty Images (Williams), Alvaro Medranda/Quality Sport Images/Getty Images (Mourinho)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "By SI FC StaffSep 27, 2026Nico Williams (left) and José Mourinho headline today’s gossip. / Marc Atkins/Getty Images (Williams), Alvaro Medranda/Quality Sport Images/Getty Images (Mourinho)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
         "Alex Scott is a man in demand. / Visionhaus/Getty ImagesManchester United are willing to spend €95 million ($108.3 million) on Athletic Club and Spain star Nico Williams, which would make him the club’s joint-second most expensive purchase of all time. (Source: El Nacional)",
         "Chelsea have been met with firm resistance from Bournemouth when it comes to the pursuit of Alex Scott. If the Blues are to prize the England midfielder away from the south coast in January, they would have to meet his €110 million ($125.4 million) asking price. (Source: Flashscore)",
         "Arsenal and Tottenham Hotspur are both closely tracking Bayer Leverkusen’s midfield gem Ibrahim Maza. (Source: TEAMtalk)",
@@ -8503,7 +8587,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_41/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3j08krnbz2p9r0xgh.jpg",
       "publishedAt": "2026-09-27T21:00:00.000Z",
       "paragraphs": [
-        "By Amanda Langell5:00 PM EDTLionel Messi will join up with Argentina later in the window. / Rich Storry/Getty ImagesDespite being called up by Argentina for the September-October international break, Lionel Messi is still expected to feature for Inter Miami when they take on the Columbus Crew on Sunday.",
+        "By Amanda LangellSep 27, 2026Lionel Messi will join up with Argentina later in the window. / Rich Storry/Getty ImagesDespite being called up by Argentina for the September-October international break, Lionel Messi is still expected to feature for Inter Miami when they take on the Columbus Crew on Sunday.",
         "The Herons have become accustomed to getting by without Messi during international windows. While domestic action is put on pause throughout Europe, MLS trudges along no matter how many players are busy on international duty.",
         "Messi is typically one of the big names missing, but he officially retired from international soccer following the 2026 World Cup. After 207 appearances, 125 goals, two Copa América titles and one World Cup triumph, the eight-time Ballon d’Or winner hung up his boots for La Albiceleste.",
         "He is still scheduled to play a farewell match for Argentina on Oct. 6 against Benin, hence his call-up this fall, but until that emotional day, Messi is sticking with the Herons.",
@@ -8528,7 +8612,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_917,h_515,x_37,y_62/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3j54rj42e9qcvm8rd.jpg",
       "publishedAt": "2026-09-27T19:37:07.000Z",
       "paragraphs": [
-        "By Amanda Langell3:37 PM EDTMichael Carrick is officially on the hot seat at Old Trafford. / Catherine Ivill/AMA/Getty ImagesStill reeling from a nightmare fitness update on captain Bruno Fernandes, Manchester United were rocked by an injury to Patrick Dorgu just hours later.",
+        "By Amanda LangellSep 27, 2026Michael Carrick is officially on the hot seat at Old Trafford. / Catherine Ivill/AMA/Getty ImagesStill reeling from a nightmare fitness update on captain Bruno Fernandes, Manchester United were rocked by an injury to Patrick Dorgu just hours later.",
         "The 21-year-old got the nod in Denmark’s UEFA Nations League clash with Wales on Sunday and only lasted 30 minutes before he was forced to come off the pitch. Dorgu, who played 75 minutes against Norway just four days prior, appeared to tweak his hamstring as he made a darting overlapping run down the left flank.",
         "Once he stopped running, he immediately reached for the back of his leg. Dorgu tried to play through the pain, but he ultimately collapsed to the ground soon after.",
         "The medical team tended to Dorgu before signaling the player could no longer continue. The winger limped off the pitch, sparking widespread concern in both Denmark and Manchester.",
@@ -8555,7 +8639,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3j7n1snatej7tc3v1.jpg",
       "publishedAt": "2026-09-27T22:00:01.000Z",
       "paragraphs": [
-        "By Amanda Langell6:00 PM EDTJürgen Klopp (left) came to the defense of Florian Wirtz. / Alexander Hassenstein/Getty Images (Klopp), Richard Sellers/Sportsphoto/Allstar/Getty Images (Wirtz)Germany boss Jürgen Klopp tried to take some heat off the under-performing Florian Wirtz, reminding everyone of the “absolutely unfavorable” conditions surrounding the star’s time at Liverpool so far.",
+        "By Amanda LangellSep 27, 2026Jürgen Klopp (left) came to the defense of Florian Wirtz. / Alexander Hassenstein/Getty Images (Klopp), Richard Sellers/Sportsphoto/Allstar/Getty Images (Wirtz)Germany boss Jürgen Klopp tried to take some heat off the under-performing Florian Wirtz, reminding everyone of the “absolutely unfavorable” conditions surrounding the star’s time at Liverpool so far.",
         "Expectations were otherworldly for Wirtz when he made Anfield his new home ahead of the 2025–26 season. The former Bayer Leverkusen standout joined Liverpool for a then-club record fee of £116 million ($154 million), viewed as a devastating new addition to the defending English champions.",
         "What soon unfolded was a debut campaign to forget, full of incessant criticism that continues to loom over the Germany international in 2026–27. Wirtz has scored just seven goals for the Reds, a tally he has yet to add to in his sophomore campaign.",
         "Klopp, who aims to get the best out of the No. 10 for Die Mannschaft, was quick to contextualize Wirtz’s early struggles on Merseyside.",
