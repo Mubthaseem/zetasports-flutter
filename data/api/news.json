@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-09-29T22:08:51.200Z",
+    "generatedAt": "2026-09-29T22:55:19.262Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 417
+      "fullArticlesCount": 432
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -15,12 +15,147 @@
   },
   "news": [
     {
+      "id": "1w2ez5c95zm8s1n4q1e7fhnui5",
+      "title": "'Concern has never been a thing' for St. Louis boss Damet",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1w2ez5c95zm8s1n4q1e7fhnui5-concern-has-never-been-thing-st-louis-boss-damet",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/79/a8/yoann-damet_sejol49ejyfo1dxp3c31se7nu.jpg?t=-256970528&w=1260&h=708",
+      "publishedAt": "2026-09-29T22:30:26.000Z"
+    },
+    {
+      "id": "t4d0bd3ewwd01gny6mbzs3t3q",
+      "title": "Kane: England did what we had to do against Czechia",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/t4d0bd3ewwd01gny6mbzs3t3q-kane-england-did-what-we-had-do-against-czechia",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/3/b6/kane_175nsan61sjeh13s6loe1nmr5d.jpg?t=-203640784&w=640&h=360",
+      "publishedAt": "2026-09-29T22:05:40.000Z"
+    },
+    {
+      "id": "ftbpro_01m3q0r94ye8",
+      "title": "Four Potential Destinations for Erling Haaland Amid Man City Turmoil",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3q0r94ye8/four-potential-destinations-erling-haaland-amid-man-city-turmoil",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_7/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q48wn97maw0v2etb.jpg",
+      "publishedAt": "2026-09-29T21:30:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m3q7dwwvq8",
+      "title": "England Player Ratings vs. Czechia: Barcelona’s Anthony Gordon Keeps Hot Streak Going",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3q7dwwvq8/england-player-ratings-vs-czechia-barcelonas-anthony-gordon-keeps-hot-streak-going",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_2/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3qfcz929xdpst5zqx.jpg",
+      "publishedAt": "2026-09-29T21:28:15.000Z"
+    },
+    {
+      "id": "4ued3nzwi76n1hbx4tjx150jv",
+      "title": "Scotland suffer 'big setback' in 'new chapter', says McGinn after defeat to Switzerland",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/4ued3nzwi76n1hbx4tjx150jv-scotland-suffer-big-setback-new-chapter-says-mcginn-after-defeat-switzerland",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/84/89/scotland_oxqmum1jvat719qy0mifm3vnw.jpg?t=-209552784&w=1260&h=708",
+      "publishedAt": "2026-09-29T21:27:48.000Z"
+    },
+    {
+      "id": "1sx1zurasqtk41pnunepb1n4qu",
+      "title": "Czechia 0-2 England: Gordon and Kane score again as Tuchel's side get off the mark",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1sx1zurasqtk41pnunepb1n4qu-czechia-0-2-england-gordon-kane-score-again-tuchels-side-get-off-mark",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b5/80/kane-and-gordon_psw4fiiyrz3z1ts38dmbdekg8.jpg?t=-212158080&w=640&h=360",
+      "publishedAt": "2026-09-29T20:54:02.000Z"
+    },
+    {
+      "id": "lhamzf4q2c8s18bytkx0sf7qz",
+      "title": "Spain 4-1 Croatia: Yamal nets brace as unbeaten run reaches 40 games",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/lhamzf4q2c8s18bytkx0sf7qz-spain-4-1-croatia-yamal-nets-brace-unbeaten-run-reaches-40-games",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/20/48/lamine-yamal_10cx3tb2pk3qt1xmok49kk1hzc.jpg?t=-217132080&w=640&h=360",
+      "publishedAt": "2026-09-29T20:52:13.000Z"
+    },
+    {
+      "id": "ftbpro_01m3q7kpgekb",
+      "title": "Chelsea Dealt Fresh Injury Scare at Their Most Vulnerable Position",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3q7kpgekb/chelsea-dealt-fresh-injury-scare-at-their-most-vulnerable-position",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2266,h_1274,x_188,y_68/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q9b5c8hsxe0c5e2k.jpg",
+      "publishedAt": "2026-09-29T20:35:40.000Z"
+    },
+    {
+      "id": "ic1l0swye6up1788ghbuhiltm",
+      "title": "Esposito brothers want to 'share the field more often' for Italy",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/ic1l0swye6up1788ghbuhiltm-esposito-brothers-want-share-field-more-often-italy",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/58/8e/francesco-pio-esposito-and-sebastiano-esposito_1dopmzc1jlzfd1dfdjkzj6a9e8.jpg?t=-243450784&w=1260&h=708",
+      "publishedAt": "2026-09-29T20:19:28.000Z"
+    },
+    {
+      "id": "ftbpro_01m3q5916sjb",
+      "title": "History Repeats Itself As Raphinha Suffers Another Injury With Brazil",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3q5916sjb/history-repeats-itself-raphinha-suffers-another-injury-brazil",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_99/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q5qvh6hcz82anvfr.jpg",
+      "publishedAt": "2026-09-29T20:00:01.000Z"
+    },
+    {
+      "id": "rdtewxxxoxyl1t0f3d1jxunw8",
+      "title": "Bronze excited for Chelsea to 'prove ourselves' against Lyon",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/rdtewxxxoxyl1t0f3d1jxunw8-bronze-excited-chelsea-prove-ourselves-against-lyon",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/11/b4/bronze_nnnz86i30nxm13ms8uinj8gg6.jpg?t=-220102336&w=1260&h=708",
+      "publishedAt": "2026-09-29T19:50:23.000Z"
+    },
+    {
+      "id": "ftbpro_01m3q0kbhvp7",
+      "title": "Seven Takeaways From Official Report Into Man City’s Nine Years of Cheating",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3q0kbhvp7/seven-takeaways-from-official-report-into-man-citys-nine-years-cheating",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2139,h_1203,x_216,y_106/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q1kryg3pg4gk4hhy.jpg",
+      "publishedAt": "2026-09-29T19:35:00.000Z"
+    },
+    {
+      "id": "w4tlhtfp5huo11h5lb72ixdxq",
+      "title": "Wiegman not focused on expiring England contract",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/w4tlhtfp5huo11h5lb72ixdxq-wiegman-not-focused-expiring-england-contract",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/16/a2/sarina-wiegman_1b7w631593n1x1vjuzuyem8rpj.jpg?t=-227686848&w=1260&h=708",
+      "publishedAt": "2026-09-29T19:18:13.000Z"
+    },
+    {
+      "id": "ftbpro_01m3pt7y59h4",
+      "title": "Man Utd Strike Historic Deal for Liverpool Youngster Amid JJ Gabriel Storm",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3pt7y59h4/man-utd-strike-historic-deal-liverpool-youngster-amid-jj-gabriel-storm",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_135/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3ptqx45c1rn19m14d.jpg",
+      "publishedAt": "2026-09-29T19:00:00.000Z"
+    },
+    {
+      "id": "1uv7la8e2fj8o1pwm899c6zg4z",
+      "title": "Herrington: Australia's performances against Brazil show how far we've come",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1uv7la8e2fj8o1pwm899c6zg4z-herrington-australias-performances-against-brazil-show-how-far-weve-come",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/9d/1e/herrington_1j2xkk46ryn4y1c652iaqww4cr.jpg?t=-235044848&w=1260&h=708",
+      "publishedAt": "2026-09-29T18:49:09.000Z"
+    },
+    {
       "id": "1vospb7qu65a1ac0d5isypkq0",
       "title": "Man City found guilty of all charges related to serious breaches of Premier League financial rules",
       "description": "FotMob",
       "source": "FotMob",
       "sourceUrl": "/news/1vospb7qu65a1ac0d5isypkq0-man-city-found-guilty-all-charges-related-serious-breaches-premier-league-financial-rules",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/da/39/city_uod74gxhyc1l1k6vem3261n9o.jpg?t=-241240272&w=1260&h=708",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/da/39/city_uod74gxhyc1l1k6vem3261n9o.jpg?t=-241240272&w=640&h=360",
       "publishedAt": "2026-09-29T18:12:40.000Z"
     },
     {
@@ -58,141 +193,6 @@
       "sourceUrl": "/embed/news/01m0smpq1ggj/20-best-premier-league-right-wingers-all-timeranked",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_955,h_537,x_0,y_32/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01ksdhdc7mynbpjmkgj2.jpg",
       "publishedAt": "2026-09-29T17:00:01.000Z"
-    },
-    {
-      "id": "ftbpro_01m3paxbsr9w",
-      "title": "USWNT Roster Takeaways: Ashley Sanchez Called Up Amid Historic Season",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3paxbsr9w/uswnt-roster-takeaways-ashley-sanchez-called-up-amid-historic-season",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2295,h_1290,x_0,y_275/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3pwda2bnaj9e7bgdr.jpg",
-      "publishedAt": "2026-09-29T17:00:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m3py7v8q1x",
-      "title": "‘Sham’—Premier League Stun Man City With Scathing Official Guilty Verdict",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3py7v8q1x/shampremier-league-stun-man-city-scathing-official-guilty-verdict",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3pyshp2gcy4xg6a24.jpg",
-      "publishedAt": "2026-09-29T16:35:58.000Z"
-    },
-    {
-      "id": "ftbpro_01m3pkref63m",
-      "title": "Arsenal Legend Vieira Reveals Minor Betrayal Over Shock Man Utd Transfer",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3pkref63m/arsenal-legend-vieira-reveals-minor-betrayal-over-shock-man-utd-transfer",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_74/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3pmk0mb5b19tvgbte.jpg",
-      "publishedAt": "2026-09-29T16:30:00.000Z"
-    },
-    {
-      "id": "9vlzkzlzx76w132ohhn99dphy",
-      "title": "'Anything is possible' for Brighton as owner eyes major trophy",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/9vlzkzlzx76w132ohhn99dphy-anything-is-possible-brighton-owner-eyes-major-trophy",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/fb/3b/brighton_x0f5nd6rtc051swj4f29rywli.jpg?t=-246888016&w=1260&h=708",
-      "publishedAt": "2026-09-29T16:18:22.000Z"
-    },
-    {
-      "id": "ftbpro_01m3mx82x7wg",
-      "title": "Anthony Gordon Set for Reunion After Hilarious, Viral World Cup Moment",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3mx82x7wg/anthony-gordon-set-reunion-after-hilarious-viral-world-cup-moment",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1299,h_730,x_1252,y_449/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3my39tx1mmgyyzmya.jpg",
-      "publishedAt": "2026-09-29T16:00:02.000Z"
-    },
-    {
-      "id": "18wa22x9ciuea1k1fgkud5wunp",
-      "title": "Muller extends Vancouver stay through 2027 MLS Sprint Season",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/18wa22x9ciuea1k1fgkud5wunp-muller-extends-vancouver-stay-through-2027-mls-sprint-season",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/43/7c/thomas-muller_1ie590q4mxb7y1oeu22j0h55zp.jpg?t=-252000528&w=1260&h=708",
-      "publishedAt": "2026-09-29T15:49:12.000Z"
-    },
-    {
-      "id": "ftbpro_01m3pqp37wgz",
-      "title": "The Massive Job Jose Mourinho ‘Rejected’ for Real Madrid",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3pqp37wgz/massive-job-jose-mourinho-rejected-real-madrid",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_26/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3pszwhapkyy6j9vnh.jpg",
-      "publishedAt": "2026-09-29T15:30:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m3pm9jfqv6",
-      "title": "Viktor Gyokeres Is Making His Case to Replace Kai Havertz With Sweden Form",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3pm9jfqv6/viktor-gyokeres-is-making-his-case-replace-kai-havertz-sweden-form",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_810,h_455,x_0,y_193/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3pmrgh59s549gxq55.jpg",
-      "publishedAt": "2026-09-29T15:00:00.000Z"
-    },
-    {
-      "id": "159b8hezyf6ze11g85cyffy3vo",
-      "title": "'I'm making the most of every moment' – Giroud admits retirement is close",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/159b8hezyf6ze11g85cyffy3vo-im-making-most-every-moment-giroud-admits-retirement-is-close",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/36/12/giroud_1fl70nsi0arf117dek6tgu9qw3.jpg?t=-256498528&w=1260&h=708",
-      "publishedAt": "2026-09-29T14:56:31.000Z"
-    },
-    {
-      "id": "ftbpro_01m3mfd9se3v",
-      "title": "Barcelona, Real Madrid ‘Plotting Moves’ for Mexico Record-Breaker",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3mfd9se3v/barcelona-real-madrid-plotting-moves-mexico-record-breaker",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3mvrk9b7p3gm1s4wm.jpg",
-      "publishedAt": "2026-09-29T14:30:00.000Z"
-    },
-    {
-      "id": "1phs3s7d3osjh1cifsndif7p1y",
-      "title": "Brown admits surprise over Bayern move",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1phs3s7d3osjh1cifsndif7p1y-brown-admits-surprise-over-bayern-move",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/8e/d2/nathaniel-brown_1sgxsp7awe3zt1etmrl18vmt1r.jpg?t=-262128272&w=1260&h=708",
-      "publishedAt": "2026-09-29T14:27:26.000Z"
-    },
-    {
-      "id": "0E02511AE70059D2585F242AC809B2B6",
-      "title": "England Women’s Squad: Four Key Talking Points Ahead of Greece World Cup Play-Off",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/england-womens-squad-key-talking-points-greece-world-cup-play-off",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/england-women-squad-greece-play-off.jpg",
-      "publishedAt": "2026-09-29T14:13:12.000Z"
-    },
-    {
-      "id": "6vabhwr0xc9h1ckbndt40zyb5",
-      "title": "Monchi rescinds Yamal Ballon d'Or endorsement after angry Espanyol reaction",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/6vabhwr0xc9h1ckbndt40zyb5-monchi-rescinds-yamal-ballon-dor-endorsement-after-angry-espanyol-reaction",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a6/0/lamine-yamal_d8xbwjwb8l9o1fbprv82ojz0o.jpg?t=-260804336&w=1260&h=708",
-      "publishedAt": "2026-09-29T14:03:34.000Z"
-    },
-    {
-      "id": "ftbpro_01m3kqp7nraf",
-      "title": "Report: Liverpool Learn Timeline for Cody Gakpo Injury",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3kqp7nraf/report-liverpool-learn-timeline-cody-gakpo-injury",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3kqt9bx8jntqa3ady.jpg",
-      "publishedAt": "2026-09-29T14:00:23.000Z"
-    },
-    {
-      "id": "ftbpro_01m3pj19sjnx",
-      "title": "How Vinicius Junior Fared in Brazil’s Win Over Australia",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3pj19sjnx/how-vinicius-junior-fared-brazils-win-over-australia",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_819,h_460,x_0,y_54/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3pjhwbtfn7kk3q35w.jpg",
-      "publishedAt": "2026-09-29T14:00:03.000Z"
     }
   ],
   "articles": {
@@ -2052,6 +2052,36 @@
       ],
       "html": "<p>Sunderland&#39;s creative midfielder Enzo Le Fee has signed a new five-year contract with the club.</p>\n\n<p>Le Fee joined the Black Cats on loan from Roma in January 2025, with that deal containing a purchase obligation if they were to be promoted from the Championship.</p>\n\n<p>The Frenchman immediately assumed a key role under Regis Le Bris, starting in a 2-1 play-off final victory over Sheffield United, which led to him becoming a permanent Sunderland player for £19m.</p>\n\n<p>And he has continued to shine in the Premier League, making 41 appearances in the competition while scoring six goals and providing seven assists.&nbsp;</p>\n\n<p>His 13 goal involvements and 61 chances created are both team-high totals since the start of 2025-26, and those figures helped propel Sunderland to a seventh-place finish and Europa League qualification last term.</p>\n\n<p>Last week, Le Fee scored from the penalty spot to secure a 1-0 victory over AZ at the Stadium of Light, in Sunderland&#39;s opening match in that competition.&nbsp;</p>\n\n<p>That made him the Black Cats&#39; first goalscorer in Europe since October 1973, when Micky Horswill scored their second goal in a 2-1 victory at home to Sporting CP in the Cup Winners&#39; Cup, only for the Lisbon giants to recover in the return fixture and progress 3-2 on aggregate.&nbsp;</p>\n\n<p>&quot;I&#39;m really happy to have signed a new contract with Sunderland,&quot; Le Fee told the club&#39;s website, having agreed fresh terms to run until 2031.&nbsp;</p>\n\n<p>&quot;From the moment I arrived, I&#39;ve felt the passion of the supporters and the ambition of everyone at the club – I&#39;ve loved my time here.</p>\n\n\n<p>&quot;We&#39;ve achieved something special together over the past couple of seasons, but I believe this is just the beginning.&nbsp;</p>\n\n<p>&quot;I feel very settled here and I&#39;m excited to continue developing, competing at the highest level and helping the club move forward.</p>\n\n<p>&quot;I&#39;m very proud to wear the Sunderland shirt and I can&#39;t wait to see what we can achieve together in the years ahead.&quot;</p>\n\n<p>Having lost 5-3 to Manchester City in a thrilling encounter prior to the international break, Sunderland have four points from five Premier League games this season, with Brighton their next opponents on October 10.</p>\n"
     },
+    "1sx1zurasqtk41pnunepb1n4qu": {
+      "id": "1sx1zurasqtk41pnunepb1n4qu",
+      "title": "Czechia 0-2 England: Gordon and Kane score again as Tuchel's side get off the mark",
+      "subtitle": "England are off the mark in the 2026-27 Nations League, using their numerical advantage to earn a 2-0 victory over Czechia.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1sx1zurasqtk41pnunepb1n4qu-czechia-0-2-england-gordon-kane-score-again-tuchels-side-get-off-mark",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b5/80/kane-and-gordon_psw4fiiyrz3z1ts38dmbdekg8.jpg?t=-212158080&w=1200&h=630",
+      "publishedAt": "2026-09-29T20:54:02.000Z",
+      "paragraphs": [
+        "Anthony Gordon and Harry Kane both hit the back of the net for the second game running, this time helping England to a 2-0 win over 10-man Czechia in the Nations League.",
+        "England were aided by Pavel&nbsp;Sulc&#39;s first-half red card, and this time, when Gordon and Kane gave them the lead, they held onto it for their first victory in Group A3.",
+        "Czechia gave England an early scare after Elliot Anderson failed to intercept a long pass down the left wing and Sulc raced onto it, but James Trafford rushed out to smother the shot while one-on-one.",
+        "Lukas Cerv then volleyed wide of the target before England got their first clear opening when Morgan Rogers turned in the box and bent an effort onto the far post, with Anderson&#39;s follow-up blocked by Robin Hranac.",
+        "But the momentum changed in the 25th minute; Sulc caught Anderson above the ankle with his studs, and his yellow card was upgraded to a red&nbsp;following a VAR review.",
+        "Gordon saw a tight-angled shot parried just after the half-hour mark, while Kane forced Matej Kovar into a fine stop on the stroke of half-time.",
+        "But it took England just 67 seconds after the restart to break the deadlock, with Trent Alexander-Arnold whipping in a stunning cross, which Gordon nodded past the goalkeeper.",
+        "Lewis Hall sent the ball trickling narrowly wide as England upped the pressure, which told in the 68th minute as Kane latched onto the loose ball after Rogers tripped and swept a low finish into the bottom-right corner.",
+        "Czechia were not out of the game, though, with Adam Hlozek forcing Trafford into a fine stop nine minutes later from the edge of the box after a quick counter-attack.",
+        "Eberechi Eze and Jude Bellingham&nbsp;tested Kovar late on, but the Czechia goalkeeper kept the score down; though with a numerical disadvantage, they could not take advantage of that.",
+        "England find their groove in Prague",
+        "After losing their opener, there was slightly more pressure on England to get a win in this game, though Thomas Tuchel was insistent pre-match that it did not fall into the &quot;must-win&quot; category.",
+        "Either way, it was three points that England needed after the disheartening loss to the world champions.",
+        "Czechia, despite starting brightly, were up against it after the red card - the last side to beat England with 10 men were France in June 2017 (3-2 home win).",
+        "It was two in-form players that ultimately proved the difference. Gordon now has four goals and four assists across his last nine appearances, while he was assisted by Alexander-Arnold, who was making his first England appearance in almost two years.",
+        "As for Kane, he has now netted five goals in seven Nations League appearances since the start of the 2024-25 edition.",
+        "Despite having 22 shots worth 1.37 expected goals (xG) in a strong attacking display, Tuchel will be keen to focus on the clean sheet, given England had conceded 13 goals in their six games before this.",
+        "Trafford - the first England goalkeeper other than Jordan Pickford to start consecutive games since Nick Pope in September 2022 - made two big saves, though the Three Lions only conceded six shots worth 0.33 xG overall.&nbsp;"
+      ],
+      "html": "<p>Anthony Gordon and Harry Kane both hit the back of the net for the second game running, this time helping England to a 2-0 win over 10-man Czechia in the Nations League.</p>\n\n<p>England were aided by Pavel&nbsp;Sulc&#39;s first-half red card, and this time, when Gordon and Kane gave them the lead, they held onto it for their first victory in Group A3.</p>\n\n<p>Czechia gave England an early scare after Elliot Anderson failed to intercept a long pass down the left wing and Sulc raced onto it, but James Trafford rushed out to smother the shot while one-on-one.</p>\n\n<p>Lukas Cerv then volleyed wide of the target before England got their first clear opening when Morgan Rogers turned in the box and bent an effort onto the far post, with Anderson&#39;s follow-up blocked by Robin Hranac.</p>\n\n<p>But the momentum changed in the 25th minute; Sulc caught Anderson above the ankle with his studs, and his yellow card was upgraded to a red&nbsp;following a VAR review.</p>\n\n<p>Gordon saw a tight-angled shot parried just after the half-hour mark, while Kane forced Matej Kovar into a fine stop on the stroke of half-time.</p>\n\n<p>But it took England just 67 seconds after the restart to break the deadlock, with Trent Alexander-Arnold whipping in a stunning cross, which Gordon nodded past the goalkeeper.</p>\n\n<p>Lewis Hall sent the ball trickling narrowly wide as England upped the pressure, which told in the 68th minute as Kane latched onto the loose ball after Rogers tripped and swept a low finish into the bottom-right corner.</p>\n\n<p>Czechia were not out of the game, though, with Adam Hlozek forcing Trafford into a fine stop nine minutes later from the edge of the box after a quick counter-attack.</p>\n\n<p>Eberechi Eze and Jude Bellingham&nbsp;tested Kovar late on, but the Czechia goalkeeper kept the score down; though with a numerical disadvantage, they could not take advantage of that.</p>\n\n\n<p><strong>England find their groove in Prague</strong></p>\n\n<p>After losing their opener, there was slightly more pressure on England to get a win in this game, though Thomas Tuchel was insistent pre-match that it did not fall into the &quot;must-win&quot; category.</p>\n\n<p>Either way, it was three points that England needed after the disheartening loss to the world champions.</p>\n\n<p>Czechia, despite starting brightly, were up against it after the red card - the last side to beat England with 10 men were France in June 2017 (3-2 home win).</p>\n\n<p>It was two in-form players that ultimately proved the difference. Gordon now has four goals and four assists across his last nine appearances, while he was assisted by Alexander-Arnold, who was making his first England appearance in almost two years.</p>\n\n<p>As for Kane, he has now netted five goals in seven Nations League appearances since the start of the 2024-25 edition.</p>\n\n<p>Despite having 22 shots worth 1.37 expected goals (xG) in a strong attacking display, Tuchel will be keen to focus on the clean sheet, given England had conceded 13 goals in their six games before this.</p>\n\n<p>Trafford - the first England goalkeeper other than Jordan Pickford to start consecutive games since Nick Pope in September 2022 - made two big saves, though the Three Lions only conceded six shots worth 0.33 xG overall.&nbsp;</p>\n"
+    },
     "1t4mz1zeypxyb1g5ybxdunw0es": {
       "id": "1t4mz1zeypxyb1g5ybxdunw0es",
       "title": "Cucurella reveals attempt to try and tempt Rodri to join Real Madrid",
@@ -2281,6 +2311,30 @@
       ],
       "html": "<p>Atletico Madrid have hit back at Jose Mourinho following his rant about referee Ortiz Arias in the aftermath of their derby win over Real Madrid.&nbsp;</p>\n\n<p>Alejandro Grimaldo and Jonathan David were on target on Sunday as Los Colchoneros overcame their cross-city rivals 2-1 at the Estadio Metropolitano.</p>\n\n<p>The victory lifted Diego Simeone&#39;s side to second in LaLiga, five points behind leaders Barcelona, going into the three-week international break, with Los Blancos a point further back in fourth.</p>\n\n<p>But their win was not without controversy, as Madrid had centre-back Dean Huijsen sent off for denying Giuliano Simeone a clear goalscoring opportunity, and Mourinho&nbsp;felt Atleti were fortunate to keep all 11 men on the pitch.</p>\n\n<p>Lee Kang-In avoided punishment for a high challenge that caught Federico Valverde on his ankle, leaving the Uruguay international requiring medical tests.&nbsp;</p>\n\n<p>Cristian Romero, meanwhile, was only cautioned for what Madrid believed was a stamp on Jude Bellingham&#39;s knee, despite Arias being sent to the VAR monitor to check the incident.</p>\n\n<p>Mourinho appeared at his post-match press conference with printed images of both incidents, saying they were both &quot;clear red cards&quot; and arguing Arias was not equipped to handle the pressure of such a big game.</p>\n\n<p>Simeone subsequently said it was important that referees are protected and told his Madrid counterpart: &quot;Not everything goes, even for Mourinho.&quot;</p>\n\n\n<p>And on Monday, Atleti&#39;s club account on X posted an image of Mourinho discussing the incidents at his press conference, along with the caption: &quot;Stop referee harassment now.&quot;</p>\n\n<p>Atleti have only lost one of the last eight derbies between the teams in LaLiga (W3 D4), winning four of the last six meetings to take place at the Metropolitano (D1 L1).</p>\n\n<p>Los Colchoneros have also won seven straight home games against teams from the Community of Madrid, the longest such winning streak in their history.&nbsp;</p>\n"
     },
+    "1uv7la8e2fj8o1pwm899c6zg4z": {
+      "id": "1uv7la8e2fj8o1pwm899c6zg4z",
+      "title": "Herrington: Australia's performances against Brazil show how far we've come",
+      "subtitle": "Australia drew and lost to Brazil during their two friendly matches, but Lucas Herrington was full of praise for how they fought.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1uv7la8e2fj8o1pwm899c6zg4z-herrington-australias-performances-against-brazil-show-how-far-weve-come",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/9d/1e/herrington_1j2xkk46ryn4y1c652iaqww4cr.jpg?t=-235044848&w=1200&h=630",
+      "publishedAt": "2026-09-29T18:49:09.000Z",
+      "paragraphs": [
+        "Australia defender Lucas Herrington is optimistic about the team&#39;s future, saying their performance in their 4-2 defeat to Brazil &quot;shows how far we&#39;ve come&quot;.",
+        "The Socceroos came within minutes of a shock win in the first of their two friendlies with Brazil but were ultimately held to a 1-1 draw last Friday after Rayan&#39;s stoppage-time leveller.",
+        "In Brisbane on Tuesday, Australia briefly led, with Alessandro Circati and Connor Metcalfe both scoring to flip the script after Vanderson&#39;s third-minute opener.",
+        "However, Raphinha equalised just before the break from the penalty spot, before goals from Bruno Guimaraes and Vinicius Junior – again from 12 yards – secured the win in the second half.",
+        "Australia became just the second team from the AFC confederation to score twice against Brazil in a game in the last 21 years, after Japan beat the Selecao 3-2 last October.&nbsp;",
+        "The hosts finished the game with just seven shots – scoring with both of their attempts on target – but posted 1.5 expected goals (xG) and had 51 final-third entries, more than Brazil&#39;s 44.",
+        "And Herrington was thrilled to see the fight Australia put up against Carlo Ancelotti&#39;s side across both matches, as he believes team and fan morale is at an all-time high.",
+        "&quot;It&#39;s so special; you can see the support around the stadium,&quot; Herrington said.",
+        "&quot;It&#39;s awesome, the first time playing for the Socceroos in Brisbane. It means everything. I would see them growing up in Brisbane, I know how big the football community is here. It&#39;s been so nice to come home and see the reception we&#39;ve got.",
+        "&quot;All I&#39;ve ever wanted is to play for the Socceroos, so to do that so early and with such great people is amazing.",
+        "&quot;You want to play these types of games, and I think it&#39;s a credit to Australia and the Socceroos and the fans that Brazil want to come here and play us. It was a great game; we really put them under pressure.",
+        "&quot;It shows how far we&#39;ve come. Since I&#39;ve been a Socceroos fan, this is the biggest reception and the most excitement that&#39;s been around the team.&quot;&nbsp; &nbsp;&nbsp;"
+      ],
+      "html": "<p>Australia defender Lucas Herrington is optimistic about the team&#39;s future, saying their performance in their 4-2 defeat to Brazil &quot;shows how far we&#39;ve come&quot;.</p>\n\n<p>The Socceroos came within minutes of a shock win in the first of their two friendlies with Brazil but were ultimately held to a 1-1 draw last Friday after Rayan&#39;s stoppage-time leveller.</p>\n\n<p>In Brisbane on Tuesday, Australia briefly led, with Alessandro Circati and Connor Metcalfe both scoring to flip the script after Vanderson&#39;s third-minute opener.</p>\n\n<p>However, Raphinha equalised just before the break from the penalty spot, before goals from Bruno Guimaraes and Vinicius Junior – again from 12 yards – secured the win in the second half.</p>\n\n<p>Australia became just the second team from the AFC confederation to score twice against Brazil in a game in the last 21 years, after Japan beat the Selecao 3-2 last October.&nbsp;</p>\n\n<p>The hosts finished the game with just seven shots – scoring with both of their attempts on target – but posted 1.5 expected goals (xG) and had 51 final-third entries, more than Brazil&#39;s 44.</p>\n\n<p>And Herrington was thrilled to see the fight Australia put up against Carlo Ancelotti&#39;s side across both matches, as he believes team and fan morale is at an all-time high.</p>\n\n<p>&quot;It&#39;s so special; you can see the support around the stadium,&quot; Herrington said.</p>\n\n\n<p>&quot;It&#39;s awesome, the first time playing for the Socceroos in Brisbane. It means everything. I would see them growing up in Brisbane, I know how big the football community is here. It&#39;s been so nice to come home and see the reception we&#39;ve got.</p>\n\n<p>&quot;All I&#39;ve ever wanted is to play for the Socceroos, so to do that so early and with such great people is amazing.</p>\n\n<p>&quot;You want to play these types of games, and I think it&#39;s a credit to Australia and the Socceroos and the fans that Brazil want to come here and play us. It was a great game; we really put them under pressure.</p>\n\n<p>&quot;It shows how far we&#39;ve come. Since I&#39;ve been a Socceroos fan, this is the biggest reception and the most excitement that&#39;s been around the team.&quot;&nbsp; &nbsp;&nbsp;</p>\n"
+    },
     "1v0edv0wojk4h1mvn4ekjy98c4": {
       "id": "1v0edv0wojk4h1mvn4ekjy98c4",
       "title": "Tah: Germany prepared to 'walk through fire' for new boss Klopp",
@@ -2424,6 +2478,41 @@
         "His first home game in charge will come against Athletic on October 17, but he will make his bow for Valencia six days earlier, away to&nbsp;Racing de Santander.&nbsp;"
       ],
       "html": "<p>Javier Aguirre has been appointed as the new head coach of Valencia on a contract that will run until the end of the&nbsp;campaign.&nbsp;</p>\n\n<p>Aguirre arrives at the&nbsp;Estadio de Mestalla following a two-year stint in charge of Mexico, who he led to the round of 16 at this summer&#39;s World Cup.&nbsp;</p>\n\n<p>The 67-year-old&#39;s deal contains an option for him to remain at the helm for a second season in Valencia, who have made a dismal start to 2026-27.&nbsp;</p>\n\n<p>Valencia are 19th in LaLiga with four points from their opening seven games, with Carlos Corberan sacked just two months after extending his deal until 2028.&nbsp;</p>\n\n<p>Oscar Sanchez took interim charge and helped Valencia to their first win of the season against Alaves, before overseeing a 3-2 defeat to Real Sociedad last Sunday.&nbsp;</p>\n\n<p>Aguirre arrives with plenty of experience. He has managed 468 matches in LaLiga, the fifth-highest total of any foreign coach in the history of the competition.&nbsp;</p>\n\n<p>The Mexican will be the fourth foreign manager to coach seven different teams in LaLiga, after Roque Olsen (seven), Ferdinand Daucik (nine), and Marcel Domingo (11), having previously taken charge of&nbsp;Osasuna, Atletico Madrid, Real Zaragoza, Espanyol, Leganes and Mallorca.</p>\n\n\n<p>Aguirre&#39;s arrival comes after he announced ahead of this summer&#39;s World Cup that he would be leaving Mexico, with&nbsp;Rafael Marquez coming in to take over.&nbsp;</p>\n\n<p>He was unable to end Mexico&#39;s&nbsp;wait for a first quarter-final appearance since 1986, after they were beaten 3-2 by 10-man England on home soil.</p>\n\n<p>The defeat was Mexico&#39;s first at the Azteca in a competitive match for 13 years, since losing to Honduras in a qualifier for the 2014 World Cup, while it was the first time they had conceded three goals at the venue since a 4-3 triumph over Brazil in August 1999.</p>\n\n<p>But Aguirre will now turn his attention back to club football, having last been in charge of Mallorca, who he helped avoid relegation from LaLiga in 2021-22.&nbsp;</p>\n\n<p>Aguirre also led Mallorca to the Copa del Rey final in 2024, but they were beaten on penalties by&nbsp;Athletic Club before he parted ways with the club that summer.</p>\n\n<p>His first home game in charge will come against Athletic on October 17, but he will make his bow for Valencia six days earlier, away to&nbsp;Racing de Santander.&nbsp;</p>\n"
+    },
+    "1w2ez5c95zm8s1n4q1e7fhnui5": {
+      "id": "1w2ez5c95zm8s1n4q1e7fhnui5",
+      "title": "'Concern has never been a thing' for St. Louis boss Damet",
+      "subtitle": "St. Louis City will be aiming to extend their unbeaten run in MLS to 17 games when they face the New York Red Bulls on Wednesday.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1w2ez5c95zm8s1n4q1e7fhnui5-concern-has-never-been-thing-st-louis-boss-damet",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/79/a8/yoann-damet_sejol49ejyfo1dxp3c31se7nu.jpg?t=-256970528&w=1200&h=630",
+      "publishedAt": "2026-09-29T22:30:26.000Z",
+      "paragraphs": [
+        "St. Louis City boss Yoann Damet insisted &quot;concern has never been a thing&quot; for him this season as his side prepare to take on the New York Red Bulls.",
+        "After a slow start to the 2026 campaign, St. Louis are now fifth in the Western Conference, and they could go level on points with second-place FC Dallas if they beat the Red Bulls.",
+        "St. Louis defeated Toronto FC 3-1 last time out, conceding deep into second-half stoppage time, while they have also reached the final of the U.S. Open Cup in recent weeks.",
+        "Damet&#39;s side are on an 18-game unbeaten run across all competitions, but the Frenchman believes his players have been threatening a run like this one all season.&nbsp;",
+        "&quot;I look at these guys and they have been the same since January,&quot; said Damet. &quot;Concern has never been a thing.",
+        "&quot;Focus and preparation has been a thing since the start of the year. I think every new day is a new day to get better and to prepare for our next game.",
+        "&quot;I think those guys have been like that since day one, so this week has been no different.",
+        "&quot;We know we have another big game in New York and everybody is excited and locked in preparing for that game.&quot;",
+        "NYRB, meanwhile, are eighth in the East after back-to-back 1-0 wins over the Columbus Crew and rivals New York City FC.",
+        "Julian Hall scored the lone goal in their win over NYCFC, the 18-year-old’s 10th goal of the season and fourth match-winner.",
+        "This match with St. Louis was scheduled to take place on Saturday, but was postponed due to adverse weather conditions.",
+        "New York Red Bulls – Cade Cowell",
+        "With top scorer Hall unavailable after being called up to the United States squad, Cowell will look to step up for NYRB.",
+        "The 22-year-old, who has scored twice in 2026,&nbsp;has six assists this term, with only Emil Forsberg registering more (seven).",
+        "St. Louis City – Simon Becher",
+        "Seven different St. Louis players have at least five goal contributions during the team&#39;s current 16-game unbeaten run, led by Becher&#39;s nine (seven goals, two assists).",
+        "Nine different St. Louis players have scored a match-winner in that time, with Tomas Totland (two) the only one with multiple (one own goal winner).",
+        "MATCH PREDICTION – ST. LOUIS CITY WIN",
+        "This will be St. Louis City&#39;s 148th match in all competitions and 130th in the regular season, but their first-ever match against the New York Red Bulls.",
+        "St. Louis extended their regular-season unbeaten run to 16 games (W11 D5) with a win over Toronto, equalling NYRB&#39;s 2016 run for the third-longest in a single regular season in MLS history.",
+        "The only longer single-season unbeaten runs in regular-season play in MLS history are 19 straight by Dallas in 2010 and 18 straight by the&nbsp;Crew in 2004.",
+        "NYRB have posted back-to-back wins for the third time this season with victories over Columbus and NYCFC. The Red Bulls have won three straight regular-season matches only once over the last three seasons, doing so in May 2025.",
+        "New York Red Bulls – 27.3%"
+      ],
+      "html": "<p>St. Louis City boss Yoann Damet insisted &quot;concern has never been a thing&quot; for him this season as his side prepare to take on the New York Red Bulls.</p>\n\n<p>After a slow start to the 2026 campaign, St. Louis are now fifth in the Western Conference, and they could go level on points with second-place FC Dallas if they beat the Red Bulls.</p>\n\n<p>St. Louis defeated Toronto FC 3-1 last time out, conceding deep into second-half stoppage time, while they have also reached the final of the U.S. Open Cup in recent weeks.</p>\n\n<p>Damet&#39;s side are on an 18-game unbeaten run across all competitions, but the Frenchman believes his players have been threatening a run like this one all season.&nbsp;</p>\n\n<p>&quot;I look at these guys and they have been the same since January,&quot; said Damet. &quot;Concern has never been a thing.</p>\n\n<p>&quot;Focus and preparation has been a thing since the start of the year. I think every new day is a new day to get better and to prepare for our next game.</p>\n\n<p>&quot;I think those guys have been like that since day one, so this week has been no different.</p>\n\n<p>&quot;We know we have another big game in New York and everybody is excited and locked in preparing for that game.&quot;</p>\n\n\n<p>NYRB, meanwhile, are eighth in the East after back-to-back 1-0 wins over the Columbus Crew and rivals New York City FC.</p>\n\n<p>Julian Hall scored the lone goal in their win over NYCFC, the 18-year-old’s 10th goal of the season and fourth match-winner.</p>\n\n<p>This match with St. Louis was scheduled to take place on Saturday, but was postponed due to adverse weather conditions.</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>New York Red Bulls – Cade Cowell</strong></p>\n\n<p>With top scorer Hall unavailable after being called up to the United States squad, Cowell will look to step up for NYRB.</p>\n\n<p>The 22-year-old, who has scored twice in 2026,&nbsp;has six assists this term, with only Emil Forsberg registering more (seven).</p>\n\n<p><strong>St. Louis City – Simon Becher</strong></p>\n\n<p>Seven different St. Louis players have at least five goal contributions during the team&#39;s current 16-game unbeaten run, led by Becher&#39;s nine (seven goals, two assists).</p>\n\n<p>Nine different St. Louis players have scored a match-winner in that time, with Tomas Totland (two) the only one with multiple (one own goal winner).</p>\n\n<p><strong>MATCH PREDICTION – ST. LOUIS CITY WIN</strong></p>\n\n<p>This will be St. Louis City&#39;s 148th match in all competitions and 130th in the regular season, but their first-ever match against the New York Red Bulls.</p>\n\n<p>St. Louis extended their regular-season unbeaten run to 16 games (W11 D5) with a win over Toronto, equalling NYRB&#39;s 2016 run for the third-longest in a single regular season in MLS history.</p>\n\n<p>The only longer single-season unbeaten runs in regular-season play in MLS history are 19 straight by Dallas in 2010 and 18 straight by the&nbsp;Crew in 2004.</p>\n\n<p>NYRB have posted back-to-back wins for the third time this season with victories over Columbus and NYCFC. The Red Bulls have won three straight regular-season matches only once over the last three seasons, doing so in May 2025.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>New York Red Bulls – 27.3%</p>\n\n<p>Draw – 22.7%</p>\n\n<p>St. Louis City – 50%</p>\n"
     },
     "1wrp7lzqo8je81mup9pt0psejb": {
       "id": "1wrp7lzqo8je81mup9pt0psejb",
@@ -2992,6 +3081,29 @@
         "And Renee Slegers will be determined to have her say, having already beaten Sonia Bompastor twice in all competitions this calendar year – no manager has ever won three in a row against her."
       ],
       "html": "<p>After three matchdays in the Women&#39;s Super League season, defending champions Manchester City remain the only team with a 100% record, following their frantic 4-2 victory over Liverpool last time out.</p>\n\n<p>After drawing 2-2 with Bayern Munich in their Champions League opener&nbsp;on Tuesday, City visit Charlton Athletic – who are the only team yet to pick up a point – to kickstart the week&#39;s action on Saturday, before the focus turns to their potential title rivals.</p>\n\n<p>Neither Chelsea nor Arsenal have suffered a defeat yet this term, but with both sides already off City&#39;s pace, their head-to-head clash at Stamford Bridge on Sunday looks vital.</p>\n\n<p>There is also a Merseyside derby between Liverpool and Everton, while Manchester United will look to finally earn their first league victory under Eva Olid, at home to West Ham.</p>\n\n<p>Who will come out on top in the WSL this weekend? We have a look at the Opta supercomputer&#39;s predictions for matchday four.</p>\n\n\n<p><strong>CHARLTON ATHLETIC V MANCHESTER CITY</strong></p>\n\n<p>With Manchester City making a perfect start and Charlton recording three straight defeats since their promotion, it should come as little surprise that our predictive model makes Andree Jeglertz&#39;s champions the clearest MD4 favourites, with a 75.6% win probability to Charlton&#39;s 10.6%.</p>\n\n<p>Only once in the last eight campaigns have City enjoyed a longer winning start than this one, winning each of their first four matches in 2019-20.</p>\n\n<p>But they will be supremely confident of matching that feat at The Valley, in what will be their first competitive meeting with Charlton in the WSL era.</p>\n\n<p>Promoted sides have won just one of their last 28 meetings with the reigning champions in the competition (D3 L24), with Liverpool recording a 2-1 home victory over Chelsea in September 2022.</p>\n\n<p>Last time out, Khadija Shaw became the first player to score in each of City&#39;s first three games of a WSL campaign, and she could become the fifth player to do so in the first four matches of a season for any club, after Kim Little in 2018-19 (four&nbsp;for Arsenal), Vivianne Miedema in 2020-21 (five&nbsp;for Arsenal), Martha Thomas in 2023-24 (four&nbsp;for Tottenham) and Aggie Beever-Jones in 2025-26 (four&nbsp;for Chelsea).</p>\n\n\n<p><strong>LONDON CITY LIONESSES V BRIGHTON</strong></p>\n\n<p>Charlton&#39;s last game was a thumping 4-1 defeat to the ambitious London City Lionesses, who have six points on the board after three games and sit fourth in the table ahead of facing winless Brighton.</p>\n\n<p>Alexia Putellas and company are assigned a 52.9% win probability on Saturday, with Brighton only winning 23% of the supercomputer&#39;s pre-match simulations.</p>\n\n<p>London City&#39;s three wins in their last four WSL matches (L1) are more than they managed across their previous 12 in the competition (W2 D3 L7), and their nine &#39;big&#39;&nbsp;chances against Charlton last week were the most by any team in a WSL game since October 2020 (when Man Utd had 10 versus Brighton).</p>\n\n<p>The Seagulls could fail to win their opening four matches of a WSL campaign for the third time after 2018-19 (first six) and 2019-20 (first five), and they have lost seven of their last nine league games in London.</p>\n\n<p><strong>MANCHESTER UNITED V WEST HAM</strong></p>\n\n<p>Olid got her first win in charge of Manchester United in the Women&#39;s League Cup on Wednesday, with a 10-1 thrashing of Sheffield United, and they will now look to translate that into a WSL victory.</p>\n\n<p>They are given a 68% chance of beating West Ham – whose chances sit at 14.3% – having gone unbeaten in their last 12 league games against the Hammers (W8 D4).</p>\n\n<p>United are winless in their first three WSL matches (D1 L2) for the first time and have lost two of their last three home games in the competition (D1), as many defeats as they suffered in their previous 20 (W12 D6).</p>\n\n<p>West Ham struggle on their travels against the Red Devils, though, having lost each of their six such games in the WSL&nbsp;by an aggregate score of 1-19.</p>\n\n<p>They have only won one of their three games this term (L2), but given United have attempted just 10 shots in the WSL in 2026-27, they might feel this is a good chance to get one over on them.</p>\n\n<p></p>\n\n<p><strong>BIRMINGHAM CITY V CRYSTAL PALACE</strong></p>\n\n<p>Two of the new teams at this level face off, with Birmingham City seeking their first victory since promotion&nbsp;while Crystal Palace try to get back to winning ways.</p>\n\n<p>Palace were the only team to do the league double over WSL2 champions Birmingham last season – the Eagles have actually won each of their last four league matches against the Blues.</p>\n\n<p>However, it is Birmingham who are backed to come out on top on Sunday with a 44.7% win probability to Palace&#39;s 28.4%. Though at 26.9%, this is one of the most likely draws of the weekend.</p>\n\n<p>Birmingham could start a WSL campaign without a win in four games (D1 L2 so far) for the third time, but Amy Merricks will be determined to halt her nine-match winless streak as a manager in the top flight (D3 L6).</p>\n\n<p><strong>LIVERPOOL V EVERTON</strong></p>\n\n<p>Liverpool were 3-2 winners against Everton back in March and could win consecutive WSL games against the Toffees for the first time since 2013 and 2014 (three straight).</p>\n\n<p>The Reds are marginal favourites to prevail in Sunday&#39;s derby, despite losing eight of their nine previous league games played at Anfield, including five against Everton. They are given a 44% chance of victory.</p>\n\n\n<p>Only Man City (11), Chelsea and Arsenal&nbsp;(both 10) have won more WSL games in 2026 than Everton (seven), who could win three league matches in a row for the second time this calendar year (won four in a row in February).</p>\n\n<p>Everton&#39;s chances of winning away to their Merseyside rivals are 29.1%, but this is&nbsp;the other most likely draw of the weekend, with 26.9% of the simulations finishing level.</p>\n\n<p><strong>TOTTENHAM V ASTON VILLA</strong></p>\n\n<p>After three matchdays, Tottenham are in the mix at the top, sitting second and&nbsp;just two points behind Man City, having made an unbeaten start to the season (W2 D1).</p>\n\n<p>They are actually unbeaten in their last six league games and could go seven straight without defeat for the first time in the league&#39;s history; they have a 57.7% chance of extending that run with a win.</p>\n\n<p>Aston Villa have won three of their last five WSL away games against Spurs (D1 L1), but they come into this match having drawn their last two league games on the road. There is a 22% chance of them adding a third draw to that run.</p>\n\n<p>The Villans have not yet gone ahead in any of their three league games, something they must do if they are to turn their 20.3% win probability into a first victory of the season.</p>\n\n<p><strong>CHELSEA V ARSENAL</strong></p>\n\n<p>The spotlight clash of the matchday sees Chelsea and Arsenal look to keep the pressure on Man City and extend their respective unbeaten starts.</p>\n\n<p>Arsenal (20) and Chelsea (11) are on the two longest unbeaten runs in the WSL currently.</p>\n\n<p>And Chelsea are looking to go unbeaten in their opening four games for the fourth successive WSL season, while Arsenal could win as few as five points from their first four matches for the second time in the last three seasons (after 2024-25).</p>\n\n\n<p>This will be the 10th meeting between Chelsea and Arsenal in all competitions since the 2023-24 season, with both teams picking up four wins apiece in that time (D1), though the Gunners won the most recent league meeting at Stamford Bridge 2-0, back in January.</p>\n\n<p>Chelsea are the favourites to triumph, winning 51.9% of the supercomputer&#39;s simulations, compared to Arsenal&#39;s 23.6%.</p>\n\n<p>And Renee Slegers will be determined to have her say, having already beaten Sonia Bompastor twice in all competitions this calendar year – no manager has ever won three in a row against her.</p>\n"
+    },
+    "4ued3nzwi76n1hbx4tjx150jv": {
+      "id": "4ued3nzwi76n1hbx4tjx150jv",
+      "title": "Scotland suffer 'big setback' in 'new chapter', says McGinn after defeat to Switzerland",
+      "subtitle": "Ten-man Scotland fell to a 3-0 defeat at Hampden Park against Switzerland, leaving Sebastien Pocognoli winless after two games.",
+      "source": "FotMob",
+      "sourceUrl": "/news/4ued3nzwi76n1hbx4tjx150jv-scotland-suffer-big-setback-new-chapter-says-mcginn-after-defeat-switzerland",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/84/89/scotland_oxqmum1jvat719qy0mifm3vnw.jpg?t=-209552784&w=1200&h=630",
+      "publishedAt": "2026-09-29T21:27:48.000Z",
+      "paragraphs": [
+        "John McGinn believes Scotland suffered a &quot;big setback&quot; in their &quot;new chapter&quot; under Sebastien Pocognoli after losing 3-0 to Switzerland in the Nations League.",
+        "Scotland were dealt a huge blow just 11 minutes into Pocognoli&#39;s first home game in charge after Jack Hendry was shown a straight red card for a last-man challenge, and matters were made worse when Ricardo Rodriguez arrowed in the resulting free-kick.",
+        "Nico Elvedi and Zeki Amdouni netted for the visitors at Hampden Park after half-time, seeing Pocognoli (D1 L1) become the first Scotland manager to fail to win his first two games in charge since George Burley in May 2008 (D1 L1).",
+        "Scotland (two shots) failed to have a shot on target in a home game for the first time since September 2023 against England (seven shots), while they have failed to score in four consecutive games for the first time since 1971.",
+        "They are also without a clean sheet in eight home games, their worst run since going 10 in a row without a shutout between October 2001 and September 2003.",
+        "McGinn, who made his 91st appearance for Scotland, moving him alongside Jim Leighton in joint-third place for the most caps for his country, has urged his team-mates to learn from the humbling defeat.",
+        "&quot;We could have done better at times, but we&#39;re starting a new chapter, learning to play a different way. That was a big setback for us,&quot; McGinn told BBC Scotland.",
+        "&quot;We&#39;ve got a lot to learn from, but a lot to take from it as well.",
+        "&quot;I thought Oli McBurnie was outstanding. He&#39;s had a lot of criticism in a Scotland shirt, but [this game] was a thankless task and he gave everything for us.",
+        "&quot;Going down to 10 men, it&#39;s a test of character; you need to dig in. It&#39;s a huge learning curve for us, and when we play them away, we need to win now.&quot;",
+        "Scotland will now face North Macedonia on Saturday, with the early pressure already piling on Pocognoli."
+      ],
+      "html": "<p>John McGinn believes Scotland suffered a &quot;big setback&quot; in their &quot;new chapter&quot; under Sebastien Pocognoli after losing 3-0 to Switzerland in the Nations League.</p>\n\n<p>Scotland were dealt a huge blow just 11 minutes into Pocognoli&#39;s first home game in charge after Jack Hendry was shown a straight red card for a last-man challenge, and matters were made worse when Ricardo Rodriguez arrowed in the resulting free-kick.</p>\n\n<p>Nico Elvedi and Zeki Amdouni netted for the visitors at Hampden Park after half-time, seeing Pocognoli (D1 L1) become the first Scotland manager to fail to win his first two games in charge since George Burley in May 2008 (D1 L1).</p>\n\n<p>Scotland (two shots) failed to have a shot on target in a home game for the first time since September 2023 against England (seven shots), while they have failed to score in four consecutive games for the first time since 1971.</p>\n\n<p>They are also without a clean sheet in eight home games, their worst run since going 10 in a row without a shutout between October 2001 and September 2003.</p>\n\n<p>McGinn, who made his 91st appearance for Scotland, moving him alongside Jim Leighton in joint-third place for the most caps for his country, has urged his team-mates to learn from the humbling defeat.</p>\n\n<p>&quot;We could have done better at times, but we&#39;re starting a new chapter, learning to play a different way. That was a big setback for us,&quot; McGinn told BBC Scotland.</p>\n\n\n<p>&quot;We&#39;ve got a lot to learn from, but a lot to take from it as well.</p>\n\n<p>&quot;I thought Oli McBurnie was outstanding. He&#39;s had a lot of criticism in a Scotland shirt, but [this game] was a thankless task and he gave everything for us.</p>\n\n<p>&quot;Going down to 10 men, it&#39;s a test of character; you need to dig in. It&#39;s a huge learning curve for us, and when we play them away, we need to win now.&quot;</p>\n\n<p>Scotland will now face North Macedonia on Saturday, with the early pressure already piling on Pocognoli.</p>\n"
     },
     "4ugjg5li8qod1oy7dyoc6i1kb": {
       "id": "4ugjg5li8qod1oy7dyoc6i1kb",
@@ -10444,6 +10556,37 @@
         "feed. READ THE LATEST REAL MADRID NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m3pt7y59h4": {
+      "id": "ftbpro_01m3pt7y59h4",
+      "title": "Man Utd Strike Historic Deal for Liverpool Youngster Amid JJ Gabriel Storm",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/man-utd-deal-liverpool-youngster-historic-implications/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_135/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3ptqx45c1rn19m14d.jpg",
+      "publishedAt": "2026-09-29T19:00:00.000Z",
+      "paragraphs": [
+        "By Jamie Spencer3:00 PM EDTMan Utd have acted proatively in academy recruitment. / Mark Cosgrove/News Images/NurPhoto/Getty ImagesManchester United have recruited 16-year-old winger Isaac Konde for their U-18 team. The significant move coincides with the saga that could soon see JJ Gabriel depart the club, while also serving as a rare example of a player moving directly between the Red Devils and Liverpool.",
+        "United announced the signing this week, with Konde posing for official photographs at Old Trafford. A statement referred to him as a “talented youngster” and said “everyone at the club would like to welcome Isaac to United and wish him the very best of luck.”",
+        "Konde turns 17 next month, at which point he is eligible to sign his first professional contract. The Athletic reports that an overall five-year deal has been agreed, suggesting there is both considerable faith in his ability and a long-term plan of development in place.",
+        "But leaving Liverpool for Manchester United and vice versa is rare. It happens infrequently at the youth level and is almost unheard of when senior players are involved.",
+        "Before Konde, Ethan Ennis made the same move in 2021, moving from Liverpool to Manchester. He was 16 at the time and ultimately reached United’s U-21 team, but departed on a permanent transfer this past summer to League One’s Stockport County. Defender Scott Wootton swapped Liverpool for United around his 16th birthday in 2007 and later played four first-team games.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "A handful of others in the 21st century were much younger.",
+        "Charlie McNeill had a reputation as a goal machine at the youth level, said to have scored more than 600. He was born in Manchester but had a brief affiliation with Liverpool before joining United around the age of eight. The striker went to Manchester City and back to United but now, aged 23, is a Sheffield Wednesday player on loan at Crewe Alexandra.",
+        "Jack Harrison was seven years old at Liverpool before heading to United’s academy and spending seven years there. He actually made his name in the United States after leaving England altogether aged 14, but played 181 Premier League games for Leeds and Everton.",
+        "Phil Chisnall holds one of soccer’s quirkier records. / Evening Standard/Hulton Archive/Getty ImagesUltimately, no professional player has gone directly between the rival clubs for 62 years. The last example of that was Phil Chisnall, a homegrown Manchester United forward who graduated to the first team in the years that followed 1958’s Munich air disaster. He played 47 times and scored 10 goals. But his opportunities seemed to quickly dry up around the same time that George Best emerged and was presented with the chance to join Liverpool in 1964, still aged just 21.",
+        "Back then, a rivalry between two industrial cities in northwest England had existed for a couple of centuries, but a fierce sporting rivalry did not. Manchester City and Everton had been the more prominent clubs from Manchester and Liverpool respectively in the 1930s, and United and Liverpool didn’t consistently cross paths competing for the same things until the latter half of the 1960s. Legendary managers Matt Busby and Bill Shankly were even great friends.",
+        "By the 1970s, the rivalry that we know today was quickly taking shape.",
+        "Liverpool began Chisnall’s first season as England’s reigning champions. United then won the league championship that year. But he only played nine times for his new team and joined Southend United in 1967. His career wrapped with Stockport County in 1972 and he quit soccer before turning 30.",
+        "Gabriel Heinze tried to force a transfer across the divide from Old Trafford to Anfield in 2007 but was denied, with United choosing to sell the Argentine defender to Real Madrid instead.",
+        "Konde is not the only academy player to join United from a rival club in recent days. Central midfielder David Eze, another 16-year-old, is now with the Red Devils  after leaving Manchester City. Last week, it was Karim Cassim, a 17-year-old, also brought in from City.",
+        "But it works both ways, because United recently saw James Scanlon and Habeeb Ogunneye—slightly older and on the cusp of first-team soccer—leave and join Arsenal.",
+        "Rio Ngumoha was in Chelsea’s academy for eight years until he signed with Liverpool a few days after his 16th birthday in 2024. The aforementioned Gabriel, of course, had whirlwind affiliations with Arsenal, Chelsea and West Ham United, before moving out of London.",
+        "When Gabriel’s situation was discussed by Gary Neville on a recent episode of Stick to Football, he noted how the academy game has changed since he was an up-and-coming talent 35 years ago. “We know now that young players have got representation at that age. We know that they are actually more willing to make braver decisions than maybe we were in our day,” he said.",
+        "“If you were at United as a kid, or Liverpool, you were at that club—you weren’t leaving.”",
+        "READ THE LATEST TRANSFER NEWS AND RUMORS FROM WORLD SOCCER. feed"
+      ]
+    },
     "ftbpro_01m3pwhztms9": {
       "id": "ftbpro_01m3pwhztms9",
       "title": "Barcelona’s Brilliant Start to the Season Added to by Encouraging Injury Update",
@@ -10497,6 +10640,68 @@
         "feed. READ THE LATEST PREMIER LEAGUE NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m3q0kbhvp7": {
+      "id": "ftbpro_01m3q0kbhvp7",
+      "title": "Seven Takeaways From Official Report Into Man City’s Nine Years of Cheating",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/seven-takeaways-from-official-report-man-city-cheating/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2139,h_1203,x_216,y_106/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q1kryg3pg4gk4hhy.jpg",
+      "publishedAt": "2026-09-29T19:35:00.000Z",
+      "paragraphs": [
+        "By Grey Whitebloom3:35 PM EDTThis is not a great time to be a Manchester City player. / Carl Recine/Getty ImagesIt’s taken 1,331 days, out-lasted three U.K. Prime Ministers and tested the patience of everyone associated with the Premier League, but the judgement is in: Manchester City are guilty.",
+        "The Premier League gleefully reveled in victory (which is still subject to an appeal from a club which defiantly describes itself as “innocent”) with a statement that used the term “sham” like a child who had learned a new word.",
+        "However, beside that bluster, the independent commission (which is not a “Premier League commission” as City seem intent on calling it) which came to this decision revealed a detailed reasoning for this ruling across 40 partially redacted pages. The insight was eye-opening.",
+        "dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC",
+        "Lord David Pannick KC reportedly costs £5,000 per hour. / Lucy North/PA Images/Getty ImagesThe independent commission made a point of addressing the delay which also served as a warning to City to not even consider the prospect of a retrial given all the evidence that has already been painstakingly analyzed.",
+        "“It has taken us much longer than we would have wished, and much longer than we had anticipated would be the case when the hearing concluded, to produce our decision. That is regrettable,” a statement read.",
+        "“However, we were fortunate to have available to us throughout the period in which our decision has been being prepared not only all of the documents that were used at the hearing but also:",
+        "Unless there is anything new that can be unearthed, it would appear that a final verdict has been reached.",
+        "Manchester City have been sponsored by Etihad for decades. / Visionhaus/Getty ImagesIn 2011, news broke that Manchester City had agreed a 10-year sponsorship deal with Etihad Airways—the national airline of the United Arab Emirates, a nation for which the club’s owner Sheikh Mansour bin Zayed Al Nahyan is the vice-president and deputy prime minister—worth £400 million ($528.2 million at current rates). In response, Liverpool co-owner John W. Henry wryly tweeted: “How much was the losing bid?”",
+        "The implication all along is that City had their finger on the scale in what the Premier League have now described as “sham commercial deals.” The independent commission called it the “Disguised Funding Scheme” and has broken down the scale of this artificial inflation during the seasons under review.",
+        "Between 2009 and 2018, City racked up almost £950 million ($1.25 billion) in sponsorship fees. Yet, only 13% of that was actually paid by the companies thought to be doing the sponsoring. The remaining £830 million ($1.1 billion) was pumped in by Abu Dhabi United Group Investment & Development Ltd (ADUG), the company which owned Manchester City.",
+        "This detailed breakdown shows how this “sham” investment inflated over the years, making a sizable leap ahead for the 2011–12 season, which just so happened to be when UEFA’s financial fair play (FFP) rules were first implemented.",
+        "“The consequences City are staring down look stark.”Manchester City could face a range of punishments over the 115 Premier League charges. From financial penalties and points deductions to suspension, expulsion and potentially even the stripping of titles.Sports Illustrated… pic.twitter.com/BU5ksJAzt2",
+        "To give a sense of haphazard nature of this industrial cheating, the independent commission laid out a scenario where City had to hurriedly plug a shortfall to avoid breaching UEFA’s FFP rules.",
+        "On May 25, 2013, just five days before the end of that 2012–13 financial year, City were found to be “£9.9 million ‘short’ of complying with UEFA FFP for that season.” Without approaching their declared sponsors, “a number of modified” agreements were conjured which claimed to include bonuses for events that already happened and fund a U.S. tour.",
+        "Miraculously, those new clauses ensured that the shortfall could be “plugged.”",
+        "If City had been cheating for (at least) nine years, the obvious question is how they got away with it. Rather than any detection from the Premier League, City were thrust into this unflattering spotlight by a Portuguese hacker who had run out of interesting stories on Porto and Benfica.",
+        "In order to maintain what the independent commission branded “continued concealment,” City are accused of “tweaking” the operation.",
+        "This was to “reduce the likelihood of difficult questions” by third-party regulators, such as the Premier League, and allowed them to operate the ‘Disguised Funding Scheme’ for all nine seasons under inspection.",
+        "Ferran Soriano’s message to #ManCity staff. ⤵️➖ Case based on ‘false accusation’➖ Sponsorship money not from owner➖ ‘Irrefutable evidence’ provided➖ Premier League ‘conspiracy theory’➖ Extensive evidence ‘ignored’➖ Conclusion ‘clearly wrong’➖ Appeal will be filed… pic.twitter.com/Xj1RTvbfKX"
+      ]
+    },
+    "ftbpro_01m3q0r94ye8": {
+      "id": "ftbpro_01m3q0r94ye8",
+      "title": "Four Potential Destinations for Erling Haaland Amid Man City Turmoil",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/four-potential-destinations-erling-haaland-man-city-turmoil/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_7/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q48wn97maw0v2etb.jpg",
+      "publishedAt": "2026-09-29T21:30:00.000Z",
+      "paragraphs": [
+        "By Amanda Langell5:30 PM EDTErling Haaland will not short on suitors.  / Richard Sellers/Sportsphoto/Allstar/Getty ImagesWhen Erling Haaland inked a massive nine-and-a-half-year extension with Manchester City in January 2025, a potential transfer less than two years later would seem laughable for the No. 9.",
+        "But extraordinary circumstances have suddenly thrown the striker’s future at the Etihad Stadium into disarray. The Premier League confirmed City were found guilty of all serious charges for breaches of the competition’s financial regulations.",
+        "Potential sanctions are on the horizon, though City’s plans to appeal the decision could delay any immediate follow through from the league. Still, the threat of relegation, a severe points deduction or a transfer ban looms large.",
+        "It wouldn’t be a surprise if City’s top stars didn’t stick around to witness the fallout. Haaland would have suitors at war for his signature almost instantly, with the biggest clubs across Europe interested in adding the best No. 9 in the world to their ranks.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Real Madrid’s attack is already as star-studded as they come. / Alvaro Medranda/Quality Sport Images/Getty ImagesSpeaking of the biggest clubs in the world, Real Madrid have long since been linked with Haaland, far before any hints of misconduct from City. Most recently, Real Madrid presidential candidate Enrique Riquelme promised the Norway international would play for the club if he was elected.",
+        "The sensational and unfounded claim was not enough for the Spaniard to triumph over Florentino Pérez, but it was enough to reignite longstanding rumors of Haaland one day making the Bernabéu his home.",
+        "The prolific goalscorer boasts the profile—and the price tag—of a typical ‘Galáctico’ signing. Haaland would finally give Los Blancos a true No. 9 leading the line, one that will actually be in the right places to finish off chances with a blinding consistency.",
+        "The City star wouldn’t exactly fit in José Mourinho’s already crowded attack, but when has that ever stopped Pérez during a transfer window before?",
+        "Barcelona would be even more dangerous with Erling Haaland completing their attack. / Fran Santiago/Getty ImagesUnlike Real Madrid, Barcelona actually spent their summer scouring the market for a No. 9. The club had a very public transfer battle with Atlético Madrid for Julián Alvarez, but ultimately failed to sign the Argentine after Robert Lewandowski and Ferran Torres’s exits.",
+        "Raphinha has since emerged as the most in-form striker in Spain. The Brazilian made a seamless transition from winger to center forward, leading Hansi Flick’s line with a prowess not even Haaland has matched over in England.",
+        "But Raphinha could just as easily move back to the left wing to make room for Haaland, who would no doubt love life playing between the Brazil international and Lamine Yamal.",
+        "Barcelona don’t exactly need much help scoring goals these days, but they still have an inconsistent backline, especially in Europe. The team’s inability to keep a clean sheet in the Champions League really wouldn’t matter much with Haaland, Raphinha and Yamal running riot up top.",
+        "Viktor Gyökeres continues to struggle at Arsenal. / Alex Pantling/Getty ImagesIf Haaland desires a new destination a little closer to home, he has a spot waiting for him at Arsenal. Despite winning the Premier League last season, the Gunners failed to sign a blockbuster forward this summer, which means many of the team’s attacking woes are still present.",
+        "Viktor Gyökeres hardly looks worth the £63.5 million ($83.9 million) Arsenal shelled out ahead of the 2025–26 season, and Mikel Arteta seemingly agrees; the manager has given the struggling striker just 29 minutes in the Premier League this season, preferring Kai Havertz to lead his line.",
+        "Except the Germany international is incredibly injury prone, most recently sidelined with a hamstring injury. Meanwhile, Bukayo Saka and Christos Tzolis have just three goals combined so far in 2026–27.",
+        "Arteta would love to have a lethal, consistent goalscorer spearheading his attack, no matter how much Haaland’s “stay humble” jibe might haunt the Spanish boss. Center back Gabriel might have more of an adjustment period sharing a dressing room with his rival.",
+        "Bayern Munich will eventually need a successor to Harry Kane. / S. Stingl/FC Bayern/Getty ImagesAt the moment, Bayern Munich have no real need for Haaland. Harry Kane, who is one of the favorites to win the 2026 Ballon d’Or, is in the form of his life; last season, he scored a staggering 61 goals for the defending German champions across all competitions.",
+        "The England captain is expected to sign a contract extension soon, prolonging his stay at the Allianz Arena beyond 2027. But Kane is 33 years old, and Bayern Munich would be foolish not to have a succession plan in place.",
+        "That’s where Haaland comes into the equation. Should City’s appeal process take even half as long as the Premier League’s initial three-year investigation, Haaland could realistically remain with in Manchester for the near future."
+      ]
+    },
     "ftbpro_01m3q0yr57w5": {
       "id": "ftbpro_01m3q0yr57w5",
       "title": "‘Innocent’—Man City Hit Back at Official Guilty Verdict With Plan of Action",
@@ -10523,6 +10728,95 @@
         "The next step for the Premier League would be determining appropriate sanctions. There has been plenty of public clamor for stripping titles and relegation. The latter is not strictly possible, although a massive points deduction would make demotion unavoidable.",
         "But none of that will be possible while an appeal process is ongoing.",
         "READ THE LATEST MAN CITY NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m3q5916sjb": {
+      "id": "ftbpro_01m3q5916sjb",
+      "title": "History Repeats Itself As Raphinha Suffers Another Injury With Brazil",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/raphinha-injury-progress-potential-return-date-barcelona-star-september-2026/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_99/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q5qvh6hcz82anvfr.jpg",
+      "publishedAt": "2026-09-29T20:00:01.000Z",
+      "paragraphs": [
+        "By Amanda Langell4:00 PM EDTRaphinha has had a tough go with injuries over the last year. / Ian Hitchcock/Getty ImagesAlarm bells blared throughout Catalonia when Raphinha seemingly picked up an injury while on international duty with Brazil.",
+        "The 29-year-old, who played 90 minutes against Australia on Friday, was once again sent out to lead Carlo Ancelotti’s line against the Socceroos just four days later. Raphinha continued his blistering form, converting a penalty on the brink of halftime.",
+        "But the forward was pulled at halftime of the Seleção’s 4–2 win. Fans instantly feared the worst considering Raphinha previously picked up significant injuries during his last two spells with Brazil.",
+        "Here’s the latest on Raphinha’s condition.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Raphinha is nursing a new injury. / Image Photo Agency/Getty ImagesBrazil confirmed Raphinha suffered from discomfort in his right thigh against Australia and was therefore replaced at halftime by Ancelotti. The Italian boss did not immediately comment on his superstar’s condition.",
+        "More tests await Raphinha to determine the severity of the problem. As of now, he remains with the Seleção on international duty.",
+        "Both Brazil and Barcelona will be sweating over his status in the coming days. The teams will hope Raphinha avoided another major injury, especially after his significant hamstring problems over the last year.",
+        "It's us again. pic.twitter.com/26fMfo5NlT",
+        "Without knowing the full extent of the problem, it’s impossible to know how long Raphinha will be sidelined. The best case scenario would see the 29-year-old take the rest of the international break to recover so he can be ready in time for Barcelona’s first match back against Getafe on Oct. 10.",
+        "A longer layoff could potentially keep Raphinha out of action for several massive fixtures coming in October. Barcelona have clashes with Galatasaray, Real Betis, Paris Saint-Germain and Real Madrid on the horizon.",
+        "For reference, when Raphinha suffered a minor hamstring injury this summer at the 2026 World Cup, he only missed about two weeks of action. Before that, it was a month on the sidelines with a hamstring problem at the end of the 2025–26 season. Not to mention he was stuck in the infirmary for nearly two months at the start of that campaign with the same issue.",
+        "Without further confirmation from Brazil or Barcelona, Raphinha’s recovery timeline is only down to speculation.",
+        "Anthony Gordon could reprise his days at striker. / David Ramos/Getty ImagesShould Raphinha miss an extended period, Barcelona will find themselves in a precarious position. The defending Spanish champions were already thin at the position following the departures of Robert Lewandowski and Ferran Torres.",
+        "Raphinha made the transition from winger to striker to fill the hole in Hansi Flick’s attack and so far has 14 goals to his name. His dominance up top is much of the reason why Barcelona have yet to drop a single point this season.",
+        "Without him available, Flick will have to get creative. New signings Anthony Gordon and Karim Adeyemi both have experience playing as strikers even though they are better out wide. Dani Olmo could also play as a false nine, as can Lamine Yamal.",
+        "There’s also Gabriel Jesus to consider. The former Arsenal man is the most obvious solution, considering he is the only natural, senior center forward at Flick’s disposal. But the 29-year-old has yet to start a game this season; in fact, he hasn’t played more than 10 minutes in three of his four appearances in a Blaugrana shirt.",
+        "Throwing Jesus into the XI feels unlikely given the tough competition coming for Barcelona, but Flick is never one to shy away from an unconventional solution.",
+        "feed. READ THE LATEST BARCELONA NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m3q7dwwvq8": {
+      "id": "ftbpro_01m3q7dwwvq8",
+      "title": "England Player Ratings vs. Czechia: Barcelona’s Anthony Gordon Keeps Hot Streak Going",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/england-player-ratings-vs-czechia-anthony-gordon-hot-streak-9-29-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_2/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3qfcz929xdpst5zqx.jpg",
+      "publishedAt": "2026-09-29T21:28:15.000Z",
+      "paragraphs": [
+        "By Jamie Spencer5:28 PM EDTHarry Kane and Anthony Gordon each scored. / Gabriel Kuchta/UEFA/Getty ImagesEngland enjoyed a first win of the 2026–27 UEFA Nations League on Tuesday, walking away with a 2–0  result in Prague against a Czechia team that played most of the match with a player disadvantage.",
+        "Czechia made the first chance of the game when Pavel Šulc capitalized on Elliot Anderson failing to clear, bringing an early save out of James Trafford after five minutes.",
+        "England had most of the ball, with the Czech hosts sitting deeper than Spain had done, but struggled to create opportunities in those opening stages. That began to change when Morgan Rogers struck the post 15 minutes in, with two rebounds blocked. Midway through the first half, Anthony Gordon threatened but missed the target. He went closer a few minutes later, but ex-Manchester United goalkeeper Matěj Kovář was there to deny the Barcelona winger.",
+        "In between those two Gordon chances, Czechia lost the dangerous Šulc to a red card. His reckless, mid-calf tackle on Anderson was initially punished with a yellow card, but a VAR intervention and a second look from the referee resulted in an ejection instead.",
+        "Kovář saved a shot from Harry Kane in first-half stoppage time but couldn’t stop Gordon’s headed opener a couple of minutes after the restart. The in-form forward stooped low to meet a bouncing cross and directed the ball into the net.",
+        "England struck the woodwork again when Ladislav Krejcí deflected a Lewis Hall cross onto the post, with the lead eventually doubled by Harry Kane in the 69th minute. The Bayern Munich star reacted quickest to a loose ball and fired in with his left foot from eight yards out.",
+        "Rogers, Eberechi Eze and Jude Bellingham could all have extended England’s lead late on.",
+        "dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC",
+        "Trent Alexander-Arnold proved himself. / Michael Regan/The FA/Getty ImagesThomas Tuchel didn’t want Trent Alexander-Arnold at the World Cup during the summer. “The amount of players in a certain position,” was the manager’s reasoning for excluding the Real Madrid defender, despite injury-prone Reece James being the only actual right back named.",
+        "That snub was coming, though. Alexander-Arnold had struggled with injuries in the early months of last season and was tellingly left out of the squad Tuchel named for crucial March friendlies.",
+        "He was given a reprieve for this camp—as a right back despite playing in midfield for Real Madrid in the Champions League—and was told “it is now time to fight for his place.”",
+        "Alexander-Arnold hadn’t played for England since June 2025, while it was almost two years since his last start—against Finland in October 2024.",
+        "All of that time out of the team feels a waste. He’s still probably the best right back England have and what difference could his ability have made at the World Cup?",
+        "It was a cross of the highest quality that made England’s opening goal for Gordon, delivering the ball into an area where Czechia could not defend it.",
+        "Tuchel wanted Alexander-Arnold to “perform” to justify his place in the team, and it was a sprint to retrieve a loose ball ahead of Czech defender Krejcí.",
+        "England won in Prague for the first time since 1908. /  Eddie Keogh/The FA/Getty Images*Ratings provided by FotMob*",
+        "GK: James Trafford—7.6: Important early save on his second-successive start. He didn’t need to do much else beyond a relatively comfortable stop in the second half.",
+        "RB: Trent Alexander-Arnold—8.4: Having been unused against Spain over the weekend, his overdue return to the England XI went about well as it could.",
+        "CB: Trevoh Chalobah—7.6: More comfortable than probably expected once Czechia was reduced to 10 players. Misplaced only one pass out of 79 attempted.",
+        "CB: Marc Guéhi—7.7: Needed an error-free performance after the Spain fiasco."
+      ]
+    },
+    "ftbpro_01m3q7kpgekb": {
+      "id": "ftbpro_01m3q7kpgekb",
+      "title": "Chelsea Dealt Fresh Injury Scare at Their Most Vulnerable Position",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/chelsea-dealt-fresh-injury-scare-at-vulnerable-position/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2266,h_1274,x_188,y_68/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q9b5c8hsxe0c5e2k.jpg",
+      "publishedAt": "2026-09-29T20:35:40.000Z",
+      "paragraphs": [
+        "By Roberto Casillas4:35 PM EDTXabi Alonso suddenly must navigate multiple injuries.  / Marc Atkins/Getty Images Alarm bells sounded at Stamford Bridge on Monday night after midfielder Roméo Lavia limped off the pitch in Belgium’s UEFA Nations League clash against France.",
+        "Injuries have defined the 22-year-old’s Chelsea career since he joined the club in the summer of 2023, missing more games than he’s played ever since the Blues beat Liverpool in the race to acquire him.",
+        "This season, though, Lavia has been available whenever Xabi Alonso called on him, featuring in six of Chelsea’s opening seven games of the term—five from the start.",
+        "Still, Lavia is yet to play 90 minutes in an official match since joining Chelsea, and in his first career start for Belgium, he exited the pitch limping after 85 minutes.",
+        "The midfielder was excellent against France, but the sight of him asking for medical attention on the ground and then gingerly walking off the pitch immediately raised concerns back in west London.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Romeo Lavia (bottom) went to the ground before limping off the pitch against France.  / Vincent Kalut/Photonews/Getty Images Muscular injuries have been a thorn in Lavia’s side over the last three years, so it’s only normal that Monday’s incident had fans sweating over his status.",
+        "Fortunately for Chelsea and Belgium, Lavia revealed that he didn’t suffer any type of injury; he was simply battling with cramps and had to be substituted.",
+        "“It had been a long time since I’d played at such an intensity,” Lavia told Belgian outlet DH. “It’s a process. From the start, I felt very comfortable; it’s the kind of match everyone loves to play. It’s all coming naturally.”",
+        "Lavia was one of the standout players for Mark van Bommel’s side against Les Bleus. He didn’t misplace a single one of his 37 pass attempts and registered 10 defensive contributions in the narrow 1–0 defeat, with Michael Olise’s brilliant winner happening once the Chelsea man had left the pitch.",
+        "Chelsea will be relieved that Lavia’s withdrawal wasn’t the result of any serious fitness issue. Plus, the Blues are no doubt excited the talented midfielder is finally performing at a high level consistently.",
+        "Romeo Lavia should play an important role under Xabi Alonso.  / Alexander Canillas/MB Media/Getty Images The presence of Enzo Fernández and Moisés Caicedo allowed Chelsea to overcome Lavia’s injury issues for the entirety of his Chelsea career. Now, the Blues need the Belgian to be fit given Caicedo had been dealing with an injury since the start of the term and Fernández left to Manchester City.",
+        "After Chelsea failed to sign a Fernández replacement, captain Reece James has played much of the season alongside Lavia in midfield, but now the injury-prone Englishman is dealing with a fresh fitness issue, confirmed by England boss Thomas Tuchel.",
+        "Lavia was given the night off in Chelsea’s dreadful 3–0 defeat against Brentford prior to the international break. Jordan Henderson and Valentín Barco completed Alonso’s midfield double pivot, with the former making his first Chelsea appearance and the latter his maiden Premier League start.",
+        "Chelsea’s midfield depth is incredibly thin at the moment, making Lavia’s availability of paramount importance. Now more than ever, the Blues require Lavia to showcase why they spent £53 million ($68 million) to acquire him three summers ago.",
+        "With key players such as James, Caicedo, Cole Palmer and João Pedro dealing with injuries, Chelsea better hope Lavia’s explanation for his substitution against France is true and he’s able to participate against Bournemouth in their first match following the international break.",
+        "READ THE LATEST CHELSEA NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
     "fzhafkysws3g1ux8fnmoe3180": {
@@ -10675,6 +10969,29 @@
         "He now has six goal involvements (four&nbsp;goals, two&nbsp;assists) in four senior international appearances for his country, and he will be hoping to add to that tally in the Republic of Ireland&#39;s next game against Austria this Thursday.&nbsp;"
       ],
       "html": "<p>Heimir Hallgrimsson said he was impressed with the energy&nbsp;of his Republic of Ireland team during their 3-0 victory&nbsp;against Israel in the Nations League.</p>\n\n<p>The Republic of Ireland swept aside Israel at&nbsp;Nagyerdei Stadion, with three goals in the space of 12 minutes from&nbsp;Troy Parrott,&nbsp;Adam Idah and&nbsp;Jack Moylan sealing the win.&nbsp;</p>\n\n<p>Parrott opened the scoring in the 13th minute when his shot squirmed under&nbsp;Daniel Peretz after&nbsp;James Abankwah cut the ball back for the in-form striker to finish into the net.&nbsp;</p>\n\n<p>It got even better for&nbsp;Hallgrimsson&#39;s side three minutes later when Idah tucked home, with Moylan&#39;s fine run ending with a shot that found the bottom corner in the 25th minute.&nbsp;</p>\n\n<p>The&nbsp;Republic of Ireland scored three goals in the first 25 minutes of a match for the first time since October 2014 against&nbsp;Gibraltar (18th min), and only the second time in their history away from home, after August 1996 against&nbsp;Liechtenstein (four&nbsp;in 19th min).</p>\n\n<p>They also&nbsp;enjoyed their joint-biggest win in the Nations League, and outright biggest away from home, alongside a 3-0 victory over Scotland in June 2022.</p>\n\n<p>Hallgrimsson&#39;s side&nbsp;had three different goalscorers (excluding&nbsp;own goals) in a single game for the first time since October 2023 against&nbsp;Gibraltar (four), and the Republic of Ireland boss was thrilled with his team&#39;s display.</p>\n\n<p>&quot;I must say, I did not expect so much energy for 90 minutes,&quot; Halgrimsson said. &quot;There were a lot of empty tanks at the end of the game.&nbsp;</p>\n\n<p>&quot;Given all the circumstances, with the emotions, the bad preparation and all of those things, to have this energy and power for such a long time really impressed me.</p>\n\n<p>&quot;The character was there. In tough times, you find your leaders, they will emerge. These guys showed how much they loved their country. The performance showed that.&quot;</p>\n\n\n<p>The Republic of Ireland finished with an expected goals (xG) total of 1.57 from their nine attempts to Israel&#39;s 0.31 from their eight shots at&nbsp;Caoimhin Kelleher&#39;s net.&nbsp;</p>\n\n<p>Israel have now conceded 3+ goals in 11 matches since the start of 2024 in all competitions, the joint-most of any UEFA nation in this time (level with Liechtenstein), with the Republic of Ireland&#39;s forwards impressing.&nbsp;</p>\n\n<p>Up to and including the Republic of Ireland&#39;s first goal, each of the nation&#39;s last seven goals in competitive internationals (excluding&nbsp;own goals) had been scored by Parrott, the longest run by any player for the side.&nbsp;</p>\n\n<p>Moylan, meanwhile, became the first player to score and assist a goal in the same match for the Republic of Ireland since Robbie Brady against&nbsp;Finland, also in the&nbsp;Nations League, in October 2024.</p>\n\n<p>He now has six goal involvements (four&nbsp;goals, two&nbsp;assists) in four senior international appearances for his country, and he will be hoping to add to that tally in the Republic of Ireland&#39;s next game against Austria this Thursday.&nbsp;</p>\n"
+    },
+    "ic1l0swye6up1788ghbuhiltm": {
+      "id": "ic1l0swye6up1788ghbuhiltm",
+      "title": "Esposito brothers want to 'share the field more often' for Italy",
+      "subtitle": "Francesco Pio Esposito and Sebastiano Esposito both featured for Italy in their Nations League win over Turkiye on Monday.",
+      "source": "FotMob",
+      "sourceUrl": "/news/ic1l0swye6up1788ghbuhiltm-esposito-brothers-want-share-field-more-often-italy",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/58/8e/francesco-pio-esposito-and-sebastiano-esposito_1dopmzc1jlzfd1dfdjkzj6a9e8.jpg?t=-243450784&w=1200&h=630",
+      "publishedAt": "2026-09-29T20:19:28.000Z",
+      "paragraphs": [
+        "Francesco Pio Esposito hopes to &quot;share the field more often&quot; with brother Sebastiano for Italy after they both featured against Turkiye on Monday.",
+        "Italy ran out 4-1 winners in the Nations League, marking Roberto Mancini&#39;s first win since returning to the helm.",
+        "Francesco Pio Esposito scored and assisted in the victory, while his older brother Sebastiano Esposito recorded the most shots (three) of any Italy player.",
+        "They are the fourth pair of brothers to play in the same match for Italy, after Filippo and Simone Inzaghi (twice in 2000), Aldo and Luigi Cevenini (once in 1915), and Giuseppe and Felice Milano (three times between 1912 and 1913).",
+        "Francesco Pio Esposito, meanwhile, surpassed the five-goal mark with the Azzurri at 21 years and 92 days; only two players have achieved this at a younger age: Giuseppe Meazza (19 years and 261 days) and Gianni Rivera (21 years and 78 days).",
+        "&quot;I thoroughly enjoyed playing with Seba. It was his first time, so I tried not to overwhelm him with emotions. We had fun, and I&#39;m happy for his debut,&quot; Francesco Pio Esposito told Vivo Azzurro.",
+        "&quot;Hopefully, we can share the field more often. There was a lot of desire and enthusiasm, which is what you always need when wearing this shirt.&quot;",
+        "Sebastiano Esposito added: &quot;Mancini told us to enjoy it... Although it&#39;s not easy because of the emotions you feel.",
+        "&quot;If you&#39;re playing for Azzurri with your brother, it&#39;s even more complicated. Mancini explained how we should position ourselves and move. It was beautiful.&quot;",
+        "Italy won an away match with a 3+ goal margin for the first time since November 2019 (3-0 v Bosnia-Herzegovina).",
+        "Indeed, the Azzurri have returned to winning with Mancini as head coach after 1,198 days since the last time (3-2 v Netherlands, June 2023)."
+      ],
+      "html": "<p>Francesco Pio Esposito hopes to &quot;share the field more often&quot; with brother Sebastiano for Italy after they both featured against Turkiye on Monday.</p>\n\n<p>Italy ran out 4-1 winners in the Nations League, marking Roberto Mancini&#39;s first win since returning to the helm.</p>\n\n<p>Francesco Pio Esposito scored and assisted in the victory, while his older brother Sebastiano Esposito recorded the most shots (three) of any Italy player.</p>\n\n<p>They are the fourth pair of brothers to play in the same match for Italy, after Filippo and Simone Inzaghi (twice in 2000), Aldo and Luigi Cevenini (once in 1915), and Giuseppe and Felice Milano (three times between 1912 and 1913).</p>\n\n<p>Francesco Pio Esposito, meanwhile, surpassed the five-goal mark with the Azzurri at 21 years and 92 days; only two players have achieved this at a younger age: Giuseppe Meazza (19 years and 261 days) and Gianni Rivera (21 years and 78 days).</p>\n\n<p>&quot;I thoroughly enjoyed playing with Seba. It was his first time, so I tried not to overwhelm him with emotions. We had fun, and I&#39;m happy for his debut,&quot; Francesco Pio Esposito told Vivo Azzurro.</p>\n\n<p>&quot;Hopefully, we can share the field more often. There was a lot of desire and enthusiasm, which is what you always need when wearing this shirt.&quot;</p>\n\n\n<p>Sebastiano Esposito added: &quot;Mancini told us to enjoy it... Although it&#39;s not easy because of the emotions you feel.</p>\n\n<p>&quot;If you&#39;re playing for Azzurri with your brother, it&#39;s even more complicated. Mancini explained how we should position ourselves and move. It was beautiful.&quot;</p>\n\n<p>Italy won an away match with a 3+ goal margin for the first time since November 2019 (3-0 v Bosnia-Herzegovina).</p>\n\n<p>Indeed, the Azzurri have returned to winning with Mancini as head coach after 1,198 days since the last time (3-2 v Netherlands, June 2023).</p>\n"
     },
     "j3333qh4ryty1vb7sl2pc56j4": {
       "id": "j3333qh4ryty1vb7sl2pc56j4",
@@ -10861,6 +11178,31 @@
         "Montreal, meanwhile, will be out to end their poor run at Stade Saputo. Only Minnesota United (two) have fewer home wins in the MLS this season than Montreal (three), who last won in front of their home crowd on May 9 against Orlando City."
       ],
       "html": "<p>Pat Noonan believes FC Cincinnati&#39;s last-gasp draw against the Houston Dynamo could be a &quot;deciding moment&quot;&nbsp;in their quest to reach the playoffs this season.</p>\n\n<p>Cincinnati found themselves 2-0 down after 51 minutes at Shell Energy Stadium thanks to goals from Guilherme and Mateusz Bogusz, the latter scoring from the penalty spot.</p>\n\n<p>Bryan Ramirez halved the deficit in the 73rd minute before Kevin Denkey scored a spot-kick in the seventh minute of second-half stoppage time to seal a share of the spoils.</p>\n\n<p>It was a result that kept Cincinnati ninth in the Eastern Conference, but the likes of New York City FC, D.C. United and Toronto FC are all chasing Noonan&#39;s side.&nbsp;</p>\n\n<p>Cincinnati make the trip to Stade Saputo this weekend to face&nbsp;struggling CF Montreal, and Noonan believes his team&#39;s latest stalemate could be a solid foundation to build on.</p>\n\n<p>&quot;I think it could be a deciding moment in this stretch run,&quot;&nbsp;Noonan said. &quot;We have nine games left in the season, and every game is going to be so important to pick up points.</p>\n\n<p>&quot;And that&#39;s because of the position that we&#39;re in, where we&#39;re fighting for a playoff spot. This isn&#39;t about everything being pretty now, or style.</p>\n\n<p>&quot;We were able to get an important point, and so, for the psyche of the group and how to be on the road, like I said, against a strong opponent and push the game like that.</p>\n\n<p>&quot;How do we get more of that urgency, but not recklessness?&quot;</p>\n\n\n<p>Montreal, meanwhile, will just want the 2026 season to come to an end after they were beaten 2-0 by the Columbus Crew in their last league match.</p>\n\n<p>Only Sporting Kansas City (17) have lost more MLS matches this season than Montreal (15), who find themselves rooted to the bottom of the East on&nbsp;21 points from 26 games.</p>\n\n<p>It&#39;s also been a disappointing start to Alexis Sanchez&#39;s Montreal career, as he has failed to register a single goal contribution in his seven matches for the club.</p>\n\n<p>During their defeat to Columbus, Sanchez&#39;s frustrations were evident as his team struggled to create any opportunities whenever they got the chance to go forward.</p>\n\n<p>Interim boss Philippe Eullaffroy understood the Chilean&#39;s concerns about the team, but he said Sanchez remained committed to the cause and was just showing his passion.</p>\n\n<p>&quot;Alexis would like the team to play faster forward and use more space behind the defenders. I agree, and I ask for it, but it is not happening,&quot; Eullaffroy conceded.</p>\n\n<p>&quot;After the game, he was upset and tense about the development of the second half, as were several of his team-mates.&quot;</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>Montreal – Prince Owusu</strong></p>\n\n<p>In a season of frustration for Montreal, Owusu has been the only shining light, scoring 13 goals in 24 league appearances so far this season.</p>\n\n<p>Owusu also has a good record against Montreal. He has scored three goals in six MLS outings against them, only managing to find the back of the net more against D.C. (four).</p>\n\n<p><strong>Cincinnati – Kevin Denkey</strong></p>\n\n<p>With Denkey unavailable after being selected to represent Togo during the international break,&nbsp;Evander will be the man Cincinnati will turn to in the final third.&nbsp;</p>\n\n<p>Only Inter Miami&#39;s Lionel Messi (33) has more goal involvements in the MLS this season than Evander&#39;s 25 (13 goals, 12 assists).&nbsp;</p>\n\n\n<p><strong>MATCH PREDICTION: DRAW</strong></p>\n\n<p>Cincinnati earned a draw when trailing by two goals for the eighth time in the club&#39;s MLS era (since 2019) against Houston last time out. Three of those occurrences have happened this season and in all three of those occurrences in 2026, they had trailed by two goals in the second half.</p>\n\n<p>But they will be hoping for a better result here. They have a good record against Montreal, winning their last four MLS meetings against them.</p>\n\n<p>And Noonan&#39;s side will be desperate for a win. They are without a victory in their last five league matches (D3 L2) since a 2-1 triumph over NYCFC on August 19.</p>\n\n<p>Montreal, meanwhile, will be out to end their poor run at Stade Saputo. Only Minnesota United (two) have fewer home wins in the MLS this season than Montreal (three), who last won in front of their home crowd on May 9 against Orlando City.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Montreal – 36.6%</p>\n\n<p>Draw – 23.5%</p>\n\n<p>Cincinnati – 39.9%</p>\n"
+    },
+    "lhamzf4q2c8s18bytkx0sf7qz": {
+      "id": "lhamzf4q2c8s18bytkx0sf7qz",
+      "title": "Spain 4-1 Croatia: Yamal nets brace as unbeaten run reaches 40 games",
+      "subtitle": "In their first home match since winning the World Cup, Spain defeated Croatia at Estadio Ramon Sanchez Pizjuan in the Nations League.",
+      "source": "FotMob",
+      "sourceUrl": "/news/lhamzf4q2c8s18bytkx0sf7qz-spain-4-1-croatia-yamal-nets-brace-unbeaten-run-reaches-40-games",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/20/48/lamine-yamal_10cx3tb2pk3qt1xmok49kk1hzc.jpg?t=-217132080&w=1200&h=630",
+      "publishedAt": "2026-09-29T20:52:13.000Z",
+      "paragraphs": [
+        "Lamine Yamal scored twice and got an assist for Spain as the world champions defeated Croatia 4-1 in the Nations League.",
+        "Marc Pubill and Nico Williams were&nbsp;also on the scoresheet for La Roja at&nbsp;Estadio Ramon Sanchez Pizjuan, where Rodri showcased the World Cup before kick-off in Spain&#39;s first home game since winning the competition in the summer.",
+        "Just as he did against England in their Nations League opener, Yamal opened the scoring inside the first two minutes as he curled Alex Baena&#39;s cut-back into the bottom-left corner with a first-time finish.",
+        "Spain pushed for a second, with Pau Cubarsi shooting narrowly wide from distance, but Croatia scored against the run of play just before the half-hour mark as Dion Beljo headed in from Ivan Perisic&#39;s pinpoint cross.",
+        "However, the hosts were back ahead just three minutes later as Yamal played a corner short before eventually sending in a cross, which was headed in by an unmarked Pubill in the six-yard box.",
+        "Mikel Oyarzabal saw a goal ruled out for offside and Fermin Lopez struck the woodwork before half-time, but Spain eventually got their third in the 63rd minute as Yamal powered in at the near post following Pedri&#39;s level reverse pass.",
+        "Pedri saw a long-range strike pushed away by Dominik Livakovic shortly after&nbsp;Franjo Ivanovic curled wide at the other end, though Williams wrapped up a comfortable victory with a clinical finish in the 89th minute.",
+        "Yamal becoming inevitable for club and country",
+        "Through Yamal, Spain have scored in the first two minutes of play in consecutive matches for the first time in any competition since at least 2004, and it was just the start of another stellar performance from the teenager.",
+        "To go along with his two goals and assist, Yamal also created the joint-most chances for his side (two), attempted the most passes in the final third (24) and the most dribbles (nine), while also winning both of his tackles.",
+        "Despite conceding, Luis de la Fuente&#39;s side were in control throughout, accumulating 1.77 expected goals (xG) from 16 attempts while restricting Croatia to just 0.44 xG from five shots.",
+        "La Roja are now unbeaten in their last 40 matches across all competitions (W31 D9), the best such record by a European nation.",
+        "Indeed,&nbsp;Spain have won each of their last nine matches in all competitions, equalling&nbsp;their best winning streak with De la Fuente as head coach (W9 between June and July 2024),&nbsp;and it means they remain in control of Group A3 in the Nations League after winning six points from their opening two games."
+      ],
+      "html": "<p>Lamine Yamal scored twice and got an assist for Spain as the world champions defeated Croatia 4-1 in the Nations League.</p>\n\n<p>Marc Pubill and Nico Williams were&nbsp;also on the scoresheet for La Roja at&nbsp;Estadio Ramon Sanchez Pizjuan, where Rodri showcased the World Cup before kick-off in Spain&#39;s first home game since winning the competition in the summer.</p>\n\n<p>Just as he did against England in their Nations League opener, Yamal opened the scoring inside the first two minutes as he curled Alex Baena&#39;s cut-back into the bottom-left corner with a first-time finish.</p>\n\n<p>Spain pushed for a second, with Pau Cubarsi shooting narrowly wide from distance, but Croatia scored against the run of play just before the half-hour mark as Dion Beljo headed in from Ivan Perisic&#39;s pinpoint cross.</p>\n\n<p>However, the hosts were back ahead just three minutes later as Yamal played a corner short before eventually sending in a cross, which was headed in by an unmarked Pubill in the six-yard box.</p>\n\n<p>Mikel Oyarzabal saw a goal ruled out for offside and Fermin Lopez struck the woodwork before half-time, but Spain eventually got their third in the 63rd minute as Yamal powered in at the near post following Pedri&#39;s level reverse pass.</p>\n\n<p>Pedri saw a long-range strike pushed away by Dominik Livakovic shortly after&nbsp;Franjo Ivanovic curled wide at the other end, though Williams wrapped up a comfortable victory with a clinical finish in the 89th minute.</p>\n\n\n<p><strong>Yamal becoming inevitable for club and country</strong></p>\n\n<p>Through Yamal, Spain have scored in the first two minutes of play in consecutive matches for the first time in any competition since at least 2004, and it was just the start of another stellar performance from the teenager.</p>\n\n<p>To go along with his two goals and assist, Yamal also created the joint-most chances for his side (two), attempted the most passes in the final third (24) and the most dribbles (nine), while also winning both of his tackles.</p>\n\n<p>Despite conceding, Luis de la Fuente&#39;s side were in control throughout, accumulating 1.77 expected goals (xG) from 16 attempts while restricting Croatia to just 0.44 xG from five shots.</p>\n\n<p>La Roja are now unbeaten in their last 40 matches across all competitions (W31 D9), the best such record by a European nation.</p>\n\n<p>Indeed,&nbsp;Spain have won each of their last nine matches in all competitions, equalling&nbsp;their best winning streak with De la Fuente as head coach (W9 between June and July 2024),&nbsp;and it means they remain in control of Group A3 in the Nations League after winning six points from their opening two games.</p>\n"
     },
     "lk70bbzpvx2910hrv2orwnf4b": {
       "id": "lk70bbzpvx2910hrv2orwnf4b",
@@ -11307,6 +11649,33 @@
       ],
       "html": "<p>Mexx Meerdink scored twice as the Netherlands earned their first victory&nbsp;under new boss Xavi after they beat Serbia 2-1 at&nbsp;Stadion Rajko Mitic&nbsp;in the Nations League.&nbsp;</p>\n\n<p>The Netherlands needed a stoppage-time equaliser from Cody Gakpo on Xavi&#39;s debut against Germany, but they overcame a stern test on Sunday to seal all three points.&nbsp;</p>\n\n<p>Dejan Joveljic brought the first&nbsp;save out of&nbsp;Bart Verbruggen in the 17th minute before&nbsp;Meerdink stung the palms of&nbsp;Vanja Milinkovic-Savic, with his shot coming after Gakpo was forced off due to an injury.&nbsp;</p>\n\n<p>But the Netherlands made the breakthrough in the 30th minute when&nbsp;Crysencio Summerville was fouled inside the penalty area by&nbsp;Aleksa Terzic, with&nbsp;Meerdink stepping up and wrapping his effort into the bottom-right corner.&nbsp;</p>\n\n<p>Denzel Dumfries should have doubled the visitors&#39; lead after he was brilliantly slipped in by Meerdink, but&nbsp;Milinkovic-Savic was on hand to repel his attempt from a tight angle.</p>\n\n<p>However, Serbia needed just 54 seconds after the break to draw level. Verbruggen made two excellent stops to deny&nbsp;Luka Jovic and&nbsp;Andrija Zivkovic, but&nbsp;Sasa Lukic&#39;s scuffed shot made its way back to Jovic, who finished first time from close range.</p>\n\n<p>Ruben van Bommel, who replaced Gakpo in the first half, saw his bouncing effort hit the post before&nbsp;Ryan Gravenberch&#39;s long-range shot was comfortably held by&nbsp;Milinkovic-Savic as the Netherlands laid siege to&nbsp;Serbia&#39;s goal.</p>\n\n<p>And their persistence was rewarded in the 69th minute through the lively Meerdink, who, on the slide, found the bottom-right corner after being teed up by substitute&nbsp;Guus Til.</p>\n\n<p>Serbia almost pegged back the Netherlands soon after, but Jovic&#39;s header from a&nbsp;Dusan Tadic corner just evaded the far post, with Xavi&#39;s side holding on to go top of Group A2 ahead of Germany&#39;s clash with Greece later in the day.&nbsp;</p>\n\n\n<p><strong>Meerdink making the most of his chance</strong></p>\n\n<p>After being initially left out of Xavi&#39;s first Netherlands squad, Meerdink, along with&nbsp;Til, were called up as late replacements for the injured&nbsp;Justin Kluivert and Donyell Malen, and the AZ striker has impressed in his first two Nations League games this season.&nbsp;</p>\n\n<p>Only Finland&#39;s Joel Pohjanpalo (three) has scored more goals in the 2026-27 Nations League than Meerdink (two, level with three other players), while he also finished with a team-high total&nbsp;for&nbsp;shots on target (three), while only Van Bommel (seven) had more touches in the opposition box than his six.&nbsp;</p>\n\n<p>Following their 1-1 draw with Germany, Xavi said his team delivered a &quot;superior&quot; second-half display, though it was more of a complete performance from his team here, despite allowing Jovic to score an equaliser so soon into the second half.&nbsp;</p>\n\n<p>The Netherlands finished with an expected goals (xG) total of 2.75 from their 25 shots, eight of which were on target, compared to Serbia&#39;s total of 1.41 from their 11 attempts.&nbsp;</p>\n\n<p>Xavi&#39;s side are on their travels again, with a clash against Greece to come this Thursday before they end the international break with a home game against Serbia on October 4.&nbsp;</p>\n"
     },
+    "rdtewxxxoxyl1t0f3d1jxunw8": {
+      "id": "rdtewxxxoxyl1t0f3d1jxunw8",
+      "title": "Bronze excited for Chelsea to 'prove ourselves' against Lyon",
+      "subtitle": "Chelsea head to Lyon looking to make it two wins from two in the Women's Champions League, but Lucy Bronze is expecting a tough test.",
+      "source": "FotMob",
+      "sourceUrl": "/news/rdtewxxxoxyl1t0f3d1jxunw8-bronze-excited-chelsea-prove-ourselves-against-lyon",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/11/b4/bronze_nnnz86i30nxm13ms8uinj8gg6.jpg?t=-220102336&w=1200&h=630",
+      "publishedAt": "2026-09-29T19:50:23.000Z",
+      "paragraphs": [
+        "Lucy Bronze is relishing the chance for Chelsea to &quot;prove ourselves&quot; against Lyon in the Women&#39;s Champions League.",
+        "Chelsea began their European campaign with a narrow 1-0 victory over Austria Wien last time out and are one of six teams with three points on the board so far.",
+        "Lyon were another that won their opener, but they sit top of the early standings after thrashing Servette 8-0 last time out.",
+        "In the Champions League, Lyon have won two of their four games against Chelsea (D1 L1); among sides they have faced more than twice, only against Juventus (43%) and Umea IK (25%) do they possess a lower win rate in the competition than against the Blues (50%).",
+        "And Bronze, a former Lyon player, is looking forward to the clash against her former side, seeing it as a good marker for where Chelsea are up to in the season.",
+        "&quot;It&#39;s so exciting,&quot; Bronze said, as quoted on Chelsea&#39;s website. &quot;My time at Lyon was amazing.",
+        "&quot;All the girls, Ellie [Carpenter], Keish [Kadeisha Buchanan] and Melvine [Malard] had a great time at Lyon, and we all actually played there together as well.",
+        "&quot;We&#39;re excited to go there, to be focused on the Champions League, and we know what pedigree Lyon have in the Champions League.",
+        "&quot;To go toe to toe with another team who&#39;s one of the best in the world and test ourselves and prove ourselves is going to be exciting.&quot;",
+        "Chelsea have lost three of their last six away games in the Champions League (W2 D1), though all three defeats came in the knockout stages.",
+        "The Blues have lost just one of their 15 group/league-stage away matches in the competition (W11 D3).",
+        "Lyon are heavy favourites according to the Opta supercomputer, with a 65.2% win probability to Chelsea&#39;s 15.9%, but Bronze is not shying away from the test ahead of them.",
+        "&quot;It&#39;s great. I love playing in the big games, the challenging games,&quot; she added.",
+        "&quot;That&#39;s what the best players in the world want to do. They want to play for the best teams, to be able to compete for trophies, to compete in the league.",
+        "&quot;That&#39;s exactly what we&#39;re doing this season. We&#39;re pushing ourselves in every single game to be able to compete and win every trophy we can.&quot;"
+      ],
+      "html": "<p>Lucy Bronze is relishing the chance for Chelsea to &quot;prove ourselves&quot; against Lyon in the Women&#39;s Champions League.</p>\n\n<p>Chelsea began their European campaign with a narrow 1-0 victory over Austria Wien last time out and are one of six teams with three points on the board so far.</p>\n\n<p>Lyon were another that won their opener, but they sit top of the early standings after thrashing Servette 8-0 last time out.</p>\n\n<p>In the Champions League, Lyon have won two of their four games against Chelsea (D1 L1); among sides they have faced more than twice, only against Juventus (43%) and Umea IK (25%) do they possess a lower win rate in the competition than against the Blues (50%).</p>\n\n<p>And Bronze, a former Lyon player, is looking forward to the clash against her former side, seeing it as a good marker for where Chelsea are up to in the season.</p>\n\n<p>&quot;It&#39;s so exciting,&quot; Bronze said, as quoted on Chelsea&#39;s website. &quot;My time at Lyon was amazing.</p>\n\n<p>&quot;All the girls, Ellie [Carpenter], Keish [Kadeisha Buchanan] and Melvine [Malard] had a great time at Lyon, and we all actually played there together as well.</p>\n\n<p>&quot;We&#39;re excited to go there, to be focused on the Champions League, and we know what pedigree Lyon have in the Champions League.</p>\n\n<p>&quot;To go toe to toe with another team who&#39;s one of the best in the world and test ourselves and prove ourselves is going to be exciting.&quot;</p>\n\n\n<p>Chelsea have lost three of their last six away games in the Champions League (W2 D1), though all three defeats came in the knockout stages.</p>\n\n<p>The Blues have lost just one of their 15 group/league-stage away matches in the competition (W11 D3).</p>\n\n<p>Lyon are heavy favourites according to the Opta supercomputer, with a 65.2% win probability to Chelsea&#39;s 15.9%, but Bronze is not shying away from the test ahead of them.</p>\n\n<p>&quot;It&#39;s great. I love playing in the big games, the challenging games,&quot; she added.</p>\n\n<p>&quot;That&#39;s what the best players in the world want to do. They want to play for the best teams, to be able to compete for trophies, to compete in the league.</p>\n\n<p>&quot;That&#39;s exactly what we&#39;re doing this season. We&#39;re pushing ourselves in every single game to be able to compete and win every trophy we can.&quot;</p>\n"
+    },
     "ri1h1rkhmw761xfz05jlw3g17": {
       "id": "ri1h1rkhmw761xfz05jlw3g17",
       "title": "Kane: This is my best chance of winning the Ballon d'Or",
@@ -11520,6 +11889,39 @@
       ],
       "html": "<p>Craig Bellamy admitted Wales had to &quot;suffer a lot&quot;&nbsp;against Portugal but hailed his injury-hit side&#39;s resilience in their Nations League opener.</p>\n\n<p>Wales began their Nations League campaign with a narrow 1-0 defeat to Portugal, with Joao Felix&#39;s deflected first-half strike proving the difference.</p>\n\n<p>Cristiano Ronaldo also had a goal ruled out for offside after the break, while Wales finished the contest on top, hitting the woodwork late on through Brennan Johnson.</p>\n\n<p>Despite that, Wales are without a win in their last five matches in all competitions (D3 L2), while they have lost five of their last 10 matches (W2 D3), one more than in their previous 25 outings (W11 D10 L4).</p>\n\n<p>The 23 shots Wales faced against Portugal is their most in a single game since a Nations League match against Turkiye in November 2024 (25).</p>\n\n<p>But Bellamy was impressed with how his team played despite being under pressure for long spells in the game.</p>\n\n<p>&quot;It was a difficult game for us. We had to suffer a lot,&quot; said Bellamy.</p>\n\n<p>&quot;I think that&#39;s the longest we&#39;ve been in a game without the ball.</p>\n\n\n<p>&quot;We could have done more with the ball, but I&#39;m beyond proud as well.</p>\n\n<p>&quot;We have a lot of players who weren&#39;t here. That&#39;s OK; we can handle it.</p>\n\n<p>&quot;A lot of players who don&#39;t play week in, week out. So, for them to use the energy they were able to, we&#39;ve got to have a big heart to be able to do that. They&#39;ve always shown that, and they showed that again.&quot;</p>\n\n<p>The loss leaves Wales bottom of Group A4 after the first matchday, with Norway and Denmark also drawn alongside them.</p>\n\n<p>Wales are missing the likes of Harry Wilson, Karl Darlow, Joe Rodon, Dylan Lawlor and Nathan Broadhead through injury, and face a quick turnaround before facing Denmark away on Sunday.</p>\n\n<p>Bellamy is determined to see an improved performance when they step out in Copenhagen.</p>\n\n<p>&quot;There&#39;s more for us, so that&#39;s something we always look at as a positive,&quot; he added.</p>\n\n<p>&quot;How can we improve? How can we get better?&quot;</p>\n"
     },
+    "t4d0bd3ewwd01gny6mbzs3t3q": {
+      "id": "t4d0bd3ewwd01gny6mbzs3t3q",
+      "title": "Kane: England did what we had to do against Czechia",
+      "subtitle": "England were under slight pressure to get a win against Czechia after their loss to Spain, and Anthony Gordon and Harry Kane secured it.",
+      "source": "FotMob",
+      "sourceUrl": "/news/t4d0bd3ewwd01gny6mbzs3t3q-kane-england-did-what-we-had-do-against-czechia",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/3/b6/kane_175nsan61sjeh13s6loe1nmr5d.jpg?t=-203640784&w=1200&h=630",
+      "publishedAt": "2026-09-29T22:05:40.000Z",
+      "paragraphs": [
+        "Harry Kane said England &quot;did what we had to do&quot;&nbsp;after beating 10-man Czechia 2-0 in the Nations League.",
+        "England suffered a disappointing defeat to Spain last time out, but they got their first win of this season&#39;s edition at Fortuna Arena.",
+        "Pavel Sulc was sent off after 25 minutes for a late tackle on Elliot Anderson, and the Three Lions made their numerical advantage count in the second half, with Anthony Gordon and Kane both on target for the second game running.",
+        "Kane has netted four goals in six Nations League appearances since the start of the 2024-25 edition.",
+        "The pressure was on England – despite Thomas Tuchel saying before the match that this was not a “must-win” fixture – and Kane was thrilled the team came out on top.",
+        "&quot;Job done, it was a professional performance,&quot; he told BBC Radio 5 Live.",
+        "&quot;It wasn&#39;t the most exciting game of football, but we did what we had to. Won the game, good clean sheet, and we take it into the next one.",
+        "&quot;When a team who likes to defend get a man sent off, it becomes even tougher. You have to be patient. Against 10 you have to move it quickly, and as they tire, the spaces will open up.&quot;",
+        "Gordon was a key figure for England again with his opening goal; he now has four goals and four assists across his last nine international appearances.",
+        "He is also the second Barcelona player to score in consecutive appearances for England, after Gary Lineker in 1989.",
+        "&quot;He&#39;s showing that he belongs at the highest level, for Barcelona and England,&quot; Kane said of Gordon, who had a team-high four shots and created four chances.",
+        "&quot;His performances in the last couple of games have been some of his best that he has played in an England shirt, and I think he is just relishing putting the shirt on and being one of the main men in the team.",
+        "&quot;He is an important player for us, and he showed that during the World Cup.&quot;",
+        "England had conceded 13 goals in their previous six appearances prior to this match, meaning a clean sheet would have been high on their priority list.",
+        "Next in Group A3, England travel to Croatia, who are also on three points after following up their win with a 4-1 defeat to Spain on Tuesday, but Tuchel was hesitant to give away any plans for the next match.",
+        "&quot;I cannot tell you,&quot; he told BBC Radio 5 Live when asked about potential changes. &quot;We have three days, which is a big difference to two games.",
+        "&quot;We decided not to travel back to England but to stay in Prague one more night, get some good rest, and then travel to Croatia and have two training sessions there.",
+        "&quot;We will push everyone to be available, even Nico O&#39;Reilly and Ezri Konsa, hopefully and then we know more. The next match is important for us against a direct opponent, and we want to win.&quot;",
+        "On the game itself, Tuchel added: &quot;We played a professional second half.",
+        "&quot;We stepped up in urgency, bit of quicker play and better ball speed. We deserved to win the second half.",
+        "&quot;With the red card, we became heavy, heavy favourites. A clean sheet is always important; it gives everyone a good feeling. Always things to improve, but overall a serious performance and a deserved win.&quot;"
+      ],
+      "html": "<p>Harry Kane said England &quot;did what we had to do&quot;&nbsp;after beating 10-man Czechia 2-0 in the Nations League.</p>\n\n<p>England suffered a disappointing defeat to Spain last time out, but they got their first win of this season&#39;s edition at Fortuna Arena.</p>\n\n<p>Pavel Sulc was sent off after 25 minutes for a late tackle on Elliot Anderson, and the Three Lions made their numerical advantage count in the second half, with Anthony Gordon and Kane both on target for the second game running.</p>\n\n<p>Kane has netted four goals in six Nations League appearances since the start of the 2024-25 edition.</p>\n\n<p>The pressure was on England – despite Thomas Tuchel saying before the match that this was not a “must-win” fixture – and Kane was thrilled the team came out on top.</p>\n\n<p>&quot;Job done, it was a professional performance,&quot; he told BBC Radio 5 Live.</p>\n\n<p>&quot;It wasn&#39;t the most exciting game of football, but we did what we had to. Won the game, good clean sheet, and we take it into the next one.</p>\n\n<p>&quot;When a team who likes to defend get a man sent off, it becomes even tougher. You have to be patient. Against 10 you have to move it quickly, and as they tire, the spaces will open up.&quot;</p>\n\n\n<p>Gordon was a key figure for England again with his opening goal; he now has four goals and four assists across his last nine international appearances.</p>\n\n<p>He is also the second Barcelona player to score in consecutive appearances for England, after Gary Lineker in 1989.</p>\n\n<p>&quot;He&#39;s showing that he belongs at the highest level, for Barcelona and England,&quot; Kane said of Gordon, who had a team-high four shots and created four chances.</p>\n\n<p>&quot;His performances in the last couple of games have been some of his best that he has played in an England shirt, and I think he is just relishing putting the shirt on and being one of the main men in the team.</p>\n\n<p>&quot;He is an important player for us, and he showed that during the World Cup.&quot;</p>\n\n<p>England had conceded 13 goals in their previous six appearances prior to this match, meaning a clean sheet would have been high on their priority list.</p>\n\n<p>Next in Group A3, England travel to Croatia, who are also on three points after following up their win with a 4-1 defeat to Spain on Tuesday, but Tuchel was hesitant to give away any plans for the next match.</p>\n\n<p>&quot;I cannot tell you,&quot; he told BBC Radio 5 Live when asked about potential changes. &quot;We have three days, which is a big difference to two games.</p>\n\n<p>&quot;We decided not to travel back to England but to stay in Prague one more night, get some good rest, and then travel to Croatia and have two training sessions there.</p>\n\n<p>&quot;We will push everyone to be available, even Nico O&#39;Reilly and Ezri Konsa, hopefully and then we know more. The next match is important for us against a direct opponent, and we want to win.&quot;</p>\n\n<p>On the game itself, Tuchel added: &quot;We played a professional second half.</p>\n\n<p>&quot;We stepped up in urgency, bit of quicker play and better ball speed. We deserved to win the second half.</p>\n\n<p>&quot;With the red card, we became heavy, heavy favourites. A clean sheet is always important; it gives everyone a good feeling. Always things to improve, but overall a serious performance and a deserved win.&quot;</p>\n"
+    },
     "tafeaa7zwemq1wkj09tgzehu3": {
       "id": "tafeaa7zwemq1wkj09tgzehu3",
       "title": "'This time we will win' – Montella promisies Turkiye victory against Italy",
@@ -11629,6 +12031,29 @@
         "Liverpool, who sit sixth in the Premier League table on nine points after an unbeaten start, return to action on October 11 against leaders Manchester City."
       ],
       "html": "<p>Jamie Carragher believes Florian Wirtz must be dropped for Liverpool&#39;s&nbsp;clash with Manchester City after the international break, claiming his performance against Bournemouth was the &quot;poorest I&#39;ve ever seen him in a Liverpool shirt&quot;.</p>\n\n<p>Liverpool edged to a 1-0 victory&nbsp;over Bournemouth, giving Andoni Iraola a winning return to Vitality Stadium thanks to Alexander Isak&#39;s second-half goal.</p>\n\n<p>Iraola is the first manager to remain unbeaten in his first five league games in charge of Liverpool (W2 D3) since Joe Fagan in September 1983.</p>\n\n<p>However, Wirtz came under fire for his performance on the south coast as he struggled to make an impact.</p>\n\n<p>He finished the match with a team-low 70.3% passing accuracy (completing 26 of 37 passes), had 53 touches, and just two off-target shots, though he did create a joint-game-high three chances.</p>\n\n<p>Only Ronald Araujo (24) lost possession more often than the German (16).</p>\n\n<p>And Carragher was far from impressed by Wirtz&#39;s showing, claiming that Iraola needs to think about leaving him out of the side if they want to improve their results.</p>\n\n<p>&quot;That was one of the poorest I&#39;ve ever seen him in a Liverpool shirt,&quot; said Carragher on the bonus Jamie Carragher Podcast.</p>\n\n<p>&quot;I&#39;ve been critical of the fact that he hasn&#39;t got the numbers. But normally when you watch Wirtz, he&#39;s neat and tidy; he keeps possession.&nbsp;There&#39;s things that you like. He gets out of a tight situation where you&#39;re normally expecting your player to lose the ball.</p>\n\n<p>&quot;But the reason I worry is: I don&#39;t think Wirtz is in poor form since he came to Liverpool. I actually think what we&#39;re seeing is what he is.</p>\n\n<p>&quot;And I was worried for Wirtz probably 12 months ago. And maybe that was a little bit early to say that, but I didn&#39;t say it. It was just in the back of my head.</p>\n\n<p>&quot;I commentated on Liverpool away at Burnley, and Liverpool won with a late penalty from Mo Salah. And when I was watching that game, it was what I&#39;ve seen for the last 12 months: I don&#39;t see how he&#39;s going to hurt you.</p>\n\n<p>&quot;It&#39;s just neat and tidy. And in some way, the price tag for that type of player should be half of what Liverpool have paid.</p>\n\n<p>&quot;The worry for Wirtz now is that his performances so far, or what he&#39;s given Liverpool, is so low. Where we were expecting him was to take Liverpool to another league title, to take Liverpool to a Champions League.</p>\n\n<p>&quot;The gap he&#39;s got to get to almost justify what people were expecting, I almost think is too big. You can&#39;t get there. Even if he improves a bit and gets there, it&#39;s still not what Liverpool thought they were getting.</p>\n\n<p>&quot;And it&#39;s not just Wirtz, it&#39;s the knock-on effect. So when he plays at No. 10, it means Dominik Szoboszlai has to play central midfield. I don&#39;t think Szoboszlai is a central-midfield player; I don&#39;t.</p>\n\n<p>&quot;I think going forward, Iraola&#39;s got a decision to make here. Wirtz would not be in my Liverpool team.</p>\n\n<p>&quot;Wirtz wouldn&#39;t be in my Liverpool team. Manchester City at home; for me, he can&#39;t be in the team.&quot;</p>\n\n\n<p>Wirtz has been called up in Jurgen Klopp&#39;s Germany squad for the upcoming Nations League.</p>\n\n<p>Klopp – the former Liverpool manager – has named two squads, with Wirtz getting a rest before being in contention for their final two games of the international break against Serbia and Greece.</p>\n\n<p>&quot;The one hope for Liverpool supporters now is Jurgen Klopp is the Germany manager,&quot; Carragher added.</p>\n\n<p>&quot;Wirtz goes away with the Germany team for three weeks, and he&#39;s obviously one of the best players in Germany; that&#39;s how they see him. Can Jurgen Klopp sprinkle a bit of stardust on him in that position?</p>\n\n<p>&quot;Jurgen is one of the greatest managers in the world; we know that. And what he gets out of players is probably more than most managers because of the nature of his personality, and fingers crossed something can happen for him.</p>\n\n<p>&quot;There&#39;s a scenario there that Jurgen Klopp and Germany have a great international window, he gets loads of goals, assists and comes back on a high. Manchester City&#39;s the next game; he impacts that, all is forgotten, all is forgiven. There&#39;s a potential turnaround there.</p>\n\n<p>&quot;I would love that to happen. I&#39;d love him to be the match-winner against Manchester City.&quot;</p>\n\n<p>Liverpool, who sit sixth in the Premier League table on nine points after an unbeaten start, return to action on October 11 against leaders Manchester City.</p>\n"
+    },
+    "w4tlhtfp5huo11h5lb72ixdxq": {
+      "id": "w4tlhtfp5huo11h5lb72ixdxq",
+      "title": "Wiegman not focused on expiring England contract",
+      "subtitle": "Sarina Wiegman's contract as England boss expires after next year's Women's World Cup, but her focus is on qualifying for the tournament.",
+      "source": "FotMob",
+      "sourceUrl": "/news/w4tlhtfp5huo11h5lb72ixdxq-wiegman-not-focused-expiring-england-contract",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/16/a2/sarina-wiegman_1b7w631593n1x1vjuzuyem8rpj.jpg?t=-227686848&w=1200&h=630",
+      "publishedAt": "2026-09-29T19:18:13.000Z",
+      "paragraphs": [
+        "England boss Sarina Wiegman insisted her focus is on qualifying for next year&#39;s Women&#39;s World Cup and not on her expiring contract.",
+        "The Lionesses face Greece in a two-legged play-off semi-final, with the winner facing either Slovakia or Ukraine for a spot in next summer&#39;s competition.",
+        "Wiegman has led England to back-to-back European Championship titles so far during her tenure, while also reaching the World Cup final in 2023.",
+        "She is the first-ever men&#39;s or women&#39;s manager to reach five consecutive major international tournament finals, after also reaching the showpiece in both competitions during her time with the Netherlands.",
+        "Despite her contract with the Lionesses ending after the World Cup, Wiegman&#39;s full focus is on qualifying for the tournament.",
+        "&quot;We had conversations before,&quot; said Wiegman when asked if talks had taken place about a possible extension.",
+        "&quot;We have regular conversations together, and we talk about the future, but at this point I&#39;m just really focusing on Greece, and we want to get through and qualify for the World Cup.",
+        "&quot;I talk to Mark [Bullingham, FA CEO] every two weeks, and we speak about what&#39;s happening now, what&#39;s in the future, but there&#39;s no news now.",
+        "&quot;I&#39;m just focusing on Greece and hopefully the World Cup.&quot;",
+        "England were forced into the play-off rounds after finishing second in their qualifying group, which also featured Spain, Iceland and Ukraine.",
+        "The Lionesses finished level on 15 points with Spain, the reigning world champions, but missed out on top spot due to head-to-head after losing 4-0 to their rivals."
+      ],
+      "html": "<p>England boss Sarina Wiegman insisted her focus is on qualifying for next year&#39;s Women&#39;s World Cup and not on her expiring contract.</p>\n\n<p>The Lionesses face Greece in a two-legged play-off semi-final, with the winner facing either Slovakia or Ukraine for a spot in next summer&#39;s competition.</p>\n\n<p>Wiegman has led England to back-to-back European Championship titles so far during her tenure, while also reaching the World Cup final in 2023.</p>\n\n<p>She is the first-ever men&#39;s or women&#39;s manager to reach five consecutive major international tournament finals, after also reaching the showpiece in both competitions during her time with the Netherlands.</p>\n\n<p>Despite her contract with the Lionesses ending after the World Cup, Wiegman&#39;s full focus is on qualifying for the tournament.</p>\n\n<p>&quot;We had conversations before,&quot; said Wiegman when asked if talks had taken place about a possible extension.</p>\n\n\n<p>&quot;We have regular conversations together, and we talk about the future, but at this point I&#39;m just really focusing on Greece, and we want to get through and qualify for the World Cup.</p>\n\n<p>&quot;I talk to Mark [Bullingham, FA CEO] every two weeks, and we speak about what&#39;s happening now, what&#39;s in the future, but there&#39;s no news now.</p>\n\n<p>&quot;I&#39;m just focusing on Greece and hopefully the World Cup.&quot;</p>\n\n<p>England were forced into the play-off rounds after finishing second in their qualifying group, which also featured Spain, Iceland and Ukraine.</p>\n\n<p>The Lionesses finished level on 15 points with Spain, the reigning world champions, but missed out on top spot due to head-to-head after losing 4-0 to their rivals.</p>\n"
     },
     "w6gh3flamwa117m0ohtrqzngo": {
       "id": "w6gh3flamwa117m0ohtrqzngo",
