@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-09-28T23:10:57.698Z",
+    "generatedAt": "2026-09-29T00:19:28.283Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 370
+      "fullArticlesCount": 384
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -15,12 +15,138 @@
   },
   "news": [
     {
+      "id": "ftbpro_01m3kvkc1a9f",
+      "title": "Czechia vs. England—Nations League: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3kvkc1a9f/czechia-vs-englandnations-league-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3mfdyqzveeb29zsqt.jpg",
+      "publishedAt": "2026-09-29T00:00:01.000Z"
+    },
+    {
+      "id": "ftbpro_01m3m4mrmqvg",
+      "title": "Transfer Rumors: Haaland Race Heats Up; Chelsea Ready Zubimendi Bid",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3m4mrmqvg/transfer-rumors-haaland-race-heats-up-chelsea-ready-zubimendi-bid",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3m9c3kw7qwzrgww9k.jpg",
+      "publishedAt": "2026-09-28T23:05:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m3kxymb9sw",
+      "title": "Every Premier League Points Deduction in History—and the Clubs Hit by Them",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3kxymb9sw/every-premier-league-points-deduction-historyand-clubs-hit-them",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_236/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3kz8xedz70h0k003w.jpg",
+      "publishedAt": "2026-09-28T23:00:00.000Z"
+    },
+    {
+      "id": "10nyiozd0a42n1mxlmxnedd14s",
+      "title": "Mancini sets his sights on France after dominant victory over Turkiye",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/10nyiozd0a42n1mxlmxnedd14s-mancini-sets-his-sights-france-after-dominant-victory-over-turkiye",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/18/a/roberto-mancini_187xltqr90lvp1nupy5zx5wyji.png?t=-294708592&w=1260&h=708",
+      "publishedAt": "2026-09-28T22:29:18.000Z"
+    },
+    {
+      "id": "1lcd5udt7pv3314nikbdd0zwhj",
+      "title": "Croatia 'not afraid' of Spain, says Kovacic",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1lcd5udt7pv3314nikbdd0zwhj-croatia-not-afraid-spain-says-kovacic",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d3/8b/kovacic_17rwh6yk2wcp51lqbak1r5vjo6.jpg?t=-322770016&w=640&h=360",
+      "publishedAt": "2026-09-28T22:01:26.000Z"
+    },
+    {
+      "id": "ftbpro_01m3kmct6asm",
+      "title": "Australia vs. Brazil: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3kmct6asm/australia-vs-brazil-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39ncbgbdk0xdfq7h8.jpg",
+      "publishedAt": "2026-09-28T22:00:00.000Z"
+    },
+    {
+      "id": "1wyyx7kypvzng1kqcxsqdpbbbk",
+      "title": "Sweden 3-1 Poland: Gyokeres scores again for Potter's men",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1wyyx7kypvzng1kqcxsqdpbbbk-sweden-3-1-poland-gyokeres-scores-again-potters-men",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/10/e9/gyokeres_fw0oai9eq0fc11yplrsu7bn4x.jpg?t=-293916336&w=1260&h=708",
+      "publishedAt": "2026-09-28T21:41:03.000Z"
+    },
+    {
+      "id": "s7b8t49nltsw1ptr5r75k92c2",
+      "title": "Belgium 0-1 France: Olise keeps Zidane perfect with last-gasp winner",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/s7b8t49nltsw1ptr5r75k92c2-belgium-0-1-france-olise-keeps-zidane-perfect-last-gasp-winner",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e1/cc/olise_1hk3yc9bvxxe21azefpa1fcskr.jpg?t=-298122528&w=640&h=360",
+      "publishedAt": "2026-09-28T21:07:53.000Z"
+    },
+    {
+      "id": "ftbpro_01m3mjejsk2g",
+      "title": "‘Jumping to Conclusions’—U.K. Prime Minister Andy Burnham Reacts to Man City Verdict",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3mjejsk2g/jumping-conclusionsuk-prime-minister-andy-burnham-reacts-man-city-verdict",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_107/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3mjyhbteanqy7k8ry.jpg",
+      "publishedAt": "2026-09-28T21:00:01.000Z"
+    },
+    {
+      "id": "rjx4wkmhfs981hz5g8z4tkgyk",
+      "title": "Turkiye 1-4 Italy: First-half blitz gets Mancini's second stint up and running",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/rjx4wkmhfs981hz5g8z4tkgyk-turkiye-1-4-italy-first-half-blitz-gets-mancinis-second-stint-up-running",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b3/a4/italy_1uhcmvajklw6012np5d0nhuim4.png?t=-300654336&w=1260&h=708",
+      "publishedAt": "2026-09-28T20:58:15.000Z"
+    },
+    {
+      "id": "bhh5cf70r3o61gj47k7td791s",
+      "title": "Czechia clash too early to be a 'must-win' game for England, says Tuchel",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/bhh5cf70r3o61gj47k7td791s-czechia-clash-too-early-be-must-win-game-england-says-tuchel",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/5c/b9/thomas-tuchel_4iup7zzbl2mi15b2fxue5buuq.png?t=-311236336&w=640&h=360",
+      "publishedAt": "2026-09-28T20:25:26.000Z"
+    },
+    {
+      "id": "CC5F12220B5C8213383092A31CE32B21",
+      "title": "The MLS Wrap: Wonderkids go international and another Messi golazo isn’t enough for Inter Miami",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/topnews/29821-mls-wrap-wonderkids-go-international-another-messi-golazo-isnt-enough-inter-miami?utm_source=fotmob",
+      "imageUrl": "https://latest.fotmob.com/wp-content/uploads/2026/09/Covers_MLS-Wrap-2809-1.png",
+      "publishedAt": "2026-09-28T20:07:30.000Z"
+    },
+    {
+      "id": "ftbpro_01m3m7sjg91g",
+      "title": "‘They Only See the Positive’—World Cup Hero Vozinha Makes Heartbreaking Admission",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3m7sjg91g/they-only-see-positiveworld-cup-hero-vozinha-makes-heartbreaking-admission",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_183/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3md4w654542md7a0q.jpg",
+      "publishedAt": "2026-09-28T20:00:01.000Z"
+    },
+    {
+      "id": "1s4tz93967h5n1e5fvk2uf62ww",
+      "title": "De la Fuente: Spain have recovered the spirit of 2010",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1s4tz93967h5n1e5fvk2uf62ww-de-la-fuente-spain-have-recovered-spirit-2010",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/19/67/de-la-fuente_120q5ydaj6gu81jubbl4b5cimh.jpg?t=-307286080&w=1260&h=708",
+      "publishedAt": "2026-09-28T19:44:55.000Z"
+    },
+    {
       "id": "1108t1oiygwmm12mk678wpl61h",
       "title": "Pocognoli not concerned about Scotland's goal drought",
       "description": "FotMob",
       "source": "FotMob",
       "sourceUrl": "/news/1108t1oiygwmm12mk678wpl61h-pocognoli-not-concerned-about-scotlands-goal-drought",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/72/a8/sebastien-pocognoli_1cige9rb6q1ua1vdnce0u0oddq.jpg?t=-336372592&w=1260&h=708",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/72/a8/sebastien-pocognoli_1cige9rb6q1ua1vdnce0u0oddq.jpg?t=-336372592&w=640&h=360",
       "publishedAt": "2026-09-28T19:06:52.000Z"
     },
     {
@@ -67,132 +193,6 @@
       "sourceUrl": "/news/1f861q9batb1d12ijxftjbyv18-odegaard-silva-completely-lost-his-head-late-tackle",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/f2/48/martin-odegaard_1acu3lvu9rbz1i3mrky9spgaf.png?t=-332654336&w=1260&h=708",
       "publishedAt": "2026-09-28T17:47:36.000Z"
-    },
-    {
-      "id": "ftbpro_01m3m5fe89fr",
-      "title": "Como Starlet Makes Real Madrid Stance Clear Amid Premier League Interest",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3m5fe89fr/como-starlet-makes-real-madrid-stance-clear-amid-premier-league-interest",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3m5psen4eemytvaax.jpg",
-      "publishedAt": "2026-09-28T17:30:00.000Z"
-    },
-    {
-      "id": "lk70bbzpvx2910hrv2orwnf4b",
-      "title": "Gakpo withdraws from Netherlands squad with ankle injury",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/lk70bbzpvx2910hrv2orwnf4b-gakpo-withdraws-from-netherlands-squad-ankle-injury",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/69/1/gakpo_xzhke7kyj2ey1sh6uk6hu0zu7.jpg?t=-329946272&w=1260&h=708",
-      "publishedAt": "2026-09-28T17:26:06.000Z"
-    },
-    {
-      "id": "ftbpro_01m3kwy2819r",
-      "title": "Wrexham Player Report Cards: Every Star Graded After Eight Games",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3kwy2819r/wrexham-player-report-cards-every-star-graded-after-eight-games",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_3290,h_1850,x_352,y_259/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3md9p8ftdhrn5fk9p.jpg",
-      "publishedAt": "2026-09-28T17:00:00.000Z"
-    },
-    {
-      "id": "1n5p1b2ytadf71qmyd7fy0h20a",
-      "title": "Joao Felix wants to assist Ronaldo's 1,000th goal",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1n5p1b2ytadf71qmyd7fy0h20a-joao-felix-wants-assist-ronaldos-1000th-goal",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/29/28/joao-felix-and-cristiano-ronaldo_sahl9sd21ksw1k2yt2w3gpw2o.jpg?t=-343540592&w=1260&h=708",
-      "publishedAt": "2026-09-28T16:52:07.000Z"
-    },
-    {
-      "id": "ftbpro_01m3m39aq1yj",
-      "title": "MLS Goals of the Week: Lionel Messi, Eduard Lowen and More",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3m39aq1yj/mls-goals-week-lionel-messi-eduard-lowen-more",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3m5dfy3xpbjy1t37c.jpg",
-      "publishedAt": "2026-09-28T16:30:01.000Z"
-    },
-    {
-      "id": "zg8akpz6tfsq1pbm1tum4atjb",
-      "title": "'I would have liked to stay' – Kimmich reluctant to leave Germany camp",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/zg8akpz6tfsq1pbm1tum4atjb-i-would-have-liked-stay-kimmich-reluctant-leave-germany-camp",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e3/47/kimmich_1epc469xp7k5kzh0ta7irj8e3.jpg?t=-346326080&w=1260&h=708",
-      "publishedAt": "2026-09-28T16:16:57.000Z"
-    },
-    {
-      "id": "E05488CA0DDFBEC65D6C7C2D7048CC6C",
-      "title": "Preview: England head to Czechia in the Nations League",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/topnews/29817-preview-england-head-czechia-nations-league?utm_source=fotmob",
-      "imageUrl": "https://latest.fotmob.com/wp-content/uploads/2026/09/Covers_England-Czechia-2809-1.png",
-      "publishedAt": "2026-09-28T16:00:00.000Z"
-    },
-    {
-      "id": "1o2557slkcbvs1hnp5z6fpwxsm",
-      "title": "Neto completes Juventus return as Grabara replacement",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1o2557slkcbvs1hnp5z6fpwxsm-neto-completes-juventus-return-grabara-replacement",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/37/61/neto_4aaoxqh467qn10ilwxe4hr2ei.png?t=-339206336&w=1260&h=708",
-      "publishedAt": "2026-09-28T15:41:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m3m18npb3y",
-      "title": "‘We Won’t Ever Get That Day Back’—The Real Cost of Man City’s Financial Breaches",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3m18npb3y/we-wont-ever-get-that-day-backthe-real-cost-man-citys-financial-breaches",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_83/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3m33rw0z3dg8ck2xx.jpg",
-      "publishedAt": "2026-09-28T15:30:01.000Z"
-    },
-    {
-      "id": "1n1e74jn0yv6m1ljyhdzmoq185",
-      "title": "Ancelotti not fazed by Brazil criticism as new era continues in Australia",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1n1e74jn0yv6m1ljyhdzmoq185-ancelotti-not-fazed-brazil-criticism-new-era-continues-australia",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/31/24/carlo-ancelotti_1dt1tmud8hlo41o6dtspdrm8m0.png?t=-343820592&w=1260&h=708",
-      "publishedAt": "2026-09-28T15:12:38.000Z"
-    },
-    {
-      "id": "ftbpro_01m3m1j0789g",
-      "title": "Hansi Flick Favorite Gives Barcelona Injury Headache After Emergency Withdrawal",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3m1j0789g/hansi-flick-favorite-gives-barcelona-injury-headache-after-emergency-withdrawal",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3m20fsxjq6dceg39v.jpg",
-      "publishedAt": "2026-09-28T14:45:00.000Z"
-    },
-    {
-      "id": "1d07y7chvkt2315assq5aajgdh",
-      "title": "Gonzalez fumes at 'refereeing mistakes' in Miami's defeat to Columbus",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1d07y7chvkt2315assq5aajgdh-gonzalez-fumes-at-refereeing-mistakes-miamis-defeat-columbus",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/72/46/cristian-gonzalez_1uwf9fhv542cw1csz8f98vwy52.png?t=-345160528&w=1260&h=708",
-      "publishedAt": "2026-09-28T14:35:14.000Z"
-    },
-    {
-      "id": "s46dt358tiur1j08lqbuiaksi",
-      "title": "'No one is bored with winning' – Yamal targets more silverware with Spain",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/s46dt358tiur1j08lqbuiaksi-no-one-is-bored-winning-yamal-targets-more-silverware-spain",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/14/90/lamine-yamal_s2arf0rdahta1jbvfrhg3vw6l.jpg?t=-349356080&w=640&h=360",
-      "publishedAt": "2026-09-28T14:14:03.000Z"
-    },
-    {
-      "id": "ftbpro_01m3kvya787x",
-      "title": "How David Beckham Made More Money Than Every National Team at the 2026 World Cup",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3kvya787x/how-david-beckham-made-more-money-than-every-national-team-at-2026-world-cup",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1442,h_811,x_599,y_261/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3kw29e7zaqthx4a44.jpg",
-      "publishedAt": "2026-09-28T14:00:04.000Z"
     }
   ],
   "articles": {
@@ -287,6 +287,34 @@
         "&quot;We&#39;ll approach the match against Croatia as if it were our last. These players are always eager to keep developing.&quot;"
       ],
       "html": "<p>Luis de la Fuente insists Spain have &quot;no intention of stopping winning&quot;&nbsp;after securing a 3-2 comeback win over England to start their Nations League campaign.</p>\n\n<p>Lamine Yamal put the world champions ahead after just 105 seconds, capitalising on a Marc Guehi mistake, but they found themselves behind at the break after goals from Anthony Gordon and Harry Kane.</p>\n\n<p>A slow start to the second half saw Rodri give away a penalty, but Spain were given a reprieve when Kane sent his spot-kick crashing against the bar.</p>\n\n<p>Two substitutes then flipped the script, with Alex Baena equalising before setting up Mikel Oyarzabal for the winner.</p>\n\n<p>Spain are now unbeaten in their last 39 matches (across 90 minutes), extending the record run among all European nations in all competitions (W30 D9).</p>\n\n<p>La Roja, who dominated for long periods, have won each of their last eight competitive matches, and De la Fuente was particularly impressed with the resilience his side showed.</p>\n\n<p>&quot;We are very happy with the result, with the performance, and for having shown the world that we have a lot of ambition and a strong desire to win,&quot; he told Teledeporte.</p>\n\n<p>&quot;It is true that there were moments when we had to suffer. But this is England.</p>\n\n<p>&quot;We talked at half-time. We had the game under control; we had three clear chances. We continue to show that this team never gives up, that we have no intention of stopping winning.</p>\n\n<p>&quot;I&#39;m lucky to have these players. Anyone can step onto the pitch and be ready. It&#39;s about trying to make changes. They have exceptional talent.&quot;</p>\n\n\n<p>Spain could have been out of sight in the first 30 minutes against England, with Ferran Torres having a goal disallowed for offside before he saw two golden one-on-one chances against James Trafford go begging.</p>\n\n<p>Dani Olmo and Yamal also wasted opportunities before the Three Lions scored, and they went into half-time knowing they had conceded more goals in those 45 minutes (two) than they did in their World Cup-winning campaign (one).</p>\n\n<p>&quot;We conceded both of England&#39;s goals; it was a moment of disconnection,&quot; De la Fuente said in his press conference.</p>\n\n<p>&quot;They could hurt us, and we weren&#39;t able to fight them back. Generally speaking, the game was under control against a superpower.</p>\n\n<p>&quot;We all played our part, and I think we had the game under control against such a powerful opponent.&quot;</p>\n\n<p>And when asked about the current unbeaten streak, he added: &quot;What this generation of footballers is doing is truly remarkable.</p>\n\n<p>&quot;They never stop striving to improve. The statistics speak for themselves. It&#39;s incredibly difficult to replicate what Spain is achieving.</p>\n\n<p>&quot;We&#39;ll approach the match against Croatia as if it were our last. These players are always eager to keep developing.&quot;</p>\n"
+    },
+    "10nyiozd0a42n1mxlmxnedd14s": {
+      "id": "10nyiozd0a42n1mxlmxnedd14s",
+      "title": "Mancini sets his sights on France after dominant victory over Turkiye",
+      "subtitle": "Roberto Mancini claimed his first win since returning to manage Italy against Turkiye, but he is already thinking of the next match.",
+      "source": "FotMob",
+      "sourceUrl": "/news/10nyiozd0a42n1mxlmxnedd14s-mancini-sets-his-sights-france-after-dominant-victory-over-turkiye",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/18/a/roberto-mancini_187xltqr90lvp1nupy5zx5wyji.png?t=-294708592&w=1200&h=630",
+      "publishedAt": "2026-09-28T22:29:18.000Z",
+      "paragraphs": [
+        "Roberto Mancini immediately switched his focus to Italy&#39;s trip to France after he claimed his first win in his second stint with the Azzurri against Turkiye in the Nations League.",
+        "Mancini watched on as his Italy team emerged 4-1 victors in&nbsp;Bursaspor, with three goals inside the opening 27 minutes doing the damage against Vincenzo Montella&#39;s side.&nbsp;",
+        "Alessandro Bastoni handed the visitors a ninth-minute lead before&nbsp;Davide Frattesi rounded off an excellent passing move to double Italy&#39;s advantage in the 22nd minute.&nbsp;",
+        "Michael Kayode, on his international debut, put the Azzurri out of sight, as Italy&nbsp;scored three goals inside the first 30 minutes of play for the first time since a World Cup qualifier against Lithuania in September 2021.&nbsp;",
+        "Baris Alper Yilmaz threatened a comeback early in the second half, but&nbsp;Francesco Pio Esposito restored Italy&#39;s three-goal advantage in the 50th minute to seal an impressive win.&nbsp;",
+        "The result saw Italy win an away match by a 3+ goal margin for the first time since November 2019, when they beat Bosnia-Herzegovina 3-0.&nbsp;",
+        "More importantly, the Azzurri claimed their first win under Mancini, 1,198 days since his last win in charge of Italy, which came in a 3-2 triumph over the Netherlands in June 2023.",
+        "However, Mancini was already thinking about Italy&#39;s next game, which takes them to the&nbsp;Stade de France to face Zinedine Zidane&#39;s side, who sit top of Group A1 following their late win against Belgium on Monday.",
+        "&quot;Now we have to focus on the next match, try to recover our strength, we&#39;ve got fresh legs at home and will try to have our say in Paris,&quot; Mancini told&nbsp;RAI Sport.",
+        "The victory marked a huge improvement to the one Mancini oversaw on his second debut, with Italy outclassed during their 2-0 defeat against Belgium at the&nbsp;Stadio Olimpico.&nbsp;",
+        "Italy only registered an expected goals (xG) total of 1.7 from their 21 shots against Belgium, but they improved that to 2.4&nbsp;from 14&nbsp;attempts in a clinical display against Turkiye.",
+        "Mancini did, however, confirm that&nbsp;Giacomo Raspadori&#39;s substitution at half-time was because of an injury, and he was unable to add whether he would be available to face France and then Turkiye at home.&nbsp;",
+        "&quot;We were on a pitch where it had been raining for a whole day, and it was only natural to expect a response from Turkiye,&quot; Mancini added.&nbsp;",
+        "&quot;Everyone played a great game. Raspadori went off with a problem.",
+        "&quot;We were worried that we might have to take him off after five minutes in the second half, so we substituted him at the break.",
+        "&quot;The team pushed up, kept the ball, moved it around well. Raspadori did what we asked; he had a good game.&quot;"
+      ],
+      "html": "<p>Roberto Mancini immediately switched his focus to Italy&#39;s trip to France after he claimed his first win in his second stint with the Azzurri against Turkiye in the Nations League.</p>\n\n<p>Mancini watched on as his Italy team emerged 4-1 victors in&nbsp;Bursaspor, with three goals inside the opening 27 minutes doing the damage against Vincenzo Montella&#39;s side.&nbsp;</p>\n\n<p>Alessandro Bastoni handed the visitors a ninth-minute lead before&nbsp;Davide Frattesi rounded off an excellent passing move to double Italy&#39;s advantage in the 22nd minute.&nbsp;</p>\n\n<p>Michael Kayode, on his international debut, put the Azzurri out of sight, as Italy&nbsp;scored three goals inside the first 30 minutes of play for the first time since a World Cup qualifier against Lithuania in September 2021.&nbsp;</p>\n\n<p>Baris Alper Yilmaz threatened a comeback early in the second half, but&nbsp;Francesco Pio Esposito restored Italy&#39;s three-goal advantage in the 50th minute to seal an impressive win.&nbsp;</p>\n\n<p>The result saw Italy win an away match by a 3+ goal margin for the first time since November 2019, when they beat Bosnia-Herzegovina 3-0.&nbsp;</p>\n\n<p>More importantly, the Azzurri claimed their first win under Mancini, 1,198 days since his last win in charge of Italy, which came in a 3-2 triumph over the Netherlands in June 2023.</p>\n\n<p>However, Mancini was already thinking about Italy&#39;s next game, which takes them to the&nbsp;Stade de France to face Zinedine Zidane&#39;s side, who sit top of Group A1 following their late win against Belgium on Monday.</p>\n\n<p>&quot;Now we have to focus on the next match, try to recover our strength, we&#39;ve got fresh legs at home and will try to have our say in Paris,&quot; Mancini told&nbsp;RAI Sport.</p>\n\n\n<p>The victory marked a huge improvement to the one Mancini oversaw on his second debut, with Italy outclassed during their 2-0 defeat against Belgium at the&nbsp;Stadio Olimpico.&nbsp;</p>\n\n<p>Italy only registered an expected goals (xG) total of 1.7 from their 21 shots against Belgium, but they improved that to 2.4&nbsp;from 14&nbsp;attempts in a clinical display against Turkiye.</p>\n\n<p>Mancini did, however, confirm that&nbsp;Giacomo Raspadori&#39;s substitution at half-time was because of an injury, and he was unable to add whether he would be available to face France and then Turkiye at home.&nbsp;</p>\n\n<p>&quot;We were on a pitch where it had been raining for a whole day, and it was only natural to expect a response from Turkiye,&quot; Mancini added.&nbsp;</p>\n\n<p>&quot;Everyone played a great game. Raspadori went off with a problem.</p>\n\n<p>&quot;We were worried that we might have to take him off after five minutes in the second half, so we substituted him at the break.</p>\n\n<p>&quot;The team pushed up, kept the ball, moved it around well. Raspadori did what we asked; he had a good game.&quot;</p>\n"
     },
     "1108t1oiygwmm12mk678wpl61h": {
       "id": "1108t1oiygwmm12mk678wpl61h",
@@ -1412,6 +1440,36 @@
       ],
       "html": "<p>Alyssa Thompson&#39;s first-half strike downed wasteful Arsenal as Chelsea secured a 1-0 win that moved them third in the Women&#39;s Super League.&nbsp;</p>\n\n<p>Chelsea took advantage of a sloppy piece of defending from Arsenal six minutes before the break, and Renee Slegers&#39; side could not find an equaliser as they tasted defeat for the first time this season.</p>\n\n<p>Arsenal started fairly well, with Kyra Cooney-Cross causing problems, though she saw an early shot blocked by her own team-mate.</p>\n\n<p>Kim Little – making her 184th WSL appearance for Arsenal – almost caught Chelsea out with a cross that deflected towards goal and had Hannah Hampton worried, but it struck the crossbar.</p>\n\n<p>Mariona Caldentey also struck the woodwork; Alessia Russo started a fast break, picking out Little on the right, and her switch found the Spaniard, who drilled her low shot against the foot of the near post.</p>\n\n<p>But Arsenal created their own problems in the 39th minute, with Steph Catley&#39;s loose clearance pounced upon. Kiera Walsh&#39;s powerful strike was pushed away by Anneke Borbe, but only as far as Thompson, who emphatically fired into the roof of the net from close range.</p>\n\n<p>Melvine Malard then broke forward on the counter-attack four minutes later, racing down the right with nobody closing her down, but Borbe made herself big to smother the angled attempt.</p>\n\n<p>It was a much-improved Arsenal who emerged after the break, with Lisa Baum and Caldentey both forcing Hampton into action.</p>\n\n<p>Malard then ghosted between two Arsenal defenders only to flick a close-range effort wide, while Stina Blackstenius raced in behind only to chip over under pressure from Hampton, though the offside flag would have denied her anyway.</p>\n\n\n<p><strong>Arsenal&#39;s scoring woes go on as Chelsea stay unbeaten</strong></p>\n\n<p>It was a fairly cagey London derby between two sides who desperately needed a win so they did not lose sight of leaders Manchester City.</p>\n\n<p>Chelsea are now unbeaten across their opening four games of a WSL campaign for the fourth successive season, while Arsenal only have five points to their name at this stage for the second time in the last three seasons (also 2024-25).</p>\n\n<p>Arsenal&#39;s attacking troubles have drawn the eye this season as they have netted just two goals this campaign, and despite piling the pressure on Chelsea, especially in the closing stages, they never looked likely to get a goal.</p>\n\n<p>They had 18&nbsp;shots overall, but only two of those were on target, and their 1.04&nbsp;expected goals (xG) tells the story of their lack of spark in the box as they dawdled over their chances.</p>\n\n<p>This loss ends Arsenal&#39;s 20-game unbeaten league streak, but they will feel they could have had a late equaliser from the spot after a handball by Ellie Carpenter in the box, but nothing was given, with her arm tight to her body when the ball hit her.</p>\n\n<p>Slegers had already beaten Sonia Bompastor twice this calendar year, but the Frenchwoman ensured she came out on top this time, even if she thinks Chelsea could have had more goals after getting seven of their 13 shots on target.</p>\n"
     },
+    "1lcd5udt7pv3314nikbdd0zwhj": {
+      "id": "1lcd5udt7pv3314nikbdd0zwhj",
+      "title": "Croatia 'not afraid' of Spain, says Kovacic",
+      "subtitle": "Croatia are looking to make it two wins from two in the 2026-27 Nations League, but next up for them is a trip to world champions Spain.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1lcd5udt7pv3314nikbdd0zwhj-croatia-not-afraid-spain-says-kovacic",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d3/8b/kovacic_17rwh6yk2wcp51lqbak1r5vjo6.jpg?t=-322770016&w=1200&h=630",
+      "publishedAt": "2026-09-28T22:01:26.000Z",
+      "paragraphs": [
+        "Mateo Kovacic insists Croatia are &quot;not afraid of anyone&quot;&nbsp;as they prepare to face world champions Spain in the Nations League.",
+        "Spain are the dominant figure in world football at the moment, having clinched their second World Cup over the summer with a 1-0 win over Argentina in the final.",
+        "They are currently on a 39-match unbeaten streak (across 90 minutes (W30 D9), the longest such run by a European nation in history.",
+        "Croatia won their opening Nations League match 2-1 against Czechia, and sit level on points with Spain, who enjoyed a 3-2 comeback win over England.",
+        "But as perhaps expected, Spain are heavy favourites in this clash, with the Opta supercomputer assigning them a 78.3% win probability to Croatia&#39;s 8.4%.",
+        "Kovacic, however, is not shying away from the challenge ahead of the team.",
+        "&quot;Of course. Spain, right now, is the best team in the world,&quot; he said. &quot;There&#39;s nothing better than playing against the best.",
+        "&quot;It will be a difficult match against the best team in the world. But it will be difficult for them too. We have played against them several times, and sometimes we have done very well. Hopefully, we can repeat that.",
+        "&quot;We&#39;re not afraid of anyone. We respect everyone. Spain is a very strong team. They&#39;re very united. They&#39;re a top team, but we&#39;ll focus on our own game.&quot;",
+        "Asked if getting a win on Tuesday would be impossible, Kovacic said: &quot;No.",
+        "&quot;We know about the 39 games without losing, but I don&#39;t want to dwell on that; I want to focus on our game and take the ball away from them.&quot;",
+        "Spain are unbeaten in their last three meetings with Croatia, winning two and drawing the other – though they eventually won that match on penalties in the Nations League.",
+        "Croatia&#39;s last win against Spain did come in this competition, winning 3-2 back in November 2018.",
+        "And Slaven Bilic is confident Spain are not unbeatable if Croatia can get their game plan right.",
+        "&quot;Spain has some strengths that can be exploited, as England showed,&quot; Bilic said.",
+        "&quot;We don&#39;t need a miracle; we need faith. We&#39;ve played great matches against them. Matches are long.",
+        "&quot;Against the Czechs, there were moments when we didn&#39;t know how to suffer. We can&#39;t repeat that. We know they&#39;ll have possession, but it can&#39;t always be theirs.",
+        "&quot;We must have confidence in what we do, in ourselves.&quot;"
+      ],
+      "html": "<p>Mateo Kovacic insists Croatia are &quot;not afraid of anyone&quot;&nbsp;as they prepare to face world champions Spain in the Nations League.</p>\n\n<p>Spain are the dominant figure in world football at the moment, having clinched their second World Cup over the summer with a 1-0 win over Argentina in the final.</p>\n\n<p>They are currently on a 39-match unbeaten streak (across 90 minutes (W30 D9), the longest such run by a European nation in history.</p>\n\n<p>Croatia won their opening Nations League match 2-1 against Czechia, and sit level on points with Spain, who enjoyed a 3-2 comeback win over England.</p>\n\n<p>But as perhaps expected, Spain are heavy favourites in this clash, with the Opta supercomputer assigning them a 78.3% win probability to Croatia&#39;s 8.4%.</p>\n\n<p>Kovacic, however, is not shying away from the challenge ahead of the team.</p>\n\n<p>&quot;Of course. Spain, right now, is the best team in the world,&quot; he said. &quot;There&#39;s nothing better than playing against the best.</p>\n\n<p>&quot;It will be a difficult match against the best team in the world. But it will be difficult for them too. We have played against them several times, and sometimes we have done very well. Hopefully, we can repeat that.</p>\n\n<p>&quot;We&#39;re not afraid of anyone. We respect everyone. Spain is a very strong team. They&#39;re very united. They&#39;re a top team, but we&#39;ll focus on our own game.&quot;</p>\n\n\n<p>Asked if getting a win on Tuesday would be impossible, Kovacic said: &quot;No.</p>\n\n<p>&quot;We know about the 39 games without losing, but I don&#39;t want to dwell on that; I want to focus on our game and take the ball away from them.&quot;</p>\n\n<p>Spain are unbeaten in their last three meetings with Croatia, winning two and drawing the other – though they eventually won that match on penalties in the Nations League.</p>\n\n<p>Croatia&#39;s last win against Spain did come in this competition, winning 3-2 back in November 2018.</p>\n\n<p>And Slaven Bilic is confident Spain are not unbeatable if Croatia can get their game plan right.</p>\n\n<p>&quot;Spain has some strengths that can be exploited, as England showed,&quot; Bilic said.</p>\n\n<p>&quot;We don&#39;t need a miracle; we need faith. We&#39;ve played great matches against them. Matches are long.</p>\n\n<p>&quot;Against the Czechs, there were moments when we didn&#39;t know how to suffer. We can&#39;t repeat that. We know they&#39;ll have possession, but it can&#39;t always be theirs.</p>\n\n<p>&quot;We must have confidence in what we do, in ourselves.&quot;</p>\n"
+    },
     "1lt0gsy8rcp0m114v5x2uuvnoz": {
       "id": "1lt0gsy8rcp0m114v5x2uuvnoz",
       "title": "Amorim vows not to repeat Man Utd errors with Milan",
@@ -1796,6 +1854,32 @@
       ],
       "html": "<p>Mauricio Pochettino&#39;s new-look United States team rallied in the second half to secure a 4-1 friendly win over Peru at Inter.co Stadium.</p>\n\n<p>Gianluca Lapadula cancelled out Justin Ellis&#39;&nbsp;early opener in the first half, but Malik Tillman, Julian Hall and Sebastian Berhalter all scored after the break to secure the victory.</p>\n\n<p>It took less than four minutes for debutant Ellis to score on his home ground in Orlando on his debut, as he met Giovanni Reyna&#39;s left-sided free-kick with a glancing header that went in off the far post.</p>\n\n<p>But Peru responded well to the setback and equalised within 11 minutes. Yoshimar Yotun looped a lovely cross into the far post, and Lapadula sent his header back across goal to restore parity.</p>\n\n<p>Tillman had the chance to restore the USA&#39;s lead in the 20th minute after meeting Peyton Miller&#39;s delivery first-time, but Pedro Gallese was well-placed to thwart him.</p>\n\n<p>Mathis Albert&#39;s introduction added a spark, and he won a penalty after cutting inside from the left, getting&nbsp;a shove right on the edge of the box in the 64th minute, though Peru believed the contact happened outside.</p>\n\n<p>Tillman stepped up to guide his spot-kick into the bottom-left corner, with Gallese unable to get a touch despite diving the right way.</p>\n\n<p>And Hall then got a debut goal of his own, getting between two defenders at the far post to tap in Berhalter&#39;s brilliantly dangerous low cross from the right in the 72nd minute.</p>\n\n<p>Berhalter then rounded off the goalscoring in the 90th minute with a stunning long-range finish that nestled into the top corner, giving Gallese no chance.</p>\n\n\n<p><strong>United States make strong post-World Cup start</strong></p>\n\n<p>The buzz of the World Cup was strong in the USA, leading to quite a bit of disappointment when they were knocked out of the tournament in the round of 16 by Belgium.</p>\n\n<p>But having lost three of their last four friendlies before the tournament, Pochettino shook up his pack, bringing on a lot of debutants, and he has now been given a good headache by his young players.</p>\n\n<p>Ellis, who had a joint-team-high three attempts,&nbsp;wasted little time making an impact on a pitch he knows well, and in the second half, Hall took less than 10 minutes to score his first international goal after coming off the bench.</p>\n\n<p>Pochettino made 10 changes, making sure to see as many in his squad as possible, and they impressed, having 16 shots, worth 2.39 expected goals (xG), with six of&nbsp;those on target.</p>\n\n<p>And while they impressed offensively, they also looked strong at the back, only facing two shots on target, though Lapadula&#39;s header was a well-taken goal.</p>\n"
     },
+    "1s4tz93967h5n1e5fvk2uf62ww": {
+      "id": "1s4tz93967h5n1e5fvk2uf62ww",
+      "title": "De la Fuente: Spain have recovered the spirit of 2010",
+      "subtitle": "Spain are showing no signs of slowing down as they prepare to play their first match on home soil since winning the World Cup.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1s4tz93967h5n1e5fvk2uf62ww-de-la-fuente-spain-have-recovered-spirit-2010",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/19/67/de-la-fuente_120q5ydaj6gu81jubbl4b5cimh.jpg?t=-307286080&w=1200&h=630",
+      "publishedAt": "2026-09-28T19:44:55.000Z",
+      "paragraphs": [
+        "Luis de la Fuente believes Spain have &quot;recovered the spirit of 2010&quot;&nbsp;with their recent exploits as his side prepare to host Croatia in the Nations League.",
+        "Spain are the reigning European and world champions, having lifted the World Cup for the second time in July by beating Argentina in the final.",
+        "On their way to clinching both titles, they have strung together a 39-game unbeaten streak (across 90 minutes), winning 30 of those matches (D9).",
+        "They extended their run with a stunning 3-2 comeback win over England, with Mikel Oyarzabal coming off the bench to haunt the Three Lions once more by scoring the winner.",
+        "Spain&#39;s next match will see them play on home soil for the first time since winning the World Cup, as they will host Croatia in Seville.",
+        "&quot;For us, it is a pride to see our country committed to the national team,&quot; De la Fuente said in his press conference.",
+        "&quot;Where we are going, we have recovered the spirit of 2010; people are proud to be Spanish.",
+        "&quot;I am honoured to be the national coach of my country. I have a house in Seville, and it causes me a very special emotion.&quot;",
+        "Spain are unbeaten in their last three meetings with Croatia, winning two and drawing the other – though they eventually won that match on penalties in the Nations League.",
+        "Like La Roja, Croatia also opened with a win on Saturday, beating Czechia 2-1, which only leaves them behind Spain on goal difference in Group A3.&nbsp;",
+        "&quot;Of course, I think Croatia can compete, and the first ones who have to believe it are them,&quot; De la Fuente said of their opponents.",
+        "&quot;If not, they would not run. There is no rival or perfect day. The height of these situations is that even if you are superior to the opponent, you can lose.",
+        "&quot;We know Croatia well; we have played a lot with them. They have world-class players and a very competent new coach.",
+        "&quot;We have to give a better version of the one we gave in London. Footballers understand it that way. Every day we demand more from ourselves because the opponents are more complicated every day.&quot;"
+      ],
+      "html": "<p>Luis de la Fuente believes Spain have &quot;recovered the spirit of 2010&quot;&nbsp;with their recent exploits as his side prepare to host Croatia in the Nations League.</p>\n\n<p>Spain are the reigning European and world champions, having lifted the World Cup for the second time in July by beating Argentina in the final.</p>\n\n<p>On their way to clinching both titles, they have strung together a 39-game unbeaten streak (across 90 minutes), winning 30 of those matches (D9).</p>\n\n<p>They extended their run with a stunning 3-2 comeback win over England, with Mikel Oyarzabal coming off the bench to haunt the Three Lions once more by scoring the winner.</p>\n\n<p>Spain&#39;s next match will see them play on home soil for the first time since winning the World Cup, as they will host Croatia in Seville.</p>\n\n<p>&quot;For us, it is a pride to see our country committed to the national team,&quot; De la Fuente said in his press conference.</p>\n\n<p>&quot;Where we are going, we have recovered the spirit of 2010; people are proud to be Spanish.</p>\n\n<p>&quot;I am honoured to be the national coach of my country. I have a house in Seville, and it causes me a very special emotion.&quot;</p>\n\n\n<p>Spain are unbeaten in their last three meetings with Croatia, winning two and drawing the other – though they eventually won that match on penalties in the Nations League.</p>\n\n<p>Like La Roja, Croatia also opened with a win on Saturday, beating Czechia 2-1, which only leaves them behind Spain on goal difference in Group A3.&nbsp;</p>\n\n<p>&quot;Of course, I think Croatia can compete, and the first ones who have to believe it are them,&quot; De la Fuente said of their opponents.</p>\n\n<p>&quot;If not, they would not run. There is no rival or perfect day. The height of these situations is that even if you are superior to the opponent, you can lose.</p>\n\n<p>&quot;We know Croatia well; we have played a lot with them. They have world-class players and a very competent new coach.</p>\n\n<p>&quot;We have to give a better version of the one we gave in London. Footballers understand it that way. Every day we demand more from ourselves because the opponents are more complicated every day.&quot;</p>\n"
+    },
     "1swnm130vactq13ofzh6lz9vl9": {
       "id": "1swnm130vactq13ofzh6lz9vl9",
       "title": "Sunderland hand Le Fee new five-year contract",
@@ -2161,6 +2245,30 @@
         "Both teams are back in action on Sunday, with Germany hosting Greece and the Netherlands visiting Serbia, but with Havertz and Brobbey both hobbling off, both came out of a bruising encounter with injury concerns.&nbsp;"
       ],
       "html": "<p>A stoppage-time equaliser from Cody Gakpo denied his former Liverpool boss Jurgen Klopp a winning start with Germany, as the Netherlands salvaged a 1-1 draw in the Nations League.</p>\n\n<p>It looked like Felix Nmecha&#39;s 32nd-minute strike would settle an entertaining and at times fractious affair between two old rivals under new coaches, with Barcelona great Xavi also making his Netherlands bow.</p>\n\n<p>But in the second of three minutes of second-half stoppage time, Gakpo met a cross from debutant Ruben van Bommel brilliantly on the stretch, ensuring the points were shared in Group A2.&nbsp;</p>\n\n<p>The first moment of drama came after 12 minutes, as Virgil van Dijk – another of Klopp&#39;s former Liverpool stalwarts – glanced Tijjani Reijnders&#39; inswinging corner beyond Marc-Andre ter Stegen. But a VAR review led to the goal being chalked off, due to Brian Brobbey backing into the Germany goalkeeper.</p>\n\n<p>Germany then saw Kai Havertz limp off following a high challenge from Quinten Timber, the twin brother of his Arsenal team-mate Jurrien, though substitute Younes Ebnoutalib almost made an immediate impact as Bart Verbruggen blocked his near-post drive.</p>\n\n<p>And another injury to a Premier League forward played a role in the opening goal. As the Netherlands appealed for a foul on the stricken Brobbey, Germany looked set to kick the ball out, but Nadiem Amiri and Joshua Kimmich instead kept the attack going, and Nmecha swept home after Nathaniel Brown&#39;s centre flicked into his path.</p>\n\n<p>A glaring miss from Karim Adeyemi prevented Germany from going 2-0 up late in the first half, but it was one-way traffic from then on with the Oranje laying siege to Ter Stegen&#39;s goal.</p>\n\n<p>He thwarted Denzel Dumfries from close range with his right boot, then Mexx Meerdink – another Netherlands debutant – put the ball in the net but saw a foul given against Van Dijk. The young AZ forward also turned Dumfries&#39; cross&nbsp;wide on the slide as Germany closed in on a big three points, but they would be denied with time almost up.&nbsp;</p>\n\n<p>Gakpo showed tremendous athleticism to divert Van Bommel&#39;s cross past Ter Stegen while in mid-air, though the Dutch forward was arguably fortunate to avoid a very late red card after the restart, when he trod on Yannik Engelhardt.</p>\n\n\n<p><strong>Gakpo denies Klopp as the Netherlands impress </strong></p>\n\n<p>Few international coaching debuts in recent years have been as eagerly anticipated as this one.</p>\n\n<p>Indeed, Klopp oversaw 674 games as a manager in the Bundesliga and the Premier League across spells with Mainz, Borussia Dortmund and Liverpool, the most matches in Europe&#39;s top five leagues that any Germany coach had accumulated before taking charge.</p>\n\n<p>But this game showed the size of the task awaiting him, as Germany were penned back throughout the second half by an impressive Netherlands side. The Oranje racked up 3.12 expected goals (xG) and 22 shots, compared to Germany&#39;s 1.5 xG from 10 attempts.</p>\n\n<p>And in the end, it was Gakpo – who played 79 games under him for Liverpool, scoring 23 goals in that time – that made Klopp wait for his first victory in charge of his country.</p>\n\n<p>There was at least a notable landmark for Klopp&#39;s captain Kimmich, who was at the centre of the controversy leading up to Nmecha&#39;s goal, on his 115th cap. He has now surpassed Toni Kroos (114) to sit seventh outright in Germany&#39;s all-time charts.</p>\n\n<p>Both teams are back in action on Sunday, with Germany hosting Greece and the Netherlands visiting Serbia, but with Havertz and Brobbey both hobbling off, both came out of a bruising encounter with injury concerns.&nbsp;</p>\n"
+    },
+    "1wyyx7kypvzng1kqcxsqdpbbbk": {
+      "id": "1wyyx7kypvzng1kqcxsqdpbbbk",
+      "title": "Sweden 3-1 Poland: Gyokeres scores again for Potter's men",
+      "subtitle": "Sweden made it two wins from two as they continue their bid for promotion to League A, with Viktor Gyokeres on the scoresheet once more.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1wyyx7kypvzng1kqcxsqdpbbbk-sweden-3-1-poland-gyokeres-scores-again-potters-men",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/10/e9/gyokeres_fw0oai9eq0fc11yplrsu7bn4x.jpg?t=-293916336&w=1200&h=630",
+      "publishedAt": "2026-09-28T21:41:03.000Z",
+      "paragraphs": [
+        "Viktor Gyokeres was on target for Sweden once again as Graham Potter&#39;s side stayed perfect in the Nations League with a 3-1 win over Poland.",
+        "Sebastian Szymanski had cancelled out Benjamin Nygren&#39;s early opener, but Yasin Ayari and Gyokeres both struck after the break to make it two wins from two in Group B4.",
+        "Piotr Zielinski and Patrik Walemark saw a shot saved at either end within the opening four minutes before Nygren nodded in Victor Lindelof&#39;s flick-on from a recycled corner eight minutes in.",
+        "Walemark was denied by a smart Marcin Bulka save at the near post shortly after, but Poland kept the pressure on and, after Matty Cash saw a driven shot pushed away by Viktor Johansson, they found an equaliser.",
+        "Nicola Zalewski shook off his defender on the left of the area&nbsp;and fizzed a dangerous cross into the six-yard box, with Szymanski sprinting forward to tap in from close range with two minutes of the first half remaining.",
+        "Ayari had already seen a curler touched behind in the second half before he got his 63rd-minute goal, this time bending his shot into the bottom-right corner after ghosting past Szymanski.",
+        "Gyokeres then made sure of the three points nine minutes later, volleying in unmarked at the far post after Walemark&#39;s perfectly weighted right-sided cross.",
+        "Gyokeres finds his groove with Sweden",
+        "It is no secret that Gyokeres has had a difficult start to the season, with the Arsenal striker restricted to a few appearances so far for the Gunners, though that might change following Kai Havertz&#39;s injury while away with Germany.",
+        "But with Sweden, who were without the injured Alexander Isak, he has already scored two goals in two games, making him their top scorer at the halfway stage of the international break.",
+        "Overall, he has now contributed to goals in his last five Nations League games (eight goals, two assists), but he was once again on the outskirts for large periods, having just two shots in total. His five touches in the opposition box were the second-highest total in the team, though.",
+        "Poland enjoyed a strong first half, with only one goal to show for it despite their 13 shots –&nbsp;which were more than Sweden managed throughout the entire 90 minutes (12) –&nbsp;but even after throwing on&nbsp;Robert Lewandowski in the closing stages, they could not mount a fightback."
+      ],
+      "html": "<p>Viktor Gyokeres was on target for Sweden once again as Graham Potter&#39;s side stayed perfect in the Nations League with a 3-1 win over Poland.</p>\n\n<p>Sebastian Szymanski had cancelled out Benjamin Nygren&#39;s early opener, but Yasin Ayari and Gyokeres both struck after the break to make it two wins from two in Group B4.</p>\n\n<p>Piotr Zielinski and Patrik Walemark saw a shot saved at either end within the opening four minutes before Nygren nodded in Victor Lindelof&#39;s flick-on from a recycled corner eight minutes in.</p>\n\n<p>Walemark was denied by a smart Marcin Bulka save at the near post shortly after, but Poland kept the pressure on and, after Matty Cash saw a driven shot pushed away by Viktor Johansson, they found an equaliser.</p>\n\n<p>Nicola Zalewski shook off his defender on the left of the area&nbsp;and fizzed a dangerous cross into the six-yard box, with Szymanski sprinting forward to tap in from close range with two minutes of the first half remaining.</p>\n\n<p>Ayari had already seen a curler touched behind in the second half before he got his 63rd-minute goal, this time bending his shot into the bottom-right corner after ghosting past Szymanski.</p>\n\n<p>Gyokeres then made sure of the three points nine minutes later, volleying in unmarked at the far post after Walemark&#39;s perfectly weighted right-sided cross.</p>\n\n\n<p><strong>Gyokeres finds his groove with Sweden</strong></p>\n\n<p>It is no secret that Gyokeres has had a difficult start to the season, with the Arsenal striker restricted to a few appearances so far for the Gunners, though that might change following Kai Havertz&#39;s injury while away with Germany.</p>\n\n<p>But with Sweden, who were without the injured Alexander Isak, he has already scored two goals in two games, making him their top scorer at the halfway stage of the international break.</p>\n\n<p>Overall, he has now contributed to goals in his last five Nations League games (eight goals, two assists), but he was once again on the outskirts for large periods, having just two shots in total. His five touches in the opposition box were the second-highest total in the team, though.</p>\n\n<p>Poland enjoyed a strong first half, with only one goal to show for it despite their 13 shots –&nbsp;which were more than Sweden managed throughout the entire 90 minutes (12) –&nbsp;but even after throwing on&nbsp;Robert Lewandowski in the closing stages, they could not mount a fightback.</p>\n"
     },
     "1wzp4sylqp3g14dctwhmxr2c7": {
       "id": "1wzp4sylqp3g14dctwhmxr2c7",
@@ -3412,6 +3520,37 @@
         "Sign up and be the first to receive exclusive stats, news, and updates\n        from Opta Analyst."
       ]
     },
+    "CC5F12220B5C8213383092A31CE32B21": {
+      "id": "CC5F12220B5C8213383092A31CE32B21",
+      "title": "The MLS Wrap: Wonderkids go international and another Messi golazo isn’t enough for Inter Miami",
+      "subtitle": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/topnews/29821-mls-wrap-wonderkids-go-international-another-messi-golazo-isnt-enough-inter-miami?utm_source=fotmob",
+      "imageUrl": "https://latest.fotmob.com/wp-content/uploads/2026/09/Covers_MLS-Wrap-2809-1.png",
+      "publishedAt": "2026-09-28T20:07:30.000Z",
+      "paragraphs": [
+        "NewsAboutTV schedulesThe MLS Wrap: Wonderkids go international and another Messi golazo isn’t enough for Inter MiamiShareAs is regularly the case, MLS fixtures continued during the international break, and some of the league’s in-form teams managed to put in strong showings despite missing several players to national team duty.",
+        "Lionel Messi leads the highlight reels once again, and two of the best teams in the division continued their good performances.",
+        "But the most notable MLS story from this round of games comes not from those league matches, but from the international window itself and the United States team that defeated Peru 4-1 on Saturday.",
+        "Mauricio Pochettino selected a squad of promising young players, including one who’s been a regular feature in this column of late, Cavan Sullivan.",
+        "The Philadelphia Union teenager, who turned 17 today, made his national team debut versus Peru and put in an impressive display, having been selected in the starting XI.",
+        "There were performances throughout the US team that showcased the homegrown talent coming through in MLS in 2026.",
+        "🇺🇸 Mauricio Pochettino gives youth a chance and the USMNT beat Peru convincingly. The starting line-up had an average age of 23. And from the bench, both Sebastian Berhalter (25) and Julian Hall (18) scored and assisted goals. pic.twitter.com/5Hl10rvsdr",
+        "The opening goal was scored by Orlando City 19-year-old attacker Justin Ellis, while the 18-year-old New England Revolution winger, Peyton Miller, started at left-back and grew into the game.",
+        "There were then numerous MLS-based international debutants off the bench, with one of them, Red Bull New York’s 18-year-old striker Julian Hall, getting the third goal in the 4-1 win.",
+        "There were also international debuts for young MLS stars Adri Mehmeti (17 years old, Red Bulls), Neil Pierre (18, Philadelphia), Brooklyn Raines (21, New England), and Frankie Westfield (20, Philadelphia).",
+        "Other foreign-based youngsters, Mathis Albert (17, Borussia Dortmund), Zavier Gozo (19, Crystal Palace), and goalkeeper Diego Kochen (20, Lyngby) also made their first senior international appearances.",
+        "But from an MLS perspective, it was encouraging that so many homegrown players have made the step up this season.",
+        "Not just to first-team football at club level, becoming regulars and in some cases key players for their teams, but also being recognised by Pochettino for international call-ups and then playing their part in a good win.",
+        "FC Dallas’ good form started to show in the overall MLS table following their 1-0 win at home to Los Angeles FC this weekend.",
+        "Both sides were missing key attackers, most notably Denis Bouanga and Son Heung-min for LAFC and Petar Musa for FC Dallas, but the team from Texas managed to keep their run going, making it four wins from their last five games.",
+        "Musa has been the outstanding player for Dallas this season. He’s ahead of Messi for goals per 90 minutes, at 0.95, and is second only to Messi for shots on target per 90.",
+        "In his absence, the FC Dallas goal came via a header from centre-back Osaze Urhoghide from a Joaquín Valiente corner.",
+        "Goalkeeper Daniel has been one of the better stoppers in MLS for several years now, and has performed well in his last two games, having joined FC Dallas from San Jose this summer.",
+        "This latest win saw them overtake St. Louis City, Houston Dynamo, New England Revolution, and Inter Miami to claim third spot in the Supporters’ Shield standings.",
+        "On the other side of the coin, this latest defeat saw LAFC make the decision to sack head coach Marc Dos Santos."
+      ]
+    },
     "CC8E1DA32BA2A2758E902904D427E627": {
       "id": "CC8E1DA32BA2A2758E902904D427E627",
       "title": "Spain Built the Youth Development Pathway England Still Crave",
@@ -3730,6 +3869,38 @@
         "Yamal will be in action for Spain on Saturday, as they go to Wembley to face England in their opening Nations League fixture, defending a 38-game unbeaten run (W29 D9), which is the longest ever streak by a European nation."
       ],
       "html": "<p>Lamine Yamal believes lifting the World Cup with Spain should aid his hopes of winning the Ballon d&#39;Or, with Harry Kane and Kylian Mbappe viewed as his main rivals.&nbsp;</p>\n\n<p>Yamal helped La Roja win their second world title in North America this year, although his individual impact at the tournament was limited after his 2025-26 season was ended prematurely by a hamstring injury.</p>\n\n<p>He registered 24 goals and 17 assists in 45 outings across all competitions last season, helping Barcelona retain their LaLiga title, with his 41 combined goal involvements being the sixth-most of any player from Europe&#39;s top five leagues.&nbsp;</p>\n\n<p>Yamal also attempted (429) and completed (225) the most dribbles of any player, while his 59 chances created following carries were also the most.&nbsp;</p>\n\n<p>On Tuesday, Spain coach Luis de la Fuente declared one of his players should win the prize, just as Rodri did when they triumphed at Euro 2024.</p>\n\n<p>And Yamal, who has not been shy about making his case as the October 26 ceremony inches closer, concurs with that view.&nbsp;</p>\n\n<p>&quot;It&#39;s the award for the best player of the year, a player who is different, who is a pleasure to watch play, the one who has that magic, who makes you smile, who makes you want to watch a game just for him,&quot; Yamal said in an interview with L&#39;Equipe.</p>\n\n<p>&quot;I think my way of playing is my strongest argument and what makes me different.&nbsp;</p>\n\n<p>&quot;It&#39;s very important, in addition to being a good player, that you make your team win.</p>\n\n<p>&quot;The advantage I have is that I have been able to win the World Cup this year and, obviously, that is a plus for me.</p>\n\n<p>&quot;But if a person says, &#39;Lionel Messi deserves it&#39; or &#39;Rodri deserves it&#39;, that&#39;s totally respectable.&quot;</p>\n\n\n<p>Having come through the ranks at Barca, Yamal has faced plenty of comparisons to Messi, who he outshone in the World Cup final as Spain edged out Argentina in extra time.</p>\n\n<p>But the 19-year-old wants to be remembered on his own terms, saying: &quot;I play to make history, so that in 30 years&#39; time, young people will say, &#39;he was really very good too&#39;.&nbsp;&nbsp;</p>\n\n<p>&quot;But I don&#39;t want to compare myself to anyone. I want to be Lamine Yamal, I want to be remembered as Lamine Yamal, and I hope to be among the greats.&quot;</p>\n\n<p>Yamal will be in action for Spain on Saturday, as they go to Wembley to face England in their opening Nations League fixture, defending a 38-game unbeaten run (W29 D9), which is the longest ever streak by a European nation.</p>\n"
+    },
+    "bhh5cf70r3o61gj47k7td791s": {
+      "id": "bhh5cf70r3o61gj47k7td791s",
+      "title": "Czechia clash too early to be a 'must-win' game for England, says Tuchel",
+      "subtitle": "England and Czechia face off in their quest for a first Nations League win on Tuesday, but Thomas Tuchel said victory was not a must.",
+      "source": "FotMob",
+      "sourceUrl": "/news/bhh5cf70r3o61gj47k7td791s-czechia-clash-too-early-be-must-win-game-england-says-tuchel",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/5c/b9/thomas-tuchel_4iup7zzbl2mi15b2fxue5buuq.png?t=-311236336&w=1200&h=630",
+      "publishedAt": "2026-09-28T20:25:26.000Z",
+      "paragraphs": [
+        "Thomas Tuchel believes it is too early to label England&#39;s Nations League clash against Czechia as a &quot;must-win&quot; game following their defeat to Spain.",
+        "England make the trip to&nbsp;Fortuna Arena on Tuesday, aiming to get their Nations League campaign back on track after they were beaten 3-2 by Luis de la Fuente&#39;s side.&nbsp;",
+        "The result saw the Three Lions&nbsp;lose a match they led at half-time for the first time since June 2019, which also came in the Nations League against the Netherlands.&nbsp;",
+        "It will be England&#39;s first away game against Czechia since October 2019 –&nbsp;a 2-1 defeat in a European Championship qualifier. Only Spain (a run of three), France and Sweden (both two) have won consecutive matches against the Three Lions this century.&nbsp;",
+        "England come into the game having conceded 13 goals in their last six games, almost double the amount they had in their first 17 matches under Tuchel (seven).&nbsp;",
+        "Following their meeting with Czechia, England travel to Croatia before facing Santi Denia&#39;s side again at Wembley Stadium on October 6, though Tuchel believes that failure to win the first clash was not the end of the world for his team.&nbsp;",
+        "&quot;It&#39;s a bit early for must-win. I know what you mean, but it is a bit early in the group for a must-win,&quot; Tuchel told reporters.&nbsp;",
+        "&quot;We always arrive and prepare the team with a target to win. It was the target against Spain, and it is the same [against Czechia].",
+        "&quot;We respect the quality and the challenge it brings. You play in Prague against Czechia; it is difficult. There will be support for the home team.",
+        "&quot;We always prepare for the win; we want the win. It is too early to speak for a must. It would be ideal.&nbsp;The problem is the opponent on the other side.&quot;",
+        "England have lost just one of their last nine meetings with Czechia in all competitions (W6 D2), though it was on their last visit to the nation in October 2019 (1-2).",
+        "But Czechia are another team who are looking to get their Nations League campaign up and running after they were beaten 2-1 by Croatia in their opening match.&nbsp;",
+        "Czechia have lost their last two games in all competitions, last losing more consecutively between June and September 2022 (four), but Tuchel is expecting a tough test.&nbsp;",
+        "&quot;We only analysed one game from the Czech team, as they have a new coach,&quot; Tuchel added.&nbsp;We saw a flexible midfield of three. A lot of changes in position.",
+        "&quot;Wingers, attacking full-backs and a team that was well-organised. Full of motivation to take their chance, that is what we saw.",
+        "&quot;I feel I always need a result; you always need a result in football to get confidence, to get the support and belief.",
+        "&quot;Especially after a defeat. If everyone in the camp truly believes, even then you still need it for yourself. The best reaction is if you can prove it in a result.&quot;",
+        "Tuchel also refused to rule out&nbsp;Nico O&#39;Reilly and&nbsp;Ezri Konsa from playing against Czechia after the pair missed training because of minor injuries.&nbsp;",
+        "&quot;I am not sure yet [will they play]. They missed training because of minor issues, but they are still issues,&quot; Tuchel said.",
+        "&quot;They need to be assessed, and we will see [on Tuesday].&quot;"
+      ],
+      "html": "<p>Thomas Tuchel believes it is too early to label England&#39;s Nations League clash against Czechia as a &quot;must-win&quot; game following their defeat to Spain.</p>\n\n<p>England make the trip to&nbsp;Fortuna Arena on Tuesday, aiming to get their Nations League campaign back on track after they were beaten 3-2 by Luis de la Fuente&#39;s side.&nbsp;</p>\n\n<p>The result saw the Three Lions&nbsp;lose a match they led at half-time for the first time since June 2019, which also came in the Nations League against the Netherlands.&nbsp;</p>\n\n<p>It will be England&#39;s first away game against Czechia since October 2019 –&nbsp;a 2-1 defeat in a European Championship qualifier. Only Spain (a run of three), France and Sweden (both two) have won consecutive matches against the Three Lions this century.&nbsp;</p>\n\n<p>England come into the game having conceded 13 goals in their last six games, almost double the amount they had in their first 17 matches under Tuchel (seven).&nbsp;</p>\n\n<p>Following their meeting with Czechia, England travel to Croatia before facing Santi Denia&#39;s side again at Wembley Stadium on October 6, though Tuchel believes that failure to win the first clash was not the end of the world for his team.&nbsp;</p>\n\n<p>&quot;It&#39;s a bit early for must-win. I know what you mean, but it is a bit early in the group for a must-win,&quot; Tuchel told reporters.&nbsp;</p>\n\n<p>&quot;We always arrive and prepare the team with a target to win. It was the target against Spain, and it is the same [against Czechia].</p>\n\n<p>&quot;We respect the quality and the challenge it brings. You play in Prague against Czechia; it is difficult. There will be support for the home team.</p>\n\n<p>&quot;We always prepare for the win; we want the win. It is too early to speak for a must. It would be ideal.&nbsp;The problem is the opponent on the other side.&quot;</p>\n\n\n<p>England have lost just one of their last nine meetings with Czechia in all competitions (W6 D2), though it was on their last visit to the nation in October 2019 (1-2).</p>\n\n<p>But Czechia are another team who are looking to get their Nations League campaign up and running after they were beaten 2-1 by Croatia in their opening match.&nbsp;</p>\n\n<p>Czechia have lost their last two games in all competitions, last losing more consecutively between June and September 2022 (four), but Tuchel is expecting a tough test.&nbsp;</p>\n\n<p>&quot;We only analysed one game from the Czech team, as they have a new coach,&quot; Tuchel added.&nbsp;We saw a flexible midfield of three. A lot of changes in position.</p>\n\n<p>&quot;Wingers, attacking full-backs and a team that was well-organised. Full of motivation to take their chance, that is what we saw.</p>\n\n<p>&quot;I feel I always need a result; you always need a result in football to get confidence, to get the support and belief.</p>\n\n<p>&quot;Especially after a defeat. If everyone in the camp truly believes, even then you still need it for yourself. The best reaction is if you can prove it in a result.&quot;</p>\n\n<p>Tuchel also refused to rule out&nbsp;Nico O&#39;Reilly and&nbsp;Ezri Konsa from playing against Czechia after the pair missed training because of minor injuries.&nbsp;</p>\n\n<p>&quot;I am not sure yet [will they play]. They missed training because of minor issues, but they are still issues,&quot; Tuchel said.</p>\n\n<p>&quot;They need to be assessed, and we will see [on Tuesday].&quot;</p>\n"
     },
     "blzjyjvf6m8e19peb688fslxv": {
       "id": "blzjyjvf6m8e19peb688fslxv",
@@ -9060,6 +9231,36 @@
         "feed. READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m3kmct6asm": {
+      "id": "ftbpro_01m3kmct6asm",
+      "title": "Australia vs. Brazil: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/australia-vs-brazil-preview-predictions-lineups-9-29-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m39ncbgbdk0xdfq7h8.jpg",
+      "publishedAt": "2026-09-28T22:00:00.000Z",
+      "paragraphs": [
+        "By James Cormack6:00 PM EDTBrazil faces off against Australia. / Joe Prior/Visionhaus/Getty Images (Australia), Visionhaus/Getty Images (Brazil)Brazil and Australia lock horns for the second and final time as the Seleção completes its tour Down Under with a friendly in Brisbane.",
+        "The start of a fresh cycle didn’t exactly offer a great reset for Carlo Ancelotti’s side in Townsville on Friday, with a suboptimal playing surface facilitating a rather scrappy encounter that ended 1–1.",
+        "Rayan’s last-gasp strike cancelled out Nestory Irankunda’s stunning free-kick, as the Socceroos were denied a famous victory.",
+        "Ancelotti was particularly scathing of the pitch postmatch, but did recognise the stringent organization of Tony Popovic’s Australia. The hosts did an excellent job of keeping the dominant visitors at arm‘s length until the very last moment.",
+        "Popovic insisted his players were disappointed with the result, depicting a &#34;sign of progress&#34; after Australia’s early knockout stage elimination at the World Cup.",
+        "dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC",
+        "Brazil was held in Townsville. / Albert Perez/Getty ImagesBoth managers are hopeful that Brisbane’s Suncorp Stadium will allow for a more impressive spectacle on Tuesday, but Popovic, who’s previously voiced his displeasure about the quality of Australian pitches, has said that consistently pristine surfaces across the country are a &#34;dream that’s not close to reality.&#34;",
+        "Still, the discourse surrounding playing surfaces shouldn’t take away from the Socceroos’ dogged effort in Townsville in the absence of several key players from its World Cup campaign. While Brazil dominated territorially, as you’d expect, Australia would’ve been good value for its victory.",
+        "Ancelotti has shaken things up after the summer’s disappointment, and we’re unlikely to see the most stunning iteration of the Seleção for a little while yet. Australia will be confident of securing the victory that only just eluded them last time out.",
+        "Popovic is likely to retain the same core. / FotMobPopovic has named seven uncapped players on his roster and lost Mohamed Touré and Alexander Robertson’s through injuries before the first friendly with Brazil. Nishan Velupillay was called up as a replacement, but he didn’t take to the field.",
+        "Jordy Bos, Cameron Burgess, Cristian Volpato and Kai Trewin are among the names absent from this Australian roster, but there is at least some Bos representation via Jordy’s younger brother Kasey. He’s still awaiting his first cap.",
+        "Irankunda is emerging as the star of Australian soccer, proving why he became the country’s most expensive player in the summer with his pinpoint free-kick on Friday. He’s set to lead the Socceroos’ line on Tuesday over Tete Yengi, with Popovic introducing Riley McGree to his attack.",
+        "Australia predicted lineup vs. Brazil (3-4-2-1): Beach; Circati, Souttar, Herrington; Italiano, Irvine, O'Neill, Behich; McGree, Metcalfe; Irankunda.",
+        "Rayan could come into the team after scoring in the first friendly. / FotMobAncelotti warned reporters not to get used to his public team selections, and there has been no confirmation of Brazil’s starting lineup long before kick-off this time around.",
+        "The Seleção manager is expected to make several changes to his team in Brisbane, but heavy-hitters Raphinha and Vinícius Júnior could remain. The former has been outstanding for Barcelona at the start of the new season, albeit in a fluid center forward position. Ancelotti is more likely to use him as a No. 10 on Tuesday.",
+        "Vanderson was called up to replace the injured Wesley, and the Monaco man may come into the team at right back. Arsenal’s Gabriel should start alongside Marquinhos, while Manchester United midfielder Andrey Santos is poised to replace Danilo next to Bruno Guimarães.",
+        "After ensuring Brazil wasn’t beaten last time out, Rayan could be rewarded with a start down the right flank.",
+        "Brazil predicted lineup vs. Australia (4-2-3-1): Souza; Vanderson, Marquinhos, Gabriel, D. Santos; Guimarães, A. Santos; Rayan, Raphinha, Vinícius Júnior; Endrick.",
+        "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
     "ftbpro_01m3kpfzng3j": {
       "id": "ftbpro_01m3kpfzng3j",
       "title": "‘Large Majority’—Man Utd Squad’s Stance on Carrick After Shaky Start",
@@ -9112,6 +9313,36 @@
         "feed. READ THE LATEST LIVERPOOL NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m3kvkc1a9f": {
+      "id": "ftbpro_01m3kvkc1a9f",
+      "title": "Czechia vs. England—Nations League: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/czechia-vs-england-nations-league-preview-predictions-lineups-9-29-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3mfdyqzveeb29zsqt.jpg",
+      "publishedAt": "2026-09-29T00:00:01.000Z",
+      "paragraphs": [
+        "By James Cormack8:00 PM EDTBoth teams were defeated in their respective Nations League openers.  / Sebastian Widmann/UEFA/Getty Images (Czechia badge), Nike (England badge) While England could take encouragement from the 3–2 defeat to world champions Spain on Saturday, there‘s pressure on Thomas Tuchel’s side to deliver three points on Matchday 2 of the 2026–27 UEFA Nations League in Czechia.",
+        "Plenty of English supporters will never forgive Tuchel for the retreat in Atlanta, which saw England surrender its goal advantage in the dying embers to bitter rivals Argentina, thus meaning the Three Lions missed out on a first World Cup final since 1966.",
+        "Still, its third-place finish was England’s best performance at the tournament in 60 years, and Tuchel further committed to the project at the start of the year. Despite the errors and ineffective substitutions, Saturday’s performance offers hope that England will continue to move in the right direction with Tuchel at the helm heading into Euro 2028 on home soil.",
+        "Czechia, who qualified for the World Cup via the playoffs in March, exited the competition without tasting victory in the group stage and, unsurprisingly, pivoted to a fresh face in the dugout ahead of a new tournament cycle.",
+        "Spaniard Santi Denia is now at the helm of the 48th-ranked nation in the world, but his reign started with a 2–1 defeat at home to Croatia.",
+        "dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC",
+        "England is already up against it after losing on Matchday 1. / Rob Newell/CameraSport/Getty ImagesOn another day, England would have found itself 3–0 down at home to the world champions inside 30 minutes. However, Tuchel’s Three Lions escaped Spain’s early assault, embraced its ’Englishness’ and ran all over La Roja on either side of half-time. Hadn’t Harry Kane’s standing foot given way from 12 yards, England surely would’ve celebrated one of its great Wembley triumphs.",
+        "While England tend to relish heroic defeats, great optimism should emerge from Saturday’s performance. However, a shoddy showing in Prague on Tuesday will do much to ditch the momentum.",
+        "The Three Lions have an excellent record in this fixture, and Czechia is a team in transition after a woeful World Cup.",
+        "Czechia was also beaten on Matchday 1. / FotMobLike its visitors, Czechia had a wave of withdrawals after Senia’s roster for the September/October break was listed. The hosts are thus without David Zima, David Jurásek, Matěj Ryneš, Tomáš Vlček, Lukáš Provod, Denis Višinský and Tomáš Chorý.",
+        "Patrik Schick ended his international career after a disappointing World Cup, so Czechia currently has Adam Hlożek leading its attack. Hlożek, now 24 and playing for Hoffenheim, hasn‘t quite delivered on his early career promise, and he’s scored just five times in 47 games for the national team.",
+        "Playmaker Pavel Šulc is one to keep an eye on in midfield, while goalkeeper Lukáš Horníček has enjoyed an impressive start to his career with Newcastle United. Horníček who joined the Magpies in the summer, is currently first choice over Tottenham Hotspur’s Antonín Kinsky.",
+        "Czechia predicted lineup vs. England (4-2-3-1): Horníček; Coufal, Hranáč, Chaloupek, Slama; Sadilek, Červ; Ambros, Šulc, Radosta; Hložek.",
+        "England may be forced into a couple of defensive changes. / FotMobTuchel has already been subject to plenty of withdrawals, with Declan Rice and Cole Palmer among those to pull out of the German’s original roster. Morgan Gibbs-White has been brought in as mitigation, and he played the final 10 minutes of Saturday’s defeat.",
+        "The extended window means Tuchel may be tempted into changes, despite his side’s spirited showing against the world champions. England’s core should remain intact, but the likes of Alex Scott, Lewis Hall and the much-maligned Trent Alexander-Arnold will hope to make their first starts of the break on Tuesday.",
+        "Tuchel confirmed that Alexander-Arnold has been picked to play at right back in the absence of Tino Livramento, Ben White and Reece James.",
+        "Jordan Pickford should return between the posts, replacing James Trafford. Ezri Konsa and Nico O’Reilly are injury doubts after missing training on Monday.",
+        "England predicted lineup vs. Czechia (4-2-3-1): Pickford; Alexander-Arnold, Guéhi, Branthwaite, Hall; Scott, Anderson; Rogers, Bellingham, Gordon; Kane.",
+        "feed. READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
     "ftbpro_01m3kwy2819r": {
       "id": "ftbpro_01m3kwy2819r",
       "title": "Wrexham Player Report Cards: Every Star Graded After Eight Games",
@@ -9159,6 +9390,37 @@
         "D.C. United: MLS was formed in 1996, off the back of the hugely successful 1994 World Cup, and the early ‘Manchester United’ of the league was D.C. United. Three of the first four MLS Cups ended up in the capital team’s trophy cabinet—they were beaten finalists in 1998—before a fourth crown was lifted in 2004.",
         "LA Galaxy: Without a doubt, the most successful franchise in MLS Cup history is LA Galaxy. No team has come close to matching their number of appearances in finals. nor can any team hold a candle to their six MLS Cup wins (2002, 2005, 2011, 2012, 2014 and 2024). Throw into the mix that David Beckham, Landon Donovan and Zlatan Ibrahimovič have been part of those successes and you understand why the Galaxy are so steeped in MLS history.",
         "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m3kxymb9sw": {
+      "id": "ftbpro_01m3kxymb9sw",
+      "title": "Every Premier League Points Deduction in History—and the Clubs Hit by Them",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/every-premier-league-points-deduction-history-clubs/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_236/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3kz8xedz70h0k003w.jpg",
+      "publishedAt": "2026-09-28T23:00:00.000Z",
+      "paragraphs": [
+        "By Barnaby Lane7:00 PM EDTEverton were docked six points in 2023. / Alex Livesey/Getty ImagesPoints deductions are among the rarest and most serious punishments a Premier League club can face. Since the division was founded in 1992, only a handful of clubs have suffered the sanction, with points being taken away for a variety of disciplinary and financial reasons.",
+        "The punishment has recently returned to the spotlight because of Manchester City’s long-running Premier League case. After years of investigation and a lengthy independent commission hearing, City were found guilty of 114 of the 115 financial rule breaches brought against them by the Premier League. The allegations cover a range of issues, including the club’s financial reporting and other regulatory requirements, relating to the period between 2009 and 2018.",
+        "The commission’s findings now leave City facing the prospect of a separate decision on the appropriate punishment, with a points deduction among the potential sanctions for the multiple-time Premier League champions.",
+        "If City are ultimately docked points, which clubs would they join?",
+        "Here is the history of every Premier League points deduction since the competition began.",
+        "Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed",
+        "Boro fans weren’t happy. / Staff/Mirrorpix/Getty ImagesMiddlesbrough made Premier League history in January 1997 when they became the first club to receive a points deduction.",
+        "The punishment followed their failure to fulfill a fixture against relegation rivals Blackburn Rovers the previous month. Manager Bryan Robson claimed he was without 23 players through injury and illness and could not field a full squad.",
+        "Boro said they had been assured the game could be postponed, but failed to provide the required evidence. They were fined £50,000 ($66,285) and docked three points, with a subsequent court appeal also failing.",
+        "The deduction proved costly as Middlesbrough finished 19th, just two points from safety.",
+        "Avram Grant was Portsmouth’s manager during the 2009-10 season. / Michael Regan/The FA/Getty ImagesIt took another 13 years for a Premier League club to receive a points deduction, with Portsmouth becoming the next team to suffer the punishment in March 2010.",
+        "Pompey had been struggling financially for some time following heavy spending in the transfer market and a lack of investment. A proposed takeover eventually went through, but new owner Ali Al-Faraj was unable to resolve the club’s mounting problems.",
+        "Portsmouth failed to pay wages between December 2009 and February 2010 and were also served with a winding-up order over unpaid taxes.",
+        "The club subsequently entered administration, triggering an automatic nine-point deduction and leaving them at the bottom of the table. They never recovered and were ultimately relegated.",
+        "Oh dear indeed, boys ... / Stu Forster/Getty ImagesEverton joined the list of Premier League clubs to receive a points deduction in 2023, initially being handed a 10-point penalty—the biggest in the competition’s history at the time.",
+        "The case followed concerns over Everton’s finances, with Burnley and Leeds United asking the Premier League to investigate the club’s losses in May 2022. The investigation was opened in March 2023 and found Everton had breached the league’s financial rules. The club was punished in November.",
+        "Everton appealed the decision, and their 10-point penalty was subsequently reduced to six points.",
+        "Nottingham Forest owner Evangelos Marinakis has often found himself shrouded in controversy. / Mike Egerton/PA Images/Getty ImagesNottingham Forest became the second Premier League club during the 2023–24 season to receive a points deduction for breaching the league’s financial regulations.",
+        "The club was found to have exceeded the Premier League’s £61 million ($80.8 million) Profitability and Sustainability Rules limit by £34.5 million ($45.7 million), resulting in a four-point penalty.",
+        "feed. READ THE LATEST PREMIER LEAGUE NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
     "ftbpro_01m3m18npb3y": {
@@ -9223,6 +9485,37 @@
         "FREE KICK MAGIC FROM LEO. 🎯✨ pic.twitter.com/s6gT7fDFki"
       ]
     },
+    "ftbpro_01m3m4mrmqvg": {
+      "id": "ftbpro_01m3m4mrmqvg",
+      "title": "Transfer Rumors: Haaland Race Heats Up; Chelsea Ready Zubimendi Bid",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/transfer-rumors-haaland-race-heats-up-chelsea-ready-zubimendi-bid/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3m9c3kw7qwzrgww9k.jpg",
+      "publishedAt": "2026-09-28T23:05:00.000Z",
+      "paragraphs": [
+        "By SI FC Staff7:05 PM EDTErling Haaland (left) and Martín Zubimendi (right) headline the gossip. / James Gill - Danehouse/Getty Images (Haaland), Catherine Ivill - AMA/Getty Images (Zubimendi)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "Viktor Gyökeres has been on the fringes at Arsenal. / Nigel French/Sportsphoto/Allstar/Getty ImagesArsenal are not prepared to loan out striker Viktor Gyökeres amid interest from AC Milan, who face needing to pay upwards of €70 million ($80 million) to convince the Gunners to sell. (Source: Carlo Pellegatti)",
+        "Despite reports to the contrary, Arsenal have had no contact over Manchester City striker Erling Haaland, who is fully focused on the Cityzens despite the uncertainty surrounding the club. If he is to leave, a move to La Liga is seen as his preference, but both Bayern Munich and Paris Saint-Germain would consider joining the race. (Source: TEAMtalk)",
+        "Chelsea are pushing to sign Barcelona left back Alejandro Balde in the January transfer window. Liverpool are also admirers of the 22-year-old but it is the Blues that are making the strongest move. (Source: Juan Jesus)",
+        "Manchester United are readying a defensive overhaul and have added Roma right back Wesley to a list of targets that also includes Everton’s Jarrad Branthwaite, Nottingham Forest’s Murillo, Crystal Palace’s Tyrick Mitchell and Newcastle United’s Lewis Hall, who remains a target despite his recent contract extension. (Source: Theatre of Red)",
+        "Porto right back Alberto Costa is another under consideration by both Arsenal and Man Utd. (Source: CaughtOffside)",
+        "Stuttgart have raised their asking price for center back Finn Jeltsch to €45 million ($51 million) following increased interest from Arsenal, Real Madrid and Juventus. (Source: Tutto Juve)",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Chelsea are set to make a bid of £60 million ($80 million) for Arsenal midfielder Martín Zubimendi, who has already given his approval to joining Xabi Alonso’s side in January. They previously worked together for a season at Real Sociedad B (Source: El Nacional)",
+        "Liverpool remain in contact with the representatives of Real Madrid midfielder Aurélien Tchouaméni, despite the fact the has agreed a new long-term contract at the Bernabéu. (Source: TEAMtalk)",
+        "Brentford forward Kevin Schade has played his way on to the radars of Arsenal, Liverpool and Man Utd. (Source: Mark Brus)",
+        "Chelsea and Tottenham Hotspur are both among the admirers of Schade, with Brentford looking to thrash out a new contract and end any speculation. (Source: Sky Sports News)",
+        "Newcastle could reignite their interest in Brighton & Hove Albion midfielder Yasin Ayari if talks over a new contract fail to reach an agreement. (Source: Football Insider)",
+        "Boca Juniors midfielder Tomás Aranda, 19, is a target for Liverpool. The Reds are ready to make a bid in January to try and beat Aston Villa, Arsenal, Chelsea, Como and Inter Milan to his signature. (Source: El Intransigente)",
+        "Cavan Sullivan is enjoying a breakout year. / Jack Megaw/NurPhoto/Getty ImagesUncertainty at Man City has seen both Barcelona and Real Madrid register interest in disrupting the Cityzens’ planned move for Philadelphia Union midfielder Cavan Sullivan, who is due to move to the Etihad when he turns 18. (Source: SPORT)",
+        "Hansi Flick has made it clear he does not want to lose midfielder Frenkie de Jong, who is equally as committed to Barcelona despite interest in his services from Chelsea. (Source: Juan Jesus)",
+        "Real Madrid center back Raúl Asencio rejected approaches from Chelsea, Liverpool and an unnamed Turkish side in the summer. (Source: MARCA)",
+        "Juventus want to sign Barcelona left back Alejandro Balde in January but are not prepared to meet his price tag and are instead proposing a loan deal that would include an option to buy. (Source: El Nacional)",
+        "Bolstering at left back is a priority for Barcelona ahead of next summer, when RB Leipzig’s David Raum and Crystal Palace’s Tyrick Mitchell will be targets if they allow their current contracts to expire. (Source: SPORT)",
+        "READ THE LATEST TRANSFER RUMORS FROM THE PAST FEW DAYS. feed"
+      ]
+    },
     "ftbpro_01m3m5fe89fr": {
       "id": "ftbpro_01m3m5fe89fr",
       "title": "Como Starlet Makes Real Madrid Stance Clear Amid Premier League Interest",
@@ -9247,6 +9540,37 @@
         "Alonso’s Blues have been utterly porous at the start of his tenure in west London, with reinforcements in defense seemingly inevitable next summer.",
         "Arteta, meanwhile, rarely goes through a summer window without signing a defender, although few Gunners supporters would currently suggest that more bodies in their backline should be prioritized next year.",
         "READ THE LATEST TRANSFER NEWS AND RUMORS FROM WORLD SOCCER. feed"
+      ]
+    },
+    "ftbpro_01m3m7sjg91g": {
+      "id": "ftbpro_01m3m7sjg91g",
+      "title": "‘They Only See the Positive’—World Cup Hero Vozinha Makes Heartbreaking Admission",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/remember-2026-world-cup-hero-vozinha-wishes-you-didnt/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_183/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3md4w654542md7a0q.jpg",
+      "publishedAt": "2026-09-28T20:00:01.000Z",
+      "paragraphs": [
+        "By Grey Whitebloom4:00 PM EDTVozinha never asked for the fame his World Cup performances inspired. / Steph Chambers/FIFA/Getty ImagesThey say that celebrity is a mask that eats into the face. Vozinha feels like he has been swallowed whole.",
+        "The unexpected star of the 2026 World Cup is less than three months removed from his transformation into a global sensation and has already come to grimly reflect on the consequences of his fame.",
+        "“A lot of people want to be famous and have a public profile, but they only see the positive side of that reality,” the 40-year-old Cabo Verde goalkeeper revealed in a startlingly candid interview with The Observer. “To be honest, if I were offered the life I have today or the life I had before, I’d choose the one I had before.”",
+        "Given the scene he has set of his new reality, few could blame him for that opinion.",
+        "It can be easily ignored that Vozinha was already a national hero long before the World Cup kicked off. The veteran shot-stopper’s international career began in 2012 and has encompassed every major tournament for which Cabo Verde has ever qualified. Vozinha’s former teammate Fernando Neves told The Guardian before the competition: “For me he’s the best goalkeeper in Cape Verde’s history.” Yet, he was a strictly local phenomenon.",
+        "Even within the 530,000-strong population thinly scattered across the tiny archipelago off the coast of West Africa, Vozinha was more familiar to some as the local volleyball instructor during annual summer beach camps. As the Reis Institute would reluctantly announce on social media, their coach would be unavailable this summer, “He’s off to handle a little commitment called the FIFA World Cup.”",
+        "Cabo Verde began that little commitment with a shock 0–0 draw against eventual champion Spain, thanks in no small part to seven saves from their goalkeeper. Suddenly, the image of this 40-year-old’s expressive face, tears leaking between the deep grooves like water spilled down a mahogany chest of drawers, was spread across all four corners of the globe. Within hours, his Instagram following exploded from 56,000 to more than 14 million.",
+        "As it would transpire, this social media boom was the result of a campaign concocted by the Brazilian broadcaster CazéTV, who encouraged its viewers on a live stream to follow Vozinha as a reward for his performance. “A member of the team’s catering staff came up to me and told me I had a billion followers,” Vozinha reflected. “I had no idea what he was talking about; I thought he was joking, but he insisted. Later, I went to do some interviews in the mixed zone, and a CazéTV journalist asked me if I knew what was happening. She showed me her phone and that was when I saw that I had more than a million followers.”",
+        "“I decided to turn off my Instagram notifications, so I wouldn’t be tempted to keep checking who was following me,” the goalkeeper added.",
+        "Just a couple of World Cup stars up against one another. / Chris Brunskill/Fantasista/Getty ImagesBeyond denying Lamine Yamal & Co., the flame of Vozinha’s fame was stoked by the human appeal of his story. After taking the time to shift the focus toward his deserving teammates, Vozinha revealed that his mother, Ana Candida Evora, had not been granted a visa after failing to finance the $15,000 bond required to even have a chance of entering the United States.",
+        "The U.S. House Democratic leader Hakeem Jeffries, perhaps sensing an opportunity for an easy political win, waived the fee. “No mother should miss the chance to see her child make history,” he declared in time for Candida Evora to see Vozinha and his compatriots earn a draw against Uruguay.",
+        "Cabo Verde kept another clean sheet against Saudi Arabia to secure passage to the round of 32, where Vozinha would produce his best performance of the summer. He frustrated Lionel Messi as the World Cup debutants forced Argentina into extra time. The tournament had not yet concluded by the time Gianni Infantino leapt upon Vozinha’s burst of fame to make the custodian an official ‘FIFA Legend.’",
+        "A landslide of commercial opportunities tumbled his way, while a stack of clubs were eager to whisk him away from the Portuguese second tier. The new goalkeeper for historic Chilean giant Colo Colo even managed to get nominated in the Ballon d’Or vote for the best goalkeeper of the year. Yet, it has come at an incalculable cost.",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "Vozinha wore his heart on his sleeve during the tournament. / Patrick Smith/FIFA/Getty ImagesThe legendary former Manchester United manager Sir Alex Ferguson always scolded those who would “overlook the reality that it [this sport] is played by creatures of flesh and blood and feeling.” Vozinha’s post-World Cup experience should remind everyone of this fact.",
+        "“I’ve lost my peace and tranquillity,” he lamented. “I no longer have any privacy, or at least much less than I used to. Now I go out, I go to a restaurant, and there’s always someone who wants to take a photo with me or asks me for an autograph. Or, worse, someone is filming me. That’s what has changed most in my life, and I don’t think there’s anything I can do about it.”",
+        "The snarling snap of celebrity has greedily moved beyond Vozinha himself. His parents are bombarded with requests from cloying fans on a daily basis. “I’m not there, so I can’t help them,” he sighed. “They have to learn to live with the situation and set boundaries.”",
+        "Vozinha now plays his club soccer in Chile. / Javier TORRES/AFP/Getty ImagesIt’s been a testing time for the reluctant icon, but Vozinha’s clearly defined set of moral principles should help him maintain his sense of self. “I know that during the World Cup there were lots of companies and brands that wanted to work with me,” he explained, “but while we were competing, I only did one promotional collaboration, with UFL Mobile.",
+        "“I don’t know what offers might come in the future, but for now I don’t want to work with any tobacco, alcohol or betting brands.”",
+        "The one positive Vozinha can find is the exposure of Cabo Verde as a country. Data showed that flight bookings to the islands rose by more than 50% during the tournament, offering a new stream of tourism revenue."
       ]
     },
     "ftbpro_01m3m96ck3k5": {
@@ -9275,6 +9599,37 @@
         "LW: Cole Campbell—Aside from Richards, 20-year-old Cole Campbell was the only other player not to dress for Saturday’s affair. He will be fully rested and ready to take on the giant Christian Pulisic-sized hole on the left flank in his senior debut.",
         "ST: Julian Hall—The 18-year-old is a pure striker and needed just 10 minutes off the bench to score the USMNT’s third of the night against Peru, opportunistically redirecting a cross with his knee into the net. Hall capped off a brilliant senior debut with an assist on Berhalter’s 90th-minute blast, and will be good to go from the start after playing less than half an hour.",
         "READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m3mjejsk2g": {
+      "id": "ftbpro_01m3mjejsk2g",
+      "title": "‘Jumping to Conclusions’—U.K. Prime Minister Andy Burnham Reacts to Man City Verdict",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/uk-prime-minister-uncomfortable-man-city-verdict/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_107/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3mjyhbteanqy7k8ry.jpg",
+      "publishedAt": "2026-09-28T21:00:01.000Z",
+      "paragraphs": [
+        "By Jamie Spencer5:00 PM EDTThe man leading the U.K. was formerly the mayor in Manchester. / Rasid Necati Aslim/Anadolu/Getty ImagesU.K. prime minister Andy Burnham responded to news of Manchester City being found guilty of 114 out of the 115 Premier League charges against the club with calls for calm.",
+        "“I think these are reports at this stage,” Burnham told ITV Granada Reports. “But if they’re confirmed, obviously I will want to look at the report of the independent commission.”",
+        "Any punishment for City is some time off. An appeal is expected, and the process that has dragged on for five years since the original investigation began will not be resolved soon.",
+        "There have already been calls to strip the club of its titles, either those won during the nine-year period the charges relate to, or in totality since the 2008 takeover.",
+        "“People shouldn’t jump to those kinds of conclusions,” Burnham warned. “I know, this has been a long process between the club and the Premier League, I think quite a contested process. So I don’t think it’s as simple as jumping to conclusions.",
+        "“I think we would all need to study the independent commission’s report in some considerable detail before reaching any conclusions.”",
+        "The response appears level-headed, but also laced in diplomacy. This is not a hardline stance.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "The Etihad Campus has been regenerative. / Mark Cosgrove/News Images/NurPhoto/Getty ImagesBurnham’s relationship with the Manchester City ownership—and by extension Abu Dhabi and UAE—runs deep.",
+        "In his previous role as Mayor of Greater Manchester, an office he held from 2017 until this past summer, Burnham watched the areas around the Etihad Campus develop.",
+        "When he met UAE president Mohamed bin Zayed Al Nahyan—City owner Shekih Mansour’s brother—in July, a Downing Street statement said the prime minister “thanked His Highness for his country’s investment into Manchester and the incredible impact it has had on the city.”",
+        "Other comments about his gratitude for UAE investment in Manchester have surfaced.",
+        "“Go to east Manchester now, and look at photographs of it 30 years ago. A large amount of the investment has come in from the owners of Manchester City, so they are more than building a football club,” Burnham said while appearing on Pod Save the UK a few years ago.",
+        "Sheikh Mansour is a club owner, a royal and a senior politician. / Michael Regan/UEFA/Getty ImagesBut that clip was posted with the description, “Greater Manchester Mayor Andy Burnham skirts question on Abu Dhabi human rights.”",
+        "Abu Dhabi is one of the seven Emirati city states that make up the United Arab Emirates, a country with untold riches and ambition, but with a human rights record that is still regularly questioned.",
+        "When pressed during that podcast episode, Burnham seemingly felt unable to call out a regime where, among other things, homosexuality remains criminalized. Manchester prides itself on being a progressive city and has done so for centuries.",
+        "“I hear what people say [about Abu Dhabi]. I’ve got to judge on what I see in Manchester, how I see the owners run Manchester City and what they do to improve life here,” Burnham said at the time. “Those issues are for the government to raise at a different level. They’ve been huge partners for the city and they’ve improved a lot of lives here.”",
+        "Knowing the regenerative effect on his city, alongside human rights issues, and with Manchester City reportedly guilty of cheating their way to the top—it’s an uncomfortable position to be in, especially now that he is prime minister and he is the “government” who can raise such issues.",
+        "Man City Charges—Multi-Year Investigation Explained. Man City Charges—Multi-Year Investigation Explained. dark. Next",
+        "In addition to being Manchester City’s principal owner, Sheikh Mansour is the deputy prime minister of Abu Dhabi and the vice-president of the UAE. Since 2007, he has also chaired his country’s sovereign wealth fund that has U.K. investments. Relations between the gulf nation and the United Kingdom have been strained in the past. That has started to change. However, as the Financial Times puts it, “those diplomatic ties are being tested afresh” by the City verdict."
       ]
     },
     "fzhafkysws3g1ux8fnmoe3180": {
@@ -10062,6 +10417,35 @@
       ],
       "html": "<p>Harry Kane believes this is the&nbsp;best chance of his career to win the Ballon d&#39;Or after a sensational season with Bayern Munich and England.&nbsp;</p>\n\n<p>Kane is among the top contenders to lift the prestigious individual accolade next month, with Barcelona&#39;s Lamine Yamal and Real Madrid&#39;s Kylian Mbappe also in contention.&nbsp;</p>\n\n<p>The England captain plundered 65 across all competitions for Bayern before scoring six more to help Thomas Tuchel&#39;s side finish third at this summer&#39;s World Cup.&nbsp;</p>\n\n<p>No other player from Europe&#39;s top five leagues scored more than 50 goals in all competitions last term, with Mbappe his closest challenger with a half-century for Madrid.&nbsp;</p>\n\n<p>Kane is hoping to become the fifth English player to win the Ballon d&#39;Or and the first since Michael Owen in 2001.&nbsp;Stanley Matthews (1956), Bobby Charlton (1966) and Kevin Keegan (1978 and 1979) had previously claimed the award.</p>\n\n<p>And ahead of England&#39;s clash with Spain in their Nations League opener, Kane insisted he could have done nothing more in his attempt to try and lift the Ballon d&#39;Or.&nbsp;</p>\n\n<p>&quot;Best chance right now, yeah, whether that&#39;s in the future as well. We&#39;ll have to wait and see, but I think yes, so far in my career, it is the best chance without a doubt,&quot; Kane said.</p>\n\n<p>&quot;I think I spoke quite openly last season from a personal point of view.&nbsp;</p>\n\n<p>&quot;It was my best year without a doubt, but also, from a team point of you was my best in terms of trophies and performances. It&#39;s something that would be&nbsp;amazing to win.</p>\n\n\n<p>&quot;I know there&#39;s been a lot of talk about it, and I&#39;m sure it will be over the next month until it&#39;s announced and that&#39;s part and parcel of it.&nbsp;</p>\n\n<p>&quot;I&#39;d be extremely proud to win it. I think I&#39;ve done a lot of great things that I&#39;m proud of last year for sure.&nbsp;</p>\n\n<p>&quot;But like I keep saying, ultimately, it&#39;s down to other people now and their opinion on it. The players and their opinion on last season, so we&#39;ll have to wait and see what happens.</p>\n\n<p>&quot;I know it won&#39;t be the last time I talk about it, but yeah, there&#39;s still another month or so to go. My focus is on trying to help this team get a good win against Spain.&quot;</p>\n\n<p>Kane will be hoping to improve his Ballon d&#39;Or chances against a Spain side&nbsp;that are unbeaten in each of their last 38 matches in all competitions (W29 D9), the longest ever streak by a European nation following their World Cup success.</p>\n\n<p>The Three Lions&nbsp;have won just two of their last 13 games against the reigning World Cup holders, losing nine times (D2). Those wins came at home to Spain in November 2011 (1-0) and away to Germany in March 2016 (3-2).</p>\n\n<p>Jude Bellingham will also be keen to make an impact. The Real Madrid star&nbsp;has scored seven goals in 10 appearances for England in 2026. The last midfielder with more goals in a calendar year for the Three Lions was David Platt in 1993 (eight).</p>\n\n<p>And his performances were recognised as he scooped the England Men&#39;s Player of the Year award for the second year running. Only&nbsp;Wayne Rooney (four) has won the award more times than Bellingham (two, level with Kane, Bukayo Saka, Frank Lampard and Steven Gerrard).&nbsp;</p>\n"
     },
+    "rjx4wkmhfs981hz5g8z4tkgyk": {
+      "id": "rjx4wkmhfs981hz5g8z4tkgyk",
+      "title": "Turkiye 1-4 Italy: First-half blitz gets Mancini's second stint up and running",
+      "subtitle": "Italy claimed their first win in the Nations League as three goals inside the first 27 minutes proved to be enough to battle past Turkiye.",
+      "source": "FotMob",
+      "sourceUrl": "/news/rjx4wkmhfs981hz5g8z4tkgyk-turkiye-1-4-italy-first-half-blitz-gets-mancinis-second-stint-up-running",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b3/a4/italy_1uhcmvajklw6012np5d0nhuim4.png?t=-300654336&w=1200&h=630",
+      "publishedAt": "2026-09-28T20:58:15.000Z",
+      "paragraphs": [
+        "Roberto Mancini claimed his first victory since returning to take charge of Italy as three-first half goals helped down Turkiye 4-1 in the Nations League on Monday.&nbsp;",
+        "Alessandro Bastoni,&nbsp;Davide Frattesi and&nbsp;Michael Kayode had Italy cruising by the 27th minute, though&nbsp;Baris Alper Yilmaz threatened a comeback early in the second half.&nbsp;",
+        "However,&nbsp;Francesco Pio Esposito&#39;s 50th-minute header proved to be decisive for Italy, who moved onto three points in Group A1 after their first two matches.&nbsp;",
+        "Bastoni handed Italy the ideal start in the ninth minute. A flat corner from the left was not dealt with by&nbsp;Zeki Celik, with the Inter defender winning his battle against&nbsp;Salih Ozcan and turning the ball into the roof of the net on the slide.&nbsp;",
+        "It got even better for the Azzurri soon after. A free-flowing move on the edge of the Turkiye area ended with Kayode&#39;s shot being saved by&nbsp;Altay Bayindir, but Frattesi was the quickest on the scene to tuck home the rebound in the 22nd minute.&nbsp;",
+        "And just five minutes later, Italy had their third. Another great piece of play between&nbsp;Giacomo Raspadori and Francesco Pio Esposito saw the latter shift the ball on to Kayode, who made no mistake from inside the box to mark his international debut with a goal.&nbsp;",
+        "Raspadori and&nbsp;Sebastiano Esposito then fired off target to cap a dominant opening 45 minutes for Mancini&#39;s side as the Turkiye players exited the pitch to a chorus of jeers.&nbsp;",
+        "However, Turkiye gave their fans something to cheer within 76 seconds of the restart when Yilmaz turned&nbsp;Oguz Aydin&#39;s teasing delivery&nbsp;past&nbsp;Gianluigi Donnarumma, who was out of position after coming out to try and claim a long ball over the top.",
+        "But no sooner had they got themselves back in the game,&nbsp;Bayindir gifted Italy their fourth goal. His loose pass was picked off and resulted in&nbsp;Sandro Tonali striking an effort against the right post, with Francesco Pio Esposito on hand to nod in the rebound.",
+        "The blistering start to the second half continued when Yilmaz&#39;s shot hit the woodwork on its way in, but the goal was ruled out for an offside against&nbsp;Arda Guler, with&nbsp;Aydin then failing to trouble Donnarumma from a tight angle.",
+        "Kerem Akturkoglu then blazed over a glorious chance before&nbsp;Eren Elmali failed to get a touch on&nbsp;Ismail Yuksek&#39;s cross, with Italy able to hold on to claim a deserved triumph.&nbsp;",
+        "Azzurri find their groove to rubbish Montella&#39;s pre-match prediction",
+        "Before kick-off, Turkiye boss&nbsp;Vincenzo Montella vowed that his team would emerge victorious against Italy, but his pre-match hopes of a morale-boosting win were all but over before half an hour had elapsed in&nbsp;Bursaspor.&nbsp;",
+        "Italy scored three goals inside the first 30 minutes of play for the first time since a World Cup qualifier against Lithuania in September 2021, with&nbsp;Moise Kean, an Edgaras Utkus own goal and&nbsp;Raspadori on target in that game.",
+        "This was also the first time the Azzurri had scored four goals in the Nations League since a 4-1 win against Israel in October 2024, and their dominance was backed up by the metrics in what was an entertaining encounter.&nbsp;",
+        "Mancini&#39;s side finished with an expected goals (xG) total of 2.39 from their 14 shots compared to Turkiye&#39;s 1.86 xG from one more&nbsp;attempt, though the hosts did win the xG battle in the second half (1.77&nbsp;to 0.76).&nbsp;",
+        "There was also a special moment for&nbsp;Francesco Pio and Sebastiano Esposito, who became the fourth&nbsp;pair of brothers to contest the same match with Italy, after Filippo and Simone Inzaghi (twice in 2000), Aldo and Luigi Cevenini (once in 1915), and Giuseppe and Felice Milano (three times between 1912 and 1913)."
+      ],
+      "html": "<p>Roberto Mancini claimed his first victory since returning to take charge of Italy as three-first half goals helped down Turkiye 4-1 in the Nations League on Monday.&nbsp;</p>\n\n<p>Alessandro Bastoni,&nbsp;Davide Frattesi and&nbsp;Michael Kayode had Italy cruising by the 27th minute, though&nbsp;Baris Alper Yilmaz threatened a comeback early in the second half.&nbsp;</p>\n\n<p>However,&nbsp;Francesco Pio Esposito&#39;s 50th-minute header proved to be decisive for Italy, who moved onto three points in Group A1 after their first two matches.&nbsp;</p>\n\n<p>Bastoni handed Italy the ideal start in the ninth minute. A flat corner from the left was not dealt with by&nbsp;Zeki Celik, with the Inter defender winning his battle against&nbsp;Salih Ozcan and turning the ball into the roof of the net on the slide.&nbsp;</p>\n\n<p>It got even better for the Azzurri soon after. A free-flowing move on the edge of the Turkiye area ended with Kayode&#39;s shot being saved by&nbsp;Altay Bayindir, but Frattesi was the quickest on the scene to tuck home the rebound in the 22nd minute.&nbsp;</p>\n\n<p>And just five minutes later, Italy had their third. Another great piece of play between&nbsp;Giacomo Raspadori and Francesco Pio Esposito saw the latter shift the ball on to Kayode, who made no mistake from inside the box to mark his international debut with a goal.&nbsp;</p>\n\n<p>Raspadori and&nbsp;Sebastiano Esposito then fired off target to cap a dominant opening 45 minutes for Mancini&#39;s side as the Turkiye players exited the pitch to a chorus of jeers.&nbsp;</p>\n\n\n<p>However, Turkiye gave their fans something to cheer within 76 seconds of the restart when Yilmaz turned&nbsp;Oguz Aydin&#39;s teasing delivery&nbsp;past&nbsp;Gianluigi Donnarumma, who was out of position after coming out to try and claim a long ball over the top.</p>\n\n<p>But no sooner had they got themselves back in the game,&nbsp;Bayindir gifted Italy their fourth goal. His loose pass was picked off and resulted in&nbsp;Sandro Tonali striking an effort against the right post, with Francesco Pio Esposito on hand to nod in the rebound.</p>\n\n<p>The blistering start to the second half continued when Yilmaz&#39;s shot hit the woodwork on its way in, but the goal was ruled out for an offside against&nbsp;Arda Guler, with&nbsp;Aydin then failing to trouble Donnarumma from a tight angle.</p>\n\n<p>Kerem Akturkoglu then blazed over a glorious chance before&nbsp;Eren Elmali failed to get a touch on&nbsp;Ismail Yuksek&#39;s cross, with Italy able to hold on to claim a deserved triumph.&nbsp;</p>\n\n\n<p><strong>Azzurri find their groove to rubbish Montella&#39;s pre-match prediction</strong></p>\n\n<p>Before kick-off, Turkiye boss&nbsp;Vincenzo Montella vowed that his team would emerge victorious against Italy, but his pre-match hopes of a morale-boosting win were all but over before half an hour had elapsed in&nbsp;Bursaspor.&nbsp;</p>\n\n<p>Italy scored three goals inside the first 30 minutes of play for the first time since a World Cup qualifier against Lithuania in September 2021, with&nbsp;Moise Kean, an Edgaras Utkus own goal and&nbsp;Raspadori on target in that game.</p>\n\n<p>This was also the first time the Azzurri had scored four goals in the Nations League since a 4-1 win against Israel in October 2024, and their dominance was backed up by the metrics in what was an entertaining encounter.&nbsp;</p>\n\n<p>Mancini&#39;s side finished with an expected goals (xG) total of 2.39 from their 14 shots compared to Turkiye&#39;s 1.86 xG from one more&nbsp;attempt, though the hosts did win the xG battle in the second half (1.77&nbsp;to 0.76).&nbsp;</p>\n\n<p>There was also a special moment for&nbsp;Francesco Pio and Sebastiano Esposito, who became the fourth&nbsp;pair of brothers to contest the same match with Italy, after Filippo and Simone Inzaghi (twice in 2000), Aldo and Luigi Cevenini (once in 1915), and Giuseppe and Felice Milano (three times between 1912 and 1913).</p>\n"
+    },
     "rrsw0lbtj8yh1b4ivbpwvxruq": {
       "id": "rrsw0lbtj8yh1b4ivbpwvxruq",
       "title": "Mancini: Winning start to Nations League the only medicine to cure Italy",
@@ -10158,6 +10542,36 @@
         "Sporting Kansas City – 17.1%"
       ],
       "html": "<p>Sporting Kansas City captain Lasse Berg Johnson has urged his team-mates to &quot;make sure we are on the same wavelength&quot; as they prepare to take on the Houston Dynamo.</p>\n\n<p>Sporting KC are currently bottom of the Western Conference, and their misery was compounded last weekend following a 4-3 defeat against the Philadelphia Union.</p>\n\n<p>Despite leading 3-0 after 16 minutes, SKC conceded four goals in nine second-half minutes to fall further away from the play-off places.</p>\n\n<p>Berg Johnsen believes his side must communicate better on the pitch if they are to turn their season around.</p>\n\n<p>&quot;We need to talk to each other and look at each other and agree on if we are going to press them for the next minutes or are we going to keep playing or are we going to go longer and go for the second balls,&quot; said the SKC captain.</p>\n\n<p>&quot;As a team, I don&#39;t think we have managed it well enough in those situations.</p>\n\n<p>&quot;We need to look at it and see how can we solve it better on the pitch, because in those moments, what usually happens is we players can be silent, so we need to talk to each other to make sure we are on the same wavelength.</p>\n\n<p>&quot;If we either go longer or if we try to play or if we press them or if we sit, we have not managed that good enough.&quot;</p>\n\n\n<p>Houston, on the other hand, are second in the West and just five points behind leaders Vancouver Whitecaps.</p>\n\n<p>However, after losing 1-0 to the San Jose Earthquakes, the Dynamo drew 2-2 with FC Cincinnati last time out; Houston have won just once in their last six MLS games (D3 L2).</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>Houston Dynamo – Guilherme</strong></p>\n\n<p>Guilherme scored his team-leading 14th goal of the season on Saturday, tied for the second-most goals in a single regular season by a Dynamo player, with Erick Torres in 2017.</p>\n\n<p>The only player with more regular-season goals in a season for Houston was Mauro Manotas in 2018 (19).</p>\n\n<p><strong>Sporting Kansas City – Andre Luiz</strong></p>\n\n<p>Andre Luiz recorded his first MLS brace on Saturday and has scored three goals in his first four games with Sporting KC.</p>\n\n<p>Sporting are averaging 2.25 goals per game in MLS matches in which Luiz has played, compared to 0.95 this season without Luiz playing.</p>\n\n<p><strong>MATCH PREDICTION:&nbsp;HOUSTON DYNAMO WIN</strong></p>\n\n<p>Houston extended their home unbeaten streak to nine games (W6 D3) with a draw with Cincinnati. The Dynamo have recorded five home unbeaten streaks of 10 or more games in their history, with the last one coming in 2019 (10 games).</p>\n\n<p>The Dynamo earned a win on the road against SKC in August and are looking to sweep the season series for the first time. Houston have just two wins in their last 11 regular-season matches against Sporting KC and have not won at home since May 2021.</p>\n\n<p>Sporting KC have scored three or more goals in three straight regular-season matches after scoring three goals just once in their first 22 league matches of 2026.</p>\n\n<p>It is&nbsp;their first time scoring three or more goals in three straight league games since August 2022, and the club have never done so in four straight.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Houston Dynamo – 63.5%</p>\n\n<p>Draw – 19.4%</p>\n\n<p>Sporting Kansas City – 17.1%</p>\n"
+    },
+    "s7b8t49nltsw1ptr5r75k92c2": {
+      "id": "s7b8t49nltsw1ptr5r75k92c2",
+      "title": "Belgium 0-1 France: Olise keeps Zidane perfect with last-gasp winner",
+      "subtitle": "France's wastefulness looked set to earn them a draw with Belgium, but Michael Olise came off the bench to ensure they left with a win.",
+      "source": "FotMob",
+      "sourceUrl": "/news/s7b8t49nltsw1ptr5r75k92c2-belgium-0-1-france-olise-keeps-zidane-perfect-last-gasp-winner",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e1/cc/olise_1hk3yc9bvxxe21azefpa1fcskr.jpg?t=-298122528&w=1200&h=630",
+      "publishedAt": "2026-09-28T21:07:53.000Z",
+      "paragraphs": [
+        "Michael Olise came off the bench to snatch France a late 1-0 victory over Belgium in the Nations League to continue their 100% start.",
+        "It looked like Zinedine Zidane&#39;s side were set to be frustrated in the injured Kylian Mbappe&#39;s absence, but Olise took just 11 minutes after his introduction to score the winner at Stade Roi Baudouin.",
+        "France started brightly, and Desire Doue almost scored a stunning opener just 12 minutes in; he twisted away from his marker and slalomed into the box before firing his shot against the crossbar.",
+        "Doue almost turned provider shortly after as he whipped a delightful cross in from the right, and though Esteban Lepaul quickly adjusted his feet, his first-time effort was straight at Senne Lammens.",
+        "Maghnes Akliouche&#39;s free-kick was then spilled by Lammens, who jumped straight back up to smother Lepaul&#39;s follow-up. But Romeo Lavia was then needed on the line to deny Pierre Kalulu.",
+        "Doue continued to provide the sparkle for France and bent a whipped effort narrowly wide seven minutes after the break.",
+        "Two minutes later, Lucas da Cunha came close to a debut goal with his fizzed effort through the crowded box, but it struck the foot of the right post.",
+        "Belgium grew into the game the longer it went on, with substitute Dodi Lukebakio surging forward in the 73rd minute to poke a shot on goal, which Mike Maignan smothered.",
+        "Lukebakio stung Maignan&#39;s palms shortly after with a powerful low effort, and though the goalkeeper failed to hold it on the first attempt, no Belgian player was following in.",
+        "France&#39;s quality eventually told, however, as Olise latched onto fellow substitute Rayan Cherki&#39;s pass and strode forward from the halfway line before curling a lovely finish into the bottom right corner in the 88th minute.",
+        "France get over the line after a stuttering attacking display",
+        "France&#39;s wealth of attacking talent is clear for all to see, but Mbappe is the lynchpin, having also scored the winner against Turkiye last time out when Les Bleus had struggled to break their opponents down.",
+        "Zidane shuffled his pack, leaving an obvious replacement in Ousmane Dembele –&nbsp;who entered the fray in the second half –&nbsp;on the bench.",
+        "Three players made their debuts as starters in France&#39;s team (Andy Diouf, Jeremy Jacquet and Da Cunha), a first since August 2010, when there were six debutants in the line-up.",
+        "France certainly had plenty of chances to put the game to bed, racking up 18 shots with seven of those on target, with their attempts amounting to 1.15&nbsp;expected goals (xG).",
+        "Doue was their best outlet, having five shots himself, with two of those testing Lammens and another hitting the woodwork.&nbsp;He had a game-high 16 touches in the opposition box, and&nbsp;also created four chances for his team-mates.",
+        "But it was Olise who turned the tide, pulling out a high-quality goal to spare France&#39;s blushes and ensure Zidane made it two wins from two.",
+        "Belgium will feel the game was theirs for the taking, having held off France for so long, but their first shot on target did not come until the 73rd minute, and when Matias Fernandez-Pardo had a golden opportunity to snatch a draw at the end, he went down too easily as he fired wide, with no penalty forthcoming."
+      ],
+      "html": "<p>Michael Olise came off the bench to snatch France a late 1-0 victory over Belgium in the Nations League to continue their 100% start.</p>\n\n<p>It looked like Zinedine Zidane&#39;s side were set to be frustrated in the injured Kylian Mbappe&#39;s absence, but Olise took just 11 minutes after his introduction to score the winner at Stade Roi Baudouin.</p>\n\n<p>France started brightly, and Desire Doue almost scored a stunning opener just 12 minutes in; he twisted away from his marker and slalomed into the box before firing his shot against the crossbar.</p>\n\n<p>Doue almost turned provider shortly after as he whipped a delightful cross in from the right, and though Esteban Lepaul quickly adjusted his feet, his first-time effort was straight at Senne Lammens.</p>\n\n<p>Maghnes Akliouche&#39;s free-kick was then spilled by Lammens, who jumped straight back up to smother Lepaul&#39;s follow-up. But Romeo Lavia was then needed on the line to deny Pierre Kalulu.</p>\n\n<p>Doue continued to provide the sparkle for France and bent a whipped effort narrowly wide seven minutes after the break.</p>\n\n<p>Two minutes later, Lucas da Cunha came close to a debut goal with his fizzed effort through the crowded box, but it struck the foot of the right post.</p>\n\n<p>Belgium grew into the game the longer it went on, with substitute Dodi Lukebakio surging forward in the 73rd minute to poke a shot on goal, which Mike Maignan smothered.</p>\n\n<p>Lukebakio stung Maignan&#39;s palms shortly after with a powerful low effort, and though the goalkeeper failed to hold it on the first attempt, no Belgian player was following in.</p>\n\n<p>France&#39;s quality eventually told, however, as Olise latched onto fellow substitute Rayan Cherki&#39;s pass and strode forward from the halfway line before curling a lovely finish into the bottom right corner in the 88th minute.</p>\n\n\n<p><strong>France get over the line after a stuttering attacking display</strong></p>\n\n<p>France&#39;s wealth of attacking talent is clear for all to see, but Mbappe is the lynchpin, having also scored the winner against Turkiye last time out when Les Bleus had struggled to break their opponents down.</p>\n\n<p>Zidane shuffled his pack, leaving an obvious replacement in Ousmane Dembele –&nbsp;who entered the fray in the second half –&nbsp;on the bench.</p>\n\n<p>Three players made their debuts as starters in France&#39;s team (Andy Diouf, Jeremy Jacquet and Da Cunha), a first since August 2010, when there were six debutants in the line-up.</p>\n\n<p>France certainly had plenty of chances to put the game to bed, racking up 18 shots with seven of those on target, with their attempts amounting to 1.15&nbsp;expected goals (xG).</p>\n\n<p>Doue was their best outlet, having five shots himself, with two of those testing Lammens and another hitting the woodwork.&nbsp;He had a game-high 16 touches in the opposition box, and&nbsp;also created four chances for his team-mates.</p>\n\n<p>But it was Olise who turned the tide, pulling out a high-quality goal to spare France&#39;s blushes and ensure Zidane made it two wins from two.</p>\n\n<p>Belgium will feel the game was theirs for the taking, having held off France for so long, but their first shot on target did not come until the 73rd minute, and when Matias Fernandez-Pardo had a golden opportunity to snatch a draw at the end, he went down too easily as he fired wide, with no penalty forthcoming.</p>\n"
     },
     "spg5pl0s04xv14ffyt4svtu51": {
       "id": "spg5pl0s04xv14ffyt4svtu51",
