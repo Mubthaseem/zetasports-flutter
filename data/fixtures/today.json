@@ -7,27 +7,27 @@
     "country": "Europe",
     "round": 2,
     "utcDate": "2026-09-29T18:45:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8496",
       "name": "Czechia",
       "shortName": "Czechia",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8496.png",
-      "score": null
+      "score": 0
     },
     "awayTeam": {
       "id": "8491",
       "name": "England",
       "shortName": "England",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8491.png",
-      "score": null
+      "score": 2
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 2
     },
-    "updatedAt": "2026-09-29T12:37:23.548Z"
+    "updatedAt": "2026-09-29T22:08:49.862Z"
   },
   {
     "id": "5181852",
@@ -37,26 +37,26 @@
     "country": "Europe",
     "round": 2,
     "utcDate": "2026-09-29T18:45:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6720",
       "name": "Spain",
       "shortName": "Spain",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6720.png",
-      "score": null
+      "score": 4
     },
     "awayTeam": {
       "id": "10155",
       "name": "Croatia",
       "shortName": "Croatia",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10155.png",
-      "score": null
+      "score": 1
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 4,
+      "away": 1
     },
-    "updatedAt": "2026-09-29T12:37:23.548Z"
+    "updatedAt": "2026-09-29T22:08:49.862Z"
   }
 ]
