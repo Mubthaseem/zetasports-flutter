@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-09-30T05:14:47.437Z",
+    "generatedAt": "2026-09-30T08:23:43.247Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 436
+      "fullArticlesCount": 446
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,105 @@
     }
   },
   "news": [
+    {
+      "id": "xj8xneulbxt13zk7nw3wcuxl",
+      "title": "United States 4-2 Chile: Teenagers Hall and Albert break records in friendly win",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/xj8xneulbxt13zk7nw3wcuxl-united-states-4-2-chile-teenagers-hall-albert-break-records-friendly-win",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/cb/96/mathis-albert_1prd7ihl5z9eu1ejxgyrb6cbiv.jpg?t=-216334848&w=1260&h=708",
+      "publishedAt": "2026-09-30T08:14:13.000Z"
+    },
+    {
+      "id": "1mh1ibaer440p1qjfnhz9janks",
+      "title": "Ronaldo's importance to Portugal should not be underestimated, insists Riemer",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1mh1ibaer440p1qjfnhz9janks-ronaldos-importance-portugal-should-not-be-underestimated-insists-riemer",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/76/e5/cristiano-ronaldo_vgyxun8nijec1ira5dses3atv.jpg?t=-204696272&w=640&h=360",
+      "publishedAt": "2026-09-30T07:43:52.000Z"
+    },
+    {
+      "id": "5D0EDB71CD31A7269A85A55F4B7E8997",
+      "title": "Premier League Fixture Difficulty vs Results: Which Teams Have Defied Expectations?",
+      "description": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/premier-league-results-vs-fixture-difficulty-stats",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/premier-league-fixture-difficulty-vs-reality-1.jpg",
+      "publishedAt": "2026-09-30T06:39:11.000Z"
+    },
+    {
+      "id": "BA72B7A834A33E029E58B79A636A1322",
+      "title": "Perfect Starts and Premier League Titles: Is There Any Correlation?",
+      "description": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/premier-league-winning-starts-title-race-man-city",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/the-history-of-premier-league-winning-starts.jpg",
+      "publishedAt": "2026-09-30T06:39:05.000Z"
+    },
+    {
+      "id": "1953988F3BE2EF7519C5A14EE3258728",
+      "title": "Mass Overhaul or Squad Continuity: What is the Recipe for Premier League Success?",
+      "description": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/premier-league-new-signings-or-continuity-success",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/new-signings-or-continuity-which-is-best.png",
+      "publishedAt": "2026-09-30T06:38:59.000Z"
+    },
+    {
+      "id": "058B0CFDE205FDF85FF62A1E3BF4D810",
+      "title": "UEFA Women’s Champions League: Opta Supercomputer Matchday 2 Predictions",
+      "description": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/uefa-womens-champions-league-opta-supercomputer-matchday-2-predictions",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/uefa-womens-champions-league-predictions-opta.jpg",
+      "publishedAt": "2026-09-30T06:38:51.000Z"
+    },
+    {
+      "id": "ftbpro_01m3qvp8da3r",
+      "title": "Mexico Player Ratings and Takeaways From Underwhelming Draw With Peru",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3qvp8da3r/mexico-player-ratings-takeaways-from-underwhelming-draw-peru",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_71/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3r5gqebhc0ebhpt0m.jpg",
+      "publishedAt": "2026-09-30T04:06:47.000Z"
+    },
+    {
+      "id": "ftbpro_01m3qtsdnmxg",
+      "title": "Three Takeaways From USMNT’s Scrappy Win Over Chile",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3qtsdnmxg/three-takeaways-from-usmnts-scrappy-win-over-chile",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3r5dpr5ny7x3hefm1.jpg",
+      "publishedAt": "2026-09-30T03:51:37.000Z"
+    },
+    {
+      "id": "ftbpro_01m3qyf9y4td",
+      "title": "USMNT Player Ratings vs. Chile: Sebastian Berhalter Is Captain Material in Dramatic Win",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3qyf9y4td/usmnt-player-ratings-vs-chile-sebastian-berhalter-is-captain-material-dramatic-win",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_6537,h_3677,x_0,y_403/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3r2n0qrb7c91qewsr.jpg",
+      "publishedAt": "2026-09-30T03:02:35.000Z"
+    },
+    {
+      "id": "ftbpro_01m3r0t81sk4",
+      "title": "17-Year-Old Wonderkid Becomes Youngest Goalscorer in USMNT History",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3r0t81sk4/17-year-old-wonderkid-becomes-youngest-goalscorer-usmnt-history",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_107/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3r0ymt74gg72kqp8n.jpg",
+      "publishedAt": "2026-09-30T02:26:24.000Z"
+    },
+    {
+      "id": "ftbpro_01m3m6atx7ry",
+      "title": "Argentina vs. Bolivia: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3m6atx7ry/argentina-vs-bolivia-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3mhydyk2sjpgfswjw.jpg",
+      "publishedAt": "2026-09-30T02:00:00.000Z"
+    },
     {
       "id": "ftbpro_01m3qeszdqev",
       "title": "Real Madrid President Florentino Perez and Barcelona Are Headed to Court in Latest Fiery Debacle",
@@ -94,108 +193,40 @@
       "sourceUrl": "/news/4ued3nzwi76n1hbx4tjx150jv-scotland-suffer-big-setback-new-chapter-says-mcginn-after-defeat-switzerland",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/84/89/scotland_oxqmum1jvat719qy0mifm3vnw.jpg?t=-209552784&w=1260&h=708",
       "publishedAt": "2026-09-29T21:27:48.000Z"
-    },
-    {
-      "id": "1sx1zurasqtk41pnunepb1n4qu",
-      "title": "Czechia 0-2 England: Gordon and Kane score again as Tuchel's side get off the mark",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1sx1zurasqtk41pnunepb1n4qu-czechia-0-2-england-gordon-kane-score-again-tuchels-side-get-off-mark",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b5/80/kane-and-gordon_psw4fiiyrz3z1ts38dmbdekg8.jpg?t=-212158080&w=640&h=360",
-      "publishedAt": "2026-09-29T20:54:02.000Z"
-    },
-    {
-      "id": "lhamzf4q2c8s18bytkx0sf7qz",
-      "title": "Spain 4-1 Croatia: Yamal nets brace as unbeaten run reaches 40 games",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/lhamzf4q2c8s18bytkx0sf7qz-spain-4-1-croatia-yamal-nets-brace-unbeaten-run-reaches-40-games",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/20/48/lamine-yamal_10cx3tb2pk3qt1xmok49kk1hzc.jpg?t=-217132080&w=640&h=360",
-      "publishedAt": "2026-09-29T20:52:13.000Z"
-    },
-    {
-      "id": "ftbpro_01m3q7kpgekb",
-      "title": "Chelsea Dealt Fresh Injury Scare at Their Most Vulnerable Position",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3q7kpgekb/chelsea-dealt-fresh-injury-scare-at-their-most-vulnerable-position",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2266,h_1274,x_188,y_68/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q9b5c8hsxe0c5e2k.jpg",
-      "publishedAt": "2026-09-29T20:35:40.000Z"
-    },
-    {
-      "id": "ic1l0swye6up1788ghbuhiltm",
-      "title": "Esposito brothers want to 'share the field more often' for Italy",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/ic1l0swye6up1788ghbuhiltm-esposito-brothers-want-share-field-more-often-italy",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/58/8e/francesco-pio-esposito-and-sebastiano-esposito_1dopmzc1jlzfd1dfdjkzj6a9e8.jpg?t=-243450784&w=1260&h=708",
-      "publishedAt": "2026-09-29T20:19:28.000Z"
-    },
-    {
-      "id": "ftbpro_01m3q5916sjb",
-      "title": "History Repeats Itself As Raphinha Suffers Another Injury With Brazil",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3q5916sjb/history-repeats-itself-raphinha-suffers-another-injury-brazil",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_99/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q5qvh6hcz82anvfr.jpg",
-      "publishedAt": "2026-09-29T20:00:01.000Z"
-    },
-    {
-      "id": "rdtewxxxoxyl1t0f3d1jxunw8",
-      "title": "Bronze excited for Chelsea to 'prove ourselves' against Lyon",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/rdtewxxxoxyl1t0f3d1jxunw8-bronze-excited-chelsea-prove-ourselves-against-lyon",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/11/b4/bronze_nnnz86i30nxm13ms8uinj8gg6.jpg?t=-220102336&w=1260&h=708",
-      "publishedAt": "2026-09-29T19:50:23.000Z"
-    },
-    {
-      "id": "ftbpro_01m3q0kbhvp7",
-      "title": "Seven Takeaways From Official Report Into Man City’s Nine Years of Cheating",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3q0kbhvp7/seven-takeaways-from-official-report-into-man-citys-nine-years-cheating",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2139,h_1203,x_216,y_106/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3q1kryg3pg4gk4hhy.jpg",
-      "publishedAt": "2026-09-29T19:35:00.000Z"
-    },
-    {
-      "id": "w4tlhtfp5huo11h5lb72ixdxq",
-      "title": "Wiegman not focused on expiring England contract",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/w4tlhtfp5huo11h5lb72ixdxq-wiegman-not-focused-expiring-england-contract",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/16/a2/sarina-wiegman_1b7w631593n1x1vjuzuyem8rpj.jpg?t=-227686848&w=1260&h=708",
-      "publishedAt": "2026-09-29T19:18:13.000Z"
-    },
-    {
-      "id": "ftbpro_01m3pt7y59h4",
-      "title": "Man Utd Strike Historic Deal for Liverpool Youngster Amid JJ Gabriel Storm",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3pt7y59h4/man-utd-strike-historic-deal-liverpool-youngster-amid-jj-gabriel-storm",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_135/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3ptqx45c1rn19m14d.jpg",
-      "publishedAt": "2026-09-29T19:00:00.000Z"
-    },
-    {
-      "id": "1uv7la8e2fj8o1pwm899c6zg4z",
-      "title": "Herrington: Australia's performances against Brazil show how far we've come",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1uv7la8e2fj8o1pwm899c6zg4z-herrington-australias-performances-against-brazil-show-how-far-weve-come",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/9d/1e/herrington_1j2xkk46ryn4y1c652iaqww4cr.jpg?t=-235044848&w=1260&h=708",
-      "publishedAt": "2026-09-29T18:49:09.000Z"
-    },
-    {
-      "id": "1vospb7qu65a1ac0d5isypkq0",
-      "title": "Man City found guilty of all charges related to serious breaches of Premier League financial rules",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1vospb7qu65a1ac0d5isypkq0-man-city-found-guilty-all-charges-related-serious-breaches-premier-league-financial-rules",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/da/39/city_uod74gxhyc1l1k6vem3261n9o.jpg?t=-241240272&w=640&h=360",
-      "publishedAt": "2026-09-29T18:12:40.000Z"
     }
   ],
   "articles": {
+    "058B0CFDE205FDF85FF62A1E3BF4D810": {
+      "id": "058B0CFDE205FDF85FF62A1E3BF4D810",
+      "title": "UEFA Women’s Champions League: Opta Supercomputer Matchday 2 Predictions",
+      "subtitle": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/uefa-womens-champions-league-opta-supercomputer-matchday-2-predictions",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/uefa-womens-champions-league-predictions-opta.jpg",
+      "publishedAt": "2026-09-30T06:38:51.000Z",
+      "paragraphs": [
+        "Search\n  \n\n    \n  \n\t  \t  \t\t\t  \t\n    Premier League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Expected Points Table  \n\n\t  \n  Power Rankings  \n\n\t  \n  FPL  \n\n\t  \n  Newsletter  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Champions League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Football Predictions      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  English Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Opta Stats      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  Ligue 1  \n\n\t  \n  Serie A  \n\n\t  \n  Bundesliga  \n\n\t  \n  La Liga  \n\n\t  \n  Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WSL      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Power Rankings  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More Football      \n  \n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  Champions League  \n\n\t  \n  Europa League  \n\n\t  \n  Conference League  \n\n\t  \n  Championship  \n\n\t  \n  League One  \n\n\t  \n  League Two  \n\n\t  \n  WSL  \n\n\t  \n  Scottish Premiership  \n\n\t  \n  Saudi Pro League  \n\n\t  \n  MLS  \n\n\n  \n\n\t  \n  Newsletter  \n\n\t  \t  \t\t\t\t\t  \t\n    NFL      \n  \n\t  \n  NFL Articles  \n\n\t  \n  Fantasy Articles  \n\n\t  \n  Standings  \n\n\t  \n  Rankings  \n\n\t  \n  Player Ratings  \n\n\t  \n  Fantasy Tools  \n\n\t  \n  Scores & Schedule  \n\n\t  \n  Stats  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Baseball      \n  \n\t  \n  MLB Leaderboards  \n\n\t  \n  MLB Predictions  \n\n\t  \n  NPB Predictions  \n\n\t  \n  KBO Predictions  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More      \n  \n\t  \t  \t\t\t\t\t  \t\n    Basketball      \n  \n\t  \t  \t\t\t  \t\n    NBA      \n  \n\t  \n  NBA Predictions  \n\n\t  \n  NBA Leaderboards  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WNBA      \n  \n\t  \n  WNBA Predictions  \n\n\n  \n\n\t  \n  Men's College Basketball  \n\n\t  \n  Women’s College Basketball  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    College Football      \n  \n\t  \n  FBS  \n\n\t  \n  FBS Rankings and Predictions  \n\n\t  \n  FCS  \n\n\n  \n\n\t  \n  Tennis  \n\n\t  \n  Rugby  \n\n\t  \n  Golf  \n\n\t  \n  Hockey  \n\n\t  \n  Explainers  \n\n\n  \n\n\n    \n      \n    \n    \n      \n    \n  \n\n  \n\n        \n      \n        \n          \n        \n      \n      \n                \n                      \n              \n                                  LIVE                                Premier League 2026-27 Predictions 🔮\n              \n            \n                      \n              \n                                  LIVE                                2026 NFL Predictions 🔮\n              \n            \n                      \n              \n                                  \n                                Discover the Latest Opta Power Rankings 🔋\n              \n            \n                      \n              \n                                  \n                                Subscribe to our Free Football Newsletter ✉️\n              \n            \n                  \n      \n      \n        \n          \n        \n      \n    \n    \n\n  \n\n  \n    \n            \n                \n                      \n      \n                                \n                                        Football\n                      \n              \n              \n          UEFA Women’s Champions League: Opta Supercomputer Matchday 2 Predictions\n        \n      \n                          \n                      Sep 30, 2026\n          \n                      Emily Clogg / Author\n                  \n      \n              \n                      \n                  \n          \n\n    \n              \n      \n              \n                    \nWith the help of the Opta supercomputer, we provide our UEFA Women’s Champions League match predictions across Matchday 2 in 2026-27.",
+        "It was goals galore for Lyon and Barcelona on Matchday 1 against Servette and Paris FC, respectively, whilst over in London, both Arsenal and Chelsea squeezed past their opponents with narrow 1-0 victories.",
+        "Meanwhile, reigning WSL champions Manchester City, came from 2-0 down to draw 2-2 against Bayern Munich City becoming the first English side to avoid defeat at Bayern Munich in the UWCL.",
+        "The next round of fixtures promises even more entertainment.",
+        "The blockbuster match of the week sees Chelsea travel to eight-time winners Lyon; Sonia Bompastor is set to make a return to her old stomping ground hoping to take all three points back to the English capital.",
+        "Matches elsewhere include Benfica hosting Bayern Munich, Arsenal travelling to Paris FC, and Roma facing the tough test of welcoming a formidable Barcelona to Stadio Tre Fontane.",
+        "Opta Analyst presents data-driven predictions for each game from MD2, powered by the Opta supercomputer’s pre-match simulations.",
+        "There are three 5:45pm kick-offs to start the matchday on Wednesday as BK Häcken, Paris FC and Roma host the first set of matches.",
+        "For inaugural 2025-26 UEFA Women’s Europa Cup winners Häcken, the supercomputer backs them to get the Italian job done this week after a tight 1-0 defeat at the hands of Inter Milan last time out.",
+        "This week’s opponents are six-time Serie A champions Juventus. The Bianconere won their opening league match of the season 2-0 against Napoli at the weekend, but tasted defeat in the UWCL at the hands of Portuguese outfit Benfica.",
+        "Häcken have lost each of their last three UWCL matches, equalling their longest-ever losing streak in the competition, previously set between 17 November 2021 and 15 December 2021.",
+        "The supercomputer predicts a similar fate for Juve this time around; Häcken came out victorious in 64.5% of pre-match simulations. In fact, the simulations saw more draws (19.0%) than wins for Juventus (16.5%).",
+        "Elsewhere, two-time UWCL winners Arsenal travel to the French capital to play Paris FC as they look to improve on their 1-0 win against HB Køge. The Gunners netted a stoppage-time penalty to sugarcoat what was otherwise a limp performance against the Danish side.",
+        "The big headscratcher for Renée Slegers is quite simply how to get the ball in the back of the net.",
+        "A disappointing 1-0 defeat against rivals Chelsea at the weekend leaves Arsenal seventh in the WSL table, having failed to score in two of their four games. In fact, only newly-promoted Charlton Athletic (3) have failed to score more often in league this season.",
+        "It will be the first meeting between Paris FC and Arsenal in the UWCL, with the French side having lost each of their previous three matches against English opponents in the competition, all against Chelsea (1-4, 0-4 and 0-4 between 2023 and 2025).",
+        "The Gunners came out victorious 1-0 in a pre-season friendly against their opponents this summer, and the supercomputer backs Slegers' side to start the UWCL campaign with back-to-back wins for the first time since 2022-23, coming out on top in 63.5% of the computer's 10,000 pre-match simulations.",
+        "The third and final early kick-off Wednesday has to offer comes in the form of Roma against competition giants, and favourites Barcelona.",
+        "Barça, perhaps unsurprisingly, are flying high once again this season boasting a perfect record in Liga F after five games, having scored 21 times and conceded just twice. Their quest for a fifth UWCL crown got off to a great start too as Barça dominated Servette in an 8-0 win last week.",
+        "Before the start of this year’s edition, the Opta supercomputer heavily favoured Barcelona ending the tournament as winners once again; the Blaugrana won the trophy in 41.2% of simulations."
+      ]
+    },
     "082CB34B83990122D720ABD2BA60D1DB": {
       "id": "082CB34B83990122D720ABD2BA60D1DB",
       "title": "Vertical, Relentless, Effective: The Tottenham Transformation Under Martin Ho",
@@ -875,6 +906,37 @@
         "English sides have won all five of their meetings with Austrian opponents in the competition by an aggregate score of 17-2."
       ],
       "html": "<p>Chelsea will not take any risks with Lauren James against Austria Wien in the Women&#39;s Champions League, as Sonia Bompastor looks to get her ready to face Arsenal on Sunday.</p>\n\n<p>The Blues are overwhelming favourites to open their European league-phase campaign with three points on Wednesday, with the Opta supercomputer assigning them a 93.3% chance of victory over the tournament debutants.</p>\n\n<p>Chelsea&#39;s only previous meeting with an Austrian side in the Champions League came last season, as they thumped St. Polten 6-0 in the league phase.</p>\n\n<p>Having gone out at the quarter-final stage last term following three straight semi-final defeats, the Blues are hoping to go further in Europe this term, but rotation is likely this week.</p>\n\n<p>With a huge London derby against Arsenal on the horizon in the Women&#39;s Super League, Bompastor has already confirmed James – who picked up a minor injury in training – will be rested.</p>\n\n<p>&quot;She should be available for the game on the weekend, but we don&#39;t want to take any risks for the game tomorrow,&quot; Bompastor said of James. &quot;She&#39;s a bit short.&quot;</p>\n\n\n<p>Bompastor also confirmed Erin Cuthbert, Manaka Matsukubo and Aggie Beever-Jones are all back in training, with the latter being the only one of that trio to appear in a WSL match this season.&nbsp;</p>\n\n<p>&quot;They are training again with the team, so a lot of players and it&#39;s good news. Manaka is back in training, not fully fit yet, but it&#39;s good to have her back,&quot; Bompastor said.&nbsp;</p>\n\n<p>&quot;It&#39;s really good to see Erin back. I&#39;m always happy when I have most of my players on the pitch. It brings positivity around the team and the quality on the pitch progresses.</p>\n\n<p>&quot;It&#39;s always good to have that competition in the squad, with everyone happy to be on the pitch together.&quot;</p>\n\n<p>Chelsea lost just one of their eight games in the Champions League last season (W5 D2), conceding the fewest goals of any side in the competition (six).</p>\n\n<p>Austria Wien will become the fourth different side from Austria to participate in the Champions League, but those teams are winless in 21 games in the competition (D3 L18) since St. Polten beat Slavia Prague 1-0 in November 2022.&nbsp;</p>\n\n<p>English sides have won all five of their meetings with Austrian opponents in the competition by an aggregate score of 17-2.</p>\n"
+    },
+    "1953988F3BE2EF7519C5A14EE3258728": {
+      "id": "1953988F3BE2EF7519C5A14EE3258728",
+      "title": "Mass Overhaul or Squad Continuity: What is the Recipe for Premier League Success?",
+      "subtitle": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/premier-league-new-signings-or-continuity-success",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/new-signings-or-continuity-which-is-best.png",
+      "publishedAt": "2026-09-30T06:38:59.000Z",
+      "paragraphs": [
+        "Search\n  \n\n    \n  \n\t  \t  \t\t\t  \t\n    Premier League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Expected Points Table  \n\n\t  \n  Power Rankings  \n\n\t  \n  FPL  \n\n\t  \n  Newsletter  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Champions League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Football Predictions      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  English Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Opta Stats      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  Ligue 1  \n\n\t  \n  Serie A  \n\n\t  \n  Bundesliga  \n\n\t  \n  La Liga  \n\n\t  \n  Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WSL      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Power Rankings  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More Football      \n  \n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  Champions League  \n\n\t  \n  Europa League  \n\n\t  \n  Conference League  \n\n\t  \n  Championship  \n\n\t  \n  League One  \n\n\t  \n  League Two  \n\n\t  \n  WSL  \n\n\t  \n  Scottish Premiership  \n\n\t  \n  Saudi Pro League  \n\n\t  \n  MLS  \n\n\n  \n\n\t  \n  Newsletter  \n\n\t  \t  \t\t\t\t\t  \t\n    NFL      \n  \n\t  \n  NFL Articles  \n\n\t  \n  Fantasy Articles  \n\n\t  \n  Standings  \n\n\t  \n  Rankings  \n\n\t  \n  Player Ratings  \n\n\t  \n  Fantasy Tools  \n\n\t  \n  Scores & Schedule  \n\n\t  \n  Stats  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Baseball      \n  \n\t  \n  MLB Leaderboards  \n\n\t  \n  MLB Predictions  \n\n\t  \n  NPB Predictions  \n\n\t  \n  KBO Predictions  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More      \n  \n\t  \t  \t\t\t\t\t  \t\n    Basketball      \n  \n\t  \t  \t\t\t  \t\n    NBA      \n  \n\t  \n  NBA Predictions  \n\n\t  \n  NBA Leaderboards  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WNBA      \n  \n\t  \n  WNBA Predictions  \n\n\n  \n\n\t  \n  Men's College Basketball  \n\n\t  \n  Women’s College Basketball  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    College Football      \n  \n\t  \n  FBS  \n\n\t  \n  FBS Rankings and Predictions  \n\n\t  \n  FCS  \n\n\n  \n\n\t  \n  Tennis  \n\n\t  \n  Rugby  \n\n\t  \n  Golf  \n\n\t  \n  Hockey  \n\n\t  \n  Explainers  \n\n\n  \n\n\n    \n      \n    \n    \n      \n    \n  \n\n  \n\n        \n      \n        \n          \n        \n      \n      \n                \n                      \n              \n                                  LIVE                                Premier League 2026-27 Predictions 🔮\n              \n            \n                      \n              \n                                  LIVE                                2026 NFL Predictions 🔮\n              \n            \n                      \n              \n                                  \n                                Discover the Latest Opta Power Rankings 🔋\n              \n            \n                      \n              \n                                  \n                                Subscribe to our Free Football Newsletter ✉️\n              \n            \n                  \n      \n      \n        \n          \n        \n      \n    \n    \n\n  \n\n  \n    \n            \n                \n                      \n      \n                                \n                                        Premier League\n                      \n              \n              \n          Mass Overhaul or Squad Continuity: What is the Recipe for Premier League Success?\n        \n      \n                          \n                      Sep 30, 2026\n          \n                      Ali Tweedale / Author, Ithiel Piñero / Data Viz\n                  \n      \n              \n                      \n                  \n          \n\n    \n              \n      \n              \n                    \nIn an age when fans wants limitless spending on shiny new signings, we ask whether less change can sometimes be more beneficial.",
+        "If a cautionary tale was needed for a football club assuming the grass is always greener on the other side, Tottenham Hotspur’s experience so far in 2026-27 may well do the job.",
+        "After a dismal 2025-26, in which Spurs escaped relegation by the skin of their teeth, the club dived head first into their hopes for a shiny new era on the back of Roberto De Zerbi’s insistence the squad needed immediate, severe and costly surgery. After De Zerbi saved the club from the drop, he was handed the keys to a weighty war chest, and he spent big.",
+        "Upwards of £300 million was dished out and more or less an entire new team was brought in. Spurs signed 10 new players who have all gone into the first team; just five league games into the new season and all nine of the outfield signings have made at least one appearance in the Premier League, while many of them are already key players.",
+        "You don’t need a deep data dive to see it hasn’t worked yet. Spurs are bottom of the table without a win five games into 2026-27. It’s their worst start to a Premier League season.",
+        "It might all work out in the end. Spurs might become world beaters with this squad. Or even if it doesn’t go quite that well, they could feasibly become a half-decent team very soon indeed. This season obviously isn’t a complete write-off already.",
+        "But even if they do turn things around, by making such a poor start, they have given everyone else a head start. Spurs are playing catch-up with every other team, and now face a 33-game run in which they have to make up a deficit if they are to retain their Premier League status. They need to improve drastically to make the season anything like a success.",
+        "In fairness to De Zerbi, the evidence of the last two seasons was pretty strong. Spurs had finished 17th twice consecutively, last season playing some utterly miserable football while suffering a string of serious and debilitating injuries, and the squad clearly needed new additions. But has too much been changed too suddenly?",
+        "Spurs have become only the 12th team in Premier League history (excluding promoted teams) to hand more than 25 starts in the space of the first five games of a season to players who didn’t play for the club the previous year.",
+        "The concern for Spurs is, historically, doing that doesn’t go well. Six of the previous 11 have ended up finishing 17th or lower in the first season after the summer overhaul. Only one has finished higher than ninth.",
+        "Many of those teams were arguably always destined to be in a relegation battle and had attempted to avoid as much by making a lot of summer signings, such as QPR in 2012-13 or Portsmouth in 2005-06.",
+        "Spurs finished fifth as recently as 2023-24 and would have been hoping to get back into the elite quickly, but they are, whether they like it or not, a relegation-battling side. And the early evidence of this season along with the history of other clubs who have made this much change doesn’t bode well for them.",
+        "So, are these numbers and Spurs’ troubles the sign of a wider problem with significant player turnover? Were they wrong to approach the summer with this aggressive approach to the transfer market?",
+        "First up, it’s worth noting that there are examples of teams signing lots of players and things working out, if not always immediately, then in the long term. Nottingham Forest broke the record for the most players signed by a Premier League club after winning promotion in the summer of 2022 and have since established themselves as top-flight regulars (although they were later deducted four points for breaching the Premier League’s Profitability and Sustainability Rules). Chelsea transformed their squad and fortunes after Roman Abramovich arrived at the club. Sunderland qualified for Europe last season after a summer of overhaul following their promotion.",
+        "But there are many more examples of teams struggling after making a lot of signings, as is the case with many of the sides in the above table who gave lots of starts to new signings early on in the new season.",
+        "And this term, too, the teams who have started well are generally those who have not overhauled their squad.",
+        "Of the eight teams to give 10 or fewer starts to players who didn’t play for them last season, five are better off than the position in which the Opta supercomputer predicted they would finish before the start of the campaign. In other words, when comparing season-to-season changes in the starting XI with performance relative to (the supercomputer’s) expectations, teams who didn’t make many alterations are doing well.",
+        "And it’s the opposite at the other end of the spectrum. Of the eight teams who have given at least 13 starts this season to new players, all but one are currently in a lower position than they were in the Opta supercomputer’s pre-season predictions.",
+        "Whether by complete coincidence or not, there appears to be a correlation between the two. A greater number of new players this season has led to underperformance compared to what the supercomputer foresaw for that team.",
+        "There are a few obvious outliers. Bournemouth have given fewer starts to new players (five) than any other team in the Premier League this season (though they do have a new manager), but they are currently seven places lower than their predicted position from pre-season."
+      ]
     },
     "19p7xhsygyxob1j9e3g5vytwk4": {
       "id": "19p7xhsygyxob1j9e3g5vytwk4",
@@ -1653,6 +1715,29 @@
         "They also face Leeds United, Bournemouth and Chelsea in the league next month, having made their joint-worst start to a Premier League season through five matchdays (also five points in 2014-15)."
       ],
       "html": "<p>Manchester United have confirmed striker Benjamin Sesko must undergo tests after withdrawing from the Slovenia squad with a shin injury.</p>\n\n<p>Sesko was a notable absentee as United drew 1-1 with Fulham on Sunday, with Matheus Cunha&#39;s deflected strike salvaging a point for the Red Devils following Lisandro Martinez&#39;s calamitous own goal.</p>\n\n<p>Having joined from RB Leipzig in a £74m deal last August, Sesko scored 12 goals in 32 appearances across all competitions last term.</p>\n\n<p>That tally was only matched by Bryan Mbeumo among his Red Devils team-mates, despite 13 of Sesko&#39;s outings coming from the bench.</p>\n\n<p>The 23-year-old missed the final few games of 2025-26, however, as well as United&#39;s entire pre-season campaign, with a shin problem.</p>\n\n<p>Sesko has played six times for Michael Carrick&#39;s side this season, scoring twice, though he has only started twice – against Sabah in the Champions League and Brighton in the EFL Cup.</p>\n\n<p>In the aftermath of last week&#39;s cup defeat to Brighton, Carrick revealed that the same issue was bothering Sesko again, and he has now withdrawn&nbsp;from Slovenia&#39;s squad.</p>\n\n<p>Sesko was initially named in Bostjan Cesar&#39;s party for Nations League fixtures against Scotland – who they will face home and away – plus North Macedonia and Switzerland.</p>\n\n\n<p>In a medical update released on Monday, United said: &quot;Benjamin will undergo tests this week before defining his individual recovery plan.&quot;</p>\n\n<p>Sesko has almost three weeks of recovery time if he is to feature in United&#39;s next Premier League game, against bottom club Tottenham on October 10.&nbsp;</p>\n\n<p>They also face Leeds United, Bournemouth and Chelsea in the league next month, having made their joint-worst start to a Premier League season through five matchdays (also five points in 2014-15).</p>\n"
+    },
+    "1mh1ibaer440p1qjfnhz9janks": {
+      "id": "1mh1ibaer440p1qjfnhz9janks",
+      "title": "Ronaldo's importance to Portugal should not be underestimated, insists Riemer",
+      "subtitle": "Brian Riemer's Denmark side host Portugal on Thursday in the Nations League, and he is wary of the threat posed by Cristiano Ronaldo.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1mh1ibaer440p1qjfnhz9janks-ronaldos-importance-portugal-should-not-be-underestimated-insists-riemer",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/76/e5/cristiano-ronaldo_vgyxun8nijec1ira5dses3atv.jpg?t=-204696272&w=1200&h=630",
+      "publishedAt": "2026-09-30T07:43:52.000Z",
+      "paragraphs": [
+        "Denmark boss Brian Riemer believes &quot;it&#39;s a bit absurd&quot; to suggest Portugal are better off without Cristiano Ronaldo.",
+        "Portugal lead their Nations League group ahead of their trip to Denmark on Thursday, having won against Wales and Norway to begin their title defence.",
+        "Ronaldo featured against Wales, seeing a goal chalked off, but was an unused substitute in Portugal&#39;s 2-1 victory over Norway last time out.",
+        "In his absence, starting strikers Goncalo Ramos and Joao Felix both scored for Jorge Jesus&#39; side, with the head coach also insisting Ronaldo was left on the bench for tactical reasons.",
+        "Reports claimed Ronaldo&#39;s relationship with Jesus is now fractured, while some fans suggested Portugal are better off without their all-time leading scorer, but Riemer came to the 41-year-old&#39;s defence.",
+        "&quot;I think it&#39;s a bit absurd to be discussing this in relation to Cristiano Ronaldo,&quot; Riemer told TV2 Sport.",
+        "&quot;I believe that many people underestimate the importance he has in the Portuguese team. I even think that, the day he retires, Portugal will have a problem.",
+        "&quot;There&#39;s something called hierarchy. There are many strong personalities in a team like Portugal. Who will make decisions and set the terms? It can be a big challenge.",
+        "&quot;Definitely, you shouldn&#39;t underestimate Ronaldo&#39;s importance when he plays. Portugal&#39;s best team is with Ronaldo playing.&quot;",
+        "Ronaldo scored 29 goals in 33 games under the command of Jesus for Al-Nassr in the 2025-26 campaign, at an average of one goal every 99 minutes.",
+        "Jesus revealed Ronaldo could be in for some minutes against Denmark, while Portugal also host Norway before the end of the extended international break."
+      ],
+      "html": "<p>Denmark boss Brian Riemer believes &quot;it&#39;s a bit absurd&quot; to suggest Portugal are better off without Cristiano Ronaldo.</p>\n\n<p>Portugal lead their Nations League group ahead of their trip to Denmark on Thursday, having won against Wales and Norway to begin their title defence.</p>\n\n<p>Ronaldo featured against Wales, seeing a goal chalked off, but was an unused substitute in Portugal&#39;s 2-1 victory over Norway last time out.</p>\n\n<p>In his absence, starting strikers Goncalo Ramos and Joao Felix both scored for Jorge Jesus&#39; side, with the head coach also insisting Ronaldo was left on the bench for tactical reasons.</p>\n\n<p>Reports claimed Ronaldo&#39;s relationship with Jesus is now fractured, while some fans suggested Portugal are better off without their all-time leading scorer, but Riemer came to the 41-year-old&#39;s defence.</p>\n\n<p>&quot;I think it&#39;s a bit absurd to be discussing this in relation to Cristiano Ronaldo,&quot; Riemer told TV2 Sport.</p>\n\n\n<p>&quot;I believe that many people underestimate the importance he has in the Portuguese team. I even think that, the day he retires, Portugal will have a problem.</p>\n\n<p>&quot;There&#39;s something called hierarchy. There are many strong personalities in a team like Portugal. Who will make decisions and set the terms? It can be a big challenge.</p>\n\n<p>&quot;Definitely, you shouldn&#39;t underestimate Ronaldo&#39;s importance when he plays. Portugal&#39;s best team is with Ronaldo playing.&quot;</p>\n\n<p>Ronaldo scored 29 goals in 33 games under the command of Jesus for Al-Nassr in the 2025-26 campaign, at an average of one goal every 99 minutes.</p>\n\n<p>Jesus revealed Ronaldo could be in for some minutes against Denmark, while Portugal also host Norway before the end of the extended international break.</p>\n"
     },
     "1muk7ea3o972z15gjzre3t9mhj": {
       "id": "1muk7ea3o972z15gjzre3t9mhj",
@@ -3194,10 +3279,10 @@
       "subtitle": "The Analyst",
       "source": "The Analyst",
       "sourceUrl": "https://theanalyst.com/articles/premier-league-results-vs-fixture-difficulty-stats",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/premier-league-fixture-difficulty-vs-reality-scaled.jpg",
-      "publishedAt": "2026-09-29T09:40:24.000Z",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/premier-league-fixture-difficulty-vs-reality-1.jpg",
+      "publishedAt": "2026-09-30T06:39:11.000Z",
       "paragraphs": [
-        "Search\n  \n\n    \n  \n\t  \t  \t\t\t  \t\n    Premier League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Expected Points Table  \n\n\t  \n  Power Rankings  \n\n\t  \n  FPL  \n\n\t  \n  Newsletter  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Champions League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Football Predictions      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  English Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Opta Stats      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  Ligue 1  \n\n\t  \n  Serie A  \n\n\t  \n  Bundesliga  \n\n\t  \n  La Liga  \n\n\t  \n  Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WSL      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Power Rankings  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More Football      \n  \n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  Champions League  \n\n\t  \n  Europa League  \n\n\t  \n  Conference League  \n\n\t  \n  Championship  \n\n\t  \n  League One  \n\n\t  \n  League Two  \n\n\t  \n  WSL  \n\n\t  \n  Scottish Premiership  \n\n\t  \n  Saudi Pro League  \n\n\t  \n  MLS  \n\n\n  \n\n\t  \n  Newsletter  \n\n\t  \t  \t\t\t\t\t  \t\n    NFL      \n  \n\t  \n  NFL Articles  \n\n\t  \n  Fantasy Articles  \n\n\t  \n  Standings  \n\n\t  \n  Rankings  \n\n\t  \n  Player Ratings  \n\n\t  \n  Fantasy Tools  \n\n\t  \n  Scores & Schedule  \n\n\t  \n  Stats  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Baseball      \n  \n\t  \n  MLB Leaderboards  \n\n\t  \n  MLB Predictions  \n\n\t  \n  NPB Predictions  \n\n\t  \n  KBO Predictions  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More      \n  \n\t  \t  \t\t\t\t\t  \t\n    Basketball      \n  \n\t  \t  \t\t\t  \t\n    NBA      \n  \n\t  \n  NBA Predictions  \n\n\t  \n  NBA Leaderboards  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WNBA      \n  \n\t  \n  WNBA Predictions  \n\n\n  \n\n\t  \n  Men's College Basketball  \n\n\t  \n  Women’s College Basketball  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    College Football      \n  \n\t  \n  FBS  \n\n\t  \n  FBS Rankings and Predictions  \n\n\t  \n  FCS  \n\n\n  \n\n\t  \n  Tennis  \n\n\t  \n  Rugby  \n\n\t  \n  Golf  \n\n\t  \n  Hockey  \n\n\t  \n  Explainers  \n\n\n  \n\n\n    \n      \n    \n    \n      \n    \n  \n\n  \n\n        \n      \n        \n          \n        \n      \n      \n                \n                      \n              \n                                  LIVE                                Premier League 2026-27 Predictions 🔮\n              \n            \n                      \n              \n                                  LIVE                                2026 NFL Predictions 🔮\n              \n            \n                      \n              \n                                  \n                                Discover the Latest Opta Power Rankings 🔋\n              \n            \n                      \n              \n                                  \n                                Subscribe to our Free Football Newsletter ✉️\n              \n            \n                  \n      \n      \n        \n          \n        \n      \n    \n    \n\n  \n\n  \n    \n            \n        \n      \n      \n                                \n                                        Premier League\n                      \n              \n              \n          Premier League Fixture Difficulty vs Results: Which Teams Have Defied Expectations?\n        \n      \n                          \n                      Sep 29, 2026\n          \n                      Ryan Benson / Author, Ithiel Piñero / Data Viz\n                  \n      \n              \n                      \n                  \n          \n\n    \n              \n      \n              \n                    \nWe look back at pre-season expectations for Premier League clubs' first five matches and assess how well they've done relative to the supposed difficulty of their fixture schedules.",
+        "Search\n  \n\n    \n  \n\t  \t  \t\t\t  \t\n    Premier League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Expected Points Table  \n\n\t  \n  Power Rankings  \n\n\t  \n  FPL  \n\n\t  \n  Newsletter  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Champions League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Football Predictions      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  English Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Opta Stats      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  Ligue 1  \n\n\t  \n  Serie A  \n\n\t  \n  Bundesliga  \n\n\t  \n  La Liga  \n\n\t  \n  Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WSL      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Power Rankings  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More Football      \n  \n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  Champions League  \n\n\t  \n  Europa League  \n\n\t  \n  Conference League  \n\n\t  \n  Championship  \n\n\t  \n  League One  \n\n\t  \n  League Two  \n\n\t  \n  WSL  \n\n\t  \n  Scottish Premiership  \n\n\t  \n  Saudi Pro League  \n\n\t  \n  MLS  \n\n\n  \n\n\t  \n  Newsletter  \n\n\t  \t  \t\t\t\t\t  \t\n    NFL      \n  \n\t  \n  NFL Articles  \n\n\t  \n  Fantasy Articles  \n\n\t  \n  Standings  \n\n\t  \n  Rankings  \n\n\t  \n  Player Ratings  \n\n\t  \n  Fantasy Tools  \n\n\t  \n  Scores & Schedule  \n\n\t  \n  Stats  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Baseball      \n  \n\t  \n  MLB Leaderboards  \n\n\t  \n  MLB Predictions  \n\n\t  \n  NPB Predictions  \n\n\t  \n  KBO Predictions  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More      \n  \n\t  \t  \t\t\t\t\t  \t\n    Basketball      \n  \n\t  \t  \t\t\t  \t\n    NBA      \n  \n\t  \n  NBA Predictions  \n\n\t  \n  NBA Leaderboards  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WNBA      \n  \n\t  \n  WNBA Predictions  \n\n\n  \n\n\t  \n  Men's College Basketball  \n\n\t  \n  Women’s College Basketball  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    College Football      \n  \n\t  \n  FBS  \n\n\t  \n  FBS Rankings and Predictions  \n\n\t  \n  FCS  \n\n\n  \n\n\t  \n  Tennis  \n\n\t  \n  Rugby  \n\n\t  \n  Golf  \n\n\t  \n  Hockey  \n\n\t  \n  Explainers  \n\n\n  \n\n\n    \n      \n    \n    \n      \n    \n  \n\n  \n\n        \n      \n        \n          \n        \n      \n      \n                \n                      \n              \n                                  LIVE                                Premier League 2026-27 Predictions 🔮\n              \n            \n                      \n              \n                                  LIVE                                2026 NFL Predictions 🔮\n              \n            \n                      \n              \n                                  \n                                Discover the Latest Opta Power Rankings 🔋\n              \n            \n                      \n              \n                                  \n                                Subscribe to our Free Football Newsletter ✉️\n              \n            \n                  \n      \n      \n        \n          \n        \n      \n    \n    \n\n  \n\n  \n    \n            \n                \n                      \n      \n                                \n                                        Premier League\n                      \n              \n              \n          Premier League Fixture Difficulty vs Results: Which Teams Have Defied Expectations?\n        \n      \n                          \n                      Sep 30, 2026\n          \n                      Ryan Benson / Author, Jakob Abrahamson / Design, Ithiel Piñero / Data Viz\n                  \n      \n              \n                      \n                  \n          \n\n    \n              \n      \n              \n                    \nWe look back at pre-season expectations for Premier League clubs' first five matches and assess how well they've done relative to the supposed difficulty of their fixture schedules.",
         "Five matchdays is all it takes to dramatically alter perspectives and expectations in the Premier League.",
         "Think back to pre-season, that fantastical time of renewal, hope and excitement. Intrusive thoughts about the campaign ahead barely register for most. Instead, brain power is dedicated to thinking about what could be achieved.",
         "Reality can come at you quickly, however.",
@@ -3868,6 +3953,37 @@
         "Zinedine Zidane will take charge of his first matches as France’s new manager in the extended September and October international break.",
         "Zinedine Zidane just had to bide his time. The three-times Champions League-winning manager could have taken any other job after leaving Real Madrid (for a second time) in 2021. He surely had offers. Zidane, however, remained patient as France’s next national team manager in waiting.",
         "That patience paid off when the 54-year-old was officially named Les Bleus boss after the World Cup, confirming the worst kept secret in international football. Zidane was long seen as the natural heir to Didier Deschamps and now the former midfielder will get his chance to reshape the French national team in his own image."
+      ]
+    },
+    "BA72B7A834A33E029E58B79A636A1322": {
+      "id": "BA72B7A834A33E029E58B79A636A1322",
+      "title": "Perfect Starts and Premier League Titles: Is There Any Correlation?",
+      "subtitle": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/premier-league-winning-starts-title-race-man-city",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/the-history-of-premier-league-winning-starts.jpg",
+      "publishedAt": "2026-09-30T06:39:05.000Z",
+      "paragraphs": [
+        "Search\n  \n\n    \n  \n\t  \t  \t\t\t  \t\n    Premier League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Expected Points Table  \n\n\t  \n  Power Rankings  \n\n\t  \n  FPL  \n\n\t  \n  Newsletter  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Champions League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Football Predictions      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  English Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Opta Stats      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  Ligue 1  \n\n\t  \n  Serie A  \n\n\t  \n  Bundesliga  \n\n\t  \n  La Liga  \n\n\t  \n  Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WSL      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Power Rankings  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More Football      \n  \n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  Champions League  \n\n\t  \n  Europa League  \n\n\t  \n  Conference League  \n\n\t  \n  Championship  \n\n\t  \n  League One  \n\n\t  \n  League Two  \n\n\t  \n  WSL  \n\n\t  \n  Scottish Premiership  \n\n\t  \n  Saudi Pro League  \n\n\t  \n  MLS  \n\n\n  \n\n\t  \n  Newsletter  \n\n\t  \t  \t\t\t\t\t  \t\n    NFL      \n  \n\t  \n  NFL Articles  \n\n\t  \n  Fantasy Articles  \n\n\t  \n  Standings  \n\n\t  \n  Rankings  \n\n\t  \n  Player Ratings  \n\n\t  \n  Fantasy Tools  \n\n\t  \n  Scores & Schedule  \n\n\t  \n  Stats  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Baseball      \n  \n\t  \n  MLB Leaderboards  \n\n\t  \n  MLB Predictions  \n\n\t  \n  NPB Predictions  \n\n\t  \n  KBO Predictions  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More      \n  \n\t  \t  \t\t\t\t\t  \t\n    Basketball      \n  \n\t  \t  \t\t\t  \t\n    NBA      \n  \n\t  \n  NBA Predictions  \n\n\t  \n  NBA Leaderboards  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WNBA      \n  \n\t  \n  WNBA Predictions  \n\n\n  \n\n\t  \n  Men's College Basketball  \n\n\t  \n  Women’s College Basketball  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    College Football      \n  \n\t  \n  FBS  \n\n\t  \n  FBS Rankings and Predictions  \n\n\t  \n  FCS  \n\n\n  \n\n\t  \n  Tennis  \n\n\t  \n  Rugby  \n\n\t  \n  Golf  \n\n\t  \n  Hockey  \n\n\t  \n  Explainers  \n\n\n  \n\n\n    \n      \n    \n    \n      \n    \n  \n\n  \n\n        \n      \n        \n          \n        \n      \n      \n                \n                      \n              \n                                  LIVE                                Premier League 2026-27 Predictions 🔮\n              \n            \n                      \n              \n                                  LIVE                                2026 NFL Predictions 🔮\n              \n            \n                      \n              \n                                  \n                                Discover the Latest Opta Power Rankings 🔋\n              \n            \n                      \n              \n                                  \n                                Subscribe to our Free Football Newsletter ✉️\n              \n            \n                  \n      \n      \n        \n          \n        \n      \n    \n    \n\n  \n\n  \n    \n            \n                \n                      \n      \n                                \n                                        Premier League\n                      \n              \n              \n          Perfect Starts and Premier League Titles: Is There Any Correlation?\n        \n      \n                          \n                      Sep 30, 2026\n          \n                      Matt Furniss / Author, Yash Thakur / Design, Emily Millen / Data Viz\n                  \n      \n              \n                      \n                  \n          \n\n    \n              \n      \n              \n                    \nManchester City may have started the season with five wins from five, but as the Premier League has proved many times in the past, it’s a marathon, not a sprint.",
+        "The first international break of the season always gives us time to take stock and try to make sense of what’s happened in the early matchdays of the season.",
+        "Of course, 2026-27 isn’t much different to usual, but this time around clubs have got longer to stew on whether they’ve started well or struggled given the extended September/October pause.",
+        "Sitting at the top of the Premier League table, Manchester City are the only team to have won all five of their matches in 2026-27, with the club starting life after Pep Guardiola in the best way possible on the pitch.",
+        "They’ve already opened up a three-point gap over biggest title rivals Arsenal, but does their fast start necessarily mean a first Premier League title in three years is expected for City?",
+        "Now, there’s obviously the small matter of City reportedly being found guilty of 114 of the 115 financial rule breaches they were charged for and which they deny, but for the purposes of this article, we’ll try to ignore all the potential ramifications of that.",
+        "Enzo Maresca’s side became the 15th different team to win their opening five games of a Premier League season, and it’s the fourth occasion City have managed it.",
+        "They have only won the title in one of the three previous seasons they’ve made a 100% winning start from five games, though. They won the league in 2023-24 but failed to capitalise on five wins from five to start both 2015-16 and 2016-17.",
+        "That follows a wider trend across the league when looking at teams to win their opening five matches of a season.",
+        "Only four of the 14 teams to win their first five matches of a Premier League season have gone on to win the title that season (29%): Man City in 2023-24, Liverpool in 2019-20 and Chelsea in both 2009-10 and 2005-06.",
+        "Perhaps most importantly, all four teams went on to add to their winning streak to start those seasons. Chelsea in 2009-10 and Man City in 2023-24 extended their run by another game (six wins), while Liverpool (8 wins in 2019-20) and Chelsea (9 wins in 2005-06) went on the two longest winning runs by a club to start a Premier League season.",
+        "Tottenham hold the record for the most consecutive wins to start a top-flight league season, winning their first 11 games in 1960-61. Unsurprisingly, they won the title that campaign.",
+        "But a winning start doesn’t guarantee success, as Manchester United found in 1985-86. Despite winning their first 10 games that season (and remaining unbeaten in their first 15) under Ron Atkinson, the Red Devils collapsed and ended the season in fourth place.",
+        "It must be said, City’s start this season has been helped by having one of the easiest five-game openings for the 2026-27.According to the Opta Power Rankings, City had the second-easiest start this season, with their opponents having an average Opta Power Rating of 91.2. Only Liverpool (91.1) were handed a simpler start to the season by the Premier League fixture computer.",
+        "However, as many say, there are no easy games in the Premier League, so maybe City’s start shouldn’t be downplayed.",
+        "One stat to potentially worry City is that none of the previous seven clubs to start a Premier League season with exactly five wins have gone on the win the title in that campaign.",
+        "The most recent of those was Liverpool last season. Arne Slot’s reigning champions won games against Bournemouth, Newcastle, Arsenal, Burnley and Everton to open the 2025-26 Premier League campaign with five wins from five before losing four in a row. The fact Liverpool won four of their first five games with goals scored after the 83rd minute or later pointed to their run being slightly unsustainable, and so it proved.",
+        "Question marks about City’s defensive qualities in their opening five games this season have pointed to the possibility of this being another case of an unsustainable winning run. Their credentials will be tested upon the return to Premier League action on MD6 when they head to Anfield to play Liverpool, who are still unbeaten under new boss Andoni Iraola.",
+        "The lowest position a team have finished after winning their first five games of a Premier League season is sixth (Newcastle United in 1994-95), although that did come in a 42-game campaign.",
+        "Looking back across all English top-flight history, City’s current streak is the 40th different occasion of a team winning their first five games in a season. Just 14 of the previous 39 have gone on to win the league title (36%)."
       ]
     },
     "BB297E004E3D9F4C9E14FFFA4490B6CD": {
@@ -10098,6 +10214,32 @@
         "READ THE LATEST TRANSFER NEWS AND RUMORS FROM WORLD SOCCER. feed"
       ]
     },
+    "ftbpro_01m3m6atx7ry": {
+      "id": "ftbpro_01m3m6atx7ry",
+      "title": "Argentina vs. Bolivia: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/argentina-vs-bolivia-preview-predictions-lineups-9-30-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3mhydyk2sjpgfswjw.jpg",
+      "publishedAt": "2026-09-30T02:00:00.000Z",
+      "paragraphs": [
+        "By James CormackSep 29, 2026The friendly kicks off Argentina’s post-Lionel Messi era.  / Visionhaus/Getty Images (Argentina’s badge), Howard Smith/ISI Photos/Getty Images (Bolivia’s badge) An emotional international break for Argentina begins with a friendly against CONMEBOL rivals Bolivia, with Córdoba’s Estadio Mario Alberto Kempes playing host.",
+        "Lionel Messi’s retirement is casting a shadow over the upcoming friendlies after the 39-year-old almost single-handedly inspired the holders to World Cup glory this summer.",
+        "Argentina was eventually outclassed by Spain in the final, and the behavior of its players post-match, which resulted in lengthy suspensions for Leandro Paredes and Nahuel Molina, drew widespread criticism from the soccer world.",
+        "Messi will be seen off into the sunset next week, and there‘s a strong sense that the defeated World Cup finalists are moving into a new dawn. Lionel Scaloni, the mastermind of its success this decade, remains at the helm and is willing to negotiate his contract, which expires at the end of the year. He has worked wonders with a national team that couldn’t get over the hump for so long, but has struggled to taste defeat throughout his tenure.",
+        "Argentina’s remarkable spirit was laid bare at the World Cup, where shock eliminations were relentlessly flirted with before Ferran Torres struck against 10 men to sink the unpopular holders at MetLife Stadium.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Nico Paz is ready to help fill the void. / Luis ROBAYO/AFP/Getty ImagesArgentina’s schedule has been distinctly underwhelming on either side of the World Cup. The Albiceleste were untested against elite opposition entering the summer’s tournament, and only Messi’s farewell means there’s strong interest in its upcoming fixtures.",
+        "Tame opposition is heading Argentina’s way, starting with the 77th-ranked Bolivia. While trips to La Paz can trouble the very best, Bolivia is a woeful traveller, and this is a great opportunity for a Messi-less Argentina to convince solemn supporters that everything might be okay in a world without the man who has offered them hope for the best part of two decades.",
+        "Life without Messi. / FotMobScaloni had named a 28-man roster for Argentina’s three friendlies during this international window, including the outgoing Messi, who confirmed his retirement from the national team after the World Cup.",
+        "We’ll catch a glimpse of an Argentina-less Messi over the next week against Bolivia and Burkina Faso before he bids farewell at a sold-out Estadio Monumental against Benin.",
+        "Juan Foyth and Thiago Almada have been forced to withdraw from Scaloni’s roster due to injury, while Nicolás Tagliafico is dealing with a muscle issue but hasn’t been ruled out of Wednesday’s clash.",
+        "Cristian Romero has been named Messi‘s successor as captain, and he’ll be expected to don the armband here. Other senior roster members, namely Rodrigo De Paul and Giovani Lo Celso, will team up with their compatriots for Messi’s farewell outing next week.",
+        "Argentina predicted lineup vs. Bolivia (4-4-2): E. Martínez; Giay, Romero, Li. Martínez, Medina; Simeone, Mac Allister, Fernández, González; Paz, La. Martínez.",
+        "Fanatiz, fuboTV, TyC Sports Internacional, ViX",
+        "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
     "ftbpro_01m3m7sjg91g": {
       "id": "ftbpro_01m3m7sjg91g",
       "title": "‘They Only See the Positive’—World Cup Hero Vozinha Makes Heartbreaking Admission",
@@ -10537,7 +10679,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3pxw06jqsydrjzdx3.jpg",
       "publishedAt": "2026-09-29T23:05:00.000Z",
       "paragraphs": [
-        "By SI FC Staff7:05 PM EDTVirgil van Dijk (left) and Erling Haaland (right) headline the gossip. / James Gill - Danehouse/Getty Images (Van Dijk), Mark Cosgrove/News Images/NurPhoto/Getty Images (Haaland)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "By SI FC StaffSep 29, 2026Virgil van Dijk (left) and Erling Haaland (right) headline the gossip. / James Gill - Danehouse/Getty Images (Van Dijk), Mark Cosgrove/News Images/NurPhoto/Getty Images (Haaland)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
         "Manchester United are ready to hold talks over a new contract with Luke Shaw as he approaches the final six months of his existing deal. (Source: Football Insider)",
         "On the other hand, Man Utd are expected to provide the strongest competition for Juventus in pursuit of RB Leipzig left back David Raum, whose own contract is set to expire in the summer. (Source: Gazzetta dello Sport)",
         "Arsenal would make a strong push to sign Manchester City striker Erling Haaland if the club’s uncertain future prompts him to search for an exit. (Source: FootballTransfers)",
@@ -10627,7 +10769,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3pyrsvw25tvwxajf4.jpg",
       "publishedAt": "2026-09-29T23:30:00.000Z",
       "paragraphs": [
-        "By Amanda Langell7:30 PM EDTErling Haaland (left) does not exactly fit into Real Madrid’s front line. / Molly Darlington/Getty Images (Haaland), Alvaro Medranda/Quality Sport Images/Getty Images (Madrid attack)When Real Madrid presidential candidate Enrique Riquelme claimed Erling Haaland would make the Bernabéu his new home this summer, the striker’s father Alfie and agent Rafaela Pimenta responded: “All very entertaining but not true.”",
+        "By Amanda LangellSep 29, 2026Erling Haaland (left) does not exactly fit into Real Madrid’s front line. / Molly Darlington/Getty Images (Haaland), Alvaro Medranda/Quality Sport Images/Getty Images (Madrid attack)When Real Madrid presidential candidate Enrique Riquelme claimed Erling Haaland would make the Bernabéu his new home this summer, the striker’s father Alfie and agent Rafaela Pimenta responded: “All very entertaining but not true.”",
         "Riquelme went on to lose the election to Florentino Pérez, and any lingering chatter of Haaland potentially swapping out a sky blue shirt for a white one faded. Except like many times over the years, the Norway international would once again be linked with Real Madrid—and this time, the circumstances are much, much bigger than just typical rumors.",
         "After a three-year investigation, Manchester City have been found guilty of breaching 115 Premier League financial regulations. The club will appeal the verdict, with chairman Khaldoon Al Mubarak insisting the club’s “innocence.”",
         "But potential punishments, spanning from reprimands and fines to a points deduction and expulsion from the Premier League, loom large. Suddenly, Haaland’s place at the Etihad Stadium appears rather tenuous, kickstarting the familiar whispers of a Real Madrid transfer.",
@@ -10890,7 +11032,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_944,h_531,x_80,y_129/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3qfdpjb134zxtgq42.jpg",
       "publishedAt": "2026-09-30T00:30:00.000Z",
       "paragraphs": [
-        "By Roberto Casillas8:30 PM EDTFlorentino Pérez (left) and Joan Laporta will add another chapter to their fierce presidential rivalry.  / Jose Breton/Pics Action/NurPhoto/Getty Images Real Madrid president Florentino Pérez and Barcelona have been officially summoned to appear in court in the latest chapter of their ongoing legal battle.",
+        "By Roberto CasillasSep 29, 2026Florentino Pérez (left) and Joan Laporta will add another chapter to their fierce presidential rivalry.  / Jose Breton/Pics Action/NurPhoto/Getty Images Real Madrid president Florentino Pérez and Barcelona have been officially summoned to appear in court in the latest chapter of their ongoing legal battle.",
         "A Madrid court has ordered Barcelona and Perez to appear in front of a jury for a conciliatory hearing on Nov. 25. The audience is the next step in the legal process after Barcelona filed a lawsuit against Pérez for slander and defamation back in June.",
         "“The purpose of this claim is for Mr. Pérez to retract certain statements that he made with knowledge of their falsity and which are slanderous and offensive to the image and reputation of the Club,” Barcelona said in a statement when the lawsuit was filed.",
         "Barcelona’s objective with this hearing is to demand Pérez to retract said statements. If Pérez doesn’t retract his statements or doesn’t show up to the conciliatory hearing, Barcelona are expected to move ahead with a criminal complaint against the Real Madrid president.",
@@ -10921,7 +11063,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_62/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01kyn25e4zk02nd7adv5.jpg",
       "publishedAt": "2026-09-29T23:41:04.000Z",
       "paragraphs": [
-        "By Ben Steiner7:41 PM EDTTim Ream likely played his last ever World Cup. / Mao Siqian/Xinhua/Getty ImagesWhen the final whistle blew on the U.S. men’s national team’s journey at the 2026 World Cup, Tim Ream fell into tears. The center back didn’t want to admit his journey with the Stars and Stripes had come to an end, but it was clear he knew those opportunities might not last any longer.",
+        "By Ben SteinerSep 29, 2026Tim Ream likely played his last ever World Cup. / Mao Siqian/Xinhua/Getty ImagesWhen the final whistle blew on the U.S. men’s national team’s journey at the 2026 World Cup, Tim Ream fell into tears. The center back didn’t want to admit his journey with the Stars and Stripes had come to an end, but it was clear he knew those opportunities might not last any longer.",
         "The 38-year-old had told The Sun in July that he “can’t see that there's too much left,” when it came to his international future and that he would “keep playing, but it’s not up to me.”",
         "Nevertheless, the USMNT legend and captain with 86 total caps officially announced his international retirement on Tuesday night, ahead of a ceremony to honor his U.S. Soccer career in his hometown of St. Louis.",
         "“That’s it for me,” Ream said to reporters. “I’m proud of being part of something for 16 years, but it is time to step away from the national team.”",
@@ -10936,6 +11078,119 @@
         "“I think he was humble enough,” the manager added. “He was always defending his team, the teammates, but always with empathy for [the coaching staff] and helping in every single decision.”",
         "Without Ream at the helm, the USMNT is on the hunt for a new team leader and full-time captain, but he won’t be easily replaced. The 2026 skipper will remain a key piece of American soccer history, influencing the future beyond his playing days.",
         "feed. READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m3qtsdnmxg": {
+      "id": "ftbpro_01m3qtsdnmxg",
+      "title": "Three Takeaways From USMNT’s Scrappy Win Over Chile",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/three-takeaways-usmnt-scrappy-win-chile/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3r5dpr5ny7x3hefm1.jpg",
+      "publishedAt": "2026-09-30T03:51:37.000Z",
+      "paragraphs": [
+        "By Sophia VeselySep 29, 2026Chris Richards (left) scored the USMNT’s third goal of the night. / Joe Puetz/Getty ImagesIt may have been ugly and even ended in a benches-clearing skirmish that forced manager Mauricio Pochettino onto the pitch, but the U.S. men’s national team pulled out the win.",
+        "In the second of four friendlies this fall, the USMNT defeated Chile 4–2 on Tuesday night at St. Louis’s Energizer Park.",
+        "Chile proved a much more formidable foe than Peru, whom the USMNT cruised to a 4–1 victory against over the weekend. Although the Americans still walked away victorious on Tuesday, they struggled to break down La Roja and make progress up the field. They were easily crowded out and continuously made reckless decisions as a result.",
+        "Although the stakes are ultimately low, the USMNT must re-evaluate its performance and make significant changes for any chance at defeating bitter rival Mexico in the third friendly on Saturday.",
+        "Here are three takeaways from Tuesday’s affair.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "17-year-old Adri Mehmeti was bested in the midfield. / TIM VIZER/AFP/Getty ImagesFrom the opening whistle and throughout much of the game, the USMNT struggled to break down Chile’s middle block.",
+        "While the hosts maintained the majority of possession (65% in the first half), they were reduced to largely unthreatening, horizontal sequences. Any time the midfielders tried to play vertical or diagonal passes to each other in attempt to break up Chile’s dense set-up, the passes were either immediately picked off, or the American recipients struggled to handle the on-rush of pressure at their backs and subsequently gave up the ball with a haphazard pass. In other words, the USMNT midfielders struggled to adapt to the high pressure of Chile’s midfield and the speed with which the visitors would close down the ball.",
+        "The reality of the situation seemed to only agitate the USMNT midfielders more, causing them to then rush with the ball at their feet and, in turn, fail to properly take care of it. They were stripped of the ball time and time again.",
+        "17-year-old Adri Mehmeti and 21-year-old Brooklyn Raines, both in their first-career starts for the USMNT, struggled the most in the center of the park, dispossessed four times collectively. They were rendered rather invisible in the attack, unable to exploit the proper spaces or contribute to any meaningful sequences. Even veteran Giovanni Reyna was subject to a few giveaways. The only one seemingly capable of handling the high intensity of Chile’s midfield was veteran Sebastian Berhalter, but he ultimately couldn’t do it alone, no matter how many pockets of space he ran into.",
+        "Aside from the undeniable intensity of the Chileans, it was perhaps the lack of familiarity between this new guard of USMNT midfielders that worked against them. In time and with sufficient reps, they should be able to connect in quicker and more seamless ways. One positive to take away from the midfielders’ performances was the fluidity with which they physically rotated positions throughout the middle of the field, even if it didn’t translate into meaning plays.",
+        "Neil Pierre had a night to forget. / Bill Barrett/ISI Photos/Getty ImagesWhat compounded the midfielders’ woes was the carelessness of the backline, especially in possession. Center back Neil Pierre and fullback Frankie Westfield, in particular, both in their first-career starts for the senior squad, continually played directly to the feet of their opponents, both on the ground and on long balls. Likely a consequence of international stage jitters, they nonetheless put the USMNT continually on its back-heels.",
+        "Chile’s first goal came after the backline failed to properly clear the ball off of a corner kick. As the ball bounced around the penalty box, the defenders were reactive, simply watching it as opposed to attempting to step up their line to get eventual-goalscorer Felipe Faúndez in an offside position. That was one of seven corners the backline conceded in the first half, the most in a half since the 2014 World Cup.",
+        "Westfield was a bit careless in his attempts to get forward and struggled to get back on defensive, leaving his left flank exposed to the talented winger Maximiliano Gutiérrez, which resulted in Chile’s second goal of the night.",
+        "Julian Hall has two goals in as many senior caps. / Rick Ulreich/Icon Sportswire/Getty ImagesJulian Hall was the brightest spot on the pitch.",
+        "In his first-career senior start, Hall was the main attacking force for much of the game, adapting brilliantly to the unique challenges Chile presented. The 18-year-old striker for Red Bull New York understood the dense middle block Chile operated with and did his part to stretch the backline and grant the midfielders more space.",
+        "More importantly, though, Hall knew that long balls overhead would work, and on the few occasions in which they were played, Hall did not waste the opportunities. He timed his runs into the final third perfectly to get on the end of then, staying onside while leaving Chile’s defenders reeling. He ended the night with the joint-most shots (five) and the most touches in the opposition’s box (nine).",
+        "Hall displayed his mature field awareness all match, but in one particular instance, it was next-level. He received a cross from Sergiño Dest in the 37th minute inside the 18-yard box, and although he had a small opening to take a one-touch shot on frame himself, he instead chose to dummy the ball, understanding that Berhalter was running in behind him toward the back post. With Chile’s defenders utterly confused, Berhalter had a wide-open shot to secure the USMNT’s first of the night.",
+        "For the team’s second of the night, Hall finished it off himself, scoring his second goal in as many national team caps. Capitalizing on a cross from Reyna, the youngster leapt into the air to flick the ball to the back post with his head.",
+        "“It’s been amazing to share the field with some amazing players,” Hall said humbly post-match on TNT. “They put me in the right spots, and I’m just doing as much as I can to finish them off.”"
+      ]
+    },
+    "ftbpro_01m3qvp8da3r": {
+      "id": "ftbpro_01m3qvp8da3r",
+      "title": "Mexico Player Ratings and Takeaways From Underwhelming Draw With Peru",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/mexico-player-ratings-takeaways-underwhelming-draw-peru/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_71/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3r5gqebhc0ebhpt0m.jpg",
+      "publishedAt": "2026-09-30T04:06:47.000Z",
+      "paragraphs": [
+        "By Roberto Casillas12:06 AM EDTNot a single player that started against Colombia on Saturday repeated in El Tri’s lineup.  / Evan Bernstein/Getty Images The Mexico national team produced a lackluster performance and could only muster a 1–1 draw with Peru at Sports Illustrated Stadium on Tuesday night.",
+        "Rafael Márquez’s decided to deploy a completely different lineup to the one that performed well against Colombia last time out. The result? Mexico played its worst 45 minutes of the entire calendar year in the first half against Peru.",
+        "El Tri struggled to create much of anything in attack, and although it had more of the ball, Peru looked the more menacing side. In the 27th minute, a dreadful defensive effort from Jeremy Márquez allowed Jairo Vélez to go through on goal and curl a shot to the far post to give Peru the lead heading into half time.",
+        "But Mexico responded immediately after the restart when Denzell García floated a perfect cross for an unmarked Víctor Guzmán to equalize with a precisely placed header into the top corner. El Tri was better overall in the second half but struggled to create chances and never truly had a clear opportunity to score a winner before the final whistle blew.",
+        "The Márquez era at the helm has started with back-to-back draws and mixed performances. Failing to defeat an inferior side like Peru, even with a completely rotated side, is disappointing and only adds more pressure on the new manager to secure his maiden win when Mexico face arch-rivals the USMNT on Saturday—presumably with its strongest lineup on the pitch.",
+        "dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC",
+        "His first goal in the Mexican jersey! 🤩Víctor Guzmán rose up SPECTACULARLY to head home his first goal in this beautiful jersey and bring us level on the pitch. 🔥⚽️Let’s gooooo, team! 👊🏻 pic.twitter.com/6QPGoWqQ6H",
+        "GK: Óscar García—6.2: The debutant was powerless to prevent the opener, which is tough considering that was the only dangerous shot he faced all game. Outside of a clumsy error that could’ve been costly, his distribution was better than expected.",
+        "RB: Jeremy Márquez—6.8: Inexplicably opted not to play the ball despite being well-positioned and, instead, softly fell to the ground pleading for a non-existent foul, which led to Peru’s opener. Although he improved in the second half, that was an egregious mistake on a night he needed to impress.",
+        "CB: Víctor Guzmán—7.8: A poor clearance attempt unfortunately led to Márquez’s mistake in Peru’s opener, but he was otherwise staut. Wonderful header to bring Mexico level from a set-piece.",
+        "CB: Everardo López—6.8: Solid all game, particularly in the air. Was in charge of Mexico’s possessions from deep and did well even if he was rather cautious.",
+        "LB: Mateo Chávez—7.2: The fullback continues to be a menace whenever he gets the space to float crosses from the wing. For a while, it looked like he was the only player capable of manufacturing any danger, not exactly encouraging for El Tri considering he’s a fullback.",
+        "CM: Denzell García—7.4: Had a poor game anchoring Mexico’s midfield, slow in his distribution and struggled defensively, often late in his attempt to intercept passes. Improved in the second half after a beautiful delivery for Guzmán’s equalizer.",
+        "CM: Obed Vargas—6.8: Abandoning the midfield and making deep runs in the left half space led to some relatively dangerous actions. He wasn’t brilliant but was effective and at least he was solid defensively.",
+        "CM: Álvaro Fidalgo—6.8: The most advanced of Mexico’s midfielders was barely involved and often had to settle for a backwards pass whenever he did. Had a few flashes with some nice back-heels, but he struggled to overcome the context of his head-scratching positioning on the pitch.",
+        "RW: Isaías Violante—6.6: Mixed results whenever he tried to take on his man, but given how unadventurous and tight Mexico looked overall, Violante routinely taking risks to try to make something happen was a welcomed sight.",
+        "Mexico never looked comfortable on Tuesday night.  / Evan Bernstein/Getty Images ST: Germán Berterame—6.2: A victim of Mexico’s poor overall attacking display, but he did little to make his case for more playing time. He never had a sniff of goal and was constantly double-teamed whenever he received the ball, finding it hard to play with his back toward goal.",
+        "LW: Orbelín Pineda—6.4: Played a nice through-ball that led to El Tri’s most dangerous action of the first half but was in and out of the game. Uncomfortably isolated in the wing, Mexico’s captain on the night eventually decided to leave that area to Chávez and drifted centrally where he improved.",
+        "SUB: Diego Campillo (61’ for Guzmán)—6.4: Brave against Peru’s press, finding passes between the lines even when under duress.",
+        "SUB: Santiago Giménez (61’ for Berterame)—6.0: Never got a chance to make his mark on the game."
+      ]
+    },
+    "ftbpro_01m3qyf9y4td": {
+      "id": "ftbpro_01m3qyf9y4td",
+      "title": "USMNT Player Ratings vs. Chile: Sebastian Berhalter Is Captain Material in Dramatic Win",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/usmnt-player-ratings-vs-chile-sebastian-berhalter-captain-dramatic-win/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_6537,h_3677,x_0,y_403/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3r2n0qrb7c91qewsr.jpg",
+      "publishedAt": "2026-09-30T03:02:35.000Z",
+      "paragraphs": [
+        "By Ben SteinerSep 29, 2026Sebastian Berhalter could be the next USMNT captain. /  Jamie Squire/Getty ImagesThe U.S. men’s national team grabbed a second win in as many games in the September–October international window with a dramatic 4–2 victory over Chile on Tuesday in St. Louis.",
+        "Chile entered Energizer Park off two red cards and a 1–0 loss to Canada to open the window, and it brought the same intensity into the USMNT matchup, with chippy play headlining the night and forcing a slow start.",
+        "Despite both sides struggling to find their footing early, the USMNT struck first with a well-worked team goal struck from Sebastian Berhalter's foot in the 37th minute, marking his second goal in as many games. Before halftime, Chile’s Felipe Faúndez had found the back of the net to level things, scoring off a goal-line scramble after Chris Brady failed to clear a corner kick.",
+        "While the sides entered the interval level, it was all Stars and Stripes in the second half, seeing electrifying performances from Julian Hall, a headed goal from Chris Richards, and Mathis Albert’s first international goal. Albert’s stoppage-time finish not only sealed the win, but also made him the youngest goalscorer in USMNT history at 17 years, 131 days old.",
+        "With two wins secured, the USMNT will be hunting for another. Mauricio Pochettino’s men face Mexico on Saturday, before closing the four-game set with a clash with Jesse Marsch’s Canada on Tuesday.",
+        "dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC",
+        "Chris Brady had a performance to forget in the first half.  / Tim Vizer/Getty ImagesThe USMNT’s goalkeeping situation is extremely poor, and there’s little hope of massive improvements in the near future. This camp has already seen performances from all four goalkeepers called in, and none have dazzled.",
+        "Although he made five saves in the first half of Tuesday’s game, Chris Brady struggled at times with balls whipped into the box and his general positioning. In the second half, Brian Schwake failed to find his footing as Maximiliano Gutiérrez found the back of the net.",
+        "Matt Freese, meanwhile, has continued to see his play decline in recent months since the World Cup and doesn’t seem to be the solution for 2030. Is Diego Kochen the path forward? The 20-year-old was alright in a half against Peru, but he is no surefire solution either. It’s dire times between the sticks for the Stars and Stripes.",
+        "Mathis Albert made history on Tuesday. / Taylor Banner/USSF/Getty Images*Ratings provided by FotMob*",
+        "GK: Chris Brady—7.6: Brady’s failures to claim crosses or clear corner kicks stood out and made him at least partially responsible for the first Chilean goal. The USMNT goalkeeping ranks aren’t great right now, so he’ll keep getting chances—but this was a night to forget.",
+        "RB: Frankie Westfield—6.3: The Philadelphia Union wingback was lucky to have Sergiño Dest in front of him to offer defensive cover. It wasn’t a performance he’ll want to remember, even if 62 minutes in a USMNT kit will be a standout point in his career.",
+        "CB: Neil Pierre—6.6:The towering center back is one of the most enticing options for the USMNT moving forward, but it’s clear he still has plenty of developing to do before he can be considered a bona fide starter.",
+        "CB: Miles Robinson—6.6: The FC Cincinnati veteran failed to impress, and his time with the USMNT might be coming to an end.",
+        "LB: Antonee Robinson—7.4: Tasked with a challenging winger in Dario Osorio, the Fulham man held his own down the USMNT’s left side.",
+        "CDM: Brooklyn Raines—7.3: The New England Revolution man brought intense energy throughout the night, even if he couldn’t work out many combinations with Sebastian Berhalter.",
+        "CDM: Sebastian Berhalter—8.8: With Tim Ream announcing his retirement before the game, Sebastian Berhalter stepped up with a second goal in as many games and then served up a corner kick assist for Chris Richards. He’s been a constant piece of the team since his breakout performance against Uruguay last November. Should he be the new captain?",
+        "RM: Sergiño Dest—7.6: Still adjusting to the more offensive role that Pochettino desires, Dest’s contributions to drive the ball forward on Sebastian Berhalter’s opening goal showed his progress in the position.",
+        "CM: Gio Reyna—8.5: Needing a big camp to lock down his role moving forward, Reyna impressed with an assist and threatened throughout, creating a game-high five chances.",
+        "LM: Adri Mehmeti—6.2: Making his first start with the USMNT, Mehmeti struggled to find his footing in the first half, but ended the night with 35 successful passes and a strong experience for the future."
+      ]
+    },
+    "ftbpro_01m3r0t81sk4": {
+      "id": "ftbpro_01m3r0t81sk4",
+      "title": "17-Year-Old Wonderkid Becomes Youngest Goalscorer in USMNT History",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/17-year-old-wonderkid-youngest-goalscorer-usmnt-history/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_107/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3r0ymt74gg72kqp8n.jpg",
+      "publishedAt": "2026-09-30T02:26:24.000Z",
+      "paragraphs": [
+        "By Sophia VeselySep 29, 2026Mathis Albert is a record-breaker. / Taylor Banner/USSF/Getty ImagesMathis Albert walked away from Energizer Park on Tuesday night with a piece of history, becoming the youngest goalscorer ever for the U.S. men’s national team at just 17 years, 131 days old.",
+        "The teenage midfielder for Borussia Dortmund found the back of the net in stoppage time in the friendly match against Chile, helping the Stars and Stripes to a 4–2 win in St. Louis.",
+        "Substituting onto the pitch just 20 minutes prior, Albert rushed the goal off a free kick from fullback Antonee Robinson, frantically throwing his leg up to ensure the ball crossed the goal-line. In doing so, he bested the record formerly held by USMNT star player Christian Pulisic, who first scored for the national team at 17 years, 253 days old.",
+        "BAR DOWN AND IN FOR MATHIS ALBERT! 💥#USMNT x @VW pic.twitter.com/gF5OvCaiqh",
+        "It’s not the first time Albert has immediately made an impact for the USMNT upon taking the pitch. In Saturday’s friendly against Peru, Albert was integral toward the USMNT reclaiming its lead in the 66th minute. Just five minutes after substituting on, he made a daring dash into Peru’s box with the ball at his feet. Taken down by a Peruvian defender, Albert earned his side a penalty kick, which veteran Malik Tillman took and scored.",
+        "“First action on the pitch? Bang, aggressive. Receive and go,” Pochettino praised Albert after the ultimate 4–1 victory over Peru. “He’s young? Yes. Need to improve? Yes. Need experience? Yes. Need everything? Yes of course. But he goes ‘I want to go, I want to play, I want to show.’ That’s what we need and that’s why I’m so happy.”",
+        "It’s also not the first-time Albert has made history. Back in April, the then-16-year-old became the youngest American ever to play in the Bundesliga, helping Dortmund see out a 4–0 win over Freiburg in Germany’s top flight. In the process, he broke the record previously set by USMNT star and now teammate Giovanni Reyna, who first appeared in Bundesliga play at 17 years, two months and five days in January 2020, also for Dortmund.",
+        "The USMNT are back in action on Saturday against bitter rival Mexico, where Albert will look to add to his tally and potentially even crack manager Mauricio Pochettino’s starting lineup.",
+        "READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
     "fzhafkysws3g1ux8fnmoe3180": {
@@ -12384,6 +12639,30 @@
         "&quot;Of course, we&#39;re disappointed. We created enough chances to maybe take the game, but yeah, we came off having given it all.&quot;"
       ],
       "html": "<p>Sebastien Pocognoli said there were plenty of positives from his first match in charge of Scotland as they began their Nations League campaign with a 0-0 draw against Slovenia.</p>\n\n<p>Pocognoli, sitting in the Scotland dugout for the first time since replacing Steve Clarke, watched on as his side overcame a tepid first-half display to claim a point away from home.</p>\n\n<p>Andraz Sporar thought he had given Slovenia an eighth-minute lead when he crashed an effort in off the post, but the goal was ruled out for an offside against&nbsp;Danijel Sturm.&nbsp;</p>\n\n<p>The Slovenia number nine then diverted an attempt just wide of the right post, with debutant&nbsp;Robbie Ure seeing his left-footed strike hit the post just before the break.&nbsp;</p>\n\n<p>From there, the visitors dominated, and they should have gone in front when&nbsp;Oli&nbsp;McBurnie&nbsp;burst into the area, but he was unable to take the ball around Jan Oblak.&nbsp;</p>\n\n<p>Aaron Hickey flicked a header from a corner just wide before substitute Kieron Bowie saw his shot from a tight angle smothered by Oblak as Scotland continued to probe.&nbsp;</p>\n\n<p>McBurnie&#39;s header from point-blank range was repelled by the goalkeeper, but the best chance fell to Bowie late on. However, he scuffed his shot wide of the right post from close range.</p>\n\n<p>Scotland had 17 shots against Slovenia, their most attempts in a match without scoring since June 2021 (19 shots against Czechia), but&nbsp;Pocognoli remained upbeat.&nbsp;</p>\n\n<p>&quot;I think we had two games in the same game, but you can analyse it in a positive way,&quot;&nbsp;Pocognoli said. &quot;The first half was not what we expected in terms of structure.</p>\n\n<p>&quot;We were in between for the press. We were a bit surprised about the formation of Slovenia, but at half-time we fixed this, and you can see that the second half was much better.</p>\n\n<p>&quot;We produced what we wanted to show every minute, but in the first half we learned to stick together, to defend the box, to be resilient and to be patient to change the game.</p>\n\n<p>&quot;We were also challenged about set-pieces. After five minutes, we had many set-pieces to defend on, so that&#39;s the positive way to look at the first half.</p>\n\n\n<p>&quot;It was not always positive, but in the second half we had a game on the ball against a low block.</p>\n\n<p>&quot;So we had a lot of good movement through the side, through the lines, and we should have scored, to be honest, but the counter-press was good, the high [line] of the defence was good, just because the position of the players was better.</p>\n\n<p>&quot;Clean sheet, that&#39;s also positive, but we want to win, but I think we can take this positively.&quot;</p>\n\n<p>Scotland are also now unbeaten in three consecutive away games in the Nations League for the first time (W2 D1), though they may feel they were deserving of all three points.&nbsp;</p>\n\n<p>They finished with an expected goals (xG) total of 1.9, with five of their 17 attempts on target, compared to Slovenia&#39;s tally of 0.5&nbsp;from&nbsp;four shots.&nbsp;</p>\n\n<p>However,&nbsp;Scotland failed to score in three competitive matches in a row for the first time since October 2004, something Billy Gilmour said must improve moving forward.&nbsp;</p>\n\n<p>&quot;Yeah, the two halves were totally different,&quot; Gilmour said.&nbsp;&quot;I think in the first half we were still getting to grips with the situations off the ball and on the ball, but the second half was a good performance.</p>\n\n<p>&quot;Obviously, you need to score. We&#39;ve had great chances. We never took them, but it&#39;s definitely something to build on. I mean, we&#39;re walking off gutted that we never scored, but in the second half it was really good.</p>\n\n<p>&quot;We came out in the second half, we were right at it, we stayed up there, we were putting pressure on them, creating chances, and the final part just never came.</p>\n\n<p>&quot;Of course, we&#39;re disappointed. We created enough chances to maybe take the game, but yeah, we came off having given it all.&quot;</p>\n"
+    },
+    "xj8xneulbxt13zk7nw3wcuxl": {
+      "id": "xj8xneulbxt13zk7nw3wcuxl",
+      "title": "United States 4-2 Chile: Teenagers Hall and Albert break records in friendly win",
+      "subtitle": "Records were broken by both Julian Hall and Mathis Albert as the United States made it back-to-back wins, beating Chile 4-2.",
+      "source": "FotMob",
+      "sourceUrl": "/news/xj8xneulbxt13zk7nw3wcuxl-united-states-4-2-chile-teenagers-hall-albert-break-records-friendly-win",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/cb/96/mathis-albert_1prd7ihl5z9eu1ejxgyrb6cbiv.jpg?t=-216334848&w=1200&h=630",
+      "publishedAt": "2026-09-30T08:14:13.000Z",
+      "paragraphs": [
+        "Teenagers Julian Hall and Mathis Albert were among the goalscorers as a new-look United States team beat Chile 4-2 in an entertaining friendly on Tuesday.",
+        "Mauricio Pochettino made 10 changes from the side that thrashed Peru 4-1 on Saturday, but the USA claimed another four-goal victory at Energizer Park, where Middlesbrough&#39;s Sebastian Berhalter played a starring role and was supported by some of the team&#39;s newcomers.",
+        "The St. Louis crowd were treated to an open start as Lawrence Vigouroux got down well to repel Miles Robinson&#39;s header, before Ben Brereton Diaz and Dario Osorio both struck the woodwork in the space of two minutes for Chile.",
+        "The USA went in front in the 37th minute as Hall cleverly dummied Sergino Dest&#39;s pass through to Berhalter, who applied a calm finish, though some weak goalkeeping from Chris Brady allowed Diego Ulloa to prod the equaliser over the line in first-half stoppage time.",
+        "Chile then went in front through a rasping strike from Maximiliano Gutierrez four minutes into the second half, but the USA were only behind for a couple of minutes as Hall&#39;s glancing header diverted Gio Reyna&#39;s inswinging cross home.",
+        "The USA led again when Chris Richards powered Berhalter&#39;s corner past Vigouroux with 72 minutes gone, and they got a clinching goal in added time.",
+        "Auston Trusty headed Antonee Robinson&#39;s free-kick back across goal, and on the stretch, Albert diverted the ball off the underside of the crossbar and in.",
+        "Both Hall and Albert made history for the USA on Tuesday, as their promising form continued ahead of a showdown with old rivals Mexico on Saturday.",
+        "Hall&#39;s goal – coming off the back of his debut strike against Peru – made the 18-year-old the youngest player to score on his first two outings for the USMNT.",
+        "And Albert&#39;s late effort made the Borussia Dortmund man the youngest scorer in the team&#39;s modern history, at the age of 17 years and 131 days (since at least 1988).",
+        "He surpassed Christian Pulisic, who had set the mark at the age of 17 years and 253 days old when he was also with Dortmund, against Bolivia in May 2016.",
+        "The USA only narrowly had more shots (18 to 17) and shots on target (nine to eight) than Chile, but their chances were of a far greater quality as they won the expected goals (xG) battle by 2.55 to 1.23."
+      ],
+      "html": "<p>Teenagers Julian Hall and Mathis Albert were among the goalscorers as a new-look United States team beat Chile 4-2 in an entertaining friendly on Tuesday.</p>\n\n<p>Mauricio Pochettino made 10 changes from the side that thrashed Peru 4-1 on Saturday, but the USA claimed another four-goal victory at Energizer Park, where Middlesbrough&#39;s Sebastian Berhalter played a starring role and was supported by some of the team&#39;s newcomers.</p>\n\n<p>The St. Louis crowd were treated to an open start as Lawrence Vigouroux got down well to repel Miles Robinson&#39;s header, before Ben Brereton Diaz and Dario Osorio both struck the woodwork in the space of two minutes for Chile.</p>\n\n<p>The USA went in front in the 37th minute as Hall cleverly dummied Sergino Dest&#39;s pass through to Berhalter, who applied a calm finish, though some weak goalkeeping from Chris Brady allowed Diego Ulloa to prod the equaliser over the line in first-half stoppage time.</p>\n\n<p>Chile then went in front through a rasping strike from Maximiliano Gutierrez four minutes into the second half, but the USA were only behind for a couple of minutes as Hall&#39;s glancing header diverted Gio Reyna&#39;s inswinging cross home.</p>\n\n<p>The USA led again when Chris Richards powered Berhalter&#39;s corner past Vigouroux with 72 minutes gone, and they got a clinching goal in added time.</p>\n\n<p>Auston Trusty headed Antonee Robinson&#39;s free-kick back across goal, and on the stretch, Albert diverted the ball off the underside of the crossbar and in.</p>\n\n\n<p><strong>Kids in America</strong></p>\n\n<p>Both Hall and Albert made history for the USA on Tuesday, as their promising form continued ahead of a showdown with old rivals Mexico on Saturday.</p>\n\n<p>Hall&#39;s goal – coming off the back of his debut strike against Peru – made the 18-year-old the youngest player to score on his first two outings for the USMNT.</p>\n\n<p>And Albert&#39;s late effort made the Borussia Dortmund man the youngest scorer in the team&#39;s modern history, at the age of 17 years and 131 days (since at least 1988).</p>\n\n<p>He surpassed Christian Pulisic, who had set the mark at the age of 17 years and 253 days old when he was also with Dortmund, against Bolivia in May 2016.</p>\n\n<p>The USA only narrowly had more shots (18 to 17) and shots on target (nine to eight) than Chile, but their chances were of a far greater quality as they won the expected goals (xG) battle by 2.55 to 1.23.</p>\n"
     },
     "xk9d48m2npsc17n7ynf5ybhvf": {
       "id": "xk9d48m2npsc17n7ynf5ybhvf",
