@@ -1,62 +1,32 @@
 [
   {
-    "id": "5181851",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 2,
-    "utcDate": "2026-09-29T18:45:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
+    "id": "5071384",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 27,
+    "utcDate": "2026-09-30T23:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
     "homeTeam": {
-      "id": "8496",
-      "name": "Czechia",
-      "shortName": "Czechia",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8496.png",
-      "score": 0
+      "id": "6514",
+      "name": "Red Bull New York",
+      "shortName": "NY Red Bulls",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6514.png",
+      "score": null
     },
     "awayTeam": {
-      "id": "8491",
-      "name": "England",
-      "shortName": "England",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8491.png",
-      "score": 2
+      "id": "1427963",
+      "name": "St. Louis City",
+      "shortName": "St. Louis City",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1427963.png",
+      "score": null
     },
     "score": {
-      "home": 0,
-      "away": 2
+      "home": null,
+      "away": null
     },
-    "updatedAt": "2026-09-29T22:08:49.862Z"
-  },
-  {
-    "id": "5181852",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 2,
-    "utcDate": "2026-09-29T18:45:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6720",
-      "name": "Spain",
-      "shortName": "Spain",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6720.png",
-      "score": 4
-    },
-    "awayTeam": {
-      "id": "10155",
-      "name": "Croatia",
-      "shortName": "Croatia",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10155.png",
-      "score": 1
-    },
-    "score": {
-      "home": 4,
-      "away": 1
-    },
-    "updatedAt": "2026-09-29T22:08:49.862Z"
+    "updatedAt": "2026-09-30T05:14:28.278Z"
   }
 ]
