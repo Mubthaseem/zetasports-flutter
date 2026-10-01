@@ -1,32 +1,122 @@
 [
   {
-    "id": "5071384",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 27,
-    "utcDate": "2026-09-30T23:30:00.000Z",
+    "id": "5181865",
+    "competitionId": "9806",
+    "competitionName": "UEFA Nations League",
+    "competitionSlug": "uefa-nations-league",
+    "country": "Europe",
+    "round": 3,
+    "utcDate": "2026-10-01T18:45:00.000Z",
     "status": "SCHEDULED",
     "minute": null,
     "homeTeam": {
-      "id": "6514",
-      "name": "Red Bull New York",
-      "shortName": "NY Red Bulls",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6514.png",
+      "id": "8238",
+      "name": "Denmark",
+      "shortName": "Denmark",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8238.png",
       "score": null
     },
     "awayTeam": {
-      "id": "1427963",
-      "name": "St. Louis City",
-      "shortName": "St. Louis City",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1427963.png",
+      "id": "8361",
+      "name": "Portugal",
+      "shortName": "Portugal",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8361.png",
       "score": null
     },
     "score": {
       "home": null,
       "away": null
     },
-    "updatedAt": "2026-09-30T22:07:49.156Z"
+    "updatedAt": "2026-10-01T05:29:38.405Z"
+  },
+  {
+    "id": "5181829",
+    "competitionId": "9806",
+    "competitionName": "UEFA Nations League",
+    "competitionSlug": "uefa-nations-league",
+    "country": "Europe",
+    "round": 3,
+    "utcDate": "2026-10-01T18:45:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "8570",
+      "name": "Germany",
+      "shortName": "Germany",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8570.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8205",
+      "name": "Serbia",
+      "shortName": "Serbia",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8205.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-10-01T05:29:38.405Z"
+  },
+  {
+    "id": "5181830",
+    "competitionId": "9806",
+    "competitionName": "UEFA Nations League",
+    "competitionSlug": "uefa-nations-league",
+    "country": "Europe",
+    "round": 3,
+    "utcDate": "2026-10-01T18:45:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "6383",
+      "name": "Greece",
+      "shortName": "Greece",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6383.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "6708",
+      "name": "Netherlands",
+      "shortName": "Netherlands",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6708.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-10-01T05:29:38.405Z"
+  },
+  {
+    "id": "5181866",
+    "competitionId": "9806",
+    "competitionName": "UEFA Nations League",
+    "competitionSlug": "uefa-nations-league",
+    "country": "Europe",
+    "round": 3,
+    "utcDate": "2026-10-01T18:45:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "5790",
+      "name": "Wales",
+      "shortName": "Wales",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/5790.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8492",
+      "name": "Norway",
+      "shortName": "Norway",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8492.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-10-01T05:29:38.405Z"
   }
 ]
