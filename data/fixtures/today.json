@@ -27,7 +27,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-10-02T12:20:05.340Z"
+    "updatedAt": "2026-10-02T22:04:15.230Z"
   },
   {
     "id": "5181792",
@@ -37,27 +37,27 @@
     "country": "Europe",
     "round": 3,
     "utcDate": "2026-10-02T18:45:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "8263",
       "name": "Belgium",
       "shortName": "Belgium",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8263.png",
-      "score": null
+      "score": 3
     },
     "awayTeam": {
       "id": "6595",
       "name": "Turkiye",
       "shortName": "Turkiye",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6595.png",
-      "score": null
+      "score": 0
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 3,
+      "away": 0
     },
-    "updatedAt": "2026-10-02T12:20:23.895Z"
+    "updatedAt": "2026-10-02T22:04:30.655Z"
   },
   {
     "id": "5181793",
@@ -67,27 +67,27 @@
     "country": "Europe",
     "round": 3,
     "utcDate": "2026-10-02T18:45:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6723",
       "name": "France",
       "shortName": "France",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6723.png",
-      "score": null
+      "score": 1
     },
     "awayTeam": {
       "id": "8204",
       "name": "Italy",
       "shortName": "Italy",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8204.png",
-      "score": null
+      "score": 1
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 1
     },
-    "updatedAt": "2026-10-02T12:20:23.895Z"
+    "updatedAt": "2026-10-02T22:04:30.655Z"
   },
   {
     "id": "5103566",
@@ -117,6 +117,6 @@
       "home": null,
       "away": null
     },
-    "updatedAt": "2026-10-02T12:20:15.234Z"
+    "updatedAt": "2026-10-02T22:04:23.586Z"
   }
 ]
