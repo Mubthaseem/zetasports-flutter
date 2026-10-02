@@ -1,12 +1,42 @@
 [
   {
+    "id": "5071349",
+    "competitionId": "130",
+    "competitionName": "MLS",
+    "competitionSlug": "mls",
+    "country": "USA",
+    "round": 24,
+    "utcDate": "2026-10-02T01:30:00.000Z",
+    "status": "FINISHED",
+    "minute": "FT",
+    "homeTeam": {
+      "id": "130394",
+      "name": "Seattle Sounders FC",
+      "shortName": "Seattle Sounders",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
+      "score": 2
+    },
+    "awayTeam": {
+      "id": "6604",
+      "name": "Sporting Kansas City",
+      "shortName": "Sporting KC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6604.png",
+      "score": 1
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "updatedAt": "2026-10-02T05:17:03.592Z"
+  },
+  {
     "id": "5181865",
     "competitionId": "9806",
     "competitionName": "UEFA Nations League",
     "competitionSlug": "uefa-nations-league",
     "country": "Europe",
     "round": 3,
-    "utcDate": "2026-10-01T18:45:00.000Z",
+    "utcDate": "2026-10-01T18:45:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -27,7 +57,7 @@
       "home": 2,
       "away": 4
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181829",
@@ -36,7 +66,7 @@
     "competitionSlug": "uefa-nations-league",
     "country": "Europe",
     "round": 3,
-    "utcDate": "2026-10-01T18:45:00.000Z",
+    "utcDate": "2026-10-01T18:45:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -57,7 +87,7 @@
       "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181830",
@@ -66,7 +96,7 @@
     "competitionSlug": "uefa-nations-league",
     "country": "Europe",
     "round": 3,
-    "utcDate": "2026-10-01T18:45:00.000Z",
+    "utcDate": "2026-10-01T18:45:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -87,7 +117,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181866",
@@ -96,7 +126,7 @@
     "competitionSlug": "uefa-nations-league",
     "country": "Europe",
     "round": 3,
-    "utcDate": "2026-10-01T18:45:00.000Z",
+    "utcDate": "2026-10-01T18:45:00Z",
     "status": "FINISHED",
     "minute": "FT",
     "homeTeam": {
@@ -117,7 +147,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5071384",
@@ -147,7 +177,7 @@
       "home": 0,
       "away": 3
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5181851",
@@ -177,7 +207,7 @@
       "home": 0,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181852",
@@ -207,7 +237,7 @@
       "home": 4,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181790",
@@ -237,7 +267,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181791",
@@ -267,7 +297,7 @@
       "home": 1,
       "away": 4
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5071387",
@@ -297,7 +327,7 @@
       "home": 2,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5181828",
@@ -327,7 +357,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181864",
@@ -357,7 +387,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181863",
@@ -387,7 +417,7 @@
       "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181827",
@@ -417,7 +447,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5071390",
@@ -447,7 +477,7 @@
       "home": 3,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071393",
@@ -477,7 +507,7 @@
       "home": 3,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071395",
@@ -507,7 +537,7 @@
       "home": 3,
       "away": 3
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071392",
@@ -537,7 +567,7 @@
       "home": 3,
       "away": 0
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071386",
@@ -567,7 +597,7 @@
       "home": 3,
       "away": 3
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071388",
@@ -597,7 +627,7 @@
       "home": 1,
       "away": 0
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071389",
@@ -627,7 +657,7 @@
       "home": 0,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071391",
@@ -657,7 +687,7 @@
       "home": 2,
       "away": 0
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071394",
@@ -687,7 +717,7 @@
       "home": 3,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071381",
@@ -717,7 +747,7 @@
       "home": 2,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071383",
@@ -747,7 +777,7 @@
       "home": 3,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071382",
@@ -777,7 +807,7 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5071385",
@@ -807,7 +837,7 @@
       "home": 4,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:03.592Z"
   },
   {
     "id": "5181849",
@@ -837,7 +867,7 @@
       "home": 1,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181850",
@@ -867,7 +897,7 @@
       "home": 2,
       "away": 3
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181788",
@@ -897,7 +927,7 @@
       "home": 0,
       "away": 2
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   },
   {
     "id": "5181789",
@@ -927,156 +957,6 @@
       "home": 0,
       "away": 1
     },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
-  },
-  {
-    "id": "5181825",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 1,
-    "utcDate": "2026-09-24T18:45:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6708",
-      "name": "Netherlands",
-      "shortName": "Netherlands",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6708.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "8570",
-      "name": "Germany",
-      "shortName": "Germany",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8570.png",
-      "score": 1
-    },
-    "score": {
-      "home": 1,
-      "away": 1
-    },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
-  },
-  {
-    "id": "5181861",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 1,
-    "utcDate": "2026-09-24T18:45:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8492",
-      "name": "Norway",
-      "shortName": "Norway",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8492.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "8238",
-      "name": "Denmark",
-      "shortName": "Denmark",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8238.png",
-      "score": 2
-    },
-    "score": {
-      "home": 3,
-      "away": 2
-    },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
-  },
-  {
-    "id": "5181862",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 1,
-    "utcDate": "2026-09-24T18:45:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8361",
-      "name": "Portugal",
-      "shortName": "Portugal",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8361.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "5790",
-      "name": "Wales",
-      "shortName": "Wales",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/5790.png",
-      "score": 0
-    },
-    "score": {
-      "home": 1,
-      "away": 0
-    },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
-  },
-  {
-    "id": "5181826",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 1,
-    "utcDate": "2026-09-24T18:45:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8205",
-      "name": "Serbia",
-      "shortName": "Serbia",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8205.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "6383",
-      "name": "Greece",
-      "shortName": "Greece",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6383.png",
-      "score": 2
-    },
-    "score": {
-      "home": 1,
-      "away": 2
-    },
-    "updatedAt": "2026-10-01T22:35:17.111Z"
-  },
-  {
-    "id": "5071094",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 7,
-    "utcDate": "2026-09-24T01:30:00Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "130394",
-      "name": "Seattle Sounders FC",
-      "shortName": "Seattle Sounders",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "6606",
-      "name": "Real Salt Lake",
-      "shortName": "Salt Lake",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6606.png",
-      "score": 0
-    },
-    "score": {
-      "home": 2,
-      "away": 0
-    },
-    "updatedAt": "2026-10-01T22:35:00.581Z"
+    "updatedAt": "2026-10-02T05:17:23.708Z"
   }
 ]
