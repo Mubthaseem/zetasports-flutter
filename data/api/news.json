@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-10-03T20:56:00.486Z",
+    "generatedAt": "2026-10-03T22:22:45.533Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 599
+      "fullArticlesCount": 606
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -15,12 +15,75 @@
   },
   "news": [
     {
+      "id": "hl8g2s953m0u16yblg5azdqsv",
+      "title": "Canada 'can beat just about anybody', says Marsch ahead of USA test",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/hl8g2s953m0u16yblg5azdqsv-canada-can-beat-just-about-anybody-says-marsch-ahead-usa-test",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/c2/d6/jesse-marsch_zkkiiif5pswc18b2rcss3mfhn.jpg?t=143073409&w=1260&h=708",
+      "publishedAt": "2026-10-03T22:08:01.000Z"
+    },
+    {
+      "id": "1m6hibefmoqwp1de6sqjxg9vq1",
+      "title": "'It means everything' – Robertson marks 100th Scotland cap with victory",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1m6hibefmoqwp1de6sqjxg9vq1-it-means-everything-robertson-marks-100th-scotland-cap-victory",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b/ee/andy-robertson_xkyajpecwwmi1qj9ekjrdhofc.jpg?t=140717985&w=640&h=360",
+      "publishedAt": "2026-10-03T21:48:09.000Z"
+    },
+    {
+      "id": "phzjzor1ct0714pn2bxzrdw5a",
+      "title": "'I give up' – Klopp exasperated by debate over Kimmich's Germany role",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/phzjzor1ct0714pn2bxzrdw5a-i-give-up-klopp-exasperated-debate-over-kimmichs-germany-role",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/33/5c/jurgen-klopp-and-joshua-kimmich_3et11yw0y8pd18ki4z122flmx.jpg?t=137699665&w=640&h=360",
+      "publishedAt": "2026-10-03T21:26:02.000Z"
+    },
+    {
+      "id": "1wn54tsih5751bpu2n7ej54il",
+      "title": "Spain 3-1 Czechia: World champions still perfect as Krejci red card halts fightback",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1wn54tsih5751bpu2n7ej54il-spain-3-1-czechia-world-champions-still-perfect-krejci-red-card-halts-fightback",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d/a3/mikel-merino_1p53mcdxtxty71j70udgadxi73.jpg?t=132971921&w=640&h=360",
+      "publishedAt": "2026-10-03T20:57:16.000Z"
+    },
+    {
+      "id": "ftbpro_01m41etg3480",
+      "title": "French Court Brings End to Kylian Mbappe's War Against PSG",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m41etg3480/french-court-brings-end-kylian-mbappes-war-against-psg",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_47/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m41f1dv1q70v3a1s5s.jpg",
+      "publishedAt": "2026-10-03T20:33:23.000Z"
+    },
+    {
+      "id": "j49lyuo2wnib157sf60kt2alp",
+      "title": "Ancelotti to maintain new Brazil approach after thrashing India",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/j49lyuo2wnib157sf60kt2alp-ancelotti-maintain-new-brazil-approach-after-thrashing-india",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/fb/54/estevao_14bdwdvy68fls1xd6mvflow9rb.jpg?t=111167985&w=1260&h=708",
+      "publishedAt": "2026-10-03T20:20:00.000Z"
+    },
+    {
+      "id": "1429plvnrr9a91g86ly7cguppv",
+      "title": "Saka: Seven-goal demolition of Croatia 'everything England were looking for'",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1429plvnrr9a91g86ly7cguppv-saka-seven-goal-demolition-croatia-everything-england-were-looking",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/30/aa/bukayo-saka_hnyqujy4t5jc1j8bd7l4z8ix3.jpg?t=118501729&w=640&h=360",
+      "publishedAt": "2026-10-03T19:34:12.000Z"
+    },
+    {
       "id": "l19ef15wtq3j18exn3r706lgc",
       "title": "Portugal shelve Ronaldo controversy as Jesus demands full focus on Norway",
       "description": "FotMob",
       "source": "FotMob",
       "sourceUrl": "/news/l19ef15wtq3j18exn3r706lgc-portugal-shelve-ronaldo-controversy-jesus-demands-full-focus-norway",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/52/79/jorge-jesus_1t3w4wk7ehv0w146u57i34534r.jpg?t=106907153&w=1260&h=708",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/52/79/jorge-jesus_1t3w4wk7ehv0w146u57i34534r.jpg?t=106907153&w=640&h=360",
       "publishedAt": "2026-10-03T18:44:57.000Z"
     },
     {
@@ -130,69 +193,6 @@
       "sourceUrl": "/news/1ooo5sawiqft91hpmfscpu5ncb-we-are-not-low-block-team-norway-take-game-portugal",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/d5/94/stale-solbakken_1g8a4gq2x8iy71agz3eq4qoqam.jpg?t=75575473&w=640&h=360",
       "publishedAt": "2026-10-03T13:36:19.000Z"
-    },
-    {
-      "id": "ftbpro_01m40vnj5j13",
-      "title": "Liverpool Suffer Dominik Szoboszlai Injury Scare As Reds Brace for Hungary Star’s Early Return ",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m40vnj5j13/liverpool-suffer-dominik-szoboszlai-injury-scare-reds-brace-hungary-stars-early-return",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1420,h_798,x_287,y_384/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m40wwmyc157c2ejgx7.jpg",
-      "publishedAt": "2026-10-03T13:30:00.000Z"
-    },
-    {
-      "id": "511C82A8D608CF7E9E137B946EBCCADD",
-      "title": "How Would a Points Deduction Affect Manchester City’s 2026-27 Premier League Season?",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/manchester-city-points-deduction-charges-opta-supercomputer-premier-league-2026-27",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/10/how-would-a-points-deduction-affect-manchester-citys-2026-27-premier-league-season.png",
-      "publishedAt": "2026-10-03T13:13:16.000Z"
-    },
-    {
-      "id": "16849E68352655D46E7EE49FA1F7A2D0",
-      "title": "Croatia vs England Prediction: UEFA Nations League Preview",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/croatia-vs-england-prediction-uefa-nations-league-preview-10-2026",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/09/croatia-vs-england-nations-league-preview.png",
-      "publishedAt": "2026-10-03T13:13:11.000Z"
-    },
-    {
-      "id": "BADE7C62651FEF925E13CE4B4448CB38",
-      "title": "Manchester City vs Arsenal Prediction: WSL Preview",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/man-city-vs-arsenal-prediction-wsl-preview-10-2026",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/10/man-city-arsenal-preview-wsl.jpg",
-      "publishedAt": "2026-10-03T13:13:04.000Z"
-    },
-    {
-      "id": "48F4A21C3759E3559C2C67B265CD3795",
-      "title": "Tottenham vs London City Lionesses Prediction: WSL Preview",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/tottenham-vs-london-city-lionesses-prediction-wsl-preview-10-2026",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/10/tot-lcl-preview.jpg",
-      "publishedAt": "2026-10-03T13:13:00.000Z"
-    },
-    {
-      "id": "692BD8C97FE31EC965C33AE9FD22FF8F",
-      "title": "Celebrating 1,500 WSL Matches: Looking Back on the League’s Most Statistically Significant Games",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/wsl-1500-games-stats-behind-historic-matches",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/10/wsl-1500-games.jpg",
-      "publishedAt": "2026-10-03T13:12:55.000Z"
-    },
-    {
-      "id": "6z63q8jbc4gh1iufjqn29hn5j",
-      "title": "Amorim: Milan still far from our potential",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/6z63q8jbc4gh1iufjqn29hn5j-amorim-milan-still-far-from-our-potential",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/49/f7/ruben-amorim_mrekr2dnhq1j1157b42opzbg6.jpg?t=72001921&w=1260&h=708",
-      "publishedAt": "2026-10-03T12:58:47.000Z"
     }
   ],
   "articles": {
@@ -736,6 +736,38 @@
         "He has netted 979 career goals in total."
       ],
       "html": "<p>Rasmus Hojlund paid tribute to his &quot;idol&quot; Cristiano Ronaldo in the best way he knew how.</p>\n\n<p>Hojlund&nbsp;netted for Denmark against Portugal in the Nations League on Thursday.</p>\n\n<p>Portugal went on to win 4-2, doing so in the absence of their iconic forward Ronaldo.</p>\n\n<p>The 41-year-old sensationally left Portugal&#39;s squad earlier this week, reportedly due to a disagreement with coach Jorge Jesus over his game time.</p>\n\n<p>Ronaldo&#39;s Portugal future is unclear, but former Manchester United striker Hojlund dedicated his goal to the five-time Ballon d&#39;Or winner.</p>\n\n\n<p>Hojlund mimicked Ronaldo&#39;s iconic&nbsp;&#39;siuuu&#39; celebration, and explained he wanted to pay homage to his favourite player.</p>\n\n<p>&quot;I just wanted to dedicate my goal to my idol,&quot; Hojlund said.</p>\n\n<p>&quot;For everything Cristiano is going through at this point in his career, he will never be forgotten.&quot;</p>\n\n<p>Ronaldo is the highest-scoring player in the history of international football, with 146 goals to his name.</p>\n\n<p>He has netted 979 career goals in total.</p>\n"
+    },
+    "1429plvnrr9a91g86ly7cguppv": {
+      "id": "1429plvnrr9a91g86ly7cguppv",
+      "title": "Saka: Seven-goal demolition of Croatia 'everything England were looking for'",
+      "subtitle": "England crushed Croatia 7-0 in their third Nations League fixture on Saturday, with a performance Bukayo Saka felt was close to perfection.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1429plvnrr9a91g86ly7cguppv-saka-seven-goal-demolition-croatia-everything-england-were-looking",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/30/aa/bukayo-saka_hnyqujy4t5jc1j8bd7l4z8ix3.jpg?t=118501729&w=1200&h=630",
+      "publishedAt": "2026-10-03T19:34:12.000Z",
+      "paragraphs": [
+        "Bukayo Saka said England&#39;s performance against Croatia was &quot;everything we were looking for&quot;, after they made history with a staggering 7-0 win in Rijeka.",
+        "Saka joined Kane in scoring twice, while Anthony Gordon, Jude Bellingham and Morgan Rogers were also on target on a memorable night for Thomas Tuchel&#39;s side.",
+        "England&#39;s win was their biggest over a team in the top 50 of the FIFA World Rankings since they were first published in 1992, while it was also the heaviest defeat in Croatia&#39;s history.",
+        "Croatia&#39;s previous worst result was a 6-0 Nations League defeat in Spain in 2018, while they had never previously lost a home game by more than a three-goal margin&nbsp;or conceded more than four goals in a match on their own turf, losing 4-1 to England in September 2008.",
+        "Kane, Gordon, Bellingham and Saka all scored in the first half, marking the first instance of four different England players netting before half-time in a single game since March 2013, when Frank Lampard, Jermain Defoe, Ashley Young and Alex Oxlade-Chamberlain did so in an 8-0 win over San Marino.",
+        "England now have six points on the board after three Nations League games, and a victory over Czechia on Tuesday would put them on the brink of qualifying for March&#39;s quarter-finals.&nbsp;",
+        "Speaking to ITV Sport after full-time, Saka praised the Three Lions for their relentless approach and their refusal to take their foot off the gas after half-time.",
+        "&quot;It was an amazing night. We came out from the start and we were on top,&quot; he said. &quot;We played with high energy, high spirit and we punished them.&nbsp;",
+        "&quot;We enjoyed that performance. It was special and it was really fun to play in. We played with energy and we were really clinical today, which made the difference.",
+        "&quot;Scoring two goals for England is always a nice feeling, so I&#39;m really happy with that.",
+        "&quot;I think we showed the hunger, passion and quality that we have. It was a mixture of everything. It&#39;s everything we were looking for, so we&#39;re really proud and we want to finish strongly on Tuesday.&nbsp;",
+        "&quot;There&#39;s still three games left, but that will definitely give us a massive boost in confidence and momentum.&quot;",
+        "While Saka scored two right-footed goals in a game for the very first time in his senior career, on his 378th outing for club and country, it was Bellingham who truly stole the show.",
+        "He had three assists to go with his goal, becoming the first England midfielder to record four goal involvements in a game since David Platt scored four against San Marino in February 1993.",
+        "Bellingham, who was crowned England&#39;s Player of the Year for 2026 last month, created eight chances for team-mates.",
+        "No player has ever created more in a single top-tier game in the Nations League.",
+        "&quot;He was amazing tonight, to be fair. He deserved to be our Player of the Year and he probably deserves Man of the Match tonight as well,&quot; Saka said of Bellingham.",
+        "&quot;He was special. I&#39;m so happy to play with him and to have him in the England team.&quot;",
+        "And Saka also heaped praise upon Gordon, who has been directly involved in a goal on each of his last five England appearances (four goals, two assists in total) – in the last 10 years, Kane is the only other player to achieve that feat for the Three Lions.",
+        "&quot;He&#39;s another player who&#39;s also on fire in an England shirt,&quot; Saka said. &quot;It&#39;s nice to have players like that around you, putting in performances like tonight.&quot;"
+      ],
+      "html": "<p>Bukayo Saka said England&#39;s performance against Croatia was &quot;everything we were looking for&quot;, after they made history with a staggering 7-0 win in Rijeka.</p>\n\n<p>Saka joined Kane in scoring twice, while Anthony Gordon, Jude Bellingham and Morgan Rogers were also on target on a memorable night for Thomas Tuchel&#39;s side.</p>\n\n<p>England&#39;s win was their biggest over a team in the top 50 of the FIFA World Rankings since they were first published in 1992, while it was also the heaviest defeat in Croatia&#39;s history.</p>\n\n<p>Croatia&#39;s previous worst result was a 6-0 Nations League defeat in Spain in 2018, while they had never previously lost a home game by more than a three-goal margin&nbsp;or conceded more than four goals in a match on their own turf, losing 4-1 to England in September 2008.</p>\n\n<p>Kane, Gordon, Bellingham and Saka all scored in the first half, marking the first instance of four different England players netting before half-time in a single game since March 2013, when Frank Lampard, Jermain Defoe, Ashley Young and Alex Oxlade-Chamberlain did so in an 8-0 win over San Marino.</p>\n\n<p>England now have six points on the board after three Nations League games, and a victory over Czechia on Tuesday would put them on the brink of qualifying for March&#39;s quarter-finals.&nbsp;</p>\n\n<p>Speaking to ITV Sport after full-time, Saka praised the Three Lions for their relentless approach and their refusal to take their foot off the gas after half-time.</p>\n\n<p>&quot;It was an amazing night. We came out from the start and we were on top,&quot; he said. &quot;We played with high energy, high spirit and we punished them.&nbsp;</p>\n\n<p>&quot;We enjoyed that performance. It was special and it was really fun to play in. We played with energy and we were really clinical today, which made the difference.</p>\n\n\n<p>&quot;Scoring two goals for England is always a nice feeling, so I&#39;m really happy with that.</p>\n\n<p>&quot;I think we showed the hunger, passion and quality that we have. It was a mixture of everything. It&#39;s everything we were looking for, so we&#39;re really proud and we want to finish strongly on Tuesday.&nbsp;</p>\n\n<p>&quot;There&#39;s still three games left, but that will definitely give us a massive boost in confidence and momentum.&quot;</p>\n\n<p>While Saka scored two right-footed goals in a game for the very first time in his senior career, on his 378th outing for club and country, it was Bellingham who truly stole the show.</p>\n\n<p>He had three assists to go with his goal, becoming the first England midfielder to record four goal involvements in a game since David Platt scored four against San Marino in February 1993.</p>\n\n<p>Bellingham, who was crowned England&#39;s Player of the Year for 2026 last month, created eight chances for team-mates.</p>\n\n<p>No player has ever created more in a single top-tier game in the Nations League.</p>\n\n<p>&quot;He was amazing tonight, to be fair. He deserved to be our Player of the Year and he probably deserves Man of the Match tonight as well,&quot; Saka said of Bellingham.</p>\n\n<p>&quot;He was special. I&#39;m so happy to play with him and to have him in the England team.&quot;</p>\n\n<p>And Saka also heaped praise upon Gordon, who has been directly involved in a goal on each of his last five England appearances (four goals, two assists in total) – in the last 10 years, Kane is the only other player to achieve that feat for the Three Lions.</p>\n\n<p>&quot;He&#39;s another player who&#39;s also on fire in an England shirt,&quot; Saka said. &quot;It&#39;s nice to have players like that around you, putting in performances like tonight.&quot;</p>\n"
     },
     "14qi2wh9aop4w1iaia6yqd00d6": {
       "id": "14qi2wh9aop4w1iaia6yqd00d6",
@@ -2369,6 +2401,35 @@
       ],
       "html": "<p>Ruben Amorim insists he will not be pushed into making the same tactical mistakes he made during his stint with Manchester United, now he is in charge of AC Milan.</p>\n\n<p>Amorim&#39;s unbeaten start in Serie A continued on Sunday with a comfortable 3-0 win against Lecce at San Siro, with the result moving Milan up to fifth in the standings.&nbsp;</p>\n\n<p>Christian Pulisic&#39;s sensational touch and finish put Milan ahead early on, before&nbsp;Adrien Rabiot and&nbsp;Diego Moreira&nbsp;sealed the win for the&nbsp;Rossoneri during a dominant second half.&nbsp;</p>\n\n<p>Milan&#39;s victory saw them remain unbeaten in their opening five Serie A matches of a season for the first time since 2022-23 (W3 D2).</p>\n\n<p>Amorim (W3 D2) has become only the third foreign manager in Milan&#39;s history to not taste defeat in each of his first five Serie A games in charge, after Luis Carniglia (W3 D2) and Nils Liedholm (W4 D1), both in 1963-64.</p>\n\n<p>Speaking after the game, Amorim revealed he allowed his side to play with &quot;freedom&quot;, and when asked about the reasoning behind that decision, he highlighted his turbulent tenure at Old Trafford, where he was reluctant to adapt his style of play.&nbsp;</p>\n\n<p>&quot;It&#39;s an observation of the games and the characteristics,&quot; Amorim told DAZN,&nbsp;as quoted by Football Italia.</p>\n\n<p>&quot;Of course, I listen to the players, but a manager, especially in a big team, is always listening to the players, seeing and understanding them, but every player wants to push the game towards their characteristics, and if you want to have an identity, that is hard.&nbsp;</p>\n\n<p>&quot;It&#39;s always my decision. What I felt in the last games is the same that I felt at Manchester United, and I cannot make the same mistake.</p>\n\n<p>&quot;Sometimes we don&#39;t have the perfect characteristics to play in that way, and if we don&#39;t have them, we have to adapt. I think today worked.</p>\n\n<p>&quot;In another game, we can return to the build-up with three [at the back]. The important thing is to have different ways of playing.</p>\n\n<p>&quot;That&#39;s especially important in Italy, because the managers are really smart, they mark really well one against one, and when they lose the reference to what we want to do, it&#39;s harder for them to understand their mobility, just as they make it harder for me to understand their teams.&quot;</p>\n\n\n<p>Milan have now won their first two home Serie A matches of a season while keeping a clean sheet in both for the first time since 2020-21, when they beat Bologna 2-0 and Spezia 3-0 under Stefano Pioli.</p>\n\n<p>Their&nbsp;dominance was backed up by the underlying metrics, too. They finished with an expected goals (xG) total of 1.93 from their 10 attempts, while also restricting Lecce to a measly xG total of 0.17 from six shots.&nbsp;</p>\n\n<p>It was a much-needed victory heading into the international break, with Milan coming into the clash with Lecce without a win in three matches in all competitions (D2 L1).&nbsp;</p>\n\n<p>Roma, Inter and Lazio are the early pace setters in the division, all sitting two points clear of Milan, and Amorim feels his team are on the right track.</p>\n\n<p>&quot;If you look at the way we play, Roma and Inter had more time as a team, you can see the patterns are there,&quot; Amorim added.</p>\n\n<p>&quot;We didn&#39;t lose so many points, we dropped two to Lazio and Juventus away, so not everything is bad.</p>\n\n<p>&quot;Sometimes it looks like that, especially after recent results, but we have to see the balance. We won today against a good team that is doing well, but it is a different team, and sometimes we will have issues.</p>\n\n<p>&quot;It&#39;s a process, I think we should have more points, as against Juventus we weren&#39;t playing so well, but we were 30 seconds off getting three points.</p>\n\n<p>&quot;Even against Lazio, if you look at the balance of the game, I feel we deserved a little bit more.&quot;</p>\n"
     },
+    "1m6hibefmoqwp1de6sqjxg9vq1": {
+      "id": "1m6hibefmoqwp1de6sqjxg9vq1",
+      "title": "'It means everything' – Robertson marks 100th Scotland cap with victory",
+      "subtitle": "Andy Robertson was beaming after winning his 100th Scotland cap, though he was disappointed not to mark the occasion with a goal.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1m6hibefmoqwp1de6sqjxg9vq1-it-means-everything-robertson-marks-100th-scotland-cap-victory",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b/ee/andy-robertson_xkyajpecwwmi1qj9ekjrdhofc.jpg?t=140717985&w=1200&h=630",
+      "publishedAt": "2026-10-03T21:48:09.000Z",
+      "paragraphs": [
+        "Andy Robertson was proud to mark his 100th Scotland appearance with a victory, as Saturday&#39;s 2-0 win over North Macedonia got the Sebastien Pocognoli era up and running.",
+        "Following a goalless draw with Slovenia and a chastening 3-0 loss at home to Switzerland, Scotland finally got their first victory in the 2026-27 Nations League, with Kieron Bowie and John McGinn on target in Skopje.",
+        "Bowie&#39;s first international goal was a brilliant effort in the seventh minute, as he spun Mario Mladenovski then found the bottom-right corner from outside the area.",
+        "McGinn made it 2-0 from the penalty spot in the 69th minute, with Bojan Miovski deemed to have committed handball during a goalmouth scramble in which Scott McKenna – who was later sent off – headed against the post.",
+        "While it was an occasion to remember for Pocognoli, Robertson also celebrated a landmark moment, becoming only the second player to win 100 caps for Scotland, after Kenny Dalglish (102).",
+        "Dalglish&#39;s 30 international goals remain the joint-most by any Scotland player, alongside Denis Law, and Robertson – who only has four goals for his country – joked he had a chance of matching that figure after being heavily involved as an attacking outlet.&nbsp;",
+        "Having never previously had four shots in a game for Scotland, Robertson managed that figure in the opening 13 minutes, with Stole Dimitrievski making one wonderful save to keep the left-back out.",
+        "&quot;It means everything to me, and it means everything to my family,&quot; Robertson told BBC Scotland afterwards.&nbsp;",
+        "&quot;I&#39;ve been away now 100 times; I&#39;ve got to feel sorry for my wife! It&#39;s been an unbelievable journey. I remember my first game, and it&#39;s been a process since then.",
+        "&quot;It&#39;s emotional for me. I love this country, there&#39;s only one person before me in the men&#39;s game to do that, so it&#39;s a pretty special achievement.",
+        "&quot;I thought Kenny Dalglish was going to be worried about his goalscoring record in the first few minutes! I had about six shots!",
+        "&quot;They did a nice presentation for me; I told them I wanted the win. The lads did so well to get the win, it&#39;ll be a special one for me and my family.&quot;",
+        "McGinn, meanwhile, said Scotland could not afford to rest on their laurels ahead of hosting Slovenia on Tuesday, as he praised Pocognoli&#39;s efforts to build a new identity.&nbsp;",
+        "&quot;The most important thing tonight was a win and a clean sheet,&quot; McGinn said. &quot;When results go against you, things are said about you both personally and as a team, it&#39;s part of football.&nbsp;",
+        "&quot;We deserve the praise that comes tonight. It was not an easy game, but we handled it well.",
+        "&quot;The manager has brought a lot of ideas, a lot of identity, and it&#39;s up to us to buy into it. It&#39;s up to us to keep believing in what he wants to do and bring our qualities to the pitch.",
+        "&quot;Tuesday&#39;s going to be a difficult game, but we&#39;ve got to back this up with another win.&quot;"
+      ],
+      "html": "<p>Andy Robertson was proud to mark his 100th Scotland appearance with a victory, as Saturday&#39;s 2-0 win over North Macedonia got the Sebastien Pocognoli era up and running.</p>\n\n<p>Following a goalless draw with Slovenia and a chastening 3-0 loss at home to Switzerland, Scotland finally got their first victory in the 2026-27 Nations League, with Kieron Bowie and John McGinn on target in Skopje.</p>\n\n<p>Bowie&#39;s first international goal was a brilliant effort in the seventh minute, as he spun Mario Mladenovski then found the bottom-right corner from outside the area.</p>\n\n<p>McGinn made it 2-0 from the penalty spot in the 69th minute, with Bojan Miovski deemed to have committed handball during a goalmouth scramble in which Scott McKenna – who was later sent off – headed against the post.</p>\n\n<p>While it was an occasion to remember for Pocognoli, Robertson also celebrated a landmark moment, becoming only the second player to win 100 caps for Scotland, after Kenny Dalglish (102).</p>\n\n<p>Dalglish&#39;s 30 international goals remain the joint-most by any Scotland player, alongside Denis Law, and Robertson – who only has four goals for his country – joked he had a chance of matching that figure after being heavily involved as an attacking outlet.&nbsp;</p>\n\n<p>Having never previously had four shots in a game for Scotland, Robertson managed that figure in the opening 13 minutes, with Stole Dimitrievski making one wonderful save to keep the left-back out.</p>\n\n<p>&quot;It means everything to me, and it means everything to my family,&quot; Robertson told BBC Scotland afterwards.&nbsp;</p>\n\n<p>&quot;I&#39;ve been away now 100 times; I&#39;ve got to feel sorry for my wife! It&#39;s been an unbelievable journey. I remember my first game, and it&#39;s been a process since then.</p>\n\n<p>&quot;It&#39;s emotional for me. I love this country, there&#39;s only one person before me in the men&#39;s game to do that, so it&#39;s a pretty special achievement.</p>\n\n\n<p>&quot;I thought Kenny Dalglish was going to be worried about his goalscoring record in the first few minutes! I had about six shots!</p>\n\n<p>&quot;They did a nice presentation for me; I told them I wanted the win. The lads did so well to get the win, it&#39;ll be a special one for me and my family.&quot;</p>\n\n<p>McGinn, meanwhile, said Scotland could not afford to rest on their laurels ahead of hosting Slovenia on Tuesday, as he praised Pocognoli&#39;s efforts to build a new identity.&nbsp;</p>\n\n<p>&quot;The most important thing tonight was a win and a clean sheet,&quot; McGinn said. &quot;When results go against you, things are said about you both personally and as a team, it&#39;s part of football.&nbsp;</p>\n\n<p>&quot;We deserve the praise that comes tonight. It was not an easy game, but we handled it well.</p>\n\n<p>&quot;The manager has brought a lot of ideas, a lot of identity, and it&#39;s up to us to buy into it. It&#39;s up to us to keep believing in what he wants to do and bring our qualities to the pitch.</p>\n\n<p>&quot;Tuesday&#39;s going to be a difficult game, but we&#39;ve got to back this up with another win.&quot;</p>\n"
+    },
     "1m9ymt7iknsn317sgev2gjguoq": {
       "id": "1m9ymt7iknsn317sgev2gjguoq",
       "title": "Man Utd striker Sesko withdraws from Slovenia squad due to shin issue",
@@ -3532,6 +3593,34 @@
         "New York Red Bulls – 27.3%"
       ],
       "html": "<p>St. Louis City boss Yoann Damet insisted &quot;concern has never been a thing&quot; for him this season as his side prepare to take on the New York Red Bulls.</p>\n\n<p>After a slow start to the 2026 campaign, St. Louis are now fifth in the Western Conference, and they could go level on points with second-place FC Dallas if they beat the Red Bulls.</p>\n\n<p>St. Louis defeated Toronto FC 3-1 last time out, conceding deep into second-half stoppage time, while they have also reached the final of the U.S. Open Cup in recent weeks.</p>\n\n<p>Damet&#39;s side are on an 18-game unbeaten run across all competitions, but the Frenchman believes his players have been threatening a run like this one all season.&nbsp;</p>\n\n<p>&quot;I look at these guys and they have been the same since January,&quot; said Damet. &quot;Concern has never been a thing.</p>\n\n<p>&quot;Focus and preparation has been a thing since the start of the year. I think every new day is a new day to get better and to prepare for our next game.</p>\n\n<p>&quot;I think those guys have been like that since day one, so this week has been no different.</p>\n\n<p>&quot;We know we have another big game in New York and everybody is excited and locked in preparing for that game.&quot;</p>\n\n\n<p>NYRB, meanwhile, are eighth in the East after back-to-back 1-0 wins over the Columbus Crew and rivals New York City FC.</p>\n\n<p>Julian Hall scored the lone goal in their win over NYCFC, the 18-year-old’s 10th goal of the season and fourth match-winner.</p>\n\n<p>This match with St. Louis was scheduled to take place on Saturday, but was postponed due to adverse weather conditions.</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>New York Red Bulls – Cade Cowell</strong></p>\n\n<p>With top scorer Hall unavailable after being called up to the United States squad, Cowell will look to step up for NYRB.</p>\n\n<p>The 22-year-old, who has scored twice in 2026,&nbsp;has six assists this term, with only Emil Forsberg registering more (seven).</p>\n\n<p><strong>St. Louis City – Simon Becher</strong></p>\n\n<p>Seven different St. Louis players have at least five goal contributions during the team&#39;s current 16-game unbeaten run, led by Becher&#39;s nine (seven goals, two assists).</p>\n\n<p>Nine different St. Louis players have scored a match-winner in that time, with Tomas Totland (two) the only one with multiple (one own goal winner).</p>\n\n<p><strong>MATCH PREDICTION – ST. LOUIS CITY WIN</strong></p>\n\n<p>This will be St. Louis City&#39;s 148th match in all competitions and 130th in the regular season, but their first-ever match against the New York Red Bulls.</p>\n\n<p>St. Louis extended their regular-season unbeaten run to 16 games (W11 D5) with a win over Toronto, equalling NYRB&#39;s 2016 run for the third-longest in a single regular season in MLS history.</p>\n\n<p>The only longer single-season unbeaten runs in regular-season play in MLS history are 19 straight by Dallas in 2010 and 18 straight by the&nbsp;Crew in 2004.</p>\n\n<p>NYRB have posted back-to-back wins for the third time this season with victories over Columbus and NYCFC. The Red Bulls have won three straight regular-season matches only once over the last three seasons, doing so in May 2025.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>New York Red Bulls – 27.3%</p>\n\n<p>Draw – 22.7%</p>\n\n<p>St. Louis City – 50%</p>\n"
+    },
+    "1wn54tsih5751bpu2n7ej54il": {
+      "id": "1wn54tsih5751bpu2n7ej54il",
+      "title": "Spain 3-1 Czechia: World champions still perfect as Krejci red card halts fightback",
+      "subtitle": "Lamine Yamal, Rodri and Mikel Merino scored for Spain as they defeated 10-man Czechia 3-1 in the Nations League on Saturday.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1wn54tsih5751bpu2n7ej54il-spain-3-1-czechia-world-champions-still-perfect-krejci-red-card-halts-fightback",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d/a3/mikel-merino_1p53mcdxtxty71j70udgadxi73.jpg?t=132971921&w=1200&h=630",
+      "publishedAt": "2026-10-03T20:57:16.000Z",
+      "paragraphs": [
+        "Spain maintained their 100% record in the 2026-27 Nations League with a hard-earned 3-1 victory over Czechia, who had captain Ladislav Krejci sent off late on.",
+        "Following England&#39;s 7-0 humilation of Croatia elsewhere in Group A3, the world champions did not have things anywhere near as easy in Oviedo, after Luis de la Fuente made nine changes to his starting lineup.",
+        "After first-half goals from Lamine Yamal and Rodri, Jiri Slama&#39;s strike got the visitors – managed by Spaniard Santi Denia – back into the contest, only for Krejci&#39;s 85th-minute dismissal and a poacher&#39;s finish from Mikel Merino to kill their hopes of a fightback.&nbsp;",
+        "Yamal only needed six minutes to have an impact, as he exchanged passes with Dani Olmo, got the ball out of his feet near the right corner of the area, then curled a sumptuous effort past Antonin Kinsky.",
+        "Despite Spain dominating possession, they did not create another major chance until just beyond the half-hour mark, when Kinsky showed great reactions to deny Olmo.",
+        "But the Tottenham goalkeeper was beaten again in the 35th minute, with Rodri feeding his fellow Barcelona midfielder Olmo, continuing his run into the area, then finishing calmly when the ball deflected into his path.",
+        "Alex Baena also worked Kinsky late in the first half, but De la Fuente&#39;s withdrawal of Yamal at the interval removed some of Spain&#39;s attacking impetus, and Czechia got back into the game when Slama was slipped in by Adam Hlozek and finished unerringly across David Raya.",
+        "Czechia thought they had an unlikely equaliser in the 79th minute, as Raya spilled Krejci&#39;s looping header and Ryan Naderi prodded over the line, but Lukas Cerv was penalised for holding Robin Le Normand when the initial cross came into the area.&nbsp;",
+        "Krejci was booked for dissent following that incident, having screamed in the face of referee Vassilios Fotias, and that moment proved costly as the Wolves defender then dragged Roberto Fernandez back to stop a counter-attack and was shown a second yellow card.",
+        "Victor Munoz went agonisingly close to making it 3-1, but Spain&#39;s clinching goal did arrive in the 89th minute, with the Liverpool winger involved. He kept the attack alive following Stepan Chaloupek&#39;s terrible tackle on Fernandez, and when Kinsky parried his shot, Merino was waiting to fire into the empty net.",
+        "Czechs lose their cool as Barcelona stars dominate",
+        "Despite the one-sided look of the stat sheet, with Spain accumulating 1.99 expected goals (xG) to Czechia&#39;s 0.49, outshooting their visitors by 18 to five and having a 69% possession share, this game was far from straightforward for the World Cup holders.",
+        "Czechia looked to have La Roja on the ropes when Slama&#39;s goal halved the deficit, but Krejci&#39;s loss of composure ultimately cost them.&nbsp;",
+        "Ultimately, it was Spain&#39;s Barcelona stars that did the damage as they extended their record unbeaten run to 41 games and put themselves on the brink of the quarter-finals.",
+        "Yamal now has 12&nbsp;goals in his last nine games for club and country (four for Spain in the Nations League, eight for Barcelona in all competitions), with a 3-1 LaLiga win over Sevilla being the only game in which he has failed to find the net in that period.",
+        "Spain&#39;s second goal was the result of a lovely combination between Rodri and Olmo, who were the only players remaining from their starting lineup the last time they faced Czechia, also in the Nations League in June 2022."
+      ],
+      "html": "<p>Spain maintained their 100% record in the 2026-27 Nations League with a hard-earned 3-1 victory over Czechia, who had captain Ladislav Krejci sent off late on.</p>\n\n<p>Following England&#39;s 7-0 humilation of Croatia elsewhere in Group A3, the world champions did not have things anywhere near as easy in Oviedo, after Luis de la Fuente made nine changes to his starting lineup.</p>\n\n<p>After first-half goals from Lamine Yamal and Rodri, Jiri Slama&#39;s strike got the visitors – managed by Spaniard Santi Denia – back into the contest, only for Krejci&#39;s 85th-minute dismissal and a poacher&#39;s finish from Mikel Merino to kill their hopes of a fightback.&nbsp;</p>\n\n<p>Yamal only needed six minutes to have an impact, as he exchanged passes with Dani Olmo, got the ball out of his feet near the right corner of the area, then curled a sumptuous effort past Antonin Kinsky.</p>\n\n\n<p>Despite Spain dominating possession, they did not create another major chance until just beyond the half-hour mark, when Kinsky showed great reactions to deny Olmo.</p>\n\n<p>But the Tottenham goalkeeper was beaten again in the 35th minute, with Rodri feeding his fellow Barcelona midfielder Olmo, continuing his run into the area, then finishing calmly when the ball deflected into his path.</p>\n\n<p>Alex Baena also worked Kinsky late in the first half, but De la Fuente&#39;s withdrawal of Yamal at the interval removed some of Spain&#39;s attacking impetus, and Czechia got back into the game when Slama was slipped in by Adam Hlozek and finished unerringly across David Raya.</p>\n\n<p>Czechia thought they had an unlikely equaliser in the 79th minute, as Raya spilled Krejci&#39;s looping header and Ryan Naderi prodded over the line, but Lukas Cerv was penalised for holding Robin Le Normand when the initial cross came into the area.&nbsp;</p>\n\n<p>Krejci was booked for dissent following that incident, having screamed in the face of referee Vassilios Fotias, and that moment proved costly as the Wolves defender then dragged Roberto Fernandez back to stop a counter-attack and was shown a second yellow card.</p>\n\n<p>Victor Munoz went agonisingly close to making it 3-1, but Spain&#39;s clinching goal did arrive in the 89th minute, with the Liverpool winger involved. He kept the attack alive following Stepan Chaloupek&#39;s terrible tackle on Fernandez, and when Kinsky parried his shot, Merino was waiting to fire into the empty net.</p>\n\n<p><strong>Czechs lose their cool as Barcelona stars dominate</strong></p>\n\n<p>Despite the one-sided look of the stat sheet, with Spain accumulating 1.99 expected goals (xG) to Czechia&#39;s 0.49, outshooting their visitors by 18 to five and having a 69% possession share, this game was far from straightforward for the World Cup holders.</p>\n\n<p>Czechia looked to have La Roja on the ropes when Slama&#39;s goal halved the deficit, but Krejci&#39;s loss of composure ultimately cost them.&nbsp;</p>\n\n<p>Ultimately, it was Spain&#39;s Barcelona stars that did the damage as they extended their record unbeaten run to 41 games and put themselves on the brink of the quarter-finals.</p>\n\n<p>Yamal now has 12&nbsp;goals in his last nine games for club and country (four for Spain in the Nations League, eight for Barcelona in all competitions), with a 3-1 LaLiga win over Sevilla being the only game in which he has failed to find the net in that period.</p>\n\n\n<p>Spain&#39;s second goal was the result of a lovely combination between Rodri and Olmo, who were the only players remaining from their starting lineup the last time they faced Czechia, also in the Nations League in June 2022.</p>\n"
     },
     "1wrp7lzqo8je81mup9pt0psejb": {
       "id": "1wrp7lzqo8je81mup9pt0psejb",
@@ -15017,6 +15106,31 @@
         "CM: Elliot Anderson—7.9: Excluding the build-up error that somehow didn’t return a Croatia goal, Anderson was superb. The bustling midfielder created England’s fifth goal after half time, setting up Kane."
       ]
     },
+    "ftbpro_01m41etg3480": {
+      "id": "ftbpro_01m41etg3480",
+      "title": "French Court Brings End to Kylian Mbappe's War Against PSG",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/french-court-end-kylian-mbappe-war-psg/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_47/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m41f1dv1q70v3a1s5s.jpg",
+      "publishedAt": "2026-10-03T20:33:23.000Z",
+      "paragraphs": [
+        "By James Cormack4:33 PM EDTKylian Mbappé’s complaint against his former club has been dismissed. / Richard Heathcote/Getty Images/Richard HeathcoteKylian Mbappé’s case against his former club, Paris Saint-Germain, alleging &#34;psychological harassment&#34; has been dismissed by the French courts.",
+        "Mbappé became soccer’s second-most expensive player when he signed for the Ligue 1 powerhouse, owned by Qatar Sports Investments (QSI), as part of a €180 million ($202 million) deal in 2017. He subsequently became the club’s record goalscorer, finding the back of the net 256 times in 308 appearances.",
+        "However, Mbappé was part of several PSG teams that ultimately failed to achieve their ultimate goal of winning the Champions League. A Neymar-inspired side led by Thomas Tuchel reached the final in 2020, but it was defeated by Bayern Munich in the showpiece event.",
+        "PSG’s back-to-back conquests of the continent arrived only after Mbappé had joined Real Madrid in 2024. The electric French forward has since claimed two scoring titles with the La Liga giants, but major silverware has eluded Los Blancos with Mbappé operating as their leading man.",
+        "While Mbappé had moved on, now scoring goals for fun in the Spanish capital, he was still entangled in a rather bitter feud with his former employers—until now.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Mbappé left PSG on a ’free’ transfer in 2024. / Antonio Borga/Eurasia Sport Images/Getty ImagesMbappé has been seeking compensation from PSG, claiming that the methods the club used to retain his services as he veered toward the end of his contract in Paris were illegal.",
+        "He accused the club of threatening to &#34;relegate&#34; him to the reserves, as was the case in the summer of 2023, in a bid to pile on the pressure and force his hand. This specific complaint was later withdrawn by the player, and while the investigation continued on, the courts ultimately dismissed it because of the lack of sufficient evidence, according to L’Equipe.",
+        "Given that Mbappé had withdrawn his complaint, magistrates deemed the case &#34;impossible to investigate.&#34;",
+        "&#34;There would be no point in questioning the witnesses and those implicated&#34; when &#34;the complainant himself does not support them,&#34; L'Equipe’s source commented.",
+        "Mbappé is set to receive compensation from the Parisians. / Buda Mendes/Getty ImagesMbappé may have failed in one legal battle, but the 27-year-old did claim a significant victory regarding compensation for unpaid wages, bonuses and vacation time.",
+        "The forward’s legal offensive, which started in May 2025, returned €61 million ($68.6 million) in his favor thanks to a Labor court ruling last December. PSG will be forced to compensate their record goalscorer after opting against an appeal.",
+        "Thus, with the aforementioned harassment case reaching its conclusion, Mbappé’s legal battles against his former club are seemingly over.",
+        "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
     "fzhafkysws3g1ux8fnmoe3180": {
       "id": "fzhafkysws3g1ux8fnmoe3180",
       "title": "De la Fuente promises 'the best is yet to come' for Spain",
@@ -15113,6 +15227,31 @@
         "While France remain top of Group A1 in the Nations League, Zidane will know his side must click in attack to give their defenders more to work with; France have scored once in each of their three games."
       ],
       "html": "<p>Zinedine Zidane was denied victory on his home debut as France boss after Italy fought back for a 1-1 draw at the Stade de France.</p>\n\n<p>Michael Olise&#39;s stunning strike looked set to secure France a third consecutive 1-0 win in the Nations League, but Alessandro Bastoni pounced on an error from Adrien Rabiot to rescue a point for Italy, before Dayot Upamecano also saw red.</p>\n\n<p>Although France dominated possession in the early stages, Italy squandered a huge chance to take the lead after Moise Kean shot straight at Mike Maignan from close range following a brilliant low cross from Michael Kayode.</p>\n\n<p>The hosts hit the crossbar when Doue&#39;s deflected centre landed on Gianluigi Donnarumma&#39;s crossbar, but it was Italy who wasted another big chance before the break as Davide Frattesi&#39;s eventual shot from Kayode&#39;s long throw was deflected wide of the left post.</p>\n\n<p>France then made Italy pay for their wastefulness 10 minutes into the second half. Rayan Cherki won a free-kick on the edge of the box, and he rolled the ball for Olise to smash in off the crossbar.</p>\n\n<p>However, the Azzurri levelled against the run of play in the 68th minute as Rabiot played Lucas da Cunha into trouble, and Bastoni took full advantage as he won possession and expertly finished past Maignan.</p>\n\n<p>France&#39;s hopes of finding a winner took a blow five minutes from time after Upamecano was shown a second yellow card for bringing down Kean, and the visitors managed to hold on for an important point on the road.</p>\n\n\n<p><strong>France miss Mbappe&#39;s magic</strong></p>\n\n<p>Zidane&#39;s side prevailed last time out against Belgium without star striker Kylian Mbappe, with Olise providing the goods on that occasion, but the Bayern Munich winger&#39;s contribution&nbsp;on this occasion was not enough for France.</p>\n\n<p>Although Olise, Doue and Ousmane Dembele combined for 12 shots, with the latter responsible for six of those attempts, it was only an unstoppable effort from Olise which managed to get the better of Donnarumma, who made seven saves for Roberto Mancini&#39;s side.</p>\n\n<p>Overall, Mancini will certainly be the happier of the two coaches. Italy won the expected goals (xG) battle 1.46 to 1.21 despite recording fewer shots (14 to 18) and far fewer touches in the opposition box (18 to 49).</p>\n\n<p>France&nbsp;conceded eight&nbsp;shots before the break, their highest total at half-time of a home match since July&nbsp;2016 in the European Championship semi-final against&nbsp;Germany (11).</p>\n\n<p>While France remain top of Group A1 in the Nations League, Zidane will know his side must click in attack to give their defenders more to work with; France have scored once in each of their three games.</p>\n"
+    },
+    "hl8g2s953m0u16yblg5azdqsv": {
+      "id": "hl8g2s953m0u16yblg5azdqsv",
+      "title": "Canada 'can beat just about anybody', says Marsch ahead of USA test",
+      "subtitle": "After Jacob Shaffelburg scored twice in Canada's 2-0 win over Peru, Jesse Marsch said the result proved his team can compete with anyone.",
+      "source": "FotMob",
+      "sourceUrl": "/news/hl8g2s953m0u16yblg5azdqsv-canada-can-beat-just-about-anybody-says-marsch-ahead-usa-test",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/c2/d6/jesse-marsch_zkkiiif5pswc18b2rcss3mfhn.jpg?t=143073409&w=1200&h=630",
+      "publishedAt": "2026-10-03T22:08:01.000Z",
+      "paragraphs": [
+        "Jesse Marsch believes Canada&#39;s 2-0 victory over Peru proved they can beat &quot;just about anybody&quot; and views their upcoming clash with the United States as a yardstick to measure their progress.&nbsp;",
+        "A first-half brace from Los Angeles FC&#39;s Jacob Shaffelburg sealed a deserved victory for the hosts in Montreal, maintaining their 100% record in this international break.",
+        "Canada, who also defeated Chile 1-0 in their previous game, fired off 17 shots to Peru&#39;s four and won the expected goals (xG) battle by 1.94 to 0.23, creating four Opta-defined big chances, compared to their opponent&#39;s zero.&nbsp;&nbsp;",
+        "Marsch will now go up against his home country, as Canada prepare to face the USA in their final friendly of this international break, in Minnesota on Tuesday.",
+        "And he feels that game will be a valuable test, telling reporters after full-time: &quot;I thought we dictated the pace and the way the game was played from the beginning.&nbsp;",
+        "&quot;We feel like we could have come away with even more goals.",
+        "&quot;We&#39;ll keep working on things, we&#39;ll keep trying to capitalise on moments and now, when we go to play the U.S. down there, we know we&#39;ll face an opponent that has a lot of quality, that is athletic, with a good coach and a good way of playing.",
+        "&quot;It&#39;ll be a big challenge for us, but we feel confident against any opponent that we play, and if we dictate the terms of the match and control the game the way we like to control it, we feel we can beat just about anybody.&quot;",
+        "Marsch also highlighted Peru&#39;s recent results – including a 1-1 draw with Mexico earlier this week – as further evidence of the quality of Canada&#39;s latest performance.",
+        "Peru were also competitive against eventual World Cup winners Spain in a pre-tournament friendly in June, losing 3-1, though they went down 4-1 to the USA at the start of this international break.",
+        "&quot;It&#39;s a credit to the team and a credit to what we&#39;re establishing here that we can manage that, because that&#39;s a team that gave Mexico a very good match,&quot; Marsch said.",
+        "&quot;Even if you go back to when they played Spain over the summer, they gave Spain a really good match.",
+        "&quot;We made them look worse than they are, because of how we performed.&quot;"
+      ],
+      "html": "<p>Jesse Marsch believes Canada&#39;s 2-0 victory over Peru proved they can beat &quot;just about anybody&quot; and views their upcoming clash with the United States as a yardstick to measure their progress.&nbsp;</p>\n\n<p>A first-half brace from Los Angeles FC&#39;s Jacob Shaffelburg sealed a deserved victory for the hosts in Montreal, maintaining their 100% record in this international break.</p>\n\n<p>Canada, who also defeated Chile 1-0 in their previous game, fired off 17 shots to Peru&#39;s four and won the expected goals (xG) battle by 1.94 to 0.23, creating four Opta-defined big chances, compared to their opponent&#39;s zero.&nbsp;&nbsp;</p>\n\n<p>Marsch will now go up against his home country, as Canada prepare to face the USA in their final friendly of this international break, in Minnesota on Tuesday.</p>\n\n<p>And he feels that game will be a valuable test, telling reporters after full-time: &quot;I thought we dictated the pace and the way the game was played from the beginning.&nbsp;</p>\n\n<p>&quot;We feel like we could have come away with even more goals.</p>\n\n<p>&quot;We&#39;ll keep working on things, we&#39;ll keep trying to capitalise on moments and now, when we go to play the U.S. down there, we know we&#39;ll face an opponent that has a lot of quality, that is athletic, with a good coach and a good way of playing.</p>\n\n<p>&quot;It&#39;ll be a big challenge for us, but we feel confident against any opponent that we play, and if we dictate the terms of the match and control the game the way we like to control it, we feel we can beat just about anybody.&quot;</p>\n\n\n<p>Marsch also highlighted Peru&#39;s recent results – including a 1-1 draw with Mexico earlier this week – as further evidence of the quality of Canada&#39;s latest performance.</p>\n\n<p>Peru were also competitive against eventual World Cup winners Spain in a pre-tournament friendly in June, losing 3-1, though they went down 4-1 to the USA at the start of this international break.</p>\n\n<p>&quot;It&#39;s a credit to the team and a credit to what we&#39;re establishing here that we can manage that, because that&#39;s a team that gave Mexico a very good match,&quot; Marsch said.</p>\n\n<p>&quot;Even if you go back to when they played Spain over the summer, they gave Spain a really good match.</p>\n\n<p>&quot;We made them look worse than they are, because of how we performed.&quot;</p>\n"
     },
     "hqajl9dq1rieztkd8vqjsxcu": {
       "id": "hqajl9dq1rieztkd8vqjsxcu",
@@ -15350,6 +15489,28 @@
         "&quot;I know there&#39;s a perception that the Nations League may not be as important, but when you haven&#39;t won for so long, I think just the feeling of winning a trophy with England could then catapult us to head&nbsp;into the Euros in a couple of years.&quot;"
       ],
       "html": "<p>Harry Kane described England&#39;s semi-final defeat to Argentina at this summer&#39;s World Cup as the&nbsp;most painful moment of his career with the Three Lions.&nbsp;</p>\n\n<p>England were on the cusp of reaching the World Cup final for the first time since 1966 when&nbsp;Anthony Gordon turned in&nbsp;Morgan Rogers&#39;s cross in the 55th minute.&nbsp;</p>\n\n<p>However, two late goals from&nbsp;Enzo Fernandez and&nbsp;Lautaro Martinez completed the turnaround, with Lionel Messi bagging both assists at&nbsp;Mercedes-Benz Stadium.&nbsp;</p>\n\n<p>Argentina were trailing until the 85th minute against England, the latest a team has been behind but gone on to win in normal time in a World Cup semi-final, making the defeat all the more difficult for Kane.&nbsp;</p>\n\n<p>Thomas Tuchel came under fire for his tactical approach to the match, electing to replace both Gordon and&nbsp;Declan Rice for more defensive options to try and see the win out.</p>\n\n<p>England have now been eliminated in each of their last three matches at this stage of a World Cup (1990, 2018, 2026), while Kane has also been involved in the Three Lions&#39; defeats in the European Championship finals against both Italy and Spain.&nbsp;</p>\n\n<p>However, England&#39;s latest setback hurt him the most, with Kane saying:&nbsp;&quot;I&#39;m so passionate about England, especially because I have been on this journey now.&nbsp;</p>\n\n<p>&quot;I have been to the finals, to semi-finals and been so close. Each one hurts in a different way. This one hurt, for sure. More than any other one.</p>\n\n<p>&quot;I would probably say even more than when I missed a penalty in Qatar [in the quarter-final against France] just in the way that it happened.</p>\n\n<p>&quot;It just felt like it wasn&#39;t us as a team. It wasn&#39;t the team that we wanted to be and said we&#39;d be.</p>\n\n<p>&quot;I sometimes think when you maybe go against your beliefs, and you lose, it feels 10 times worse than just losing in a way where, if we lose doing it our way, you accept it, take it on the chin and move on.</p>\n\n<p>&quot;It&#39;s tough and it will still be tough. You have to move on.&quot;</p>\n\n\n<p>The result overshadowed a landmark occasion for Kane,&nbsp;who made his 121st appearance in all competitions for England, the outright most of any outfield player for the nation.&nbsp;&nbsp;</p>\n\n<p>England were, however, able to end the tournament on a high, claiming third place after beating France 6-4 in an enthralling clash at&nbsp;Hard Rock Stadium three days later.&nbsp;</p>\n\n<p>Tuchel&#39;s side are preparing for their first match since that victory this Saturday, with World Cup champions Spain their opponents in the Nations League at&nbsp;Wembley Stadium.&nbsp;</p>\n\n<p>England have won just two of their last 13 games against the reigning World Cup holders, losing nine times (D2). Those wins came at home to Spain in November 2011 (1-0) and away to Germany in March 2016 (3-2).</p>\n\n<p>And Kane said while&nbsp;the pain from such disappointments &quot;stays with you&quot;, England must use it as fuel as they aim to reach the next level on the international stage.&nbsp;</p>\n\n<p>&quot;It&#39;s something that we haven&#39;t quite been able to do in the latter stages of tournaments against the bigger nations and the better nations,&quot; Kane added.</p>\n\n<p>&quot;And it may be a mixture of things. It may be personalities, it may be mentality, it may be just the direction and how we want to play in those games.</p>\n\n<p>&quot;I think it&#39;s conversations that we need to have as a group and team. Not just sit down but as we gradually go through these next games, through this next period of the Nations League, which we want to try and win.</p>\n\n<p>&quot;We want to try and take that next step because I think that&#39;ll be an important step for us as a team.</p>\n\n<p>&quot;I know there&#39;s a perception that the Nations League may not be as important, but when you haven&#39;t won for so long, I think just the feeling of winning a trophy with England could then catapult us to head&nbsp;into the Euros in a couple of years.&quot;</p>\n"
+    },
+    "j49lyuo2wnib157sf60kt2alp": {
+      "id": "j49lyuo2wnib157sf60kt2alp",
+      "title": "Ancelotti to maintain new Brazil approach after thrashing India",
+      "subtitle": "Brazil ran out 4-0 winners in their first-ever meeting with India, and Carlo Ancelotti will continue to give his younger players a chance.",
+      "source": "FotMob",
+      "sourceUrl": "/news/j49lyuo2wnib157sf60kt2alp-ancelotti-maintain-new-brazil-approach-after-thrashing-india",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/fb/54/estevao_14bdwdvy68fls1xd6mvflow9rb.jpg?t=111167985&w=1200&h=630",
+      "publishedAt": "2026-10-03T20:20:00.000Z",
+      "paragraphs": [
+        "Carlo Ancelotti insisted he will continue to give young players a chance after Brazil&#39;s comfortable win over India on Friday.",
+        "Samuel Lino scored twice in a 4-0 victory, with Estevao and Pedro also scoring in Kolkata, in what was the first-ever meeting between the two countries.",
+        "The likes of Arthur Dias (19), Gabriel Bontempo (21) and Andrey Santos (22) all started for the Selecao, while 22-year-old goalkeeper Pedro Morisco also made his debut.",
+        "Brazil accumulated 1.2 expected goals (xG) to India&#39;s 0.29, with the hosts, expectedly, not offering much threat in the attacking third.",
+        "Nevertheless, Ancelotti was pleased to see how his younger players performed, and he plans to name a similar squad for next month&#39;s international break.",
+        "&quot;We are doing very well in these aspects, we have to give them opportunities,&quot; said Ancelotti after the win.",
+        "&quot;These are players who have more difficulties, players who don&#39;t get playing time at their clubs have more difficulty playing a competitive game, as might be the case with Estevao and Endrick.",
+        "&quot;Getting to know these players better, I think Jair Cunha played very well. Bontempo better in the first game than in the second game. Breno [Bidon] came on showing his qualities. Artur Dias was very good, the goalkeepers too.&quot;",
+        "Brazil have gone unbeaten during this extended international break, drawing and winning against Australia before their victory over India.",
+        "Ancelotti&#39;s side will return to Asia next month to take on Japan and Singapore in friendly matches."
+      ],
+      "html": "<p>Carlo Ancelotti insisted he will continue to give young players a chance after Brazil&#39;s comfortable win over India on Friday.</p>\n\n<p>Samuel Lino scored twice in a 4-0 victory, with Estevao and Pedro also scoring in Kolkata, in what was the first-ever meeting between the two countries.</p>\n\n<p>The likes of Arthur Dias (19), Gabriel Bontempo (21) and Andrey Santos (22) all started for the Selecao, while 22-year-old goalkeeper Pedro Morisco also made his debut.</p>\n\n<p>Brazil accumulated 1.2 expected goals (xG) to India&#39;s 0.29, with the hosts, expectedly, not offering much threat in the attacking third.</p>\n\n<p>Nevertheless, Ancelotti was pleased to see how his younger players performed, and he plans to name a similar squad for next month&#39;s international break.</p>\n\n<p>&quot;We are doing very well in these aspects, we have to give them opportunities,&quot; said Ancelotti after the win.</p>\n\n\n<p>&quot;These are players who have more difficulties, players who don&#39;t get playing time at their clubs have more difficulty playing a competitive game, as might be the case with Estevao and Endrick.</p>\n\n<p>&quot;Getting to know these players better, I think Jair Cunha played very well. Bontempo better in the first game than in the second game. Breno [Bidon] came on showing his qualities. Artur Dias was very good, the goalkeepers too.&quot;</p>\n\n<p>Brazil have gone unbeaten during this extended international break, drawing and winning against Australia before their victory over India.</p>\n\n<p>Ancelotti&#39;s side will return to Asia next month to take on Japan and Singapore in friendly matches.</p>\n"
     },
     "jfiqg8afxo45122d6ogsbdpet": {
       "id": "jfiqg8afxo45122d6ogsbdpet",
@@ -16085,6 +16246,33 @@
         "Colorado Rapids – 27.8%"
       ],
       "html": "<p>Matt Wells wants the Colorado Rapids to stick to their identity as they continue their push to secure an MLS playoff spot against the LA Galaxy.</p>\n\n<p>Colorado currently sit seventh in the Western Conference on 36 points, and they come into this game unbeaten in their last three matches (W1 D2).</p>\n\n<p>However, they threw away a 3-1 lead against the Seattle Sounders last time out, conceding twice in the last 15 minutes, including a stoppage-time equaliser from Caden Clark.</p>\n\n<p>And on the road, the Rapids have had their struggles, failing to win any of their last five away games in the competition, with their last such win coming against Minnesota United before the World Cup break in May.</p>\n\n<p>But Wells is not changing his approach despite the end of the regular season approaching, as he remains confident Colorado have what it takes to clinch their playoff berth.</p>\n\n<p>&quot;No special messages [about the playoff push],&quot; he said. &quot;We try and win every game.</p>\n\n<p>&quot;So, for me, our process here is that we&#39;re always immersed in the game preparation. It&#39;s like if we want to look any further ahead than the Galaxy, then we&#39;ll go to the Galaxy and get a total of zero points.</p>\n\n<p>&quot;We have to be fully focused on our next opponent. We&#39;re trying to guess the dynamic of the team they&#39;ll put out, both personnel and tactically.</p>\n\n<p>&quot;We&#39;re in a good spot. It&#39;s about us going out in all of these games now. It&#39;s about us going out and playing to our identity, playing our style and executing the game plan that we&#39;ve put into place.</p>\n\n<p>&quot;We know as a group, whenever we&#39;ve done that, we&#39;ve been successful.&quot;</p>\n\n<p>The Galaxy are also pushing to make it to the postseason, and they sit three points behind the Rapids in eighth.</p>\n\n<p>Greg Vanney&#39;s side have lost just one of their last four league games (W2 D1) and come into this match on the back of a 3-2 comeback win over Minnesota last weekend.</p>\n\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>LA Galaxy – Marco Reus</strong></p>\n\n<p>Marco Reus scored the 13th regular-season goal of his MLS career on Saturday, but it was only his second league goal on the road for LA Galaxy.</p>\n\n<p>Reus&#39;&nbsp;three goals this month are tied for his most in a single calendar month for the Galaxy, also netting three earlier this season in April.</p>\n\n<p><strong>Colorado Rapids – Morgan Whittaker</strong></p>\n\n<p>On Saturday, Morgan Whittaker tallied a brace for Colorado in his first career start for the club, becoming the second Rapids player to do that this season (Kosi Thompson – April 12).</p>\n\n<p>Prior to this season, the last Rapids player to have multiple goals in his first regular-season start for the club was Raul Diaz Arce in 2001.</p>\n\n<p><strong>MATCH PREDICTION: LA GALAXY WIN</strong></p>\n\n<p>LA Galaxy have earned 41 all-time regular-season wins against the Rapids (incl. shootout wins), tied for their most wins against a single MLS opponent (also the San Jose Earthquakes).</p>\n\n<p>The only MLS team to have more wins against a single team in regular-season play is Columbus against the New England Revolution (42).</p>\n\n<p>Trailing 2-1 in the 75th minute, the Galaxy scored twice to earn a 3-2 comeback win against Minnesota United last weekend. It was the second time over the last eight seasons that the Galaxy rallied to win after trailing in the 75th minute or later, also doing so in March 2024 at Sporting Kansas City.</p>\n\n<p>But the Rapids earned a 3-3 draw Saturday against Seattle, their first time scoring three or more goals since a 6-2 win against the Houston Dynamo in April.</p>\n\n<p>Colorado scored at least three goals in three of their first seven matches in 2026 across all competitions but have done so in just one of their last 23 games.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>LA Galaxy – 45.3%</p>\n\n<p>Draw – 26.9%</p>\n\n<p>Colorado Rapids – 27.8%</p>\n"
+    },
+    "phzjzor1ct0714pn2bxzrdw5a": {
+      "id": "phzjzor1ct0714pn2bxzrdw5a",
+      "title": "'I give up' – Klopp exasperated by debate over Kimmich's Germany role",
+      "subtitle": "Continued questions over Joshua Kimmich's Germany future have left Jurgen Klopp frustrated, with the ex-Liverpool boss lashing out.",
+      "source": "FotMob",
+      "sourceUrl": "/news/phzjzor1ct0714pn2bxzrdw5a-i-give-up-klopp-exasperated-debate-over-kimmichs-germany-role",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/33/5c/jurgen-klopp-and-joshua-kimmich_3et11yw0y8pd18ki4z122flmx.jpg?t=137699665&w=1200&h=630",
+      "publishedAt": "2026-10-03T21:26:02.000Z",
+      "paragraphs": [
+        "An exasperated Jurgen Klopp said he has given up on answering questions about Joshua Kimmich&#39;s Germany future, amid continued speculation regarding his place in the team.",
+        "Following a 1-1 draw with the Netherlands and a surprise 1-0 defeat to Greece, Klopp avoided becoming the first Germany boss to fail to win his first three games in charge on Thursday, as Tom Bischof and Florian Wirtz scored in a 2-0 win over Serbia.",
+        "That victory came without captain Kimmich, as Aleksandar Pavlovic played alongside the two goalscorers in the centre of Germany&#39;s midfield.",
+        "Ahead of Sunday&#39;s trip to Greece, Klopp allowed several players – including Bayern Munich stalwart Kimmich – to return to their clubs.",
+        "That only fuelled speculation in the German media that the 31-year-old, whose 116 caps are the seventh-most in Die Nationalelf&#39;s history, may not be part of Klopp&#39;s long-term plans.",
+        "But when that prospect was put to Klopp again at Saturday&#39;s pre-match press conference, his frustration was clear.",
+        "&quot;You can tell that it&#39;s extremely difficult for me to say anything about that, because you want to make a story out of it. We played a good game. Our midfield was top class,&quot; Klopp said.",
+        "&quot;But can you imagine how s***** it would be if Germany had three, and only three, top-class midfielders?&nbsp;",
+        "&quot;Why make it about one player when it&#39;s about the fact that we need several good players? We need all sorts of players. We need leaders. We need runners. We need everything.&nbsp;",
+        "&quot;It was a loaded question. I understand that it&#39;s a logical and normal question, but I think it’s coming too soon.",
+        "&quot;I&#39;m very satisfied with all the lads. I&#39;m looking forward to the future, and I hope we have a large pool.&nbsp;",
+        "&quot;I just don&#39;t stand a chance with that question, without you guys making something out of it. I give up. Seriously. Officially.&nbsp;",
+        "&quot;With respect to that topic, I give up. Do what you want with it. I&#39;m happy with the last game, and I&#39;m happy that Joshua Kimmich is a leading player for Germany.&quot;",
+        "Germany are third in Group A2 ahead of their fourth game, with Greece leading the way on seven points.",
+        "The Netherlands are second with five, while Serbia are yet to earn a point.&nbsp;"
+      ],
+      "html": "<p>An exasperated Jurgen Klopp said he has given up on answering questions about Joshua Kimmich&#39;s Germany future, amid continued speculation regarding his place in the team.</p>\n\n<p>Following a 1-1 draw with the Netherlands and a surprise 1-0 defeat to Greece, Klopp avoided becoming the first Germany boss to fail to win his first three games in charge on Thursday, as Tom Bischof and Florian Wirtz scored in a 2-0 win over Serbia.</p>\n\n<p>That victory came without captain Kimmich, as Aleksandar Pavlovic played alongside the two goalscorers in the centre of Germany&#39;s midfield.</p>\n\n<p>Ahead of Sunday&#39;s trip to Greece, Klopp allowed several players – including Bayern Munich stalwart Kimmich – to return to their clubs.</p>\n\n<p>That only fuelled speculation in the German media that the 31-year-old, whose 116 caps are the seventh-most in Die Nationalelf&#39;s history, may not be part of Klopp&#39;s long-term plans.</p>\n\n<p>But when that prospect was put to Klopp again at Saturday&#39;s pre-match press conference, his frustration was clear.</p>\n\n<p>&quot;You can tell that it&#39;s extremely difficult for me to say anything about that, because you want to make a story out of it. We played a good game. Our midfield was top class,&quot; Klopp said.</p>\n\n<p>&quot;But can you imagine how s***** it would be if Germany had three, and only three, top-class midfielders?&nbsp;</p>\n\n<p>&quot;Why make it about one player when it&#39;s about the fact that we need several good players? We need all sorts of players. We need leaders. We need runners. We need everything.&nbsp;</p>\n\n<p>&quot;It was a loaded question. I understand that it&#39;s a logical and normal question, but I think it’s coming too soon.</p>\n\n<p>&quot;I&#39;m very satisfied with all the lads. I&#39;m looking forward to the future, and I hope we have a large pool.&nbsp;</p>\n\n\n<p>&quot;I just don&#39;t stand a chance with that question, without you guys making something out of it. I give up. Seriously. Officially.&nbsp;</p>\n\n<p>&quot;With respect to that topic, I give up. Do what you want with it. I&#39;m happy with the last game, and I&#39;m happy that Joshua Kimmich is a leading player for Germany.&quot;</p>\n\n<p>Germany are third in Group A2 ahead of their fourth game, with Greece leading the way on seven points.</p>\n\n<p>The Netherlands are second with five, while Serbia are yet to earn a point.&nbsp;</p>\n"
     },
     "qch5619dbk9u1uymw7xa8r1ec": {
       "id": "qch5619dbk9u1uymw7xa8r1ec",
