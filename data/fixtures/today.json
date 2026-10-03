@@ -7,8 +7,8 @@
     "country": "Europe",
     "round": 3,
     "utcDate": "2026-10-03T16:00:00.000Z",
-    "status": "IN_PLAY",
-    "minute": "4‎’‎",
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "10155",
       "name": "Croatia",
@@ -21,13 +21,13 @@
       "name": "England",
       "shortName": "England",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8491.png",
-      "score": 0
+      "score": 7
     },
     "score": {
       "home": 0,
-      "away": 0
+      "away": 7
     },
-    "updatedAt": "2026-10-03T16:06:03.249Z"
+    "updatedAt": "2026-10-03T20:55:59.152Z"
   },
   {
     "id": "5181854",
@@ -37,27 +37,27 @@
     "country": "Europe",
     "round": 3,
     "utcDate": "2026-10-03T18:45:00.000Z",
-    "status": "SCHEDULED",
-    "minute": null,
+    "status": "FINISHED",
+    "minute": "FT",
     "homeTeam": {
       "id": "6720",
       "name": "Spain",
       "shortName": "Spain",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6720.png",
-      "score": null
+      "score": 3
     },
     "awayTeam": {
       "id": "8496",
       "name": "Czechia",
       "shortName": "Czechia",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8496.png",
-      "score": null
+      "score": 1
     },
     "score": {
-      "home": null,
-      "away": null
+      "home": 3,
+      "away": 1
     },
-    "updatedAt": "2026-10-03T16:06:03.249Z"
+    "updatedAt": "2026-10-03T20:55:59.152Z"
   },
   {
     "id": "5103569",
@@ -87,6 +87,6 @@
       "home": null,
       "away": null
     },
-    "updatedAt": "2026-10-03T16:05:54.755Z"
+    "updatedAt": "2026-10-03T20:55:51.289Z"
   }
 ]
