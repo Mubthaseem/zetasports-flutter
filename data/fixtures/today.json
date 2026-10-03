@@ -1,122 +1,92 @@
 [
   {
-    "id": "5071349",
-    "competitionId": "130",
-    "competitionName": "MLS",
-    "competitionSlug": "mls",
-    "country": "USA",
-    "round": 24,
-    "utcDate": "2026-10-02T01:30:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "130394",
-      "name": "Seattle Sounders FC",
-      "shortName": "Seattle Sounders",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/130394.png",
-      "score": 2
-    },
-    "awayTeam": {
-      "id": "6604",
-      "name": "Sporting Kansas City",
-      "shortName": "Sporting KC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6604.png",
-      "score": 1
-    },
-    "score": {
-      "home": 2,
-      "away": 1
-    },
-    "updatedAt": "2026-10-02T22:04:15.230Z"
-  },
-  {
-    "id": "5181792",
+    "id": "5181853",
     "competitionId": "9806",
     "competitionName": "UEFA Nations League",
     "competitionSlug": "uefa-nations-league",
     "country": "Europe",
     "round": 3,
-    "utcDate": "2026-10-02T18:45:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "8263",
-      "name": "Belgium",
-      "shortName": "Belgium",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8263.png",
-      "score": 3
-    },
-    "awayTeam": {
-      "id": "6595",
-      "name": "Turkiye",
-      "shortName": "Turkiye",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6595.png",
-      "score": 0
-    },
-    "score": {
-      "home": 3,
-      "away": 0
-    },
-    "updatedAt": "2026-10-02T22:04:30.655Z"
-  },
-  {
-    "id": "5181793",
-    "competitionId": "9806",
-    "competitionName": "UEFA Nations League",
-    "competitionSlug": "uefa-nations-league",
-    "country": "Europe",
-    "round": 3,
-    "utcDate": "2026-10-02T18:45:00.000Z",
-    "status": "FINISHED",
-    "minute": "FT",
-    "homeTeam": {
-      "id": "6723",
-      "name": "France",
-      "shortName": "France",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6723.png",
-      "score": 1
-    },
-    "awayTeam": {
-      "id": "8204",
-      "name": "Italy",
-      "shortName": "Italy",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8204.png",
-      "score": 1
-    },
-    "score": {
-      "home": 1,
-      "away": 1
-    },
-    "updatedAt": "2026-10-02T22:04:30.655Z"
-  },
-  {
-    "id": "5103566",
-    "competitionId": "268",
-    "competitionName": "Brasileirão Série A",
-    "competitionSlug": "serie-a-brazil",
-    "country": "Brazil",
-    "round": 21,
-    "utcDate": "2026-10-02T23:00:00.000Z",
+    "utcDate": "2026-10-03T16:00:00.000Z",
     "status": "SCHEDULED",
     "minute": null,
     "homeTeam": {
-      "id": "10277",
-      "name": "São Paulo",
-      "shortName": "São Paulo",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10277.png",
+      "id": "10155",
+      "name": "Croatia",
+      "shortName": "Croatia",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10155.png",
       "score": null
     },
     "awayTeam": {
-      "id": "8514",
-      "name": "Santos",
-      "shortName": "Santos",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8514.png",
+      "id": "8491",
+      "name": "England",
+      "shortName": "England",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8491.png",
       "score": null
     },
     "score": {
       "home": null,
       "away": null
     },
-    "updatedAt": "2026-10-02T22:04:23.586Z"
+    "updatedAt": "2026-10-03T05:00:10.779Z"
+  },
+  {
+    "id": "5181854",
+    "competitionId": "9806",
+    "competitionName": "UEFA Nations League",
+    "competitionSlug": "uefa-nations-league",
+    "country": "Europe",
+    "round": 3,
+    "utcDate": "2026-10-03T18:45:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "6720",
+      "name": "Spain",
+      "shortName": "Spain",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6720.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "8496",
+      "name": "Czechia",
+      "shortName": "Czechia",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8496.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-10-03T05:00:10.779Z"
+  },
+  {
+    "id": "5103569",
+    "competitionId": "268",
+    "competitionName": "Brasileirão Série A",
+    "competitionSlug": "serie-a-brazil",
+    "country": "Brazil",
+    "round": 21,
+    "utcDate": "2026-10-03T21:30:00.000Z",
+    "status": "SCHEDULED",
+    "minute": null,
+    "homeTeam": {
+      "id": "10272",
+      "name": "Atlético-MG",
+      "shortName": "Atlético-MG",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10272.png",
+      "score": null
+    },
+    "awayTeam": {
+      "id": "109705",
+      "name": "RB Bragantino",
+      "shortName": "RB Bragantino",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/109705.png",
+      "score": null
+    },
+    "score": {
+      "home": null,
+      "away": null
+    },
+    "updatedAt": "2026-10-03T05:00:03.443Z"
   }
 ]
