@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-10-03T11:29:53.784Z",
+    "generatedAt": "2026-10-03T11:31:23.884Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 575
+      "fullArticlesCount": 582
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -15,13 +15,67 @@
   },
   "news": [
     {
-      "id": "ftbpro_01m3xxj077qj",
-      "title": "Spain vs. Czechia—Nations League: Preview, Predictions and Lineups",
+      "id": "lch8oscyb3r011xedse39jmpj",
+      "title": "Slegers accepts pressure amid poor Arsenal form",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/lch8oscyb3r011xedse39jmpj-slegers-accepts-pressure-amid-poor-arsenal-form",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e5/29/renee-slegers_1r1ijgb7kon6v16i0icm9p0hpp.jpg?t=35415985&w=1260&h=708",
+      "publishedAt": "2026-10-03T11:23:58.000Z"
+    },
+    {
+      "id": "ftbpro_01m40n6yaenc",
+      "title": "‘Piece of C---’—Former Man Utd Star Offers Scathing Verdict on Ten Hag, Ronaldo Feud",
       "description": "SI",
       "source": "SI",
-      "sourceUrl": "/embed/news/01m3xxj077qj/spain-vs-czechianations-league-preview-predictions-lineups",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3xxymwygg7sgcpg3t.jpg",
-      "publishedAt": "2026-10-03T02:00:00.000Z"
+      "sourceUrl": "/embed/news/01m40n6yaenc/piece-c-former-man-utd-star-offers-scathing-verdict-ten-hag-ronaldo-feud",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1978,h_1112,x_172,y_55/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m40pfgx7nkae5d77am.jpg",
+      "publishedAt": "2026-10-03T11:15:00.000Z"
+    },
+    {
+      "id": "1gx0lwmkxy6021ggesfypovjdc",
+      "title": "Pochettino names 'perfect role model' Adams as new USA captain",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1gx0lwmkxy6021ggesfypovjdc-pochettino-names-perfect-role-model-adams-new-usa-captain",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/3c/97/tyler-adams_epi5kygxq5c711km85ue08khm.jpg?t=59839985&w=1260&h=708",
+      "publishedAt": "2026-10-03T10:44:35.000Z"
+    },
+    {
+      "id": "ftbpro_01m40knqp8a1",
+      "title": "‘Big Topic’—Thomas Tuchel Reveals Impact of Man City Guilty Verdict on England Stars",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m40knqp8a1/big-topicthomas-tuchel-reveals-impact-man-city-guilty-verdict-england-stars",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2177,h_1224,x_201,y_80/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m40kwxzqqq1yrxbv9v.jpg",
+      "publishedAt": "2026-10-03T10:30:00.000Z"
+    },
+    {
+      "id": "m2km546gaa8e10unl6wphjtoa",
+      "title": "Colombia must give Suarez more support, says head coach Lorenzo",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/m2km546gaa8e10unl6wphjtoa-colombia-must-give-suarez-more-support-says-head-coach-lorenzo",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/94/60/luis-suarez_17sf4o46agqka12miuvt5qkbpx.jpg?t=54017921&w=1260&h=708",
+      "publishedAt": "2026-10-03T10:12:19.000Z"
+    },
+    {
+      "id": "1b69u0q1qpg61114oxvae5thsv",
+      "title": "Bastoni confident Italy can take on anyone after France draw",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1b69u0q1qpg61114oxvae5thsv-bastoni-confident-italy-can-take-anyone-after-france-draw",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/81/f9/alessandro-bastoni-and-riccardo-calafiori_wyvawxhl4cu219e8ehivovprx.jpg?t=54023217&w=640&h=360",
+      "publishedAt": "2026-10-03T09:41:42.000Z"
+    },
+    {
+      "id": "1pferb0aavbmk1p668syxtx3dj",
+      "title": "Doue: Zidane told us we're on the right track",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1pferb0aavbmk1p668syxtx3dj-doue-zidane-told-us-were-right-track",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/61/89/desire-doue_18fh1edaaf18011m935owq3w6b.jpg?t=57339665&w=640&h=360",
+      "publishedAt": "2026-10-03T09:30:13.000Z"
     },
     {
       "id": "ftbpro_01m3wk16wa89",
@@ -30,6 +84,15 @@
       "source": "SI",
       "sourceUrl": "/embed/news/01m3wk16wa89/usmnt-vs-mexicointernational-friendly-preview-predictions-lineups",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3wn56wcgrqsn2gr0p.jpg",
+      "publishedAt": "2026-10-03T02:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m3xxj077qj",
+      "title": "Spain vs. Czechia—Nations League: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m3xxj077qj/spain-vs-czechianations-league-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3xxymwygg7sgcpg3t.jpg",
       "publishedAt": "2026-10-03T02:00:00.000Z"
     },
     {
@@ -130,69 +193,6 @@
       "sourceUrl": "/embed/news/01m3wd3zqbbh/cavan-sullivan-vs-gilberto-mora-battle-impress-biggest-stage",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3wewq26xz4byad2kj.jpg",
       "publishedAt": "2026-10-02T21:00:01.000Z"
-    },
-    {
-      "id": "hbjr7uly86ec1owb7dd7qv1uu",
-      "title": "France 1-1 Italy: Rabiot error denies Zidane victory on home debut",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/hbjr7uly86ec1owb7dd7qv1uu-france-1-1-italy-rabiot-error-denies-zidane-victory-home-debut",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/8f/32/alessandro-bastoni_14uhcw3b8jn831b38xxwt40qsq.jpg?t=44889153&w=1260&h=708",
-      "publishedAt": "2026-10-02T20:45:11.000Z"
-    },
-    {
-      "id": "ftbpro_01m3ywn8d1m9",
-      "title": "The Titles Barcelona Could Forfeit If Found Guilty in Negreira Case",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3ywn8d1m9/titles-barcelona-could-forfeit-if-found-guilty-negreira-case",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_8/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3z06b6g4prfbymtvg.jpg",
-      "publishedAt": "2026-10-02T20:30:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m3ypw6z9z1",
-      "title": "Cavan Sullivan’s ‘Dream’ in Jeopardy After Man City’s Guilty Verdict ",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3ypw6z9z1/cavan-sullivans-dream-jeopardy-after-man-citys-guilty-verdict",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3yrjhqtxyt4vjgkkq.jpg",
-      "publishedAt": "2026-10-02T20:00:00.000Z"
-    },
-    {
-      "id": "cfj0jdvhsdcw17mwti4ku8wmu",
-      "title": "Cucurella: Spain and Real Madrid situations not comparable",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/cfj0jdvhsdcw17mwti4ku8wmu-cucurella-spain-real-madrid-situations-not-comparable",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/bf/57/marc-cucurella_1awro0e3lmky11mrzfey28jyo.jpg?t=38395665&w=1260&h=708",
-      "publishedAt": "2026-10-02T19:56:20.000Z"
-    },
-    {
-      "id": "gri8oerjzzia14g3mxa0nic1r",
-      "title": "Croatia must 'take special care' of Modric, says Bilic",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/gri8oerjzzia14g3mxa0nic1r-croatia-must-take-special-care-modric-says-bilic",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d/29/luka-modric_mbyr6hiznair1lw31ddnujaf9.jpg?t=31811153&w=640&h=360",
-      "publishedAt": "2026-10-02T19:11:01.000Z"
-    },
-    {
-      "id": "ftbpro_01m3yn91m66d",
-      "title": "Barcelona ‘Scout’ Germany Wonderkid on Radar of Top Premier League Clubs",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m3yn91m66d/barcelona-scout-germany-wonderkid-radar-top-premier-league-clubs",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_47/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m3ynejrt8gsgcemc5e.jpg",
-      "publishedAt": "2026-10-02T19:00:01.000Z"
-    },
-    {
-      "id": "1dofuka5qfm801nd72hkzwpc8t",
-      "title": "Pickford welcomes England competition from Trafford",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1dofuka5qfm801nd72hkzwpc8t-pickford-welcomes-england-competition-from-trafford",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/44/36/james-trafford-and-jordan-pickford_hha988b0t4xh16jkg1hoapkf7.jpg?t=18601921&w=1260&h=708",
-      "publishedAt": "2026-10-02T18:27:10.000Z"
     }
   ],
   "articles": {
@@ -1317,6 +1317,31 @@
       ],
       "html": "<p>Real Madrid are &quot;living in another galaxy&quot; if they believe LaLiga&#39;s officials are biased against them, the competition&#39;s president Javier Tebas said amid a fierce debate over refereeing standards.&nbsp;</p>\n\n<p>Madrid were beaten 2-1 by Atletico Madrid in Sunday&#39;s derby at the Estadio Metropolitano, but the controversial nature of their loss sparked a furious reaction from Los Blancos.</p>\n\n<p>Jose Mourinho&#39;s team had Dean Huijsen sent off for a last-man foul early in the second half, but Madrid felt Lee Kang-in and Cristian Romero should have seen red for Atleti,&nbsp;the former for a high challenge on Federico Valverde and the latter for treading on Jude Bellingham.</p>\n\n<p>Mourinho brought printed images of both incidents to his post-match press conference, saying they were the &quot;story of the game&quot; and describing referee Ortiz Arias as weak and inexperienced.&nbsp;</p>\n\n<p>Atleti&nbsp;hit back on their social media channels on Monday, posting an image taken during Mourinho&#39;s press conference alongside the caption: &quot;Stop referee harassment now.&quot;</p>\n\n<p>Madrid used the title &quot;a terrible refereeing performance decides the derby&quot; for their official club-produced match report, accompanied by images of the Lee and Romero challenges.</p>\n\n<p>And Tebas – who has criticised Madrid&#39;s treatment of referees and desire to set up a breakaway European Super League in the past – has now slammed the club&#39;s behaviour.</p>\n\n\n<p>&quot;Here they go again, the mouthpieces and the regime&#39;s television, building the same old narrative: the permanent conspiracy,&quot; Tebas wrote on X, responding to a Spanish media article that alleged referees routinely&nbsp;favour Madrid&#39;s opponents.&nbsp;</p>\n\n<p>&quot;Claiming that referees are directed against Real Madrid is living in another galaxy.</p>\n\n<p>&quot;That narrative serves as an excuse to cover up other shortcomings that are plain to see in these first matches of the season.</p>\n\n<p>&quot;It&#39;s more comfortable to point to a conspiracy than to explain what&#39;s happening on the pitch.</p>\n\n<p>&quot;GET THE BLINDERS OFF! It&#39;s September, and they&#39;re already claiming the League is tainted. Nobody with common sense believes that old excuse anymore.&quot;</p>\n\n<p>Madrid previously sent a formal letter of complaint about LaLiga&#39;s referees to the Spanish Football Federation (RFEF) in 2025, prompting Tebas to accuse Madrid of harming the competition and &quot;building a story of victimhood.&quot;</p>\n"
     },
+    "1b69u0q1qpg61114oxvae5thsv": {
+      "id": "1b69u0q1qpg61114oxvae5thsv",
+      "title": "Bastoni confident Italy can take on anyone after France draw",
+      "subtitle": "Italy fought from a goal down to draw 1-1 with France in the Nations League, giving Roberto Mancini's side a huge confidence boost.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1b69u0q1qpg61114oxvae5thsv-bastoni-confident-italy-can-take-anyone-after-france-draw",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/81/f9/alessandro-bastoni-and-riccardo-calafiori_wyvawxhl4cu219e8ehivovprx.jpg?t=54023217&w=1200&h=630",
+      "publishedAt": "2026-10-03T09:41:42.000Z",
+      "paragraphs": [
+        "Alessandro Bastoni believes Italy &quot;can do it against anyone&quot; after holding France to a draw in the Nations League.",
+        "Italy drew 1-1 with Zinedine Zidane&#39;s side at the Stade de France on Friday, with Bastoni cancelling out Michael Olise&#39;s stunning opener.",
+        "After also netting against Turkiye, Bastoni is only the third centre-back to score in two consecutive appearances for Italy in the last 10 years, after Gianluca Mancini (October-November 2025) and Alessio Romagnoli (October-November 2019).",
+        "Gianluigi Donnarumma also played a huge role in the draw, making seven saves, including an impressive double save to keep out Desire Doue and Ousmane Dembele in quick succession.",
+        "Only twice has Donnarumma made more saves in a single game for the Azzurri: 10 against Bosnia-Herzegovina in March 2026 and eight against Spain in June 2024.",
+        "&quot;It was a tough game, we knew it would be, it&#39;s hardly news, but I am so happy with the team performance,&quot; Bastoni told RAI Sport.",
+        "&quot;We fought hard, we suffered, we even ruined some of France&#39;s objectives for tonight, as they were prepared for a big celebration. We knew we weren&#39;t coming here for a walk in the park, and that&#39;s how it was.",
+        "&quot;It&#39;s certainly pleasing to score again, but the moment it was done, I thought we had to make sure we didn&#39;t concede another, otherwise it was all points. This is a good result that boosts our confidence going forward.",
+        "&quot;It&#39;s a strong signal, because if we can put in a performance like this against France in Paris, then we can do it against anyone.&quot;",
+        "Italy won the expected goals (xG) 1.46 to 1.21, with both Moise Kean and Davide Frattesi squandering good opportunities in the first half.",
+        "Nevertheless, head coach Roberto Mancini agreed with Bastoni&#39;s sentiment, as he told RAI Sport: &quot;We knew it would be a very difficult match, especially at the start, but we did well to allow them very little in terms of chances, even if they had more possession.",
+        "&quot;We played as a team, attacking and defending together, and so it is certainly a very positive evening for us.",
+        "&quot;I wanted this to be another step forward in our journey. I liked that we tried to play football, despite being against an extraordinary France side full of champions.&quot;"
+      ],
+      "html": "<p>Alessandro Bastoni believes Italy &quot;can do it against anyone&quot; after holding France to a draw in the Nations League.</p>\n\n<p>Italy drew 1-1 with Zinedine Zidane&#39;s side at the Stade de France on Friday, with Bastoni cancelling out Michael Olise&#39;s stunning opener.</p>\n\n<p>After also netting against Turkiye, Bastoni is only the third centre-back to score in two consecutive appearances for Italy in the last 10 years, after Gianluca Mancini (October-November 2025) and Alessio Romagnoli (October-November 2019).</p>\n\n<p>Gianluigi Donnarumma also played a huge role in the draw, making seven saves, including an impressive double save to keep out Desire Doue and Ousmane Dembele in quick succession.</p>\n\n<p>Only twice has Donnarumma made more saves in a single game for the Azzurri: 10 against Bosnia-Herzegovina in March 2026 and eight against Spain in June 2024.</p>\n\n<p>&quot;It was a tough game, we knew it would be, it&#39;s hardly news, but I am so happy with the team performance,&quot; Bastoni told RAI Sport.</p>\n\n<p>&quot;We fought hard, we suffered, we even ruined some of France&#39;s objectives for tonight, as they were prepared for a big celebration. We knew we weren&#39;t coming here for a walk in the park, and that&#39;s how it was.</p>\n\n<p>&quot;It&#39;s certainly pleasing to score again, but the moment it was done, I thought we had to make sure we didn&#39;t concede another, otherwise it was all points. This is a good result that boosts our confidence going forward.</p>\n\n<p>&quot;It&#39;s a strong signal, because if we can put in a performance like this against France in Paris, then we can do it against anyone.&quot;</p>\n\n\n<p>Italy won the expected goals (xG) 1.46 to 1.21, with both Moise Kean and Davide Frattesi squandering good opportunities in the first half.</p>\n\n<p>Nevertheless, head coach Roberto Mancini agreed with Bastoni&#39;s sentiment, as he told RAI Sport: &quot;We knew it would be a very difficult match, especially at the start, but we did well to allow them very little in terms of chances, even if they had more possession.</p>\n\n<p>&quot;We played as a team, attacking and defending together, and so it is certainly a very positive evening for us.</p>\n\n<p>&quot;I wanted this to be another step forward in our journey. I liked that we tried to play football, despite being against an extraordinary France side full of champions.&quot;</p>\n"
+    },
     "1bw4b4j8qe5t618na967le382d": {
       "id": "1bw4b4j8qe5t618na967le382d",
       "title": "Alaba joins Udinese as free agent following Real Madrid exit",
@@ -1827,6 +1852,29 @@
         "Portland Timbers – 27.3%"
       ],
       "html": "<p>Marti Cifuentes believes the only thing missing from his Portland Timbers team is the final product in attack after their disappointing defeat to Atlanta United last time out.&nbsp;</p>\n\n<p>Portland were beaten 1-0 by the Five Stripes at&nbsp;Providence Park, with&nbsp;Aleksey Miranchuk&#39;s 28th-minute strike enough to compound the Timbers to a 12th defeat of the season.&nbsp;</p>\n\n<p>That is despite Portland registering an expected goals (xG) total of 2.3 from their 21 shots&nbsp;at Lucas Hoyos&#39; net&nbsp;to Atlanta&#39;s tally of 0.85 from their 10 attempts.&nbsp;</p>\n\n<p>It was a result that left the Timbers in a precarious position in the Western Conference, with Cifuentes&#39; side ninth in the division, but the Seattle Sounders, San Diego FC and Austin FC are all within striking distance.</p>\n\n<p>Portland&#39;s struggles against teams below them in the standings has been a recurring theme in 2026, and ahead of a trip to&nbsp;PayPal Park to face the San Jose Earthquakes, Cifuentes wants his team to take their chances when they arrive.&nbsp;</p>\n\n<p>&quot;We created more shots, we regained the ball higher up the pitch and there was a lot of positives, but that does not explain the whole history,&quot; Cifuentes said.&nbsp;</p>\n\n<p>&quot;The whole history is that we need to be better in front of goal and we need to be more clinical. We need to be better in how we break down low blocks and so on.&nbsp;</p>\n\n<p>&quot;It&#39;s going to be a good challenge against San Jose because of the situations we are talking about. There are a lot of situations, but I do not want to spend my time there.&nbsp;</p>\n\n<p>&quot;I want to be focused, be positive and have a lot of energy to go to San Jose that are having a good season, and try to leave there with a good feeling.&quot;</p>\n\n\n<p>San Jose, meanwhile, kept their playoff push going with a 2-2 draw against 10-man Los Angeles FC, with&nbsp;Reid Roberts scoring a 98th-minute equaliser for Bruce Arena&#39;s side.&nbsp;</p>\n\n<p>Son Heung-min had given LAFC the lead before&nbsp;Aaron Long was sent off, but&nbsp;Denis Bouanga doubled the visitors&#39; lead eight minutes into the second half at&nbsp;Levi&#39;s Stadium.&nbsp;</p>\n\n<p>However, substitute&nbsp;Preston Judd halved the deficit, before Roberts&#39; drive from distance nestled into the bottom-right corner to seal a share of the spoils.&nbsp;</p>\n\n<p>The Earthquakes are fifth in the West and just two points off fourth-place FC Dallas, and Arena believes their draw with LAFC was a true test of his team&#39;s character against a difficult opposition.&nbsp;</p>\n\n<p>&quot;The fact that we went down two goals and came back and got a point out of the game is a tremendous test of character and competitiveness on our part,&quot; Arena said.&nbsp;</p>\n\n<p>&quot;I thought LAFC did an outstanding job in trying to close out the game. So give both teams credit. This was a really good MLS game today. A lot of quality out there.</p>\n\n<p>&quot;I think that was a very entertaining game for the people here, and to see players like Son [Heung-min] and [Denis] Bouanga and [Hugo] Lloris, he was fantastic.</p>\n\n<p>&quot;And to see quality like [Timo] Werner and have those kinds of players on the field, that was enjoyable and a great setting. The fan base was great. So a good day for MLS.&quot;&nbsp;&nbsp;</p>\n\n<p><strong>PLAYERS TO WATCH </strong></p>\n\n<p><strong>SJ Earthquakes – Reid Roberts </strong></p>\n\n<p>Roberts scored at 97:32 to secure a deserved point against&nbsp;LAFC last time out.</p>\n\n<p>It was the latest result-changing goal by an Earthquakes player in an MLS match since Shea Salinas (97:34) scored a match-winning goal on July 15, 2020, in the MLS is Back Group Stage against the Vancouver Whitecaps.&nbsp;</p>\n\n\n<p><strong>Portland Timbers –&nbsp;Kristoffer Velde </strong></p>\n\n<p>Among players currently on the Timbers roster, Velde leads Portland in both goals (eight) and assists (nine).</p>\n\n<p>With another assist, Velde would become the fifth player in club history have 10+ assists in a single MLS regular season, joining Diego Valeri (five), Sebastian Blanco (twice), Evander and Santiago Moreno.</p>\n\n<p><strong>MATCH PREDICTION: SJ EARTHQUAKES WIN </strong></p>\n\n<p>San Jose are&nbsp;unbeaten in their&nbsp;last four games with Portland (W3 D1) across all competitions, including a 3-1 win away from home in May. The Earthquakes have never swept the season series, while the four-match unbeaten run is their longest in the fixture since the Timbers&nbsp;joined MLS in 2011.</p>\n\n<p>The Earthquakes&#39;&nbsp;12 victories this season are their most wins in a single season since the team&#39;s 13-win campaign in 2019. After having 11 wins in 2025, it marks the first time San Jose&nbsp;have recorded double-digit wins in back-to-back seasons since 2012 and 2013.</p>\n\n<p>Portland, meanwhile, have&nbsp;failed to record a clean sheet on the road this regular season, one of four MLS teams without one. The Timbers have never gone a full MLS regular season without a road clean sheet after equalling their club record with five during the 2025 season.</p>\n\n<p><strong>OPTA WIN PROBABILITY </strong></p>\n\n<p>SJ Earthquakes – 46%</p>\n\n<p>Draw – 26.7%</p>\n\n<p>Portland Timbers – 27.3%</p>\n"
+    },
+    "1gx0lwmkxy6021ggesfypovjdc": {
+      "id": "1gx0lwmkxy6021ggesfypovjdc",
+      "title": "Pochettino names 'perfect role model' Adams as new USA captain",
+      "subtitle": "Following Tim Ream's retirement from international football, Tyler Adams will once again wear the armband for the United States.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1gx0lwmkxy6021ggesfypovjdc-pochettino-names-perfect-role-model-adams-new-usa-captain",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/3c/97/tyler-adams_epi5kygxq5c711km85ue08khm.jpg?t=59839985&w=1200&h=630",
+      "publishedAt": "2026-10-03T10:44:35.000Z",
+      "paragraphs": [
+        "Mauricio Pochettino has named &quot;perfect role model&quot; Tyler Adams as the United States&#39; new captain.",
+        "The decision comes after previous captain Tim Ream announced his retirement from international football, with Adams taking on the role for the second time.",
+        "The Bournemouth midfielder led the USA at the 2022 World Cup in Qatar, where they were knocked out in the last 16 by the Netherlands.",
+        "Pochettino&#39;s side reached the same stage this summer when they hosted the tournament, and he believes Adams is the right person to lead the team through the next World Cup cycle.",
+        "&quot;I think [we&#39;re] so happy to announce and for everyone to know that he&#39;s going to be our leader and our captain,&quot; Pochettino said about Adams.",
+        "&quot;I think we&#39;ve been [in] a very good relationship in the last two years. I think we were talking a lot, and I think he knows what I expect, and he&#39;s a perfect role model for everyone in the way that the philosophy, the future, representing that amazing country.",
+        "&quot;I think he&#39;s the player and the person that can lead that period that we have ahead. And I [say] congratulations.&quot;",
+        "The USA have impressed during this international break, following up a 4-1 win over Peru with a 4-2 victory over Chile.",
+        "Next up for Pochettino&#39;s side is a clash with rivals Mexico, and the former Tottenham boss feels a tough atmosphere at State Farm Stadium will help his team grow.",
+        "&quot;I think this type of adversity is a good example,&quot; added Pochettino.",
+        "&quot;I celebrate to have this type of game, to play in a difficult atmosphere, and I think that for sure is going to help for the future.&quot;"
+      ],
+      "html": "<p>Mauricio Pochettino has named &quot;perfect role model&quot; Tyler Adams as the United States&#39; new captain.</p>\n\n<p>The decision comes after previous captain Tim Ream announced his retirement from international football, with Adams taking on the role for the second time.</p>\n\n<p>The Bournemouth midfielder led the USA at the 2022 World Cup in Qatar, where they were knocked out in the last 16 by the Netherlands.</p>\n\n<p>Pochettino&#39;s side reached the same stage this summer when they hosted the tournament, and he believes Adams is the right person to lead the team through the next World Cup cycle.</p>\n\n<p>&quot;I think [we&#39;re] so happy to announce and for everyone to know that he&#39;s going to be our leader and our captain,&quot; Pochettino said about Adams.</p>\n\n<p>&quot;I think we&#39;ve been [in] a very good relationship in the last two years. I think we were talking a lot, and I think he knows what I expect, and he&#39;s a perfect role model for everyone in the way that the philosophy, the future, representing that amazing country.</p>\n\n<p>&quot;I think he&#39;s the player and the person that can lead that period that we have ahead. And I [say] congratulations.&quot;</p>\n\n\n<p>The USA have impressed during this international break, following up a 4-1 win over Peru with a 4-2 victory over Chile.</p>\n\n<p>Next up for Pochettino&#39;s side is a clash with rivals Mexico, and the former Tottenham boss feels a tough atmosphere at State Farm Stadium will help his team grow.</p>\n\n<p>&quot;I think this type of adversity is a good example,&quot; added Pochettino.</p>\n\n<p>&quot;I celebrate to have this type of game, to play in a difficult atmosphere, and I think that for sure is going to help for the future.&quot;</p>\n"
     },
     "1hnz40ler5mb114h0wtlanlxld": {
       "id": "1hnz40ler5mb114h0wtlanlxld",
@@ -2513,6 +2561,32 @@
         "&quot;He was very honest. He has the capacity to continue. He&#39;s a good leader. He&#39;s positive, ​he&#39;s motivated. He&#39;s ready to be the leader.&quot;"
       ],
       "html": "<p>Xavi has promised to bring &quot;intensity, passion and a good rhythm&quot;&nbsp;to the Netherlands&#39;&nbsp;play as he prepares to take charge for the first time.</p>\n\n<p>The Spaniard was named as the Oranje&#39;s head coach on a four-year deal&nbsp;after Ronald Koeman left in the wake of a disappointing World Cup campaign over the summer.</p>\n\n<p>While the Netherlands enjoyed an unbeaten group stage, they fell at the first hurdle in the knockouts, losing on penalties to Morocco.</p>\n\n<p>Xavi, a former World Cup winner with Spain, will face Germany in his first game in charge in Amsterdam on Thursday,&nbsp;as the Netherlands kick off their Nations League campaign.</p>\n\n<p>Koeman was criticised at times&nbsp;for taking a defensive approach with his tactics, and while Xavi did not give away too many hints about his approach, he outlined what he expects from his players on Monday.</p>\n\n<p>&quot;Everything is new ​for me and for the staff, so it will first be to get to know each other, ​know all the players, insist or convince them about our way to play,&quot; Xavi told reporters.</p>\n\n<p>&quot;We don&#39;t have too much time. But no excuses; every coach is in the same situation.</p>\n\n<p>&quot;I want to explain the values that ​we want from the squad. I want to show them that I&#39;m open to them; I want ​to help them. I want to enjoy the process with them. We want to create a family; we want ‌to ⁠create a big group.</p>\n\n\n<p>&quot;The players must come to the national team with happiness, but at the end, the main goal is to win.</p>\n\n<p>&quot;You cannot promise results, but ​we will work ⁠for results. I can promise that we will play with intensity, with passion, with a good rhythm, trying to be competitive and trying to ​take the initiative in the game. This is for sure.</p>\n\n<p>&quot;There&#39;s going ​to be ⁠a different way of playing. I don&#39;t want to compare, and I don&#39;t want to talk about the past. I respect Ronald a lot. But I&#39;m focused on the present.&quot;</p>\n\n<p>Virgil van Dijk will remain the Netherlands&#39;&nbsp;captain, having revealed on Sunday that he plans to keep representing his national team until Euro 2028.</p>\n\n<p>&quot;It ​was a really good meeting,&quot; Xavi said of meeting Van Dijk in Liverpool to discuss his Netherlands future.</p>\n\n<p>&quot;He was very honest. He has the capacity to continue. He&#39;s a good leader. He&#39;s positive, ​he&#39;s motivated. He&#39;s ready to be the leader.&quot;</p>\n"
+    },
+    "1pferb0aavbmk1p668syxtx3dj": {
+      "id": "1pferb0aavbmk1p668syxtx3dj",
+      "title": "Doue: Zidane told us we're on the right track",
+      "subtitle": "France were held to a 1-1 draw by Italy in the Nations League on Friday, though Zinedine Zidane took away plenty of positives.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1pferb0aavbmk1p668syxtx3dj-doue-zidane-told-us-were-right-track",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/61/89/desire-doue_18fh1edaaf18011m935owq3w6b.jpg?t=57339665&w=1200&h=630",
+      "publishedAt": "2026-10-03T09:30:13.000Z",
+      "paragraphs": [
+        "Desire Doue agreed with Zinedine Zidane in believing France are &quot;on the right track&quot; despite dropping points in the Nations League against Italy.",
+        "In Zidane&#39;s first home match as France boss, Les Bleus were held to a 1-1 draw by Italy at the Stade de France.",
+        "Michael Olise opened the scoring with a stunning free-kick 10 minutes into the second half, but Alessandro Bastoni equalised after a costly mistake from Adrien Rabiot.",
+        "France failed to win a match after having opened the scoring for the first time since September 2024, when they lost 3-1 at home to Italy in the Nations League.",
+        "Dayot Upamecano also received a late red card after being shown a second yellow for dragging down Moise Kean.",
+        "He is the first player in the history of the France national team to receive two red cards in the same calendar year, after also being sent off against Brazil back in March.",
+        "Nevertheless, Doue took positives from the result, and so did Zidane.",
+        "&quot;We&#39;re disappointed with the result; we would have liked to win in front of our fans,&quot; said the Paris Saint-Germain forward.",
+        "&quot;We&#39;re not going to dwell on the negatives; we applied the coach&#39;s instructions in many aspects. We&#39;re on the right track, as he told us in the locker room.",
+        "&quot;We&#39;re capable of creating a lot of danger; in the first half, they were very solid. We need to be more clinical; we came up against a great goalkeeper. But we stuck together.&quot;",
+        "Zidane added: &quot;I&#39;m very disappointed, we deserved better, but that&#39;s football. We should have killed the game off, but I&#39;m proud of my players.",
+        "&quot;The performance was very good, my players were exemplary. I&#39;m frustrated for my players because they gave everything.",
+        "&quot;We had possession in the first half but it was sterile, that&#39;s what we tried to correct at half-time. To hurt the opponent, you have to exploit the spaces.",
+        "&quot;In terms of our play, we put things in place, they played their game, defensive, &#39;Italian style&#39;. We weren&#39;t in too much danger.&quot;"
+      ],
+      "html": "<p>Desire Doue agreed with Zinedine Zidane in believing France are &quot;on the right track&quot; despite dropping points in the Nations League against Italy.</p>\n\n<p>In Zidane&#39;s first home match as France boss, Les Bleus were held to a 1-1 draw by Italy at the Stade de France.</p>\n\n<p>Michael Olise opened the scoring with a stunning free-kick 10 minutes into the second half, but Alessandro Bastoni equalised after a costly mistake from Adrien Rabiot.</p>\n\n<p>France failed to win a match after having opened the scoring for the first time since September 2024, when they lost 3-1 at home to Italy in the Nations League.</p>\n\n<p>Dayot Upamecano also received a late red card after being shown a second yellow for dragging down Moise Kean.</p>\n\n<p>He is the first player in the history of the France national team to receive two red cards in the same calendar year, after also being sent off against Brazil back in March.</p>\n\n<p>Nevertheless, Doue took positives from the result, and so did Zidane.</p>\n\n<p>&quot;We&#39;re disappointed with the result; we would have liked to win in front of our fans,&quot; said the Paris Saint-Germain forward.</p>\n\n<p>&quot;We&#39;re not going to dwell on the negatives; we applied the coach&#39;s instructions in many aspects. We&#39;re on the right track, as he told us in the locker room.</p>\n\n<p>&quot;We&#39;re capable of creating a lot of danger; in the first half, they were very solid. We need to be more clinical; we came up against a great goalkeeper. But we stuck together.&quot;</p>\n\n\n<p>Zidane added: &quot;I&#39;m very disappointed, we deserved better, but that&#39;s football. We should have killed the game off, but I&#39;m proud of my players.</p>\n\n<p>&quot;The performance was very good, my players were exemplary. I&#39;m frustrated for my players because they gave everything.</p>\n\n<p>&quot;We had possession in the first half but it was sterile, that&#39;s what we tried to correct at half-time. To hurt the opponent, you have to exploit the spaces.</p>\n\n<p>&quot;In terms of our play, we put things in place, they played their game, defensive, &#39;Italian style&#39;. We weren&#39;t in too much danger.&quot;</p>\n"
     },
     "1pnrn2gfgmlef1rvhmj39ofd3w": {
       "id": "1pnrn2gfgmlef1rvhmj39ofd3w",
@@ -14523,6 +14597,63 @@
         "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
+    "ftbpro_01m40knqp8a1": {
+      "id": "ftbpro_01m40knqp8a1",
+      "title": "‘Big Topic’—Thomas Tuchel Reveals Impact of Man City Guilty Verdict on England Stars",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/thomas-tuchel-impact-man-city-guilty-verdict-england-stars/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2177,h_1224,x_201,y_80/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m40kwxzqqq1yrxbv9v.jpg",
+      "publishedAt": "2026-10-03T10:30:00.000Z",
+      "paragraphs": [
+        "By Tom Gott6:30 AM EDTElliot Anderson (left) and Marc Guéhi (right) are both set to return to a difficult club environment. / Chris Brunskill/Fantasista/Getty ImagesEngland manager Thomas Tuchel has admitted the guilty verdict against Manchester City has taken its toll on the squad during this international break.",
+        "The outcome of a lengthy investigation into City was revealed while the squad were all away on international duty, rocking the players with the news that the club had been found guilty of inflating sponsorship payments to avoid breaking Financial Fair Play regulations.",
+        "A whole host of punishments have been suggested, most of which would have catastrophic impacts on the club and, therefore, the players that represent the Cityzens.",
+        "We have already seen Norway striker Erling Haaland and Portugal center back Rúben Dias speaking on the pitch during the international break, and now Tuchel has admitted his England players have all been discussing the saga.",
+        "“I think it is a distraction,” said Tuchel, whose England roster includes Marc Guéhi and Elliot Anderson after left back Nico O’Reilly withdrew from injury. “It is. Let’s say it is a subject. If it’s a distraction, I don’t know.",
+        "“It is of course a topic and we speak about it at dinner and at a table of eight or 12 people. We speak about it at breakfast. I know the Man City players get a lot of messages and phone calls and feedback about it.",
+        "“Are they worried or concerned? I think that would be a very human reaction if you don’t know what’s going on for the club that you signed. They’re still young. They’re ambitious. They’re told they are totally innocent and don’t know what’s going on. It is a subject.",
+        "“I am again not sure if it’s a distraction. I don’t see it when I see them in my meetings. I don’t see it how they behave with other teammates, and I don’t see it in training being a distraction. But it’s a topic. How can’t it be?”",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "Nico O’Reilly left the England squad through injury. / Jose Breton/Pics Action/NurPhoto/Getty ImagesAt this point, it is impossible to know.",
+        "City have appealed the verdict against them, continuing to stress their innocence. It is not yet clear whether any punishments will be handed out imminently or following the conclusion of the next legal battle with the Premier League.",
+        "None of the City players will be directly harmed by any sanctions, but a severe punishment could alter life at the club as we know it.",
+        "Expulsion from the Premier League would obviously leave players in limbo, while any points deduction or subsequent relegation could impact earnings and could easily lead to City’s big names looking for new clubs.",
+        "The world has been gripped. / Matt McNulty/Getty ImagesEngland is by far the only nation with at least one City player in the ranks this month. Players are away representing the likes of Argentina, France and Uzbekistan, where the topic of the club’s guilty verdict is likely to have been discussed at length.",
+        "The subject has even found its way into locker rooms that do not have any City players, with Wales midfielder Ethan Ampadu of Leeds United admitting it has gripped the Welsh squad as well.",
+        "“Everyone has talked about it,” Ampadu said.",
+        "“Don’t think I have an opinion on it, to be honest. It’s something that will be sorted elsewhere, and I am not sure when.",
+        "“We will wait and see, but yes, everyone has talked about it.”",
+        "READ THE LATEST MAN CITY NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m40n6yaenc": {
+      "id": "ftbpro_01m40n6yaenc",
+      "title": "‘Piece of C---’—Former Man Utd Star Offers Scathing Verdict on Ten Hag, Ronaldo Feud",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/former-man-utd-star-scathing-verdict-erik-ten-hag-cristiano-ronaldo-feud/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1978,h_1112,x_172,y_55/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m40pfgx7nkae5d77am.jpg",
+      "publishedAt": "2026-10-03T11:15:00.000Z",
+      "paragraphs": [
+        "By Tom Gott7:15 AM EDTErik ten Hag (left) clashed with Cristiano Ronaldo (right) at Man Utd. / Adrian DENNIS/AFP/Getty ImagesFormer Manchester United midfielder Fred has described former manager Erik ten Hag as “tactically one of the best” he has ever worked with, even if the Dutchman was “a piece of c---“ on a personal level.",
+        "Ten Hag arrived at United in the summer of 2022 with an incredibly high reputation after building an exiting young Ajax side that took the Champions League by storm, but he would last just two years at Old Trafford before being fired.",
+        "Fred, who was part of the United squad in Ten Hag’s debut season, admitted the Dutchman deserved credit for his tactics, but could not hide away from the man-management issues that ultimately plagued his time at the club.",
+        "“There are coaches who are very good tactically, but very bad with the group,” Fred told the Charla Podcast. “Then there are coaches who are very good with the group and are tactically c---.",
+        "“For example, [Ole Gunnar] Solskjær, he was very good with the group, but tactically ... well, he had [Michael] Carrick and [Kieran] McKenna as his assistants. They both went to the Championship, two former players who managed to get promoted with their teams. They helped a lot, but [Solskjær] was more about uniting the group.",
+        "“Then I worked with Ten Hag. Ten Hag was, tactically, a very good guy. Very intelligent. But with the group, he was a piece of c---. He couldn’t manage it, man, he’d fight with everyone.",
+        "“He fought with Cristiano [Ronaldo], he fought with Casemiro, then he fought with me, with [Marcus] Rashford ... that’s rough. The guy lost the locker room.",
+        "“He wouldn’t play me! Sometimes it got stressful. Only his Dutch players played. A clique-driven coach. But he was, tactically, one of the best I’ve worked with. The team on the field was very good.”",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Fred (right) played alongside Ronaldo at Man Utd. / David S. Bustamante/Soccrates/Getty ImagesTen Hag arrived at United 12 months following the return of Cristiano Ronaldo to Old Trafford, but the Dutch boss refused to bow to the legendary forward.",
+        "He found just four Premier League starts for Ronaldo during the first half of the 2022–23 Premier League season, with the pair famously clashing over Ronaldo’s limited defensive work rate. It sparked a bombshell interview with Piers Morgan that ultimately led to the Portugal international’s shock departure in January 2023.",
+        "“He wasn’t playing Cristiano,” Fred recalled. “Cristiano was doing well, scoring goals, then [Ten Hag] arrived and he wanted the team to run. Cristiano is older, we had to run for him there. It’s normal, but he didn’t want that, so he went and benched Cristiano. There was some drama.",
+        "“Then there was a game, all the guys were asking if Cristiano was leaving. There was nothing we could do. Then we got back from the game, as soon as the plane landed and the press guys switched their phones off of airplane mode ... that was when he gave the interview where he really criticized the club.",
+        "“The press guys were like, ‘for God’s sake!’ It was chaos. Walking back and forth on the plane. Crazy. It was just madness.",
+        "“He said things he shouldn’t have said. It was such a mess that week. Then he left.”",
+        "feed. READ THE LATEST MAN UTD NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
     "fzhafkysws3g1ux8fnmoe3180": {
       "id": "fzhafkysws3g1ux8fnmoe3180",
       "title": "De la Fuente promises 'the best is yet to come' for Spain",
@@ -14986,6 +15117,29 @@
       ],
       "html": "<p>Pat Noonan believes FC Cincinnati&#39;s last-gasp draw against the Houston Dynamo could be a &quot;deciding moment&quot;&nbsp;in their quest to reach the playoffs this season.</p>\n\n<p>Cincinnati found themselves 2-0 down after 51 minutes at Shell Energy Stadium thanks to goals from Guilherme and Mateusz Bogusz, the latter scoring from the penalty spot.</p>\n\n<p>Bryan Ramirez halved the deficit in the 73rd minute before Kevin Denkey scored a spot-kick in the seventh minute of second-half stoppage time to seal a share of the spoils.</p>\n\n<p>It was a result that kept Cincinnati ninth in the Eastern Conference, but the likes of New York City FC, D.C. United and Toronto FC are all chasing Noonan&#39;s side.&nbsp;</p>\n\n<p>Cincinnati make the trip to Stade Saputo this weekend to face&nbsp;struggling CF Montreal, and Noonan believes his team&#39;s latest stalemate could be a solid foundation to build on.</p>\n\n<p>&quot;I think it could be a deciding moment in this stretch run,&quot;&nbsp;Noonan said. &quot;We have nine games left in the season, and every game is going to be so important to pick up points.</p>\n\n<p>&quot;And that&#39;s because of the position that we&#39;re in, where we&#39;re fighting for a playoff spot. This isn&#39;t about everything being pretty now, or style.</p>\n\n<p>&quot;We were able to get an important point, and so, for the psyche of the group and how to be on the road, like I said, against a strong opponent and push the game like that.</p>\n\n<p>&quot;How do we get more of that urgency, but not recklessness?&quot;</p>\n\n\n<p>Montreal, meanwhile, will just want the 2026 season to come to an end after they were beaten 2-0 by the Columbus Crew in their last league match.</p>\n\n<p>Only Sporting Kansas City (17) have lost more MLS matches this season than Montreal (15), who find themselves rooted to the bottom of the East on&nbsp;21 points from 26 games.</p>\n\n<p>It&#39;s also been a disappointing start to Alexis Sanchez&#39;s Montreal career, as he has failed to register a single goal contribution in his seven matches for the club.</p>\n\n<p>During their defeat to Columbus, Sanchez&#39;s frustrations were evident as his team struggled to create any opportunities whenever they got the chance to go forward.</p>\n\n<p>Interim boss Philippe Eullaffroy understood the Chilean&#39;s concerns about the team, but he said Sanchez remained committed to the cause and was just showing his passion.</p>\n\n<p>&quot;Alexis would like the team to play faster forward and use more space behind the defenders. I agree, and I ask for it, but it is not happening,&quot; Eullaffroy conceded.</p>\n\n<p>&quot;After the game, he was upset and tense about the development of the second half, as were several of his team-mates.&quot;</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>Montreal – Prince Owusu</strong></p>\n\n<p>In a season of frustration for Montreal, Owusu has been the only shining light, scoring 13 goals in 24 league appearances so far this season.</p>\n\n<p>Owusu also has a good record against Montreal. He has scored three goals in six MLS outings against them, only managing to find the back of the net more against D.C. (four).</p>\n\n<p><strong>Cincinnati – Kevin Denkey</strong></p>\n\n<p>With Denkey unavailable after being selected to represent Togo during the international break,&nbsp;Evander will be the man Cincinnati will turn to in the final third.&nbsp;</p>\n\n<p>Only Inter Miami&#39;s Lionel Messi (33) has more goal involvements in the MLS this season than Evander&#39;s 25 (13 goals, 12 assists).&nbsp;</p>\n\n\n<p><strong>MATCH PREDICTION: DRAW</strong></p>\n\n<p>Cincinnati earned a draw when trailing by two goals for the eighth time in the club&#39;s MLS era (since 2019) against Houston last time out. Three of those occurrences have happened this season and in all three of those occurrences in 2026, they had trailed by two goals in the second half.</p>\n\n<p>But they will be hoping for a better result here. They have a good record against Montreal, winning their last four MLS meetings against them.</p>\n\n<p>And Noonan&#39;s side will be desperate for a win. They are without a victory in their last five league matches (D3 L2) since a 2-1 triumph over NYCFC on August 19.</p>\n\n<p>Montreal, meanwhile, will be out to end their poor run at Stade Saputo. Only Minnesota United (two) have fewer home wins in the MLS this season than Montreal (three), who last won in front of their home crowd on May 9 against Orlando City.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Montreal – 36.6%</p>\n\n<p>Draw – 23.5%</p>\n\n<p>Cincinnati – 39.9%</p>\n"
     },
+    "lch8oscyb3r011xedse39jmpj": {
+      "id": "lch8oscyb3r011xedse39jmpj",
+      "title": "Slegers accepts pressure amid poor Arsenal form",
+      "subtitle": "Arsenal's poor start to the season could get worse when they face Manchester City on Sunday, and Renee Slegers knows results must improve.",
+      "source": "FotMob",
+      "sourceUrl": "/news/lch8oscyb3r011xedse39jmpj-slegers-accepts-pressure-amid-poor-arsenal-form",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e5/29/renee-slegers_1r1ijgb7kon6v16i0icm9p0hpp.jpg?t=35415985&w=1200&h=630",
+      "publishedAt": "2026-10-03T11:23:58.000Z",
+      "paragraphs": [
+        "Renee Slegers acknowledged she has &quot;to find the solutions&quot; to Arsenal&#39;s poor form ahead of their huge Women&#39;s Super League clash with Manchester City this weekend.",
+        "Arsenal are winless in each of their last three league games (D2 L1) and could equal their worst runs without victory in the competition, set in May 2014 and October 2023.",
+        "The Gunners are only the third team in WSL history to score two or fewer goals and concede two or fewer goals across their opening four matches, along with Liverpool in 2014 and Chelsea in 2018-19.",
+        "Failure to win this game will see Arsenal record their second-worst start after five games in the division, behind only 2014 (four).",
+        "&quot;I have to find the solutions, I have to be calm. I have to get direction,&quot; said Slegers.",
+        "&quot;I have to lead now but at the same time, what I also feel is gratitude for how everyone is responding and how together we are, the session on the pitch was today. It was really, really good.&quot;",
+        "Slegers also explained the reason for missing her post-match interview after Arsenal&#39;s 2-2 draw with Paris FC in the Women&#39;s Champions League, during which the WSL side squandered a two-goal lead.",
+        "&quot;After the game, there was emotion from my end but to control that point quickly I made the decision to be with the team instead,&quot; said the Gunners boss.",
+        "&quot;So I spent time with the players straight after the game. I thought that was important and that was a decision I made in the moment in my leadership and I decided to be with the team.&quot;",
+        "City have won their home game against Arsenal in six of the last nine WSL seasons (D1 L2), with those matches averaging 3.9 goals (21 for City, 14 for the Gunners).",
+        "Arsenal versus City is one of only two WSL fixtures to see both teams win 10+ times, with the Gunners leading the head-to-head 12-11 (2 draws)."
+      ],
+      "html": "<p>Renee Slegers acknowledged she has &quot;to find the solutions&quot; to Arsenal&#39;s poor form ahead of their huge Women&#39;s Super League clash with Manchester City this weekend.</p>\n\n<p>Arsenal are winless in each of their last three league games (D2 L1) and could equal their worst runs without victory in the competition, set in May 2014 and October 2023.</p>\n\n<p>The Gunners are only the third team in WSL history to score two or fewer goals and concede two or fewer goals across their opening four matches, along with Liverpool in 2014 and Chelsea in 2018-19.</p>\n\n<p>Failure to win this game will see Arsenal record their second-worst start after five games in the division, behind only 2014 (four).</p>\n\n<p>&quot;I have to find the solutions, I have to be calm. I have to get direction,&quot; said Slegers.</p>\n\n<p>&quot;I have to lead now but at the same time, what I also feel is gratitude for how everyone is responding and how together we are, the session on the pitch was today. It was really, really good.&quot;</p>\n\n\n<p>Slegers also explained the reason for missing her post-match interview after Arsenal&#39;s 2-2 draw with Paris FC in the Women&#39;s Champions League, during which the WSL side squandered a two-goal lead.</p>\n\n<p>&quot;After the game, there was emotion from my end but to control that point quickly I made the decision to be with the team instead,&quot; said the Gunners boss.</p>\n\n<p>&quot;So I spent time with the players straight after the game. I thought that was important and that was a decision I made in the moment in my leadership and I decided to be with the team.&quot;</p>\n\n<p>City have won their home game against Arsenal in six of the last nine WSL seasons (D1 L2), with those matches averaging 3.9 goals (21 for City, 14 for the Gunners).</p>\n\n<p>Arsenal versus City is one of only two WSL fixtures to see both teams win 10+ times, with the Gunners leading the head-to-head 12-11 (2 draws).</p>\n"
+    },
     "lhamzf4q2c8s18bytkx0sf7qz": {
       "id": "lhamzf4q2c8s18bytkx0sf7qz",
       "title": "Spain 4-1 Croatia: Yamal nets brace as unbeaten run reaches 40 games",
@@ -15031,6 +15185,29 @@
         "Liverpool return to action against City on October 11."
       ],
       "html": "<p>Cody Gakpo has returned to Liverpool and is unavailable for the Netherlands&#39;&nbsp;last two Nations League games after suffering an ankle injury.</p>\n\n<p>The forward sustained the issue in the Netherlands&#39;&nbsp;2-1 win over Serbia on Sunday and was substituted after just 17 minutes following a hard tackle.</p>\n\n<p>Following the game, Xavi said he did not think the injury was serious, but after tests on Monday, Gakpo has withdrawn from the Netherlands squad.</p>\n\n<p>Nobody has been called up to replace him for the remaining two games of the international break.</p>\n\n\n<p>Liverpool confirmed Gakpo would undergo further assessment at their training centre but did not say how long he was expected to be sidelined.</p>\n\n<p>It is a blow for the Dutchman, who has made a strong start to the season after being linked with a transfer away from Anfield to Tottenham and&nbsp;Manchester City this summer.&nbsp;</p>\n\n<p>He has already racked up six goal involvements in all competitions – two goals and four assists – more than any other player for the club.</p>\n\n<p>His 13 chances created, meanwhile, are second only to Dominik Szoboszlai.</p>\n\n<p>Liverpool return to action against City on October 11.</p>\n"
+    },
+    "m2km546gaa8e10unl6wphjtoa": {
+      "id": "m2km546gaa8e10unl6wphjtoa",
+      "title": "Colombia must give Suarez more support, says head coach Lorenzo",
+      "subtitle": "Colombia lost 1-0 to Paraguay in a friendly on Friday, with star striker Luis Suarez unable to make an impact at Sports Illustrated Stadium.",
+      "source": "FotMob",
+      "sourceUrl": "/news/m2km546gaa8e10unl6wphjtoa-colombia-must-give-suarez-more-support-says-head-coach-lorenzo",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/94/60/luis-suarez_17sf4o46agqka12miuvt5qkbpx.jpg?t=54017921&w=1200&h=630",
+      "publishedAt": "2026-10-03T10:12:19.000Z",
+      "paragraphs": [
+        "Colombia head coach Nestor Lorenzo believes his side &quot;should have supported Luis Suarez a bit more&quot; in their defeat to Paraguay on Friday.",
+        "Paraguay won 1-0 at Sports Illustrated Stadium thanks to Hugo Benitez&#39;s winner in the 56th minute.",
+        "Although Colombia recorded almost three times as many shots as Paraguay (14 to five), the latter accumulated more expected goals (0.95 to 0.89) and hit the target just as often (two).",
+        "Colombia struggled to get Suarez into the game; the striker was responsible for just one of their 14 shots and recorded the fewest touches of any starting player in the team (14).",
+        "Suarez had scored in each of his previous seven games for club and country, netting eight times in that run, and Lorenzo acknowledged Colombia must create more chances for their talisman.",
+        "&quot;I think we should have supported Luis Suarez a bit more,&quot; said Lorenzo.",
+        "&quot;We needed more width from the full-backs. And when we did get forward, perhaps we didn&#39;t deliver enough crosses, and we faced an opponent that defends very well deep in their own half.",
+        "&quot;The problem is that we struggled to get our build-up play right, we let ourselves get pressed, we made a lot of mistakes in that area, and we played against a team that had just come from a very well-prepared World Cup, which made things difficult for us.",
+        "&quot;There were times when we made very simple, very childish mistakes, I&#39;d say, in the final play; either we didn&#39;t cross the ball, or we went back and lost possession.&nbsp;",
+        "&quot;We&#39;re still building, and we&#39;ll draw conclusions as time goes on. I think there are some positive things to highlight, even though I acknowledge the team didn&#39;t play well.&quot;",
+        "Colombia face Peru in the final game of the international break on October 6."
+      ],
+      "html": "<p>Colombia head coach Nestor Lorenzo believes his side &quot;should have supported Luis Suarez a bit more&quot; in their defeat to Paraguay on Friday.</p>\n\n<p>Paraguay won 1-0 at Sports Illustrated Stadium thanks to Hugo Benitez&#39;s winner in the 56th minute.</p>\n\n<p>Although Colombia recorded almost three times as many shots as Paraguay (14 to five), the latter accumulated more expected goals (0.95 to 0.89) and hit the target just as often (two).</p>\n\n<p>Colombia struggled to get Suarez into the game; the striker was responsible for just one of their 14 shots and recorded the fewest touches of any starting player in the team (14).</p>\n\n<p>Suarez had scored in each of his previous seven games for club and country, netting eight times in that run, and Lorenzo acknowledged Colombia must create more chances for their talisman.</p>\n\n<p>&quot;I think we should have supported Luis Suarez a bit more,&quot; said Lorenzo.</p>\n\n<p>&quot;We needed more width from the full-backs. And when we did get forward, perhaps we didn&#39;t deliver enough crosses, and we faced an opponent that defends very well deep in their own half.</p>\n\n\n<p>&quot;The problem is that we struggled to get our build-up play right, we let ourselves get pressed, we made a lot of mistakes in that area, and we played against a team that had just come from a very well-prepared World Cup, which made things difficult for us.</p>\n\n<p>&quot;There were times when we made very simple, very childish mistakes, I&#39;d say, in the final play; either we didn&#39;t cross the ball, or we went back and lost possession.&nbsp;</p>\n\n<p>&quot;We&#39;re still building, and we&#39;ll draw conclusions as time goes on. I think there are some positive things to highlight, even though I acknowledge the team didn&#39;t play well.&quot;</p>\n\n<p>Colombia face Peru in the final game of the international break on October 6.</p>\n"
     },
     "mmi7g1n06ape19ev8uvfhbhip": {
       "id": "mmi7g1n06ape19ev8uvfhbhip",
