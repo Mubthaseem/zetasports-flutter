@@ -882,6 +882,56 @@
     </div>
   </div>
 
+  <!-- ========================================================================= -->
+  <!-- MODAL: ADD / EDIT LEAGUE -->
+  <!-- ========================================================================= -->
+  <div id="leagueModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-[#101827] border border-white/10 rounded-2xl w-full max-w-md shadow-2xl overflow-hidden p-6 space-y-4">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          <h3 class="font-['Oswald'] text-base font-bold text-white uppercase tracking-wider">Add Competition / League</h3>
+        </div>
+        <button type="button" class="close-modal-btn p-1 text-slate-400 hover:text-white" data-modal="leagueModal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <form id="leagueForm" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-400 mb-1">League / Tournament Name *</label>
+          <input type="text" id="leagueNameInput" placeholder="e.g. UEFA Nations League, World Cup 2026" required class="w-full px-3 py-2 bg-[#080E1A] border border-white/10 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#0062b2]" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-400 mb-1">Sport</label>
+            <input type="text" id="leagueSportInput" value="football" class="w-full px-3 py-2 bg-[#080E1A] border border-white/10 rounded-xl text-xs text-white focus:outline-none focus:border-[#0062b2]" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-400 mb-1">Country / Region</label>
+            <input type="text" id="leagueCountryInput" placeholder="e.g. Europe, International" class="w-full px-3 py-2 bg-[#080E1A] border border-white/10 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#0062b2]" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-400 mb-1">League Logo URL (Optional)</label>
+          <input type="url" id="leagueLogoInput" placeholder="https://..." class="w-full px-3 py-2 bg-[#080E1A] border border-white/10 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#0062b2]" />
+        </div>
+
+        <div class="flex items-center gap-2 pt-1">
+          <input type="checkbox" id="leagueFeaturedCheck" checked class="rounded bg-[#080E1A] border-white/20 text-[#0062b2] focus:ring-0" />
+          <label for="leagueFeaturedCheck" class="text-xs text-slate-300 font-medium">Approve for Public Ingestion & Live Site</label>
+        </div>
+
+        <div class="flex justify-end items-center gap-2 pt-3 border-t border-white/10">
+          <button type="button" class="close-modal-btn px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs" data-modal="leagueModal">Cancel</button>
+          <button type="submit" id="saveLeagueBtn" class="px-5 py-2 rounded-xl bg-[#0062b2] hover:bg-[#004f8f] text-white font-bold text-xs shadow-md transition-all">Save & Approve</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- Toast Container -->
   <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 

@@ -63,6 +63,42 @@
   function resolveMatchLeague(m) {
     if (!m) return 'Club Friendlies';
     const raw = (m.league_name || '').trim();
+
+    // Tournament group normalization
+    if (/nations\s+league/i.test(raw) || /nations\s+league/i.test(m.round || '')) {
+      return 'UEFA Nations League';
+    }
+    if (/champions\s+league/i.test(raw)) {
+      return 'UEFA Champions League';
+    }
+    if (/europa\s+league/i.test(raw)) {
+      return 'UEFA Europa League';
+    }
+    if (/conference\s+league/i.test(raw)) {
+      return 'UEFA Conference League';
+    }
+    if (/premier\s+league/i.test(raw)) {
+      return 'Premier League';
+    }
+    if (/la\s*liga/i.test(raw)) {
+      return 'LaLiga';
+    }
+    if (/serie\s+a/i.test(raw)) {
+      return 'Serie A';
+    }
+    if (/bundesliga/i.test(raw)) {
+      return 'Bundesliga';
+    }
+    if (/ligue\s+1/i.test(raw)) {
+      return 'Ligue 1';
+    }
+    if (/world\s+cup/i.test(raw)) {
+      return 'FIFA World Cup';
+    }
+    if (/indian\s+super\s+league|isl\b/i.test(raw)) {
+      return 'Indian Super League';
+    }
+
     const isGeneric = !raw || ['league', 'generic', 'football league', 'null', 'undefined', 'other', 'other competitions', ''].includes(raw.toLowerCase());
 
     if (!isGeneric) {
@@ -1928,6 +1964,67 @@
     updateAuthBadge();
     closeModal('keyModal');
     showToast('Saved custom key removed. Default verified admin credentials active.');
+  });
+
+  // Open Add League modal
+  document.getElementById('openAddLeagueBtn')?.addEventListener('click', () => {
+    document.getElementById('leagueForm')?.reset();
+    if (document.getElementById('leagueSportInput')) document.getElementById('leagueSportInput').value = 'football';
+    if (document.getElementById('leagueFeaturedCheck')) document.getElementById('leagueFeaturedCheck').checked = true;
+    openModal('leagueModal');
+  });
+
+  // Handle Add League Form Submission
+  document.getElementById('leagueForm')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('leagueNameInput').value.trim();
+    if (!name) return;
+
+    const sport = document.getElementById('leagueSportInput')?.value.trim() || 'football';
+    const country = document.getElementById('leagueCountryInput')?.value.trim() || 'International';
+    const logoUrl = document.getElementById('leagueLogoInput')?.value.trim();
+    const isFeatured = document.getElementById('leagueFeaturedCheck')?.checked ?? true;
+
+    const leagueId = 'custom_' + name.toLowerCase().replace(/[^a-z0-9]/g, '_');
+    const newLeagueRow = {
+      id: leagueId,
+      name: name,
+      sport: sport,
+      country: country,
+      logo_url: logoUrl || null,
+      featured: isFeatured
+    };
+
+    try {
+      await apiFetch('zeta_leagues', {
+        method: 'POST',
+        headers: { 'Prefer': 'resolution=merge-duplicates' },
+        body: JSON.stringify(newLeagueRow)
+      });
+
+      // Update local state
+      const existingIdx = state.leagues.findIndex(l => l.id === leagueId || l.name.toLowerCase() === name.toLowerCase());
+      if (existingIdx >= 0) {
+        state.leagues[existingIdx] = { ...state.leagues[existingIdx], ...newLeagueRow };
+      } else {
+        state.leagues.push(newLeagueRow);
+      }
+
+      if (isFeatured) {
+        state.approvedLeagues.add(name.toLowerCase().trim());
+      } else {
+        state.approvedLeagues.delete(name.toLowerCase().trim());
+      }
+
+      closeModal('leagueModal');
+      renderTeamsAndLeagues();
+      updateApprovedLeaguesBadge();
+      updateLeagueFilterDropdown();
+      showToast(`League "${name}" successfully added and ${isFeatured ? 'Approved' : 'Saved'}!`);
+    } catch (err) {
+      console.error('Failed to add league:', err);
+      showToast('Error saving league: ' + err.message, 'error');
+    }
   });
 
   // --- 19. GLOBAL LISTENERS & FILTER HOOKS ---
