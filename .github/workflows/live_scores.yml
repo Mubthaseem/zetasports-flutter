@@ -1,9 +1,9 @@
 name: Live Score & Telemetry Synchronizer
 
 on:
-  schedule:
-    # Run every 5 minutes (standard GitHub Actions cron interval)
-    - cron: '*/5 * * * *'
+  # Cron disabled: migrated to 24/7 autonomous Hugging Face Space (MUBTHAASEEM/zetasports-backend)
+  # schedule:
+  #   - cron: '*/5 * * * *'
   workflow_dispatch: # Manual trigger from GitHub Actions or Admin Panel
     inputs:
       match_id:

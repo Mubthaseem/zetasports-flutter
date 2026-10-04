@@ -1,0 +1,39 @@
+name: ZetaSports v2 Stage 1 Data Sync
+
+on:
+  # Cron disabled: migrated to 24/7 autonomous Hugging Face Space (MUBTHAASEEM/zetasports-backend)
+  # schedule:
+  #   - cron: '*/30 * * * *'
+  workflow_dispatch: # Enable manual run anytime
+
+permissions:
+  contents: write
+
+jobs:
+  sync_and_export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Stage 1 Data Engine
+        run: node zetasports-v2/stage1_data_engine/engine.mjs
+
+      - name: Commit and Push Static CDN Bundles
+        run: |
+          git config user.name "ZetaSports Engine"
+          git config user.email "bot@zetasports.org"
+          mkdir -p data/public
+          cp -r zetasports-v2/stage1_data_engine/output/* data/public/ 2>/dev/null || true
+          git add data/public zetasports-v2/stage1_data_engine/output
+          if git diff --staged --quiet; then
+            echo "No changes in match data."
+          else
+            git commit -m "chore(stage1): sync match telemetry and update 11-day sliding bundle"
+            git push
+          fi

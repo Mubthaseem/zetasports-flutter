@@ -1,9 +1,9 @@
 name: Daily Fixtures Sync
 
 on:
-  schedule:
-    # Runs every 6 hours and at midnight UTC
-    - cron: '0 */6 * * *'
+  # Cron disabled: migrated to 24/7 autonomous Hugging Face Space (MUBTHAASEEM/zetasports-backend)
+  # schedule:
+  #   - cron: '0 */6 * * *'
   workflow_dispatch:
 
 concurrency:
