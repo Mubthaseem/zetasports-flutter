@@ -10,21 +10,19 @@
   'use strict';
 
   // --- 1. CONFIGURATION & STATE ---
-  const SUPABASE_URL = 'https://voocdrpetiyspuhyeapi.supabase.co';
+  const IS_LOCAL_SERVER = typeof window !== 'undefined' && window.location.origin.includes('localhost:3000');
+  const SUPABASE_URL = IS_LOCAL_SERVER ? '' : 'https://voocdrpetiyspuhyeapi.supabase.co';
   const ANON_KEY = 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
   const STORAGE_KEY_SERVICE = 'zeta_admin_service_key';
 
-  // Auto-clean legacy invalid keys that cause CORS preflight failures
-  let storedServiceKey = localStorage.getItem(STORAGE_KEY_SERVICE) || '';
-  if (storedServiceKey && (!storedServiceKey.startsWith('eyJ') || storedServiceKey.length < 50)) {
-    console.warn('[Admin] Removing invalid/non-JWT service key from storage to ensure zero CORS failures.');
+  // Force-purge any custom service keys from localStorage
+  try {
     localStorage.removeItem(STORAGE_KEY_SERVICE);
-    storedServiceKey = '';
-  }
+  } catch (e) {}
 
   const state = {
     activeTab: 'dashboard',
-    serviceKey: storedServiceKey,
+    serviceKey: '',
     matches: [],
     filteredMatches: [],
     matchFilter: 'all',
@@ -122,19 +120,10 @@
 
   // --- 2. REST API HELPER (Verified Anon Key Write & Resilient Fallback) ---
   function getActiveApiKey(isWrite = false) {
-    const custom = state.serviceKey ? state.serviceKey.trim() : '';
-    // A custom key is only used if it is a valid JWT string
-    if (custom.startsWith('eyJ') && custom.length > 50) {
-      return custom;
-    }
-    // Default verified key has complete read, write, patch, and delete permissions on Supabase
     return ANON_KEY;
   }
 
   async function apiFetch(endpoint, options = {}) {
-    const isWrite = options.method && options.method.toUpperCase() !== 'GET';
-    let activeKey = getActiveApiKey(isWrite);
-
     const makeHeaders = (key) => ({
       'apikey': key,
       'Authorization': `Bearer ${key}`,
@@ -143,36 +132,22 @@
       ...(options.headers || {})
     });
 
-    const url = `${SUPABASE_URL}/rest/v1/${endpoint}`;
+    const prefix = SUPABASE_URL ? `${SUPABASE_URL}/rest/v1` : '/rest/v1';
+    const url = `${prefix}/${endpoint}`;
     let res;
 
     try {
-      res = await fetch(url, { ...options, headers: makeHeaders(activeKey) });
-    } catch (netErr) {
-      // If failed on custom key, immediately clear bad key and retry with default verified key
-      if (activeKey !== ANON_KEY) {
-        console.warn('[Admin] Custom key network request failed, falling back to default key...', netErr);
-        localStorage.removeItem(STORAGE_KEY_SERVICE);
-        state.serviceKey = '';
-        updateAuthBadge();
-        activeKey = ANON_KEY;
-        try {
-          res = await fetch(url, { ...options, headers: makeHeaders(ANON_KEY) });
-        } catch (fallbackErr) {
-          throw fallbackErr;
-        }
-      } else {
-        throw netErr;
-      }
-    }
-
-    // If custom key returned 401 or 403, clear and retry with ANON_KEY
-    if (!res.ok && (res.status === 401 || res.status === 403) && activeKey !== ANON_KEY) {
-      console.warn(`[Admin] Custom key unauthorized (${res.status}), clearing and retrying with default key...`);
-      localStorage.removeItem(STORAGE_KEY_SERVICE);
-      state.serviceKey = '';
-      updateAuthBadge();
       res = await fetch(url, { ...options, headers: makeHeaders(ANON_KEY) });
+    } catch (netErr) {
+      console.warn('[Admin] Local gateway request failed, retrying directly with Supabase cloud...', netErr);
+      try {
+        res = await fetch(`https://voocdrpetiyspuhyeapi.supabase.co/rest/v1/${endpoint}`, {
+          ...options,
+          headers: makeHeaders(ANON_KEY)
+        });
+      } catch (fallbackErr) {
+        throw fallbackErr;
+      }
     }
 
     if (!res.ok) {
@@ -639,42 +614,48 @@
 
   // Toggle match approval
   window.toggleMatchApproval = async function (matchId, newApprovalStatus) {
+    const target = state.matches.find(m => m.id === matchId);
+    const oldStatus = target ? target.is_approved : !newApprovalStatus;
+    // Optimistic UI update
+    if (target) target.is_approved = newApprovalStatus;
+    filterAndSearchMatches();
+    renderDashboard();
+
     try {
       await apiFetch(`zeta_matches?id=eq.${matchId}`, {
         method: 'PATCH',
         body: JSON.stringify({ is_approved: newApprovalStatus })
       });
-
-      // Update local state
-      const target = state.matches.find(m => m.id === matchId);
-      if (target) target.is_approved = newApprovalStatus;
-
-      filterAndSearchMatches();
-      renderDashboard();
       showToast(`Match visibility updated to ${newApprovalStatus ? 'Approved (Visible)' : 'Pending (Hidden)'}!`);
     } catch (err) {
       console.error('Failed to toggle approval:', err);
+      if (target) target.is_approved = oldStatus;
+      filterAndSearchMatches();
+      renderDashboard();
       showToast('Error updating approval status: ' + err.message, 'error');
     }
   };
 
   // Toggle match featured in 4s hero slider
   window.toggleMatchFeatured = async function (matchId, newFeaturedStatus) {
+    const target = state.matches.find(m => m.id === matchId);
+    const oldStatus = target ? target.is_featured : !newFeaturedStatus;
+    // Optimistic UI update
+    if (target) target.is_featured = newFeaturedStatus;
+    filterAndSearchMatches();
+    renderDashboard();
+
     try {
       await apiFetch(`zeta_matches?id=eq.${matchId}`, {
         method: 'PATCH',
         body: JSON.stringify({ is_featured: newFeaturedStatus })
       });
-
-      // Update local state
-      const target = state.matches.find(m => m.id === matchId);
-      if (target) target.is_featured = newFeaturedStatus;
-
-      filterAndSearchMatches();
-      renderDashboard();
       showToast(`Hero carousel status updated to ${newFeaturedStatus ? 'Featured' : 'Standard'}!`);
     } catch (err) {
       console.error('Failed to toggle featured status:', err);
+      if (target) target.is_featured = oldStatus;
+      filterAndSearchMatches();
+      renderDashboard();
       showToast('Error updating hero featured state: ' + err.message, 'error');
     }
   };
