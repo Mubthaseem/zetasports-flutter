@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T18:38:21.583Z",
+  "generatedAt": "2026-09-25T04:18:27.287Z",
   "activeMatchesCount": 3,
   "matches": [
     {
@@ -11,14 +11,14 @@
       "country": "Algeria",
       "round": 1,
       "utcDate": "2026-09-24T18:45:00.000Z",
-      "status": "IN_PLAY",
-      "minute": "Upcoming",
+      "status": "FINISHED",
+      "minute": "FT",
       "homeTeam": {
         "id": "8361",
         "name": "Portugal",
         "shortName": "Portugal",
         "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8361_small.png",
-        "score": 0
+        "score": 1
       },
       "awayTeam": {
         "id": "5790",
@@ -28,11 +28,11 @@
         "score": 0
       },
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "lineups": {
-        "home_formation": "4-2-3-1",
+        "home_formation": "4-1-3-2",
         "away_formation": "4-3-3",
         "coach_home": "Jorge Jesus",
         "coach_away": "Craig Bellamy",
@@ -41,7 +41,7 @@
             "name": "Diogo Costa",
             "number": "1",
             "position": "11",
-            "rating": "7.0",
+            "rating": "6.9",
             "is_home": true,
             "x": 0.5,
             "y": 0.545
@@ -50,7 +50,7 @@
             "name": "João Cancelo",
             "number": "20",
             "position": "32",
-            "rating": "7.0",
+            "rating": "7.5",
             "is_home": true,
             "x": 0.125,
             "y": 0.6314
@@ -59,7 +59,7 @@
             "name": "Rúben Dias",
             "number": "3",
             "position": "34",
-            "rating": "7.0",
+            "rating": "7.5",
             "is_home": true,
             "x": 0.375,
             "y": 0.6314
@@ -68,7 +68,7 @@
             "name": "Renato Veiga",
             "number": "13",
             "position": "36",
-            "rating": "7.0",
+            "rating": "7.4",
             "is_home": true,
             "x": 0.625,
             "y": 0.6314
@@ -77,7 +77,7 @@
             "name": "Nuno Mendes",
             "number": "19",
             "position": "38",
-            "rating": "7.0",
+            "rating": "8.4",
             "is_home": true,
             "x": 0.875,
             "y": 0.6314
@@ -85,62 +85,62 @@
           {
             "name": "Rúben Neves",
             "number": "21",
-            "position": "64",
-            "rating": "7.0",
+            "position": "65",
+            "rating": "7.6",
             "is_home": true,
-            "x": 0.3,
-            "y": 0.71825
-          },
-          {
-            "name": "Vítinha",
-            "number": "23",
-            "position": "66",
-            "rating": "7.0",
-            "is_home": true,
-            "x": 0.7,
+            "x": 0.5,
             "y": 0.71825
           },
           {
             "name": "Pedro Neto",
             "number": "18",
             "position": "83",
-            "rating": "7.0",
+            "rating": "7.5",
             "is_home": true,
-            "x": 0.162,
+            "x": 0.21,
+            "y": 0.8051
+          },
+          {
+            "name": "Vítinha",
+            "number": "23",
+            "position": "85",
+            "rating": "7.4",
+            "is_home": true,
+            "x": 0.5,
             "y": 0.8051
           },
           {
             "name": "Bruno Fernandes",
             "number": "8",
-            "position": "85",
-            "rating": "7.0",
+            "position": "87",
+            "rating": "8.1",
             "is_home": true,
-            "x": 0.5,
+            "x": 0.79,
             "y": 0.8051
           },
           {
             "name": "Joao Félix",
             "number": "11",
-            "position": "87",
-            "rating": "7.0",
+            "position": "104",
+            "rating": "8.4",
             "is_home": true,
-            "x": 0.837,
-            "y": 0.8051
+            "x": 0.3,
+            "y": 0.8915
           },
           {
             "name": "Cristiano Ronaldo",
             "number": "7",
-            "position": "115",
-            "rating": "7.0",
+            "position": "106",
+            "rating": "6.8",
             "is_home": true,
-            "x": 0.5,
+            "x": 0.7,
             "y": 0.8915
           },
           {
             "name": "Danny Ward",
             "number": "12",
             "position": "11",
-            "rating": "7.0",
+            "rating": "6.5",
             "is_home": false,
             "x": 0.5,
             "y": 0.045000000000000005
@@ -149,7 +149,7 @@
             "name": "Neco Williams",
             "number": "3",
             "position": "32",
-            "rating": "7.0",
+            "rating": "7",
             "is_home": false,
             "x": 0.125,
             "y": 0.16065
@@ -158,7 +158,7 @@
             "name": "Ben Cabango",
             "number": "6",
             "position": "34",
-            "rating": "7.0",
+            "rating": "6.5",
             "is_home": false,
             "x": 0.375,
             "y": 0.16065
@@ -167,7 +167,7 @@
             "name": "Ben Davies",
             "number": "4",
             "position": "36",
-            "rating": "7.0",
+            "rating": "6.5",
             "is_home": false,
             "x": 0.625,
             "y": 0.16065
@@ -176,7 +176,7 @@
             "name": "Jay Dasilva",
             "number": "15",
             "position": "38",
-            "rating": "7.0",
+            "rating": "6.3",
             "is_home": false,
             "x": 0.875,
             "y": 0.16065
@@ -185,7 +185,7 @@
             "name": "Jordan James",
             "number": "17",
             "position": "73",
-            "rating": "7.0",
+            "rating": "6.3",
             "is_home": false,
             "x": 0.21,
             "y": 0.27585
@@ -194,7 +194,7 @@
             "name": "Ethan Ampadu",
             "number": "5",
             "position": "75",
-            "rating": "7.0",
+            "rating": "6.1",
             "is_home": false,
             "x": 0.5,
             "y": 0.27585
@@ -203,7 +203,7 @@
             "name": "Josh Sheehan",
             "number": "22",
             "position": "77",
-            "rating": "7.0",
+            "rating": "6.4",
             "is_home": false,
             "x": 0.79,
             "y": 0.27585
@@ -212,7 +212,7 @@
             "name": "David Brooks",
             "number": "7",
             "position": "103",
-            "rating": "7.0",
+            "rating": "6.1",
             "is_home": false,
             "x": 0.21,
             "y": 0.3915
@@ -221,7 +221,7 @@
             "name": "Lewis Koumas",
             "number": "9",
             "position": "105",
-            "rating": "7.0",
+            "rating": "6.1",
             "is_home": false,
             "x": 0.5,
             "y": 0.3915
@@ -230,7 +230,7 @@
             "name": "Brennan Johnson",
             "number": "11",
             "position": "107",
-            "rating": "7.0",
+            "rating": "6.3",
             "is_home": false,
             "x": 0.79,
             "y": 0.3915
@@ -238,13 +238,18 @@
         ],
         "substitutes": [
           {
-            "name": "Rui Silva",
-            "number": "12",
+            "name": "João Palhinha",
+            "number": "6",
             "is_home": true
           },
           {
-            "name": "Samuel Soares",
-            "number": "22",
+            "name": "Gonçalo Ramos",
+            "number": "9",
+            "is_home": true
+          },
+          {
+            "name": "Nuno Tavares",
+            "number": "5",
             "is_home": true
           },
           {
@@ -253,8 +258,18 @@
             "is_home": true
           },
           {
-            "name": "Nuno Tavares",
-            "number": "5",
+            "name": "João Neves",
+            "number": "15",
+            "is_home": true
+          },
+          {
+            "name": "Rui Silva",
+            "number": "12",
+            "is_home": true
+          },
+          {
+            "name": "Samuel Soares",
+            "number": "22",
             "is_home": true
           },
           {
@@ -268,16 +283,6 @@
             "is_home": true
           },
           {
-            "name": "João Neves",
-            "number": "15",
-            "is_home": true
-          },
-          {
-            "name": "João Palhinha",
-            "number": "6",
-            "is_home": true
-          },
-          {
             "name": "Trincão",
             "number": "16",
             "is_home": true
@@ -288,14 +293,29 @@
             "is_home": true
           },
           {
-            "name": "Gonçalo Ramos",
-            "number": "9",
-            "is_home": true
-          },
-          {
             "name": "Rafael Leão",
             "number": "17",
             "is_home": true
+          },
+          {
+            "name": "Daniel James",
+            "number": "20",
+            "is_home": false
+          },
+          {
+            "name": "Chris Mepham",
+            "number": "2",
+            "is_home": false
+          },
+          {
+            "name": "Kieffer Moore",
+            "number": "13",
+            "is_home": false
+          },
+          {
+            "name": "Sorba Thomas",
+            "number": "19",
+            "is_home": false
           },
           {
             "name": "David Cornell",
@@ -305,11 +325,6 @@
           {
             "name": "Tom King",
             "number": "21",
-            "is_home": false
-          },
-          {
-            "name": "Chris Mepham",
-            "number": "2",
             "is_home": false
           },
           {
@@ -333,23 +348,8 @@
             "is_home": false
           },
           {
-            "name": "Daniel James",
-            "number": "20",
-            "is_home": false
-          },
-          {
-            "name": "Kieffer Moore",
-            "number": "13",
-            "is_home": false
-          },
-          {
             "name": "Mark Harris",
             "number": "18",
-            "is_home": false
-          },
-          {
-            "name": "Sorba Thomas",
-            "number": "19",
             "is_home": false
           },
           {
@@ -361,34 +361,186 @@
       },
       "stats": {
         "home": {
-          "possession": 50,
-          "shots": 0,
-          "shots_on_target": 0,
-          "corners": 0,
-          "fouls": 10,
-          "yellow_cards": 0,
-          "red_cards": 0,
-          "xg": null
-        },
-        "away": {
-          "possession": 50,
-          "shots": 0,
-          "shots_on_target": 0,
-          "corners": 0,
+          "possession": 62,
+          "shots": 23,
+          "shots_on_target": 5,
+          "corners": 10,
           "fouls": 12,
           "yellow_cards": 0,
           "red_cards": 0,
-          "xg": null
+          "xg": 1.93
+        },
+        "away": {
+          "possession": 38,
+          "shots": 5,
+          "shots_on_target": 1,
+          "corners": 2,
+          "fouls": 10,
+          "yellow_cards": 1,
+          "red_cards": 0,
+          "xg": 0.85
         }
       },
-      "events": [],
+      "events": [
+        {
+          "minute": "22'",
+          "team": "home",
+          "player": "Joao Félix",
+          "player_name": "Joao Félix",
+          "assist": "assist by Nuno Mendes",
+          "type": "goal",
+          "description": null
+        },
+        {
+          "minute": "45'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "half",
+          "description": null
+        },
+        {
+          "minute": "59'",
+          "team": "home",
+          "player": "Cristiano Ronaldo",
+          "player_name": "Cristiano Ronaldo",
+          "assist": null,
+          "type": "var",
+          "description": null
+        },
+        {
+          "minute": "63'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "67'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "67'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "68'",
+          "team": "away",
+          "player": "Craig Bellamy",
+          "player_name": "Craig Bellamy",
+          "assist": null,
+          "type": "card",
+          "description": {
+            "localizedKey": "coach",
+            "defaultText": "Coach"
+          }
+        },
+        {
+          "minute": "71'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "71'",
+          "team": "away",
+          "player": "Ben Cabango",
+          "player_name": "Ben Cabango",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "77'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "77'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "78'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "addedtime",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "half",
+          "description": null
+        }
+      ],
+      "xg": {
+        "home": 1.93,
+        "away": 0.85
+      },
       "scorers": {
-        "home": "",
+        "home": "Joao Félix 22'",
         "away": ""
       },
       "venue": "Estádio José Alvalade",
       "referee": "Donatas Rumšas",
-      "updatedAt": "2026-09-24T18:38:13.935Z"
+      "updatedAt": "2026-09-25T04:18:19.304Z"
     },
     {
       "id": "5181825",
@@ -399,29 +551,29 @@
       "country": "Algeria",
       "round": 1,
       "utcDate": "2026-09-24T18:45:00.000Z",
-      "status": "IN_PLAY",
-      "minute": "Upcoming",
+      "status": "FINISHED",
+      "minute": "FT",
       "homeTeam": {
         "id": "6708",
         "name": "Netherlands",
         "shortName": "Netherlands",
         "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6708_small.png",
-        "score": 0
+        "score": 1
       },
       "awayTeam": {
         "id": "8570",
         "name": "Germany",
         "shortName": "Germany",
         "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8570_small.png",
-        "score": 0
+        "score": 1
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "lineups": {
-        "home_formation": "4-3-3",
-        "away_formation": "4-1-2-3",
+        "home_formation": "4-2-3-1",
+        "away_formation": "4-2-3-1",
         "coach_home": "Xavi Hernández",
         "coach_away": "Jürgen Klopp",
         "players": [
@@ -429,7 +581,7 @@
             "name": "Bart Verbruggen",
             "number": "1",
             "position": "11",
-            "rating": "7.0",
+            "rating": "6.6",
             "is_home": true,
             "x": 0.5,
             "y": 0.545
@@ -438,97 +590,97 @@
             "name": "Denzel Dumfries",
             "number": "22",
             "position": "32",
-            "rating": "7.0",
+            "rating": "7.7",
             "is_home": true,
             "x": 0.125,
-            "y": 0.66065
+            "y": 0.6314
           },
           {
             "name": "Jan Paul van Hecke",
             "number": "6",
             "position": "34",
-            "rating": "7.0",
+            "rating": "7.5",
             "is_home": true,
             "x": 0.375,
-            "y": 0.66065
+            "y": 0.6314
           },
           {
             "name": "Virgil van Dijk",
             "number": "4",
             "position": "36",
-            "rating": "7.0",
+            "rating": "7.2",
             "is_home": true,
             "x": 0.625,
-            "y": 0.66065
+            "y": 0.6314
           },
           {
             "name": "Micky van de Ven",
             "number": "15",
             "position": "38",
-            "rating": "7.0",
+            "rating": "7.2",
             "is_home": true,
             "x": 0.875,
-            "y": 0.66065
-          },
-          {
-            "name": "Quinten Timber",
-            "number": "26",
-            "position": "73",
-            "rating": "7.0",
-            "is_home": true,
-            "x": 0.21,
-            "y": 0.7758499999999999
+            "y": 0.6314
           },
           {
             "name": "Ryan Gravenberch",
             "number": "8",
-            "position": "75",
-            "rating": "7.0",
+            "position": "64",
+            "rating": "7",
             "is_home": true,
-            "x": 0.5,
-            "y": 0.7758499999999999
+            "x": 0.3,
+            "y": 0.71825
           },
           {
-            "name": "Tijjani Reijnders",
-            "number": "14",
-            "position": "77",
-            "rating": "7.0",
+            "name": "Quinten Timber",
+            "number": "19",
+            "position": "66",
+            "rating": "6.8",
             "is_home": true,
-            "x": 0.79,
-            "y": 0.7758499999999999
+            "x": 0.7,
+            "y": 0.71825
           },
           {
             "name": "Crysencio Summerville",
             "number": "7",
-            "position": "103",
-            "rating": "7.0",
+            "position": "83",
+            "rating": "7.2",
             "is_home": true,
-            "x": 0.21,
-            "y": 0.8915
+            "x": 0.162,
+            "y": 0.8051
           },
           {
-            "name": "Brian Brobbey",
-            "number": "9",
-            "position": "105",
-            "rating": "7.0",
+            "name": "Tijjani Reijnders",
+            "number": "14",
+            "position": "85",
+            "rating": "7.5",
             "is_home": true,
             "x": 0.5,
-            "y": 0.8915
+            "y": 0.8051
           },
           {
             "name": "Cody Gakpo",
             "number": "11",
-            "position": "107",
-            "rating": "7.0",
+            "position": "87",
+            "rating": "7.8",
             "is_home": true,
-            "x": 0.79,
+            "x": 0.837,
+            "y": 0.8051
+          },
+          {
+            "name": "Brian Brobbey",
+            "number": "9",
+            "position": "115",
+            "rating": "5.9",
+            "is_home": true,
+            "x": 0.5,
             "y": 0.8915
           },
           {
             "name": "Marc ter Stegen",
             "number": "1",
             "position": "11",
-            "rating": "7.0",
+            "rating": "8.7",
             "is_home": false,
             "x": 0.5,
             "y": 0.045000000000000005
@@ -537,7 +689,7 @@
             "name": "Philipp Treu",
             "number": "13",
             "position": "32",
-            "rating": "7.0",
+            "rating": "7.2",
             "is_home": false,
             "x": 0.125,
             "y": 0.1314
@@ -546,7 +698,7 @@
             "name": "Jonathan Tah",
             "number": "4",
             "position": "34",
-            "rating": "7.0",
+            "rating": "6.8",
             "is_home": false,
             "x": 0.375,
             "y": 0.1314
@@ -555,7 +707,7 @@
             "name": "Nico Schlotterbeck",
             "number": "15",
             "position": "36",
-            "rating": "7.0",
+            "rating": "6.9",
             "is_home": false,
             "x": 0.625,
             "y": 0.1314
@@ -564,67 +716,87 @@
             "name": "Nathaniel Brown",
             "number": "18",
             "position": "38",
-            "rating": "7.0",
+            "rating": "6.8",
             "is_home": false,
             "x": 0.875,
             "y": 0.1314
           },
           {
-            "name": "Joshua Kimmich",
-            "number": "6",
-            "position": "65",
-            "rating": "7.0",
+            "name": "Felix Nmecha",
+            "number": "8",
+            "position": "64",
+            "rating": "7.9",
             "is_home": false,
-            "x": 0.5,
+            "x": 0.3,
             "y": 0.21825
           },
           {
-            "name": "Felix Nmecha",
-            "number": "8",
-            "position": "84",
-            "rating": "7.0",
+            "name": "Joshua Kimmich",
+            "number": "6",
+            "position": "66",
+            "rating": "6.4",
             "is_home": false,
-            "x": 0.3,
+            "x": 0.7,
+            "y": 0.21825
+          },
+          {
+            "name": "Karim Adeyemi",
+            "number": "19",
+            "position": "83",
+            "rating": "7.4",
+            "is_home": false,
+            "x": 0.162,
             "y": 0.30510000000000004
           },
           {
-            "name": "Jamal Musiala",
-            "number": "10",
-            "position": "86",
-            "rating": "7.0",
+            "name": "Nadiem Amiri",
+            "number": "11",
+            "position": "85",
+            "rating": "6.2",
             "is_home": false,
-            "x": 0.7,
+            "x": 0.5,
             "y": 0.30510000000000004
           },
           {
             "name": "Kevin Schade",
             "number": "9",
-            "position": "103",
-            "rating": "7.0",
+            "position": "87",
+            "rating": "6.6",
             "is_home": false,
-            "x": 0.17,
-            "y": 0.3915
+            "x": 0.837,
+            "y": 0.30510000000000004
           },
           {
             "name": "Kai Havertz",
             "number": "7",
-            "position": "105",
-            "rating": "7.0",
+            "position": "115",
+            "rating": "6.4",
             "is_home": false,
             "x": 0.5,
-            "y": 0.3915
-          },
-          {
-            "name": "Karim Adeyemi",
-            "number": "19",
-            "position": "107",
-            "rating": "7.0",
-            "is_home": false,
-            "x": 0.83,
             "y": 0.3915
           }
         ],
         "substitutes": [
+          {
+            "name": "Mexx Meerdink",
+            "number": "17",
+            "is_home": true
+          },
+          {
+            "name": "Joey Veerman",
+            "number": "18",
+            "is_home": true
+          },
+          {
+            "name": "Guus Til",
+            "number": "16",
+            "is_home": true
+          },
+          {
+            "name": "Ruben van Bommel",
+            "number": "21",
+            "is_home": true
+          },
           {
             "name": "Mark Flekken",
             "number": "23",
@@ -656,23 +828,8 @@
             "is_home": true
           },
           {
-            "name": "Joey Veerman",
-            "number": "18",
-            "is_home": true
-          },
-          {
             "name": "Teun Koopmeiners",
             "number": "20",
-            "is_home": true
-          },
-          {
-            "name": "Guus Til",
-            "number": "16",
-            "is_home": true
-          },
-          {
-            "name": "Mexx Meerdink",
-            "number": "17",
             "is_home": true
           },
           {
@@ -681,9 +838,29 @@
             "is_home": true
           },
           {
-            "name": "Ruben van Bommel",
-            "number": "21",
-            "is_home": true
+            "name": "Younes Ebnoutalib",
+            "number": "23",
+            "is_home": false
+          },
+          {
+            "name": "Anton Stach",
+            "number": "16",
+            "is_home": false
+          },
+          {
+            "name": "Chris Führich",
+            "number": "17",
+            "is_home": false
+          },
+          {
+            "name": "Serge Gnabry",
+            "number": "20",
+            "is_home": false
+          },
+          {
+            "name": "Yannik Engelhardt",
+            "number": "5",
+            "is_home": false
           },
           {
             "name": "Alexander Nübel",
@@ -711,72 +888,227 @@
             "is_home": false
           },
           {
-            "name": "Anton Stach",
-            "number": "16",
-            "is_home": false
-          },
-          {
-            "name": "Chris Führich",
-            "number": "17",
-            "is_home": false
-          },
-          {
             "name": "Hennes Behrens",
             "number": "22",
-            "is_home": false
-          },
-          {
-            "name": "Nadiem Amiri",
-            "number": "11",
-            "is_home": false
-          },
-          {
-            "name": "Serge Gnabry",
-            "number": "20",
-            "is_home": false
-          },
-          {
-            "name": "Yannik Engelhardt",
-            "number": "5",
-            "is_home": false
-          },
-          {
-            "name": "Younes Ebnoutalib",
-            "number": "23",
             "is_home": false
           }
         ]
       },
       "stats": {
         "home": {
-          "possession": 50,
-          "shots": 0,
-          "shots_on_target": 0,
-          "corners": 0,
-          "fouls": 10,
-          "yellow_cards": 0,
+          "possession": 54,
+          "shots": 22,
+          "shots_on_target": 10,
+          "corners": 12,
+          "fouls": 11,
+          "yellow_cards": 3,
           "red_cards": 0,
-          "xg": null
+          "xg": 3.18
         },
         "away": {
-          "possession": 50,
-          "shots": 0,
-          "shots_on_target": 0,
-          "corners": 0,
-          "fouls": 12,
-          "yellow_cards": 0,
+          "possession": 46,
+          "shots": 10,
+          "shots_on_target": 2,
+          "corners": 1,
+          "fouls": 16,
+          "yellow_cards": 1,
           "red_cards": 0,
-          "xg": null
+          "xg": 1.45
         }
       },
-      "events": [],
+      "events": [
+        {
+          "minute": "13'",
+          "team": "home",
+          "player": "Virgil van Dijk",
+          "player_name": "Virgil van Dijk",
+          "assist": null,
+          "type": "var",
+          "description": null
+        },
+        {
+          "minute": "22'",
+          "team": "home",
+          "player": "Quinten Timber",
+          "player_name": "Quinten Timber",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "24'",
+          "team": "home",
+          "player": "Jan Paul van Hecke",
+          "player_name": "Jan Paul van Hecke",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "30'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "32'",
+          "team": "away",
+          "player": "Felix Nmecha",
+          "player_name": "Felix Nmecha",
+          "assist": "assist by Karim Adeyemi",
+          "type": "goal",
+          "description": null
+        },
+        {
+          "minute": "35'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "45'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "addedtime",
+          "description": null
+        },
+        {
+          "minute": "45'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "half",
+          "description": null
+        },
+        {
+          "minute": "57'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "64'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "64'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "68'",
+          "team": "away",
+          "player": "Nadiem Amiri",
+          "player_name": "Nadiem Amiri",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "69'",
+          "team": "home",
+          "player": "Virgil van Dijk",
+          "player_name": "Virgil van Dijk",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "80'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "80'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "83'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "83'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "addedtime",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "home",
+          "player": "Cody Gakpo",
+          "player_name": "Cody Gakpo",
+          "assist": "assist by Ruben van Bommel",
+          "type": "goal",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "half",
+          "description": null
+        }
+      ],
+      "xg": {
+        "home": 3.18,
+        "away": 1.45
+      },
       "scorers": {
-        "home": "",
-        "away": ""
+        "home": "Cody Gakpo 90 + 2'",
+        "away": "Felix Nmecha 32'"
       },
       "venue": "Johan Cruijff ArenA",
       "referee": "Alejandro José Hernández Hernández",
-      "updatedAt": "2026-09-24T18:38:18.628Z"
+      "updatedAt": "2026-09-25T04:18:23.450Z"
     },
     {
       "id": "5181861",
@@ -787,29 +1119,29 @@
       "country": "Algeria",
       "round": 1,
       "utcDate": "2026-09-24T18:45:00.000Z",
-      "status": "IN_PLAY",
-      "minute": "Upcoming",
+      "status": "FINISHED",
+      "minute": "FT",
       "homeTeam": {
         "id": "8492",
         "name": "Norway",
         "shortName": "Norway",
         "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8492_small.png",
-        "score": 0
+        "score": 3
       },
       "awayTeam": {
         "id": "8238",
         "name": "Denmark",
         "shortName": "Denmark",
         "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8238_small.png",
-        "score": 0
+        "score": 2
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 3,
+        "away": 2
       },
       "lineups": {
         "home_formation": "4-3-3",
-        "away_formation": "4-2-1-3",
+        "away_formation": "4-2-3-1",
         "coach_home": "Ståle Solbakken",
         "coach_away": "Brian Riemer",
         "players": [
@@ -817,7 +1149,7 @@
             "name": "Ørjan Håskjold Nyland",
             "number": "1",
             "position": "11",
-            "rating": "7.0",
+            "rating": "7.1",
             "is_home": true,
             "x": 0.5,
             "y": 0.545
@@ -826,7 +1158,7 @@
             "name": "Julian Ryerson",
             "number": "14",
             "position": "32",
-            "rating": "7.0",
+            "rating": "6.9",
             "is_home": true,
             "x": 0.125,
             "y": 0.66065
@@ -835,7 +1167,7 @@
             "name": "Kristoffer Ajer",
             "number": "3",
             "position": "34",
-            "rating": "7.0",
+            "rating": "6.8",
             "is_home": true,
             "x": 0.375,
             "y": 0.66065
@@ -844,7 +1176,7 @@
             "name": "Torbjørn Heggem",
             "number": "17",
             "position": "36",
-            "rating": "7.0",
+            "rating": "6.2",
             "is_home": true,
             "x": 0.625,
             "y": 0.66065
@@ -853,7 +1185,7 @@
             "name": "Fredrik Aursnes",
             "number": "7",
             "position": "38",
-            "rating": "7.0",
+            "rating": "6",
             "is_home": true,
             "x": 0.875,
             "y": 0.66065
@@ -862,7 +1194,7 @@
             "name": "Martin Ødegaard",
             "number": "10",
             "position": "73",
-            "rating": "7.0",
+            "rating": "8.6",
             "is_home": true,
             "x": 0.21,
             "y": 0.7758499999999999
@@ -871,7 +1203,7 @@
             "name": "Sander Berge",
             "number": "8",
             "position": "75",
-            "rating": "7.0",
+            "rating": "7.3",
             "is_home": true,
             "x": 0.5,
             "y": 0.7758499999999999
@@ -880,7 +1212,7 @@
             "name": "Patrick Berg",
             "number": "6",
             "position": "77",
-            "rating": "7.0",
+            "rating": "6.9",
             "is_home": true,
             "x": 0.79,
             "y": 0.7758499999999999
@@ -889,7 +1221,7 @@
             "name": "Oscar Bobb",
             "number": "22",
             "position": "103",
-            "rating": "7.0",
+            "rating": "8",
             "is_home": true,
             "x": 0.21,
             "y": 0.8915
@@ -898,7 +1230,7 @@
             "name": "Erling Haaland",
             "number": "9",
             "position": "105",
-            "rating": "7.0",
+            "rating": "9.1",
             "is_home": true,
             "x": 0.5,
             "y": 0.8915
@@ -907,7 +1239,7 @@
             "name": "Antonio Nusa",
             "number": "20",
             "position": "107",
-            "rating": "7.0",
+            "rating": "7.9",
             "is_home": true,
             "x": 0.79,
             "y": 0.8915
@@ -916,7 +1248,7 @@
             "name": "Filip Jörgensen",
             "number": "22",
             "position": "11",
-            "rating": "7.0",
+            "rating": "5.5",
             "is_home": false,
             "x": 0.5,
             "y": 0.045000000000000005
@@ -925,25 +1257,25 @@
             "name": "Rasmus Kristensen",
             "number": "13",
             "position": "32",
-            "rating": "7.0",
+            "rating": "6.4",
             "is_home": false,
             "x": 0.125,
             "y": 0.1314
           },
           {
-            "name": "Oliver Provstgaard",
-            "number": "3",
+            "name": "Joachim Andersen",
+            "number": "2",
             "position": "34",
-            "rating": "7.0",
+            "rating": "5.9",
             "is_home": false,
             "x": 0.375,
             "y": 0.1314
           },
           {
-            "name": "Joachim Andersen",
-            "number": "2",
+            "name": "Oliver Provstgaard",
+            "number": "3",
             "position": "36",
-            "rating": "7.0",
+            "rating": "6.3",
             "is_home": false,
             "x": 0.625,
             "y": 0.1314
@@ -952,7 +1284,7 @@
             "name": "Joakim Mæhle",
             "number": "5",
             "position": "38",
-            "rating": "7.0",
+            "rating": "6.5",
             "is_home": false,
             "x": 0.875,
             "y": 0.1314
@@ -961,7 +1293,7 @@
             "name": "Morten Hjulmand",
             "number": "21",
             "position": "64",
-            "rating": "7.0",
+            "rating": "7.6",
             "is_home": false,
             "x": 0.3,
             "y": 0.21825
@@ -970,49 +1302,69 @@
             "name": "Pierre-Emile Højbjerg",
             "number": "23",
             "position": "66",
-            "rating": "7.0",
+            "rating": "6.9",
             "is_home": false,
             "x": 0.7,
             "y": 0.21825
           },
           {
+            "name": "Patrick Dorgu",
+            "number": "17",
+            "position": "83",
+            "rating": "7.5",
+            "is_home": false,
+            "x": 0.162,
+            "y": 0.30510000000000004
+          },
+          {
             "name": "Victor Froholdt",
             "number": "7",
             "position": "85",
-            "rating": "7.0",
+            "rating": "6.8",
             "is_home": false,
             "x": 0.5,
             "y": 0.30510000000000004
           },
           {
-            "name": "Patrick Dorgu",
-            "number": "17",
-            "position": "103",
-            "rating": "7.0",
+            "name": "Mikkel Damsgaard",
+            "number": "14",
+            "position": "87",
+            "rating": "8.4",
             "is_home": false,
-            "x": 0.21,
-            "y": 0.3915
+            "x": 0.837,
+            "y": 0.30510000000000004
           },
           {
             "name": "Rasmus Højlund",
             "number": "9",
-            "position": "105",
-            "rating": "7.0",
+            "position": "115",
+            "rating": "6.5",
             "is_home": false,
             "x": 0.5,
-            "y": 0.3915
-          },
-          {
-            "name": "Mikkel Damsgaard",
-            "number": "14",
-            "position": "107",
-            "rating": "7.0",
-            "is_home": false,
-            "x": 0.79,
             "y": 0.3915
           }
         ],
         "substitutes": [
+          {
+            "name": "David Møller Wolfe",
+            "number": "5",
+            "is_home": true
+          },
+          {
+            "name": "Thelo Aasgaard",
+            "number": "19",
+            "is_home": true
+          },
+          {
+            "name": "Andreas Schjelderup",
+            "number": "21",
+            "is_home": true
+          },
+          {
+            "name": "Kristian Thorstvedt",
+            "number": "18",
+            "is_home": true
+          },
           {
             "name": "Egil Selvik",
             "number": "13",
@@ -1021,11 +1373,6 @@
           {
             "name": "Sander Tangvik",
             "number": "12",
-            "is_home": true
-          },
-          {
-            "name": "David Møller Wolfe",
-            "number": "5",
             "is_home": true
           },
           {
@@ -1039,23 +1386,8 @@
             "is_home": true
           },
           {
-            "name": "Kristian Thorstvedt",
-            "number": "18",
-            "is_home": true
-          },
-          {
             "name": "Marcus Holmgren Pedersen",
             "number": "16",
-            "is_home": true
-          },
-          {
-            "name": "Thelo Aasgaard",
-            "number": "19",
-            "is_home": true
-          },
-          {
-            "name": "Andreas Schjelderup",
-            "number": "21",
             "is_home": true
           },
           {
@@ -1072,6 +1404,31 @@
             "name": "Ole Blomberg",
             "number": "15",
             "is_home": true
+          },
+          {
+            "name": "Mads Bidstrup",
+            "number": "12",
+            "is_home": false
+          },
+          {
+            "name": "Gustav Isaksen",
+            "number": "8",
+            "is_home": false
+          },
+          {
+            "name": "Albert Grønbæk",
+            "number": "20",
+            "is_home": false
+          },
+          {
+            "name": "Kasper Waarts Høgh",
+            "number": "19",
+            "is_home": false
+          },
+          {
+            "name": "Thomas Jørgensen",
+            "number": "10",
+            "is_home": false
           },
           {
             "name": "Andreas Jungdal",
@@ -1099,21 +1456,6 @@
             "is_home": false
           },
           {
-            "name": "Albert Grønbæk",
-            "number": "20",
-            "is_home": false
-          },
-          {
-            "name": "Mads Bidstrup",
-            "number": "12",
-            "is_home": false
-          },
-          {
-            "name": "Thomas Jørgensen",
-            "number": "10",
-            "is_home": false
-          },
-          {
             "name": "Victor Bak",
             "number": "15",
             "is_home": false
@@ -1122,49 +1464,260 @@
             "name": "Adam Daghim",
             "number": "11",
             "is_home": false
-          },
-          {
-            "name": "Gustav Isaksen",
-            "number": "8",
-            "is_home": false
-          },
-          {
-            "name": "Kasper Waarts Høgh",
-            "number": "19",
-            "is_home": false
           }
         ]
       },
       "stats": {
         "home": {
-          "possession": 50,
-          "shots": 0,
-          "shots_on_target": 0,
-          "corners": 0,
-          "fouls": 10,
+          "possession": 49,
+          "shots": 13,
+          "shots_on_target": 7,
+          "corners": 4,
+          "fouls": 14,
           "yellow_cards": 0,
-          "red_cards": 0,
-          "xg": null
+          "red_cards": 1,
+          "xg": 1.41
         },
         "away": {
-          "possession": 50,
-          "shots": 0,
-          "shots_on_target": 0,
-          "corners": 0,
-          "fouls": 12,
-          "yellow_cards": 0,
+          "possession": 51,
+          "shots": 13,
+          "shots_on_target": 7,
+          "corners": 7,
+          "fouls": 10,
+          "yellow_cards": 3,
           "red_cards": 0,
-          "xg": null
+          "xg": 1.09
         }
       },
-      "events": [],
+      "events": [
+        {
+          "minute": "14'",
+          "team": "home",
+          "player": "Oscar Bobb",
+          "player_name": "Oscar Bobb",
+          "assist": "assist by Martin Ødegaard",
+          "type": "goal",
+          "description": null
+        },
+        {
+          "minute": "16'",
+          "team": "away",
+          "player": " ",
+          "player_name": " ",
+          "assist": null,
+          "type": "comment",
+          "description": null
+        },
+        {
+          "minute": "18'",
+          "team": "home",
+          "player": "Erling Haaland",
+          "player_name": "Erling Haaland",
+          "assist": "assist by Antonio Nusa",
+          "type": "goal",
+          "description": null
+        },
+        {
+          "minute": "25'",
+          "team": "away",
+          "player": "Mikkel Damsgaard",
+          "player_name": "Mikkel Damsgaard",
+          "assist": null,
+          "type": "goal",
+          "description": "Direct freekick"
+        },
+        {
+          "minute": "38'",
+          "team": "away",
+          "player": "Rasmus Kristensen",
+          "player_name": "Rasmus Kristensen",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "45'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "addedtime",
+          "description": null
+        },
+        {
+          "minute": "45'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "half",
+          "description": null
+        },
+        {
+          "minute": "60'",
+          "team": "away",
+          "player": "Rasmus Højlund",
+          "player_name": "Rasmus Højlund",
+          "assist": null,
+          "type": "goal",
+          "description": "Header"
+        },
+        {
+          "minute": "66'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "66'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "66'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "68'",
+          "team": "home",
+          "player": "David Møller Wolfe",
+          "player_name": "David Møller Wolfe",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "70'",
+          "team": "away",
+          "player": "Patrick Dorgu",
+          "player_name": "Patrick Dorgu",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "74'",
+          "team": "home",
+          "player": "Erling Haaland",
+          "player_name": "Erling Haaland",
+          "assist": "assist by Martin Ødegaard",
+          "type": "goal",
+          "description": null
+        },
+        {
+          "minute": "75'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "75'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "82'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "82'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "88'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "89'",
+          "team": "home",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "substitution",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "addedtime",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "away",
+          "player": "Gustav Isaksen",
+          "player_name": "Gustav Isaksen",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "home",
+          "player": "David Møller Wolfe",
+          "player_name": "David Møller Wolfe",
+          "assist": null,
+          "type": "card",
+          "description": null
+        },
+        {
+          "minute": "90'",
+          "team": "away",
+          "player": "Player",
+          "player_name": "Player",
+          "assist": null,
+          "type": "half",
+          "description": null
+        }
+      ],
+      "xg": {
+        "home": 1.41,
+        "away": 1.09
+      },
       "scorers": {
-        "home": "",
-        "away": ""
+        "home": "Oscar Bobb 14', Erling Haaland 18', Erling Haaland 74'",
+        "away": "Mikkel Damsgaard 25', Rasmus Højlund 60'"
       },
       "venue": "Ullevaal Stadion",
       "referee": "Tobias Stieler",
-      "updatedAt": "2026-09-24T18:38:21.580Z"
+      "updatedAt": "2026-09-25T04:18:27.280Z"
     }
   ],
   "standings": [
