@@ -1,0 +1,10 @@
+name = "zetasports-live-worker"
+main = "worker.js"
+compatibility_date = "2024-09-01"
+
+[triggers]
+crons = ["* * * * *"] # Every minute cron trigger (executes 10-second sub-minute polling)
+
+[vars]
+SUPABASE_URL = "https://voocdrpetiyspuhyeapi.supabase.co"
+# Note: Add your secret SUPABASE_SERVICE_KEY via Cloudflare Dashboard or `npx wrangler secret put SUPABASE_SERVICE_KEY`
