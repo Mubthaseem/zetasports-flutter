@@ -2,7 +2,7 @@
   "competitionId": "268",
   "competitionName": "Brasileirão Série A",
   "season": "2026",
-  "updatedAt": "2026-10-03T20:39:30.826Z",
+  "updatedAt": "2026-10-04T04:33:52.958Z",
   "table": [
     {
       "position": 1,
@@ -114,6 +114,24 @@
     },
     {
       "position": 7,
+      "teamId": "10272",
+      "teamName": "Atlético-MG",
+      "shortName": "Atlético-MG",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10272.png",
+      "played": 28,
+      "won": 12,
+      "drawn": 7,
+      "lost": 9,
+      "goalsFor": 37,
+      "goalsAgainst": 32,
+      "goalDifference": 5,
+      "points": 43,
+      "form": [
+        "#0046A7"
+      ]
+    },
+    {
+      "position": 8,
       "teamId": "8514",
       "teamName": "Santos",
       "shortName": "Santos",
@@ -126,24 +144,6 @@
       "goalsAgainst": 41,
       "goalDifference": 2,
       "points": 41,
-      "form": [
-        "#0046A7"
-      ]
-    },
-    {
-      "position": 8,
-      "teamId": "10272",
-      "teamName": "Atlético-MG",
-      "shortName": "Atlético-MG",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10272.png",
-      "played": 27,
-      "won": 11,
-      "drawn": 7,
-      "lost": 9,
-      "goalsFor": 36,
-      "goalsAgainst": 32,
-      "goalDifference": 4,
-      "points": 40,
       "form": [
         "#0046A7"
       ]
@@ -168,17 +168,17 @@
     },
     {
       "position": 10,
-      "teamId": "109705",
-      "teamName": "RB Bragantino",
-      "shortName": "RB Bragantino",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/109705.png",
-      "played": 27,
+      "teamId": "10277",
+      "teamName": "São Paulo",
+      "shortName": "São Paulo",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10277.png",
+      "played": 28,
       "won": 10,
       "drawn": 6,
-      "lost": 11,
+      "lost": 12,
       "goalsFor": 33,
-      "goalsAgainst": 31,
-      "goalDifference": 2,
+      "goalsAgainst": 32,
+      "goalDifference": 1,
       "points": 36,
       "form": [
         "#0046A7"
@@ -186,10 +186,10 @@
     },
     {
       "position": 11,
-      "teamId": "10277",
-      "teamName": "São Paulo",
-      "shortName": "São Paulo",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10277.png",
+      "teamId": "109705",
+      "teamName": "RB Bragantino",
+      "shortName": "RB Bragantino",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/109705.png",
       "played": 28,
       "won": 10,
       "drawn": 6,
