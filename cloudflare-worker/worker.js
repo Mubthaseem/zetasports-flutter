@@ -115,8 +115,21 @@ async function pollActiveMatches(env) {
     'Content-Type': 'application/json'
   };
 
-  // 1. Fetch candidate matches: status in live/in_play/scheduled with fotmob_id
-  const getUrl = `${sbUrl}/rest/v1/zeta_matches?select=id,fotmob_id,home_team,away_team,home_score,away_score,status,time_elapsed,date,kickoff_at&fotmob_id=not.is.null&order=date.asc`;
+  // 1. Fetch approved leagues list from zeta_leagues
+  let approvedLeagueNames = new Set();
+  try {
+    const lgRes = await fetch(`${sbUrl}/rest/v1/zeta_leagues?select=name,featured&featured=eq.true`, { headers: sbHeaders });
+    if (lgRes.ok) {
+      const lgs = await lgRes.json();
+      approvedLeagueNames = new Set(lgs.map(l => (l.name || '').trim().toLowerCase()));
+      console.log(`[Worker] Loaded ${approvedLeagueNames.size} approved leagues from database.`);
+    }
+  } catch (err) {
+    console.warn('[Worker] Could not fetch approved leagues, using fallback:', err.message);
+  }
+
+  // 2. Fetch candidate matches: status in live/in_play/scheduled with fotmob_id
+  const getUrl = `${sbUrl}/rest/v1/zeta_matches?select=id,fotmob_id,home_team,away_team,home_score,away_score,status,time_elapsed,date,kickoff_at,is_approved,league_name&fotmob_id=not.is.null&order=date.asc`;
   const res = await fetch(getUrl, { headers: sbHeaders });
   if (!res.ok) {
     throw new Error(`Supabase GET matches failed: ${res.status}`);
@@ -127,6 +140,13 @@ async function pollActiveMatches(env) {
   const candidates = [];
 
   for (const m of allMatches) {
+    // STRICT FILTER: Match must be explicitly approved or belong to an admin-approved competition
+    const lgNorm = (m.league_name || '').trim().toLowerCase();
+    const isApproved = m.is_approved === true || (approvedLeagueNames.size > 0 && approvedLeagueNames.has(lgNorm));
+    if (!isApproved) {
+      continue; // Skip non-approved leagues completely!
+    }
+
     const st = String(m.status || '').toLowerCase();
     if (st === 'live' || st === 'in_play') {
       candidates.push(m);

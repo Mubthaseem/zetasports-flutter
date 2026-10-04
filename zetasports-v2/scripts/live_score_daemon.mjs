@@ -179,9 +179,21 @@ export async function syncMatchByFotMobId(matchRow) {
  * Sync active matches that are in-play or near kickoff
  */
 export async function syncActiveMatches() {
+  // 1. Fetch approved competitions from zeta_leagues
+  let approvedLeagueNames = new Set();
+  const { data: approvedLeagues } = await supabase
+    .from('zeta_leagues')
+    .select('name, featured')
+    .eq('featured', true);
+
+  if (Array.isArray(approvedLeagues) && approvedLeagues.length > 0) {
+    approvedLeagueNames = new Set(approvedLeagues.map(l => (l.name || '').trim().toLowerCase()));
+  }
+
+  // 2. Fetch matches
   const { data: matches, error } = await supabase
     .from('zeta_matches')
-    .select('id, home_team, away_team, home_score, away_score, fotmob_id, status, time_elapsed, date, kickoff_at')
+    .select('id, home_team, away_team, home_score, away_score, fotmob_id, status, time_elapsed, date, kickoff_at, is_approved, league_name')
     .not('fotmob_id', 'is', null);
 
   if (error) {
@@ -193,6 +205,13 @@ export async function syncActiveMatches() {
   const activeCandidates = [];
 
   for (const m of matches || []) {
+    // Check if match is approved or belongs to an approved competition
+    const lgNorm = (m.league_name || '').trim().toLowerCase();
+    const isApproved = m.is_approved === true || (approvedLeagueNames.size > 0 && approvedLeagueNames.has(lgNorm));
+    if (!isApproved) {
+      continue; // Skip unapproved league matches
+    }
+
     const st = String(m.status || '').toLowerCase();
     if (st === 'live' || st === 'in_play') {
       activeCandidates.push(m);
