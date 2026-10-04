@@ -32,7 +32,8 @@
     shakaInstance: null,
     leagues: [],
     approvedLeagues: new Set(),
-    leagueSearchQuery: ''
+    leagueSearchQuery: '',
+    spotlightFilter: 'approved'
   };
 
   // --- 1B. LEAGUE RESOLVER & CATEGORIZATION (INCLUDING FRIENDLIES) ---
@@ -366,11 +367,35 @@
     const container = document.getElementById('dashboardLiveMatchesList');
     if (!container) return;
 
-    const liveMatches = state.matches.filter(m => String(m.status).toLowerCase() === 'live' || String(m.status).toUpperCase() === 'IN_PLAY');
+    // Filter live matches according to spotlight toggle
+    const allLive = state.matches.filter(m => String(m.status).toLowerCase() === 'live' || String(m.status).toUpperCase() === 'IN_PLAY');
+    const approvedLive = allLive.filter(m => {
+      if (m.is_approved === true) return true;
+      const lgNorm = resolveMatchLeague(m).toLowerCase().trim();
+      return state.approvedLeagues.has(lgNorm);
+    });
+
+    const isAll = state.spotlightFilter === 'all';
+    const liveMatches = isAll ? allLive : approvedLive;
+
+    // Update Spotlight button styles
+    const btnApp = document.getElementById('spotlightApprovedBtn');
+    const btnAll = document.getElementById('spotlightAllBtn');
+    if (btnApp && btnAll) {
+      if (!isAll) {
+        btnApp.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-[#0062b2] text-white transition-all';
+        btnAll.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all';
+      } else {
+        btnAll.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-[#0062b2] text-white transition-all';
+        btnApp.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition-all';
+      }
+      btnAll.textContent = `All In-Play (${allLive.length})`;
+    }
+
     if (liveMatches.length === 0) {
       container.innerHTML = `
         <div class="py-8 text-center text-slate-500 text-xs">
-          No matches currently in live in-play status. Upcoming scheduled fixtures will appear here when active.
+          ${isAll ? 'No matches currently in-play.' : 'No approved matches currently in live in-play status. All unapproved lower-tier leagues are hidden.'}
         </div>
       `;
       return;
@@ -651,6 +676,44 @@
       showToast('Error updating hero featured state: ' + err.message, 'error');
     }
   };
+
+  // Live Spotlight Filter Toggles
+  document.getElementById('spotlightApprovedBtn')?.addEventListener('click', () => {
+    state.spotlightFilter = 'approved';
+    renderDashboard();
+  });
+
+  document.getElementById('spotlightAllBtn')?.addEventListener('click', () => {
+    state.spotlightFilter = 'all';
+    renderDashboard();
+  });
+
+  // Purge Unapproved Fixtures (Wipe lower-tier clutter)
+  document.getElementById('purgeUnapprovedBtn')?.addEventListener('click', async () => {
+    const unapprovedCount = state.matches.filter(m => m.is_approved !== true).length;
+    if (unapprovedCount === 0) {
+      showToast('No unapproved fixtures to purge!', 'info');
+      return;
+    }
+
+    const confirmed = confirm(`Are you sure you want to permanently delete all ${unapprovedCount} unapproved fixtures from Supabase? Only approved competitions will be kept.`);
+    if (!confirmed) return;
+
+    try {
+      showToast(`Purging ${unapprovedCount} unapproved fixtures...`, 'info');
+      await apiFetch('zeta_matches?is_approved=eq.false', { method: 'DELETE' });
+
+      // Clean local state
+      state.matches = state.matches.filter(m => m.is_approved === true);
+      filterAndSearchMatches();
+      renderDashboard();
+      renderTeamsAndLeagues();
+      showToast(`Successfully purged ${unapprovedCount} unapproved fixtures from database!`);
+    } catch (err) {
+      console.error('Failed to purge:', err);
+      showToast('Error purging unapproved fixtures: ' + err.message, 'error');
+    }
+  });
 
   // Open Add Match modal
   document.getElementById('openAddMatchBtn')?.addEventListener('click', () => {
