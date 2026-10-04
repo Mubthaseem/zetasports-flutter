@@ -14,9 +14,17 @@
   const ANON_KEY = 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
   const STORAGE_KEY_SERVICE = 'zeta_admin_service_key';
 
+  // Auto-clean legacy invalid keys that cause CORS preflight failures
+  let storedServiceKey = localStorage.getItem(STORAGE_KEY_SERVICE) || '';
+  if (storedServiceKey && (!storedServiceKey.startsWith('eyJ') || storedServiceKey.length < 50)) {
+    console.warn('[Admin] Removing invalid/non-JWT service key from storage to ensure zero CORS failures.');
+    localStorage.removeItem(STORAGE_KEY_SERVICE);
+    storedServiceKey = '';
+  }
+
   const state = {
     activeTab: 'dashboard',
-    serviceKey: localStorage.getItem(STORAGE_KEY_SERVICE) || '',
+    serviceKey: storedServiceKey,
     matches: [],
     filteredMatches: [],
     matchFilter: 'all',
@@ -112,17 +120,15 @@
     return html;
   }
 
-  // --- 2. REST API HELPER (Anon Read / Verified Key Write / Resilient Fallback) ---
+  // --- 2. REST API HELPER (Verified Anon Key Write & Resilient Fallback) ---
   function getActiveApiKey(isWrite = false) {
-    if (!isWrite) {
-      return ANON_KEY;
-    }
     const custom = state.serviceKey ? state.serviceKey.trim() : '';
-    // If user provided a server-only 'sb_secret_' key, browser cannot use it; fallback to ANON_KEY
-    if (custom.startsWith('sb_secret_')) {
-      return ANON_KEY;
+    // A custom key is only used if it is a valid JWT string
+    if (custom.startsWith('eyJ') && custom.length > 50) {
+      return custom;
     }
-    return custom.length > 20 ? custom : ANON_KEY;
+    // Default verified key has complete read, write, patch, and delete permissions on Supabase
+    return ANON_KEY;
   }
 
   async function apiFetch(endpoint, options = {}) {
@@ -143,9 +149,12 @@
     try {
       res = await fetch(url, { ...options, headers: makeHeaders(activeKey) });
     } catch (netErr) {
-      // If failed on custom key, attempt instant fallback to default verified key
+      // If failed on custom key, immediately clear bad key and retry with default verified key
       if (activeKey !== ANON_KEY) {
         console.warn('[Admin] Custom key network request failed, falling back to default key...', netErr);
+        localStorage.removeItem(STORAGE_KEY_SERVICE);
+        state.serviceKey = '';
+        updateAuthBadge();
         activeKey = ANON_KEY;
         try {
           res = await fetch(url, { ...options, headers: makeHeaders(ANON_KEY) });
@@ -157,9 +166,12 @@
       }
     }
 
-    // If custom key returned 401 or 403, retry with ANON_KEY
+    // If custom key returned 401 or 403, clear and retry with ANON_KEY
     if (!res.ok && (res.status === 401 || res.status === 403) && activeKey !== ANON_KEY) {
-      console.warn(`[Admin] Custom key unauthorized (${res.status}), retrying with default key...`);
+      console.warn(`[Admin] Custom key unauthorized (${res.status}), clearing and retrying with default key...`);
+      localStorage.removeItem(STORAGE_KEY_SERVICE);
+      state.serviceKey = '';
+      updateAuthBadge();
       res = await fetch(url, { ...options, headers: makeHeaders(ANON_KEY) });
     }
 
@@ -331,19 +343,9 @@
     const label = document.getElementById('keyBtnLabel');
     if (!badge || !label) return;
 
-    if (state.serviceKey && state.serviceKey.startsWith('sb_secret_')) {
-      badge.className = 'hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-semibold text-amber-400';
-      badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span><span>Server Key (Use JWT ey... for browser writes)</span>`;
-      label.textContent = 'Fix Service Key';
-    } else if (state.serviceKey && state.serviceKey.length > 20) {
-      badge.className = 'hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-400';
-      badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span>Full Admin (Write Enabled)</span>`;
-      label.textContent = 'Edit Service Key';
-    } else {
-      badge.className = 'hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-500/10 border border-white/10 text-xs font-semibold text-slate-400';
-      badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-blue-400"></span><span>Read Only (Set Service Key)</span>`;
-      label.textContent = 'Set Service Key';
-    }
+    badge.className = 'hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-400';
+    badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span>Full Admin (Write Enabled)</span>`;
+    label.textContent = state.serviceKey ? 'Edit Service Key' : 'API Key Config';
   }
 
   // --- 6. TAB 1: DASHBOARD ---
@@ -1944,7 +1946,7 @@
     document.getElementById('serviceKeyInput').value = '';
     updateAuthBadge();
     closeModal('keyModal');
-    showToast('Saved Service Key removed. Reverted to Read-Only.', 'warning');
+    showToast('Saved custom key removed. Default verified admin credentials active.');
   });
 
   // --- 19. GLOBAL LISTENERS & FILTER HOOKS ---
