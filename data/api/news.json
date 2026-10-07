@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-10-07T04:34:51.064Z",
+    "generatedAt": "2026-10-07T07:09:16.474Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 723
+      "fullArticlesCount": 726
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,33 @@
     }
   },
   "news": [
+    {
+      "id": "ftbpro_01m49tx735ss",
+      "title": "Three Takeaways From USMNT’s Victory Over Canada That Sealed Perfection",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m49tx735ss/three-takeaways-from-usmnts-victory-over-canada-that-sealed-perfection",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4a3x1ffdzm065845x.jpg",
+      "publishedAt": "2026-10-07T04:04:02.000Z"
+    },
+    {
+      "id": "ftbpro_01m49z5586rw",
+      "title": "Lionel Messi Bids Farewell to Argentina in Poetic, Emotional, Fairytale Last Dance",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m49z5586rw/lionel-messi-bids-farewell-argentina-poetic-emotional-fairytale-last-dance",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4a5kahy0nahmrvtrw.jpg",
+      "publishedAt": "2026-10-07T03:32:55.000Z"
+    },
+    {
+      "id": "ftbpro_01m49sef6dqc",
+      "title": "USMNT Player Ratings vs. Canada: American Boys See Out Perfect Fall Window",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m49sef6dqc/usmnt-player-ratings-vs-canada-american-boys-see-out-perfect-fall-window",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4a1w9dx856tw7sw8d.jpg",
+      "publishedAt": "2026-10-07T02:23:56.000Z"
+    },
     {
       "id": "ftbpro_01m48g6pxn9z",
       "title": "Transfer Rumors: Man Utd’s Gavi Challenge; Four-Way Bidding War for Cherki",
@@ -166,33 +193,6 @@
       "sourceUrl": "/embed/news/01m48dhwfr48/lionel-messis-landmark-argentina-moments-pictures",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_69/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m48v5gr9jpc9j9ft7p.jpg",
       "publishedAt": "2026-10-06T16:30:00.000Z"
-    },
-    {
-      "id": "13x92vs7xzx8b1hp7iojyveic9",
-      "title": "Messi delivers emotional farewell ahead of final Argentina appearance",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/13x92vs7xzx8b1hp7iojyveic9-messi-delivers-emotional-farewell-ahead-final-argentina-appearance",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/30/2b/lionel-messi_a65guad0fsm91rn15dtjicz2y.png?t=356813473&w=1260&h=708",
-      "publishedAt": "2026-10-06T16:08:23.000Z"
-    },
-    {
-      "id": "ftbpro_01m48twd2hzw",
-      "title": "‘This Kind of C---’—Canada’s Jesse Marsch Takes Shot at President Trump",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m48twd2hzw/this-kind-c-canadas-jesse-marsch-takes-shot-at-president-trump",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_27/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m48v43x186rfmjhemk.jpg",
-      "publishedAt": "2026-10-06T16:00:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m48pcagygr",
-      "title": "Two European Giants ‘Monitoring’ Noni Madueke Amid January Transfer Speculation",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m48pcagygr/two-european-giants-monitoring-noni-madueke-amid-january-transfer-speculation",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m48rkdexsezm2xkexe.jpg",
-      "publishedAt": "2026-10-06T15:30:00.000Z"
     }
   ],
   "articles": {
@@ -18073,6 +18073,99 @@
         "The 2024–25 Concacaf Men’s Player of the Year has 43 goals for Canada in 84 international appearances, making him the nation’s all-time leading scorer. He is currently enjoying a strong run of form with Atléti, scoring in the last three club matches.",
         "Anticipated to lead the line for Canada on Tuesday night, it will most likely be USMNT star center back Chris Richards’s job to contain him. Pochettino will hope he is up for the task.",
         "feed. READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m49sef6dqc": {
+      "id": "ftbpro_01m49sef6dqc",
+      "title": "USMNT Player Ratings vs. Canada: American Boys See Out Perfect Fall Window",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/usmnt-player-ratings-vs-canada-american-boys-perfect-fall-10-6-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4a1w9dx856tw7sw8d.jpg",
+      "publishedAt": "2026-10-07T02:23:56.000Z",
+      "paragraphs": [
+        "By Sophia VeselyOct 6, 2026Justin Ellis (right) had the game winner on Tuesday. / Taylor Banner/USSF/Getty ImagesThe U.S. men’s national team saw out a perfect fall, winning its fourth-consecutive match on Tuesday night with a 1–0 result against Canada.",
+        "The affair at Allianz Field in St. Paul—although not as goal-frenzied as the previous wins against Peru, Chile and Mexico—nonetheless proved the Stars and Stripes’ steady dominance and their incredibly bright future.",
+        "It also marked the USMNT’s first win against Canada since 2024 and of manager Mauricio Pochettino’s tenure.",
+        "The Argentine boss will be incredibly pleased with how his team prevailed over the past two weeks and the contributions his several newcomers made, including 19-year-old Justin Ellis’s game-winner in the first half.",
+        "dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC",
+        "Justin Ellis (right) had the game winner on Tuesday. /  Taylor Banner/USSF/Getty ImagesIt was a look of relief, rather than excitement, on Ellis’s face upon scoring in the 29th minute, a goal that would prove to be the game-winner.",
+        "The young striker was no doubt in agonizing pain in that moment, having suffered a major ankle injury less than 10 minutes prior, thanks to a swift kick to the leg from Canadian midfielder Stephen Eustaquio.",
+        "Upon that tackle, Ellis fell immediately to the pitch, curled up, clutching his lower leg. After medical assistance, Ellis was able to stand up by himself, but he had an intense limp. Nevertheless, he refused to leave the pitch. He was on a mission to find the back of the net, no matter how much it hurt.",
+        "So when the opportunity arose just seven minutes later, the teenager wasn’t going to waste it. He didn’t know how much more his ankle had left to give. Sprinting (or rather, hobbling) into Canada’s penalty box, he met a pinpointed cross from fullback Alex Freeman. Ellis threw his leg out frantically, redirecting the ball into the back of the net.",
+        "Pochettino will not soon forget the grit and determination that Ellis showed throughout the first half, and that play alone may have solidified him another call-up in November.",
+        "Alex Freeman was brilliant on Tuesday night. /  David Berding/USSF/Getty Images*Ratings provided by FotMob*",
+        "GK: Brian Schwake—7.3: Solid display in his first-career start, but wasn’t incredibly tested.",
+        "RB: Alex Freeman—8.4: Shut winger Liam Millar down effectively in the corner with strong one-vs.-one defending. His keen vision regarding when to make dangerous runs into the final third—and the foot skills he often employs to do so—continues to set him apart. Had a brilliant assist for Ellis.",
+        "CB: Chris Richards—6.8: Effective in gradually pushing up the backline in possession to put Canada on its back heels.",
+        "CB: George Campbell—6.8: Had a big clearance from the penalty box in the 23rd minute after a moment of carelessness from partner Richards. Almost had an own goal in the 67th minute.",
+        "LB: Auston Trusty—6.7: Performed better at center back than left back this fall. Nonetheless, his ability to do both could make him indispensable for Pochettino moving forward. Trusty is also confident taking control of the air on defensive set-pieces.",
+        "CM: Brooklyn Raines—6.9: Looked much more at ease in the midfield than he did against Chile and carved out a discernible role for himself as distributor and ball-winner. He also pulled some silky moves, much to the Canada defenders’ dismay.",
+        "CM: Yunus Musah—6.1: Had a few bursts of dynamic movement, but mostly looked slow and stiff.",
+        "RW: Giovanni Reyna—6.9: Only player to start all four matches this window. Quickly establishing himself as Pochettino’s right-hand man. Could be a consistent starter in Concacaf Nations League play next month.",
+        "AM: Malik Tillman—7.2: He was everywhere throughout the central zone of the field. His ability to get involved in every facet of the midfield as well as on the front line makes him the creative heartbeat of the attack."
+      ]
+    },
+    "ftbpro_01m49tx735ss": {
+      "id": "ftbpro_01m49tx735ss",
+      "title": "Three Takeaways From USMNT’s Victory Over Canada That Sealed Perfection",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/three-takeaways-usmnt-victory-canada-perfection/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4a3x1ffdzm065845x.jpg",
+      "publishedAt": "2026-10-07T04:04:02.000Z",
+      "paragraphs": [
+        "By Roberto Casillas, Sophia Vesely12:04 AM EDTJustin Ellis scored the game’s only goal. / Omar Vega/Getty ImagesThe U.S. men’s national team cruised to a 1–0 win over Concacaf foe Canada on Tuesday night, marking its fourth-consecutive victory to close out the September-October international window in utter perfection.",
+        "The Stars and Stripes have yet to experience anything other than victory since the end of the 2026 World Cup this summer, suggesting manager Mauricio Pochettino’s bid for a dramatic program refresh is already paying off.",
+        "Although there are several broader points to consider from the team’s two-week international camp (which Sports Illustrated will explore elsewhere), Tuesday’s affair at Allianz Field alone was quite illuminating.",
+        "Here are the three takeaways from the clash in St. Paul.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Giovanni Reyna has earned Mauricio Pochettino’s full trust.  / Chris Coduto/Getty Images Tuesday’s match marked a fourth-consecutive appearance for Giovanni Reyna in the starting lineup. He was the only player to start every match of the September-October international window, in an extreme return to the team’s good graces",
+        "A former wonderkid back in 2020, Reyna soon became better known for his off-field controversies, quick falling completely out of rotation with the national team. He snuck his way back into the player pool just last year, thanks to Pochettino’s unique appreciation for his playing style; however, he was still nothing more than a bench reinforcement for the majority of the 2026 World Cup.",
+        "Now, though, it appears he has fully won over Pochettino’s trust, playing free and flashing the quality that had many once claiming he was a generational talent. He was the most active and dynamic midfielder on the pitch against Canada, critically important for getting his teammates in dangerous attacking spaces.",
+        "Next. Gio Reyna Feature on Family Drama. Once at the Center of USMNT Drama, Gio Reyna Is Writing a Different Story. dark",
+        "Starting four games in a row might seem like a small feat, but it was a telling one this fall, considering how committed Pochettino was to heavily rotating and fully trialing each of his 12 newcomers. It was also a massive deal for Reyna specifically. Last season, injuries and poor form saw him make just four total Bundesliga starts for Borussia Mönchengladbach. He needs opportunities like these to prove he can handle bigger responsibilities and extended periods of time on the pitch.",
+        "Reyna moved to Ligue 1 side Strasbourg this summer and has now started eight-consecutive games for club and country. He’s producing too, scoring a goal for Strasbourg last month and bagging two assists in the opening two games of the international window. He was also at the heart of the USMNT’s opener against Mexico.",
+        "The difference-making quality has always been there, but consistency has been Reyna’s main enemy over the years. Now, the 23-year-old is enjoying himself, and Pochettino is keen to finally help the talented playmaker reach his sky-high potential.",
+        "Justin Ellis (left) was back among the goals.  / Omar Vega/Getty Images 19-year-old Justin Ellis scored Tuesday’s lone goal, crashing the net in the 29th minute off of a darted cross from fullback Alex Freeman. It solidified a theme that has been building up over the past few weeks: Dang, these kids are good.",
+        "Pochettino imparted a lot of trust on his youngsters like Ellis, who were experiencing their very first senior camp, and they repaid himself massively, playing key roles in all four wins.",
+        "Ellis’s game winner wasn’t even the first goal he scored this window. Just four minutes into his debut against Peru, he found the back of the net with a header. In total, seven of the 12 goals scored over the past four matches came from teenagers. The American kids are carrying their weight and have turned the USMNT into a goal-scoring machine.",
+        "Mauricio Pochettino (left) finally got his first win against Jesse Marsch’s Canada.  / Omar Vega/Getty Images The 2030 World Cup cycle has been ignited perfectly for the USMNT, who not only collected its fourth-straight win but has now defeated both of its most bitter rivals, Canada and Mexico. It signified the first time Pochettino has bested either team since taking over the Stars and Stripes in 2024.",
+        "The USMNT didn’t just win either. It completely outplayed its regional foes, doing so with 12 debutants on the roster and devoid of some of the team’s most seasoned players in Weston McKennie, Folarin Balogun and Christian Pulisic. On Tuesday, the Americans slowly but surely wore down Canada and always appeared the side most in control. Mexico was simply embarrassed.",
+        "Ahead of the fall camp, Pochettino’s main ambition wasn’t even winning. The window consisted of four international friendlies, after all. That mindset extended into Tuesday, seeing the manager heavily rotate the side he employed against Mexico. The Argentine boss has been chiefly focused on development, experimenting with new players and his roster for the future.",
+        "Nevertheless, the team has found a way to win, time and time again, which only begs the question: How unstoppable will the USMNT be when winning is actually at the forefront of the mind?",
+        "feed. READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m49z5586rw": {
+      "id": "ftbpro_01m49z5586rw",
+      "title": "Lionel Messi Bids Farewell to Argentina in Poetic, Emotional, Fairytale Last Dance",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/lionel-messi-farewell-argentina-poetic-emotional-fairytale-dance/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4a5kahy0nahmrvtrw.jpg",
+      "publishedAt": "2026-10-07T03:32:55.000Z",
+      "paragraphs": [
+        "By Roberto CasillasOct 6, 2026Lionel Messi’s final Argentina match was a worthy send-off for the greatest of all time.  / Marcelo Endelli/Getty Images (Drone show), Juan Mabromata/AFP/Getty Images (Messi and his kids), Luis Robayo/AFP/Getty Images (Messi, Messi touching chest), Tobias Skarlovnik/Getty Images (Messi drum)In an incredibly emotional night, Lionel Messi played his final game with the Argentina national team. After more than 20 years donning the Albiceleste, Messi closed the book on his international career and Argentina’s most successful era.",
+        "“I promise you that if it was up to me I’d be here my entire life. Because playing for Argentina is the most beautiful thing that can happen to anyone.”",
+        "Argentina defeated Benin 3–0 on Tuesday night in Lionel Messi’s final appearance with La Albiceleste, with him assisting the first two and then scoring the third.",
+        "What transpired during the 90 minutes was as expected. The night as a whole, though, was nothing short of a fairytale.",
+        "Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed",
+        "Lionel Messi scored in his last ever appearance for Argentina.  / Getty ImagesBenin ended up being a much more capable foe than originally thought, perhaps because the African side went against its public game-plan and decided to mark Messi after all. But after a relatively quiet first half in which Messi was still wiping tears, Argentina took over the final 45 minutes.",
+        "La Albiceleste opened the scoring in poetic fashion. Messi floated a corner that was volleyed home by none other than the longest-serving teammate of his international career: Nicolás Otamendi. On a night where the legendary center back also bid farewell to La Albiceleste, his final kick of the ball was a goal assisted by Messi.",
+        "Then came the passing of the torch. Argentina’s second of the night was also assisted by Messi, but it was a simply wonderful curling strike from the player many expect to become his heir: Nico Paz. The 22-year-old attacking midfielder scored a goal straight out of Messi’s catalogue, highlighting why may consider him Argentina’s next great No. 10.",
+        "But Messi needed his goal, and when Agustín Giay was taken down inside the penalty area, the whole world knew what was coming. Messi stepped up and fired a powerful shot into the top corner to score his 126th and final goal for Argentina.",
+        "Three memorable goal involvements in his last Argentina appearance that will be remembered forever. And, if it wasn’t enough, he also created the most chances (four), had the most touches in the opposition’s box (12) and the most shots (nine).",
+        "Lionel Messi could barely keep it together when he delivered his final speech as Argentina’s captain.   / Juan Mabromata/AFP/Getty Images What he produced on the pitch was characteristically sensational. But once the final whistle blew, the entire Monumental braced itself for Messi’s farewell speech. After a drone show depicting Messi’s best moments with Argentina illuminated the night sky and a special musical performance, Messi took the microphone and addressed an entire nation.",
+        "“It’s difficult to say something today,” Messi started. “There’s too many emotions, a lot of things crossing my mind. The first thing I think about is my father. There’s nothing for me to do but say ‘Thank you,’ as I said in my retirement letter.",
+        "“It was a massive honor to defend this shirt for more than 20 years. Even during the worst moments we went through, I never stopped fighting, of giving it my all and being here always. Not coming here anymore will be very painful. I  promise you that if it was up to me, I’d be here my entire life. Because playing for Argentina is the most beautiful thing that can happen to anyone.",
+        "“Even though I wish I could stay here for the rest of my life, I feel like this is the moment.”",
+        "Messi went on to speak on the toll the 2026 World Cup took on him, while also rejecting any conspiracy theories of the team’s poor performance in the final against Spain.",
+        "Messi continued: “I want to thank my teammates for the time I shared with this group. They made me fulfill a childhood dream, winning the World Cup, the Copa América, the Finalissima, champions of everything we played for.”",
+        "“I’m going to miss playing here so much,” he added. “I had the luck to go all over the country, and I always received so much love. I’m very thankful for what I got to live.”",
+        "Lionel Messi was in tear at various points of the night.  / Luis Robayo/AFP/Getty Images Tears streamed down Messi’s face on the way to the stadium, during the national anthem, during the drone show and then in his speech. He wasn’t alone, Lionel Scaloni cried during the anthem, and thousands in attendance were sobbing once the game ended. As Messi continued speaking, Franco Mastantuono, Enzo Fernández, Cristian Romero where among the sobbing Argentina players.",
+        "“Today, here again, I surely it’s time for me to live the saddest day of my career,” Messi said after remembering the celebration after the 2022 World Cup at the Monumental. “Because it’s when I say goodbye to the national team and all of you.”",
+        "“I’m going to miss defending the colors of the national team, but now I’m going to be on that side, with all of you, supporting these guys in whatever comes. Always together.”"
       ]
     },
     "fzhafkysws3g1ux8fnmoe3180": {
