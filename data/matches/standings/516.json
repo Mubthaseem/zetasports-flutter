@@ -2,10 +2,46 @@
   "competitionId": "516",
   "competitionName": "Algerian Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-10-07T12:45:23.691Z",
+  "updatedAt": "2026-10-07T22:48:30.225Z",
   "table": [
     {
       "position": 1,
+      "teamId": "101633",
+      "teamName": "CR Bélouizdad",
+      "shortName": "CR Bélouizdad",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101633.png",
+      "played": 4,
+      "won": 3,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 3,
+      "goalDifference": 3,
+      "points": 10,
+      "form": [
+        "#FFD908"
+      ]
+    },
+    {
+      "position": 2,
+      "teamId": "277392",
+      "teamName": "CS Constantine",
+      "shortName": "CS Constantine",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/277392.png",
+      "played": 4,
+      "won": 2,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 9,
+      "goalsAgainst": 6,
+      "goalDifference": 3,
+      "points": 7,
+      "form": [
+        "#FFD908"
+      ]
+    },
+    {
+      "position": 3,
       "teamId": "101628",
       "teamName": "USM Alger",
       "shortName": "USM Alger",
@@ -19,29 +55,11 @@
       "goalDifference": 3,
       "points": 7,
       "form": [
-        "#FFD908"
+        "#0294F0"
       ]
     },
     {
-      "position": 2,
-      "teamId": "101633",
-      "teamName": "CR Bélouizdad",
-      "shortName": "CR Bélouizdad",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101633.png",
-      "played": 3,
-      "won": 2,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 5,
-      "goalsAgainst": 3,
-      "goalDifference": 2,
-      "points": 7,
-      "form": [
-        "#FFD908"
-      ]
-    },
-    {
-      "position": 3,
+      "position": 4,
       "teamId": "101636",
       "teamName": "MC Oran",
       "shortName": "MC Oran",
@@ -53,43 +71,40 @@
       "goalsFor": 3,
       "goalsAgainst": 0,
       "goalDifference": 3,
-      "points": 6,
-      "form": [
-        "#0294F0"
-      ]
+      "points": 6
     },
     {
-      "position": 4,
+      "position": 5,
       "teamId": "1531341",
       "teamName": "ES Ben Aknoun",
       "shortName": "ES Ben Aknoun",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1531341.png",
-      "played": 3,
+      "played": 4,
       "won": 1,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 0,
-      "goalsFor": 4,
-      "goalsAgainst": 3,
+      "goalsFor": 6,
+      "goalsAgainst": 5,
       "goalDifference": 1,
-      "points": 5
-    },
-    {
-      "position": 5,
-      "teamId": "277392",
-      "teamName": "CS Constantine",
-      "shortName": "CS Constantine",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/277392.png",
-      "played": 3,
-      "won": 1,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 5,
-      "goalsAgainst": 6,
-      "goalDifference": -1,
-      "points": 4
+      "points": 6
     },
     {
       "position": 6,
+      "teamId": "2121859",
+      "teamName": "JS El Biar",
+      "shortName": "JS El Biar",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2121859.png",
+      "played": 4,
+      "won": 1,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 6,
+      "goalDifference": 0,
+      "points": 4
+    },
+    {
+      "position": 7,
       "teamId": "319205",
       "teamName": "CR Temouchent",
       "shortName": "CR Temouchent",
@@ -104,7 +119,7 @@
       "points": 4
     },
     {
-      "position": 7,
+      "position": 8,
       "teamId": "45655",
       "teamName": "ES Sétif",
       "shortName": "ES Sétif",
@@ -119,7 +134,7 @@
       "points": 3
     },
     {
-      "position": 8,
+      "position": 9,
       "teamId": "6353",
       "teamName": "MC Alger",
       "shortName": "MC Alger",
@@ -131,21 +146,6 @@
       "goalsFor": 2,
       "goalsAgainst": 0,
       "goalDifference": 2,
-      "points": 3
-    },
-    {
-      "position": 9,
-      "teamId": "2121859",
-      "teamName": "JS El Biar",
-      "shortName": "JS El Biar",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2121859.png",
-      "played": 3,
-      "won": 1,
-      "drawn": 0,
-      "lost": 2,
-      "goalsFor": 4,
-      "goalsAgainst": 4,
-      "goalDifference": 0,
       "points": 3
     },
     {
@@ -199,13 +199,13 @@
       "teamName": "USM Khenchela",
       "shortName": "USM Khenchela",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1387869.png",
-      "played": 2,
+      "played": 3,
       "won": 0,
       "drawn": 2,
-      "lost": 0,
+      "lost": 1,
       "goalsFor": 1,
-      "goalsAgainst": 1,
-      "goalDifference": 0,
+      "goalsAgainst": 2,
+      "goalDifference": -1,
       "points": 2
     },
     {
@@ -214,13 +214,13 @@
       "teamName": "US Biskra",
       "shortName": "US Biskra",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/316409.png",
-      "played": 3,
+      "played": 4,
       "won": 0,
       "drawn": 2,
-      "lost": 1,
+      "lost": 2,
       "goalsFor": 2,
-      "goalsAgainst": 3,
-      "goalDifference": -1,
+      "goalsAgainst": 7,
+      "goalDifference": -5,
       "points": 2,
       "form": [
         "#FF4646"
