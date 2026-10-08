@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-10-07T22:48:30.708Z",
+    "generatedAt": "2026-10-08T00:54:51.330Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 756
+      "fullArticlesCount": 764
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -15,11 +15,83 @@
   },
   "news": [
     {
-      "id": "ftbpro_01m4bdzem4q7",
-      "title": "4 Premier League Clubs Gilberto Mora Could Join—Ranked",
+      "id": "ftbpro_01m4b54xgdp3",
+      "title": "Why Are Cristiano Ronaldo, Lionel Messi Ending Their International Careers So Differently?",
       "description": "SI",
       "source": "SI",
-      "sourceUrl": "/embed/news/01m4bdzem4q7/4-premier-league-clubs-gilberto-mora-could-joinranked",
+      "sourceUrl": "/embed/news/01m4b54xgdp3/why-are-cristiano-ronaldo-lionel-messi-ending-their-international-careers-so-differently",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_60/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4bb988nrg66b4vc9z.jpg",
+      "publishedAt": "2026-10-08T00:00:01.000Z"
+    },
+    {
+      "id": "ftbpro_01m4bfvj99df",
+      "title": "Transfer Rumors: Mbappe’s €250 Million Premier League Move; Ballon d’Or Winner Eyes Madrid",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m4bfvj99df/transfer-rumors-mbappes-250-million-premier-league-move-ballon-dor-winner-eyes-madrid",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4bk9ej1jffprs47wq.jpg",
+      "publishedAt": "2026-10-07T23:05:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m4bsz5e20h",
+      "title": "‘Panic Button’—Man Utd Make Decision on Carrick As International Break Ends",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m4bsz5e20h/panic-buttonman-utd-make-decision-carrick-international-break-ends",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_53/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4btbsqr0gqqtjkds3.jpg",
+      "publishedAt": "2026-10-07T22:00:00.000Z"
+    },
+    {
+      "id": "1lpj2mnveie9d1et5ep4f97pyt",
+      "title": "McTominay returns to Napoli training following heart procedure",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1lpj2mnveie9d1et5ep4f97pyt-mctominay-returns-napoli-training-following-heart-procedure",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/3/c2/scott-mctominay_1cvqkxze2iasb1b7eptxdht5si.jpg?t=483945921&w=1260&h=708",
+      "publishedAt": "2026-10-07T21:56:16.000Z"
+    },
+    {
+      "id": "ftbpro_01m4bjcrfwq6",
+      "title": "What Does the Future Hold for Christian Pulisic With the USMNT?",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m4bjcrfwq6/what-does-future-hold-christian-pulisic-usmnt",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_42/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4c08j2q8mgpm6r44r.jpg",
+      "publishedAt": "2026-10-07T21:45:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m4asgscnx3",
+      "title": "What Next for Cristiano Ronaldo, Portugal After Wild Statement",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m4asgscnx3/what-next-cristiano-ronaldo-portugal-after-wild-statement",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_816,h_459,x_208,y_31/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4asntmy1wb2qdhgss.jpg",
+      "publishedAt": "2026-10-07T21:30:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m4byk7zy0r",
+      "title": "Man Utd Injuries: Three Changes Carrick Has to Make on Premier League Return",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m4byk7zy0r/man-utd-injuries-three-changes-carrick-has-make-premier-league-return",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_2/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4c2hg8x0wc10sbpzv.jpg",
+      "publishedAt": "2026-10-07T21:15:48.000Z"
+    },
+    {
+      "id": "8wxwp6t0j00l1a7ppgt10cly5",
+      "title": "Rogers rates start to Chelsea career '10 out of 10'",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/8wxwp6t0j00l1a7ppgt10cly5-rogers-rates-start-chelsea-career-10-out-10",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e4/60/morgan-rogers_189cyclyzea1k13e5rw6cd847t.jpg?t=477997985&w=1260&h=708",
+      "publishedAt": "2026-10-07T20:56:17.000Z"
+    },
+    {
+      "id": "ftbpro_01m4bdzem4q7",
+      "title": "Four Premier League Clubs Gilberto Mora Could Join—Ranked",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m4bdzem4q7/four-premier-league-clubs-gilberto-mora-could-joinranked",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_19/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4bhf8prqwjd1mza36.jpg",
       "publishedAt": "2026-10-07T20:30:00.000Z"
     },
@@ -121,78 +193,6 @@
       "sourceUrl": "/news/6lmuspwn4fw91g6o759ij8g42-colombia-youngsters-are-adapting-quickly-says-lorenzo-after-win-over-peru",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/61/a7/nestor-lorenzo_x6ph90dkc14x10i4flzpp565n.jpg?t=449769921&w=1260&h=708",
       "publishedAt": "2026-10-07T16:47:05.000Z"
-    },
-    {
-      "id": "ftbpro_01m4b8ayfv0b",
-      "title": "The Winners, Losers From USMNT’s Faultless World Cup Return",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m4b8ayfv0b/winners-losers-from-usmnts-faultless-world-cup-return",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4b8ke4kner1sa8p5q.jpg",
-      "publishedAt": "2026-10-07T16:30:00.000Z"
-    },
-    {
-      "id": "d7qtkbyeoigu1nwlfv7pw2yzb",
-      "title": "Marquez concedes Mexico must get better after being booed off versus Chile",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/d7qtkbyeoigu1nwlfv7pw2yzb-marquez-concedes-mexico-must-get-better-after-being-booed-off-versus-chile",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ff/84/rafael-marquez_f0v8fwxemihk1pjl4ecfm4zma.jpg?t=444929921&w=1260&h=708",
-      "publishedAt": "2026-10-07T16:06:15.000Z"
-    },
-    {
-      "id": "ftbpro_01m4b3cak2hb",
-      "title": "‘Punished With a Ban’—Cristiano Ronaldo Facing Portugal Sanction Over Actions",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m4b3cak2hb/punished-bancristiano-ronaldo-facing-portugal-sanction-over-actions",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_11/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4b3gp9kbe4hy528wh.jpg",
-      "publishedAt": "2026-10-07T16:00:00.000Z"
-    },
-    {
-      "id": "dgh3ftf8qt001ovzru97yb3kx",
-      "title": "Former Barcelona and Chelsea winger Pedro retires",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/dgh3ftf8qt001ovzru97yb3kx-former-barcelona-chelsea-winger-pedro-retires",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/80/92/pedro_13mqe9d1yvl181mj8xubl6po.jpg?t=440901217&w=1260&h=708",
-      "publishedAt": "2026-10-07T15:30:47.000Z"
-    },
-    {
-      "id": "1t0v74ur0e6xm1msp6rlpwasej",
-      "title": "'He made me grow' – De Paul leads Messi tributes after Argentina farewell",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1t0v74ur0e6xm1msp6rlpwasej-he-made-me-grow-de-paul-leads-messi-tributes-after-argentina-farewell",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/31/7/lionel-messi-and-rodrigo-de-paul_1eks8qvfe0n011kfusjz86pdtu.jpg?t=438171153&w=640&h=360",
-      "publishedAt": "2026-10-07T15:10:28.000Z"
-    },
-    {
-      "id": "ftbpro_01m4b8ydvajp",
-      "title": "‘Tariff-Based System’—The Sanctions Rival Clubs Want Man City to Face",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m4b8ydvajp/tariff-based-systemthe-sanctions-rival-clubs-want-man-city-face",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1023,h_575,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4b9hse557jsgez79r.jpg",
-      "publishedAt": "2026-10-07T15:00:02.000Z"
-    },
-    {
-      "id": "ftbpro_01m4asgs4aa2",
-      "title": "Harry Kane Joins Lionel Messi, Cristiano Ronaldo Club on Record-Equaling Night",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m4asgs4aa2/harry-kane-joins-lionel-messi-cristiano-ronaldo-club-record-equaling-night",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_821,h_461,x_180,y_51/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4az9n1bh4cqepc90c.jpg",
-      "publishedAt": "2026-10-07T14:45:00.000Z"
-    },
-    {
-      "id": "f8fr19a72bf81qm6goqdto6sz",
-      "title": "Arteta says 'this is only the beginning' after signing new Arsenal contract",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/f8fr19a72bf81qm6goqdto6sz-arteta-says-this-is-only-beginning-after-signing-new-arsenal-contract",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/4/40/mikel-arteta_trl7zka55u6g19drrrlzdclj0.jpg?t=427301729&w=1260&h=708",
-      "publishedAt": "2026-10-07T14:15:08.000Z"
     }
   ],
   "articles": {
@@ -2858,6 +2858,27 @@
         "&quot;I was looking at my options and Newcastle was the best one.&quot;"
       ],
       "html": "<p>Nico Gonzalez believes his move to Newcastle United this summer was the best decision&nbsp;he could have ever made after enjoying a strong start to life at St. James&#39; Park.&nbsp;</p>\n\n<p>Nico put pen to paper on a long-term contract in August for a reported £52m after spending just 18 months with fellow Premier League side Manchester City.&nbsp;</p>\n\n<p>The 24-year-old made 59 appearances for City in all competitions, with 40 of those being starts, scoring four goals before being found surplus to requirements.&nbsp;</p>\n\n<p>Newcastle signed the Spaniard after both Sandro Tonali and Bruno Guimaraes departed for big-money fees to Tottenham and Arsenal, respectively.&nbsp;</p>\n\n<p>And Nico has wasted little time in getting used to his new surroundings, ranking sixth in Newcastle&#39;s squad for successful passes (155) despite only playing four matches.</p>\n\n<p>He has played a crucial role in&nbsp;Newcastle&#39;s Premier League campaign under new boss&nbsp;Matthias Jaissle so far this season, and Nico revealed the atmosphere he experienced as an away player at St. James&#39; was a part of his decision.&nbsp;</p>\n\n<p>&quot;Those moments [the unveiling] were in the middle of so many different emotions,&quot;&nbsp;Gonzalez said in an interview with Sky Sports.</p>\n\n<p>&quot;Leaving City, coming here and feeling that, was the best decision I could have ever made.&quot;</p>\n\n\n<p>Jaissle&#39;s eight points are the most by a manager in his first five Premier League games in charge of Newcastle since Alan Pardew in January 2011 (nine).</p>\n\n<p>A win&nbsp;against Coventry City next Monday would give him the most points in his first six in charge of the club in the competition (11) since Sam Allardyce in September 2007 (11).</p>\n\n<p>During his time under Pep Guardiola, Nico ranked fourth in City&#39;s squad for tackles won (56), successful passes (2,908) and duels won (212).&nbsp;</p>\n\n<p>However, he failed to nail down a starting spot, and with the additions of Elliot Anderson, Enzo Fernandez and&nbsp;Ayyoub Bouaddi this summer, Nico acknowledged it was time to move on and pursue another challenge away from the Etihad Stadium.&nbsp;</p>\n\n<p>&quot;It was a huge opportunity for me,&quot; Gonzalez added.&nbsp;</p>\n\n<p>&quot;I was obviously at a top, top club in Manchester City, but I think Newcastle have been amazing the last few years and have even more potential, so I think we are a top team.&nbsp;</p>\n\n<p>&quot;The best thing is not about being in the best club; it&#39;s about enjoying football and being the best that you can, and helping the team.</p>\n\n<p>&quot;I was looking at my options and Newcastle was the best one.&quot;</p>\n"
+    },
+    "1lpj2mnveie9d1et5ep4f97pyt": {
+      "id": "1lpj2mnveie9d1et5ep4f97pyt",
+      "title": "McTominay returns to Napoli training following heart procedure",
+      "subtitle": "Scott McTominay underwent a procedure to correct an issue with his heartbeat last month, but he is now available again for Napoli.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1lpj2mnveie9d1et5ep4f97pyt-mctominay-returns-napoli-training-following-heart-procedure",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/3/c2/scott-mctominay_1cvqkxze2iasb1b7eptxdht5si.jpg?t=483945921&w=1200&h=630",
+      "publishedAt": "2026-10-07T21:56:16.000Z",
+      "paragraphs": [
+        "Napoli have confirmed Scott McTominay is back in team training and available for selection after undergoing a minor heart procedure.",
+        "At the end of August, the Partenopei announced McTominay had been diagnosed with a &quot;mild benign arrhythmia&quot; that would require surgery and sideline him until the international break.",
+        "He subsequently missed four games for his club – three in Serie A and a 1-0 defeat to Arsenal in the Champions League – and was left out of Scotland&#39;s squad for their opening four Nations League fixtures.&nbsp;",
+        "Scotland earned four points in his absence, with their only victory thus far under Sebastien Pocognoli coming away to North Macedonia (2-0).",
+        "McTominay&#39;s club face a packed schedule before the next international break in November, with Saturday&#39;s meeting with Frosinone kickstarting a run of nine matches in just over four weeks, both domestically and in Europe.",
+        "But the midfielder will be available for selection, after Napoli released a positive update on his condition on Wednesday.",
+        "They said: &quot;Today, Scott McTominay underwent further diagnostic tests, which confirm his fitness for competitive activity.&nbsp;",
+        "&quot;Therefore, the Azzurri player has resumed training with the group after a period of personalised work on the pitch.&quot;",
+        "McTominay has been an enormous success since joining Napoli in 2024, scoring 27 goals in 82 appearances and playing a key role in their Scudetto triumph under Antonio Conte in 2024-25."
+      ],
+      "html": "<p>Napoli have confirmed Scott McTominay is back in team training and available for selection after undergoing a minor heart procedure.</p>\n\n<p>At the end of August, the Partenopei announced McTominay had been diagnosed with a &quot;mild benign arrhythmia&quot; that would require surgery and sideline him until the international break.</p>\n\n<p>He subsequently missed four games for his club – three in Serie A and a 1-0 defeat to Arsenal in the Champions League – and was left out of Scotland&#39;s squad for their opening four Nations League fixtures.&nbsp;</p>\n\n<p>Scotland earned four points in his absence, with their only victory thus far under Sebastien Pocognoli coming away to North Macedonia (2-0).</p>\n\n<p>McTominay&#39;s club face a packed schedule before the next international break in November, with Saturday&#39;s meeting with Frosinone kickstarting a run of nine matches in just over four weeks, both domestically and in Europe.</p>\n\n<p>But the midfielder will be available for selection, after Napoli released a positive update on his condition on Wednesday.</p>\n\n\n<p>They said: &quot;Today, Scott McTominay underwent further diagnostic tests, which confirm his fitness for competitive activity.&nbsp;</p>\n\n<p>&quot;Therefore, the Azzurri player has resumed training with the group after a period of personalised work on the pitch.&quot;</p>\n\n<p>McTominay has been an enormous success since joining Napoli in 2024, scoring 27 goals in 82 appearances and playing a key role in their Scudetto triumph under Antonio Conte in 2024-25.</p>\n"
     },
     "1lt0gsy8rcp0m114v5x2uuvnoz": {
       "id": "1lt0gsy8rcp0m114v5x2uuvnoz",
@@ -6179,6 +6200,47 @@
         "The Three Lions visit Croatia for their third Nations League game on Saturday, before Czechia visit Wembley to round off this international break next Tuesday."
       ],
       "html": "<p>Anthony Gordon said he had been &quot;dying&quot; to play with Trent Alexander-Arnold for England, after the duo combined to great effect in Tuesday&#39;s Nations League win over Czechia.</p>\n\n<p>The Three Lions bounced back from their 3-2 defeat to Spain with a 2-0 victory in Prague, with Gordon and Harry Kane on target following Pavel Sulc&#39;s red card.</p>\n\n<p>Gordon&#39;s goal – which was the first he has scored with his head for his country – took him to eight goal involvements in his last nine appearances for England (four goals, four assists).</p>\n\n<p>Gordon was also on target against Spain on Saturday, and he is just the second Barcelona player to score in back-to-back games for England, after Gary Lineker in 1989.</p>\n\n<p>He was picked out superbly by Alexander-Arnold&#39;s deep delivery to the far post, with the Real Madrid full-back winning his first cap in over a year, having been omitted from Thomas Tuchel&#39;s squads throughout last season and for the World Cup.</p>\n\n<p>Alexander-Arnold&#39;s assist was his first&nbsp;for England since September 2024, against Finland in the last edition of the Nations League, under Lee Carsley.</p>\n\n<p>&quot;I make that run time and time again and only a certain number of players have that ability, technique and bravery to be willing to make the mistake trying that pass,&quot; Gordon said of Alexander-Arnold, talking to ITV Sport after the game.</p>\n\n<p>&quot;That&#39;s why he&#39;s so good and I&#39;ve been dying to play with him for that reason.</p>\n\n<p>&quot;He&#39;s had his own journey with England. He would&#39;ve liked to have played more than he has, but he&#39;s been a great character during this camp, I&#39;ve really enjoyed being around him.&quot;</p>\n\n\n<p>When those comments were put to Alexander-Arnold, he replied: &quot;It&#39;s a great compliment, and he&#39;s great to play with.&nbsp;</p>\n\n<p>&quot;I spoke to Ant at half-time and said, &#39;if I&#39;m getting into those spaces, make sure you get to the back post&#39;. You don&#39;t expect to get it that fast, but we did and it worked.</p>\n\n<p>&quot;I try to get the ball and try and see what the best play is, to try and play forward and create something, and I was able to make that pass.</p>\n\n<p>&quot;When they go down to 10 men there&#39;s more pressure on us to win the game, but actually it makes it more difficult, they get very compact and defend.&nbsp;</p>\n\n<p>&quot;It was very hard to break them down, but we got that early on in the second half, which is what we needed.&quot;</p>\n\n<p>Reflecting on his time out of the England setup, Alexander-Arnold – who has won on 20 of his 27 international starts – added: &quot;It&#39;s always an honour to represent my country.&nbsp;</p>\n\n<p>&quot;It&#39;s been a long time, but I&#39;ve always believed I can play for England. It was about proving it at club level. The manager gave me a chance, and hopefully he is happy with how I played.&quot;</p>\n\n<p>The Three Lions visit Croatia for their third Nations League game on Saturday, before Czechia visit Wembley to round off this international break next Tuesday.</p>\n"
+    },
+    "8wxwp6t0j00l1a7ppgt10cly5": {
+      "id": "8wxwp6t0j00l1a7ppgt10cly5",
+      "title": "Rogers rates start to Chelsea career '10 out of 10'",
+      "subtitle": "Chelsea are preparing to resume their Premier League campaign, and Morgan Rogers has enjoyed every minute since arriving from Aston Villa.",
+      "source": "FotMob",
+      "sourceUrl": "/news/8wxwp6t0j00l1a7ppgt10cly5-rogers-rates-start-chelsea-career-10-out-10",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e4/60/morgan-rogers_189cyclyzea1k13e5rw6cd847t.jpg?t=477997985&w=1200&h=630",
+      "publishedAt": "2026-10-07T20:56:17.000Z",
+      "paragraphs": [
+        "Morgan Rogers would rate the start of his Chelsea career as a 10 out of 10, even if the Blues&#39; results have been mixed ahead of Saturday&#39;s meeting with Bournemouth.",
+        "After winning their first two Premier League games under Xabi Alonso, Chelsea went into the international break on a three-game winless run (D1 L2), being trounced 3-0 by Brentford last time out.",
+        "They sit 10th in the table ahead of hosting Bournemouth, who are themselves 17th with three points, having failed to win any of their first five games under Marco Rose.&nbsp;",
+        "Rogers&#39; individual statistics have been strong, though, as he has three goals and one assist already this season, following his British-record £117m move from Aston Villa.",
+        "Only Joao Pedro (three goals, three assists) has more goal involvements for the Blues in the Premier League this campaign.",
+        "During an interview with The Standard during the international break, the England midfielder was asked to rate his start to the season and replied: &quot;10 –&nbsp;I&#39;ve enjoyed it.&nbsp;",
+        "&quot;I&#39;m feeling as good as I&#39;ve ever felt. I&#39;m playing, contributing, scoring goals, assists, creating chances, as good as I have ever done in my career. So why would it not be a 10?",
+        "&quot;It was time for me to take that next step and I feel like I want to be seen as one of the best players in the Premier League, one of the best players in the world.&nbsp;",
+        "&quot;To do so, I needed to take that next step and start that next chapter.&nbsp;",
+        "&quot;I need to play with the best players in the world and compete with the best players in the world, and on that bigger stage, and I just feel Chelsea brings that different level of pressure of having to win and having to perform in each game.",
+        "&quot;I think people will judge me on a higher pedestal because of what I&#39;m delivering. I want to show what I&#39;m about.&quot;",
+        "Alonso said prior to the international break that he hoped Joao Pedro would recover from injury in time to face Bournemouth, but the Cherries have their own selection issues.",
+        "Midfielder Alex Scott is expected to miss between six and eight weeks after sustaining a quadriceps tendon injury on his England debut, having played 70 minutes of the Three Lions&#39; 7-0 rout of Croatia last Saturday.",
+        "Bournemouth are reportedly unhappy with England&#39;s handling of Scott&#39;s condition, but Thomas Tuchel insisted earlier this week that there was no wrongdoing on their part.",
+        "&quot;With Alex, it&#39;s a strange one, I&#39;m very sad about it,&quot; Tuchel said.&nbsp;",
+        "&quot;He trained in full before Croatia, he did extra work after the training sessions. We knew he was having treatment, but there were only green lights from him and the medics.",
+        "&quot;When we were aware there was slight discomfort during the match and asked if he wanted to come off, he said no. After the match, he said he could have played 90 minutes and didn&#39;t feel an injury. It&#39;s a strange one. There was zero risk taken from our side.&quot;",
+        "Chelsea – Morgan Rogers",
+        "Only Gonzalo Garcia (32) and Erling Haaland (27) have made more cross-option runs in the 2026-27 Premier League than Chelsea midfielder Rogers (20),",
+        "Meanwhile, only Garcia (23), Bryan Mbeumo (21), and Matheus Cunha (18) have made more in-possession runs ending in a shot for their team&nbsp;than Rogers&#39; 18, a figure that puts him level with team-mate Cole Palmer.",
+        "Chelsea&#39;s five league games under Alonso have seen 22 total goals scored (10 for, 12 against), while the Spaniard&#39;s six managerial meetings with Rose have averaged 3.8 goals per game (12 for, 11 against).",
+        "Should Saturday&#39;s contest&nbsp;become stretched, Rayan – who scored just his second goal for Brazil during the international break, against Australia – could provide a major threat.",
+        "MATCH PREDICTION – CHELSEA WIN",
+        "Chelsea are unbeaten in their last nine Premier League games against Bournemouth (W4 D5), with each of the last three ending level.",
+        "Three of Bournemouth&#39;s four Premier League wins against Chelsea have come away from home, though, with those three victories being their only clean sheets at Stamford Bridge.",
+        "Bournemouth have opened a Premier League campaign with five winless matches for only the second time, after also drawing three and losing two in 2023-24.",
+        "Rose is the second manager to fail to win his first five top-flight matches in charge of the Cherries, though the other was his predecessor Andoni Iraola (first nine).",
+        "Whatever the result, goals appear to be guaranteed when Chelsea are involved.",
+        "Chelsea have conceded the most goals in the Premier League this term (12) and could become the third team to ever concede multiple goals in each of their opening six matches of a campaign, after Everton in 1994-95 and Derby County in 2000-01."
+      ],
+      "html": "<p>Morgan Rogers would rate the start of his Chelsea career as a 10 out of 10, even if the Blues&#39; results have been mixed ahead of Saturday&#39;s meeting with Bournemouth.</p>\n\n<p>After winning their first two Premier League games under Xabi Alonso, Chelsea went into the international break on a three-game winless run (D1 L2), being trounced 3-0 by Brentford last time out.</p>\n\n<p>They sit 10th in the table ahead of hosting Bournemouth, who are themselves 17th with three points, having failed to win any of their first five games under Marco Rose.&nbsp;</p>\n\n<p>Rogers&#39; individual statistics have been strong, though, as he has three goals and one assist already this season, following his British-record £117m move from Aston Villa.</p>\n\n<p>Only Joao Pedro (three goals, three assists) has more goal involvements for the Blues in the Premier League this campaign.</p>\n\n<p>During an interview with The Standard during the international break, the England midfielder was asked to rate his start to the season and replied: &quot;10 –&nbsp;I&#39;ve enjoyed it.&nbsp;</p>\n\n<p>&quot;I&#39;m feeling as good as I&#39;ve ever felt. I&#39;m playing, contributing, scoring goals, assists, creating chances, as good as I have ever done in my career. So why would it not be a 10?</p>\n\n<p>&quot;It was time for me to take that next step and I feel like I want to be seen as one of the best players in the Premier League, one of the best players in the world.&nbsp;</p>\n\n<p>&quot;To do so, I needed to take that next step and start that next chapter.&nbsp;</p>\n\n<p>&quot;I need to play with the best players in the world and compete with the best players in the world, and on that bigger stage, and I just feel Chelsea brings that different level of pressure of having to win and having to perform in each game.</p>\n\n<p>&quot;I think people will judge me on a higher pedestal because of what I&#39;m delivering. I want to show what I&#39;m about.&quot;</p>\n\n\n<p>Alonso said prior to the international break that he hoped Joao Pedro would recover from injury in time to face Bournemouth, but the Cherries have their own selection issues.</p>\n\n<p>Midfielder Alex Scott is expected to miss between six and eight weeks after sustaining a quadriceps tendon injury on his England debut, having played 70 minutes of the Three Lions&#39; 7-0 rout of Croatia last Saturday.</p>\n\n<p>Bournemouth are reportedly unhappy with England&#39;s handling of Scott&#39;s condition, but Thomas Tuchel insisted earlier this week that there was no wrongdoing on their part.</p>\n\n<p>&quot;With Alex, it&#39;s a strange one, I&#39;m very sad about it,&quot; Tuchel said.&nbsp;</p>\n\n<p>&quot;He trained in full before Croatia, he did extra work after the training sessions. We knew he was having treatment, but there were only green lights from him and the medics.</p>\n\n<p>&quot;When we were aware there was slight discomfort during the match and asked if he wanted to come off, he said no. After the match, he said he could have played 90 minutes and didn&#39;t feel an injury. It&#39;s a strange one. There was zero risk taken from our side.&quot;</p>\n\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>Chelsea – Morgan Rogers</strong></p>\n\n<p>Only Gonzalo Garcia (32) and Erling Haaland (27) have made more cross-option runs in the 2026-27 Premier League than Chelsea midfielder Rogers (20),</p>\n\n<p>Meanwhile, only Garcia (23), Bryan Mbeumo (21), and Matheus Cunha (18) have made more in-possession runs ending in a shot for their team&nbsp;than Rogers&#39; 18, a figure that puts him level with team-mate Cole Palmer.</p>\n\n<p><strong>Bournemouth – Rayan</strong></p>\n\n<p>Chelsea&#39;s five league games under Alonso have seen 22 total goals scored (10 for, 12 against), while the Spaniard&#39;s six managerial meetings with Rose have averaged 3.8 goals per game (12 for, 11 against).</p>\n\n<p>Should Saturday&#39;s contest&nbsp;become stretched, Rayan – who scored just his second goal for Brazil during the international break, against Australia – could provide a major threat.</p>\n\n<p><strong>MATCH PREDICTION – CHELSEA WIN</strong></p>\n\n<p>Chelsea are unbeaten in their last nine Premier League games against Bournemouth (W4 D5), with each of the last three ending level.</p>\n\n<p>Three of Bournemouth&#39;s four Premier League wins against Chelsea have come away from home, though, with those three victories being their only clean sheets at Stamford Bridge.</p>\n\n<p>Bournemouth have opened a Premier League campaign with five winless matches for only the second time, after also drawing three and losing two in 2023-24.</p>\n\n<p>Rose is the second manager to fail to win his first five top-flight matches in charge of the Cherries, though the other was his predecessor Andoni Iraola (first nine).</p>\n\n<p>Whatever the result, goals appear to be guaranteed when Chelsea are involved.</p>\n\n<p>Chelsea have conceded the most goals in the Premier League this term (12) and could become the third team to ever concede multiple goals in each of their opening six matches of a campaign, after Everton in 1994-95 and Derby County in 2000-01.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Chelsea – 51.8%</p>\n\n<p>Bournemouth – 25.3%</p>\n\n<p>Draw – 22.9%</p>\n"
     },
     "93xk30jysn77zgdkem0o1kez": {
       "id": "93xk30jysn77zgdkem0o1kez",
@@ -18626,6 +18688,37 @@
         "The loyal base Messi will be joining earned their own gushing praise from the departing captain. “I was lucky enough to travel across the country and always received so much love,” he beamed."
       ]
     },
+    "ftbpro_01m4asgscnx3": {
+      "id": "ftbpro_01m4asgscnx3",
+      "title": "What Next for Cristiano Ronaldo, Portugal After Wild Statement",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/what-next-for-cristiano-ronaldo-portugal-wild-statement/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_816,h_459,x_208,y_31/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4asntmy1wb2qdhgss.jpg",
+      "publishedAt": "2026-10-07T21:30:00.000Z",
+      "paragraphs": [
+        "By James Cormack5:30 PM EDTCristiano Ronaldo’s ridiculously long statement has hardly salvaged the situation. / Jose Manuel Alvarez Rey/Getty ImagesJorge Jesus is minutes into his press conference ahead of Portugal’s Nations League duel with Denmark.",
+        "The 72-year-old squirms in his chair as the self-respect he’s developed over a coaching career spanning 36 years, during which he collected titles on three continents, seeps out of him with each gushing word. He’s begrudgingly maneuvered through five of the pre-arranged points to get across to the group of journalists in front, manifesting as a pack of hyenas. They smell weakness.",
+        "And then comes the killer blow. Jesus clears his throat and unleashes: &#34;I made a mistake by putting someone of the stature of Pelé or [Diego] Maradona on to warm up and then not putting him in the game. If it were today I would not do it.&#34;",
+        "That’s it; he’s cleared the point of no return. He’s at the mercy of a 41-year-old man-child desperate to save face after an embarrassing ordeal.",
+        "Of course, the aforementioned affair merely occurred in the increasingly fantastical world of Cristiano Ronaldo. The public resolution he sought from Jesus never arrived—the manager’s second broken promise—sparking his withdrawal from the Portuguese camp.",
+        "The sequence of events, culminating in a near-2,000-word statement that only Piers Morgan would endorse, has ignited serious doubt over Ronaldo’s future with the national team. While his great contemporary rival, Lionel Messi, has just celebrated the most dignified of farewells, Ronaldo is seemingly bowing out of the international stage on very different terms.",
+        "We’re not going to run you through a play-by-play of Ronaldo’s tirade, published across 10 slides on an Instagram post.",
+        "In summary, Ronaldo left Portugal’s camp due to Jesus twice “breaking his word.” In the player’s account of events, the manager told him before this extended break that he’d play the first and fourth matches, also suggesting that his captain remained in Portugal while the team travelled to Norway and Denmark to leave him in the best physical condition.",
+        "This plan was rejected by Ronaldo, who was substituted without fuss in the win over Wales, and told on the day of the Norway match by Jesus that he’d play 30 minutes in Oslo. That cameo, however, never came to pass, sparking Ronaldo’s outburst.",
+        "The manager’s “absolute breach of trust”was complete when he went back on a decision to present an agreed version of events to the media ahead of the Denmark match, which he laid out in private alongside Al Nassr’s sporting ‌director Simão Coutinho. It was an eight-point document that outlined Jesus’ mistake in Oslo (making Ronaldo warm up but not bringing him on) and included the aforementioned comparison to Pelé and Diego Maradona.",
+        "“It was the second time he had broken his word to me,” Ronaldo wrote. “I decided ​to leave the training camp without waiting for any further broken promises.”",
+        "The 41-year-old admirably offered some respite from the self-indulgence by presenting several genuinely apologetic sequences to his teammates and the “Portuguese people”, admitting that he should never have left camp in the manner he did.",
+        "“The responsibility is exclusively mine,” Ronaldo noted.",
+        "Ronaldo is the most prolific goalscorer in international soccer. / Octavio Passos/Getty ImagesDespite an underwhelming World Cup that returned three goals and a premature elimination at the hands of eventual champions Spain, Ronaldo said he left the tournament with a “clear conscience” but wouldn’t rush into a decision regarding his future with the national team.",
+        "“It was my last World Cup, yes. But as for the rest, there’s time to think, to be with my family, and not say things in the heat of the moment,” the 41-year-old said.",
+        "He admitted in September that retirement was considered in the summer, but ultimately came to the conclusion that he’ll “finish when I feel like I'm not doing anything here [with the national team.” Ronaldo had thus committed to another cycle, potentially bowing out at Euro 2028.",
+        "The fallout with Jesus, whose appointment he described as the “right choice” upon his arrival, may bring forward his final international outing, even though Portugal’s captain has no plans to retire in the immediate aftermath.",
+        "“I can promise all my fans, naturally and especially all Portuguese people, that we will have one or more farewell matches; there will be time for that,” Ronaldo wrote in his statement.",
+        "Portugal has made a perfect start to its Nations League campaign. / Octavio Passos/Getty ImagesAt the end of his statement, Ronaldo speculated about a potential suspension he may be subject to after storming out of camp, but said he “will be available” for Portugal if he is “physically well” and still scoring goals for Al Nassr in the Saudi Pro League. Jesus is open to reconciliation, too.",
+        "The merged September–October break concluded with Portugal winning all four of its games after goals from João Cancelo and Ronaldo’s replacement Gonçalo Ramos helped the Iberians come from behind to beat Norway on Matchday 4."
+      ]
+    },
     "ftbpro_01m4at50k8s3": {
       "id": "ftbpro_01m4at50k8s3",
       "title": "Barcelona, Real Madrid Learn Familiar Identity of El Clasico Referee",
@@ -18756,6 +18849,37 @@
         "feed. READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m4b54xgdp3": {
+      "id": "ftbpro_01m4b54xgdp3",
+      "title": "Why Are Cristiano Ronaldo, Lionel Messi Ending Their International Careers So Differently?",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/why-cristiano-ronaldo-lionel-messi-ending-international-careers-so-differently/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_60/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4bb988nrg66b4vc9z.jpg",
+      "publishedAt": "2026-10-08T00:00:01.000Z",
+      "paragraphs": [
+        "By Andrew Headspeath8:00 PM EDTRonaldo and Messi’s careers have taken different paths. / Pat Elmont/Karl Bridgeman/FIFA/Getty ImagesEver since they finished first and second in the Ballon d’Or vote back in 2008, the careers of Cristiano Ronaldo and Lionel Messi have been irrevocably intertwined.",
+        "From that moment, a previously unseen breed of superstar ushered in a new age for soccer as they went on to dominate, change and then transcend the sport itself.",
+        "Powered by the rise in social media and its rabid, fiercely tribal fanbases, the Messi-Ronaldo era brought forth a fresh obsession with stats, individualism and the GOAT question—keeping the two men locked and linked for all eternity. If you’re reading this then you already have a side in the debate.",
+        "For many years, their careers seemed to run parallel in a constant game of one-upmanship. Then things changed.",
+        "As of the start of October 2026, Messi has just been given a lavish, tear-filled, highly indulgent send off by Argentina after his 208th and final appearance—complete with a drone-led light show and fireworks in Buenos Aires. Meanwhile, several thousand miles away Ronaldo is locked in a war of words with Portugal manager Jorge Jesus amid a self-imposed exile from the national team.",
+        "It’s hard to think of two more contrasting ends for the two greatest players of all time.",
+        "Lionel Messi scored at his farewell party. / Martin Zabala/Xinhua/Getty ImagesThe September-October international break would hardly have been a key marker in anyone’s calendar at the start of the year, but it could yet go down in history as the moment when both Messi and Ronaldo exited the international soccer stage.",
+        "Messi’s last tango had been carefully choreographed since the summer, with the 39-year-old making it clear that the 2026 World Cup would be his last. When Argentina lost in the final to Spain, the Argentine Football Association (AFA) made sure to set up a friendly match specifically to give their departing hero a fitting farewell.",
+        "Benin was the chosen opponent, with 85,000 attending the Monumental Stadium to give thanks to Messi, say goodbye and be a part of a moment in soccer history. With the Benin players acting as little more than props on Messi’s big day, the man himself capped a 3–0 win with a late penalty.",
+        "It was the dream send off for any player and a grand tribute to a player whose success was not pre-ordained, but someone who earned his legend—overcoming a series of failures with the national team to become a double Copa América winner and world champion.",
+        "Messi could’ve played for Spain. He could’ve stayed retired in 2016. In the early years, he left some fans cold. Ultimately, the 39-year-old superstar had to fight for a long time to become beloved by his country, but by the end there was not a dry eye in the house.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Watching on from the other side of the world, Ronaldo may have wondered: “Why not me?”",
+        "After all, only Ronaldo has more international caps and more international goals than Messi in all of men’s soccer. He has played in as many World Cups as the Argentine, won the European Championship in 2016 and two UEFA Nations League titles.",
+        "And yet, instead of being indulged, celebrated and cried over, the 41-year-old is being cast aside. After being left on the bench for the Nations League win over Norway, Ronaldo made the decision to leave the Portugal camp, later releasing an extraordinary statement accusing manager Jesus of breaking his promises.",
+        "In one particularly ill-advised segment of the statement was an eight-point plan Ronaldo and others had agreed for Jesus to say at a press conference, which featured the toe-curling wording: “I made a mistake by putting someone of the stature of Pelé or Maradona on to warm up and then not putting him in the game. If it were today I would not do it.”",
+        "The full statement—declared as the “purest of truths”—bristles with ego and hurt feelings. Had Messi’s love-in not been running parallel, might Ronaldo’s almighty tantrum have been avoided entirely?",
+        "Ronaldo is beloved by Portugal fans. / Diogo Cardoso/Getty ImagesRonaldo may yet make a comeback.",
+        "His teammates will never say a bad word about him and he appears willing to take his medicine over what happened. He is adored as a deity in Portugal for everything he has done, given and continues to represent. The love is there, as it strong as it is for Messi. Both players will be remembered as all-time greats long after they are gone. But the uncomfortable truth is that Ronaldo just isn’t integral to the team’s success anymore—and hasn’t been for some time.",
+        "After a full decade as numbers one and two in the Ballon d’Or standings, Ronaldo has not made the podium since 2019, while Messi has pulled away with an overall total of eight awards to five."
+      ]
+    },
     "ftbpro_01m4b8ayfv0b": {
       "id": "ftbpro_01m4b8ayfv0b",
       "title": "The Winners, Losers From USMNT’s Faultless World Cup Return",
@@ -18876,7 +19000,7 @@
     },
     "ftbpro_01m4bdzem4q7": {
       "id": "ftbpro_01m4bdzem4q7",
-      "title": "4 Premier League Clubs Gilberto Mora Could Join—Ranked",
+      "title": "Four Premier League Clubs Gilberto Mora Could Join—Ranked",
       "subtitle": "SI",
       "source": "SI",
       "sourceUrl": "https://www.si.com/soccer/four-premier-league-clubs-gilberto-mora-could-join-ranked/app/?utm_source=fotmob",
@@ -18925,6 +19049,68 @@
         "Instead, he became the club’s youngest player to score a hat-trick in the U-19 version of the competition earlier that day instead. But it seemingly wasn’t enough.",
         "His face in Manchester United’s official first-team photograph for 2026–27, published this week around a month after being taken, served as a stark reminder of the status well beyond his years he already had.",
         "feed. READ THE LATEST TRANSFER NEWS AND RUMORS FROM WORLD SOCCER"
+      ]
+    },
+    "ftbpro_01m4bfvj99df": {
+      "id": "ftbpro_01m4bfvj99df",
+      "title": "Transfer Rumors: Mbappe’s €250 Million Premier League Move; Ballon d’Or Winner Eyes Madrid",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/transfer-rumors-mbappe-premier-league-move-ballon-dor-winner-real-madrid/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4bk9ej1jffprs47wq.jpg",
+      "publishedAt": "2026-10-07T23:05:00.000Z",
+      "paragraphs": [
+        "By SI FC Staff7:05 PM EDTKylian Mbappé (left) and José Mourinho’s Real Madrid headline the gossip. / Mateo Villalba Sanchez/Getty Images (Mbappé), Jose Breton/Pics Action/NurPhoto/Getty Images (Mourinho)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "Mikel Merino’s unique talents have won him some admirers. / Stuart MacFarlane/Arsenal FC/Getty ImagesAfter a little over two seasons of goals, groans and a distinct lack of glory, Kylian Mbappé has supposedly decided to leave Real Madrid in the summer of 2027, with the Premier League lined up as his next destination. (Source: François Gallardo)",
+        "There would be no shortage of suitors for Mbappé in England and Liverpool are reportedly putting together a record-shattering offer worth €250 million ($279.7 million) for the prolific Frenchman. (Source: Fichajes)",
+        "Manchester United’s quest to bolster their problematic left-back position has led them to consider Bournemouth’s Adrien Truffert. However, Liverpool are also interested in the French defender rated at £60 million ($79.6 million). (Source: TEAMtalk)",
+        "Should Arsenal or Real Madrid hope to prise Kenan Yıldız out of Juventus, they would have to stump up €150 million ($168.8 million). (Source: Gianluca Di Marzio)",
+        "Arsenal’s versatile gem Mikel Merino has caught the eye of Real Madrid, who could be able to snag the World Cup winner for as little as €25 million ($28.1 million). Quite why the Gunners would be willing to part ways with such a valuable asset for so little is unclear. (Source: Fichajes)",
+        "Scott McTominay—the Serie A winner under discussion at Manchester United, Aston Villa and Newcastle—could be available for as little as €25 million ($28.1 million). (Source: Sky Sport Switzerland)",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Arsenal would be willing to offload misfiring frontman Viktor Gyökeres as soon as January. (Source: Football Insider)",
+        "Liverpool are investigating a deal for Hull City’s impressive goalkeeper Konstantinos Tzolakis, who has previously come on the radar of Tottenham Hotspur. (Source: Fichajes)",
+        "Chelsea are one of many clubs keen on Brazilian wonderkid Eduardo Conceição. However, it remains to be seen if any are willing to come anywhere near the €100 million ($112.5 million) asking price set by Palmeiras. (Source: CaughtOffside)",
+        "Freiburg’s free-scoring forward Igor Matanović would be entirely onboard with a move to Manchester United, who are one of numerous elite clubs linked with the Croatia international. (Source: Football Insider)",
+        "Liverpool and Manchester United are both vying for the signature of Como’s talented forward Assane Diao. Aston Villa, Everton and Brentford have also been credited with interest in the Senegal international. (Source: 4-4-2)",
+        "Newcastle United are billed as the favorites to outmaneuver Nottingham Forest in the pursuit of Lyon midfielder Tyler Morton. (Source: Football Insider)",
+        "The timeless Luka Modrić is still going. / Carl Recine/Getty ImagesReal Madrid have not been able to replace Luka Modrić since he left the club in 2025. The 41-year-old former Ballon d’Or winner could fill the void himself by opening up the prospect of leaving AC Milan for a return to the Spanish capital. (Source: Fichajes)",
+        "Julián Alvarez has softened his firm stance on rejecting Arsenal in the face of staying at Atlético Madrid for the long term. Hope of January move has not yet faded in north London, although there could be competition from Bayern Munich. Barcelona, by contrast, are now focusing on Manchester City’s Erling Haaland. (Source: TEAMtalk)",
+        "Endrick has opened up the prospect of leaving Real Madrid on loan once against this winter and Aston Villa have emerged as the frontrunners to sign the Brazilian. (Source: Cadena SER)",
+        "Mikel Arteta has pledged to honor his word and allow Martín Zubimendi his exit in January, with Real Madrid billed as his most likely destination. (Source: El Nacional)",
+        "Barcelona are considering an unexpected swoop for Fulham’s academy starlet Josh King. (Source: TEAMtalk)",
+        "MLS outfit San Diego have reopened negotiations with Kevin De Bruyne about a potential winter move. There is competition from Lionel Messi’s Inter Miami and a Chicago Fire side spearheaded by Robert Lewandowski for the Napoli playmaker. (Source: Fichajes)"
+      ]
+    },
+    "ftbpro_01m4bjcrfwq6": {
+      "id": "ftbpro_01m4bjcrfwq6",
+      "title": "What Does the Future Hold for Christian Pulisic With the USMNT?",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/what-does-future-hold-christian-pulisic-usmnt/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_42/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4c08j2q8mgpm6r44r.jpg",
+      "publishedAt": "2026-10-07T21:45:00.000Z",
+      "paragraphs": [
+        "By Amanda Langell5:45 PM EDTChristian Pulisic’s place with the USMNT is uncertain like never before. / Maja Hitij/FIFA/Getty ImagesWhile the U.S. men’s national team put together a perfect September-October international break, Christian Pulisic was stuck at home watching it all play out from across the Atlantic Ocean.",
+        "Unlike in previous windows, the 28-year-old was not sidelined with an injury or fresh off a recent recovery. Pulisic was fully fit and ready to represent the Stars and Stripes in friendlies against Peru, Chile, Mexico and Canada.",
+        "Except Mauricio Pochettino overlooked the AC Milan man, along with Folarin Balogun and Weston McKennie. The Argentine boss instead put his trust in a wealth of young players, calling up eight teenagers and 13 total debutants for the first international window after the 2026 World Cup.",
+        "Four games and four wins later, no one is really even talking about Pulisic anymore, leaving the once-face of the team in complete purgatory.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Christian Pulisic has scored two goals for the USMNT under Mauricio Pochettino.  / Getty ImagesWhen Pochettino took over the USMNT in September 2024, Pulisic was the undisputed leader of the team. He was coming off a brilliant debut season at Milan and was one of few Americans to come out relatively unscathed from a disastrous Copa América campaign that summer.",
+        "Despite some injury hiccups, Pulisic got off to a strong start under Pochettino’s rule. The forward tallied one goal and two assists in three appearances to close out 2024, helping the Stars and Stripes advance to the 2024–25 Concacaf Nations League semifinals.",
+        "Once the calendar flipped to 2025, things took a sudden turn for the worst. More fitness concerns, along with two dreadful displays against Panama and Canada in the Concacaf Nations League, saw Pulisic’s stock decrease drastically.",
+        "Adding to the rapid decline was his decision to skip the Gold Cup to prioritize his rest and recovery ahead of the 2025–26 season. Pulisic was adamant about being in his best form for the approaching World Cup on home soil, but what soon followed was anything but.",
+        "The former Chelsea man tallied just one assist in his next six appearances for the USMNT, all while going through a career-worst goal drought at Milan in the second half of 2025–26. A goal against Senegal in a World Cup tune-up match finally broke the rotten run of form, only for Pulisic’s struggles to come right back during this summer’s showpiece event.",
+        "He only managed one assist in four appearances at the 2026 World Cup, providing the same amount of goal contributions as defender Auston Trusty. Pulisic was battling through injury at the tournament, but falling flat while the entire world—literally—watched was the exact last thing he needed after such a poor spell for the national team.",
+        "Mauricio Pochettino (left) and Christian Pulisic have previously clashed.  / John Dorton/USSF/Getty ImagesIt would be easy to blame Pochettino for Pulisic’s lackluster production. After all, the Argentine’s predecessors got the most out of Pulisic, while he could only lead the Champions League winner to two goals in two years.",
+        "The surface-level argument is easily debunked, though, when looking at how Pochettino elevates his players in red, white and blue. The manager took a squad largely of unknown MLS players to the Gold Cup final. He got the absolute best out of Balogun up top this summer, as well as Malik Tillman, Tyler Adams and Freeman.",
+        "In the September-October international break, Pochettino saw Cavan Sullivan, Julian Hall and Justin Ellis, three teenagers nowhere near the pedigree of Pulisic, score six of his team’s 12 goals. The Stars and Stripes also only conceded three goals across their four wins against Peru, Chile, Mexico and Canada.",
+        "New faces on the USMNT are taking center stage. / Patrick Mulligan/USSF/Getty ImagesOf course, the strained relationship between Pochettino and Pulisic could be contributing to the forward’s poor form, but then what was Pulisic’s excuse last year with the Rossoneri? What was his excuse for the start of this season, when new Milan manager Ruben Amorim kept him on the bench for three straight games?",
+        "The USMNT is starting a new era, one that is spearheaded by young, exciting, passionate players, ready to give everything for the badge on their chests. It doesn’t matter if it’s a friendly or the Gold Cup or the World Cup; the new crop of talent at Pochettino’s disposal, combined with veterans like Adams and Chris Richards, want to play every second possible for the national team.",
+        "Pulisic might want the same despite his previous reluctance, but the decision is no longer his, especially after the team put together four convincing victories without him logging a single minute.",
+        "Christian Pulisic needs to earn his spot back. / Luke Hales/Getty ImagesDespite the USMNT’s top form this international break, it would be a major—and dramatic—leap to say this is the end of Pulisic’s time in red, white and blue. The 28-year-old is only 10 caps away from hitting the century-mark with the Stars and Stripes and is the team’s fifth all-time leading goalscorer with 33 goals to his name.",
+        "There will come a time, perhaps as early as the November international break, where Pulisic suits up again for his country. But things have changed.",
+        "Pulisic’s name and past performances are no longer enough to guarantee himself a place in Pochettino’s XI. In all actuality, its many of those past performances working against him. The production is simply not there at the moment, and when others can provide better creativity or finishing in the final third, it’s an easy decision for Pochettino to overlook the 28-year-old."
       ]
     },
     "ftbpro_01m4bkbcrdv4": {
@@ -18986,6 +19172,56 @@
         "En route to 2022 World Cup glory, Messi and Argentina defeated Croatia 3–0 in the semifinals to deny Modrić and Co. a second straight World Cup final. The eight-time Ballon d’Or winner opened the scoring from the spot before Julián Alvarez’s brace sealed the game.",
         "“I wish him the best of luck,” Modrić added.",
         "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m4bsz5e20h": {
+      "id": "ftbpro_01m4bsz5e20h",
+      "title": "‘Panic Button’—Man Utd Make Decision on Carrick As International Break Ends",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/should-michael-carrick-fearing-man-utd-job/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_53/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4btbsqr0gqqtjkds3.jpg",
+      "publishedAt": "2026-10-07T22:00:00.000Z",
+      "paragraphs": [
+        "By SI FC Staff6:00 PM EDTMichael Carrick was appointed on a permanent basis in the summer. / Martin Rickett/PA Images/Getty ImagesThere reportedly appears to be no “immediate threat” on Michael Carrick’s position as Manchester United manager, even if the Red Devils deliver a disappointing result on their return to Premier League action following the extended September-October international window.",
+        "United face a Tottenham Hotspur team rooted to the foot of the standings, even after a monstrous summer spend in the transfer market, seeking to build some positive momentum after taking five points from five matches to start the league campaign.",
+        "Carrick’s 17 games in charge last season yielded more points than champions Arsenal achieved over the same period. He will feel that his team isn’t a million miles away from the results he expects, given  single lapses in two games and an objectively shocking refereeing mistake in another have been responsible for costing United five points so far. The Red Devils have had the ball in the right areas of the pitch and are equaling Arsenal in the attacking third.",
+        "According to the Daily Mail, there is “no appetite for change” from those above him in the Old Trafford hierarchy. Ruben Amorim, who was overseeing gradual improvement off the back of an extremely poor 2024–25 season, ended up digging his own grave by airing his frustrations in public last January and wasn’t going to be fired until that happened.",
+        "It’s a results-based business but increased scrutiny should the Spurs match not end in victory still wouldn’t see the club “hit the panic button” over Carrick’s position. It was reported at the end of September that the players by and large still back and support the incumbent.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Carrick will feel Man Utd should have more points than they do. / Bradley Collyer/PA Images/Getty ImagesTottenham ought to be the perfect opponent for United at this juncture. They sit in last place after failing to win any of their opening five Premier League matches and taking just two points. United are the division’s joint-sixth highest scorers at this stage, while they should benefit from Spurs possessing the second weakest attack—only two goals so far and blanks in four matches.",
+        "Momentum and confidence are everything in professional sports but United will be tested over the coming weeks purely because of how busy the schedule is. Between the now concluded September-October international window and the next one in mid-November, the Red Devils play eight times in two competitions over the space of just four weeks.",
+        "Leeds United at Elland Road on Oct. 18 is a tricky one in the Premier League given the Yorkshire team’s strong start to the season. More challenging is that it’s sandwiched between Champions League trips to Atlético Madrid and Como. A visit from Bournemouth to follow ought to be more straightforward, but then comes Chelsea away, before successive home matches against Roma and an improving Aston Villa coming out of their own slow start.",
+        "READ THE LATEST MAN UTD NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m4byk7zy0r": {
+      "id": "ftbpro_01m4byk7zy0r",
+      "title": "Man Utd Injuries: Three Changes Carrick Has to Make on Premier League Return",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/man-utd-injuries-three-changes-premier-league-return/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_2/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4c2hg8x0wc10sbpzv.jpg",
+      "publishedAt": "2026-10-07T21:15:48.000Z",
+      "paragraphs": [
+        "By Jamie Spencer5:15 PM EDTMichael Carrick will take on former club Tottenham Hotspur on Saturday. /  Alex Livesey/Getty ImagesManchester United signed off before the first international break of the season by rescuing a late draw against winless Fulham, making it five points from the first five games of 2026–27.",
+        "Michael Carrick would have hoped for more points on the board at this stage of his first full season in charge, especially after leading the Premier League in the final 16 games of the previous campaign. But he’s been keen to take the positives.",
+        "“It has been pretty fine ­margins [so far this season] that have flipped it [the wrong way],” Carrick told reporters at Craven Cottage. “I know we can do better … we need to do better at certain things. But I’m not despondent and down because we’re showing some good signs.”",
+        "The Red Devils host Tottenham Hotspur at Old Trafford when the domestic club schedule resumes on Saturday, with Roberto De Zerbi’s team propping up the entire division.",
+        "But one of the other issues Carrick must now deal with is picking a team to win the match when the squad’s injury list swelled even more so during the international break.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "United had a handful of injuries before the international break. Amad Diallo has been missing since preseason, while Manuel Ugarte suffered a long-term injury at the World Cup. Matthijs de Ligt has not played at all in 2026 because of a back problem that eventually required surgery in May, although he has returned to training and his recovery is nearing completion.",
+        "Of that trio, only Amad has a chance of featuring in some capacity against Spurs. The Ivorian’s absence from the right flank has been felt in the early weeks of the campaign.",
+        "Kobbie Mainoo and Marcus Rashford didn’t make it to England’s camp, withdrawing after suffering injuries against Fulham. Each is expected to return for the Spurs clash but should also be considered doubts until the first concrete update post-internationals later this week.",
+        "Benjamin Šeško is in the same boat, withdrawing from Slovenia’s squad before a ball was kicked on the training field. The striker, reported to be nursing a shin injury like the one that prematurely ended his 2025–26, was missing against Fulham and has only featured as a substitute in the Premier League so far this season to help slowly ease him back into action. He has told fans he is “getting there” in terms of recovery. But even if Šeško is healthy by Saturday, it is unlikely he will start the game.",
+        "Patrick Dorgu was injured playing for Denmark. / Ulrik Pedersen/NurPhoto/Getty ImagesPatrick Dorgu was released by Denmark after appearing to suffer a hamstring injury in his country’s second of four internationals. He started the match in question against Wales but was forced off after 30 minutes. Noussair Mazraoui is another whose status isn’t fully known, sent home by Morocco after getting hurt against Lesotho on Sept. 29. Both are doubts to face Spurs.",
+        "If neither Karl Darlow nor Tom Heaton have recovered from what are assumed to be relatively minor problems, a place on the bench as backup goalkeeper to No. 1 Senne Lammens could go to Dermot Mee for only the second time this season.",
+        "Shea Lacey could be one to benefit. / Nigel French/Sportsphoto/Allstar/Getty ImagesIf Mainoo is not available by Saturday, it could signal a debut for summer signing Carlos Baleba. The Cameroon international arrived injured from Brighton & Hove Albion and spent his first few weeks in Manchester recovering from that ankle problem.",
+        "Should Rashford not start, there could be an attacking reshuffle from Carrick that sees Matheus Cunha moved back to the position on the left where he spent much of last season. With Bryan Mbeumo then potentially leading the line through the center, there might be an opportunity on the right for Shea Lacey to start in the Premier League for the first time in his career.",
+        "Baleba was an unused substitute against Fulham and has had three further weeks since then to build his fitness on the training field. He ought to balance the midfield as the only true destructive force in the center of the pitch and the closest match to the departed Casemiro.",
+        "Baleba also participated in the behind-closed-doors friendly against INEOS-owned Lausanne-Sport.",
+        "The back four could remain unchanged from facing Fulham, although Leny Yoro or Ayden Heaven might be pushing for Lisandro Martínez’s place, depending on the Argentine’s condition after traveling back from South America this week. Yoro started France’s 4–1 win over Belgium on Monday for his senior international debut, but is ideally a right-sided center back.",
+        "feed. READ THE LATEST MAN UTD NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
     "fzhafkysws3g1ux8fnmoe3180": {
