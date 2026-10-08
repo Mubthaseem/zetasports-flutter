@@ -2,7 +2,7 @@
   "competitionId": "516",
   "competitionName": "Algerian Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-10-08T12:54:24.753Z",
+  "updatedAt": "2026-10-08T22:59:37.337Z",
   "table": [
     {
       "position": 1,
@@ -42,16 +42,16 @@
     },
     {
       "position": 3,
-      "teamId": "101628",
-      "teamName": "USM Alger",
-      "shortName": "USM Alger",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101628.png",
+      "teamId": "101636",
+      "teamName": "MC Oran",
+      "shortName": "MC Oran",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101636.png",
       "played": 3,
       "won": 2,
       "drawn": 1,
       "lost": 0,
-      "goalsFor": 5,
-      "goalsAgainst": 2,
+      "goalsFor": 3,
+      "goalsAgainst": 0,
       "goalDifference": 3,
       "points": 7,
       "form": [
@@ -60,18 +60,18 @@
     },
     {
       "position": 4,
-      "teamId": "101636",
-      "teamName": "MC Oran",
-      "shortName": "MC Oran",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101636.png",
-      "played": 2,
+      "teamId": "101628",
+      "teamName": "USM Alger",
+      "shortName": "USM Alger",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101628.png",
+      "played": 4,
       "won": 2,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 3,
-      "goalsAgainst": 0,
-      "goalDifference": 3,
-      "points": 6
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "goalDifference": 2,
+      "points": 7
     },
     {
       "position": 5,
@@ -90,6 +90,36 @@
     },
     {
       "position": 6,
+      "teamId": "1792386",
+      "teamName": "MB Rouissat",
+      "shortName": "MB Rouissat",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1792386.png",
+      "played": 4,
+      "won": 2,
+      "drawn": 0,
+      "lost": 2,
+      "goalsFor": 3,
+      "goalsAgainst": 3,
+      "goalDifference": 0,
+      "points": 6
+    },
+    {
+      "position": 7,
+      "teamId": "45655",
+      "teamName": "ES Sétif",
+      "shortName": "ES Sétif",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/45655.png",
+      "played": 4,
+      "won": 1,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "goalDifference": 2,
+      "points": 4
+    },
+    {
+      "position": 8,
       "teamId": "2121859",
       "teamName": "JS El Biar",
       "shortName": "JS El Biar",
@@ -104,7 +134,22 @@
       "points": 4
     },
     {
-      "position": 7,
+      "position": 9,
+      "teamId": "1660716",
+      "teamName": "Olympique Akbou",
+      "shortName": "Olympique Akbou",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1660716.png",
+      "played": 4,
+      "won": 1,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 4,
+      "goalsAgainst": 5,
+      "goalDifference": -1,
+      "points": 4
+    },
+    {
+      "position": 10,
       "teamId": "319205",
       "teamName": "CR Temouchent",
       "shortName": "CR Temouchent",
@@ -119,22 +164,7 @@
       "points": 4
     },
     {
-      "position": 8,
-      "teamId": "45655",
-      "teamName": "ES Sétif",
-      "shortName": "ES Sétif",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/45655.png",
-      "played": 3,
-      "won": 1,
-      "drawn": 0,
-      "lost": 2,
-      "goalsFor": 5,
-      "goalsAgainst": 3,
-      "goalDifference": 2,
-      "points": 3
-    },
-    {
-      "position": 9,
+      "position": 11,
       "teamId": "6353",
       "teamName": "MC Alger",
       "shortName": "MC Alger",
@@ -149,7 +179,7 @@
       "points": 3
     },
     {
-      "position": 10,
+      "position": 12,
       "teamId": "101630",
       "teamName": "JS Kabylie",
       "shortName": "JS Kabylie",
@@ -161,36 +191,6 @@
       "goalsFor": 1,
       "goalsAgainst": 1,
       "goalDifference": 0,
-      "points": 3
-    },
-    {
-      "position": 11,
-      "teamId": "1660716",
-      "teamName": "Olympique Akbou",
-      "shortName": "Olympique Akbou",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1660716.png",
-      "played": 3,
-      "won": 1,
-      "drawn": 0,
-      "lost": 2,
-      "goalsFor": 4,
-      "goalsAgainst": 5,
-      "goalDifference": -1,
-      "points": 3
-    },
-    {
-      "position": 12,
-      "teamId": "1792386",
-      "teamName": "MB Rouissat",
-      "shortName": "MB Rouissat",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1792386.png",
-      "played": 3,
-      "won": 1,
-      "drawn": 0,
-      "lost": 2,
-      "goalsFor": 2,
-      "goalsAgainst": 3,
-      "goalDifference": -1,
       "points": 3
     },
     {
@@ -210,6 +210,24 @@
     },
     {
       "position": 14,
+      "teamId": "316399",
+      "teamName": "JS Saoura",
+      "shortName": "JS Saoura",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/316399.png",
+      "played": 3,
+      "won": 0,
+      "drawn": 2,
+      "lost": 1,
+      "goalsFor": 0,
+      "goalsAgainst": 4,
+      "goalDifference": -4,
+      "points": 2,
+      "form": [
+        "#FF4646"
+      ]
+    },
+    {
+      "position": 15,
       "teamId": "316409",
       "teamName": "US Biskra",
       "shortName": "US Biskra",
@@ -227,7 +245,7 @@
       ]
     },
     {
-      "position": 15,
+      "position": 16,
       "teamId": "101629",
       "teamName": "ASO Chlef",
       "shortName": "ASO Chlef",
@@ -238,24 +256,6 @@
       "lost": 2,
       "goalsFor": 3,
       "goalsAgainst": 7,
-      "goalDifference": -4,
-      "points": 1,
-      "form": [
-        "#FF4646"
-      ]
-    },
-    {
-      "position": 16,
-      "teamId": "316399",
-      "teamName": "JS Saoura",
-      "shortName": "JS Saoura",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/316399.png",
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 0,
-      "goalsAgainst": 4,
       "goalDifference": -4,
       "points": 1,
       "form": [
