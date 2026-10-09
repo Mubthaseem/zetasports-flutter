@@ -2,7 +2,7 @@
   "competitionId": "268",
   "competitionName": "Brasileirão Série A",
   "season": "2026",
-  "updatedAt": "2026-10-08T22:59:22.910Z",
+  "updatedAt": "2026-10-09T04:48:22.352Z",
   "table": [
     {
       "position": 1,
@@ -14,14 +14,13 @@
       "won": 18,
       "drawn": 7,
       "lost": 4,
-      "goalsFor": 55,
-      "goalsAgainst": 23,
+      "goalsFor": 57,
+      "goalsAgainst": 25,
       "goalDifference": 32,
       "points": 61,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 2,
@@ -29,38 +28,56 @@
       "teamName": "Palmeiras",
       "shortName": "Palmeiras",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10283.png",
-      "played": 28,
-      "won": 16,
+      "played": 29,
+      "won": 17,
       "drawn": 9,
       "lost": 3,
-      "goalsFor": 47,
+      "goalsFor": 48,
       "goalsAgainst": 21,
-      "goalDifference": 26,
-      "points": 57,
+      "goalDifference": 27,
+      "points": 60,
       "form": [
         "#2AD572"
       ]
     },
     {
       "position": 3,
-      "teamId": "10273",
-      "teamName": "Athletico Paranaense",
-      "shortName": "Athletico Paranaense",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10273.png",
-      "played": 28,
+      "teamId": "9863",
+      "teamName": "Fluminense",
+      "shortName": "Fluminense",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9863.png",
+      "played": 29,
       "won": 14,
-      "drawn": 7,
-      "lost": 7,
-      "goalsFor": 43,
-      "goalsAgainst": 32,
-      "goalDifference": 11,
-      "points": 49,
+      "drawn": 9,
+      "lost": 6,
+      "goalsFor": 48,
+      "goalsAgainst": 36,
+      "goalDifference": 12,
+      "points": 51,
       "form": [
         "#2AD572"
       ]
     },
     {
       "position": 4,
+      "teamId": "10273",
+      "teamName": "Athletico Paranaense",
+      "shortName": "Athletico Paranaense",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10273.png",
+      "played": 29,
+      "won": 14,
+      "drawn": 8,
+      "lost": 7,
+      "goalsFor": 45,
+      "goalsAgainst": 34,
+      "goalDifference": 11,
+      "points": 50,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 5,
       "teamId": "9781",
       "teamName": "Cruzeiro",
       "shortName": "Cruzeiro",
@@ -74,24 +91,6 @@
       "goalDifference": 4,
       "points": 48,
       "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 5,
-      "teamId": "9863",
-      "teamName": "Fluminense",
-      "shortName": "Fluminense",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9863.png",
-      "played": 28,
-      "won": 13,
-      "drawn": 9,
-      "lost": 6,
-      "goalsFor": 44,
-      "goalsAgainst": 36,
-      "goalDifference": 8,
-      "points": 48,
-      "form": [
         "#FFD908"
       ]
     },
@@ -101,13 +100,13 @@
       "teamName": "Bahia",
       "shortName": "Bahia",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7877.png",
-      "played": 28,
+      "played": 29,
       "won": 12,
       "drawn": 10,
-      "lost": 6,
+      "lost": 7,
       "goalsFor": 43,
-      "goalsAgainst": 35,
-      "goalDifference": 8,
+      "goalsAgainst": 36,
+      "goalDifference": 7,
       "points": 46,
       "form": [
         "#0046A7"
@@ -119,14 +118,14 @@
       "teamName": "Atlético-MG",
       "shortName": "Atlético-MG",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10272.png",
-      "played": 28,
+      "played": 29,
       "won": 12,
-      "drawn": 7,
+      "drawn": 8,
       "lost": 9,
-      "goalsFor": 37,
-      "goalsAgainst": 32,
+      "goalsFor": 39,
+      "goalsAgainst": 34,
       "goalDifference": 5,
-      "points": 43,
+      "points": 44,
       "form": [
         "#0046A7"
       ]
@@ -141,14 +140,13 @@
       "won": 11,
       "drawn": 9,
       "lost": 9,
-      "goalsFor": 43,
-      "goalsAgainst": 41,
+      "goalsFor": 45,
+      "goalsAgainst": 43,
       "goalDifference": 2,
       "points": 42,
       "form": [
         "#0046A7"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 9,
@@ -156,13 +154,13 @@
       "teamName": "Coritiba",
       "shortName": "Coritiba",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9767.png",
-      "played": 28,
+      "played": 29,
       "won": 10,
       "drawn": 8,
-      "lost": 10,
+      "lost": 11,
       "goalsFor": 37,
-      "goalsAgainst": 43,
-      "goalDifference": -6,
+      "goalsAgainst": 47,
+      "goalDifference": -10,
       "points": 38,
       "form": [
         "#0046A7"
