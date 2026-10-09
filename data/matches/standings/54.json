@@ -2,7 +2,7 @@
   "competitionId": "54",
   "competitionName": "Bundesliga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-09T12:39:39.448Z",
+  "updatedAt": "2026-10-09T22:19:49.976Z",
   "table": [
     {
       "position": 1,
@@ -10,14 +10,14 @@
       "teamName": "Borussia Dortmund",
       "shortName": "Dortmund",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9789.png",
-      "played": 4,
+      "played": 5,
       "won": 4,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "goalsFor": 9,
-      "goalsAgainst": 2,
+      "goalsFor": 11,
+      "goalsAgainst": 4,
       "goalDifference": 7,
-      "points": 12,
+      "points": 13,
       "form": [
         "#2AD572"
       ]
@@ -60,6 +60,24 @@
     },
     {
       "position": 4,
+      "teamId": "8697",
+      "teamName": "Werder Bremen",
+      "shortName": "Werder Bremen",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8697.png",
+      "played": 5,
+      "won": 2,
+      "drawn": 2,
+      "lost": 1,
+      "goalsFor": 10,
+      "goalsAgainst": 10,
+      "goalDifference": 0,
+      "points": 8,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 5,
       "teamId": "8406",
       "teamName": "Augsburg",
       "shortName": "Augsburg",
@@ -73,11 +91,11 @@
       "goalDifference": 5,
       "points": 7,
       "form": [
-        "#2AD572"
+        "#0046A7"
       ]
     },
     {
-      "position": 5,
+      "position": 6,
       "teamId": "8178",
       "teamName": "Bayer Leverkusen",
       "shortName": "Leverkusen",
@@ -91,11 +109,11 @@
       "goalDifference": 5,
       "points": 7,
       "form": [
-        "#0046A7"
+        "#02CCF0"
       ]
     },
     {
-      "position": 6,
+      "position": 7,
       "teamId": "9905",
       "teamName": "Mainz 05",
       "shortName": "Mainz",
@@ -107,13 +125,10 @@
       "goalsFor": 10,
       "goalsAgainst": 6,
       "goalDifference": 4,
-      "points": 7,
-      "form": [
-        "#02CCF0"
-      ]
+      "points": 7
     },
     {
-      "position": 7,
+      "position": 8,
       "teamId": "8232",
       "teamName": "Elversberg",
       "shortName": "Elversberg",
@@ -125,21 +140,6 @@
       "goalsFor": 8,
       "goalsAgainst": 7,
       "goalDifference": 1,
-      "points": 7
-    },
-    {
-      "position": 8,
-      "teamId": "8697",
-      "teamName": "Werder Bremen",
-      "shortName": "Werder Bremen",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8697.png",
-      "played": 4,
-      "won": 2,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 8,
-      "goalsAgainst": 8,
-      "goalDifference": 0,
       "points": 7
     },
     {

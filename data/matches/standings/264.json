@@ -2,10 +2,46 @@
   "competitionId": "264",
   "competitionName": "AFC Champions League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-09T12:39:50.904Z",
+  "updatedAt": "2026-10-09T22:20:03.273Z",
   "table": [
     {
       "position": 1,
+      "teamId": "7947",
+      "teamName": "FCV Dender EH",
+      "shortName": "FCV Dender EH",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7947.png",
+      "played": 7,
+      "won": 6,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 11,
+      "goalsAgainst": 2,
+      "goalDifference": 9,
+      "points": 18,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 2,
+      "teamId": "6351",
+      "teamName": "Eupen",
+      "shortName": "Eupen",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6351.png",
+      "played": 6,
+      "won": 5,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 13,
+      "goalsAgainst": 5,
+      "goalDifference": 8,
+      "points": 15,
+      "form": [
+        "#FFD908"
+      ]
+    },
+    {
+      "position": 3,
       "teamId": "583877",
       "teamName": "Beerschot",
       "shortName": "Beerschot",
@@ -18,42 +54,6 @@
       "goalsAgainst": 5,
       "goalDifference": 8,
       "points": 15,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 2,
-      "teamId": "7947",
-      "teamName": "FCV Dender EH",
-      "shortName": "FCV Dender EH",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7947.png",
-      "played": 6,
-      "won": 5,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 8,
-      "goalsAgainst": 2,
-      "goalDifference": 6,
-      "points": 15,
-      "form": [
-        "#FFD908"
-      ]
-    },
-    {
-      "position": 3,
-      "teamId": "6351",
-      "teamName": "Eupen",
-      "shortName": "Eupen",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6351.png",
-      "played": 5,
-      "won": 4,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 11,
-      "goalsAgainst": 5,
-      "goalDifference": 6,
-      "points": 12,
       "form": [
         "#FFD908"
       ]
@@ -130,13 +130,13 @@
       "teamName": "Club Brugge NXT",
       "shortName": "Club Brugge NXT",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1173026.png",
-      "played": 5,
+      "played": 6,
       "won": 2,
       "drawn": 2,
-      "lost": 1,
+      "lost": 2,
       "goalsFor": 11,
-      "goalsAgainst": 10,
-      "goalDifference": 1,
+      "goalsAgainst": 13,
+      "goalDifference": -2,
       "points": 8
     },
     {
@@ -238,13 +238,13 @@
       "teamName": "Anderlecht Futures",
       "shortName": "Anderlecht Futures",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1378461.png",
-      "played": 6,
+      "played": 7,
       "won": 0,
       "drawn": 1,
-      "lost": 5,
+      "lost": 6,
       "goalsFor": 7,
-      "goalsAgainst": 15,
-      "goalDifference": -8,
+      "goalsAgainst": 17,
+      "goalDifference": -10,
       "points": 1,
       "form": [
         "#FF4646"

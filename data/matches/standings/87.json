@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-09T12:39:37.142Z",
+  "updatedAt": "2026-10-09T22:19:47.233Z",
   "table": [
     {
       "position": 1,
@@ -174,6 +174,21 @@
     },
     {
       "position": 11,
+      "teamId": "8558",
+      "teamName": "Espanyol",
+      "shortName": "Espanyol",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8558.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 11,
+      "goalsAgainst": 11,
+      "goalDifference": 0,
+      "points": 8
+    },
+    {
+      "position": 12,
       "teamId": "8305",
       "teamName": "Getafe",
       "shortName": "Getafe",
@@ -188,7 +203,7 @@
       "points": 8
     },
     {
-      "position": 12,
+      "position": 13,
       "teamId": "8370",
       "teamName": "Rayo Vallecano",
       "shortName": "Rayo Vallecano",
@@ -203,7 +218,7 @@
       "points": 8
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "8371",
       "teamName": "Osasuna",
       "shortName": "Osasuna",
@@ -218,7 +233,7 @@
       "points": 8
     },
     {
-      "position": 14,
+      "position": 15,
       "teamId": "9910",
       "teamName": "Celta Vigo",
       "shortName": "Celta Vigo",
@@ -230,21 +245,6 @@
       "goalsFor": 8,
       "goalsAgainst": 6,
       "goalDifference": 2,
-      "points": 7
-    },
-    {
-      "position": 15,
-      "teamId": "8558",
-      "teamName": "Espanyol",
-      "shortName": "Espanyol",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8558.png",
-      "played": 7,
-      "won": 2,
-      "drawn": 1,
-      "lost": 4,
-      "goalsFor": 10,
-      "goalsAgainst": 10,
-      "goalDifference": 0,
       "points": 7
     },
     {
@@ -297,6 +297,24 @@
     },
     {
       "position": 19,
+      "teamId": "9864",
+      "teamName": "Málaga",
+      "shortName": "Málaga",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9864.png",
+      "played": 8,
+      "won": 0,
+      "drawn": 4,
+      "lost": 4,
+      "goalsFor": 4,
+      "goalsAgainst": 13,
+      "goalDifference": -9,
+      "points": 4,
+      "form": [
+        "#FF4646"
+      ]
+    },
+    {
+      "position": 20,
       "teamId": "10267",
       "teamName": "Valencia",
       "shortName": "Valencia",
@@ -309,24 +327,6 @@
       "goalsAgainst": 13,
       "goalDifference": -9,
       "points": 4,
-      "form": [
-        "#FF4646"
-      ]
-    },
-    {
-      "position": 20,
-      "teamId": "9864",
-      "teamName": "Málaga",
-      "shortName": "Málaga",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9864.png",
-      "played": 7,
-      "won": 0,
-      "drawn": 3,
-      "lost": 4,
-      "goalsFor": 3,
-      "goalsAgainst": 12,
-      "goalDifference": -9,
-      "points": 3,
       "form": [
         "#FF4646"
       ]

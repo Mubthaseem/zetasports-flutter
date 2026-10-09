@@ -2,7 +2,7 @@
   "competitionId": "57",
   "competitionName": "Eredivisie",
   "season": "2026/2027",
-  "updatedAt": "2026-10-09T12:40:00.741Z",
+  "updatedAt": "2026-10-09T22:20:13.077Z",
   "table": [
     {
       "position": 1,
@@ -24,6 +24,24 @@
     },
     {
       "position": 2,
+      "teamId": "8640",
+      "teamName": "PSV Eindhoven",
+      "shortName": "PSV Eindhoven",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8640.png",
+      "played": 8,
+      "won": 6,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 26,
+      "goalsAgainst": 10,
+      "goalDifference": 16,
+      "points": 19,
+      "form": [
+        "#FFD908"
+      ]
+    },
+    {
+      "position": 3,
       "teamId": "10235",
       "teamName": "Feyenoord",
       "shortName": "Feyenoord",
@@ -36,24 +54,6 @@
       "goalsAgainst": 7,
       "goalDifference": 18,
       "points": 17,
-      "form": [
-        "#FFD908"
-      ]
-    },
-    {
-      "position": 3,
-      "teamId": "8640",
-      "teamName": "PSV Eindhoven",
-      "shortName": "PSV Eindhoven",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8640.png",
-      "played": 7,
-      "won": 5,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 24,
-      "goalsAgainst": 10,
-      "goalDifference": 14,
-      "points": 16,
       "form": [
         "#0294F0"
       ]
@@ -166,13 +166,13 @@
       "teamName": "SC Heerenveen",
       "shortName": "SC Heerenveen",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10228.png",
-      "played": 7,
+      "played": 8,
       "won": 2,
       "drawn": 3,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 11,
-      "goalsAgainst": 9,
-      "goalDifference": 2,
+      "goalsAgainst": 11,
+      "goalDifference": 0,
       "points": 9
     },
     {

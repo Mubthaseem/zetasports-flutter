@@ -3,7 +3,7 @@
   "meta": {
     "platform": "Zeta Sports Open Football API",
     "version": "1.2.0",
-    "generatedAt": "2026-10-09T20:18:08.764Z",
+    "generatedAt": "2026-10-09T22:20:31.409Z",
     "provider": "FotMob Free Public Gateway",
     "apiKey": "zeta_public_free_feed",
     "summary": {
@@ -46467,7 +46467,7 @@
       "competitionId": "42",
       "competitionName": "UEFA Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:36.061Z",
+      "updatedAt": "2026-10-09T22:19:46.051Z",
       "table": [
         {
           "position": 1,
@@ -47087,14 +47087,14 @@
       "competitionId": "44",
       "competitionName": "Copa América",
       "season": "2024",
-      "updatedAt": "2026-10-09T12:40:06.466Z",
+      "updatedAt": "2026-10-09T22:20:19.595Z",
       "table": []
     },
     "47": {
       "competitionId": "47",
       "competitionName": "Premier League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:35.127Z",
+      "updatedAt": "2026-10-09T22:19:44.939Z",
       "table": [
         {
           "position": 1,
@@ -47426,14 +47426,14 @@
       "competitionId": "50",
       "competitionName": "UEFA EURO",
       "season": "2028",
-      "updatedAt": "2026-10-09T12:40:05.539Z",
+      "updatedAt": "2026-10-09T22:20:18.501Z",
       "table": []
     },
     "53": {
       "competitionId": "53",
       "competitionName": "Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:40.527Z",
+      "updatedAt": "2026-10-09T22:19:51.724Z",
       "table": [
         {
           "position": 1,
@@ -47459,13 +47459,13 @@
           "teamName": "Lyon",
           "shortName": "Lyon",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9748.png",
-          "played": 5,
+          "played": 6,
           "won": 3,
           "drawn": 2,
-          "lost": 0,
-          "goalsFor": 10,
-          "goalsAgainst": 2,
-          "goalDifference": 8,
+          "lost": 1,
+          "goalsFor": 11,
+          "goalsAgainst": 4,
+          "goalDifference": 7,
           "points": 11,
           "form": [
             "#2AD572"
@@ -47545,6 +47545,21 @@
         },
         {
           "position": 7,
+          "teamId": "8588",
+          "teamName": "Lens",
+          "shortName": "Lens",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8588.png",
+          "played": 6,
+          "won": 2,
+          "drawn": 1,
+          "lost": 3,
+          "goalsFor": 11,
+          "goalsAgainst": 10,
+          "goalDifference": 1,
+          "points": 7
+        },
+        {
+          "position": 8,
           "teamId": "8121",
           "teamName": "Angers",
           "shortName": "Angers",
@@ -47559,7 +47574,7 @@
           "points": 7
         },
         {
-          "position": 8,
+          "position": 9,
           "teamId": "9848",
           "teamName": "Strasbourg",
           "shortName": "Strasbourg",
@@ -47574,7 +47589,7 @@
           "points": 7
         },
         {
-          "position": 9,
+          "position": 10,
           "teamId": "8682",
           "teamName": "Le Mans",
           "shortName": "Le Mans",
@@ -47589,7 +47604,7 @@
           "points": 6
         },
         {
-          "position": 10,
+          "position": 11,
           "teamId": "8583",
           "teamName": "Auxerre",
           "shortName": "Auxerre",
@@ -47604,7 +47619,7 @@
           "points": 6
         },
         {
-          "position": 11,
+          "position": 12,
           "teamId": "8521",
           "teamName": "Brest",
           "shortName": "Brest",
@@ -47619,7 +47634,7 @@
           "points": 5
         },
         {
-          "position": 12,
+          "position": 13,
           "teamId": "8689",
           "teamName": "Lorient",
           "shortName": "Lorient",
@@ -47634,7 +47649,7 @@
           "points": 5
         },
         {
-          "position": 13,
+          "position": 14,
           "teamId": "9941",
           "teamName": "Toulouse",
           "shortName": "Toulouse",
@@ -47649,7 +47664,7 @@
           "points": 5
         },
         {
-          "position": 14,
+          "position": 15,
           "teamId": "9831",
           "teamName": "Nice",
           "shortName": "Nice",
@@ -47662,21 +47677,6 @@
           "goalsAgainst": 6,
           "goalDifference": -3,
           "points": 5
-        },
-        {
-          "position": 15,
-          "teamId": "8588",
-          "teamName": "Lens",
-          "shortName": "Lens",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8588.png",
-          "played": 5,
-          "won": 1,
-          "drawn": 1,
-          "lost": 3,
-          "goalsFor": 9,
-          "goalsAgainst": 9,
-          "goalDifference": 0,
-          "points": 4
         },
         {
           "position": 16,
@@ -47738,7 +47738,7 @@
       "competitionId": "54",
       "competitionName": "Bundesliga",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:39.448Z",
+      "updatedAt": "2026-10-09T22:19:49.976Z",
       "table": [
         {
           "position": 1,
@@ -47746,14 +47746,14 @@
           "teamName": "Borussia Dortmund",
           "shortName": "Dortmund",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9789.png",
-          "played": 4,
+          "played": 5,
           "won": 4,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
-          "goalsFor": 9,
-          "goalsAgainst": 2,
+          "goalsFor": 11,
+          "goalsAgainst": 4,
           "goalDifference": 7,
-          "points": 12,
+          "points": 13,
           "form": [
             "#2AD572"
           ]
@@ -47796,6 +47796,24 @@
         },
         {
           "position": 4,
+          "teamId": "8697",
+          "teamName": "Werder Bremen",
+          "shortName": "Werder Bremen",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8697.png",
+          "played": 5,
+          "won": 2,
+          "drawn": 2,
+          "lost": 1,
+          "goalsFor": 10,
+          "goalsAgainst": 10,
+          "goalDifference": 0,
+          "points": 8,
+          "form": [
+            "#2AD572"
+          ]
+        },
+        {
+          "position": 5,
           "teamId": "8406",
           "teamName": "Augsburg",
           "shortName": "Augsburg",
@@ -47809,11 +47827,11 @@
           "goalDifference": 5,
           "points": 7,
           "form": [
-            "#2AD572"
+            "#0046A7"
           ]
         },
         {
-          "position": 5,
+          "position": 6,
           "teamId": "8178",
           "teamName": "Bayer Leverkusen",
           "shortName": "Leverkusen",
@@ -47827,11 +47845,11 @@
           "goalDifference": 5,
           "points": 7,
           "form": [
-            "#0046A7"
+            "#02CCF0"
           ]
         },
         {
-          "position": 6,
+          "position": 7,
           "teamId": "9905",
           "teamName": "Mainz 05",
           "shortName": "Mainz",
@@ -47843,13 +47861,10 @@
           "goalsFor": 10,
           "goalsAgainst": 6,
           "goalDifference": 4,
-          "points": 7,
-          "form": [
-            "#02CCF0"
-          ]
+          "points": 7
         },
         {
-          "position": 7,
+          "position": 8,
           "teamId": "8232",
           "teamName": "Elversberg",
           "shortName": "Elversberg",
@@ -47861,21 +47876,6 @@
           "goalsFor": 8,
           "goalsAgainst": 7,
           "goalDifference": 1,
-          "points": 7
-        },
-        {
-          "position": 8,
-          "teamId": "8697",
-          "teamName": "Werder Bremen",
-          "shortName": "Werder Bremen",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8697.png",
-          "played": 4,
-          "won": 2,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 8,
-          "goalsAgainst": 8,
-          "goalDifference": 0,
           "points": 7
         },
         {
@@ -48043,7 +48043,7 @@
       "competitionId": "55",
       "competitionName": "Serie A",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:38.403Z",
+      "updatedAt": "2026-10-09T22:19:48.370Z",
       "table": [
         {
           "position": 1,
@@ -48378,7 +48378,7 @@
       "competitionId": "57",
       "competitionName": "Eredivisie",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:40:00.741Z",
+      "updatedAt": "2026-10-09T22:20:13.077Z",
       "table": [
         {
           "position": 1,
@@ -48400,6 +48400,24 @@
         },
         {
           "position": 2,
+          "teamId": "8640",
+          "teamName": "PSV Eindhoven",
+          "shortName": "PSV Eindhoven",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8640.png",
+          "played": 8,
+          "won": 6,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 26,
+          "goalsAgainst": 10,
+          "goalDifference": 16,
+          "points": 19,
+          "form": [
+            "#FFD908"
+          ]
+        },
+        {
+          "position": 3,
           "teamId": "10235",
           "teamName": "Feyenoord",
           "shortName": "Feyenoord",
@@ -48412,24 +48430,6 @@
           "goalsAgainst": 7,
           "goalDifference": 18,
           "points": 17,
-          "form": [
-            "#FFD908"
-          ]
-        },
-        {
-          "position": 3,
-          "teamId": "8640",
-          "teamName": "PSV Eindhoven",
-          "shortName": "PSV Eindhoven",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8640.png",
-          "played": 7,
-          "won": 5,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 24,
-          "goalsAgainst": 10,
-          "goalDifference": 14,
-          "points": 16,
           "form": [
             "#0294F0"
           ]
@@ -48542,13 +48542,13 @@
           "teamName": "SC Heerenveen",
           "shortName": "SC Heerenveen",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10228.png",
-          "played": 7,
+          "played": 8,
           "won": 2,
           "drawn": 3,
-          "lost": 2,
+          "lost": 3,
           "goalsFor": 11,
-          "goalsAgainst": 9,
-          "goalDifference": 2,
+          "goalsAgainst": 11,
+          "goalDifference": 0,
           "points": 9
         },
         {
@@ -48686,7 +48686,7 @@
       "competitionId": "61",
       "competitionName": "Liga Portugal",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:40:01.823Z",
+      "updatedAt": "2026-10-09T22:20:14.964Z",
       "table": [
         {
           "position": 1,
@@ -48708,6 +48708,24 @@
         },
         {
           "position": 2,
+          "teamId": "9768",
+          "teamName": "Sporting CP",
+          "shortName": "Sporting CP",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9768.png",
+          "played": 8,
+          "won": 5,
+          "drawn": 3,
+          "lost": 0,
+          "goalsFor": 20,
+          "goalsAgainst": 9,
+          "goalDifference": 11,
+          "points": 18,
+          "form": [
+            "#2AD572"
+          ]
+        },
+        {
+          "position": 3,
           "teamId": "9772",
           "teamName": "Benfica",
           "shortName": "Benfica",
@@ -48720,24 +48738,6 @@
           "goalsAgainst": 7,
           "goalDifference": 15,
           "points": 16,
-          "form": [
-            "#2AD572"
-          ]
-        },
-        {
-          "position": 3,
-          "teamId": "9768",
-          "teamName": "Sporting CP",
-          "shortName": "Sporting CP",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9768.png",
-          "played": 7,
-          "won": 4,
-          "drawn": 3,
-          "lost": 0,
-          "goalsFor": 17,
-          "goalsAgainst": 8,
-          "goalDifference": 9,
-          "points": 15,
           "form": [
             "#FFD908"
           ]
@@ -48780,17 +48780,17 @@
         },
         {
           "position": 6,
-          "teamId": "10264",
-          "teamName": "Braga",
-          "shortName": "Braga",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
-          "played": 6,
+          "teamId": "9764",
+          "teamName": "Gil Vicente",
+          "shortName": "Gil Vicente",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9764.png",
+          "played": 7,
           "won": 3,
           "drawn": 2,
-          "lost": 1,
-          "goalsFor": 7,
+          "lost": 2,
+          "goalsFor": 6,
           "goalsAgainst": 5,
-          "goalDifference": 2,
+          "goalDifference": 1,
           "points": 11
         },
         {
@@ -48810,6 +48810,21 @@
         },
         {
           "position": 8,
+          "teamId": "10264",
+          "teamName": "Braga",
+          "shortName": "Braga",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
+          "played": 7,
+          "won": 3,
+          "drawn": 2,
+          "lost": 2,
+          "goalsFor": 8,
+          "goalsAgainst": 8,
+          "goalDifference": 0,
+          "points": 11
+        },
+        {
+          "position": 9,
           "teamId": "1074320",
           "teamName": "Estrela da Amadora",
           "shortName": "Estrela da Amadora",
@@ -48822,21 +48837,6 @@
           "goalsAgainst": 14,
           "goalDifference": 0,
           "points": 10
-        },
-        {
-          "position": 9,
-          "teamId": "9764",
-          "teamName": "Gil Vicente",
-          "shortName": "Gil Vicente",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9764.png",
-          "played": 6,
-          "won": 2,
-          "drawn": 2,
-          "lost": 2,
-          "goalsFor": 5,
-          "goalsAgainst": 5,
-          "goalDifference": 0,
-          "points": 8
         },
         {
           "position": 10,
@@ -48874,13 +48874,13 @@
           "teamName": "Moreirense",
           "shortName": "Moreirense",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8348.png",
-          "played": 7,
+          "played": 8,
           "won": 2,
           "drawn": 2,
-          "lost": 3,
+          "lost": 4,
           "goalsFor": 8,
-          "goalsAgainst": 14,
-          "goalDifference": -6,
+          "goalsAgainst": 15,
+          "goalDifference": -7,
           "points": 8
         },
         {
@@ -48988,7 +48988,7 @@
       "competitionId": "73",
       "competitionName": "UEFA Europa League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:41.426Z",
+      "updatedAt": "2026-10-09T22:19:53.169Z",
       "table": [
         {
           "position": 1,
@@ -49608,14 +49608,14 @@
       "competitionId": "77",
       "competitionName": "FIFA World Cup",
       "season": "2026",
-      "updatedAt": "2026-10-09T12:40:04.526Z",
+      "updatedAt": "2026-10-09T22:20:17.629Z",
       "table": []
     },
     "87": {
       "competitionId": "87",
       "competitionName": "LaLiga",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:37.142Z",
+      "updatedAt": "2026-10-09T22:19:47.233Z",
       "table": [
         {
           "position": 1,
@@ -49787,6 +49787,21 @@
         },
         {
           "position": 11,
+          "teamId": "8558",
+          "teamName": "Espanyol",
+          "shortName": "Espanyol",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8558.png",
+          "played": 8,
+          "won": 2,
+          "drawn": 2,
+          "lost": 4,
+          "goalsFor": 11,
+          "goalsAgainst": 11,
+          "goalDifference": 0,
+          "points": 8
+        },
+        {
+          "position": 12,
           "teamId": "8305",
           "teamName": "Getafe",
           "shortName": "Getafe",
@@ -49801,7 +49816,7 @@
           "points": 8
         },
         {
-          "position": 12,
+          "position": 13,
           "teamId": "8370",
           "teamName": "Rayo Vallecano",
           "shortName": "Rayo Vallecano",
@@ -49816,7 +49831,7 @@
           "points": 8
         },
         {
-          "position": 13,
+          "position": 14,
           "teamId": "8371",
           "teamName": "Osasuna",
           "shortName": "Osasuna",
@@ -49831,7 +49846,7 @@
           "points": 8
         },
         {
-          "position": 14,
+          "position": 15,
           "teamId": "9910",
           "teamName": "Celta Vigo",
           "shortName": "Celta Vigo",
@@ -49843,21 +49858,6 @@
           "goalsFor": 8,
           "goalsAgainst": 6,
           "goalDifference": 2,
-          "points": 7
-        },
-        {
-          "position": 15,
-          "teamId": "8558",
-          "teamName": "Espanyol",
-          "shortName": "Espanyol",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8558.png",
-          "played": 7,
-          "won": 2,
-          "drawn": 1,
-          "lost": 4,
-          "goalsFor": 10,
-          "goalsAgainst": 10,
-          "goalDifference": 0,
           "points": 7
         },
         {
@@ -49910,6 +49910,24 @@
         },
         {
           "position": 19,
+          "teamId": "9864",
+          "teamName": "Málaga",
+          "shortName": "Málaga",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9864.png",
+          "played": 8,
+          "won": 0,
+          "drawn": 4,
+          "lost": 4,
+          "goalsFor": 4,
+          "goalsAgainst": 13,
+          "goalDifference": -9,
+          "points": 4,
+          "form": [
+            "#FF4646"
+          ]
+        },
+        {
+          "position": 20,
           "teamId": "10267",
           "teamName": "Valencia",
           "shortName": "Valencia",
@@ -49925,24 +49943,6 @@
           "form": [
             "#FF4646"
           ]
-        },
-        {
-          "position": 20,
-          "teamId": "9864",
-          "teamName": "Málaga",
-          "shortName": "Málaga",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9864.png",
-          "played": 7,
-          "won": 0,
-          "drawn": 3,
-          "lost": 4,
-          "goalsFor": 3,
-          "goalsAgainst": 12,
-          "goalDifference": -9,
-          "points": 3,
-          "form": [
-            "#FF4646"
-          ]
         }
       ]
     },
@@ -49950,17 +49950,53 @@
       "competitionId": "130",
       "competitionName": "MLS",
       "season": "2026",
-      "updatedAt": "2026-10-09T12:39:48.880Z",
+      "updatedAt": "2026-10-09T22:20:01.087Z",
       "table": []
     },
     "264": {
       "competitionId": "264",
       "competitionName": "AFC Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:50.904Z",
+      "updatedAt": "2026-10-09T22:20:03.273Z",
       "table": [
         {
           "position": 1,
+          "teamId": "7947",
+          "teamName": "FCV Dender EH",
+          "shortName": "FCV Dender EH",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7947.png",
+          "played": 7,
+          "won": 6,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 11,
+          "goalsAgainst": 2,
+          "goalDifference": 9,
+          "points": 18,
+          "form": [
+            "#2AD572"
+          ]
+        },
+        {
+          "position": 2,
+          "teamId": "6351",
+          "teamName": "Eupen",
+          "shortName": "Eupen",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6351.png",
+          "played": 6,
+          "won": 5,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 13,
+          "goalsAgainst": 5,
+          "goalDifference": 8,
+          "points": 15,
+          "form": [
+            "#FFD908"
+          ]
+        },
+        {
+          "position": 3,
           "teamId": "583877",
           "teamName": "Beerschot",
           "shortName": "Beerschot",
@@ -49973,42 +50009,6 @@
           "goalsAgainst": 5,
           "goalDifference": 8,
           "points": 15,
-          "form": [
-            "#2AD572"
-          ]
-        },
-        {
-          "position": 2,
-          "teamId": "7947",
-          "teamName": "FCV Dender EH",
-          "shortName": "FCV Dender EH",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7947.png",
-          "played": 6,
-          "won": 5,
-          "drawn": 0,
-          "lost": 1,
-          "goalsFor": 8,
-          "goalsAgainst": 2,
-          "goalDifference": 6,
-          "points": 15,
-          "form": [
-            "#FFD908"
-          ]
-        },
-        {
-          "position": 3,
-          "teamId": "6351",
-          "teamName": "Eupen",
-          "shortName": "Eupen",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6351.png",
-          "played": 5,
-          "won": 4,
-          "drawn": 0,
-          "lost": 1,
-          "goalsFor": 11,
-          "goalsAgainst": 5,
-          "goalDifference": 6,
-          "points": 12,
           "form": [
             "#FFD908"
           ]
@@ -50085,13 +50085,13 @@
           "teamName": "Club Brugge NXT",
           "shortName": "Club Brugge NXT",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1173026.png",
-          "played": 5,
+          "played": 6,
           "won": 2,
           "drawn": 2,
-          "lost": 1,
+          "lost": 2,
           "goalsFor": 11,
-          "goalsAgainst": 10,
-          "goalDifference": 1,
+          "goalsAgainst": 13,
+          "goalDifference": -2,
           "points": 8
         },
         {
@@ -50193,13 +50193,13 @@
           "teamName": "Anderlecht Futures",
           "shortName": "Anderlecht Futures",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1378461.png",
-          "played": 6,
+          "played": 7,
           "won": 0,
           "drawn": 1,
-          "lost": 5,
+          "lost": 6,
           "goalsFor": 7,
-          "goalsAgainst": 15,
-          "goalDifference": -8,
+          "goalsAgainst": 17,
+          "goalDifference": -10,
           "points": 1,
           "form": [
             "#FF4646"
@@ -50211,7 +50211,7 @@
       "competitionId": "268",
       "competitionName": "Brasileirão Série A",
       "season": "2026",
-      "updatedAt": "2026-10-09T12:40:03.464Z",
+      "updatedAt": "2026-10-09T22:20:16.528Z",
       "table": [
         {
           "position": 1,
@@ -50564,7 +50564,7 @@
       "competitionId": "516",
       "competitionName": "Algerian Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:40:17.492Z",
+      "updatedAt": "2026-10-09T22:20:30.886Z",
       "table": [
         {
           "position": 1,
@@ -50637,6 +50637,21 @@
         },
         {
           "position": 5,
+          "teamId": "6353",
+          "teamName": "MC Alger",
+          "shortName": "MC Alger",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6353.png",
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 3,
+          "goalsAgainst": 0,
+          "goalDifference": 3,
+          "points": 6
+        },
+        {
+          "position": 6,
           "teamId": "1531341",
           "teamName": "ES Ben Aknoun",
           "shortName": "ES Ben Aknoun",
@@ -50651,7 +50666,22 @@
           "points": 6
         },
         {
-          "position": 6,
+          "position": 7,
+          "teamId": "101630",
+          "teamName": "JS Kabylie",
+          "shortName": "JS Kabylie",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101630.png",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "goalDifference": 1,
+          "points": 6
+        },
+        {
+          "position": 8,
           "teamId": "1792386",
           "teamName": "MB Rouissat",
           "shortName": "MB Rouissat",
@@ -50666,7 +50696,7 @@
           "points": 6
         },
         {
-          "position": 7,
+          "position": 9,
           "teamId": "45655",
           "teamName": "ES Sétif",
           "shortName": "ES Sétif",
@@ -50681,7 +50711,7 @@
           "points": 4
         },
         {
-          "position": 8,
+          "position": 10,
           "teamId": "2121859",
           "teamName": "JS El Biar",
           "shortName": "JS El Biar",
@@ -50696,7 +50726,7 @@
           "points": 4
         },
         {
-          "position": 9,
+          "position": 11,
           "teamId": "1660716",
           "teamName": "Olympique Akbou",
           "shortName": "Olympique Akbou",
@@ -50711,49 +50741,19 @@
           "points": 4
         },
         {
-          "position": 10,
+          "position": 12,
           "teamId": "319205",
           "teamName": "CR Temouchent",
           "shortName": "CR Temouchent",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/319205.png",
-          "played": 3,
+          "played": 4,
           "won": 1,
           "drawn": 1,
-          "lost": 1,
+          "lost": 2,
           "goalsFor": 2,
-          "goalsAgainst": 3,
-          "goalDifference": -1,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
           "points": 4
-        },
-        {
-          "position": 11,
-          "teamId": "6353",
-          "teamName": "MC Alger",
-          "shortName": "MC Alger",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6353.png",
-          "played": 1,
-          "won": 1,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 2,
-          "goalsAgainst": 0,
-          "goalDifference": 2,
-          "points": 3
-        },
-        {
-          "position": 12,
-          "teamId": "101630",
-          "teamName": "JS Kabylie",
-          "shortName": "JS Kabylie",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101630.png",
-          "played": 2,
-          "won": 1,
-          "drawn": 0,
-          "lost": 1,
-          "goalsFor": 1,
-          "goalsAgainst": 1,
-          "goalDifference": 0,
-          "points": 3
         },
         {
           "position": 13,
@@ -50812,13 +50812,13 @@
           "teamName": "ASO Chlef",
           "shortName": "ASO Chlef",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101629.png",
-          "played": 3,
+          "played": 4,
           "won": 0,
           "drawn": 1,
-          "lost": 2,
+          "lost": 3,
           "goalsFor": 3,
-          "goalsAgainst": 7,
-          "goalDifference": -4,
+          "goalsAgainst": 8,
+          "goalDifference": -5,
           "points": 1,
           "form": [
             "#FF4646"
@@ -50830,10 +50830,46 @@
       "competitionId": "536",
       "competitionName": "Saudi Pro League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:49.950Z",
+      "updatedAt": "2026-10-09T22:20:02.120Z",
       "table": [
         {
           "position": 1,
+          "teamId": "101919",
+          "teamName": "Al Qadsiah",
+          "shortName": "Al Qadsiah",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101919.png",
+          "played": 8,
+          "won": 6,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 21,
+          "goalsAgainst": 8,
+          "goalDifference": 13,
+          "points": 19,
+          "form": [
+            "#c9dd03"
+          ]
+        },
+        {
+          "position": 2,
+          "teamId": "101918",
+          "teamName": "Al Nassr FC",
+          "shortName": "Al Nassr FC",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101918.png",
+          "played": 8,
+          "won": 6,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 19,
+          "goalsAgainst": 7,
+          "goalDifference": 12,
+          "points": 19,
+          "form": [
+            "#c9dd03"
+          ]
+        },
+        {
+          "position": 3,
           "teamId": "2529",
           "teamName": "Al Hilal",
           "shortName": "Al Hilal",
@@ -50851,7 +50887,7 @@
           ]
         },
         {
-          "position": 2,
+          "position": 4,
           "teamId": "8577",
           "teamName": "Al Ittihad",
           "shortName": "Al Ittihad",
@@ -50865,47 +50901,29 @@
           "goalDifference": 6,
           "points": 17,
           "form": [
-            "#c9dd03"
-          ]
-        },
-        {
-          "position": 3,
-          "teamId": "101918",
-          "teamName": "Al Nassr FC",
-          "shortName": "Al Nassr FC",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101918.png",
-          "played": 7,
-          "won": 5,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 16,
-          "goalsAgainst": 7,
-          "goalDifference": 9,
-          "points": 16,
-          "form": [
-            "#c9dd03"
-          ]
-        },
-        {
-          "position": 4,
-          "teamId": "101919",
-          "teamName": "Al Qadsiah",
-          "shortName": "Al Qadsiah",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101919.png",
-          "played": 7,
-          "won": 5,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 16,
-          "goalsAgainst": 8,
-          "goalDifference": 8,
-          "points": 16,
-          "form": [
             "#FFD908"
           ]
         },
         {
           "position": 5,
+          "teamId": "2530",
+          "teamName": "Al Ahli",
+          "shortName": "Al Ahli",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2530.png",
+          "played": 8,
+          "won": 5,
+          "drawn": 0,
+          "lost": 3,
+          "goalsFor": 20,
+          "goalsAgainst": 10,
+          "goalDifference": 10,
+          "points": 15,
+          "form": [
+            "#FFD908"
+          ]
+        },
+        {
+          "position": 6,
           "teamId": "1699505",
           "teamName": "Neom SC",
           "shortName": "Neom SC",
@@ -50919,24 +50937,6 @@
           "goalDifference": 7,
           "points": 15,
           "form": [
-            "#FFD908"
-          ]
-        },
-        {
-          "position": 6,
-          "teamId": "2530",
-          "teamName": "Al Ahli",
-          "shortName": "Al Ahli",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2530.png",
-          "played": 7,
-          "won": 4,
-          "drawn": 0,
-          "lost": 3,
-          "goalsFor": 16,
-          "goalsAgainst": 10,
-          "goalDifference": 6,
-          "points": 12,
-          "form": [
             "#0046A7"
           ]
         },
@@ -50946,32 +50946,17 @@
           "teamName": "Al Kholood",
           "shortName": "Al Kholood",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1523706.png",
-          "played": 7,
+          "played": 8,
           "won": 3,
           "drawn": 3,
-          "lost": 1,
+          "lost": 2,
           "goalsFor": 12,
-          "goalsAgainst": 10,
-          "goalDifference": 2,
+          "goalsAgainst": 15,
+          "goalDifference": -3,
           "points": 12
         },
         {
           "position": 8,
-          "teamId": "1787233",
-          "teamName": "Al Diriyah",
-          "shortName": "Al Diriyah",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1787233.png",
-          "played": 7,
-          "won": 3,
-          "drawn": 2,
-          "lost": 2,
-          "goalsFor": 7,
-          "goalsAgainst": 5,
-          "goalDifference": 2,
-          "points": 11
-        },
-        {
-          "position": 9,
           "teamId": "101915",
           "teamName": "Al-Ettifaq",
           "shortName": "Al-Ettifaq",
@@ -50983,6 +50968,21 @@
           "goalsFor": 11,
           "goalsAgainst": 11,
           "goalDifference": 0,
+          "points": 11
+        },
+        {
+          "position": 9,
+          "teamId": "1787233",
+          "teamName": "Al Diriyah",
+          "shortName": "Al Diriyah",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1787233.png",
+          "played": 8,
+          "won": 3,
+          "drawn": 2,
+          "lost": 3,
+          "goalsFor": 7,
+          "goalsAgainst": 8,
+          "goalDifference": -1,
           "points": 11
         },
         {
@@ -51062,21 +51062,6 @@
         },
         {
           "position": 15,
-          "teamId": "177356",
-          "teamName": "Al Fateh FC",
-          "shortName": "Al Fateh FC",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/177356.png",
-          "played": 7,
-          "won": 0,
-          "drawn": 3,
-          "lost": 4,
-          "goalsFor": 4,
-          "goalsAgainst": 11,
-          "goalDifference": -7,
-          "points": 3
-        },
-        {
-          "position": 16,
           "teamId": "205687",
           "teamName": "Al-Faisaly",
           "shortName": "Al-Faisaly",
@@ -51088,13 +51073,10 @@
           "goalsFor": 5,
           "goalsAgainst": 13,
           "goalDifference": -8,
-          "points": 3,
-          "form": [
-            "#FF4646"
-          ]
+          "points": 3
         },
         {
-          "position": 17,
+          "position": 16,
           "teamId": "205686",
           "teamName": "Al-Taawoun",
           "shortName": "Al-Taawoun",
@@ -51106,6 +51088,24 @@
           "goalsFor": 3,
           "goalsAgainst": 12,
           "goalDifference": -9,
+          "points": 3,
+          "form": [
+            "#FF4646"
+          ]
+        },
+        {
+          "position": 17,
+          "teamId": "177356",
+          "teamName": "Al Fateh FC",
+          "shortName": "Al Fateh FC",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/177356.png",
+          "played": 8,
+          "won": 0,
+          "drawn": 3,
+          "lost": 5,
+          "goalsFor": 4,
+          "goalsAgainst": 15,
+          "goalDifference": -11,
           "points": 3,
           "form": [
             "#FF4646"
@@ -51135,14 +51135,14 @@
       "competitionId": "9806",
       "competitionName": "UEFA Nations League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:40:16.257Z",
+      "updatedAt": "2026-10-09T22:20:29.960Z",
       "table": []
     },
     "10216": {
       "competitionId": "10216",
       "competitionName": "UEFA Conference League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:42.153Z",
+      "updatedAt": "2026-10-09T22:19:54.001Z",
       "table": [
         {
           "position": 1,
@@ -51764,7 +51764,7 @@
       "competitionId": "42",
       "competitionName": "UEFA Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:36.096Z",
+      "updatedAt": "2026-10-09T22:19:46.110Z",
       "scorers": [
         {
           "rank": 1,
@@ -51802,7 +51802,7 @@
       "competitionId": "44",
       "competitionName": "Copa América",
       "season": "2024",
-      "updatedAt": "2026-10-09T12:40:06.499Z",
+      "updatedAt": "2026-10-09T22:20:19.651Z",
       "scorers": [
         {
           "rank": 1,
@@ -51840,7 +51840,7 @@
       "competitionId": "47",
       "competitionName": "Premier League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:35.172Z",
+      "updatedAt": "2026-10-09T22:19:45.011Z",
       "scorers": [
         {
           "rank": 1,
@@ -51878,14 +51878,14 @@
       "competitionId": "50",
       "competitionName": "UEFA EURO",
       "season": "2028",
-      "updatedAt": "2026-10-09T12:40:05.570Z",
+      "updatedAt": "2026-10-09T22:20:18.553Z",
       "scorers": []
     },
     "53": {
       "competitionId": "53",
       "competitionName": "Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:40.566Z",
+      "updatedAt": "2026-10-09T22:19:51.791Z",
       "scorers": [
         {
           "rank": 1,
@@ -51923,7 +51923,7 @@
       "competitionId": "54",
       "competitionName": "Bundesliga",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:39.493Z",
+      "updatedAt": "2026-10-09T22:19:50.051Z",
       "scorers": [
         {
           "rank": 1,
@@ -51937,21 +51937,21 @@
         },
         {
           "rank": 2,
-          "playerId": "540097",
-          "playerName": "Patrik Schick",
-          "teamId": "8178",
-          "teamName": "Bayer 04 Leverkusen",
-          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8178.png",
+          "playerId": "276791",
+          "playerName": "Niclas Füllkrug",
+          "teamId": "8697",
+          "teamName": "SV Werder Bremen",
+          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8697.png",
           "goals": 4,
           "assists": 0
         },
         {
           "rank": 3,
-          "playerId": "686315",
-          "playerName": "Phillip Tietz",
-          "teamId": "9905",
-          "teamName": "1. FSV Mainz 05",
-          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9905.png",
+          "playerId": "540097",
+          "playerName": "Patrik Schick",
+          "teamId": "8178",
+          "teamName": "Bayer 04 Leverkusen",
+          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8178.png",
           "goals": 4,
           "assists": 0
         }
@@ -51961,7 +51961,7 @@
       "competitionId": "55",
       "competitionName": "Serie A",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:38.452Z",
+      "updatedAt": "2026-10-09T22:19:48.439Z",
       "scorers": [
         {
           "rank": 1,
@@ -51999,7 +51999,7 @@
       "competitionId": "57",
       "competitionName": "Eredivisie",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:40:00.779Z",
+      "updatedAt": "2026-10-09T22:20:13.306Z",
       "scorers": [
         {
           "rank": 1,
@@ -52023,11 +52023,11 @@
         },
         {
           "rank": 3,
-          "playerId": "1060542",
-          "playerName": "Søren Tengstedt",
-          "teamId": "6433",
-          "teamName": "Go Ahead Eagles",
-          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6433.png",
+          "playerId": "774947",
+          "playerName": "Guus Til",
+          "teamId": "8640",
+          "teamName": "PSV",
+          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8640.png",
           "goals": 5,
           "assists": 0
         }
@@ -52037,7 +52037,7 @@
       "competitionId": "61",
       "competitionName": "Liga Portugal",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:40:01.861Z",
+      "updatedAt": "2026-10-09T22:20:15.026Z",
       "scorers": [
         {
           "rank": 1,
@@ -52056,7 +52056,7 @@
           "teamId": "9768",
           "teamName": "Sporting Lisbon",
           "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9768.png",
-          "goals": 6,
+          "goals": 7,
           "assists": 0
         },
         {
@@ -52075,7 +52075,7 @@
       "competitionId": "73",
       "competitionName": "UEFA Europa League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:41.461Z",
+      "updatedAt": "2026-10-09T22:19:53.227Z",
       "scorers": [
         {
           "rank": 1,
@@ -52113,7 +52113,7 @@
       "competitionId": "77",
       "competitionName": "FIFA World Cup",
       "season": "2026",
-      "updatedAt": "2026-10-09T12:40:04.657Z",
+      "updatedAt": "2026-10-09T22:20:17.688Z",
       "scorers": [
         {
           "rank": 1,
@@ -52151,7 +52151,7 @@
       "competitionId": "87",
       "competitionName": "LaLiga",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:37.182Z",
+      "updatedAt": "2026-10-09T22:19:47.296Z",
       "scorers": [
         {
           "rank": 1,
@@ -52189,7 +52189,7 @@
       "competitionId": "130",
       "competitionName": "MLS",
       "season": "2026",
-      "updatedAt": "2026-10-09T12:39:48.921Z",
+      "updatedAt": "2026-10-09T22:20:01.157Z",
       "scorers": [
         {
           "rank": 1,
@@ -52227,7 +52227,7 @@
       "competitionId": "132",
       "competitionName": "FA Cup",
       "season": "2025/2026",
-      "updatedAt": "2026-10-09T12:39:43.441Z",
+      "updatedAt": "2026-10-09T22:19:55.689Z",
       "scorers": [
         {
           "rank": 1,
@@ -52265,7 +52265,7 @@
       "competitionId": "133",
       "competitionName": "Carabao Cup",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:44.156Z",
+      "updatedAt": "2026-10-09T22:19:56.642Z",
       "scorers": [
         {
           "rank": 1,
@@ -52303,14 +52303,14 @@
       "competitionId": "138",
       "competitionName": "Copa del Rey",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:45.174Z",
+      "updatedAt": "2026-10-09T22:19:57.509Z",
       "scorers": []
     },
     "141": {
       "competitionId": "141",
       "competitionName": "Coppa Italia",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:47.546Z",
+      "updatedAt": "2026-10-09T22:19:59.605Z",
       "scorers": [
         {
           "rank": 1,
@@ -52348,7 +52348,7 @@
       "competitionId": "209",
       "competitionName": "DFB-Pokal",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:46.136Z",
+      "updatedAt": "2026-10-09T22:19:58.730Z",
       "scorers": [
         {
           "rank": 1,
@@ -52386,7 +52386,7 @@
       "competitionId": "264",
       "competitionName": "AFC Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:50.942Z",
+      "updatedAt": "2026-10-09T22:20:03.332Z",
       "scorers": [
         {
           "rank": 1,
@@ -52424,7 +52424,7 @@
       "competitionId": "268",
       "competitionName": "Brasileirão Série A",
       "season": "2026",
-      "updatedAt": "2026-10-09T12:40:03.501Z",
+      "updatedAt": "2026-10-09T22:20:16.771Z",
       "scorers": [
         {
           "rank": 1,
@@ -52462,7 +52462,7 @@
       "competitionId": "516",
       "competitionName": "Algerian Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:40:17.529Z",
+      "updatedAt": "2026-10-09T22:20:30.948Z",
       "scorers": [
         {
           "rank": 1,
@@ -52500,7 +52500,7 @@
       "competitionId": "536",
       "competitionName": "Saudi Pro League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:49.992Z",
+      "updatedAt": "2026-10-09T22:20:02.181Z",
       "scorers": [
         {
           "rank": 1,
@@ -52509,27 +52509,27 @@
           "teamId": "2530",
           "teamName": "Al Ahli",
           "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2530.png",
-          "goals": 10,
+          "goals": 11,
           "assists": 0
         },
         {
           "rank": 2,
+          "playerId": "732282",
+          "playerName": "Trincão",
+          "teamId": "2530",
+          "teamName": "Al Ahli",
+          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2530.png",
+          "goals": 5,
+          "assists": 0
+        },
+        {
+          "rank": 3,
           "playerId": "169193",
           "playerName": "Alexandre Lacazette",
           "teamId": "1699505",
           "teamName": "Neom SC",
           "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1699505.png",
           "goals": 5,
-          "assists": 0
-        },
-        {
-          "rank": 3,
-          "playerId": "1431516",
-          "playerName": "George Ilenikhena",
-          "teamId": "8577",
-          "teamName": "Al Ittihad",
-          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8577.png",
-          "goals": 4,
           "assists": 0
         }
       ]
@@ -52538,7 +52538,7 @@
       "competitionId": "9806",
       "competitionName": "UEFA Nations League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:40:16.291Z",
+      "updatedAt": "2026-10-09T22:20:30.049Z",
       "scorers": [
         {
           "rank": 1,
@@ -52576,7 +52576,7 @@
       "competitionId": "10216",
       "competitionName": "UEFA Conference League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-09T12:39:42.186Z",
+      "updatedAt": "2026-10-09T22:19:54.056Z",
       "scorers": []
     }
   },
