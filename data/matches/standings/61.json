@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-10T17:17:33.731Z",
+  "updatedAt": "2026-10-10T21:13:50.033Z",
   "table": [
     {
       "position": 1,
@@ -11,17 +11,16 @@
       "shortName": "FC Porto",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9773.png",
       "played": 8,
-      "won": 7,
-      "drawn": 1,
+      "won": 8,
+      "drawn": 0,
       "lost": 0,
-      "goalsFor": 18,
-      "goalsAgainst": 3,
-      "goalDifference": 15,
-      "points": 22,
+      "goalsFor": 20,
+      "goalsAgainst": 4,
+      "goalDifference": 16,
+      "points": 24,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 2,
@@ -65,20 +64,40 @@
       "teamName": "Santa Clara",
       "shortName": "Santa Clara",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1567.png",
-      "played": 7,
+      "played": 8,
       "won": 4,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 0,
       "goalsFor": 11,
       "goalsAgainst": 4,
       "goalDifference": 7,
-      "points": 15,
+      "points": 16,
       "form": [
         "#0294F0"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 5,
+      "teamId": "1786",
+      "teamName": "Académico Viseu",
+      "shortName": "Académico Viseu",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1786.png",
+      "played": 8,
+      "won": 3,
+      "drawn": 3,
+      "lost": 2,
+      "goalsFor": 10,
+      "goalsAgainst": 10,
+      "goalDifference": 0,
+      "points": 12,
+      "form": [
+        "#02CCF0"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 6,
       "teamId": "158085",
       "teamName": "Arouca",
       "shortName": "Arouca",
@@ -90,13 +109,10 @@
       "goalsFor": 10,
       "goalsAgainst": 7,
       "goalDifference": 3,
-      "points": 11,
-      "form": [
-        "#02CCF0"
-      ]
+      "points": 11
     },
     {
-      "position": 6,
+      "position": 7,
       "teamId": "9764",
       "teamName": "Gil Vicente",
       "shortName": "Gil Vicente",
@@ -108,21 +124,6 @@
       "goalsFor": 6,
       "goalsAgainst": 5,
       "goalDifference": 1,
-      "points": 11
-    },
-    {
-      "position": 7,
-      "teamId": "1786",
-      "teamName": "Académico Viseu",
-      "shortName": "Académico Viseu",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1786.png",
-      "played": 7,
-      "won": 3,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 9,
-      "goalDifference": 0,
       "points": 11
     },
     {
@@ -157,22 +158,6 @@
     },
     {
       "position": 10,
-      "teamId": "10212",
-      "teamName": "Marítimo",
-      "shortName": "Marítimo",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
-      "played": 8,
-      "won": 2,
-      "drawn": 3,
-      "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 12,
-      "goalDifference": -4,
-      "points": 9,
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 11,
       "teamId": "9780",
       "teamName": "Alverca",
       "shortName": "Alverca",
@@ -184,6 +169,21 @@
       "goalsFor": 9,
       "goalsAgainst": 11,
       "goalDifference": -2,
+      "points": 8
+    },
+    {
+      "position": 11,
+      "teamId": "10212",
+      "teamName": "Marítimo",
+      "shortName": "Marítimo",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 9,
+      "goalsAgainst": 14,
+      "goalDifference": -5,
       "points": 8
     },
     {
@@ -233,6 +233,22 @@
     },
     {
       "position": 15,
+      "teamId": "212821",
+      "teamName": "Casa Pia AC",
+      "shortName": "Casa Pia AC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212821.png",
+      "played": 8,
+      "won": 1,
+      "drawn": 2,
+      "lost": 5,
+      "goalsFor": 3,
+      "goalsAgainst": 16,
+      "goalDifference": -13,
+      "points": 5,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 16,
       "teamId": "10214",
       "teamName": "Nacional",
       "shortName": "Nacional",
@@ -244,10 +260,13 @@
       "goalsFor": 7,
       "goalsAgainst": 15,
       "goalDifference": -8,
-      "points": 4
+      "points": 4,
+      "form": [
+        "#FFA72F"
+      ]
     },
     {
-      "position": 16,
+      "position": 17,
       "teamId": "7841",
       "teamName": "Rio Ave",
       "shortName": "Rio Ave",
@@ -261,24 +280,6 @@
       "goalDifference": -10,
       "points": 4,
       "form": [
-        "#FFA72F"
-      ]
-    },
-    {
-      "position": 17,
-      "teamId": "212821",
-      "teamName": "Casa Pia AC",
-      "shortName": "Casa Pia AC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212821.png",
-      "played": 7,
-      "won": 1,
-      "drawn": 1,
-      "lost": 5,
-      "goalsFor": 3,
-      "goalsAgainst": 16,
-      "goalDifference": -13,
-      "points": 4,
-      "form": [
         "#FF4646"
       ]
     },
@@ -288,17 +289,18 @@
       "teamName": "Estoril",
       "shortName": "Estoril",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7842.png",
-      "played": 7,
+      "played": 8,
       "won": 0,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 5,
-      "goalsFor": 3,
-      "goalsAgainst": 10,
+      "goalsFor": 4,
+      "goalsAgainst": 11,
       "goalDifference": -7,
-      "points": 2,
+      "points": 3,
       "form": [
         "#FF4646"
-      ]
+      ],
+      "qualificationZone": "Active"
     }
   ]
 }

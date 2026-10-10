@@ -2,10 +2,28 @@
   "competitionId": "536",
   "competitionName": "Saudi Pro League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-10T17:17:20.418Z",
+  "updatedAt": "2026-10-10T21:13:36.981Z",
   "table": [
     {
       "position": 1,
+      "teamId": "2529",
+      "teamName": "Al Hilal",
+      "shortName": "Al Hilal",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2529.png",
+      "played": 8,
+      "won": 7,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 26,
+      "goalsAgainst": 7,
+      "goalDifference": 19,
+      "points": 21,
+      "form": [
+        "#c9dd03"
+      ]
+    },
+    {
+      "position": 2,
       "teamId": "101919",
       "teamName": "Al Qadsiah",
       "shortName": "Al Qadsiah",
@@ -23,7 +41,7 @@
       ]
     },
     {
-      "position": 2,
+      "position": 3,
       "teamId": "101918",
       "teamName": "Al Nassr FC",
       "shortName": "Al Nassr FC",
@@ -41,36 +59,18 @@
       ]
     },
     {
-      "position": 3,
-      "teamId": "2529",
-      "teamName": "Al Hilal",
-      "shortName": "Al Hilal",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2529.png",
-      "played": 7,
-      "won": 6,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 23,
-      "goalsAgainst": 5,
-      "goalDifference": 18,
-      "points": 18,
-      "form": [
-        "#c9dd03"
-      ]
-    },
-    {
       "position": 4,
       "teamId": "8577",
       "teamName": "Al Ittihad",
       "shortName": "Al Ittihad",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8577.png",
-      "played": 7,
+      "played": 8,
       "won": 5,
       "drawn": 2,
-      "lost": 0,
-      "goalsFor": 12,
-      "goalsAgainst": 6,
-      "goalDifference": 6,
+      "lost": 1,
+      "goalsFor": 14,
+      "goalsAgainst": 9,
+      "goalDifference": 5,
       "points": 17,
       "form": [
         "#FFD908"
