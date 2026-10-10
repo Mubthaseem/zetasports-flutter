@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-10T11:59:08.860Z",
+  "updatedAt": "2026-10-10T17:17:02.469Z",
   "scorers": [
     {
       "rank": 1,
@@ -16,22 +16,22 @@
     },
     {
       "rank": 2,
+      "playerId": "1021382",
+      "playerName": "João Pedro",
+      "teamId": "8455",
+      "teamName": "Chelsea",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8455.png",
+      "goals": 5,
+      "assists": 0
+    },
+    {
+      "rank": 3,
       "playerId": "690107",
       "playerName": "Alexander Isak",
       "teamId": "8650",
       "teamName": "Liverpool",
       "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
       "goals": 4,
-      "assists": 0
-    },
-    {
-      "rank": 3,
-      "playerId": "940446",
-      "playerName": "Brian Brobbey",
-      "teamId": "8472",
-      "teamName": "Sunderland",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8472.png",
-      "goals": 3,
       "assists": 0
     }
   ]

@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-10T11:59:42.657Z",
+  "updatedAt": "2026-10-10T17:17:33.731Z",
   "table": [
     {
       "position": 1,
@@ -10,17 +10,18 @@
       "teamName": "FC Porto",
       "shortName": "FC Porto",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9773.png",
-      "played": 7,
+      "played": 8,
       "won": 7,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
       "goalsFor": 18,
       "goalsAgainst": 3,
       "goalDifference": 15,
-      "points": 21,
+      "points": 22,
       "form": [
         "#2AD572"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 2,
@@ -156,6 +157,22 @@
     },
     {
       "position": 10,
+      "teamId": "10212",
+      "teamName": "Marítimo",
+      "shortName": "Marítimo",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 8,
+      "goalsAgainst": 12,
+      "goalDifference": -4,
+      "points": 9,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 11,
       "teamId": "9780",
       "teamName": "Alverca",
       "shortName": "Alverca",
@@ -167,21 +184,6 @@
       "goalsFor": 9,
       "goalsAgainst": 11,
       "goalDifference": -2,
-      "points": 8
-    },
-    {
-      "position": 11,
-      "teamId": "10212",
-      "teamName": "Marítimo",
-      "shortName": "Marítimo",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
-      "played": 7,
-      "won": 2,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 12,
-      "goalDifference": -4,
       "points": 8
     },
     {

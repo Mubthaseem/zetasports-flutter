@@ -2,10 +2,29 @@
   "competitionId": "55",
   "competitionName": "Serie A",
   "season": "2026/2027",
-  "updatedAt": "2026-10-10T11:59:13.010Z",
+  "updatedAt": "2026-10-10T17:17:06.699Z",
   "table": [
     {
       "position": 1,
+      "teamId": "8636",
+      "teamName": "Inter",
+      "shortName": "Inter",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8636.png",
+      "played": 6,
+      "won": 5,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 18,
+      "goalsAgainst": 8,
+      "goalDifference": 10,
+      "points": 16,
+      "form": [
+        "#2AD572"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 2,
       "teamId": "8686",
       "teamName": "Roma",
       "shortName": "Roma",
@@ -17,24 +36,6 @@
       "goalsFor": 14,
       "goalsAgainst": 3,
       "goalDifference": 11,
-      "points": 13,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 2,
-      "teamId": "8636",
-      "teamName": "Inter",
-      "shortName": "Inter",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8636.png",
-      "played": 5,
-      "won": 4,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 15,
-      "goalsAgainst": 8,
-      "goalDifference": 7,
       "points": 13,
       "form": [
         "#2AD572"
@@ -234,21 +235,6 @@
     },
     {
       "position": 15,
-      "teamId": "10167",
-      "teamName": "Parma",
-      "shortName": "Parma",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10167.png",
-      "played": 5,
-      "won": 1,
-      "drawn": 1,
-      "lost": 3,
-      "goalsFor": 4,
-      "goalsAgainst": 7,
-      "goalDifference": -3,
-      "points": 4
-    },
-    {
-      "position": 16,
       "teamId": "6504",
       "teamName": "Monza",
       "shortName": "Monza",
@@ -263,22 +249,56 @@
       "points": 4
     },
     {
-      "position": 17,
-      "teamId": "8535",
-      "teamName": "Fiorentina",
-      "shortName": "Fiorentina",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8535.png",
-      "played": 5,
+      "position": 16,
+      "teamId": "10233",
+      "teamName": "Genoa",
+      "shortName": "Genoa",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png",
+      "played": 6,
       "won": 1,
       "drawn": 1,
-      "lost": 3,
-      "goalsFor": 6,
-      "goalsAgainst": 12,
+      "lost": 4,
+      "goalsFor": 5,
+      "goalsAgainst": 11,
       "goalDifference": -6,
       "points": 4
     },
     {
+      "position": 17,
+      "teamId": "10167",
+      "teamName": "Parma",
+      "shortName": "Parma",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10167.png",
+      "played": 6,
+      "won": 1,
+      "drawn": 1,
+      "lost": 4,
+      "goalsFor": 4,
+      "goalsAgainst": 10,
+      "goalDifference": -6,
+      "points": 4,
+      "qualificationZone": "Active"
+    },
+    {
       "position": 18,
+      "teamId": "8535",
+      "teamName": "Fiorentina",
+      "shortName": "Fiorentina",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8535.png",
+      "played": 6,
+      "won": 1,
+      "drawn": 1,
+      "lost": 4,
+      "goalsFor": 7,
+      "goalsAgainst": 14,
+      "goalDifference": -7,
+      "points": 4,
+      "form": [
+        "#FF4646"
+      ]
+    },
+    {
+      "position": 19,
       "teamId": "9857",
       "teamName": "Bologna",
       "shortName": "Bologna",
@@ -291,24 +311,6 @@
       "goalsAgainst": 6,
       "goalDifference": -3,
       "points": 2,
-      "form": [
-        "#FF4646"
-      ]
-    },
-    {
-      "position": 19,
-      "teamId": "10233",
-      "teamName": "Genoa",
-      "shortName": "Genoa",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png",
-      "played": 5,
-      "won": 0,
-      "drawn": 1,
-      "lost": 4,
-      "goalsFor": 3,
-      "goalsAgainst": 10,
-      "goalDifference": -7,
-      "points": 1,
       "form": [
         "#FF4646"
       ]

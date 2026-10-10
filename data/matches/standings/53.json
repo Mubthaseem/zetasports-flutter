@@ -2,10 +2,28 @@
   "competitionId": "53",
   "competitionName": "Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-10-10T11:59:15.857Z",
+  "updatedAt": "2026-10-10T17:17:09.596Z",
   "table": [
     {
       "position": 1,
+      "teamId": "8639",
+      "teamName": "Lille",
+      "shortName": "Lille",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8639.png",
+      "played": 6,
+      "won": 4,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 9,
+      "goalsAgainst": 4,
+      "goalDifference": 5,
+      "points": 13,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 2,
       "teamId": "9829",
       "teamName": "Monaco",
       "shortName": "Monaco",
@@ -23,7 +41,7 @@
       ]
     },
     {
-      "position": 2,
+      "position": 3,
       "teamId": "9748",
       "teamName": "Lyon",
       "shortName": "Lyon",
@@ -41,7 +59,7 @@
       ]
     },
     {
-      "position": 3,
+      "position": 4,
       "teamId": "6379",
       "teamName": "Paris FC",
       "shortName": "Paris FC",
@@ -54,24 +72,6 @@
       "goalsAgainst": 3,
       "goalDifference": 5,
       "points": 11,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 4,
-      "teamId": "8639",
-      "teamName": "Lille",
-      "shortName": "Lille",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8639.png",
-      "played": 5,
-      "won": 3,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 8,
-      "goalsAgainst": 4,
-      "goalDifference": 4,
-      "points": 10,
       "form": [
         "#FFD908"
       ]
@@ -289,13 +289,13 @@
       "teamName": "Le Havre",
       "shortName": "Le Havre",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9746.png",
-      "played": 5,
+      "played": 6,
       "won": 0,
       "drawn": 2,
-      "lost": 3,
+      "lost": 4,
       "goalsFor": 4,
-      "goalsAgainst": 7,
-      "goalDifference": -3,
+      "goalsAgainst": 8,
+      "goalDifference": -4,
       "points": 2,
       "form": [
         "#FF4646"

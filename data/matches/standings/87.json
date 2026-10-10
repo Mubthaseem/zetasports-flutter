@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-10T11:59:11.781Z",
+  "updatedAt": "2026-10-10T17:17:05.512Z",
   "table": [
     {
       "position": 1,
@@ -10,17 +10,18 @@
       "teamName": "Barcelona",
       "shortName": "Barcelona",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8634.png",
-      "played": 7,
-      "won": 7,
+      "played": 8,
+      "won": 8,
       "drawn": 0,
       "lost": 0,
-      "goalsFor": 31,
+      "goalsFor": 33,
       "goalsAgainst": 7,
-      "goalDifference": 24,
-      "points": 21,
+      "goalDifference": 26,
+      "points": 24,
       "form": [
         "#2AD572"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 2,
@@ -28,14 +29,14 @@
       "teamName": "Atlético Madrid",
       "shortName": "Atlético Madrid",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9906.png",
-      "played": 7,
-      "won": 5,
+      "played": 8,
+      "won": 6,
       "drawn": 1,
       "lost": 1,
-      "goalsFor": 16,
-      "goalsAgainst": 7,
-      "goalDifference": 9,
-      "points": 16,
+      "goalsFor": 18,
+      "goalsAgainst": 8,
+      "goalDifference": 10,
+      "points": 19,
       "form": [
         "#2AD572"
       ]
@@ -100,13 +101,13 @@
       "teamName": "Deportivo Alavés",
       "shortName": "Deportivo Alavés",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9866.png",
-      "played": 7,
+      "played": 8,
       "won": 3,
       "drawn": 2,
-      "lost": 2,
-      "goalsFor": 11,
-      "goalsAgainst": 6,
-      "goalDifference": 5,
+      "lost": 3,
+      "goalsFor": 12,
+      "goalsAgainst": 8,
+      "goalDifference": 4,
       "points": 11,
       "form": [
         "#02CCF0"
@@ -189,21 +190,6 @@
     },
     {
       "position": 12,
-      "teamId": "8305",
-      "teamName": "Getafe",
-      "shortName": "Getafe",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8305.png",
-      "played": 7,
-      "won": 2,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 4,
-      "goalsAgainst": 7,
-      "goalDifference": -3,
-      "points": 8
-    },
-    {
-      "position": 13,
       "teamId": "8370",
       "teamName": "Rayo Vallecano",
       "shortName": "Rayo Vallecano",
@@ -216,6 +202,22 @@
       "goalsAgainst": 16,
       "goalDifference": -5,
       "points": 8
+    },
+    {
+      "position": 13,
+      "teamId": "8305",
+      "teamName": "Getafe",
+      "shortName": "Getafe",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8305.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 4,
+      "goalsAgainst": 9,
+      "goalDifference": -5,
+      "points": 8,
+      "qualificationZone": "Active"
     },
     {
       "position": 14,
