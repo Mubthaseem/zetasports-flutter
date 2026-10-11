@@ -2,7 +2,7 @@
   "competitionId": "536",
   "competitionName": "Saudi Pro League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-11T12:11:48.681Z",
+  "updatedAt": "2026-10-11T21:33:24.333Z",
   "table": [
     {
       "position": 1,
@@ -178,32 +178,47 @@
       "teamName": "Al Riyadh",
       "shortName": "Al Riyadh",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/582739.png",
-      "played": 7,
+      "played": 8,
       "won": 2,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 16,
+      "goalsFor": 9,
+      "goalsAgainst": 17,
       "goalDifference": -8,
-      "points": 8
+      "points": 9
     },
     {
       "position": 12,
+      "teamId": "101916",
+      "teamName": "Al Shabab",
+      "shortName": "Al Shabab",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101916.png",
+      "played": 8,
+      "won": 1,
+      "drawn": 4,
+      "lost": 3,
+      "goalsFor": 9,
+      "goalsAgainst": 11,
+      "goalDifference": -2,
+      "points": 7
+    },
+    {
+      "position": 13,
       "teamId": "582749",
       "teamName": "Al-Fayha",
       "shortName": "Al-Fayha",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/582749.png",
-      "played": 7,
+      "played": 8,
       "won": 1,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 3,
-      "goalsFor": 7,
-      "goalsAgainst": 11,
+      "goalsFor": 8,
+      "goalsAgainst": 12,
       "goalDifference": -4,
-      "points": 6
+      "points": 7
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "550433",
       "teamName": "Al Khaleej",
       "shortName": "Al Khaleej",
@@ -216,21 +231,6 @@
       "goalsAgainst": 11,
       "goalDifference": -7,
       "points": 6
-    },
-    {
-      "position": 14,
-      "teamId": "101916",
-      "teamName": "Al Shabab",
-      "shortName": "Al Shabab",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101916.png",
-      "played": 7,
-      "won": 0,
-      "drawn": 4,
-      "lost": 3,
-      "goalsFor": 6,
-      "goalsAgainst": 11,
-      "goalDifference": -5,
-      "points": 4
     },
     {
       "position": 15,
@@ -249,24 +249,6 @@
     },
     {
       "position": 16,
-      "teamId": "205686",
-      "teamName": "Al-Taawoun",
-      "shortName": "Al-Taawoun",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/205686.png",
-      "played": 7,
-      "won": 0,
-      "drawn": 3,
-      "lost": 4,
-      "goalsFor": 3,
-      "goalsAgainst": 12,
-      "goalDifference": -9,
-      "points": 3,
-      "form": [
-        "#FF4646"
-      ]
-    },
-    {
-      "position": 17,
       "teamId": "177356",
       "teamName": "Al Fateh FC",
       "shortName": "Al Fateh FC",
@@ -278,6 +260,24 @@
       "goalsFor": 4,
       "goalsAgainst": 15,
       "goalDifference": -11,
+      "points": 3,
+      "form": [
+        "#FF4646"
+      ]
+    },
+    {
+      "position": 17,
+      "teamId": "205686",
+      "teamName": "Al-Taawoun",
+      "shortName": "Al-Taawoun",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/205686.png",
+      "played": 8,
+      "won": 0,
+      "drawn": 3,
+      "lost": 5,
+      "goalsFor": 3,
+      "goalsAgainst": 15,
+      "goalDifference": -12,
       "points": 3,
       "form": [
         "#FF4646"

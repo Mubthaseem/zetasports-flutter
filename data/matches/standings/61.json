@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-11T12:12:01.407Z",
+  "updatedAt": "2026-10-11T21:33:36.704Z",
   "table": [
     {
       "position": 1,
@@ -24,6 +24,24 @@
     },
     {
       "position": 2,
+      "teamId": "9772",
+      "teamName": "Benfica",
+      "shortName": "Benfica",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
+      "played": 8,
+      "won": 6,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 24,
+      "goalsAgainst": 7,
+      "goalDifference": 17,
+      "points": 19,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 3,
       "teamId": "9768",
       "teamName": "Sporting CP",
       "shortName": "Sporting CP",
@@ -37,11 +55,11 @@
       "goalDifference": 11,
       "points": 18,
       "form": [
-        "#2AD572"
+        "#FFD908"
       ]
     },
     {
-      "position": 3,
+      "position": 4,
       "teamId": "1567",
       "teamName": "Santa Clara",
       "shortName": "Santa Clara",
@@ -55,29 +73,29 @@
       "goalDifference": 8,
       "points": 18,
       "form": [
-        "#FFD908"
-      ]
-    },
-    {
-      "position": 4,
-      "teamId": "9772",
-      "teamName": "Benfica",
-      "shortName": "Benfica",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
-      "played": 7,
-      "won": 5,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 22,
-      "goalsAgainst": 7,
-      "goalDifference": 15,
-      "points": 16,
-      "form": [
         "#0294F0"
       ]
     },
     {
       "position": 5,
+      "teamId": "158085",
+      "teamName": "Arouca",
+      "shortName": "Arouca",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/158085.png",
+      "played": 8,
+      "won": 4,
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 11,
+      "goalsAgainst": 7,
+      "goalDifference": 4,
+      "points": 14,
+      "form": [
+        "#02CCF0"
+      ]
+    },
+    {
+      "position": 6,
       "teamId": "1786",
       "teamName": "Académico Viseu",
       "shortName": "Académico Viseu",
@@ -89,25 +107,7 @@
       "goalsFor": 11,
       "goalsAgainst": 10,
       "goalDifference": 1,
-      "points": 14,
-      "form": [
-        "#02CCF0"
-      ]
-    },
-    {
-      "position": 6,
-      "teamId": "158085",
-      "teamName": "Arouca",
-      "shortName": "Arouca",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/158085.png",
-      "played": 7,
-      "won": 3,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 10,
-      "goalsAgainst": 7,
-      "goalDifference": 3,
-      "points": 11
+      "points": 14
     },
     {
       "position": 7,
@@ -145,13 +145,13 @@
       "teamName": "Estrela da Amadora",
       "shortName": "Estrela da Amadora",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1074320.png",
-      "played": 7,
+      "played": 8,
       "won": 2,
       "drawn": 4,
-      "lost": 1,
+      "lost": 2,
       "goalsFor": 14,
-      "goalsAgainst": 14,
-      "goalDifference": 0,
+      "goalsAgainst": 15,
+      "goalDifference": -1,
       "points": 10
     },
     {
@@ -216,47 +216,47 @@
     },
     {
       "position": 14,
-      "teamId": "7844",
-      "teamName": "Vitória de Guimarães",
-      "shortName": "Vitória de Guimarães",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7844.png",
-      "played": 7,
-      "won": 1,
-      "drawn": 2,
-      "lost": 4,
-      "goalsFor": 5,
-      "goalsAgainst": 8,
-      "goalDifference": -3,
-      "points": 5
-    },
-    {
-      "position": 15,
-      "teamId": "10214",
-      "teamName": "Nacional",
-      "shortName": "Nacional",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10214.png",
-      "played": 7,
-      "won": 1,
-      "drawn": 1,
-      "lost": 5,
-      "goalsFor": 7,
-      "goalsAgainst": 15,
-      "goalDifference": -8,
-      "points": 4
-    },
-    {
-      "position": 16,
       "teamId": "7841",
       "teamName": "Rio Ave",
       "shortName": "Rio Ave",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7841.png",
-      "played": 7,
-      "won": 1,
+      "played": 8,
+      "won": 2,
       "drawn": 1,
       "lost": 5,
+      "goalsFor": 8,
+      "goalsAgainst": 17,
+      "goalDifference": -9,
+      "points": 7
+    },
+    {
+      "position": 15,
+      "teamId": "7844",
+      "teamName": "Vitória de Guimarães",
+      "shortName": "Vitória de Guimarães",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7844.png",
+      "played": 8,
+      "won": 1,
+      "drawn": 2,
+      "lost": 5,
       "goalsFor": 5,
-      "goalsAgainst": 15,
-      "goalDifference": -10,
+      "goalsAgainst": 10,
+      "goalDifference": -5,
+      "points": 5
+    },
+    {
+      "position": 16,
+      "teamId": "10214",
+      "teamName": "Nacional",
+      "shortName": "Nacional",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10214.png",
+      "played": 8,
+      "won": 1,
+      "drawn": 1,
+      "lost": 6,
+      "goalsFor": 9,
+      "goalsAgainst": 18,
+      "goalDifference": -9,
       "points": 4,
       "form": [
         "#FFA72F"
