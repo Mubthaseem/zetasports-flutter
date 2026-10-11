@@ -2,7 +2,7 @@
   "competitionId": "57",
   "competitionName": "Eredivisie",
   "season": "2026/2027",
-  "updatedAt": "2026-10-11T04:18:02.664Z",
+  "updatedAt": "2026-10-11T12:11:59.932Z",
   "table": [
     {
       "position": 1,
@@ -192,6 +192,22 @@
     },
     {
       "position": 12,
+      "teamId": "9908",
+      "teamName": "FC Utrecht",
+      "shortName": "FC Utrecht",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9908.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 14,
+      "goalsAgainst": 25,
+      "goalDifference": -11,
+      "points": 8,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 13,
       "teamId": "8614",
       "teamName": "Sparta Rotterdam",
       "shortName": "Sparta Rotterdam",
@@ -206,7 +222,7 @@
       "points": 6
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "6414",
       "teamName": "Telstar",
       "shortName": "Telstar",
@@ -221,7 +237,7 @@
       "points": 5
     },
     {
-      "position": 14,
+      "position": 15,
       "teamId": "7788",
       "teamName": "Cambuur",
       "shortName": "Cambuur",
@@ -233,21 +249,6 @@
       "goalsFor": 10,
       "goalsAgainst": 19,
       "goalDifference": -9,
-      "points": 5
-    },
-    {
-      "position": 15,
-      "teamId": "9908",
-      "teamName": "FC Utrecht",
-      "shortName": "FC Utrecht",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9908.png",
-      "played": 7,
-      "won": 1,
-      "drawn": 2,
-      "lost": 4,
-      "goalsFor": 11,
-      "goalsAgainst": 24,
-      "goalDifference": -13,
       "points": 5
     },
     {
@@ -292,17 +293,18 @@
       "teamName": "Willem II",
       "shortName": "Willem II",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8525.png",
-      "played": 7,
+      "played": 8,
       "won": 0,
       "drawn": 2,
-      "lost": 5,
-      "goalsFor": 6,
-      "goalsAgainst": 20,
-      "goalDifference": -14,
+      "lost": 6,
+      "goalsFor": 7,
+      "goalsAgainst": 23,
+      "goalDifference": -16,
       "points": 2,
       "form": [
         "#FF4646"
-      ]
+      ],
+      "qualificationZone": "Active"
     }
   ]
 }
