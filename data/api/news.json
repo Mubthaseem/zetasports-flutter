@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-10-11T21:33:51.977Z",
+    "generatedAt": "2026-10-11T22:46:28.254Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 938
+      "fullArticlesCount": 947
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,87 @@
     }
   },
   "news": [
+    {
+      "id": "3ffh20m7fvrr114wvr2tkc73s",
+      "title": "Lampard looking to build on 'pleasure' of Coventry's first Premier League win",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/3ffh20m7fvrr114wvr2tkc73s-lampard-looking-build-pleasure-coventrys-first-premier-league-win",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/cc/c5/lampard_rm53m2bzpbm1lmhqfn9dchxu.jpg?t=799581217&w=1260&h=708",
+      "publishedAt": "2026-10-11T22:00:06.000Z"
+    },
+    {
+      "id": "ftbpro_01m4nsyr7xjs",
+      "title": "Supercomputer Predicts Premier League Table As Man City Send Arsenal Title Statement",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m4nsyr7xjs/supercomputer-predicts-premier-league-table-man-city-send-arsenal-title-statement",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4p4p3tvasby75g86g.jpg",
+      "publishedAt": "2026-10-11T22:00:00.000Z"
+    },
+    {
+      "id": "1hsmy01ozeeam1bvkl88xk2s2q",
+      "title": "Man City must 'make our own noise' by winning games, says Maresca",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1hsmy01ozeeam1bvkl88xk2s2q-man-city-must-make-our-own-noise-winning-games-says-maresca",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/c9/a8/enzo-maresca_nugr4gedfnzw1xxvmm0hchg9f.png?t=816079729&w=1260&h=708",
+      "publishedAt": "2026-10-11T21:38:23.000Z"
+    },
+    {
+      "id": "1vgf4agol08i51l0fjduskzf9l",
+      "title": "Cagliari 1-1 Juventus: Kolo Muani's first league goal rescues visitors",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1vgf4agol08i51l0fjduskzf9l-cagliari-1-1-juventus-kolo-muanis-first-league-goal-rescues-visitors",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b7/a5/randal-kolo-muani_c2zcajhsrf2m1dfqju4ehkdkh.png?t=826185409&w=640&h=360",
+      "publishedAt": "2026-10-11T21:02:03.000Z"
+    },
+    {
+      "id": "ftbpro_01m4epw94pb0",
+      "title": "Who’s in, Who’s Out? Analyzing the USMNT’s Depth Chart After Perfect Fall Window",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m4epw94pb0/whos-whos-out-analyzing-usmnts-depth-chart-after-perfect-fall-window",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2400,h_1350,x_0,y_155/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01kxgn022gnsfbn47ers.jpg",
+      "publishedAt": "2026-10-11T21:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01jzwzxj9zmn",
+      "title": "The 25 Best Central Midfielders in World Soccer—Ranked",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01jzwzxj9zmn/25-best-central-midfielders-world-soccerranked",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_857,h_482,x_167,y_45/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m12efzqmn5m8kr5mct.jpg",
+      "publishedAt": "2026-10-11T20:45:09.000Z"
+    },
+    {
+      "id": "1lwu8z1y7q941lefppyop1gx6",
+      "title": "Van Dijk: Gravenberch red card changed the game against Man City",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1lwu8z1y7q941lefppyop1gx6-van-dijk-gravenberch-red-card-changed-game-against-man-city",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/4e/66/vvd_dzhvdtimw27u1pobm162pjyqj.jpg?t=815247729&w=1260&h=708",
+      "publishedAt": "2026-10-11T20:28:40.000Z"
+    },
+    {
+      "id": "ftbpro_01m4nhggnz2v",
+      "title": "Three Takeaways From Man City’s Act of Defiance Against Liverpool and Anfield",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m4nhggnz2v/three-takeaways-from-man-citys-act-defiance-against-liverpool-anfield",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2000,h_1125,x_0,y_128/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4nz82qek90rdw10vk.jpg",
+      "publishedAt": "2026-10-11T20:00:01.000Z"
+    },
+    {
+      "id": "1wen8p5681sv519ncmwf5khg39",
+      "title": "Man City had to overcome 'mental battle' to beat Liverpool, says Haaland",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1wen8p5681sv519ncmwf5khg39-man-city-had-overcome-mental-battle-beat-liverpool-says-haaland",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/75/d1/haaland_1ofrcpoovarlo1k78oi9jfnrgm.jpg?t=810683665&w=1260&h=708",
+      "publishedAt": "2026-10-11T19:32:17.000Z"
+    },
     {
       "id": "ftbpro_01m4ne2dw9rp",
       "title": "Reports: Why Mourinho Snubbed Postmatch Duties After Real Madrid Win",
@@ -112,87 +193,6 @@
       "sourceUrl": "/news/1hl3p5ixlxojd1ew6k0ry9rlrj-crystal-palace-3-1-nottingham-forest-superb-comeback-seals-sages-first-home-league-win",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/8e/ec/yeremy-pino-celebrates-scoring-for-crystal-palace_n1qzzjjnuhd11v4pherrt6k2a.jpg?t=784475153&w=640&h=360",
       "publishedAt": "2026-10-11T15:41:05.000Z"
-    },
-    {
-      "id": "ftbpro_01m4nezqwnht",
-      "title": "‘We’ve Seen Enough’—Gary Neville Puts Man Utd Duo on Blast After Spurs Stumble",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m4nezqwnht/weve-seen-enoughgary-neville-puts-man-utd-duo-blast-after-spurs-stumble",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1330,h_748,x_177,y_296/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4nsbscab906kgc2mn.jpg",
-      "publishedAt": "2026-10-11T15:35:00.000Z"
-    },
-    {
-      "id": "5eqmxcyuorrv1qkbm3416epvm",
-      "title": "Hull City 2-2 Everton: Belloumi equaliser caps entertaining draw",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/5eqmxcyuorrv1qkbm3416epvm-hull-city-2-2-everton-belloumi-equaliser-caps-entertaining-draw",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/c1/1f/mohamed-belloumi_lroeo6weuzis1c7q2y0datoai.png?t=786653217&w=1260&h=708",
-      "publishedAt": "2026-10-11T15:34:36.000Z"
-    },
-    {
-      "id": "ftbpro_01m4nn9sm1vs",
-      "title": "Andoni Iraola Dealt Third Huge Injury Blow for Crunch Man City Clash",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m4nn9sm1vs/andoni-iraola-dealt-third-huge-injury-blow-crunch-man-city-clash",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4nndcbzffd7kspn6p.jpg",
-      "publishedAt": "2026-10-11T14:53:27.000Z"
-    },
-    {
-      "id": "1pdzulsuttus71jp3xska0i74k",
-      "title": "'It means everything' – Southampton boss Eckert revels in South Coast derby delight",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1pdzulsuttus71jp3xska0i74k-it-means-everything-southampton-boss-eckert-revels-south-coast-derby-delight",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b6/6d/tonda-eckert_3j4e0cg8sgqr1mz62whwn1eai.jpg?t=780091665&w=1260&h=708",
-      "publishedAt": "2026-10-11T14:51:24.000Z"
-    },
-    {
-      "id": "oe2l3gssi9q013eg7b50xjolr",
-      "title": "Tottenham draw leaves 'sour feeling' Lammens wants to get rid of",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/oe2l3gssi9q013eg7b50xjolr-tottenham-draw-leaves-sour-feeling-lammens-wants-get-rid",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/4/67/senne-lammens_l5yg8wgryffa1k0u1hba1xtut.png?t=769931409&w=640&h=360",
-      "publishedAt": "2026-10-11T14:15:49.000Z"
-    },
-    {
-      "id": "ftbpro_01m4nbp2fbja",
-      "title": "Why Isak, Gakpo Aren’t Playing for Liverpool vs. Man City",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m4nbp2fbja/why-isak-gakpo-arent-playing-liverpool-vs-man-city",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2000,h_1125,x_0,y_46/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4nbts58mv5mt7cr5a.jpg",
-      "publishedAt": "2026-10-11T14:15:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m4kzskmggw",
-      "title": "‘No Restrictions’—Manager Teases Big Things to Come for USMNT Record Breaker",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m4kzskmggw/no-restrictionsmanager-teases-big-things-come-usmnt-record-breaker",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_138/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4m013yz22ck46h5yz.jpg",
-      "publishedAt": "2026-10-11T13:56:15.000Z"
-    },
-    {
-      "id": "ftbpro_01m4n96ezn87",
-      "title": "Will Vinicius Jr Miss El Clasico After Crazy Red Card for Hair Pull?",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m4n96ezn87/will-vinicius-jr-miss-el-clasico-after-crazy-red-card-hair-pull",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4ngjhr6ba6ctcmy2k.jpg",
-      "publishedAt": "2026-10-11T13:30:00.000Z"
-    },
-    {
-      "id": "2iv9ayqx2ee31fvr9tnwso0b8",
-      "title": "Como 0-0 Roma: Visitors miss chance to go top after Malen's red card",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/2iv9ayqx2ee31fvr9tnwso0b8-como-0-0-roma-visitors-miss-chance-go-top-after-malens-red-card",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/23/d/malen_evz7sm400imc1nnxm5mvv9es4.jpg?t=767249665&w=1260&h=708",
-      "publishedAt": "2026-10-11T12:55:45.000Z"
     }
   ],
   "articles": {
@@ -3442,6 +3442,37 @@
       ],
       "html": "<p>Zinedine Zidane hailed the &quot;pure talent&quot; of Michael Olise after France&#39;s win over Belgium on Monday, but he was also glad to see other players contribute after making sweeping changes.</p>\n\n<p>Zidane made nine alterations to the team that beat Turkiye 1-0 in his first game in charge last Friday, as Les Bleus made the short trip across the border to face Belgium in the Nations League.</p>\n\n<p>Captain Kylian Mbappe was absent due to a minor left knee injury, but fellow star Olise came off the bench to provide the decisive moment in the 88th minute.</p>\n\n<p>The Bayern Munich man travelled from inside his own half before slotting a neat finish into the bottom-left corner from the edge of the area, taking him to 13 goal involvements in his last 14 appearances for France (four goals, nine assists).</p>\n\n<p>Zidane said of Olise afterwards, as quoted by L&#39;Equipe: &quot;He&#39;s a pure talent – I like this type of player. He wants to please people when he plays, but not only that.&nbsp;</p>\n\n<p>&quot;He feels football, he knows when to go and when to slow things down. I&#39;m happy to be by his side, to see him play like this.&quot;</p>\n\n\n<p>But Zidane was also impressed by many of those players that came into his lineup.</p>\n\n<p>Paris Saint-Germain&#39;s Maghnes Akliouche created three chances and played a game-high 35 passes into the final third, while his club-made Desire Doue created four chances, attempted five shots and completed five dribbles.</p>\n\n<p>It was just the fifth instance of a France player creating four or more chances, attempting five or more shots and completing at least five dribbles in a single game on record, after Nicolas Anelka (vs Faroe Islands in 2009), Franck Ribery (vs Belarus in 2012), and Mbappe twice (vs South Africa in 2022 and Azerbaijan in 2025).</p>\n\n<p>Liverpool defender&nbsp;Jeremy Jacquet was another impressive performer at the back, completing 91.8% of his passes (67/73) and winning six of his nine duels.</p>\n\n<p>&quot;I&#39;m very satisfied with what the team did, and not only with the ball. Like the match in Turkiye, but on a much better pitch, we were very good everywhere,&quot; Zidane added.</p>\n\n<p>&quot;We put things in place against a good Belgium team who also made us suffer, but we held on, we were brave, we weren&#39;t afraid to go into the opponents&#39; half.&nbsp;</p>\n\n<p>&quot;That&#39;s what I like, that&#39;s what we want. We may have dropped a little bit in the second half, when we had some small difficulties, but that&#39;s logical.&nbsp;</p>\n\n<p>&quot;We made nine changes, but what I like about this team is that everyone feels involved.&quot;</p>\n\n<p>France are back in action on Friday, with Italy visiting the Stade de France, before they round out the international break with another home game against Turkiye next week.</p>\n"
     },
+    "1hsmy01ozeeam1bvkl88xk2s2q": {
+      "id": "1hsmy01ozeeam1bvkl88xk2s2q",
+      "title": "Man City must 'make our own noise' by winning games, says Maresca",
+      "subtitle": "Manchester City beat Liverpool comfortably at Anfield on Sunday, and Enzo Maresca wants his team to continue silencing away grounds.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1hsmy01ozeeam1bvkl88xk2s2q-man-city-must-make-our-own-noise-winning-games-says-maresca",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/c9/a8/enzo-maresca_nugr4gedfnzw1xxvmm0hchg9f.png?t=816079729&w=1200&h=630",
+      "publishedAt": "2026-10-11T21:38:23.000Z",
+      "paragraphs": [
+        "Enzo Maresca insisted his Manchester City players brought their own noise to Anfield as they thrashed 10-man Liverpool to maintain their perfect start in the Premier League.&nbsp;",
+        "City were playing in&nbsp;their first game since being found guilty of breaching the Premier League&#39;s financial regulations, and&nbsp;they delivered a statement performance on Sunday.&nbsp;",
+        "The Citizens&nbsp;managed to quieten a vociferous home crowd during the first half, and&nbsp;the game turned in the 62nd minute when&nbsp;Ryan Gravenberch received a second yellow card.",
+        "Gravenberch was penalised for a careless foul on&nbsp;Jeremy Doku, having already been booked earlier in the second half for a questionable tackle on&nbsp;Elliot Anderson in midfield.&nbsp;",
+        "But City made their dominance immediately count when&nbsp;Erling Haaland fired home in the 65th minute before&nbsp;Doku curled a sensational effort beyond&nbsp;Alisson Becker&#39;s grasp.&nbsp;",
+        "Rayan Cherki rounded off a fine individual move that saw 41 passes and every City player touch the ball in the 78th minute, making it six wins from six games for City.&nbsp;",
+        "A team have started with six straight wins in just two of the last seven Premier League seasons (since 2020-21), with City being both of those sides in 2023-24 and 2026-27.&nbsp;",
+        "Maresca was thrilled to overcome a difficult trip to Merseyside, but he challenged his players to continue silencing opposition crowds by maintaining their winning momentum.&nbsp;",
+        "&quot;Very difficult circumstances, difficult environment. We struggled in the first half, we were on the ball but not so much off the ball,&quot; Maresca told Sky Sports.",
+        "&quot;In the second half, we made some adjustments and we were much better. In the build-up, we were not doing the right things. The second half we were better.",
+        "&quot;We need to learn how to deal with the noise because the noise will be with us at all of our away games – there will be noise. We need to deal with that and make our own noise.",
+        "&quot;Our noise is to win games. The feeling at the end of the game with our fans and our noise, that&#39;s a nice feeling and a different noise.&quot;",
+        "Haaland&#39;s opener was a clinical finish after Doku&#39;s cross deflected off&nbsp;Alexis Mac Allister and into his path, with the Norwegian netting his eighth goal in his eighth appearance against Liverpool across all competitions.&nbsp;",
+        "Doku, meanwhile, scored his 12th Premier League goal, but only his second as a substitute (also October 2024 vs Fulham) – he is the third sub to score at Anfield for City in the competition after George Weah in September 2000 and Bernardo Silva in January 2018.",
+        "And despite only coming on in the 56th minute, he also recorded the most dribbles (five) and was directly involved in the joint-second most shots (two&nbsp;shots, two&nbsp;chances created) of any visiting player for Maresca&#39;s side.&nbsp;",
+        "The quality of City&#39;s goals pleased Maresca, while he also hailed Doku for the impact he had after replacing&nbsp;Iliman Ndiaye with the game still awaiting its first goal.&nbsp;",
+        "&quot;Outstanding – Jeremy [Doku] was very good we need to take care of him. He is important but only just back from injury. Performance from everyone was brilliant,&quot; he added.&nbsp;",
+        "&quot;With one more player, it was easier to keep the ball, but I am&nbsp;very happy with three points.",
+        "&quot;I can not control things outside football, so why stress? I stress about the gameplan, day by day training sessions, but the rest is not in my hands.&quot;"
+      ],
+      "html": "<p>Enzo Maresca insisted his Manchester City players brought their own noise to Anfield as they thrashed 10-man Liverpool to maintain their perfect start in the Premier League.&nbsp;</p>\n\n<p>City were playing in&nbsp;their first game since being found guilty of breaching the Premier League&#39;s financial regulations, and&nbsp;they delivered a statement performance on Sunday.&nbsp;</p>\n\n<p>The Citizens&nbsp;managed to quieten a vociferous home crowd during the first half, and&nbsp;the game turned in the 62nd minute when&nbsp;Ryan Gravenberch received a second yellow card.</p>\n\n<p>Gravenberch was penalised for a careless foul on&nbsp;Jeremy Doku, having already been booked earlier in the second half for a questionable tackle on&nbsp;Elliot Anderson in midfield.&nbsp;</p>\n\n<p>But City made their dominance immediately count when&nbsp;Erling Haaland fired home in the 65th minute before&nbsp;Doku curled a sensational effort beyond&nbsp;Alisson Becker&#39;s grasp.&nbsp;</p>\n\n<p>Rayan Cherki rounded off a fine individual move that saw 41 passes and every City player touch the ball in the 78th minute, making it six wins from six games for City.&nbsp;</p>\n\n<p>A team have started with six straight wins in just two of the last seven Premier League seasons (since 2020-21), with City being both of those sides in 2023-24 and 2026-27.&nbsp;</p>\n\n<p>Maresca was thrilled to overcome a difficult trip to Merseyside, but he challenged his players to continue silencing opposition crowds by maintaining their winning momentum.&nbsp;</p>\n\n<p>&quot;Very difficult circumstances, difficult environment. We struggled in the first half, we were on the ball but not so much off the ball,&quot; Maresca told Sky Sports.</p>\n\n<p>&quot;In the second half, we made some adjustments and we were much better. In the build-up, we were not doing the right things. The second half we were better.</p>\n\n<p>&quot;We need to learn how to deal with the noise because the noise will be with us at all of our away games – there will be noise. We need to deal with that and make our own noise.</p>\n\n<p>&quot;Our noise is to win games. The feeling at the end of the game with our fans and our noise, that&#39;s a nice feeling and a different noise.&quot;</p>\n\n\n<p>Haaland&#39;s opener was a clinical finish after Doku&#39;s cross deflected off&nbsp;Alexis Mac Allister and into his path, with the Norwegian netting his eighth goal in his eighth appearance against Liverpool across all competitions.&nbsp;</p>\n\n<p>Doku, meanwhile, scored his 12th Premier League goal, but only his second as a substitute (also October 2024 vs Fulham) – he is the third sub to score at Anfield for City in the competition after George Weah in September 2000 and Bernardo Silva in January 2018.</p>\n\n<p>And despite only coming on in the 56th minute, he also recorded the most dribbles (five) and was directly involved in the joint-second most shots (two&nbsp;shots, two&nbsp;chances created) of any visiting player for Maresca&#39;s side.&nbsp;</p>\n\n<p>The quality of City&#39;s goals pleased Maresca, while he also hailed Doku for the impact he had after replacing&nbsp;Iliman Ndiaye with the game still awaiting its first goal.&nbsp;</p>\n\n<p>&quot;Outstanding – Jeremy [Doku] was very good we need to take care of him. He is important but only just back from injury. Performance from everyone was brilliant,&quot; he added.&nbsp;</p>\n\n<p>&quot;With one more player, it was easier to keep the ball, but I am&nbsp;very happy with three points.</p>\n\n<p>&quot;I can not control things outside football, so why stress? I stress about the gameplan, day by day training sessions, but the rest is not in my hands.&quot;</p>\n"
+    },
     "1i1sr8r1omutk154g1rmdpvz1g": {
       "id": "1i1sr8r1omutk154g1rmdpvz1g",
       "title": "Saka: Scars still remain from England's World Cup defeat to Argentina",
@@ -3978,6 +4009,40 @@
         "&quot;Even against Lazio, if you look at the balance of the game, I feel we deserved a little bit more.&quot;"
       ],
       "html": "<p>Ruben Amorim insists he will not be pushed into making the same tactical mistakes he made during his stint with Manchester United, now he is in charge of AC Milan.</p>\n\n<p>Amorim&#39;s unbeaten start in Serie A continued on Sunday with a comfortable 3-0 win against Lecce at San Siro, with the result moving Milan up to fifth in the standings.&nbsp;</p>\n\n<p>Christian Pulisic&#39;s sensational touch and finish put Milan ahead early on, before&nbsp;Adrien Rabiot and&nbsp;Diego Moreira&nbsp;sealed the win for the&nbsp;Rossoneri during a dominant second half.&nbsp;</p>\n\n<p>Milan&#39;s victory saw them remain unbeaten in their opening five Serie A matches of a season for the first time since 2022-23 (W3 D2).</p>\n\n<p>Amorim (W3 D2) has become only the third foreign manager in Milan&#39;s history to not taste defeat in each of his first five Serie A games in charge, after Luis Carniglia (W3 D2) and Nils Liedholm (W4 D1), both in 1963-64.</p>\n\n<p>Speaking after the game, Amorim revealed he allowed his side to play with &quot;freedom&quot;, and when asked about the reasoning behind that decision, he highlighted his turbulent tenure at Old Trafford, where he was reluctant to adapt his style of play.&nbsp;</p>\n\n<p>&quot;It&#39;s an observation of the games and the characteristics,&quot; Amorim told DAZN,&nbsp;as quoted by Football Italia.</p>\n\n<p>&quot;Of course, I listen to the players, but a manager, especially in a big team, is always listening to the players, seeing and understanding them, but every player wants to push the game towards their characteristics, and if you want to have an identity, that is hard.&nbsp;</p>\n\n<p>&quot;It&#39;s always my decision. What I felt in the last games is the same that I felt at Manchester United, and I cannot make the same mistake.</p>\n\n<p>&quot;Sometimes we don&#39;t have the perfect characteristics to play in that way, and if we don&#39;t have them, we have to adapt. I think today worked.</p>\n\n<p>&quot;In another game, we can return to the build-up with three [at the back]. The important thing is to have different ways of playing.</p>\n\n<p>&quot;That&#39;s especially important in Italy, because the managers are really smart, they mark really well one against one, and when they lose the reference to what we want to do, it&#39;s harder for them to understand their mobility, just as they make it harder for me to understand their teams.&quot;</p>\n\n\n<p>Milan have now won their first two home Serie A matches of a season while keeping a clean sheet in both for the first time since 2020-21, when they beat Bologna 2-0 and Spezia 3-0 under Stefano Pioli.</p>\n\n<p>Their&nbsp;dominance was backed up by the underlying metrics, too. They finished with an expected goals (xG) total of 1.93 from their 10 attempts, while also restricting Lecce to a measly xG total of 0.17 from six shots.&nbsp;</p>\n\n<p>It was a much-needed victory heading into the international break, with Milan coming into the clash with Lecce without a win in three matches in all competitions (D2 L1).&nbsp;</p>\n\n<p>Roma, Inter and Lazio are the early pace setters in the division, all sitting two points clear of Milan, and Amorim feels his team are on the right track.</p>\n\n<p>&quot;If you look at the way we play, Roma and Inter had more time as a team, you can see the patterns are there,&quot; Amorim added.</p>\n\n<p>&quot;We didn&#39;t lose so many points, we dropped two to Lazio and Juventus away, so not everything is bad.</p>\n\n<p>&quot;Sometimes it looks like that, especially after recent results, but we have to see the balance. We won today against a good team that is doing well, but it is a different team, and sometimes we will have issues.</p>\n\n<p>&quot;It&#39;s a process, I think we should have more points, as against Juventus we weren&#39;t playing so well, but we were 30 seconds off getting three points.</p>\n\n<p>&quot;Even against Lazio, if you look at the balance of the game, I feel we deserved a little bit more.&quot;</p>\n"
+    },
+    "1lwu8z1y7q941lefppyop1gx6": {
+      "id": "1lwu8z1y7q941lefppyop1gx6",
+      "title": "Van Dijk: Gravenberch red card changed the game against Man City",
+      "subtitle": "Liverpool were brushed aside 3-0 by Manchester City, with all three goals coming after Ryan Gravenberch's 62nd-minute dismissal.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1lwu8z1y7q941lefppyop1gx6-van-dijk-gravenberch-red-card-changed-game-against-man-city",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/4e/66/vvd_dzhvdtimw27u1pobm162pjyqj.jpg?t=815247729&w=1200&h=630",
+      "publishedAt": "2026-10-11T20:28:40.000Z",
+      "paragraphs": [
+        "Virgil van Dijk conceded Liverpool&#39;s 3-0 loss to Manchester City turned on Ryan Gravenberch&#39;s second-half red card.",
+        "Gravenberch was sent off for a second-bookable offence in the 62nd minute, having been penalised for a clumsy challenge on the back of Jeremy Doku.",
+        "City, playing for the first time since being found guilty of breaching the Premier League&#39;s financial regulations, scored twice in the following six minutes, through Erling Haaland and Doku.",
+        "A stunning Rayan Cherki goal then finished off a flowing team move to cap the victory and deal Liverpool their first loss under Andoni Iraola.",
+        "This was the Reds&#39;&nbsp;joint-biggest defeat at Anfield in the Premier League after 4-1 losses to Chelsea (October 2005) and City (February 2021), and 3-0 defeats to West Ham (August 2015) and Nottingham Forest (November 2025).",
+        "Liverpool have also now gone winless in five successive home games in the competition (D4 L1) for the fourth time, and the first since March 2021 (eight).",
+        "And Van Dijk said that the momentum of the game shifted when Liverpool went down to 10 men, as they had been strong up until that point.",
+        "&quot;The first half was good from us,&quot; Van Dijk told Sky Sports. &quot;We showed our intensity; could&#39;ve done better on occasions where we got on the break.",
+        "&quot;They weren&#39;t massive chances, but we showed we wanted to win, and we had intensity, which is the bare minimum.",
+        "&quot;Second half, the red card changed the game, especially when you concede quickly afterwards. We end up with 10 men is the fact, and we concede quickly after, and it becomes a difficult game against them again.",
+        "&quot;I think the atmosphere is always good here; I&#39;ve been fortunate to play in a lot of big games here. For other players, maybe it was different, but for me, I was ready to compete, and I think we showed that, especially in the first half.&quot;",
+        "Iraola suffered his first Premier League defeat in 24 games (W10 D13) since losing 3-2 against Arsenal when he was in charge of&nbsp;Bournemouth back in January.",
+        "He has lost five times to City in the competition, his joint-most defeats to a single club (also five against Liverpool).",
+        "The Reds are also winless in eight Premier League games when facing the team starting the day top of the league (D6 L2), their second-worst run behind nine matches (2002 to 2008).",
+        "&quot;I think it&#39;s obvious. We&#39;ve played two games,&quot; Iraola told Sky Sports.",
+        "&quot;One game until the 60th minute, and then another game after the red card. We were the best team in the first game, and then they were better.",
+        "&quot;The first one [Gravenberch booking] is not a yellow. [Elliot] Anderson carries on a couple of steps; he wasn&#39;t even going to give a foul. I&#39;ve no idea why he gives a yellow card. We have like nine players behind the ball.",
+        "&quot;It&#39;s already difficult to press them when it&#39;s 11 v 11, but with one less, it becomes a different game, and then we concede straight away before making a substitution. You have to play differently when you&#39;re 1-0 down.&quot;",
+        "Liverpool were without three key players in Alexander Isak, Cody Gakpo and Dominik Szoboszlai ahead of a busy run of fixtures in all competitions.",
+        "However, Iraola played down worries that they would be sidelined for a lengthy spell.",
+        "&quot;They are not too big injuries, but we travel to Austria in two days [to face LASK in the Champions League],&quot; Iraola added.",
+        "&quot;It will be difficult; they are ready for the next one.&quot;"
+      ],
+      "html": "<p>Virgil van Dijk conceded Liverpool&#39;s 3-0 loss to Manchester City turned on Ryan Gravenberch&#39;s second-half red card.</p>\n\n<p>Gravenberch was sent off for a second-bookable offence in the 62nd minute, having been penalised for a clumsy challenge on the back of Jeremy Doku.</p>\n\n<p>City, playing for the first time since being found guilty of breaching the Premier League&#39;s financial regulations, scored twice in the following six minutes, through Erling Haaland and Doku.</p>\n\n<p>A stunning Rayan Cherki goal then finished off a flowing team move to cap the victory and deal Liverpool their first loss under Andoni Iraola.</p>\n\n<p>This was the Reds&#39;&nbsp;joint-biggest defeat at Anfield in the Premier League after 4-1 losses to Chelsea (October 2005) and City (February 2021), and 3-0 defeats to West Ham (August 2015) and Nottingham Forest (November 2025).</p>\n\n<p>Liverpool have also now gone winless in five successive home games in the competition (D4 L1) for the fourth time, and the first since March 2021 (eight).</p>\n\n<p>And Van Dijk said that the momentum of the game shifted when Liverpool went down to 10 men, as they had been strong up until that point.</p>\n\n<p>&quot;The first half was good from us,&quot; Van Dijk told Sky Sports. &quot;We showed our intensity; could&#39;ve done better on occasions where we got on the break.</p>\n\n<p>&quot;They weren&#39;t massive chances, but we showed we wanted to win, and we had intensity, which is the bare minimum.</p>\n\n<p>&quot;Second half, the red card changed the game, especially when you concede quickly afterwards. We end up with 10 men is the fact, and we concede quickly after, and it becomes a difficult game against them again.</p>\n\n<p>&quot;I think the atmosphere is always good here; I&#39;ve been fortunate to play in a lot of big games here. For other players, maybe it was different, but for me, I was ready to compete, and I think we showed that, especially in the first half.&quot;</p>\n\n\n<p>Iraola suffered his first Premier League defeat in 24 games (W10 D13) since losing 3-2 against Arsenal when he was in charge of&nbsp;Bournemouth back in January.</p>\n\n<p>He has lost five times to City in the competition, his joint-most defeats to a single club (also five against Liverpool).</p>\n\n<p>The Reds are also winless in eight Premier League games when facing the team starting the day top of the league (D6 L2), their second-worst run behind nine matches (2002 to 2008).</p>\n\n<p>&quot;I think it&#39;s obvious. We&#39;ve played two games,&quot; Iraola told Sky Sports.</p>\n\n<p>&quot;One game until the 60th minute, and then another game after the red card. We were the best team in the first game, and then they were better.</p>\n\n<p>&quot;The first one [Gravenberch booking] is not a yellow. [Elliot] Anderson carries on a couple of steps; he wasn&#39;t even going to give a foul. I&#39;ve no idea why he gives a yellow card. We have like nine players behind the ball.</p>\n\n<p>&quot;It&#39;s already difficult to press them when it&#39;s 11 v 11, but with one less, it becomes a different game, and then we concede straight away before making a substitution. You have to play differently when you&#39;re 1-0 down.&quot;</p>\n\n<p>Liverpool were without three key players in Alexander Isak, Cody Gakpo and Dominik Szoboszlai ahead of a busy run of fixtures in all competitions.</p>\n\n<p>However, Iraola played down worries that they would be sidelined for a lengthy spell.</p>\n\n<p>&quot;They are not too big injuries, but we travel to Austria in two days [to face LASK in the Champions League],&quot; Iraola added.</p>\n\n<p>&quot;It will be difficult; they are ready for the next one.&quot;</p>\n"
     },
     "1m6hibefmoqwp1de6sqjxg9vq1": {
       "id": "1m6hibefmoqwp1de6sqjxg9vq1",
@@ -5598,6 +5663,34 @@
       ],
       "html": "<p>Roberto Mancini believes patience will be needed at the start of his second stint with Italy after their defeat to Belgium in their Nations League opener.</p>\n\n<p>Macini&#39;s return to the Azzurri dugout did not go to plan, with goals in either half from&nbsp;Mika Godts and&nbsp;Dodi Lukebakio sealing the win for Mark van Bommel&#39;s side.&nbsp;</p>\n\n<p>The result saw&nbsp;Italy lose a home match while conceding&nbsp;two goals without scoring any for&nbsp;the second time in the last 40 years, after a 2-0 defeat&nbsp;against Croatia in August 2006.</p>\n\n<p>Italy ended the match with 1.5 expected goals (xG), though only 0.3 of their tally came in the first half, while Belgium accumulated 2.5 of their 2.7 xG before the break.</p>\n\n<p>Gianluigi Donnarumma made six saves to try and inspire a comeback for Italy, but Senne Lammens also made six stops&nbsp;at the other end to ensure Belgium emerged victorious.&nbsp;</p>\n\n<p>Following the defeat, Mancini conceded that his team fell below expectations at the&nbsp;Stadio Olimpico, with a trip to&nbsp;Matli&nbsp;Stadyumu Ataturk Spor Kompleksi to face Turkiye up next.&nbsp;</p>\n\n<p>Mancini&#39;s main request was to allow his Italy team time as they begin a new era, though he said the congested Nations League schedule was difficult for his players to navigate.&nbsp;</p>\n\n<p>&quot;I expect the team can put in a good performance against Turkiye, improving the pressing and the aggression,&quot; Mancini told reporters.</p>\n\n<p>&quot;In these days we haven&#39;t had time to prepare anything new, so I&#39;m not expecting any great novelties.</p>\n\n<p>&quot;Above all, we need time to work to get to know each other and to build a team that can be competitive. We don&#39;t need anything else.&quot;</p>\n\n\n<p>Mancini&#39;s comments were echoed by Sandro Tonali, who was a part of the team that failed to qualify for a third consecutive World Cup earlier this year.</p>\n\n<p>It is a new-look Azzurri side, with the likes of&nbsp;Michael Kayode, Alessandro Romano, Issa Doumbia, Alessandro Vergara and Mohamed Ali Zom called up for the first time.&nbsp;</p>\n\n<p>&quot;The important thing now is to react, and we can do that within a few days. The group is very healthy, with a lot of young players,&quot; Tonali said.</p>\n\n<p>&quot;Having everything immediately is difficult, we don&#39;t have the star player. Time is there, we have to spend time together, work and enjoy ourselves together.</p>\n\n<p>&quot;We are healthy, strong men. With time our qualities will come out.&quot;</p>\n\n<p>Following their clash with Turkiye, Italy face France next Friday before concluding the international break with a home game against Vincenzo Montella&#39;s side.&nbsp;</p>\n\n<p>Because of the quick turnaround, Mancini revealed there would be several changes to the team that were beaten by Belgium.&nbsp;</p>\n\n<p>&quot;I think we have to stay calm and not get agitated in the way that is happening,&quot; Mancini added.</p>\n\n<p>&quot;We played against a strong side in Belgium, who did cause us difficulty, but then the team reacted well.</p>\n\n<p>&quot;Matches are made of episodes, the game could have changed, even if Belgium deserved to win in the end. In terms of personnel, we will definitely change.&nbsp;</p>\n\n<p>&quot;It is impossible to have one player available for four games this close together. We can also assess other players in matches this important.&quot;</p>\n"
     },
+    "1vgf4agol08i51l0fjduskzf9l": {
+      "id": "1vgf4agol08i51l0fjduskzf9l",
+      "title": "Cagliari 1-1 Juventus: Kolo Muani's first league goal rescues visitors",
+      "subtitle": "Randal Kolo Muani finally got off the mark in Serie A on Sunday as his late equaliser earned Juventus a draw away to Cagliari.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1vgf4agol08i51l0fjduskzf9l-cagliari-1-1-juventus-kolo-muanis-first-league-goal-rescues-visitors",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b7/a5/randal-kolo-muani_c2zcajhsrf2m1dfqju4ehkdkh.png?t=826185409&w=1200&h=630",
+      "publishedAt": "2026-10-11T21:02:03.000Z",
+      "paragraphs": [
+        "Randal Kolo Muani was Juventus&#39; late hero as his 81st-minute header salvaged Luciano Spalletti&#39;s side a 1-1 draw against high-flying Cagliari at&nbsp;Unipol Domus.&nbsp;",
+        "Juventus appeared set to lose back-to-back Serie A away games for the first time since October 2025 when the in-form&nbsp;Daniel Maldini put Cagliari ahead in the 20th minute.&nbsp;",
+        "But an improved second-half display, helped by the introduction of&nbsp;Edon Zhegrova, was rewarded&nbsp;when Kolo Muani headed&nbsp;in his first league goal since returning to Juventus.&nbsp;",
+        "Juventus started brightly, but&nbsp;Pape Matar Sarr and&nbsp;Francisco Conceicao&#39;s shots from distance failed to trouble&nbsp;Elia Caprile, with Cagliari taking the lead against the run of play.&nbsp;",
+        "A break down the right saw&nbsp;Maldini cut inside but see his initial shot blocked by&nbsp;Bremer. However, the loose ball ricocheted off&nbsp;Pierre Kalulu, allowing&nbsp;Paul Mendy to control and flick possession back to the Italian, who finished past&nbsp;Guglielmo Vicario.&nbsp;",
+        "Harry Winks&#39; long-range drive then had to be tipped over by Vicario, before&nbsp;Nico Gonzalez&#39;s bending free-kick at the other end was punched away from the danger by Caprile.",
+        "Spalletti&nbsp;made two changes at the break as&nbsp;Kerim Alajbegovic and Zhegrova&nbsp;were thrown into the action, with the latter stinging the palms of Caprile in the 52nd minute before seeing his left-footed effort tipped behind by the Cagliari goalkeeper.&nbsp;",
+        "Zhegrova continued to cause havoc as another curling attempt was repelled by Caprile, but Juventus&#39; persistence eventually prevailed with nine minutes of the match remaining.&nbsp;",
+        "Alajbegovic&#39;s dangerous cross was glanced into the bottom-right corner by Kolo Muani for the leveller, though the Frenchman should have completed the turnaround moments later, but he could only head onto the crossbar from another teasing&nbsp;Alajbegovic delivery.&nbsp;",
+        "Andrea Cambiaso came close&nbsp;to snatching Juventus the win in the closing stages, but his shot from a tight angle was thwarted by Caprile, with the spoils shared on Sunday.&nbsp;",
+        "Kolo Muani delivers for Juventus after Spalletti criticism",
+        "Ahead of kick-off, Kolo Muani was told by Spalletti to put his best skills into practice after a difficult start to his second spell with Juventus, but he came up trumps with an important late equaliser, and he could have even won the game late on.&nbsp;",
+        "It was his first Serie A goal since May 2025 against&nbsp;Venezia, though it was&nbsp;Zhegrova who turned the tide. The half-time substitute finished with team-high totals for shots (six), shots on target (five) and successful dribbles (two).&nbsp;",
+        "But Juventus were forced to settle for a point, and despite winning 47 Serie A matches against Cagliari (only Inter and AC Milan, both with 48 have more), the Bianconeri have now only won two of their last six league games against the Rossoblu (D3 L1).&nbsp;",
+        "Cagliari stay inside the top four following their first draw of the season, but their strong start has been helped by Maldini. He is the first Cagliari player to score in at least four consecutive appearances in Serie A since Joao Pedro, who reached five between October and November 2020.",
+        "Juventus will, however, feel they should have made their dominance count. They finished with an expected goals (xG) total of 1.92 from their 22 attempts, 10 of which were on target, compared to Cagliari&#39;s 0.51 from their four shots.&nbsp;"
+      ],
+      "html": "<p>Randal Kolo Muani was Juventus&#39; late hero as his 81st-minute header salvaged Luciano Spalletti&#39;s side a 1-1 draw against high-flying Cagliari at&nbsp;Unipol Domus.&nbsp;</p>\n\n<p>Juventus appeared set to lose back-to-back Serie A away games for the first time since October 2025 when the in-form&nbsp;Daniel Maldini put Cagliari ahead in the 20th minute.&nbsp;</p>\n\n<p>But an improved second-half display, helped by the introduction of&nbsp;Edon Zhegrova, was rewarded&nbsp;when Kolo Muani headed&nbsp;in his first league goal since returning to Juventus.&nbsp;</p>\n\n<p>Juventus started brightly, but&nbsp;Pape Matar Sarr and&nbsp;Francisco Conceicao&#39;s shots from distance failed to trouble&nbsp;Elia Caprile, with Cagliari taking the lead against the run of play.&nbsp;</p>\n\n<p>A break down the right saw&nbsp;Maldini cut inside but see his initial shot blocked by&nbsp;Bremer. However, the loose ball ricocheted off&nbsp;Pierre Kalulu, allowing&nbsp;Paul Mendy to control and flick possession back to the Italian, who finished past&nbsp;Guglielmo Vicario.&nbsp;</p>\n\n<p>Harry Winks&#39; long-range drive then had to be tipped over by Vicario, before&nbsp;Nico Gonzalez&#39;s bending free-kick at the other end was punched away from the danger by Caprile.</p>\n\n<p>Spalletti&nbsp;made two changes at the break as&nbsp;Kerim Alajbegovic and Zhegrova&nbsp;were thrown into the action, with the latter stinging the palms of Caprile in the 52nd minute before seeing his left-footed effort tipped behind by the Cagliari goalkeeper.&nbsp;</p>\n\n<p>Zhegrova continued to cause havoc as another curling attempt was repelled by Caprile, but Juventus&#39; persistence eventually prevailed with nine minutes of the match remaining.&nbsp;</p>\n\n<p>Alajbegovic&#39;s dangerous cross was glanced into the bottom-right corner by Kolo Muani for the leveller, though the Frenchman should have completed the turnaround moments later, but he could only head onto the crossbar from another teasing&nbsp;Alajbegovic delivery.&nbsp;</p>\n\n<p>Andrea Cambiaso came close&nbsp;to snatching Juventus the win in the closing stages, but his shot from a tight angle was thwarted by Caprile, with the spoils shared on Sunday.&nbsp;</p>\n\n\n<p><strong>Kolo Muani delivers for Juventus after Spalletti criticism</strong></p>\n\n<p>Ahead of kick-off, Kolo Muani was told by Spalletti to put his best skills into practice after a difficult start to his second spell with Juventus, but he came up trumps with an important late equaliser, and he could have even won the game late on.&nbsp;</p>\n\n<p>It was his first Serie A goal since May 2025 against&nbsp;Venezia, though it was&nbsp;Zhegrova who turned the tide. The half-time substitute finished with team-high totals for shots (six), shots on target (five) and successful dribbles (two).&nbsp;</p>\n\n<p>But Juventus were forced to settle for a point, and despite winning 47 Serie A matches against Cagliari (only Inter and AC Milan, both with 48 have more), the Bianconeri have now only won two of their last six league games against the Rossoblu (D3 L1).&nbsp;</p>\n\n<p>Cagliari stay inside the top four following their first draw of the season, but their strong start has been helped by Maldini. He is the first Cagliari player to score in at least four consecutive appearances in Serie A since Joao Pedro, who reached five between October and November 2020.</p>\n\n<p>Juventus will, however, feel they should have made their dominance count. They finished with an expected goals (xG) total of 1.92 from their 22 attempts, 10 of which were on target, compared to Cagliari&#39;s 0.51 from their four shots.&nbsp;</p>\n"
+    },
     "1vh6f0lv0ctw71vbxhhagggahj": {
       "id": "1vh6f0lv0ctw71vbxhhagggahj",
       "title": "Sage: Palace's win over Forest was not about revenge against Glasner",
@@ -5778,6 +5871,37 @@
         "New York Red Bulls – 27.3%"
       ],
       "html": "<p>St. Louis City boss Yoann Damet insisted &quot;concern has never been a thing&quot; for him this season as his side prepare to take on the New York Red Bulls.</p>\n\n<p>After a slow start to the 2026 campaign, St. Louis are now fifth in the Western Conference, and they could go level on points with second-place FC Dallas if they beat the Red Bulls.</p>\n\n<p>St. Louis defeated Toronto FC 3-1 last time out, conceding deep into second-half stoppage time, while they have also reached the final of the U.S. Open Cup in recent weeks.</p>\n\n<p>Damet&#39;s side are on an 18-game unbeaten run across all competitions, but the Frenchman believes his players have been threatening a run like this one all season.&nbsp;</p>\n\n<p>&quot;I look at these guys and they have been the same since January,&quot; said Damet. &quot;Concern has never been a thing.</p>\n\n<p>&quot;Focus and preparation has been a thing since the start of the year. I think every new day is a new day to get better and to prepare for our next game.</p>\n\n<p>&quot;I think those guys have been like that since day one, so this week has been no different.</p>\n\n<p>&quot;We know we have another big game in New York and everybody is excited and locked in preparing for that game.&quot;</p>\n\n\n<p>NYRB, meanwhile, are eighth in the East after back-to-back 1-0 wins over the Columbus Crew and rivals New York City FC.</p>\n\n<p>Julian Hall scored the lone goal in their win over NYCFC, the 18-year-old’s 10th goal of the season and fourth match-winner.</p>\n\n<p>This match with St. Louis was scheduled to take place on Saturday, but was postponed due to adverse weather conditions.</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>New York Red Bulls – Cade Cowell</strong></p>\n\n<p>With top scorer Hall unavailable after being called up to the United States squad, Cowell will look to step up for NYRB.</p>\n\n<p>The 22-year-old, who has scored twice in 2026,&nbsp;has six assists this term, with only Emil Forsberg registering more (seven).</p>\n\n<p><strong>St. Louis City – Simon Becher</strong></p>\n\n<p>Seven different St. Louis players have at least five goal contributions during the team&#39;s current 16-game unbeaten run, led by Becher&#39;s nine (seven goals, two assists).</p>\n\n<p>Nine different St. Louis players have scored a match-winner in that time, with Tomas Totland (two) the only one with multiple (one own goal winner).</p>\n\n<p><strong>MATCH PREDICTION – ST. LOUIS CITY WIN</strong></p>\n\n<p>This will be St. Louis City&#39;s 148th match in all competitions and 130th in the regular season, but their first-ever match against the New York Red Bulls.</p>\n\n<p>St. Louis extended their regular-season unbeaten run to 16 games (W11 D5) with a win over Toronto, equalling NYRB&#39;s 2016 run for the third-longest in a single regular season in MLS history.</p>\n\n<p>The only longer single-season unbeaten runs in regular-season play in MLS history are 19 straight by Dallas in 2010 and 18 straight by the&nbsp;Crew in 2004.</p>\n\n<p>NYRB have posted back-to-back wins for the third time this season with victories over Columbus and NYCFC. The Red Bulls have won three straight regular-season matches only once over the last three seasons, doing so in May 2025.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>New York Red Bulls – 27.3%</p>\n\n<p>Draw – 22.7%</p>\n\n<p>St. Louis City – 50%</p>\n"
+    },
+    "1wen8p5681sv519ncmwf5khg39": {
+      "id": "1wen8p5681sv519ncmwf5khg39",
+      "title": "Man City had to overcome 'mental battle' to beat Liverpool, says Haaland",
+      "subtitle": "Manchester City were greeted by a vociferous atmosphere at Anfield, but on the pitch, they brushed aside Liverpool with a comfortable win.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1wen8p5681sv519ncmwf5khg39-man-city-had-overcome-mental-battle-beat-liverpool-says-haaland",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/75/d1/haaland_1ofrcpoovarlo1k78oi9jfnrgm.jpg?t=810683665&w=1200&h=630",
+      "publishedAt": "2026-10-11T19:32:17.000Z",
+      "paragraphs": [
+        "Erling Haaland said Manchester City&#39;s 3-0 win over 10-man Liverpool was a &quot;mental battle&quot;&nbsp;as they played their first game since being found guilty of breaching the Premier League&#39;s financial regulations.",
+        "There was a hostile atmosphere at Anfield, with every touch by a City player being jeered amid the backdrop of the Premier League winning their case against the club, who have appealed the result and maintain their innocence.",
+        "The game turned on Ryan Gravenberch&#39;s 62nd-minute red card, which he received for a second-bookable offence, having clumsily brought down Jeremy Doku.",
+        "And within six minutes of Gravenberch&#39;s dismissal, City were 2-0 up, with Haaland and Doku both clinically finishing past Alisson Becker.",
+        "Rayan Cherki then added some late gloss to the scoreline, finishing off a stunning team move consisting of 41 passes as he danced through Liverpool&#39;s defence to slot in their third and move City three points clear at the top of the Premier League.",
+        "Haaland has now scored eight goals in his last eight appearances against Liverpool in all competitions – no other player has netted more than five versus the Reds since he joined City in 2022 (Ismaila Sarr – five).",
+        "&quot;Every single person part of Man City, and every fan, this is a lovely moment that will stay with us for a long time,&quot; Haaland told Sky Sports.",
+        "&quot;It was tough, it was hard, but we showed amazing character from back to front. So proud of everyone.",
+        "&quot;It&#39;s always tough to come here; if you look at the record, it&#39;s tough. With the Pep [Guardiola] and [Jurgen] Klopp era, it was tough for both teams; always has been.",
+        "&quot;Important to stay strong mentally, stick together and do what you can do something about, and the thing we can do something about is to play good football and fight together. That&#39;s the only thing we can do.",
+        "&quot;You want to win games; it&#39;s as simple as that. Perform well, play good football and win games. This was a mental battle, never easy coming back from internationals.",
+        "&quot;Proud that we managed to stick together; we are mentally strong. Plenty of games coming up, so time to recover and go again.&quot;",
+        "A team have started with six straight wins in just two of the last seven Premier League seasons (since 2020-21): City in 2023-24 and again this term.",
+        "Having won at Anfield with Nottingham Forest in 2024-25 (1-0) and 2025-26 (3-0), Elliot Anderson is the seventh player to win his first three away starts against Liverpool in the Premier League.",
+        "He controlled the game, having more touches (100), accurate passes (71/78) and successful duels (11/17) than any other player on the pitch.",
+        "&quot;Togetherness, fight, a tough place to come, and we stuck together and fought for each other. We&#39;ve showed courage,&quot; he told Sky Sports.",
+        "&quot;[The atmosphere] was more than normal; arriving into Anfield and the first 10 minutes of the game, we did well to quieten the crowd. Struggled first half, but second, we were better and then the goals came.",
+        "&quot;It&#39;s a game you have to stick together more than ever.",
+        "&quot;I just enjoy it. I enjoy the crowd, the noise; I thrive on it, and that&#39;s when I come alive. It gives me confidence.&quot;"
+      ],
+      "html": "<p>Erling Haaland said Manchester City&#39;s 3-0 win over 10-man Liverpool was a &quot;mental battle&quot;&nbsp;as they played their first game since being found guilty of breaching the Premier League&#39;s financial regulations.</p>\n\n<p>There was a hostile atmosphere at Anfield, with every touch by a City player being jeered amid the backdrop of the Premier League winning their case against the club, who have appealed the result and maintain their innocence.</p>\n\n<p>The game turned on Ryan Gravenberch&#39;s 62nd-minute red card, which he received for a second-bookable offence, having clumsily brought down Jeremy Doku.</p>\n\n<p>And within six minutes of Gravenberch&#39;s dismissal, City were 2-0 up, with Haaland and Doku both clinically finishing past Alisson Becker.</p>\n\n<p>Rayan Cherki then added some late gloss to the scoreline, finishing off a stunning team move consisting of 41 passes as he danced through Liverpool&#39;s defence to slot in their third and move City three points clear at the top of the Premier League.</p>\n\n<p>Haaland has now scored eight goals in his last eight appearances against Liverpool in all competitions – no other player has netted more than five versus the Reds since he joined City in 2022 (Ismaila Sarr – five).</p>\n\n<p>&quot;Every single person part of Man City, and every fan, this is a lovely moment that will stay with us for a long time,&quot; Haaland told Sky Sports.</p>\n\n<p>&quot;It was tough, it was hard, but we showed amazing character from back to front. So proud of everyone.</p>\n\n<p>&quot;It&#39;s always tough to come here; if you look at the record, it&#39;s tough. With the Pep [Guardiola] and [Jurgen] Klopp era, it was tough for both teams; always has been.</p>\n\n<p>&quot;Important to stay strong mentally, stick together and do what you can do something about, and the thing we can do something about is to play good football and fight together. That&#39;s the only thing we can do.</p>\n\n<p>&quot;You want to win games; it&#39;s as simple as that. Perform well, play good football and win games. This was a mental battle, never easy coming back from internationals.</p>\n\n<p>&quot;Proud that we managed to stick together; we are mentally strong. Plenty of games coming up, so time to recover and go again.&quot;</p>\n\n\n<p>A team have started with six straight wins in just two of the last seven Premier League seasons (since 2020-21): City in 2023-24 and again this term.</p>\n\n<p>Having won at Anfield with Nottingham Forest in 2024-25 (1-0) and 2025-26 (3-0), Elliot Anderson is the seventh player to win his first three away starts against Liverpool in the Premier League.</p>\n\n<p>He controlled the game, having more touches (100), accurate passes (71/78) and successful duels (11/17) than any other player on the pitch.</p>\n\n<p>&quot;Togetherness, fight, a tough place to come, and we stuck together and fought for each other. We&#39;ve showed courage,&quot; he told Sky Sports.</p>\n\n<p>&quot;[The atmosphere] was more than normal; arriving into Anfield and the first 10 minutes of the game, we did well to quieten the crowd. Struggled first half, but second, we were better and then the goals came.</p>\n\n<p>&quot;It&#39;s a game you have to stick together more than ever.</p>\n\n<p>&quot;I just enjoy it. I enjoy the crowd, the noise; I thrive on it, and that&#39;s when I come alive. It gives me confidence.&quot;</p>\n"
     },
     "1wn54tsih5751bpu2n7ej54il": {
       "id": "1wn54tsih5751bpu2n7ej54il",
@@ -6448,6 +6572,45 @@
         "Playmaker Paz also crafted three chances, which was the joint-most for Argentina, along with&nbsp;Franco Mastantuono, another youngster who will be looking to help fill the void left by one of the best to grace the game."
       ],
       "html": "<p>Argentina hammered Bolivia 4-0 as they got the post-Lionel Messi era going in style at&nbsp;Estadio Mario Alberto Kempes.</p>\n\n<p>Lautaro Martinez, Nico Paz, new captain Cristian Romero and Flaco Lopez were all on target for Lionel Scaloni&#39;s team on Wednesday.</p>\n\n<p>The friendly in Cordoba marked Argentina&#39;s first match since the iconic Messi had announced his international retirement.</p>\n\n<p>It was also Argentina&#39;s first game since their 1-0 defeat to Spain in the World Cup final.</p>\n\n<p>Martinez&#39;s drilled finish got them going in the 19th minute, with Como star Paz then dinking home to make it 2-0.</p>\n\n<p>Gianluca Prestianni hit the bar with a cross-shot before half-time, but Argentina got their third when Romero headed in from Paz&#39;s free-kick in the 54th minute.</p>\n\n<p>Lopez then grabbed a maiden Argentina goal from the bench late on, just after he had seen a strike disallowed for offside.</p>\n\n\n<p><strong>No Messi, no problem</strong></p>\n\n<p>There will be much tougher tests to come for Argentina in the wake of Messi&#39;s retirement and, technically, the eight-time Ballon d&#39;Or winner is not done yet.</p>\n\n<p>Argentina will give Messi a farewell when they take on Benin next week.</p>\n\n<p>However, Scaloni&#39;s team were utterly dominant in this win. They conceded just three shots, none of which were on target, and had 18 attempts of their own.</p>\n\n<p>Argentina&#39;s dominance is reflected by their expected goals tally of 2.24 compared to Bolivia&#39;s 0.11.</p>\n\n<p>With Messi out of the picture, much of the attacking onus is going to fall on Martinez, Paz and Julian Alvarez.</p>\n\n<p>Paz and Alcaraz had a team-leading three shots each, while Martinez led the way for touches in the opponent&#39;s box (seven).</p>\n\n<p>Playmaker Paz also crafted three chances, which was the joint-most for Argentina, along with&nbsp;Franco Mastantuono, another youngster who will be looking to help fill the void left by one of the best to grace the game.</p>\n"
+    },
+    "3ffh20m7fvrr114wvr2tkc73s": {
+      "id": "3ffh20m7fvrr114wvr2tkc73s",
+      "title": "Lampard looking to build on 'pleasure' of Coventry's first Premier League win",
+      "subtitle": "Coventry City are looking to make it back-to-back wins in the Premier League when they welcome Newcastle United to CBS Arena.",
+      "source": "FotMob",
+      "sourceUrl": "/news/3ffh20m7fvrr114wvr2tkc73s-lampard-looking-build-pleasure-coventrys-first-premier-league-win",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/cc/c5/lampard_rm53m2bzpbm1lmhqfn9dchxu.jpg?t=799581217&w=1200&h=630",
+      "publishedAt": "2026-10-11T22:00:06.000Z",
+      "paragraphs": [
+        "Frank Lampard says it was a relief for Coventry City to earn their first Premier League win but admitted there is still work to do ahead of facing Newcastle United.",
+        "Coventry lost each of their first four Premier League matches following their promotion without scoring a goal but ended both droughts with their 1-0 victory over Nottingham Forest before the international break.",
+        "It was a first top-flight win in 25 years, but Lampard&#39;s side have slipped down to 19th in the table following the rest of the weekend&#39;s results.",
+        "Only against Crystal Palace (five) has Lampard won more Premier League games as a manager than he has versus Newcastle (three), and he is confident he can add to that tally, as long as Coventry continue to build on their progress.",
+        "&quot;It was really a relief and a real pleasure as it sunk in for the players to feel that feeling of winning a Premier League game,&quot; Lampard said.",
+        "&quot;I have to understand why, [for] the players, that&#39;s a big deal for them, so as long as we remember all the reasons why they got there and keep doubling down on all the work we&#39;re talking about and what we do, then it&#39;s good.",
+        "&quot;There will be things that they will naturally learn as they go, and my job is to be there to support them and understand if they keep going, keep working, belief will grow with that.&quot;",
+        "Newcastle, meanwhile, sit 11th in the table, having lost just one of their five league matches under Matthias Jaissle so far.",
+        "They responded well to their resounding 4-1 defeat to Leeds United, heading into the break on the back of a 2-1 win over high-flying Hull City.",
+        "Jaissle is not getting ahead of himself just yet, though, and is wary of the threat that a buoyant Coventry can pose to the Magpies.",
+        "&quot;Every team is capable of winning against every opponent,&quot; Jaissle said.",
+        "&quot;Coventry have the momentum, as they won their last match, and confidence. They also have quality and a clear playing style.",
+        "&quot;If we perform at our best, then it will be difficult to beat us. We want to make it as difficult for them as possible.&quot;",
+        "Coventry City – Jay Dasilva",
+        "Jay Dasilva scored Coventry&#39;s first Premier League goal of the season and scored on his 127th appearance across all competitions.",
+        "His goal ended a run of 599 minutes without a goal in the Premier League for Coventry.",
+        "Newcastle United – Lewis Hall",
+        "Only Kobbie Mainoo (40) has won possession more times than Lewis Hall (38) in the Premier League this season.",
+        "Hall also ranks top among all full-backs/wing-backs for carries (64) and carry distance (803.5m).",
+        "MATCH PREDICTION: NEWCASTLE UNITED WIN",
+        "Coventry have lost seven of their last eight league games against Newcastle (W1), including their last five in a row. This is the first time the two sides will face each other in the league since 2009-10 in the Championship, and first in the Premier League since 2000-01.",
+        "Newcastle won both of their last two league visits to Coventry by 2-0 scorelines in September 2000 and December 2009 but have never won three in a row before.",
+        "Coventry have struggled at home this term, as well, losing both such league games by an aggregate score of 0-6.",
+        "Only five sides in the competition&#39;s history have lost each of their opening three home matches of a campaign without scoring: Everton in 2005-06 and 2023-24, Crystal Palace in 2017-18, Burnley in 2020-21 and Wolves in 2021-22.",
+        "Since the start of May, only Arsenal (eight) and Manchester City (seven) have won more Premier League games than Newcastle (four), who are looking to win successive games in the competition for the third time in 2026, after doing so in January and in March.",
+        "Coventry City – 29.8%",
+        "Newcastle United – 44.8%"
+      ],
+      "html": "<p>Frank Lampard says it was a relief for Coventry City to earn their first Premier League win but admitted there is still work to do ahead of facing Newcastle United.</p>\n\n<p>Coventry lost each of their first four Premier League matches following their promotion without scoring a goal but ended both droughts with their 1-0 victory over Nottingham Forest before the international break.</p>\n\n<p>It was a first top-flight win in 25 years, but Lampard&#39;s side have slipped down to 19th in the table following the rest of the weekend&#39;s results.</p>\n\n<p>Only against Crystal Palace (five) has Lampard won more Premier League games as a manager than he has versus Newcastle (three), and he is confident he can add to that tally, as long as Coventry continue to build on their progress.</p>\n\n<p>&quot;It was really a relief and a real pleasure as it sunk in for the players to feel that feeling of winning a Premier League game,&quot; Lampard said.</p>\n\n<p>&quot;I have to understand why, [for] the players, that&#39;s a big deal for them, so as long as we remember all the reasons why they got there and keep doubling down on all the work we&#39;re talking about and what we do, then it&#39;s good.</p>\n\n<p>&quot;There will be things that they will naturally learn as they go, and my job is to be there to support them and understand if they keep going, keep working, belief will grow with that.&quot;</p>\n\n\n<p>Newcastle, meanwhile, sit 11th in the table, having lost just one of their five league matches under Matthias Jaissle so far.</p>\n\n<p>They responded well to their resounding 4-1 defeat to Leeds United, heading into the break on the back of a 2-1 win over high-flying Hull City.</p>\n\n<p>Jaissle is not getting ahead of himself just yet, though, and is wary of the threat that a buoyant Coventry can pose to the Magpies.</p>\n\n<p>&quot;Every team is capable of winning against every opponent,&quot; Jaissle said.</p>\n\n<p>&quot;Coventry have the momentum, as they won their last match, and confidence. They also have quality and a clear playing style.</p>\n\n<p>&quot;If we perform at our best, then it will be difficult to beat us. We want to make it as difficult for them as possible.&quot;</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>Coventry City – Jay Dasilva</strong></p>\n\n<p>Jay Dasilva scored Coventry&#39;s first Premier League goal of the season and scored on his 127th appearance across all competitions.</p>\n\n<p>His goal ended a run of 599 minutes without a goal in the Premier League for Coventry.</p>\n\n<p><strong>Newcastle United – Lewis Hall</strong></p>\n\n<p>Only Kobbie Mainoo (40) has won possession more times than Lewis Hall (38) in the Premier League this season.</p>\n\n<p>Hall also ranks top among all full-backs/wing-backs for carries (64) and carry distance (803.5m).</p>\n\n\n<p><strong>MATCH PREDICTION: NEWCASTLE UNITED WIN</strong></p>\n\n<p>Coventry have lost seven of their last eight league games against Newcastle (W1), including their last five in a row. This is the first time the two sides will face each other in the league since 2009-10 in the Championship, and first in the Premier League since 2000-01.</p>\n\n<p>Newcastle won both of their last two league visits to Coventry by 2-0 scorelines in September 2000 and December 2009 but have never won three in a row before.</p>\n\n<p>Coventry have struggled at home this term, as well, losing both such league games by an aggregate score of 0-6.</p>\n\n<p>Only five sides in the competition&#39;s history have lost each of their opening three home matches of a campaign without scoring: Everton in 2005-06 and 2023-24, Crystal Palace in 2017-18, Burnley in 2020-21 and Wolves in 2021-22.</p>\n\n<p>Since the start of May, only Arsenal (eight) and Manchester City (seven) have won more Premier League games than Newcastle (four), who are looking to win successive games in the competition for the third time in 2026, after doing so in January and in March.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Coventry City – 29.8%</p>\n\n<p>Draw – 25.4%</p>\n\n<p>Newcastle United – 44.8%</p>\n"
     },
     "3jnohid0gubi1ibj9w14pv78y": {
       "id": "3jnohid0gubi1ibj9w14pv78y",
@@ -10624,6 +10787,37 @@
         "One of the game’s brightest talents. / Ulrik Pedersen/NurPhoto/Getty Images.In a Bayern Munich squad stacked with star power, it was the quietly composed Aleksandar Pavlović who emerged as one of the real surprises of 2024–25.The midfielder had already earned his first senior Germany call-up in March 2024—a sign that those behind the scenes were paying attention. But it was in the months that followed where he truly began to shine on a bigger stage. Stepping into Bayern’s midfield with minimal fuss, he brought calm, control and maturity well beyond his years.Pavlović further blossomed during a successful 2025–26 season, regularly showcasing his sharp positional sense, composed distribution and intelligent decision-making—traits which earned him a place in Germany’s most recent World Cup roster. He’s not flashy, but he’s incredibly effective. And while he may have flown under the radar at first, Pavlović is now firmly in the spotlight—and looking every bit like a future cornerstone for both club and country.",
         "Angelo Stiller continues to go underappreciated. / Harry Langer/DeFodi Images/Getty ImagesIf Joshua Kimmich is the heir apparent to Philipp Lahm, then Angelo Stiller might just be next big star following in Kimmich’s own footsteps.A product of the Bayern academy—where he undoubtedly studied Kimmich’s game—Stiller now shines at Stuttgart and looks every bit the natural successor for Germany’s midfield maestro. Like Kimmich, he blends razor-sharp ball control with relentless defensive tenacity, and he’s a tactical chameleon—equally adept at pulling the strings in midfield, stepping into central defense or bursting forward as a winger when called upon.The likeness is striking. While he’s still carving his path to Kimmich’s elite level, all signs point to Stiller becoming a major force for club and country.",
         "Granit Xhaka has aged like a fine wine. / George Wood/Getty ImagesGranit Xhaka was once the Premier League’s favorite scapegoat. Known more for his red cards than his passing range, the Swiss midfielder’s time at Arsenal reached a low point in October 2019, when he was jeered off the pitch by his own fans—a moment that seemed like the end.But Mikel Arteta’s arrival gave Xhaka a second chance and he slowly rebuilt his reputation in north London. That said, few would have predicted the full-blown renaissance that awaited him in Germany.At Bayer Leverkusen, Xhaka underwent a total transformation—from hot-headed liability to elite midfield general. As the heartbeat of Xabi Alonso’s undefeated Bundesliga-winning side in 2023–24, he thrived in a deeper, more orchestrated role.Now, he's the one pulling the strings at Sunderland—dictating tempo, threading line-breaking passes and acting as the anchor for the overperforming Black Cats."
+      ]
+    },
+    "ftbpro_01jzwzxj9zmn": {
+      "id": "ftbpro_01jzwzxj9zmn",
+      "title": "The 25 Best Central Midfielders in World Soccer—Ranked",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/the-best-central-midfielders-in-world-soccer-ranked/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_857,h_482,x_167,y_45/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m12efzqmn5m8kr5mct.jpg",
+      "publishedAt": "2026-10-11T20:45:09.000Z",
+      "paragraphs": [
+        "By SI FC StaffJul 20, 2025Pedri often runs the show for Barça.  / Jose Breton/Pics Action/NurPhoto/Getty ImagesTrying to define a “central midfielder” in modern soccer is no simple task.",
+        "With positions more fluid than ever and tactical roles constantly evolving, midfielders today are asked to do a bit of everything—defend, build play, break lines, press and even score. But amid all this complexity, there’s still a distinction between the different types of midfielders.",
+        "This list focuses exclusively on true central midfielders—those who typically operate in the No. 8 role or as balanced, box-to-box players. These are the players who connect defence and attack, carry the ball through midfield, and often dictate the rhythm of a match from the centre of the park.",
+        "To keep things clear, we've excluded traditional defensive midfielders (the out-and-out No. 6s), as well as classic attacking midfielders (the No. 10s) who play higher up the pitch in more advanced creative roles. Both of those categories deserve separate recognition.",
+        "What remains is a group of versatile, influential midfielders who embody the modern game's demands. And while ranking them is no easy feat, here’s Sports Illustrated's carefully considered list of the current 25 best.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "André-Frank Zambo Anguissa has won Serie A twice with Napoli. / Timothy Rogers/Getty ImagesFulham fans will remember André-Frank Zambo Anguissa as the midfield mountain who flashed glimpses of brilliance but, strangely given his size and strength, struggled to fully adapt to the Premier League.In Naples, though, Anguissa has become a force of nature. A two-time Serie A champion, Anguissa has been the beating heart of one of the most glorious chapters in Napoli’s history. Commanding the midfield with a lethal mix of defensive savvy and explosive ball-carrying power, he’s evolved into a true game-changer.",
+        "Mateo Kovačić has struggled with injury. / Alex Livesey/Danehouse/Getty ImagesMateo Kovačić’s résumé speaks for itself—Inter, Real Madrid, Chelsea, Manchester City—a glittering list that stands as a testament to his elite pedigree.The Croatian maestro is one of the game’s most gifted ball-progressing midfielders, capable of slicing through defensive lines with pinpoint vertical passes—the kind that have become a rare commodity in an age dominated by safe, sideways soccer.While injuries have hampered him at City, Kovačić rises to the occasion whenever he's fit, often chipping in with crucial goals, too.",
+        "Thuram is a key player for Juventus. / Juventus FC/Getty ImagesKhéphren Thuram comes from soccer royalty—the son of French legend Lilian Thuram and younger brother of Inter forward Marcus Thuram. Now with a star of his own firmly on the rise, the youngest Thuram is doing the family name proud.The towering midfielder has been one of the few bright spots during a difficult couple of seasons for Juventus, with his dynamic, all-action displays quickly turning heads. His blend of physicality, press resistance and powerful line-breaking runs gave Juve some much-needed energy and drive through the middle of the pitch.Add in growing consistency, maturity and defensive steel, and Thuram’s inclusion in the Serie A Team of the Season for 2024–25 merely confirmed what many had already suspected: he’s is the real deal.",
+        "Youri Tielemans has boosted United’s midfield. / Robbie Jay Barratt/AMA/Getty ImagesAs a free transfer, Youri Tielemans was a signing of extraordinary value for an Aston Villa side doing things their fans could only have dreamed of a decade earlier, when the club was staring down the barrel of Premier League relegation. In the middle of the pitch, the Belgian did just about everything for the Villans, combining accomplished passing with a willingness to shoot from distance and a tenacious edge when it came to winning the ball back.Comparisons with fellow Belgian and Premier League legend Kevin De Bruyne were made, while Villa boss Unai Emery even said he saw Tielemans like his “son”—a particularly bizarre choice of words given that the pair once had a physical confrontation.Sadly for Villa fans, after helping establish the club as a top-four force and leading them to Europa League glory in 2025–26, Tielemans followed several of Villa’s other stars out the door this summer, joining Manchester United. For United, though, adding a midfielder with his technical quality and intelligence could prove a very shrewd piece of business.",
+        "Felix Nmecha is a two-way force. / Ralf Ibing/firo sportphoto/Getty ImagesFelix Nmecha was never really given his chance by either Manchester City or England, despite representing both at youth level, with his senior opportunities limited to a handful of cup cameos for City.Their loss has been Borussia Dortmund’s and Germany’s gain, however, with the towering 6'3&#34; midfielder now a regular for both club and country, proving just how wrong his former employers were to let him go.A colossal ball carrier and superb passer, Nmecha also has a knack for chipping in with crucial goals and assists, making him an increasingly complete presence in the middle of the pitch.",
+        "Goretzka is now a Villan. / Neville Williams/Aston Villa FC/Getty ImagesLeon Goretzka’s journey from lean and lanky to relentless powerhouse at Bayern Munich saw him evolve into one of the world’s most fearsome midfield forces.He might not dazzle with silky skills, but what he lacks in finesse, the now-Aston Villa star more than makes up for with sheer effectiveness. His timing when bursting into the box is impeccable and, off the ball, he covers ground like a machine that never quits.While he may have lost a bit of the raw power that once defined him, when Goretzka is on form, there’s no denying his class.",
+        "Pablo Barrios is a regular under Diego Simeone. / Maria Gracia Jimenez/Soccrates/Getty ImagesIn the eyes of Diego Simeone, Pablo Barrios’s performances in Atlético Madrid’s midfield “speak for themselves.”“He gives us energy, a good pace of play, he applies pressure,” the Argentine coach gushed of the Spain international last season. “He gives us direction and security in that area of the midfield where we need legs. He’s doing it in the best way possible, he’s growing year after year.”The natural heir to Koke is not one for flashy goals or assists tallies. The beauty of Barrios’s game lies in its subtlety and spirit.",
+        "Mainoo remains indispensable in Man Utd’s midfield. / Marc Atkins/Getty ImagesThere’s no denying that Kobbie Mainoo has endured a tough year or so. Frozen out by Rúben Amorim, his Manchester United career looked to be over, with his rapid rise from promising youngster to one of world soccer’s finest young talents seemingly grinding to a halt.Then came his older brother, the “Free Kobbie Mainoo” T-shirt, the appointment of Michael Carrick and a renewed vote of confidence in the young Englishman—and suddenly, Mainoo looks right back on track.One of the most technically gifted players at United—and in England’s squad—Mainoo is superbly composed on the ball, capable of threading line-breaking passes through the tightest spaces, while remaining dogged and tenacious without it. He’s the full package, and despite United’s heavy summer investment in midfield, Mainoo remains indispensable.",
+        "Adrien Rabiot has undergone one hell of a career arc. / Antonino Lagana/Getty ImagesFor a player who won five Ligue 1 titles with an all-conquering Paris Saint-Germain side in the 2010s, it might seem strange to say that Adrien Rabiot is only now hitting his prime—especially now he’s in his thirties and has left Marseille for AC Milan.But that’s exactly what’s happened.First at Juventus, and now back in Serie A at San Siro, Rabiot has evolved from a graceful, dependable midfielder into a genuine match-winner. He’s added bite, goals, and a cutting edge to his game—becoming far more than just a composed presence in the middle of the park.Between 2022–23 and 2025–26, the France international netted more goals than managed in the entire rest of his career, which began way back in 2011. It’s a remarkable transformation and proof that Rabiot has rewritten the final chapters of his career on his own terms—not fading away, but stepping up.",
+        "Ederson almost moved to the Premier League. / Elianton/Mondadori Portfolio/Getty ImagesJust a few years ago, Ederson (the Brazilian midfielder, not the goalkeeper) was struggling for minutes with relegation-threatened Salernitana. Now, he’s one of the most complete midfielders in Europe—a Brazil international, a European champion and the beating heart of a resurgent Atalanta.His meteoric rise has mirrored that of his club. As Atalanta transformed from Serie A staples into genuine title contenders and Europa League winners, Ederson was at the center of it all. A tireless engine who covers ground like few others, he presses aggressively, wins duels, and gives his more attack-minded teammates the freedom to shine.But don’t be fooled into thinking he’s just a destroyer. Ederson is excellent on the ball, too—a smooth, purposeful carrier and a tidy passer.",
+        "Gavi is currently locked in a battle for minutes at Barcelona. / Joan Valls/Urbanandsport/NurPhoto/Getty ImagesWhen fit and injury-free—which has too often been an issue during Gavi’s fledgling career—the diminutive Spaniard brings an intensity few can match, combining tireless running and fearless tackling with the kind of technical finesse that sets him apart.His sharp close control, quick turns in tight spaces and ability to find a pass under pressure offer flashes of the great Andrés Iniesta, yet Gavi plays with a snarl and bite that are entirely his own. He doesn’t just play the game; he throws himself into it, fully and relentlessly, every single time.Unfortunately, that all-action style has seemingly gone hand in hand with his growing injury record, with Gavi’s willingness to put his body on the line perhaps contributing to a career that has too often been interrupted. But there’s little doubt that when he is fit and available, Barcelona are a better team with Gavi in it.",
+        "Alexis Mac Allister is still integral for Liverpool. / Robbie Jay Barratt/AMA/Getty ImagesIn 2022, Alexis Mac Allister was quietly making his mark at Brighton—a talented midfielder, but one still flying somewhat under the radar.Then came the World Cup. Alongside Lionel Messi, Mac Allister suddenly had the world watching, and Argentina’s triumphant run provided a perfect showcase of just how special he really was. The pair developed an almost telepathic understanding, constantly seeking each other out and seeming to speak the same soccer language without saying a word.That alone should tell you plenty about Mac Allister’s quality, yet even now, as a World Cup winner and Premier League champion with Liverpool, his modest, unassuming personality means he can still be underestimated.The quintessential modern box-to-box midfielder, Mac Allister excels in almost every department, whether it’s tenacious tackling, relentless ball-winning, dominating duels, precise passing or long-range shooting.",
+        "Luka Modrić left Real Madrid in 2025. / Timothy Rogers/Getty ImagesAbility-wise, Luka Modrić is still right up there with the best—his vision, technique, and intelligence remain as sharp as ever. But even the greats can’t outrun time.Though he may not have the engine he once did, make no mistake—Modrić can still outthink, out-pass and outplay most midfielders in the game. His control of tempo, exquisite range of passing and eye for a killer ball remain untouched. He can unlock a defence in an instant and still strike fear with a fierce shot from distance.Even in the twilight of his career, Modrić—now with AC Milan—isn't fading, he’s simply adapting.",
+        "Expectations for Elliot Anderson are high at City. / Marc Atkins/Getty ImagesWith less than 12 months to go until the 2026 World Cup, Elliot Anderson had never received a senior international call-up. By the time the tournament arrived, he was one of the first names on England’s team sheet.Those at Newcastle United had seen Anderson’s talent up close for themselves. The proud Geordie came through the club’s academy before moving to Nottingham Forest in the summer of 2024, where two stellar seasons turned him into one of the Premier League’s most sought-after midfielders. Manchester City eventually paid £116 million ($156 million) for his services, bringing him to the Etihad as part of their post-Pep Guardiola rebuild.An elite ball-winner with a relentless pressing game and progressive passing ability, Anderson looks perfectly suited to become a heartbeat of Manchester City’s next era."
       ]
     },
     "ftbpro_01k06mp68sp6": {
@@ -22498,6 +22692,37 @@
         "READ THE LATEST MAN UTD NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
+    "ftbpro_01m4epw94pb0": {
+      "id": "ftbpro_01m4epw94pb0",
+      "title": "Who’s in, Who’s Out? Analyzing the USMNT’s Depth Chart After Perfect Fall Window",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/analyzing-usmnt-depth-chart-after-perfect-fall-window-2026/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2400,h_1350,x_0,y_155/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01kxgn022gnsfbn47ers.jpg",
+      "publishedAt": "2026-10-11T21:00:00.000Z",
+      "paragraphs": [
+        "By Sophia Vesely, Amanda Langell5:00 PM EDTThe U.S. has been in fine form since the World Cup. / Kohjiro Kinno/Sports IllustratedU.S. men’s national team manager Mauricio Pochettino has trialed no shortage of stars, yet only some have made their mark donning the red, white and blue.",
+        "The 2030 World Cup might still be four years away, but every international break is a chance for Pochettino to zero in on his best squad, one capable of finally making a deep run on the biggest stage in soccer. From established veterans to exciting, unproven teenagers, the Argentine boss has plenty of talent at his disposal—but where do they all stack up?",
+        "Sports Illustrated’s deep dive into the USMNT’s depth breaks down the Stars and Stripes’ best players at every position. The guide only includes players that have been rostered in the last 12 months, dating back to October 2025. Former captain Tim Ream is excluded following his retirement.",
+        "The rankings are not only based off current success, but also level of potential, especially when it comes to young players like Brooklyn Raines, Neil Pierre and Mathis Albert, all of whom have a high ceiling.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Brian Schwake is in line to be the USMNT No. 1 moving forward. / Brace Hemmelgarn/USSF/Getty ImagesBrian Schwake (Nashville SC)Diego Kochen (Lyngby)Chris Brady (Chicago Fire)Matt Freese (NYCFC)Patrick Schulte (Columbus Crew)Roman Celentano (FC Cincinnati)Jonathan Klinsmann (Cesena)Matt Turner (New England Revolution)At the 2026 World Cup, it was Matt Freese between the posts for the USMNT. But a disastrous outing against Belgium was the final straw for the inconsistent, mistake-prone goalkeeper. He might’ve still logged 45 minutes against Peru this fall, but he soon watched three other names jump above his on the depth chart.",
+        "Chris Brady and Diego Kochen both got looks this camp, but the latter made the better impression. Kochen played the full 90 minutes and kept a clean sheet in the team’s 3–0 win against Mexico. The 20-year-old also became the youngest goalkeeper to ever start a game for the USMNT.",
+        "Still, it’s Brian Schwake who emerged from the international window as the favorite to become Pochettino’s No. 1. The American shot-stopper has had a fantastic season with Supporters’ Shield favorites Nashville SC and was the only goalkeeper to make two starts for the USMNT this fall.",
+        "Schwake has a ways to go before he truly proves himself capable of locking down top attacks on the international stage, but he’s no doubt leading the race at the moment.",
+        "Alex Freeman was a breakout star at the World Cup. / Robin Alam/ISI Photos/ISI Photos/Getty ImagesAlex Freeman (Villarreal)Antonee Robinson (Fulham)Peyton Miller (New England Revolution)Joe Scally (Borussia Mönchengladbach)Francis Westfield (Philadelphia Union)John Tollkin (Holstein Kiel)Fullback is no longer a problem position for the USMNT. The ever-reliable and experienced Antonee Robinson owns the left flank while breakout star Alex Freeman commands the right.",
+        "Freeman’s impressive form for Orlando City earned him a place in Pochettino’s squad last year and he quickly became a starter. There were doubts over whether he could hang with the best at the World Cup, but the 22-year-old, who had since made the move to Villarreal, silenced all doubters this summer—and continued his strong form during the team’s fall friendlies.",
+        "Joe Scally is the man tasked with the near-impossible job of displacing Freeman, much like Peyton Miller’s uphill battle trying to take minutes from Robinson. But the latter is gaining Premier League attention after his first senior camp and at age 18, his career is just beginning.",
+        "Chris Richards is the leader of Mauricio Pochettino’s defense.  / Taylor Banner/USSF/Getty ImagesChris Richards (Crystal Palace)Auston Trusty (Celtic)Mark McKenzie (Toulouse)George Campbell (West Bromwich Albion)Neil Pierre (Philadelphia Union)Miles Robinson (FC Cincinnati)Cameron Carter-Vickers (Celtic)There’s no shortage of center backs at Pochettino’s disposal, but the long list of names are all essentially fighting for one spot. Chris Richards is irreplaceable in the USMNT’s XI; the Crystal Palace standout is the team’s defensive leader, both on and off the pitch.",
+        "There is a Ream-shaped hole alongside him in central defense. Auston Trusty’s experience with the USMNT and playing in Europe at the club level makes him the most trustworthy—no pun intended—option for Pochettino. He is also versatile enough to play at left back as well.",
+        "Keep an eye out for Pierre, though. The 18-year-old got his first call-up this fall and is billed by many to be the best long-term option to replace Ream. The towering center back is brilliant in the air and has a knack for goal, but he has plenty of growing to do before he is strong enough to beat out Trusty, Mark McKenzie or George Campbell.",
+        "Tyler Adams is the new USMNT captain. / Luke Hales/Getty ImagesTyler Adams (Bournemouth)Weston McKennie (Juventus)Sebastian Berhalter (Middlesbrough)Johnny Cardoso (Atlético Madrid)Brooklyn Raines (New England Revolution)Yunus Musah (AC Milan)Tanner Tessmann (Lyon)Aidan Morris (Middlesbrough)Timothy Tillman (LAFC)James Sands (NYCFC)Cristian Roldan (Seattle Sounders)Pochettino experimented with multiple formations during the most recent four friendlies, but there was always one constant: The Argentine boss deployed two defensive midfielders.",
+        "New captain Tyler Adams is a lock in the middle of the park, but his partner in Pochettino’s double pivot is up for grabs. Weston McKennie has the pedigree and the World Cup experience, but his absence this fall allowed other players to stand out.",
+        "Sebastian Berhalter staked the biggest claim for a starting role moving forward, continuing his impressive rise with the USMNT ever since his breakout 2025 Gold Cup campaign. There is a wealth of competition, though.",
+        "The young Brooklyn Raines started two of the USMNT’s four wins during the September-October break and played beyond his 21 years. His defensive prowess outranks what Yunus Musah has brought lately, and he has better vision with the ball at his feet than Tanner Tessmann.",
+        "Johnny Cardoso is arguably more well-rounded than all three of the aforementioned options, but he has to get himself back into Pochettino’s plans after missing the 2026 World Cup with an ankle injury."
+      ]
+    },
     "ftbpro_01m4eqy15t6t": {
       "id": "ftbpro_01m4eqy15t6t",
       "title": "USWNT vs. Spain: 4 Reasons to Watch Double Header Between Two Powerhouses",
@@ -23773,6 +23998,37 @@
         "READ THE LATEST MAN UTD NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
+    "ftbpro_01m4nhggnz2v": {
+      "id": "ftbpro_01m4nhggnz2v",
+      "title": "Three Takeaways From Man City’s Act of Defiance Against Liverpool and Anfield",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/three-takeaways-man-city-act-defiance-liverpool-anfield/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2000,h_1125,x_0,y_128/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4nz82qek90rdw10vk.jpg",
+      "publishedAt": "2026-10-11T20:00:01.000Z",
+      "paragraphs": [
+        "By Barnaby Lane4:00 PM EDTCherki produced a piece of magic. / Tom Flathers/Manchester City FC/Getty ImagesManchester City extended their lead at the top of the Premier League with an ultimately comfortable 3–0 win over Liverpool at Anfield on Sunday, making it six wins from six to maintain their perfect start to the season.",
+        "Heading into the game, the focus was as much on City’s ongoing financial case as it was on the soccer itself. With the club found guilty of 114 of the 115 charges brought against them, questions over potential punishments—including points deductions and stripped titles—continued to dominate the headlines.",
+        "It was perhaps fitting that their first game since the verdict should come against Liverpool, who were so often denied by City. Could the Reds get some kind of redemption? Could they halt a City side that had won all five of its opening league games? The atmosphere at Anfield certainly suggested the home crowd believed an upset was possible.",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "The answer, however, was a resounding no.",
+        "While City were not at their fluent best throughout, they capitalized on Ryan Gravenberch’s second-half sending-off to take control and secure a convincing victory thanks to goals from Erling Haaland, Jérémy Doku and Rayan Cherki.",
+        "Haaland scored again. / Robbie Jay Barratt/AMA/Getty ImagesCity were unsurprisingly met with a hostile reception at Anfield, with the club’s impending punishment looming large over the occasion.",
+        "Fans lined the streets outside the stadium to make their feelings known, while boos rang out around the stadium as the teams took to the pitch. Liverpool’s players also appeared fired up, with a few heated exchanges and flashes of confrontation adding to the tension in the opening stages.",
+        "After the early hostility subsided, the game settled into a more familiar pattern. City were far from their best, but still dominated possession and created the clearer chances, as they so often do. Liverpool threatened in spells of their own, but Gravenberch’s dismissal for a second bookable offense midway through the second half shifted the balance firmly in City’s favor.",
+        "Haaland broke the deadlock with a fierce finish, before Doku curled home a superb second to put City in control. A moment of Cherki magic then capped off the victory, sealing an ultimately comfortable 3–0 win for Enzo Maresca’s side.",
+        "Despite the hostility and noise surrounding the club, City let their soccer do the talking.",
+        "Their performance may not have been flawless, but the result sent a clear message: whatever challenges await them off the pitch, they remain focused on winning—and their perfect start to the season shows no sign of slowing down.",
+        "Wirtz didn’t make an impact. / James Gill/Danehouse/Getty ImagesDespite the scoreline, it was not all one-way traffic, particularly before Gravenberch’s red card. Liverpool started both halves brightly and showed enough attacking intent to suggest they could cause an upset.",
+        "Much of Liverpool’s attacking play ran through Florian Wirtz, but the big-money signing from Bayer Leverkusen last summer struggled to make his involvement count. The German repeatedly made poor decisions in promising positions, often passing when he had a chance to shoot and shooting when a teammate was better placed. His indecision was frustrating to watch and appeared to test the patience of those around him.",
+        "He also gave possession away on several occasions, struggled to impose himself physically and looked short of the confidence that made him such an exciting prospect at Leverkusen.",
+        "The bigger concern for Liverpool is that Wirtz’s struggles are becoming difficult to ignore, yet their options for replacing him are limited. That leaves Iraola with little choice but to keep backing the German and trust that he can eventually find his feet.",
+        "For now, though, Wirtz is continuing to fall well short of expectations.",
+        "Guéhi was too good for Koumas. / Isaac Parkin/Manchester City FC/Getty ImagesWith Alexander Isak, Cody Gakpo and Hugo Ekitiké all unavailable, Iraola handed young Lewis Koumas his first-ever Premier League start against City.",
+        "The Wales international showed plenty of effort, covering ground and chasing long balls while leading the line alone. However, the 21-year-old is simply not yet at the level Liverpool need to compete with the Premier League’s strongest sides.",
+        "That was particularly evident in his battle with Marc Guéhi. The City defender comfortably held Koumas off and kept him under control, while the young forward also missed a clear-cut chance in the second half."
+      ]
+    },
     "ftbpro_01m4nhq9q8jw": {
       "id": "ftbpro_01m4nhq9q8jw",
       "title": "President Trump Receives Tribute From U.S. Owner of European Soccer Giants",
@@ -23851,6 +24107,35 @@
         "Iraola has openly shared this stance, repeatedly lauding the industry, rather than dexterity, of the hard-running forward who, prior to Sunday, had just 22 minutes of Premier League soccer under his belt.",
         "“The energy he shows is contagious for the rest,” Iraola gushed last month. “When they see the ones up front doing it, they are forced to go from behind.”",
         "READ THE LATEST LIVERPOOL NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
+    "ftbpro_01m4nsyr7xjs": {
+      "id": "ftbpro_01m4nsyr7xjs",
+      "title": "Supercomputer Predicts Premier League Table As Man City Send Arsenal Title Statement",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/supercomputer-premier-league-table-man-city-send-arsenal-title-statement/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m4p4p3tvasby75g86g.jpg",
+      "publishedAt": "2026-10-11T22:00:00.000Z",
+      "paragraphs": [
+        "By Grey Whitebloom6:00 PM EDTAmid all the uncertainties surrounding this season, Manchester City can always rely upon their guarantee of goals. / Isaac Parkin/Manchester City FC/Getty ImagesErling Haaland has chosen his words well this week.",
+        "Manchester City’s most convincing voice won the hearts and minds of supporters reeling from the seismic Premier League verdict before thrashing in the opening goal of Sunday’s win over Liverpool. Rather than focusing on the clash of flesh which he had just endured, Haaland tellingly called the contest a “mental battle.”",
+        "Until City’s appeal is heard and a punishment is dished out, every Premier League match involving the club lambasted as a “sham” by their own competition will require some mental gymnastics. The meeting between Liverpool and City was rightly billed as the most important game of the weekend but if the Etihad outfit are deducted enough points to guarantee relegation, it will have been an entirely meaningless endeavor.",
+        "In light of the few certainties which exist in this legal limbo, there is always Opta’s supercomputer to turn to.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Liverpool slipped on this banana peel of a fixture. / Isaac Parkin/Manchester City FC/Getty ImagesPredicted Position / Club",
+        "In a world where City aren’t sanctioned—the reality which the club’s owners refuse to leave—Arsenal still remain favorites to claim a second successive Premier League, but only just. The Gunners labored to a win against Leeds United on Saturday which still left them three points adrift of Enzo Maresca’s faultless leaders by the weekend’s finish. Mikel Arteta has a formidable roster of talent, but City aren’t exactly short of star power themselves—and still will be thanks to the lack of relegation clauses in players’ contracts.",
+        "Remarkably, Brighton & Hove Albion are third favorites to win the Premier League title. The Seagulls dismantled Arsenal before the international break and returned from the three-week hiatus to claim a fourth win from six top-flight fixtures. They also dumped Manchester United out of the Carabao Cup.",
+        "However, Fabian Hürzeler is keen to avoid getting ahead of himself. “Maybe I sound a little old school now but there’s an old phrase: Defense wins championships—and we’re not speaking about championships,” he quickly interjected, “don’t get me wrong, but defense wins also games.”",
+        "Chelsea could do with learning that lesson. Xabi Alonso’s free-wheeling entertainers haven’t kept a Premier League clean sheet since January.",
+        "Bruno Fernandes has ambitions beyond Champions League qualification. / James Gill/Danehouse/Getty ImagesPredicted Position / Club",
+        "Once again, any sporting sanction for Manchester City will surely disrupt the race for Champions League qualification. Yet, at this point in time there would appear to be a clear top four, with Liverpool ranked as one of the likeliest European qualifiers despite their teething problems under Andoni Iraola.",
+        "Manchester United, by contrast, have a long road ahead if continental competition is to be on the cards next season. The Red Devils have made their worst start to a league season in 40 years. They would finish that campaign with the club’s greatest ever manager at the helm but even Sir Alex Ferguson could only oversee an 11th-place finish.",
+        "The likes of Brentford, Everton and Newcastle United habor lofty dreams of their own after making strong starts. The Bees appear best-placed to mount the strongest challenge, while Everton and Newcastle may struggle to maintain their form with such thin squads.",
+        "Tottenham’s first challenge is survival. / Jan Kruger/Getty ImagesPredicted Position / Club",
+        "Hull City and Ipswich Town have the same points as Liverpool after six games of the new season. The two freshly promoted clubs are still focused on survival but it’s been an encouraging start to life back in the top flight. The same cannot be said of Coventry City, even if Frank Lampard’s side did end a 25-year wait for a Premier League win before the international break.",
+        "Tottenham Hotspur are still waiting for that sweet taste of victory, but at least Roberto De Zerbi’s side are predicted to avoid relegation. It’s a testament to the new realities of N17 that the manager can take heart from his midfielder heatbutting an opponent simply because it shows some character. Spurs will have to balance that fight with some finesse if they are to fulfill the supercomputer’s prediction.",
+        "feed. READ THE LATEST PREMIER LEAGUE NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
     "ftbpro_01m4ntmq5tnx": {
