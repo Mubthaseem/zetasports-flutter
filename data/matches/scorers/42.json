@@ -2,10 +2,20 @@
   "competitionId": "42",
   "competitionName": "UEFA Champions League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-13T13:39:23.276Z",
+  "updatedAt": "2026-10-13T22:20:29.798Z",
   "scorers": [
     {
       "rank": 1,
+      "playerId": "1334552",
+      "playerName": "Nicolò Tresoldi",
+      "teamId": "8342",
+      "teamName": "Club Brugge",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8342.png",
+      "goals": 4,
+      "assists": 0
+    },
+    {
+      "rank": 2,
       "playerId": "840241",
       "playerName": "Ermedin Demirović",
       "teamId": "10269",
@@ -15,23 +25,13 @@
       "assists": 0
     },
     {
-      "rank": 2,
+      "rank": 3,
       "playerId": "881771",
       "playerName": "Ferrán Torres",
       "teamId": "9847",
       "teamName": "Paris Saint-Germain",
       "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
       "goals": 3,
-      "assists": 0
-    },
-    {
-      "rank": 3,
-      "playerId": "1270718",
-      "playerName": "Danijel Šturm",
-      "teamId": "7787",
-      "teamName": "Slavia Prague",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7787.png",
-      "goals": 2,
       "assists": 0
     }
   ]
