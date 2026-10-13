@@ -2,7 +2,7 @@
   "competitionId": "516",
   "competitionName": "Algerian Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-10-12T14:34:03.193Z",
+  "updatedAt": "2026-10-13T00:12:56.911Z",
   "table": [
     {
       "position": 1,
@@ -11,39 +11,19 @@
       "shortName": "CR Bélouizdad",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101633.png",
       "played": 5,
-      "won": 3,
-      "drawn": 2,
+      "won": 4,
+      "drawn": 1,
       "lost": 0,
-      "goalsFor": 7,
-      "goalsAgainst": 4,
-      "goalDifference": 3,
-      "points": 11,
+      "goalsFor": 9,
+      "goalsAgainst": 5,
+      "goalDifference": 4,
+      "points": 13,
       "form": [
         "#FFD908"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 2,
-      "teamId": "277392",
-      "teamName": "CS Constantine",
-      "shortName": "CS Constantine",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/277392.png",
-      "played": 5,
-      "won": 2,
-      "drawn": 2,
-      "lost": 1,
-      "goalsFor": 9,
-      "goalsAgainst": 6,
-      "goalDifference": 3,
-      "points": 8,
-      "form": [
-        "#FFD908"
-      ],
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 3,
       "teamId": "101636",
       "teamName": "MC Oran",
       "shortName": "MC Oran",
@@ -57,11 +37,11 @@
       "goalDifference": 3,
       "points": 7,
       "form": [
-        "#0294F0"
+        "#FFD908"
       ]
     },
     {
-      "position": 4,
+      "position": 3,
       "teamId": "101628",
       "teamName": "USM Alger",
       "shortName": "USM Alger",
@@ -73,6 +53,24 @@
       "goalsFor": 5,
       "goalsAgainst": 3,
       "goalDifference": 2,
+      "points": 7,
+      "form": [
+        "#0294F0"
+      ]
+    },
+    {
+      "position": 4,
+      "teamId": "277392",
+      "teamName": "CS Constantine",
+      "shortName": "CS Constantine",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/277392.png",
+      "played": 5,
+      "won": 2,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 9,
+      "goalsAgainst": 8,
+      "goalDifference": 1,
       "points": 7
     },
     {
@@ -137,19 +135,18 @@
     },
     {
       "position": 9,
-      "teamId": "2121859",
-      "teamName": "JS El Biar",
-      "shortName": "JS El Biar",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2121859.png",
-      "played": 5,
+      "teamId": "1387869",
+      "teamName": "USM Khenchela",
+      "shortName": "USM Khenchela",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1387869.png",
+      "played": 4,
       "won": 1,
       "drawn": 2,
-      "lost": 2,
-      "goalsFor": 7,
-      "goalsAgainst": 7,
-      "goalDifference": 0,
-      "points": 5,
-      "qualificationZone": "Active"
+      "lost": 1,
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "goalDifference": 1,
+      "points": 5
     },
     {
       "position": 10,
@@ -168,6 +165,21 @@
     },
     {
       "position": 11,
+      "teamId": "2121859",
+      "teamName": "JS El Biar",
+      "shortName": "JS El Biar",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2121859.png",
+      "played": 5,
+      "won": 1,
+      "drawn": 1,
+      "lost": 3,
+      "goalsFor": 8,
+      "goalsAgainst": 9,
+      "goalDifference": -1,
+      "points": 4
+    },
+    {
+      "position": 12,
       "teamId": "1660716",
       "teamName": "Olympique Akbou",
       "shortName": "Olympique Akbou",
@@ -182,7 +194,7 @@
       "points": 4
     },
     {
-      "position": 12,
+      "position": 13,
       "teamId": "319205",
       "teamName": "CR Temouchent",
       "shortName": "CR Temouchent",
@@ -195,22 +207,6 @@
       "goalsAgainst": 4,
       "goalDifference": -2,
       "points": 4
-    },
-    {
-      "position": 13,
-      "teamId": "1387869",
-      "teamName": "USM Khenchela",
-      "shortName": "USM Khenchela",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1387869.png",
-      "played": 4,
-      "won": 0,
-      "drawn": 3,
-      "lost": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 2,
-      "goalDifference": -1,
-      "points": 3,
-      "qualificationZone": "Active"
     },
     {
       "position": 14,

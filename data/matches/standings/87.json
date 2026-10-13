@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-12T14:33:15.754Z",
+  "updatedAt": "2026-10-13T00:12:16.052Z",
   "table": [
     {
       "position": 1,
@@ -82,14 +82,14 @@
       "teamName": "Sevilla",
       "shortName": "Sevilla",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8302.png",
-      "played": 7,
+      "played": 8,
       "won": 4,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 2,
-      "goalsFor": 10,
-      "goalsAgainst": 9,
+      "goalsFor": 13,
+      "goalsAgainst": 12,
       "goalDifference": 1,
-      "points": 13,
+      "points": 14,
       "form": [
         "#0046A7"
       ]
@@ -264,6 +264,21 @@
     },
     {
       "position": 17,
+      "teamId": "8581",
+      "teamName": "Levante",
+      "shortName": "Levante",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8581.png",
+      "played": 7,
+      "won": 1,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 11,
+      "goalsAgainst": 15,
+      "goalDifference": -4,
+      "points": 6
+    },
+    {
+      "position": 18,
       "teamId": "10268",
       "teamName": "Elche",
       "shortName": "Elche",
@@ -275,22 +290,7 @@
       "goalsFor": 11,
       "goalsAgainst": 17,
       "goalDifference": -6,
-      "points": 6
-    },
-    {
-      "position": 18,
-      "teamId": "8581",
-      "teamName": "Levante",
-      "shortName": "Levante",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8581.png",
-      "played": 6,
-      "won": 1,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 12,
-      "goalDifference": -4,
-      "points": 5,
+      "points": 6,
       "form": [
         "#FF4646"
       ]

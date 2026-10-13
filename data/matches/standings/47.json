@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-12T14:33:13.113Z",
+  "updatedAt": "2026-10-13T00:12:13.735Z",
   "table": [
     {
       "position": 1,
@@ -175,13 +175,13 @@
       "teamName": "Newcastle United",
       "shortName": "Newcastle",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png",
-      "played": 5,
+      "played": 6,
       "won": 2,
       "drawn": 2,
-      "lost": 1,
-      "goalsFor": 9,
-      "goalsAgainst": 9,
-      "goalDifference": 0,
+      "lost": 2,
+      "goalsFor": 10,
+      "goalsAgainst": 13,
+      "goalDifference": -3,
       "points": 8
     },
     {
@@ -216,6 +216,21 @@
     },
     {
       "position": 14,
+      "teamId": "8669",
+      "teamName": "Coventry City",
+      "shortName": "Coventry",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8669.png",
+      "played": 6,
+      "won": 2,
+      "drawn": 0,
+      "lost": 4,
+      "goalsFor": 5,
+      "goalsAgainst": 11,
+      "goalDifference": -6,
+      "points": 6
+    },
+    {
+      "position": 15,
       "teamId": "10203",
       "teamName": "Nottingham Forest",
       "shortName": "Nottm Forest",
@@ -230,7 +245,7 @@
       "points": 5
     },
     {
-      "position": 15,
+      "position": 16,
       "teamId": "10252",
       "teamName": "Aston Villa",
       "shortName": "Aston Villa",
@@ -245,7 +260,7 @@
       "points": 5
     },
     {
-      "position": 16,
+      "position": 17,
       "teamId": "8472",
       "teamName": "Sunderland",
       "shortName": "Sunderland",
@@ -260,7 +275,7 @@
       "points": 4
     },
     {
-      "position": 17,
+      "position": 18,
       "teamId": "8678",
       "teamName": "AFC Bournemouth",
       "shortName": "Bournemouth",
@@ -272,10 +287,13 @@
       "goalsFor": 7,
       "goalsAgainst": 13,
       "goalDifference": -6,
-      "points": 3
+      "points": 3,
+      "form": [
+        "#FF4646"
+      ]
     },
     {
-      "position": 18,
+      "position": 19,
       "teamId": "8586",
       "teamName": "Tottenham Hotspur",
       "shortName": "Tottenham",
@@ -287,24 +305,6 @@
       "goalsFor": 3,
       "goalsAgainst": 9,
       "goalDifference": -6,
-      "points": 3,
-      "form": [
-        "#FF4646"
-      ]
-    },
-    {
-      "position": 19,
-      "teamId": "8669",
-      "teamName": "Coventry City",
-      "shortName": "Coventry",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8669.png",
-      "played": 5,
-      "won": 1,
-      "drawn": 0,
-      "lost": 4,
-      "goalsFor": 1,
-      "goalsAgainst": 10,
-      "goalDifference": -9,
       "points": 3,
       "form": [
         "#FF4646"

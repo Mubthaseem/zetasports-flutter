@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-12T14:33:45.423Z",
+  "updatedAt": "2026-10-13T00:12:41.256Z",
   "table": [
     {
       "position": 1,
@@ -111,6 +111,21 @@
     },
     {
       "position": 7,
+      "teamId": "9780",
+      "teamName": "Alverca",
+      "shortName": "Alverca",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9780.png",
+      "played": 8,
+      "won": 3,
+      "drawn": 2,
+      "lost": 3,
+      "goalsFor": 13,
+      "goalsAgainst": 12,
+      "goalDifference": 1,
+      "points": 11
+    },
+    {
+      "position": 8,
       "teamId": "9764",
       "teamName": "Gil Vicente",
       "shortName": "Gil Vicente",
@@ -125,7 +140,7 @@
       "points": 11
     },
     {
-      "position": 8,
+      "position": 9,
       "teamId": "10264",
       "teamName": "Braga",
       "shortName": "Braga",
@@ -140,7 +155,7 @@
       "points": 11
     },
     {
-      "position": 9,
+      "position": 10,
       "teamId": "1074320",
       "teamName": "Estrela da Amadora",
       "shortName": "Estrela da Amadora",
@@ -155,37 +170,7 @@
       "points": 10
     },
     {
-      "position": 10,
-      "teamId": "9780",
-      "teamName": "Alverca",
-      "shortName": "Alverca",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9780.png",
-      "played": 7,
-      "won": 2,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 9,
-      "goalsAgainst": 11,
-      "goalDifference": -2,
-      "points": 8
-    },
-    {
       "position": 11,
-      "teamId": "10212",
-      "teamName": "Marítimo",
-      "shortName": "Marítimo",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
-      "played": 8,
-      "won": 2,
-      "drawn": 2,
-      "lost": 4,
-      "goalsFor": 9,
-      "goalsAgainst": 14,
-      "goalDifference": -5,
-      "points": 8
-    },
-    {
-      "position": 12,
       "teamId": "8348",
       "teamName": "Moreirense",
       "shortName": "Moreirense",
@@ -200,18 +185,33 @@
       "points": 8
     },
     {
+      "position": 12,
+      "teamId": "10212",
+      "teamName": "Marítimo",
+      "shortName": "Marítimo",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 9,
+      "goalsAgainst": 14,
+      "goalDifference": -5,
+      "points": 8
+    },
+    {
       "position": 13,
       "teamId": "1634",
       "teamName": "Famalicão",
       "shortName": "Famalicão",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1634.png",
-      "played": 7,
+      "played": 8,
       "won": 1,
       "drawn": 4,
-      "lost": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 7,
-      "goalDifference": 2,
+      "lost": 3,
+      "goalsFor": 10,
+      "goalsAgainst": 11,
+      "goalDifference": -1,
       "points": 7
     },
     {
