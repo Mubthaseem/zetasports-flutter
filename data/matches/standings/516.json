@@ -2,7 +2,7 @@
   "competitionId": "516",
   "competitionName": "Algerian Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-10-14T16:39:47.743Z",
+  "updatedAt": "2026-10-14T21:20:06.566Z",
   "table": [
     {
       "position": 1,
@@ -60,6 +60,21 @@
     },
     {
       "position": 4,
+      "teamId": "1792386",
+      "teamName": "MB Rouissat",
+      "shortName": "MB Rouissat",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1792386.png",
+      "played": 5,
+      "won": 3,
+      "drawn": 0,
+      "lost": 2,
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "goalDifference": 2,
+      "points": 9
+    },
+    {
+      "position": 5,
       "teamId": "6353",
       "teamName": "MC Alger",
       "shortName": "MC Alger",
@@ -74,7 +89,7 @@
       "points": 7
     },
     {
-      "position": 5,
+      "position": 6,
       "teamId": "277392",
       "teamName": "CS Constantine",
       "shortName": "CS Constantine",
@@ -89,7 +104,22 @@
       "points": 7
     },
     {
-      "position": 6,
+      "position": 7,
+      "teamId": "101630",
+      "teamName": "JS Kabylie",
+      "shortName": "JS Kabylie",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101630.png",
+      "played": 4,
+      "won": 2,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "goalDifference": 1,
+      "points": 7
+    },
+    {
+      "position": 8,
       "teamId": "1531341",
       "teamName": "ES Ben Aknoun",
       "shortName": "ES Ben Aknoun",
@@ -104,37 +134,22 @@
       "points": 6
     },
     {
-      "position": 7,
-      "teamId": "101630",
-      "teamName": "JS Kabylie",
-      "shortName": "JS Kabylie",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101630.png",
-      "played": 3,
-      "won": 2,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "goalDifference": 1,
-      "points": 6
-    },
-    {
-      "position": 8,
-      "teamId": "1792386",
-      "teamName": "MB Rouissat",
-      "shortName": "MB Rouissat",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1792386.png",
-      "played": 4,
-      "won": 2,
-      "drawn": 0,
-      "lost": 2,
-      "goalsFor": 3,
-      "goalsAgainst": 3,
-      "goalDifference": 0,
-      "points": 6
-    },
-    {
       "position": 9,
+      "teamId": "45655",
+      "teamName": "ES Sétif",
+      "shortName": "ES Sétif",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/45655.png",
+      "played": 5,
+      "won": 1,
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 4,
+      "goalDifference": 2,
+      "points": 5
+    },
+    {
+      "position": 10,
       "teamId": "1387869",
       "teamName": "USM Khenchela",
       "shortName": "USM Khenchela",
@@ -147,21 +162,6 @@
       "goalsAgainst": 2,
       "goalDifference": 1,
       "points": 5
-    },
-    {
-      "position": 10,
-      "teamId": "45655",
-      "teamName": "ES Sétif",
-      "shortName": "ES Sétif",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/45655.png",
-      "played": 4,
-      "won": 1,
-      "drawn": 1,
-      "lost": 2,
-      "goalsFor": 5,
-      "goalsAgainst": 3,
-      "goalDifference": 2,
-      "points": 4
     },
     {
       "position": 11,
@@ -199,13 +199,13 @@
       "teamName": "CR Temouchent",
       "shortName": "CR Temouchent",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/319205.png",
-      "played": 4,
+      "played": 5,
       "won": 1,
       "drawn": 1,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 2,
-      "goalsAgainst": 4,
-      "goalDifference": -2,
+      "goalsAgainst": 6,
+      "goalDifference": -4,
       "points": 4
     },
     {
