@@ -2,7 +2,7 @@
   "competitionId": "536",
   "competitionName": "Saudi Pro League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-15T10:56:17.461Z",
+  "updatedAt": "2026-10-15T16:24:28.065Z",
   "table": [
     {
       "position": 1,
@@ -133,13 +133,13 @@
       "teamName": "Al Kholood",
       "shortName": "Al Kholood",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1523706.png",
-      "played": 8,
+      "played": 9,
       "won": 3,
       "drawn": 3,
-      "lost": 2,
-      "goalsFor": 12,
-      "goalsAgainst": 15,
-      "goalDifference": -3,
+      "lost": 3,
+      "goalsFor": 14,
+      "goalsAgainst": 18,
+      "goalDifference": -4,
       "points": 12
     },
     {
@@ -163,17 +163,34 @@
       "teamName": "Al Hazem",
       "shortName": "Al Hazem",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101911.png",
-      "played": 8,
+      "played": 9,
       "won": 2,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 10,
+      "goalsFor": 9,
+      "goalsAgainst": 11,
       "goalDifference": -2,
-      "points": 9
+      "points": 10,
+      "qualificationZone": "Active"
     },
     {
       "position": 11,
+      "teamId": "550433",
+      "teamName": "Al Khaleej",
+      "shortName": "Al Khaleej",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/550433.png",
+      "played": 9,
+      "won": 1,
+      "drawn": 6,
+      "lost": 2,
+      "goalsFor": 5,
+      "goalsAgainst": 11,
+      "goalDifference": -6,
+      "points": 9,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 12,
       "teamId": "582739",
       "teamName": "Al Riyadh",
       "shortName": "Al Riyadh",
@@ -188,7 +205,7 @@
       "points": 9
     },
     {
-      "position": 12,
+      "position": 13,
       "teamId": "101916",
       "teamName": "Al Shabab",
       "shortName": "Al Shabab",
@@ -203,34 +220,20 @@
       "points": 7
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "582749",
       "teamName": "Al-Fayha",
       "shortName": "Al-Fayha",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/582749.png",
-      "played": 8,
+      "played": 9,
       "won": 1,
       "drawn": 4,
-      "lost": 3,
+      "lost": 4,
       "goalsFor": 8,
-      "goalsAgainst": 12,
-      "goalDifference": -4,
-      "points": 7
-    },
-    {
-      "position": 14,
-      "teamId": "550433",
-      "teamName": "Al Khaleej",
-      "shortName": "Al Khaleej",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/550433.png",
-      "played": 8,
-      "won": 0,
-      "drawn": 6,
-      "lost": 2,
-      "goalsFor": 4,
-      "goalsAgainst": 11,
-      "goalDifference": -7,
-      "points": 6
+      "goalsAgainst": 13,
+      "goalDifference": -5,
+      "points": 7,
+      "qualificationZone": "Active"
     },
     {
       "position": 15,
@@ -238,14 +241,14 @@
       "teamName": "Al-Faisaly",
       "shortName": "Al-Faisaly",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/205687.png",
-      "played": 7,
-      "won": 0,
+      "played": 8,
+      "won": 1,
       "drawn": 3,
       "lost": 4,
-      "goalsFor": 5,
-      "goalsAgainst": 13,
-      "goalDifference": -8,
-      "points": 3
+      "goalsFor": 8,
+      "goalsAgainst": 15,
+      "goalDifference": -7,
+      "points": 6
     },
     {
       "position": 16,
@@ -253,17 +256,18 @@
       "teamName": "Al Fateh FC",
       "shortName": "Al Fateh FC",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/177356.png",
-      "played": 8,
+      "played": 9,
       "won": 0,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 5,
-      "goalsFor": 4,
-      "goalsAgainst": 15,
+      "goalsFor": 5,
+      "goalsAgainst": 16,
       "goalDifference": -11,
-      "points": 3,
+      "points": 4,
       "form": [
         "#FF4646"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 17,
