@@ -2,7 +2,7 @@
   "competitionId": "55",
   "competitionName": "Serie A",
   "season": "2026/2027",
-  "updatedAt": "2026-10-16T16:09:46.705Z",
+  "updatedAt": "2026-10-16T20:34:09.394Z",
   "table": [
     {
       "position": 1,
@@ -60,6 +60,25 @@
     },
     {
       "position": 4,
+      "teamId": "9891",
+      "teamName": "Frosinone",
+      "shortName": "Frosinone",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9891.png",
+      "played": 7,
+      "won": 4,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 13,
+      "goalsAgainst": 9,
+      "goalDifference": 4,
+      "points": 13,
+      "form": [
+        "#2AD572"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 5,
       "teamId": "8529",
       "teamName": "Cagliari",
       "shortName": "Cagliari",
@@ -73,11 +92,11 @@
       "goalDifference": 3,
       "points": 13,
       "form": [
-        "#2AD572"
+        "#0046A7"
       ]
     },
     {
-      "position": 5,
+      "position": 6,
       "teamId": "8564",
       "teamName": "Milan",
       "shortName": "Milan",
@@ -91,11 +110,11 @@
       "goalDifference": 6,
       "points": 12,
       "form": [
-        "#0046A7"
+        "#02CCF0"
       ]
     },
     {
-      "position": 6,
+      "position": 7,
       "teamId": "9885",
       "teamName": "Juventus",
       "shortName": "Juventus",
@@ -107,13 +126,10 @@
       "goalsFor": 9,
       "goalsAgainst": 5,
       "goalDifference": 4,
-      "points": 11,
-      "form": [
-        "#02CCF0"
-      ]
+      "points": 11
     },
     {
-      "position": 7,
+      "position": 8,
       "teamId": "10171",
       "teamName": "Como",
       "shortName": "Como",
@@ -128,7 +144,7 @@
       "points": 11
     },
     {
-      "position": 8,
+      "position": 9,
       "teamId": "9875",
       "teamName": "Napoli",
       "shortName": "Napoli",
@@ -140,21 +156,6 @@
       "goalsFor": 10,
       "goalsAgainst": 6,
       "goalDifference": 4,
-      "points": 10
-    },
-    {
-      "position": 9,
-      "teamId": "9891",
-      "teamName": "Frosinone",
-      "shortName": "Frosinone",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9891.png",
-      "played": 6,
-      "won": 3,
-      "drawn": 1,
-      "lost": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 7,
-      "goalDifference": 2,
       "points": 10
     },
     {
@@ -178,14 +179,15 @@
       "teamName": "Sassuolo",
       "shortName": "Sassuolo",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7943.png",
-      "played": 6,
+      "played": 7,
       "won": 2,
       "drawn": 2,
-      "lost": 2,
-      "goalsFor": 10,
-      "goalsAgainst": 10,
-      "goalDifference": 0,
-      "points": 8
+      "lost": 3,
+      "goalsFor": 12,
+      "goalsAgainst": 14,
+      "goalDifference": -2,
+      "points": 8,
+      "qualificationZone": "Active"
     },
     {
       "position": 12,

@@ -2,7 +2,7 @@
   "competitionId": "57",
   "competitionName": "Eredivisie",
   "season": "2026/2027",
-  "updatedAt": "2026-10-16T16:10:09.701Z",
+  "updatedAt": "2026-10-16T20:34:36.422Z",
   "table": [
     {
       "position": 1,
@@ -132,6 +132,21 @@
     },
     {
       "position": 8,
+      "teamId": "10228",
+      "teamName": "SC Heerenveen",
+      "shortName": "SC Heerenveen",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10228.png",
+      "played": 9,
+      "won": 3,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 15,
+      "goalsAgainst": 11,
+      "goalDifference": 4,
+      "points": 12
+    },
+    {
+      "position": 9,
       "teamId": "6433",
       "teamName": "Go Ahead Eagles",
       "shortName": "Go Ahead Eagles",
@@ -146,34 +161,19 @@
       "points": 11
     },
     {
-      "position": 9,
+      "position": 10,
       "teamId": "10218",
       "teamName": "Excelsior",
       "shortName": "Excelsior",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10218.png",
-      "played": 8,
+      "played": 9,
       "won": 3,
       "drawn": 2,
-      "lost": 3,
+      "lost": 4,
       "goalsFor": 16,
-      "goalsAgainst": 14,
-      "goalDifference": 2,
+      "goalsAgainst": 18,
+      "goalDifference": -2,
       "points": 11
-    },
-    {
-      "position": 10,
-      "teamId": "10228",
-      "teamName": "SC Heerenveen",
-      "shortName": "SC Heerenveen",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10228.png",
-      "played": 8,
-      "won": 2,
-      "drawn": 3,
-      "lost": 3,
-      "goalsFor": 11,
-      "goalsAgainst": 11,
-      "goalDifference": 0,
-      "points": 9
     },
     {
       "position": 11,
