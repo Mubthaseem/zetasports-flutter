@@ -2,7 +2,7 @@
   "competitionId": "516",
   "competitionName": "Algerian Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-10-16T10:49:11.970Z",
+  "updatedAt": "2026-10-16T16:10:25.529Z",
   "table": [
     {
       "position": 1,
@@ -120,21 +120,38 @@
     },
     {
       "position": 8,
+      "teamId": "1660716",
+      "teamName": "Olympique Akbou",
+      "shortName": "Olympique Akbou",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1660716.png",
+      "played": 5,
+      "won": 2,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 6,
+      "goalDifference": 0,
+      "points": 7,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 9,
       "teamId": "1531341",
       "teamName": "ES Ben Aknoun",
       "shortName": "ES Ben Aknoun",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1531341.png",
-      "played": 4,
+      "played": 5,
       "won": 1,
       "drawn": 3,
-      "lost": 0,
-      "goalsFor": 6,
-      "goalsAgainst": 5,
-      "goalDifference": 1,
-      "points": 6
+      "lost": 1,
+      "goalsFor": 7,
+      "goalsAgainst": 7,
+      "goalDifference": 0,
+      "points": 6,
+      "qualificationZone": "Active"
     },
     {
-      "position": 9,
+      "position": 10,
       "teamId": "45655",
       "teamName": "ES Sétif",
       "shortName": "ES Sétif",
@@ -149,7 +166,7 @@
       "points": 5
     },
     {
-      "position": 10,
+      "position": 11,
       "teamId": "1387869",
       "teamName": "USM Khenchela",
       "shortName": "USM Khenchela",
@@ -164,7 +181,7 @@
       "points": 5
     },
     {
-      "position": 11,
+      "position": 12,
       "teamId": "2121859",
       "teamName": "JS El Biar",
       "shortName": "JS El Biar",
@@ -175,21 +192,6 @@
       "lost": 3,
       "goalsFor": 8,
       "goalsAgainst": 9,
-      "goalDifference": -1,
-      "points": 4
-    },
-    {
-      "position": 12,
-      "teamId": "1660716",
-      "teamName": "Olympique Akbou",
-      "shortName": "Olympique Akbou",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1660716.png",
-      "played": 4,
-      "won": 1,
-      "drawn": 1,
-      "lost": 2,
-      "goalsFor": 4,
-      "goalsAgainst": 5,
       "goalDifference": -1,
       "points": 4
     },
