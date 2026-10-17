@@ -2,7 +2,7 @@
   "competitionId": "55",
   "competitionName": "Serie A",
   "season": "2026/2027",
-  "updatedAt": "2026-10-17T15:02:54.073Z",
+  "updatedAt": "2026-10-17T20:12:00.358Z",
   "table": [
     {
       "position": 1,
@@ -10,20 +10,39 @@
       "teamName": "Inter",
       "shortName": "Inter",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8636.png",
-      "played": 6,
-      "won": 5,
+      "played": 7,
+      "won": 6,
       "drawn": 1,
       "lost": 0,
-      "goalsFor": 18,
-      "goalsAgainst": 8,
-      "goalDifference": 10,
-      "points": 16,
+      "goalsFor": 21,
+      "goalsAgainst": 9,
+      "goalDifference": 12,
+      "points": 19,
       "form": [
         "#2AD572"
       ]
     },
     {
       "position": 2,
+      "teamId": "8686",
+      "teamName": "Roma",
+      "shortName": "Roma",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8686.png",
+      "played": 7,
+      "won": 5,
+      "drawn": 2,
+      "lost": 0,
+      "goalsFor": 16,
+      "goalsAgainst": 3,
+      "goalDifference": 13,
+      "points": 17,
+      "form": [
+        "#2AD572"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 3,
       "teamId": "8543",
       "teamName": "Lazio",
       "shortName": "Lazio",
@@ -36,24 +55,6 @@
       "goalsAgainst": 4,
       "goalDifference": 7,
       "points": 16,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 3,
-      "teamId": "8686",
-      "teamName": "Roma",
-      "shortName": "Roma",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8686.png",
-      "played": 6,
-      "won": 4,
-      "drawn": 2,
-      "lost": 0,
-      "goalsFor": 14,
-      "goalsAgainst": 3,
-      "goalDifference": 11,
-      "points": 14,
       "form": [
         "#2AD572"
       ]
@@ -223,13 +224,13 @@
       "teamName": "Bologna",
       "shortName": "Bologna",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9857.png",
-      "played": 6,
+      "played": 7,
       "won": 1,
       "drawn": 2,
-      "lost": 3,
-      "goalsFor": 5,
-      "goalsAgainst": 7,
-      "goalDifference": -2,
+      "lost": 4,
+      "goalsFor": 6,
+      "goalsAgainst": 10,
+      "goalDifference": -4,
       "points": 5
     },
     {
@@ -264,21 +265,6 @@
     },
     {
       "position": 17,
-      "teamId": "10233",
-      "teamName": "Genoa",
-      "shortName": "Genoa",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png",
-      "played": 6,
-      "won": 1,
-      "drawn": 1,
-      "lost": 4,
-      "goalsFor": 5,
-      "goalsAgainst": 11,
-      "goalDifference": -6,
-      "points": 4
-    },
-    {
-      "position": 18,
       "teamId": "10167",
       "teamName": "Parma",
       "shortName": "Parma",
@@ -290,13 +276,10 @@
       "goalsFor": 4,
       "goalsAgainst": 10,
       "goalDifference": -6,
-      "points": 4,
-      "form": [
-        "#FF4646"
-      ]
+      "points": 4
     },
     {
-      "position": 19,
+      "position": 18,
       "teamId": "8535",
       "teamName": "Fiorentina",
       "shortName": "Fiorentina",
@@ -312,6 +295,25 @@
       "form": [
         "#FF4646"
       ]
+    },
+    {
+      "position": 19,
+      "teamId": "10233",
+      "teamName": "Genoa",
+      "shortName": "Genoa",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10233.png",
+      "played": 7,
+      "won": 1,
+      "drawn": 1,
+      "lost": 5,
+      "goalsFor": 5,
+      "goalsAgainst": 13,
+      "goalDifference": -8,
+      "points": 4,
+      "form": [
+        "#FF4646"
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 20,

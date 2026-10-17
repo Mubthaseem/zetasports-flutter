@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-17T15:02:49.479Z",
+  "updatedAt": "2026-10-17T20:11:56.734Z",
   "scorers": [
     {
       "rank": 1,
@@ -11,27 +11,27 @@
       "teamId": "8456",
       "teamName": "Manchester City",
       "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
-      "goals": 7,
+      "goals": 8,
       "assists": 0
     },
     {
       "rank": 2,
+      "playerId": "690107",
+      "playerName": "Alexander Isak",
+      "teamId": "8650",
+      "teamName": "Liverpool",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+      "goals": 5,
+      "assists": 0
+    },
+    {
+      "rank": 3,
       "playerId": "1021382",
       "playerName": "João Pedro",
       "teamId": "8455",
       "teamName": "Chelsea",
       "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8455.png",
       "goals": 5,
-      "assists": 0
-    },
-    {
-      "rank": 3,
-      "playerId": "690107",
-      "playerName": "Alexander Isak",
-      "teamId": "8650",
-      "teamName": "Liverpool",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
-      "goals": 4,
       "assists": 0
     }
   ]
