@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-10-17T20:12:45.296Z",
+    "generatedAt": "2026-10-17T22:10:19.268Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 1236
+      "fullArticlesCount": 1246
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -15,12 +15,102 @@
   },
   "news": [
     {
+      "id": "jwyq4zlrxv61dgyugo49v88g",
+      "title": "Spalletti unlikely to start Woltemade and Kolo Muani together for Juve",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/jwyq4zlrxv61dgyugo49v88g-spalletti-unlikely-start-woltemade-kolo-muani-together-juve",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d0/71/nick-woltemade-and-randal-kolo-muani_1x7wwe6aofwto122nf80a4jbqt.jpg?t=1312543473&w=1260&h=708",
+      "publishedAt": "2026-10-17T22:04:51.000Z"
+    },
+    {
+      "id": "ftbpro_01m55vddx87n",
+      "title": "Cavan Sullivan Can’t Extend Record As Union Barely Survive Clash With Charlotte",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m55vddx87n/cavan-sullivan-cant-extend-record-union-barely-survive-clash-charlotte",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1319,h_741,x_581,y_21/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55vhpsc22h309nzx7.jpg",
+      "publishedAt": "2026-10-17T21:51:27.000Z"
+    },
+    {
+      "id": "1hlutev1pz0em18epuso8urhza",
+      "title": "Sarri thrilled with Atalanta progress ahead of Milan clash",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1hlutev1pz0em18epuso8urhza-sarri-thrilled-atalanta-progress-ahead-milan-clash",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/80/60/sarri_ubus17povl8e17swoli8v3hzi.jpg?t=1304071217&w=1260&h=708",
+      "publishedAt": "2026-10-17T21:36:10.000Z"
+    },
+    {
+      "id": "152j5eqdlkk2f16ewh7gutl3pl",
+      "title": "Putellas' Ballon d'Or chances will improve after WSL move, says London City boss",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/152j5eqdlkk2f16ewh7gutl3pl-putellas-ballon-dor-chances-will-improve-after-wsl-move-says-london-city-boss",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/cc/5/alexia-putellas_1i7yxb5er4l001f85vsnmmh3hh.jpg?t=1281251665&w=640&h=360",
+      "publishedAt": "2026-10-17T21:22:36.000Z"
+    },
+    {
+      "id": "1fj7l2uktcgls146f1x6r2xsfx",
+      "title": "Manzambi will go all the way to the top, says Jackson after more Villa heroics",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1fj7l2uktcgls146f1x6r2xsfx-manzambi-will-go-all-way-top-says-jackson-after-more-villa-heroics",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b3/55/johan-manzambi_83q7mvwcfrwy14qyjuiauzili.jpg?t=1344615729&w=640&h=360",
+      "publishedAt": "2026-10-17T21:06:05.000Z"
+    },
+    {
+      "id": "ftbpro_01m55kvjwnfc",
+      "title": "Lionel Messi Receives Most Bizarre Tribute Yet After Argentina Retirement",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m55kvjwnfc/lionel-messi-receives-most-bizarre-tribute-yet-after-argentina-retirement",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1227,h_690,x_662,y_427/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55mmkw3181q4n6ex2.jpg",
+      "publishedAt": "2026-10-17T21:00:00.000Z"
+    },
+    {
+      "id": "r6h4gnskrr3l1orxnnc4ifskk",
+      "title": "Roma 2-0 Genoa: Incredible Castro goal helps Gasperini's men overcome Malen absence",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/r6h4gnskrr3l1orxnnc4ifskk-roma-2-0-genoa-incredible-castro-goal-helps-gasperinis-men-overcome-malen-absence",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ae/c7/santiago-castro_f5p04bqf9rfb1u6hjxy0voeog.jpg?t=1342631729&w=1260&h=708",
+      "publishedAt": "2026-10-17T20:47:08.000Z"
+    },
+    {
+      "id": "19z6vpoopafug1b3qn9bjt61ce",
+      "title": "Allegri challenges Napoli to 'change the trend' after Venezia defeat",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/19z6vpoopafug1b3qn9bjt61ce-allegri-challenges-napoli-change-trend-after-venezia-defeat",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/58/5/massimiliano-allegri_zmg1vogjxhvp1lloa33p5ics6.jpg?t=1332919473&w=640&h=360",
+      "publishedAt": "2026-10-17T20:17:37.000Z"
+    },
+    {
+      "id": "ftbpro_01m557y2kny3",
+      "title": "Gio Reyna Makes Impressive Bid to Become USMNT Starter",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m557y2kny3/gio-reyna-makes-impressive-bid-become-usmnt-starter",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55dhzzp4ngjtr20c8.jpg",
+      "publishedAt": "2026-10-17T20:00:00.000Z"
+    },
+    {
+      "id": "1q7bx1qitosbz1f4dnlhbk8ew4",
+      "title": "West Ham still 'building momentum' after crucial win over Swansea, says Nuno",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1q7bx1qitosbz1f4dnlhbk8ew4-west-ham-still-building-momentum-after-crucial-win-over-swansea-says-nuno",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a7/84/divine-mukasa_1l4t4i3jlc5mq1r8evbqq4vtu1.jpg?t=1323241921&w=1260&h=708",
+      "publishedAt": "2026-10-17T19:49:35.000Z"
+    },
+    {
       "id": "nun463u4d2qu13b0s8xxxu62y",
       "title": "'We were brilliant for 90 minutes’ – Arbeloa full of praise after Fulham earn first league win",
       "description": "FotMob",
       "source": "FotMob",
       "sourceUrl": "/news/nun463u4d2qu13b0s8xxxu62y-we-were-brilliant-90-minutes-arbeloa-full-praise-after-fulham-earn-first-league-win",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ed/ab/fulham-boss-alvaro-arbeloa_ndv6q9ujb9y31kvo3ree9szcu.jpg?t=1316743217&w=1260&h=708",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ed/ab/fulham-boss-alvaro-arbeloa_ndv6q9ujb9y31kvo3ree9szcu.jpg?t=1316743217&w=640&h=360",
       "publishedAt": "2026-10-17T19:29:51.000Z"
     },
     {
@@ -103,96 +193,6 @@
       "sourceUrl": "/embed/news/01m5558q4qbn/all-offers-he-hadjose-mourinho-makes-surprise-vinicius-jr-transfer-admission",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2552,h_1435,x_200,y_76/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55746g1ydhkepq0t5.jpg",
       "publishedAt": "2026-10-17T18:00:00.000Z"
-    },
-    {
-      "id": "pj4nruo91hfx1jig9z6eq7kd4",
-      "title": "Strasbourg 1-3 Paris Saint-Germain: Dembele stars in comeback triumph",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/pj4nruo91hfx1jig9z6eq7kd4-strasbourg-1-3-paris-saint-germain-dembele-stars-comeback-triumph",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d5/7a/ousmane-dembele_5phxyiq1fznf1wmyhcgu3bpya.png?t=1317937153&w=1260&h=708",
-      "publishedAt": "2026-10-17T17:39:16.000Z"
-    },
-    {
-      "id": "ftbpro_01m554dx4y64",
-      "title": "Iraola Provides Worrying Three-Word Update on Szoboszlai Injury",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m554dx4y64/iraola-provides-worrying-three-word-update-szoboszlai-injury",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m554mk6wdm41nxjqby.jpg",
-      "publishedAt": "2026-10-17T17:15:09.000Z"
-    },
-    {
-      "id": "2dyldap4a9cf1e36lzhpuggso",
-      "title": "Union Berlin 0-0 Borussia Dortmund: Kovac's side frustrated in second straight draw",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/2dyldap4a9cf1e36lzhpuggso-union-berlin-0-0-borussia-dortmund-kovacs-side-frustrated-second-straight-draw",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a0/c2/svensson_yow6j21mprcy1ub6ic48nniqe.jpg?t=1314393153&w=1260&h=708",
-      "publishedAt": "2026-10-17T16:54:37.000Z"
-    },
-    {
-      "id": "ftbpro_01m558xs6dph",
-      "title": "Wrexham’s Emphatic Win Delivers Perfect Response to Latest Phil Parkinson Claims",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m558xs6dph/wrexhams-emphatic-win-delivers-perfect-response-latest-phil-parkinson-claims",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1638,h_921,x_0,y_430/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5599a515hhcg1rgkt.jpg",
-      "publishedAt": "2026-10-17T16:43:21.000Z"
-    },
-    {
-      "id": "1pjypktw8wuvq13fli1eah6ssy",
-      "title": "​Brentford 1-2 Liverpool: Yarmoliuk and Janelt sent off as Isak scores winner",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1pjypktw8wuvq13fli1eah6ssy-brentford-1-2-liverpool-yarmoliuk-janelt-sent-off-isak-scores-winner",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/89/b7/alexander-isak_1qc3ytzl6tkbk1xkc5p5r9la9x.jpg?t=1312479473&w=1260&h=708",
-      "publishedAt": "2026-10-17T16:40:20.000Z"
-    },
-    {
-      "id": "1d34ciyz49gik1niyzma8x19as",
-      "title": "Fulham 1-0 Hull City: Arbeloa records first Premier League win",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1d34ciyz49gik1niyzma8x19as-fulham-1-0-hull-city-arbeloa-records-first-premier-league-win",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/4a/f1/alex-iwobi-celebrates-scoring-for-fulham_1vp4jq1zw99ry1imkn5h8drqvm.jpg?t=1312613729&w=640&h=360",
-      "publishedAt": "2026-10-17T16:39:11.000Z"
-    },
-    {
-      "id": "493AE87DC6CADFA7E06AFDD95195639F",
-      "title": "Brentford 1-2 Liverpool: Muñoz and Isak Earn Reds Three Points Against Nine-Man Bees",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/brentford-vs-liverpool-stats-premier-league-10-2026",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/10/brentford-v-liverpool-report.png",
-      "publishedAt": "2026-10-17T16:33:39.000Z"
-    },
-    {
-      "id": "14l41t79dlzs51qd7b9ocax7m9",
-      "title": "Manchester City 3-2 Ipswich Town: Maresca makes history with seventh straight win",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/14l41t79dlzs51qd7b9ocax7m9-manchester-city-3-2-ipswich-town-maresca-makes-history-seventh-straight-win",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/7c/72/haaland_1hxh53q71ow31cuz9qn0nxaxm.jpg?t=1311701985&w=1260&h=708",
-      "publishedAt": "2026-10-17T16:32:33.000Z"
-    },
-    {
-      "id": "ftbpro_01m55020sp1b",
-      "title": "Liverpool Player Ratings vs. Brentford: Moment of Madness Breaks 238-Day Streak",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m55020sp1b/liverpool-player-ratings-vs-brentford-moment-madness-breaks-238-day-streak",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2008,h_1129,x_223,y_42/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5591tk83sa8rrsszf.jpg",
-      "publishedAt": "2026-10-17T16:23:31.000Z"
-    },
-    {
-      "id": "w4om5zym0avj1j3r66l0j1x0l",
-      "title": "Neto dedicates Chelsea win to injured Martinez",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/w4om5zym0avj1j3r66l0j1x0l-neto-dedicates-chelsea-win-injured-martinez",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/f7/27/pedro-neto_124vj94y092z712jssxs6gqw1l.jpg?t=1302705153&w=1260&h=708",
-      "publishedAt": "2026-10-17T15:59:53.000Z"
     }
   ],
   "articles": {
@@ -1787,6 +1787,31 @@
       ],
       "html": "<p>Jorge Jesus got his Portugal tenure up and running with a win as the defending Nations League champions began their 2026-27 campaign with a 1-0 victory against Wales.&nbsp;</p>\n\n<p>Joao Felix struck the decisive blow in the first half at&nbsp;Estadio Jose&nbsp;Alvalade, though Wales had more than enough chances to at least claim a point away from home.</p>\n\n<p>Portugal started brightly as&nbsp;Cristiano Ronaldo&#39;s first sight of goal saw him drag a shot wide, before Vitinha and Joao Felix had their efforts blocked by Wales&#39; retreating defence.&nbsp;</p>\n\n<p>The hosts had to wait until the 22nd minute for their first shot on target, and it resulted in a goal.&nbsp;Nuno Mendes skipped beyond&nbsp;Ethan Ampadu before laying the ball off to Joao Felix, who took a touch before seeing his attempt nestle into the bottom-left corner from the edge of the penalty area.&nbsp;</p>\n\n<p>Ronaldo, in his quest to reach 1,000 career goals, then volleyed just wide before his tame effort after being found by Joao Felix was comfortably held by&nbsp;Danny Ward.&nbsp;</p>\n\n<p>Portugal should have doubled their lead four minutes into the second half, but Ronaldo somehow turned&nbsp;Ruben Neves&#39; cross over the bar, and he thought he had got his goal when he raced onto&nbsp;Bruno Fernandes&#39; defence-splitting pass, only for it to be ruled out following a VAR check for offside.&nbsp;</p>\n\n<p>But Wales spurned a glorious chance to draw level when&nbsp;Brennan Johnson ghosted in behind the Portugal backline and lofted an effort onto the crossbar, with&nbsp;Lewis Koumas&#39; attempt on the rebound blocked off&nbsp;the line by&nbsp;Ruben Dias.&nbsp;</p>\n\n<p>Daniel James and Mendes then fired wide at either end before substitute Goncalo Ramos stung the palms of Ward, with Portugal able to weather the Wales storm in the minutes that remained, getting&nbsp;themselves up and running in the Nations League.</p>\n\n\n<p><strong>Portugal fail to build on Joao Felix strike&nbsp;</strong></p>\n\n<p>With Wales missing several key players&nbsp;including Harry Wilson and Joe Rodon, many expected a comfortable outing for Portugal, and it looked as though it would be following Joao Felix&#39;s goal, which was his fifth in his last 10 starts for the Selecao.&nbsp;</p>\n\n<p>He was teed up by the marauding Mendes, who registered his seventh assist for Portugal since the start of 2024. Overall, he&#39;s third for goal involvements in that time for his nation, behind Ronaldo (20) and Fernandes (17).&nbsp;</p>\n\n<p>Portugal&#39;s 13 shots in the first half were also&nbsp;their most in the opening 45 minutes of a game since November 2025 against Armenia (17), but after the break, Wales looked the more likely to alter the scoreline.&nbsp;</p>\n\n<p>Wales do, however,&nbsp;remain winless in their last five&nbsp;matches (D3 L2), their worst run under manager Craig Bellamy, but there will plenty of positives he can take from their performance ahead of facing Denmark in three days&#39; time.&nbsp;</p>\n\n<p>Jesus&#39; side finished with an expected goals (xG) total of 2.36 from their 23 shots, only five of which were on target, compared to Wales&#39; tally of 0.84 from their five attempts, with Portugal&#39;s next test seeing them take on Erling Haaland and Norway.&nbsp;</p>\n"
     },
+    "152j5eqdlkk2f16ewh7gutl3pl": {
+      "id": "152j5eqdlkk2f16ewh7gutl3pl",
+      "title": "Putellas' Ballon d'Or chances will improve after WSL move, says London City boss",
+      "subtitle": "Alexia Putellas' move to London City Lionesses was the marquee transfer of the summer, following a trophy-laden career with Barcelona.",
+      "source": "FotMob",
+      "sourceUrl": "/news/152j5eqdlkk2f16ewh7gutl3pl-putellas-ballon-dor-chances-will-improve-after-wsl-move-says-london-city-boss",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/cc/5/alexia-putellas_1i7yxb5er4l001f85vsnmmh3hh.jpg?t=1281251665&w=1200&h=630",
+      "publishedAt": "2026-10-17T21:22:36.000Z",
+      "paragraphs": [
+        "London City Lionesses boss Eder Maestre believes Alexia Putellas&#39; move to the Women&#39;s Super League will only help her chances of winning more Ballon d&#39;Or awards.",
+        "After spending her entire career with Barcelona, Putellas joined London City as a free agent in the summer.",
+        "Putellas has four goal involvements in WSL games this term (three goals, one assist); across the last five seasons, she has only registered more goal contributions in her opening five league appearances once: six for Barca in 2024-25 (four goals, two assists).",
+        "She won the Ballon d&#39;Or twice during her time with Barca, claiming the award in both 2021 and 2022.",
+        "And Maestre is confident Putellas can do so again in the future.",
+        "&quot;I think it represents how powerful the competition is,&quot; Maestre said.",
+        "&quot;It’s not just Alexia being in the WSL. It’s Alexia, through her performances in the WSL, having more opportunities to win the Ballon d’Or.&nbsp;",
+        "&quot;It makes the competition better, but also it makes Alexia better due to the challenges she will face in this tough competition.",
+        "&quot;Alexia is a very talented and experienced player. We understand her abilities.&nbsp;",
+        "&quot;I think this competition is the most difficult and tough from a physical perspective, so I think we need to create something to empower the strengths of Alexia&nbsp;and create an environment where she can show her best.&quot;",
+        "After the international break, London City are back in WSL action when they host Everton on Sunday.",
+        "London City have won each of their last three WSL matches, their longest winning run in the competition.",
+        "They could win four consecutive league games for the first time since doing so between March and April 2025 in the WSL2."
+      ],
+      "html": "<p>London City Lionesses boss Eder Maestre believes Alexia Putellas&#39; move to the Women&#39;s Super League will only help her chances of winning more Ballon d&#39;Or awards.</p>\n\n<p>After spending her entire career with Barcelona, Putellas joined London City as a free agent in the summer.</p>\n\n<p>Putellas has four goal involvements in WSL games this term (three goals, one assist); across the last five seasons, she has only registered more goal contributions in her opening five league appearances once: six for Barca in 2024-25 (four goals, two assists).</p>\n\n<p>She won the Ballon d&#39;Or twice during her time with Barca, claiming the award in both 2021 and 2022.</p>\n\n<p>And Maestre is confident Putellas can do so again in the future.</p>\n\n<p>&quot;I think it represents how powerful the competition is,&quot; Maestre said.</p>\n\n<p>&quot;It’s not just Alexia being in the WSL. It’s Alexia, through her performances in the WSL, having more opportunities to win the Ballon d’Or.&nbsp;</p>\n\n<p>&quot;It makes the competition better, but also it makes Alexia better due to the challenges she will face in this tough competition.</p>\n\n<p>&quot;Alexia is a very talented and experienced player. We understand her abilities.&nbsp;</p>\n\n<p>&quot;I think this competition is the most difficult and tough from a physical perspective, so I think we need to create something to empower the strengths of Alexia&nbsp;and create an environment where she can show her best.&quot;</p>\n\n\n<p>After the international break, London City are back in WSL action when they host Everton on Sunday.</p>\n\n<p>London City have won each of their last three WSL matches, their longest winning run in the competition.</p>\n\n<p>They could win four consecutive league games for the first time since doing so between March and April 2025 in the WSL2.</p>\n"
+    },
     "159b8hezyf6ze11g85cyffy3vo": {
       "id": "159b8hezyf6ze11g85cyffy3vo",
       "title": "'I'm making the most of every moment' – Giroud admits retirement is close",
@@ -3024,6 +3049,30 @@
       ],
       "html": "<p>Real Madrid defender Raul Asencio is set to have surgery on a stress fracture in his right tibia.</p>\n\n<p>Asencio has been struggling with the injury since the start of the season and was not included in any of Madrid&#39;s first five matchday squads this term.</p>\n\n<p>Even following his return, he has not played a single minute for Madrid so far and seemingly aggravated the issue in training on Wednesday.</p>\n\n<p>As such, he will undergo surgery on Thursday, with Spanish media reports suggesting he is set for two to four months on the sidelines.</p>\n\n\n<p>Asencio made 34 appearances for Madrid in all competitions last term but lost his starting place in the latter stages of the season.</p>\n\n<p>Jose Mourinho has been using Ibrahima Konate and Dean Huijsen as his regular centre-back pairing since his arrival.</p>\n\n<p>However, the Portuguese head coach could soon be able to call on Eder Militao, who has returned to training following hamstring surgery that has kept him out since April.</p>\n\n<p>Madrid return to action at home to Villarreal on October 10 after the international break.</p>\n"
     },
+    "19z6vpoopafug1b3qn9bjt61ce": {
+      "id": "19z6vpoopafug1b3qn9bjt61ce",
+      "title": "Allegri challenges Napoli to 'change the trend' after Venezia defeat",
+      "subtitle": "Napoli's poor start to the season continued with a loss to Venezia, but Massimiliano Allegri has called for calm.",
+      "source": "FotMob",
+      "sourceUrl": "/news/19z6vpoopafug1b3qn9bjt61ce-allegri-challenges-napoli-change-trend-after-venezia-defeat",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/58/5/massimiliano-allegri_zmg1vogjxhvp1lloa33p5ics6.jpg?t=1332919473&w=1200&h=630",
+      "publishedAt": "2026-10-17T20:17:37.000Z",
+      "paragraphs": [
+        "Massimiliano Allegri has challenged his Napoli side to &quot;change that trend&quot; of things not going their way after losing to Venezia.",
+        "Napoli fell to a 1-0 defeat against Serie A&#39;s bottom side, with Akor Adams scoring the only goal before Kevin De Bruyne missed a penalty.",
+        "De Bruyne has missed just three of the 14 penalties he has taken in his career across Europe&#39;s top five leagues in all competitions – his previous unsuccessful kick&nbsp;was in November 2020 for Manchester City.",
+        "Napoli have now lost five of their last nine matches in all competitions (W3 D1 L5), as many defeats as they suffered in their previous 29 games (W16 D8 L5).",
+        "They have lost five of their first nine matches in all competitions (W3 D1) in a season for the first time since the 2001-02 campaign (W2 D2 L5 under Gigi De Canio, when the club was in Serie B).",
+        "However, despite failing to score against Venezia, Napoli did create 2.44 expected goals (xG) from their 29 shots, 10 of which hit the target.",
+        "Allegri believes his side are doing a lot of things right, but he knows they must find a way to change their recent results.",
+        "&quot;We created a great deal, but continue to be penalised for costly errors,&quot; Allegri told DAZN Italia.",
+        "&quot;Considering how many chances we created, it&#39;s a concern that we were unable to score a goal. We&#39;ve got to analyse this moment with clear heads, there is time to recover.",
+        "&quot;Venezia defended very well, and we didn&#39;t stretch them out to create space between the lines. It was a different match after the break, the spaces opened up, but we didn&#39;t make the most of them.",
+        "&quot;There&#39;s no point being worried now, we need to do what we&#39;re doing, but do it better.",
+        "&quot;At this moment, incidents just aren&#39;t going our way, and we conceded at the first opportunity. It is up to us to change that trend.&quot;"
+      ],
+      "html": "<p>Massimiliano Allegri has challenged his Napoli side to &quot;change that trend&quot; of things not going their way after losing to Venezia.</p>\n\n<p>Napoli fell to a 1-0 defeat against Serie A&#39;s bottom side, with Akor Adams scoring the only goal before Kevin De Bruyne missed a penalty.</p>\n\n<p>De Bruyne has missed just three of the 14 penalties he has taken in his career across Europe&#39;s top five leagues in all competitions – his previous unsuccessful kick&nbsp;was in November 2020 for Manchester City.</p>\n\n<p>Napoli have now lost five of their last nine matches in all competitions (W3 D1 L5), as many defeats as they suffered in their previous 29 games (W16 D8 L5).</p>\n\n<p>They have lost five of their first nine matches in all competitions (W3 D1) in a season for the first time since the 2001-02 campaign (W2 D2 L5 under Gigi De Canio, when the club was in Serie B).</p>\n\n<p>However, despite failing to score against Venezia, Napoli did create 2.44 expected goals (xG) from their 29 shots, 10 of which hit the target.</p>\n\n<p>Allegri believes his side are doing a lot of things right, but he knows they must find a way to change their recent results.</p>\n\n<p>&quot;We created a great deal, but continue to be penalised for costly errors,&quot; Allegri told DAZN Italia.</p>\n\n\n<p>&quot;Considering how many chances we created, it&#39;s a concern that we were unable to score a goal. We&#39;ve got to analyse this moment with clear heads, there is time to recover.</p>\n\n<p>&quot;Venezia defended very well, and we didn&#39;t stretch them out to create space between the lines. It was a different match after the break, the spaces opened up, but we didn&#39;t make the most of them.</p>\n\n<p>&quot;There&#39;s no point being worried now, we need to do what we&#39;re doing, but do it better.</p>\n\n<p>&quot;At this moment, incidents just aren&#39;t going our way, and we conceded at the first opportunity. It is up to us to change that trend.&quot;</p>\n"
+    },
     "19zxgpff4u1ss1aaoctm9kxr2e": {
       "id": "19zxgpff4u1ss1aaoctm9kxr2e",
       "title": "Former Inter defender Darmian joins Bologna on free transfer",
@@ -4145,6 +4194,37 @@
       ],
       "html": "<p>Martin Odegaard said Bernardo Silva&#39;s tackle on him during Norway&#39;s Nations League defeat to Portugal &quot;does not belong on a football pitch&quot;.&nbsp;</p>\n\n<p>The incident occurred during Sunday&#39;s 2-1 loss to Portugal, with&nbsp;Goncalo Ramos punishing an error from Norway goalkeeper Orjan Nyland to seal the win.&nbsp;</p>\n\n<p>Joao Felix had given Portugal a first-half lead before Erling Haaland&#39;s scoring streak continued as he tucked home from close range six minutes after the restart.&nbsp;</p>\n\n<p>In Norway&#39;s attempts to find an equaliser, Odegaard picked up possession&nbsp;in his own half before Silva came in late and swiped at the Arsenal midfielder after the ball was played.</p>\n\n<p>Odegaard was clearly angered by the nature of the challenge as, shortly after, he shouted at Silva when he was on the ball before the pair came together later on.&nbsp;</p>\n\n<p>Silva and Odegaard have faced off several times during battles between Manchester City and Arsenal, though the Norway captain said the nature of the tackle came from a player who had &quot;completely lost his head&quot;.&nbsp;</p>\n\n<p>&quot;It does not&nbsp;belong on a football pitch,&quot; Odegaard told TV2 about the challenge from Silva.</p>\n\n<p>&quot;It&#39;s a shame that people behave like that. He completely lost his head. He just kicks me down long after I&#39;ve played the ball. I don&#39;t understand what he&#39;s doing.&quot;</p>\n\n\n<p>Odegaard appeared to be in pain at the end of the game as he refrained from taking a corner, with his side chasing an equaliser, and crouched down with his head in his hands.</p>\n\n<p>The Arsenal star revealed that Silva did not apologise for the tackle, and instead chose to downplay the incident.&nbsp;</p>\n\n<p>When he was leaving the&nbsp;Ullevaal Stadion, a reporter asked Silva about the challenge, to which he replied:&nbsp;&quot;It&#39;s football, my friend.&quot;</p>\n\n<p>Norway boss Stale Solbakken described the incident as&nbsp;&quot;completely unnecessary&quot;, while defender&nbsp;Leo Ostigard believed Silva should have been sent off.&nbsp;</p>\n\n<p>&quot;The challenge from Bernardo Silva came very late,&quot; Ostigard&nbsp;said. &quot;From the video replay, the tackle was extremely ugly. I think a red card would have been fully justified.</p>\n\n<p>&quot;It&#39;s a really nasty one. It&#39;s just absolutely awful to do. That&#39;s the kind of thing we don&#39;t want to see happen to our captain.</p>\n\n<p>&quot;When it comes that long after the ball has gone, it looks pretty deliberate.&quot;</p>\n\n<p>Norway have two more fixtures during this international break, with a clash against Wales this Thursday followed up by a trip to Porto to face Portugal three days later.&nbsp;</p>\n\n<p>Asked whether he would miss upcoming games, Odegaard said: &quot;I hope not. I got a knock on my ankle there, so it probably won&#39;t be good [short term].&quot;</p>\n"
     },
+    "1fj7l2uktcgls146f1x6r2xsfx": {
+      "id": "1fj7l2uktcgls146f1x6r2xsfx",
+      "title": "Manzambi will go all the way to the top, says Jackson after more Villa heroics",
+      "subtitle": "Johan Manzambi continued his excellent start to Premier League life on Saturday, and Nicolas Jackson feels there is still more to come.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1fj7l2uktcgls146f1x6r2xsfx-manzambi-will-go-all-way-top-says-jackson-after-more-villa-heroics",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/b3/55/johan-manzambi_83q7mvwcfrwy14qyjuiauzili.jpg?t=1344615729&w=1200&h=630",
+      "publishedAt": "2026-10-17T21:06:05.000Z",
+      "paragraphs": [
+        "Nicolas Jackson predicted his Aston Villa team-mate Johan Manzambi will go right to the top of the game after he continued his impressive form with the winning goal against Newcastle United.",
+        "Manzambi – who had looked set to join Newcastle in the summer before Villa hijacked the move to sign him from Freiburg – scored the only goal at St James&#39; Park on Saturday.",
+        "Having been left totally unmarked, he powered Joao Gomes&#39; right-wing cross past Lukas Hornicek in the 36th minute, and Villa held on for three deserved points.",
+        "Unai Emery&#39;s team had one fewer shot than Newcastle (15 to 16), but they won the expected goals (xG) battle by 1.5 to 1.06 and generated three Opta-defined big chances while not conceding any.",
+        "Manzambi now has five goal involvements (three goals, two assists) in all competitions for Villa, and since his debut against Tottenham on September 19, Manchester City star Erling Haaland is the only Premier League player to tally more (six).",
+        "The Switzerland international is also just the fourth player to either score or assist on each of their first three Premier League starts for Villa, after Dalian Atkinson in August 1992, Dion Dublin in November 1998 and Danny Ings in August 2021.",
+        "Asked about Manzambi&#39;s impact in his post-match interview with Sky Sports, Jackson said: &quot;He&#39;s an amazing player. He&#39;s still growing.&nbsp;",
+        "&quot;Hopefully he can be better and better every game, score goals and assist me sometimes as well! Hopefully we work together and achieve many things together.",
+        "&quot;He will go a long way and hopefully he gets no injuries. For sure, if he is okay and he is training hard, he will go a long way and get many more goals and assists.&quot;",
+        "Jackson was involved in a controversial incident midway through the first half, when Sven Botman&#39;s challenge on the Villa striker was checked for a possible red card but cleared by the VAR, despite the centre-back appearing to jump into the tackle recklessly.",
+        "Asked if he felt any effects from that challenge, Jackson said: &quot;I&#39;m good. I know the referee said yellow card, but it was so high and hopefully next time it will be a red card.&nbsp;",
+        "&quot;I nearly broke my leg, but anyway, it&#39;s part of football. The most important thing is that we won and I&#39;m okay.&quot;",
+        "Newcastle are now without a home clean sheet in 16 consecutive games in all competitions, which is the longest run in their history.",
+        "They have only failed to score in two of their 23 home Premier League games since the start of last season, though, but both have been in defeats to Villa (also 0-2 in January).",
+        "And head coach Matthias Jaissle knows his team need to be better in the final third, even if he was pleased with aspects of their performance.&nbsp;",
+        "&quot;It was a game we were dominating, where we saw a team giving a response,&quot; Jaissle said. &quot;We created many situations where you felt like we were going to win that game, until we conceded the goal.",
+        "&quot;We need to be honest – we were shaking a bit until half-time, but again, we showed a good response. In the second 45 minutes, it was really aggressive from our lads.&nbsp;",
+        "&quot;We won the duels, unfortunately we were not smart enough in the final decision-making in the opposition box, so that is something we need to work on. We need to threaten the opposition much more – the lucky punch was missing.",
+        "&quot;We need to learn to find the reset straight away and consistently believe in the things we were doing before. I cannot say anything against the attitude, but the goal was missing.&quot;"
+      ],
+      "html": "<p>Nicolas Jackson predicted his Aston Villa team-mate Johan Manzambi will go right to the top of the game after he continued his impressive form with the winning goal against Newcastle United.</p>\n\n<p>Manzambi – who had looked set to join Newcastle in the summer before Villa hijacked the move to sign him from Freiburg – scored the only goal at St James&#39; Park on Saturday.</p>\n\n<p>Having been left totally unmarked, he powered Joao Gomes&#39; right-wing cross past Lukas Hornicek in the 36th minute, and Villa held on for three deserved points.</p>\n\n<p>Unai Emery&#39;s team had one fewer shot than Newcastle (15 to 16), but they won the expected goals (xG) battle by 1.5 to 1.06 and generated three Opta-defined big chances while not conceding any.</p>\n\n<p>Manzambi now has five goal involvements (three goals, two assists) in all competitions for Villa, and since his debut against Tottenham on September 19, Manchester City star Erling Haaland is the only Premier League player to tally more (six).</p>\n\n<p>The Switzerland international is also just the fourth player to either score or assist on each of their first three Premier League starts for Villa, after Dalian Atkinson in August 1992, Dion Dublin in November 1998 and Danny Ings in August 2021.</p>\n\n<p>Asked about Manzambi&#39;s impact in his post-match interview with Sky Sports, Jackson said: &quot;He&#39;s an amazing player. He&#39;s still growing.&nbsp;</p>\n\n<p>&quot;Hopefully he can be better and better every game, score goals and assist me sometimes as well! Hopefully we work together and achieve many things together.</p>\n\n<p>&quot;He will go a long way and hopefully he gets no injuries. For sure, if he is okay and he is training hard, he will go a long way and get many more goals and assists.&quot;</p>\n\n\n<p>Jackson was involved in a controversial incident midway through the first half, when Sven Botman&#39;s challenge on the Villa striker was checked for a possible red card but cleared by the VAR, despite the centre-back appearing to jump into the tackle recklessly.</p>\n\n<p>Asked if he felt any effects from that challenge, Jackson said: &quot;I&#39;m good. I know the referee said yellow card, but it was so high and hopefully next time it will be a red card.&nbsp;</p>\n\n<p>&quot;I nearly broke my leg, but anyway, it&#39;s part of football. The most important thing is that we won and I&#39;m okay.&quot;</p>\n\n<p>Newcastle are now without a home clean sheet in 16 consecutive games in all competitions, which is the longest run in their history.</p>\n\n<p>They have only failed to score in two of their 23 home Premier League games since the start of last season, though, but both have been in defeats to Villa (also 0-2 in January).</p>\n\n<p>And head coach Matthias Jaissle knows his team need to be better in the final third, even if he was pleased with aspects of their performance.&nbsp;</p>\n\n<p>&quot;It was a game we were dominating, where we saw a team giving a response,&quot; Jaissle said. &quot;We created many situations where you felt like we were going to win that game, until we conceded the goal.</p>\n\n<p>&quot;We need to be honest – we were shaking a bit until half-time, but again, we showed a good response. In the second 45 minutes, it was really aggressive from our lads.&nbsp;</p>\n\n<p>&quot;We won the duels, unfortunately we were not smart enough in the final decision-making in the opposition box, so that is something we need to work on. We need to threaten the opposition much more – the lucky punch was missing.</p>\n\n<p>&quot;We need to learn to find the reset straight away and consistently believe in the things we were doing before. I cannot say anything against the attitude, but the goal was missing.&quot;</p>\n"
+    },
     "1fn9kq3e2y81114yor61luqjf2": {
       "id": "1fn9kq3e2y81114yor61luqjf2",
       "title": "Former Man Utd midfielder Fred slams 'piece of crap' Ten Hag",
@@ -4685,6 +4765,42 @@
         "For Sage, the victory marked his first home league win in charge and Palace&#39;s maiden Premier League triumph over Forest in 13 attempts (previously D8 L4). The Eagles have now beaten all 35 teams they have faced at least five times in the competition.&nbsp;"
       ],
       "html": "<p>Goals from Daichi Kamada, Jefferson Lerma, and Yeremy Pino helped Crystal Palace to their first Premier League home win over Pierre Sage after beating Nottingham Forest 3-1.</p>\n\n<p>They went behind early on to Dan Ndoye, but Palace weathered the pressure and eventually came out on top to earn their first-ever win over Forest in the competition.&nbsp;</p>\n\n<p>Forest needed only three minutes to break the deadlock as Ndoye capitalised on a careless backpass from Anan Khalaili before driving a fine strike beyond Walter Benitez to stun Selhurst Park.&nbsp;</p>\n\n<p>Palace nearly found an immediate response, though, as Jorgen Strand Larsen twice threatened to restore parity, only to be denied by a sharp Matz Sels save and a timely block from Murillo.&nbsp;</p>\n\n<p>But Forest regained control and enjoyed a host of chances. Ndoye headed straight at Benitez before Daniel Munoz failed to get one over his old side, swiping a dipping effort inches wide.&nbsp;</p>\n\n<p>The Tricky Trees should have doubled their lead when Morgan Gibbs-White&#39;s long-range clip crashed against the crossbar, with the rebound falling invitingly to Liam Delap, whose close-range volley was superbly kept out by Benitez.&nbsp;</p>\n\n<p>Forest&#39;s&nbsp;wastefulness eventually came back to haunt them as Palace staged a remarkable first-half fightback, with Kamada capping off a fine team move to level the score&nbsp;with his first Premier League goal.&nbsp;</p>\n\n<p>And there was still time for the Eagles to turn the contest completely on its head on the stroke of half-time, as Sels parried Tyrick Mitchell&#39;s wicked volley, and Lerma bundled the resulting corner through Sels&#39; legs.</p>\n\n<p>Forest emerged from the break seeking a response, but their wastefulness persisted as Xaver Schlager and Gibbs-White squandered promising openings. Palace remained dangerous, though, with Sels denying Lerma a second header with a timely save.&nbsp;</p>\n\n<p>Palace made their next opportunity count and extended their lead just before the hour mark as Pino capitalised on slack defending, slotting home after Sels parried Strand Larsen&#39;s effort into the Spaniard’s path.&nbsp;</p>\n\n<p>Sage&#39;s side continued to push for a fourth, but Strand Larsen failed to trouble Sels before Benitez once again denied Forest, parrying Chris Wood&#39;s header late on.&nbsp;</p>\n\n\n<p><strong>Forest made to pay as Palace celebrate&nbsp;</strong></p>\n\n<p>Forest will rue their wastefulness after squandering numerous chances to extend their lead, denying Oliver Glasner a happy return to Selhurst Park.&nbsp;</p>\n\n<p>They registered 16 first-half shots – their joint-most before the break in a Premier League match since their latest promotion – reaching 10 attempts inside just 22 minutes.&nbsp;</p>\n\n<p>Indeed, fans were treated to a highly entertaining first half as the two sides combined for 3.8 expected goals (xG) before the break – the highest first-half total in a Premier League match in 2026.&nbsp;</p>\n\n<p>Forest&#39;s profligacy ultimately proved costly, though, ending their nine-match unbeaten away league run against Palace (W3 D6), dating back to December 2003.&nbsp;</p>\n\n<p>Glasner&#39;s side scored just once despite generating 2.97 xG, while Palace netted three times, doing full justice to their 2.38 xG. The match also featured 12 big chances, with only Manchester United against Ipswich Town in August producing more this season (13).&nbsp;</p>\n\n<p>For Sage, the victory marked his first home league win in charge and Palace&#39;s maiden Premier League triumph over Forest in 13 attempts (previously D8 L4). The Eagles have now beaten all 35 teams they have faced at least five times in the competition.&nbsp;</p>\n"
+    },
+    "1hlutev1pz0em18epuso8urhza": {
+      "id": "1hlutev1pz0em18epuso8urhza",
+      "title": "Sarri thrilled with Atalanta progress ahead of Milan clash",
+      "subtitle": "Atalanta are looking to earn a third straight win this week when they travel to AC Milan, who are unbeaten in Serie A this season.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1hlutev1pz0em18epuso8urhza-sarri-thrilled-atalanta-progress-ahead-milan-clash",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/80/60/sarri_ubus17povl8e17swoli8v3hzi.jpg?t=1304071217&w=1200&h=630",
+      "publishedAt": "2026-10-17T21:36:10.000Z",
+      "paragraphs": [
+        "Maurizio Sarri is impressed with the progress he has seen from Atalanta in recent games, and he hopes to carry that on against AC Milan in Serie A.",
+        "After a run of three straight losses in the Italian top flight, Atalanta halted their slump with a 3-1 win over Venezia last weekend, though they remain in mid-table.",
+        "They then followed that up with a 3-1 win over Pafos in the Conference League in midweek – a victory built on Eljif Elmas’ first-minute goal.",
+        "Atalanta are now chasing back-to-back league wins for the second time this season, following their first two matches of the campaign, and Sarri is confident in their ability.",
+        "&quot;We started well [against Pafos], and unlike the game with Venezia where we had lots of chances and got disorganised, we made better choices on when to be direct, when to keep possession, and allowed practically nothing until that late goal,&quot; Sarri told Sky Sport Italia.",
+        "&quot;We have found a way to be more dangerous in attack; now we need to seek greater balance and solidity too.",
+        "&quot;The club is a model for anyone; I had never encountered a situation like this.",
+        "&quot;Naturally, it came from many years with a completely different style of football, but the players are working hard. I hope they have a significant margin for improvement.",
+        "&quot;I honestly don&#39;t know what we can achieve in the first year, but we have set a target for the medium-to-long term.&quot;",
+        "They face a Milan side who remain unbeaten in Serie A so far in 2026-27, winning three and drawing three of their matches to earn 12 points.",
+        "The Rossoneri were pegged back in a 1-1 draw with Sassuolo last time out in the league, but like Atalanta, they come into this match on the back of a European win after beating Salzburg 4-0 last time out.",
+        "Ruben Amorim will be aiming to get back to winning ways in Serie A, but if he avoids defeat, he will become only the third Milan manager in the league’s history to remain unbeaten in each of his first seven games in charge, and the first since Luis Carniglia (W4 D3) in 1963.",
+        "AC Milan – Adrien Rabiot",
+        "After an assist against Lazio and goals against Lecce and Sassuolo, Rabiot could be involved in at least one goal in four consecutive matches for the first time in his career across Europe&#39;s big five leagues.",
+        "The last midfielder to achieve this for Milan in Serie A was Hakan Calhanoglu in December 2020 (one assist per game against Parma, Genoa and Sassuolo, one goal and two assists against Lazio).",
+        "Atalanta – Nikola Krstovic",
+        "Nikola Krstovic was involved in all three of Atalanta&#39;s goals in their last league match against Venezia, scoring two goals and providing one assist; this is the same number of goal involvements he had in his previous 11 appearances in the competition.",
+        "The 26-year-old has only been involved in more than one goal in two consecutive Serie A matches once before: in September 2025 against Lecce (two assists) and Torino (two goals).",
+        "MATCH PREDICTION: AC MILAN WIN",
+        "AC Milan are winless in their last six Serie A matches against Atalanta (D2 L4); only once in their history have the Rossoneri endured a longer winless run against them in the top flight (seven games between November 2015 and September 2018 – D5 L2).",
+        "And Atalanta have won their last two away games against Milan in Serie A; only once have they recorded three consecutive away wins against the Rossoneri in the competition, between March 1941 and March 1943.",
+        "However, Milan are the favourites to win as they are unbeaten in their first six league matches this season (W3 D3); the last time they avoided defeat in each of their first seven league games was in the 2021-22 campaign (W6 D1).",
+        "Milan could also win three consecutive home matches in Serie A for the first time in 2026.&nbsp;",
+        "As for Atalanta, they have lost their last two away games in Serie A (1-2 against Roma, 0-2 against Juventus) and could lose three consecutive away matches in the competition under the same manager for the first time since October and November 2017, with Gian Piero Gasperini."
+      ],
+      "html": "<p>Maurizio Sarri is impressed with the progress he has seen from Atalanta in recent games, and he hopes to carry that on against AC Milan in Serie A.</p>\n\n<p>After a run of three straight losses in the Italian top flight, Atalanta halted their slump with a 3-1 win over Venezia last weekend, though they remain in mid-table.</p>\n\n<p>They then followed that up with a 3-1 win over Pafos in the Conference League in midweek – a victory built on Eljif Elmas’ first-minute goal.</p>\n\n<p>Atalanta are now chasing back-to-back league wins for the second time this season, following their first two matches of the campaign, and Sarri is confident in their ability.</p>\n\n<p>&quot;We started well [against Pafos], and unlike the game with Venezia where we had lots of chances and got disorganised, we made better choices on when to be direct, when to keep possession, and allowed practically nothing until that late goal,&quot; Sarri told Sky Sport Italia.</p>\n\n<p>&quot;We have found a way to be more dangerous in attack; now we need to seek greater balance and solidity too.</p>\n\n<p>&quot;The club is a model for anyone; I had never encountered a situation like this.</p>\n\n<p>&quot;Naturally, it came from many years with a completely different style of football, but the players are working hard. I hope they have a significant margin for improvement.</p>\n\n<p>&quot;I honestly don&#39;t know what we can achieve in the first year, but we have set a target for the medium-to-long term.&quot;</p>\n\n<p>They face a Milan side who remain unbeaten in Serie A so far in 2026-27, winning three and drawing three of their matches to earn 12 points.</p>\n\n<p>The Rossoneri were pegged back in a 1-1 draw with Sassuolo last time out in the league, but like Atalanta, they come into this match on the back of a European win after beating Salzburg 4-0 last time out.</p>\n\n<p>Ruben Amorim will be aiming to get back to winning ways in Serie A, but if he avoids defeat, he will become only the third Milan manager in the league’s history to remain unbeaten in each of his first seven games in charge, and the first since Luis Carniglia (W4 D3) in 1963.</p>\n\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>AC Milan – Adrien Rabiot</strong></p>\n\n<p>After an assist against Lazio and goals against Lecce and Sassuolo, Rabiot could be involved in at least one goal in four consecutive matches for the first time in his career across Europe&#39;s big five leagues.</p>\n\n<p>The last midfielder to achieve this for Milan in Serie A was Hakan Calhanoglu in December 2020 (one assist per game against Parma, Genoa and Sassuolo, one goal and two assists against Lazio).</p>\n\n<p><strong>Atalanta – Nikola Krstovic</strong></p>\n\n<p>Nikola Krstovic was involved in all three of Atalanta&#39;s goals in their last league match against Venezia, scoring two goals and providing one assist; this is the same number of goal involvements he had in his previous 11 appearances in the competition.</p>\n\n<p>The 26-year-old has only been involved in more than one goal in two consecutive Serie A matches once before: in September 2025 against Lecce (two assists) and Torino (two goals).</p>\n\n<p><strong>MATCH PREDICTION: AC MILAN WIN</strong></p>\n\n<p>AC Milan are winless in their last six Serie A matches against Atalanta (D2 L4); only once in their history have the Rossoneri endured a longer winless run against them in the top flight (seven games between November 2015 and September 2018 – D5 L2).</p>\n\n<p>And Atalanta have won their last two away games against Milan in Serie A; only once have they recorded three consecutive away wins against the Rossoneri in the competition, between March 1941 and March 1943.</p>\n\n<p>However, Milan are the favourites to win as they are unbeaten in their first six league matches this season (W3 D3); the last time they avoided defeat in each of their first seven league games was in the 2021-22 campaign (W6 D1).</p>\n\n<p>Milan could also win three consecutive home matches in Serie A for the first time in 2026.&nbsp;</p>\n\n<p>As for Atalanta, they have lost their last two away games in Serie A (1-2 against Roma, 0-2 against Juventus) and could lose three consecutive away matches in the competition under the same manager for the first time since October and November 2017, with Gian Piero Gasperini.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>AC Milan – 51.5%</p>\n\n<p>Draw – 24.4%</p>\n\n<p>Atalanta – 24.1%</p>\n"
     },
     "1hnz40ler5mb114h0wtlanlxld": {
       "id": "1hnz40ler5mb114h0wtlanlxld",
@@ -6367,6 +6483,30 @@
         "Chelsea – 30.4%&nbsp;"
       ],
       "html": "<p>Moises Caicedo wants to continue repaying Chelsea&#39;s faith in him after returning from injury to make his first start of the season, with a trip to Everton being the Blues&#39; next test.</p>\n\n<p>Having initially suffered a calf injury during pre-season before aggravating the same issue, Caicedo was restricted to just 14 total minutes of action prior to the international break, as a substitute in a 4-3 win over Brighton in August.</p>\n\n<p>But on Saturday, he started as Xabi Alonso&#39;s side routed Bournemouth 5-1 at Stamford Bridge to halt a three-match winless streak (D1 L2) and go sixth in the Premier League.</p>\n\n<p>Following his injury lay-off, the Ecuador international now wants to get back to the level that prompted Chelsea to spend £115m on him in January 2024.</p>\n\n<p>&quot;It has been a great journey for me, more than three special years at one of the best clubs in the world,&quot; Caicedo told Chelsea&#39;s website.</p>\n\n<p>&quot;In my first season, I passed some tough moments, I would say. They helped me to grow, to keep developing, and to be in the position I am in right now. I can look back and say it’s a pleasure, with what I passed.</p>\n\n<p>&quot;Now, I&#39;m just enjoying trying to do everything for this club, because they gave me everything. They helped me in every way, and I&#39;ve grown up a lot because of them.&nbsp;</p>\n\n<p>&quot;I have more experience now, I&#39;m more mature, and I just want to keep learning and keep doing what I&#39;m doing.</p>\n\n<p>&quot;I feel very grateful to Chelsea, and I want to keep showing the fans and everybody at the club what I am capable of.&quot;</p>\n\n<p>Chelsea&#39;s next opponents are only above them on goal difference, having won two and drawn four of their last six matches, sharing four goals equally with Hull City last time out.</p>\n\n\n<p>The positive feeling surrounding Everton&#39;s on-pitch performances contrasts starkly with the criticism reserved for their transfer strategy, after The Friedkin Group – who recently put the club up for sale – almost sanctioned the sale of promising youngster Harrison Armstrong.</p>\n\n<p>Armstrong looked set to join Nottingham Forest after a bid for his services was accepted, but fan outcry led Everton&#39;s hierarchy to perform a U-Turn, and the 19-year-old is glad to still be at his boyhood club.&nbsp;&nbsp;</p>\n\n<p>&quot;The support has meant the world to me and my family,&quot; Armstrong told EvertonTV. &quot;I understand it&#39;s part of the game and you&#39;re going to have to experience moments like that, but for a fanbase to get involved and show as much support as they did, is special.</p>\n\n<p>&quot;I don&#39;t think I&#39;ve seen that before. I&#39;ve given me confidence, it&#39;s made me feel loved and it&#39;s cemented that this is the place to be for me.&quot;</p>\n\n<p><strong>PLAYERS TO WATCH&nbsp;</strong></p>\n\n<p><strong>Everton – Thierno Barry</strong></p>\n\n<p>After a run of just one goal in seven Premier League games, Barry has now scored in his last two appearances in the competition. He last scored in three consecutive league games back in August 2024, in the Swiss Super League with Basel.</p>\n\n<p><strong>Chelsea – Danny Welbeck&nbsp;</strong></p>\n\n<p>Welbeck has scored against Everton in the Premier League for Sunderland (twice), Manchester United, Arsenal and Brighton (once each).&nbsp;</p>\n\n<p>There are seven instances of a player scoring against a club with five different teams in the competition, with Nicolas Anelka the only player to do so against the Toffees (Arsenal, Liverpool, Man City, Bolton Wanderers and Chelsea).</p>\n\n<p><strong>MATCH PREDICTION – EVERTON WIN</strong></p>\n\n<p>Although Everton boss David Moyes has never won in 21 attempts at Stamford Bridge in the Premier League, he has won eight of his last 13 home games against the Blues (D2 L3), with those victories split between Everton and West Ham (four each).</p>\n\n<p>Furthermore, Chelsea have won just one of their last nine away Premier League games against Everton (D2 L6), a 1-0 victory in August 2022. They have failed to score in seven of those games, including the last three.</p>\n\n<p>And though they are the third-highest goalscorers in the Premier League this season, no side has conceded more so often this term than Chelsea (13).&nbsp;</p>\n\n<p>The Blues have conceded in each of their last 22 league games, only once having a longer run without a clean sheet (31 games between November 1960 and August 1961).</p>\n\n\n<p>With Everton still unbeaten and boasting home advantage, Moyes may just fancy his chances of masterminding another upset.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Everton – 42.9%</p>\n\n<p>Chelsea – 30.4%&nbsp;</p>\n\n<p>Draw – 26.7%</p>\n"
+    },
+    "1q7bx1qitosbz1f4dnlhbk8ew4": {
+      "id": "1q7bx1qitosbz1f4dnlhbk8ew4",
+      "title": "West Ham still 'building momentum' after crucial win over Swansea, says Nuno",
+      "subtitle": "West Ham closed the gap on Championship leaders Swansea City to just one point after victory in Wales on Saturday.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1q7bx1qitosbz1f4dnlhbk8ew4-west-ham-still-building-momentum-after-crucial-win-over-swansea-says-nuno",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a7/84/divine-mukasa_1l4t4i3jlc5mq1r8evbqq4vtu1.jpg?t=1323241921&w=1200&h=630",
+      "publishedAt": "2026-10-17T19:49:35.000Z",
+      "paragraphs": [
+        "Nuno Espirito Santo said his West Ham side are still building momentum after their win over Championship leaders Swansea City.",
+        "The Hammers moved up to second in the league, just a point behind Swansea, after a 1-0 victory on Saturday.",
+        "Divine Mukasa was the match-winner for West Ham, slamming in from near the penalty spot after a clever pass from Mohamadou Kante.",
+        "It was a tight contest, with the Hammers edging the expected goals (xG) battle 1.2&nbsp;to 1.0, though Swansea failed to get any of their 11 attempts on target.",
+        "Swansea&#39;s main threat came from set-pieces, with such situations responsible for 0.9&nbsp;of their xG, but Nuno was pleased with what he saw from West Ham.",
+        "&quot;I think the players did a very good job. Overall, a very good performance, organised, creating chances, also we had luck in moments,&quot; Nuno told BBC Radio London.",
+        "&quot;Swansea are a very good team; they are fast, dynamic, it&#39;s not easy to control them, but overall I think we were organised and caused a lot of problems too.",
+        "&quot;It was a very entertaining game, very intense; it was a nice football match.",
+        "&quot;There were some amazing saves, maybe because of my past [as a goalkeeper] I always credit them, but they were some amazing saves [from Lawrence Vigouroux].",
+        "&quot;I think we are building momentum. The table is important but more important is how we keep improving. I still believe there are a lot of things we should have done better.&quot;",
+        "Elsewhere in the Championship, Middlesbrough failed to go top after being held to a 2-2 draw with Cardiff City.",
+        "Boro did find themselves 2-0 down at half-time, but Tommy Conway and Will Lankshear scored after the break to salvage a draw."
+      ],
+      "html": "<p>Nuno Espirito Santo said his West Ham side are still building momentum after their win over Championship leaders Swansea City.</p>\n\n<p>The Hammers moved up to second in the league, just a point behind Swansea, after a 1-0 victory on Saturday.</p>\n\n<p>Divine Mukasa was the match-winner for West Ham, slamming in from near the penalty spot after a clever pass from Mohamadou Kante.</p>\n\n<p>It was a tight contest, with the Hammers edging the expected goals (xG) battle 1.2&nbsp;to 1.0, though Swansea failed to get any of their 11 attempts on target.</p>\n\n<p>Swansea&#39;s main threat came from set-pieces, with such situations responsible for 0.9&nbsp;of their xG, but Nuno was pleased with what he saw from West Ham.</p>\n\n<p>&quot;I think the players did a very good job. Overall, a very good performance, organised, creating chances, also we had luck in moments,&quot; Nuno told BBC Radio London.</p>\n\n\n<p>&quot;Swansea are a very good team; they are fast, dynamic, it&#39;s not easy to control them, but overall I think we were organised and caused a lot of problems too.</p>\n\n<p>&quot;It was a very entertaining game, very intense; it was a nice football match.</p>\n\n<p>&quot;There were some amazing saves, maybe because of my past [as a goalkeeper] I always credit them, but they were some amazing saves [from Lawrence Vigouroux].</p>\n\n<p>&quot;I think we are building momentum. The table is important but more important is how we keep improving. I still believe there are a lot of things we should have done better.&quot;</p>\n\n<p>Elsewhere in the Championship, Middlesbrough failed to go top after being held to a 2-2 draw with Cardiff City.</p>\n\n<p>Boro did find themselves 2-0 down at half-time, but Tommy Conway and Will Lankshear scored after the break to salvage a draw.</p>\n"
     },
     "1q8lgyn5wojce11sb5vt3kfmq2": {
       "id": "1q8lgyn5wojce11sb5vt3kfmq2",
@@ -31657,6 +31797,37 @@
         "LW: Karim Adeyemi—7.0: All gas, no end product. Adeyemi ran himself into the ground and repeatedly let himself down when it mattered most."
       ]
     },
+    "ftbpro_01m557y2kny3": {
+      "id": "ftbpro_01m557y2kny3",
+      "title": "Gio Reyna Makes Impressive Bid to Become USMNT Starter",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/gio-reyna-earned-right-usmnt-starter/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55dhzzp4ngjtr20c8.jpg",
+      "publishedAt": "2026-10-17T20:00:00.000Z",
+      "paragraphs": [
+        "By Ben Steiner4:00 PM EDTGio Reyna's future role with the USMNT is still up in the air. / Jane Gershovich/ISI Photos/Getty ImagesGio Reyna is finally where he needs to be, and the 23-year-old could become a core piece of the U.S. men’s national team’s next era.",
+        "After years of limited minutes and opportunities with Bundesliga sides Borussia Dortmund and Borussia Mönchengladbach as well as a fruitless loan spell at Nottingham Forest, the USMNT midfielder has finally carved himself out a consistent role for Ligue 1’s Racing Strasbourg.",
+        "At the same time, he’s become a beloved favorite of USMNT manager Mauricio Pochettino, inspiring a shocking career rise to the 2026 World Cup after it seemed his time in the national team jersey might be coming to an end.",
+        "With solid footing for club and country, the next chapter of his career awaits. The USMNT has never had more depth in midfield than it does now, but Reyna has begun to prove himself as an integral part of the mix. The question looms: Where does he fit?",
+        "“It’s pretty simple: just keep building on what I’ve been doing,” Reyna told GOAL of his rise, following the USMNT’s four wins in four games in the September-October international window. “Keep showing up every day, training, recovering, doing everything I need to prepare mentally and physically for every training and game. I feel good, though, and I’m feeling more confident every time I step on the pitch.”",
+        "Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed",
+        "Gio Reyna has always been a Mauricio Pochettino favorite. / Taylor Banner/USSF/Getty ImagesAhead of the 2026 World Cup, even as Reyna struggled for club minutes, Pochettino hailed the midfielder as a “very special talent.” Despite harboring a greater emphasis on club form, Pochettino made an exception for Reyna, calling him up for pre-tournament friendlies against Belgium and Portugal in March.",
+        "While Reyna and the USMNT struggled in those two defeats, it became clear that Pochettino saw the then-Bundesliga man in a different echelon than others in the player pool. He included Reyna in his World Cup squad, where the young star served as an important off-the-bench reinforcement and even scored in the tournament opener against Paraguay.",
+        "Since then, his two goals in seven games with Strasbourg have offered a glimpse into the potential Pochettino saw all along. He most recently scored against reigning UEFA Champions League winners, Paris Saint-Germain, on Saturday, punishing the European champions with a skillful turn and finish inside the box to open the game’s scoring.",
+        "His rise has only been further evidenced by the veteran role he played in the fall international window. Reyna was the only USMNT player to start all four victories, playing among an otherwise heavily rotated, youth-driven lineup.",
+        "Next. Gio Reyna Feature on Family Drama. Once at Center of Drama, Gio Reyna Is Writing Different Story. dark",
+        "While speaking to former USMNT attacker Herculez Gomez, one of Reyna’s former USMNT teammates, Kellyn Acosta, said Reyna was “back to his best” and believes he can be an “important figure” for the USMNT moving forward.",
+        "“He’s a player that is so talented, with his natural ability,” Acosta exclaimed. “Gio has been through a lot of hardships, and he's come out of it. Now we're seeing a guy that's playing consistently with his club, and now he's back with the national team doing what he does best.”",
+        "Acosta added: “He sees the game a bit differently than most. He glides. He's clever. Has a bit of an edge to him too ... He's a guy that checks all the boxes, and he's an important figure for our team.”",
+        "Sebastian Berhalter (left) is one of the many midfield options Gio Reyna (right) now has to contend with in the USMNT.  / Jared C. Tilton/FIFA/Getty ImagesThe recent international window gave a strong indication regarding where Pochettino sees Reyna in the plans—likely as a No. 10. Nevertheless, he will need to outperform several other USMNT stars for that position.",
+        "In a 4-2-3-1, Reyna played as the creative playmaker in wins against Peru and Chile, where the USMNT controlled the game throughout. It’s a similar role to what he has taken on at Strasbourg, and it lets him slow the game down to showcase his individual skills, rather than relying on more physical elements. He was highly successful, recording an assist in each friendly.",
+        "Although against tougher opponents Canada and Mexico, Reyna struggled to make a similar impact as a deep-lying midfielder or on the wing.",
+        "His main competition for the No. 10 spot will be Malik Tillman, who excelled in all four friendlies. The Bayer Leverkusen man first impressed as the No. 10 at the World Cup and is expected to claim that position as a starter moving forward. The 24-year-old can seamlessly shift wide or take on a deeper role—two positions of strength in the USMNT player pool, whereas Reyna has comparatively struggled to adjust from the No. 10.",
+        "Most importantly, though, Reyna is finally where he needs to be: playing consistent soccer. He will continue to grow and develop throughout these increased opportunities and will be well-positioned to a stake a claim in the USMNT’s burgeoning midfield. Next up, he will have the chance to prove himself in November’s Concacaf Nations League quarterfinals against Haiti.",
+        "feed. READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
     "ftbpro_01m558xs6dph": {
       "id": "ftbpro_01m558xs6dph",
       "title": "Wrexham’s Emphatic Win Delivers Perfect Response to Latest Phil Parkinson Claims",
@@ -31705,6 +31876,51 @@
         "“He is physical when the ball goes up, he runs tirelessly in behind, and he gave them no end of problems today. I am so pleased for Sam. He is one of the lads who has been with us for a while and is a fantastic character. He had a brilliant second part of last season and a really good preseason. Kieffer’s form has been really good, and Sam hasn't quite had that moment, but he has been close to it. Today he got one, and he will go from strength to strength.”",
         "Parkinson had no shortage of praise for Moore either. “[His] fifth goal in 11 games, nine starts. He is right at the top of his game. My job is to keep him at the top of his game, and it is his job as well.”",
         "feed. READ THE LATEST WREXHAM NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m55kvjwnfc": {
+      "id": "ftbpro_01m55kvjwnfc",
+      "title": "Lionel Messi Receives Most Bizarre Tribute Yet After Argentina Retirement",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/lionel-messi-bizarre-tribute-argentina-retirement/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1227,h_690,x_662,y_427/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55mmkw3181q4n6ex2.jpg",
+      "publishedAt": "2026-10-17T21:00:00.000Z",
+      "paragraphs": [
+        "By Ben Steiner5:00 PM EDTLionel Messi has had a plant named after him.  / MB Media/Getty ImagesLionel Messi is no stranger to honors. At Inter Miami’s Nu Stadium, he has a stand named after him. His boyhood club, Newell's Old Boys, has a similar section bearing his name.",
+        "While his name has graced crowd stands, shoes, apparel, sports drinks and more, the latest might be the oddest. Now, a newly discovered plant species has been named after him: the Salvia messii.",
+        "An academic study revealed a new species in the Andes mountain range of Peru, and it has been immediately classified as endangered. With its light blue and white flowers resembling Argentina’s national team kit and the discovery happening near the time of Messi’s international retirement, scientists were inspired to name the plant after the eight-time Ballon d’Or winner.",
+        "Paul Gonzales of the Natural History Museum of the National University of San Marco, alongside Argentine researcher Rolando Uria and biologist Jean Capcha-Ramos of Huarango Nature described the species and conducted the initial studies. The full name, written in Latin under international rules of botanical nomenclature, translates to “Messi’s plant,” with an added “i” to indicate possession. It can grow to 4'11&#34; tall, not much shorter than the diminutive soccer star that stands at 5'7&#34;.",
+        "This plant species is not the first to be named after a soccer player in the wake of the 2026 World Cup. Spanish researcher Jesus Ortea named a marine mollusk Aldisa vozinhai after Cape Verde’s star goalkeeper, Vozinha, per The Athletic. It directly translates to “Vozinha’s sea slug”. Ortea previously named a marine snail species after legendary Costa Rica and Real Madrid goalkeeper Keylor Navas.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Lionel Messi was given an honorary doctorate before his Argentina retirment.  / MB Media/Getty ImagesMessi is really making a name for himself in the academic community. In addition to a new species named in his honor, he received an honorary doctorate degree from the University of Buenos Aires ahead of his international farewell match earlier this month. It honored his sporting career, his representation of Argentine identity on the global stage and his social contributions through the Leo Messi Foundation, UNICEF and other avenues.",
+        "While off-pitch honors in the twilight of his career are coming fast, Messi still has several goals on the pitch as he chases a third-straight MLS MVP title, a second-straight MLS Golden Boot and Inter Miami’s title defense of the MLS Cup, with the playoffs set to begin on Nov. 18.",
+        "feed. READ THE LATEST MLS NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m55vddx87n": {
+      "id": "ftbpro_01m55vddx87n",
+      "title": "Cavan Sullivan Can’t Extend Record As Union Barely Survive Clash With Charlotte",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/cavan-sullivan-record-union-survive-charlotte/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1319,h_741,x_581,y_21/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55vhpsc22h309nzx7.jpg",
+      "publishedAt": "2026-10-17T21:51:27.000Z",
+      "paragraphs": [
+        "By Ben Steiner5:51 PM EDTCavan Sullivan couldn't build on his record MLS goal contributions total.  / Isaiah Vazquez/MLS/Getty ImagesCavan Sullivan had a fantastic chance to secure victory for the Philadelphia Union late into Saturday’s match, but the 17-year-old ultimately couldn't save his side’s win streak in a thrilling 2–2 draw with Charlotte FC at Subaru Park.",
+        "The draw snapped the Union’s eight-game win streak, which dated back to Aug. 29, but maintained their unbeaten streak, which now stands at a club-record 15 games. Their last loss came on May 23 in a 6–4 defeat to Inter Miami.",
+        "Sullivan—who broke Alphonso Davies’s record for the most goal contributions by a teenager (21) in Wednesday’s 3–1 win over the Chicago Fire—saw his own personal streak snap too. Saturday’s affair signified his first league match since Aug. 1 without a goal contribution, ending an unprecedented 10-game run.",
+        "It wasn’t for a lack of trying, though. Sullivan ended the match with the most shots (five) and the most touches taken in the opposition’s box (10). He even found the back of the net midway through the second half, before the play was called back for offside.",
+        "With the game tied 2–2 late, he linked up with his older brother, Quinn Sullivan, in the 93rd minute but failed to beat Charlotte’s goalkeeper Kristjan Kahlina, who made an impressive save to secure a point for the visitors.",
+        "Cavan Sullivan NEARLY wins it for @PhilaUnion in stoppage time! 😮 pic.twitter.com/RiTWkj6RUf",
+        "While Sullivan couldn’t bring a win, it was still an impressive day for the Union. Milan Iloski netted his 19th goal of the season to open the scoring in the 24th minute from the penalty spot, and Bruno Damiani smashed home a shot from the top of the box to level the game at 2–2 in the 73rd minute, after Charlotte’s two goals from Rodolfo Aloko and Idan Toklomati.",
+        "Bidding farewell to its win streak gives a little adversity to a Union side that hasn't had much since Ryan Richter took over as interim manager for Bradley Carnell back in May. Now, the reigning Supporters’ Shield winners will have to wait until at least the last four games of the season to clinch a spot in the MLS Cup playoffs.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "It's not an easy road forward for the Union and Cavan Sullivan. / Michael Reaves/Getty ImagesThe Union will have two home games and two more on the road in the hunt to qualify for the playoffs and contend for a coveted top-four seed in the Eastern Conference, which would assure them home advantage in at least the first round of the postseason.",
+        "The next two weeks, though, won’t be easy. On Matchday 32, they’re off to face Carles Gil’s New England Revolution, a side that ranked third in the Eastern Conference heading into its Matchday 31 clash with the fourth-place Chicago Fire.",
+        "Afterwards, Nashville SC, who are chasing the all-time regular-season points record, will provide the toughest test yet, before the regular season wraps up against FC Cincinnati and Toronto FC.",
+        "Likely to qualify for the playoffs despite the challenges ahead, the Union will be an outside contender to win the MLS Cup. Nevertheless, any dream run will likely lean on Cavan Sullivan’s exceptional talents against the competitive likes of Inter Miami, Nashville, New England, Chicago and more.",
+        "READ THE LATEST MLS NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
     "fzhafkysws3g1ux8fnmoe3180": {
@@ -32588,6 +32804,45 @@
         "&quot;If we believe, improve and play as a team, we will score many goals and win many games. If we don&#39;t play as a team, it is impossible.&quot;"
       ],
       "html": "<p>Roberto De Zerbi is confident&nbsp;Tottenham&#39;s first Premier League win of the season is around the corner after seeing &quot;the right spirit and character&quot; against Manchester United.</p>\n\n<p>De Zerbi watched on as Spurs played out a 1-1 draw at Old Trafford on Saturday, despite going behind to&nbsp;Bryan Mbeumo&#39;s goal and seeing&nbsp;Rodrigo Bentancur sent off.</p>\n\n<p>The visitors had dominated for much of the encounter without reward, and they were hit with a sucker punch in the 73rd minute when Mbeumo finished past&nbsp;Antonin Kinsky.&nbsp;</p>\n\n<p>It went from bad to worse for Spurs five minutes later when Bentancur was sent for an early bath, after he headbutted Luke Shaw following a coming together between the pair.&nbsp;</p>\n\n<p>However, in the second of eight additional minutes, Dominic Solanke got the better of&nbsp;Lisandro Martinez and glanced&nbsp;Sandro Tonali&#39;s teasing cross into the bottom-right corner.&nbsp;</p>\n\n<p>Spurs have now failed to win each of their opening six games of a league season for just the fourth time in their history, after 2008-09, 1955-56 and 1912-13, but De Zerbi said there were plenty of positives for his team to take from their performance.&nbsp;</p>\n\n<p>&quot;I think we played very well against a great team. We had many chances to score in the first half. Three or four,&quot; De Zerbi told Sky Sports.</p>\n\n<p>&quot;The second half, it is&nbsp;normal to suffer against this quality. I am very happy because I have seen the right spirit and character.</p>\n\n<p>&quot;We suffered in the game but in every situation of the game. I like the situation we were in with the red card. We need this situation. We have not accepted the defeat.</p>\n\n<p>&quot;We have to react in all the ways we can. It is a bad way, it is not the right way. I kissed Bentancur in the dressing room. Football is character.</p>\n\n<p>&quot;We win the game if we play as a team. We didn&#39;t win this game playing as a team. Every game like today, we will win many games.&quot;</p>\n\n\n<p>The quality of Spurs&#39; chances were backed up by the metrics, with De Zerbi&#39;s side finishing with an expected goals (xG) total of 1.56 from their 12 shots, compared&nbsp;to United&#39;s 0.77 from the same number of attempts.&nbsp;</p>\n\n<p>And it looked as though they would come away with nothing until Solanke, who was captaining Spurs for the first time, popped up with a confidence-boosting leveller.&nbsp;</p>\n\n<p>Solanke has netted four Premier League goals against the Red Devils, his joint-most against an opponent (also four&nbsp;vs Aston Villa, Newcastle United and Nottingham Forest).</p>\n\n<p>Meanwhile, the City Ground (four) is the only away venue he has scored more often at than Old Trafford (three) in the competition, and De Zerbi is hoping this latest goal will be the foundation Solanke needs to build on for the rest of the season.&nbsp;</p>\n\n<p>&quot;He is a good player for Tottenham,&quot; De Zerbi said of Solanke.&nbsp;&quot;There are not too many strikers better than Solanke.</p>\n\n<p>&quot;Today he was captain because he deserved it, especially at that moment because he suffered because Tottenham didn&#39;t score or win any games.</p>\n\n<p>&quot;He is a great guy, a great player and we are behind him. We have to believe in ourselves and this football way.</p>\n\n<p>&quot;If we believe, improve and play as a team, we will score many goals and win many games. If we don&#39;t play as a team, it is impossible.&quot;</p>\n"
+    },
+    "jwyq4zlrxv61dgyugo49v88g": {
+      "id": "jwyq4zlrxv61dgyugo49v88g",
+      "title": "Spalletti unlikely to start Woltemade and Kolo Muani together for Juve",
+      "subtitle": "Juventus face a tough task to get their Serie A campaign back on track, as they host high-flying Lazio on Sunday.",
+      "source": "FotMob",
+      "sourceUrl": "/news/jwyq4zlrxv61dgyugo49v88g-spalletti-unlikely-start-woltemade-kolo-muani-together-juve",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d0/71/nick-woltemade-and-randal-kolo-muani_1x7wwe6aofwto122nf80a4jbqt.jpg?t=1312543473&w=1200&h=630",
+      "publishedAt": "2026-10-17T22:04:51.000Z",
+      "paragraphs": [
+        "Luciano Spalletti has hinted at not starting Nick Woltemade and Randal Kolo Muani together when Juventus take on Lazio in Serie A.",
+        "Both Woltemade and Kolo Muani scored in Juve&#39;s Europa League win over Celta Vigo on Thursday, with the Newcastle United loanee volleying in an equaliser before the latter&#39;s stoppage-time winner.",
+        "Meanwhile in Serie A, Juve have picked up 11 points from their first six matches this season (W3 D2 L1); in the last 10 campaigns, they have only failed to surpass this points tally after their first seven games in the competition on two occasions: 11 in 2021-22 and 10 in 2022-23.",
+        "After their Europa League win, Woltemade stated he wanted to play alongside Kolo Muani, but Spalletti seems to have other plans for Sunday&#39;s game.",
+        "&quot;We need to expand the range of starters and divide up the time on the field,&quot; said the Juve boss.",
+        "&quot;Woltemade did well against Celta and, unlike with Cagliari, he managed to put the ball in the net.",
+        "&quot;This ability to be ready when opportunity knocks is crucial and rewards those who are most determined.",
+        "&quot;Lazio have two physical centre-backs, so it will be difficult to get through them unless we have bodies in the box.&quot;",
+        "Lazio are still unbeaten in Serie A this season, with five wins and one draw.",
+        "The Biancocelesti have avoided defeat in each of their first seven matches of a Serie A campaign on only six previous occasions in their history, but they have never registered six wins (W5 D2 in both 1972-73 and 1999-2000, the season of their last Scudetto).",
+        "Ahead of their trip to Allianz Stadium, Gennaro Gattuso has urged his Lazio side to play without any fear.",
+        "&quot;We have to go to Turin aware that we are facing a great team that has reaped less than it has sown,&quot; said Gattuso.",
+        "&quot;What interests me is courage. We have to play a game of mentality, without fear. They are stronger than us, but I want to see a team that takes them on and trades blow for blow.",
+        "&quot;Being afraid gets us nothing. We are on a journey and we have to improve game by game.",
+        "&quot;We are doing a lot of good things, but I want to see further improvement. No fear, no fright.&quot;",
+        "Juventus – Randal Kolo Muani",
+        "Kolo Muani has been involved in two goals in his last three league games (one goal, one assist); as many goal involvements as he registered in his previous 33 matches across Europe&#39;s top five leagues.",
+        "Following his goal against Cagliari last time out, the Frenchman could score in consecutive matches in these competitions for the first time since January and February 2025, during his first three appearances for Juventus.",
+        "Lazio – Tijjani Noslin",
+        "Noslin&#39;s first Serie A goal was against Juventus in February 2024 for Hellas Verona (2-2). The Dutchman, who has two goals and two assists in his last three matches, is enjoying his best season in Europe&#39;s top 10 leagues in terms of minutes per goal involvement, with a goal or assist every 65 minutes.",
+        "In the current Italian top flight campaign, only Edon Zhegrova (one goal/assist every 39 minutes) and Marcus Thuram (one goal/assist every 58 minutes) have a better rate (minimum three goal involvements).",
+        "MATCH PREDICTION: JUVENTUS WIN",
+        "For the first time in Serie A history, Juve (11 points) will face Lazio (16) during the first half of a season with at least five fewer points than the Biancocelesti.",
+        "The last nine Serie A matches between Juve and Lazio have seen a perfectly even record, with three wins apiece and three draws; this follows Juve winning 12 of their previous 15 league games against Lazio (D1 L2).",
+        "Juve have beaten Lazio more times than any other side in Serie A (W87 D40 L37) and have scored more goals against them than any other club in the competition, too&nbsp;(290).",
+        "The Bianconeri have scored in 13 consecutive home Serie A matches against Lazio (30 goals in total, 2.3 per game on average), though Lazio boss Gattuso is hoping to make some history on Sunday.",
+        "Gattuso (W5 D1) could become the first manager in Serie A history to win six of his first seven games in charge of Lazio in the competition; Igor Tudor, Tommaso Maestrelli and Vladimir Petkovic all won five of their first seven."
+      ],
+      "html": "<p>Luciano Spalletti has hinted at not starting Nick Woltemade and Randal Kolo Muani together when Juventus take on Lazio in Serie A.</p>\n\n<p>Both Woltemade and Kolo Muani scored in Juve&#39;s Europa League win over Celta Vigo on Thursday, with the Newcastle United loanee volleying in an equaliser before the latter&#39;s stoppage-time winner.</p>\n\n<p>Meanwhile in Serie A, Juve have picked up 11 points from their first six matches this season (W3 D2 L1); in the last 10 campaigns, they have only failed to surpass this points tally after their first seven games in the competition on two occasions: 11 in 2021-22 and 10 in 2022-23.</p>\n\n<p>After their Europa League win, Woltemade stated he wanted to play alongside Kolo Muani, but Spalletti seems to have other plans for Sunday&#39;s game.</p>\n\n<p>&quot;We need to expand the range of starters and divide up the time on the field,&quot; said the Juve boss.</p>\n\n<p>&quot;Woltemade did well against Celta and, unlike with Cagliari, he managed to put the ball in the net.</p>\n\n<p>&quot;This ability to be ready when opportunity knocks is crucial and rewards those who are most determined.</p>\n\n<p>&quot;Lazio have two physical centre-backs, so it will be difficult to get through them unless we have bodies in the box.&quot;</p>\n\n\n<p>Lazio are still unbeaten in Serie A this season, with five wins and one draw.</p>\n\n<p>The Biancocelesti have avoided defeat in each of their first seven matches of a Serie A campaign on only six previous occasions in their history, but they have never registered six wins (W5 D2 in both 1972-73 and 1999-2000, the season of their last Scudetto).</p>\n\n<p>Ahead of their trip to Allianz Stadium, Gennaro Gattuso has urged his Lazio side to play without any fear.</p>\n\n<p>&quot;We have to go to Turin aware that we are facing a great team that has reaped less than it has sown,&quot; said Gattuso.</p>\n\n<p>&quot;What interests me is courage. We have to play a game of mentality, without fear. They are stronger than us, but I want to see a team that takes them on and trades blow for blow.</p>\n\n<p>&quot;Being afraid gets us nothing. We are on a journey and we have to improve game by game.</p>\n\n<p>&quot;We are doing a lot of good things, but I want to see further improvement. No fear, no fright.&quot;</p>\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>Juventus – Randal Kolo Muani</strong></p>\n\n<p>Kolo Muani has been involved in two goals in his last three league games (one goal, one assist); as many goal involvements as he registered in his previous 33 matches across Europe&#39;s top five leagues.</p>\n\n<p>Following his goal against Cagliari last time out, the Frenchman could score in consecutive matches in these competitions for the first time since January and February 2025, during his first three appearances for Juventus.</p>\n\n<p><strong>Lazio – Tijjani Noslin</strong></p>\n\n<p>Noslin&#39;s first Serie A goal was against Juventus in February 2024 for Hellas Verona (2-2). The Dutchman, who has two goals and two assists in his last three matches, is enjoying his best season in Europe&#39;s top 10 leagues in terms of minutes per goal involvement, with a goal or assist every 65 minutes.</p>\n\n<p>In the current Italian top flight campaign, only Edon Zhegrova (one goal/assist every 39 minutes) and Marcus Thuram (one goal/assist every 58 minutes) have a better rate (minimum three goal involvements).</p>\n\n<p><strong>MATCH PREDICTION: JUVENTUS WIN</strong></p>\n\n<p>For the first time in Serie A history, Juve (11 points) will face Lazio (16) during the first half of a season with at least five fewer points than the Biancocelesti.</p>\n\n<p>The last nine Serie A matches between Juve and Lazio have seen a perfectly even record, with three wins apiece and three draws; this follows Juve winning 12 of their previous 15 league games against Lazio (D1 L2).</p>\n\n<p>Juve have beaten Lazio more times than any other side in Serie A (W87 D40 L37) and have scored more goals against them than any other club in the competition, too&nbsp;(290).</p>\n\n<p>The Bianconeri have scored in 13 consecutive home Serie A matches against Lazio (30 goals in total, 2.3 per game on average), though Lazio boss Gattuso is hoping to make some history on Sunday.</p>\n\n<p>Gattuso (W5 D1) could become the first manager in Serie A history to win six of his first seven games in charge of Lazio in the competition; Igor Tudor, Tommaso Maestrelli and Vladimir Petkovic all won five of their first seven.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Juventus – 55.3%</p>\n\n<p>Draw – 23.5%</p>\n\n<p>Lazio – 21.2%</p>\n"
     },
     "k0vumt2dvmsh1dkqgfb114h2j": {
       "id": "k0vumt2dvmsh1dkqgfb114h2j",
@@ -33993,6 +34248,34 @@
         "Wharton impressed as ever, creating four chances as Palace looked to mount a comeback, but Strand Larsen&#39;s failure to hit the target with any of his four shots (team-high) proved costly."
       ],
       "html": "<p>Lyon&#39;s perfect start to their Europa League campaign continued on Thursday as they beat Crystal Palace 3-2 and spoilt Pierre Sage&#39;s return to the&nbsp;Groupama Stadium.&nbsp;</p>\n\n<p>Former Lyon boss Sage saw his Palace side fall 2-0 down before the break after goals from&nbsp;Corentin Tolisso and&nbsp;Ernest Nuamah put the Ligue 1 giants in control.&nbsp;</p>\n\n<p>Yeremy Pino and Daichi Kamada responded for the Eagles in an entertaining second half, but substitute Pavel Sulc&#39;s 76th-minute strike proved to be the winning goal.</p>\n\n<p>The hosts&nbsp;were ahead after just eight minutes as Palace failed to clear Nuamah&#39;s in-swinging corner, allowing Tolisso to fire in at&nbsp;Walter Benitez&#39;s near post for the opener.&nbsp;</p>\n\n<p>Ismaila Sarr saw a header drift wide after the half-hour mark, and the Eagles were dealt a blow in first-half stoppage time when&nbsp;Keito Nakamura sprinted into the box before squaring to Nuamah for a simple finish.</p>\n\n<p>However, Palace halved the deficit just five minutes into the second half when&nbsp;Adam Wharton played Pino into the Lyon penalty area&nbsp;with a brilliant first-time pass, and the Spaniard beat Dominik Greif with an emphatic finish.&nbsp;</p>\n\n<p>Jorgen Strand Larsen missed a huge chance to equalise moments later, heading over from Wharton&#39;s corner, while Sarr&#39;s driven cross into the six-yard box was expertly pushed away&nbsp;by Greif.</p>\n\n<p>Lyon then regained control and restored their two-goal cushion&nbsp;in the 76th minute as Nakamura&#39;s mishit effort was flicked in by Sulc, though Kamada teed up a nervy ending after reacting quickest to a loose ball in the box five minutes later.&nbsp;</p>\n\n<p>Chris Richards went mightily close to an equaliser&nbsp;in the final minute of normal time as he connected well with Wharton&#39;s corner, but Greif managed to get enough behind his save to keep out the defender&#39;s header.</p>\n\n\n<p><strong>Lyon&#39;s wide men trouble Palace</strong></p>\n\n<p>The contest was fought evenly, with Lyon edging the expected goals (xG) battle 1.71 to 1.58 after both sides recorded four shots on target and created&nbsp;four Opta-defined big chances each.</p>\n\n<p>The difference-makers, however, were Lyon&#39;s wingers. Nuamah played a crucial role in Lyon&#39;s first goal before scoring a timely second before the break, while Nakamura recorded two assists, even if the second was unintentional.</p>\n\n<p>Nuamah and Nakamura both recorded the joint-most touches in the box among Lyon players (five), while the latter created a team-high four chances and completed 100% of his dribbles (2/2).</p>\n\n<p>While Lyon have ended a four-game winless run against English teams in the Europa League, there will be plenty of positives to take for Sage&#39;s Palace side, who went toe-to-toe against the fourth-place team in Ligue 1.</p>\n\n<p>Wharton impressed as ever, creating four chances as Palace looked to mount a comeback, but Strand Larsen&#39;s failure to hit the target with any of his four shots (team-high) proved costly.</p>\n"
+    },
+    "r6h4gnskrr3l1orxnnc4ifskk": {
+      "id": "r6h4gnskrr3l1orxnnc4ifskk",
+      "title": "Roma 2-0 Genoa: Incredible Castro goal helps Gasperini's men overcome Malen absence",
+      "subtitle": "Despite Donyell Malen's ban, Roma moved back to within two points of Inter by beating Genoa 2-0, helped by an incredible opening goal.",
+      "source": "FotMob",
+      "sourceUrl": "/news/r6h4gnskrr3l1orxnnc4ifskk-roma-2-0-genoa-incredible-castro-goal-helps-gasperinis-men-overcome-malen-absence",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ae/c7/santiago-castro_f5p04bqf9rfb1u6hjxy0voeog.jpg?t=1342631729&w=1200&h=630",
+      "publishedAt": "2026-10-17T20:47:08.000Z",
+      "paragraphs": [
+        "Santiago Castro and Emanuele Lulli both scored their first goals for Roma, the former with a sensational lob, as they beat Genoa 2-0 to move back within two points of the Serie A summit.",
+        "Having seen Inter defeat Bologna 3-1 to pull clear at the top of the table earlier on Saturday, Roma saw off a stern challenge from Genoa – managed by Giallorossi icon Daniele De Rossi – to keep pace with the Nerazzurri.&nbsp;",
+        "Chances were at a premium for much of the first half, though the crossbar was rattled at both ends within the space of three minutes.",
+        "For Roma, defender Leonardo Balerdi met Niccolo Pisilli&#39;s corner with a header that bounced clear off the woodwork, then Genoa&#39;s Stephan El Shaarawy – who played 348 games for the Giallorossi across two spells at the club – left the frame of the goal shaking with a thunderous 20-yard volley.",
+        "But Roma only needed five minutes at the start of the second half to make the breakthrough, and Castro&#39;s first goal for the club was certainly one to remember.",
+        "Matias Soule&#39;s inswinging corner from the right side was glanced on by Castro but ricocheted back into his path, with white shirts surrounding him. In a tight space, he spun away from two markers before scooping an incredible effort into the far corner with the outside of his right boot.&nbsp;",
+        "While Roma&#39;s first goal was all about the finish, it was the build-up that made their 68th-minute second special.&nbsp;",
+        "Soule had two defenders for company when he received the ball up against the touchline inside his own half, but some lovely footwork allowed him to escape down the right flank, and after dribbling inside and exchanging passes with Lorenzo Pellegrini, he crossed to give teenager Lulli a tap-in.",
+        "Pierluigi Gollini had to stay alert to parry a stinging drive from Milutin Osmajic, but that was as much danger as Gian Piero Gasperini&#39;s side faced as they cruised to their fifth win in seven Serie A matches this term.",
+        "Castro and Soule strut their stuff",
+        "With Donyell Malen – who has scored a remarkable 23 goals in 28 games for the club since his January arrival – suspended following his red card against Como, Roma needed to find alternative sources of goals on Saturday.",
+        "And Castro, a €35m acquisition from Bologna, stepped up in a big way, having failed to score from seven shots in his first four outings for Roma, all of which came from the bench.&nbsp;",
+        "When the ball fell to the Argentine near the right corner of the six-yard box, there were nine white shirts – plus goalkeeper Justin Bijlow –&nbsp;between him and the Genoa net.&nbsp;",
+        "It would not have occurred to 99% of players to try a dinked finish into the far top corner, with seemingly no space for the ball to fit into, but Castro produced a magical moment to break the deadlock.",
+        "Like Castro, Lulli had never previously found the net for Roma, but his finish was a far simpler one that owed much to Soule&#39;s daring run. No player on the pitch created more chances than Soule&#39;s three, while he also led the charts for passes into the final third (30) plus dribbles attempted (five) and completed (three).",
+        "Roma now have 17 points on the board after seven games (W5 D2), marking the first time they have hit that tally by this stage of a Serie A season since 2014-15 (18 in that case)."
+      ],
+      "html": "<p>Santiago Castro and Emanuele Lulli both scored their first goals for Roma, the former with a sensational lob, as they beat Genoa 2-0 to move back within two points of the Serie A summit.</p>\n\n<p>Having seen Inter defeat Bologna 3-1 to pull clear at the top of the table earlier on Saturday, Roma saw off a stern challenge from Genoa – managed by Giallorossi icon Daniele De Rossi – to keep pace with the Nerazzurri.&nbsp;</p>\n\n<p>Chances were at a premium for much of the first half, though the crossbar was rattled at both ends within the space of three minutes.</p>\n\n<p>For Roma, defender Leonardo Balerdi met Niccolo Pisilli&#39;s corner with a header that bounced clear off the woodwork, then Genoa&#39;s Stephan El Shaarawy – who played 348 games for the Giallorossi across two spells at the club – left the frame of the goal shaking with a thunderous 20-yard volley.</p>\n\n<p>But Roma only needed five minutes at the start of the second half to make the breakthrough, and Castro&#39;s first goal for the club was certainly one to remember.</p>\n\n<p>Matias Soule&#39;s inswinging corner from the right side was glanced on by Castro but ricocheted back into his path, with white shirts surrounding him. In a tight space, he spun away from two markers before scooping an incredible effort into the far corner with the outside of his right boot.&nbsp;</p>\n\n\n<p>While Roma&#39;s first goal was all about the finish, it was the build-up that made their 68th-minute second special.&nbsp;</p>\n\n<p>Soule had two defenders for company when he received the ball up against the touchline inside his own half, but some lovely footwork allowed him to escape down the right flank, and after dribbling inside and exchanging passes with Lorenzo Pellegrini, he crossed to give teenager Lulli a tap-in.</p>\n\n<p>Pierluigi Gollini had to stay alert to parry a stinging drive from Milutin Osmajic, but that was as much danger as Gian Piero Gasperini&#39;s side faced as they cruised to their fifth win in seven Serie A matches this term.</p>\n\n<p><strong>Castro and Soule strut their stuff</strong></p>\n\n<p>With Donyell Malen – who has scored a remarkable 23 goals in 28 games for the club since his January arrival – suspended following his red card against Como, Roma needed to find alternative sources of goals on Saturday.</p>\n\n<p>And Castro, a €35m acquisition from Bologna, stepped up in a big way, having failed to score from seven shots in his first four outings for Roma, all of which came from the bench.&nbsp;</p>\n\n<p>When the ball fell to the Argentine near the right corner of the six-yard box, there were nine white shirts – plus goalkeeper Justin Bijlow –&nbsp;between him and the Genoa net.&nbsp;</p>\n\n<p>It would not have occurred to 99% of players to try a dinked finish into the far top corner, with seemingly no space for the ball to fit into, but Castro produced a magical moment to break the deadlock.</p>\n\n<p>Like Castro, Lulli had never previously found the net for Roma, but his finish was a far simpler one that owed much to Soule&#39;s daring run. No player on the pitch created more chances than Soule&#39;s three, while he also led the charts for passes into the final third (30) plus dribbles attempted (five) and completed (three).</p>\n\n<p>Roma now have 17 points on the board after seven games (W5 D2), marking the first time they have hit that tally by this stage of a Serie A season since 2014-15 (18 in that case).</p>\n"
     },
     "r7tuvsm5z29e1mmru95hzyb6p": {
       "id": "r7tuvsm5z29e1mmru95hzyb6p",
