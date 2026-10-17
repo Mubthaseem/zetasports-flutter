@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-16T20:34:08.367Z",
+  "updatedAt": "2026-10-17T03:11:20.345Z",
   "table": [
     {
       "position": 1,
@@ -96,25 +96,6 @@
     },
     {
       "position": 6,
-      "teamId": "9783",
-      "teamName": "Deportivo A Coruña",
-      "shortName": "Deportivo A Coruña",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9783.png",
-      "played": 9,
-      "won": 3,
-      "drawn": 4,
-      "lost": 2,
-      "goalsFor": 13,
-      "goalsAgainst": 11,
-      "goalDifference": 2,
-      "points": 13,
-      "form": [
-        "#02CCF0"
-      ],
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 7,
       "teamId": "8560",
       "teamName": "Real Sociedad",
       "shortName": "Real Sociedad",
@@ -126,10 +107,13 @@
       "goalsFor": 12,
       "goalsAgainst": 15,
       "goalDifference": -3,
-      "points": 13
+      "points": 13,
+      "form": [
+        "#02CCF0"
+      ]
     },
     {
-      "position": 8,
+      "position": 7,
       "teamId": "9866",
       "teamName": "Deportivo Alavés",
       "shortName": "Deportivo Alavés",
@@ -141,6 +125,21 @@
       "goalsFor": 12,
       "goalsAgainst": 8,
       "goalDifference": 4,
+      "points": 11
+    },
+    {
+      "position": 8,
+      "teamId": "9783",
+      "teamName": "Deportivo A Coruña",
+      "shortName": "Deportivo A Coruña",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9783.png",
+      "played": 9,
+      "won": 2,
+      "drawn": 5,
+      "lost": 2,
+      "goalsFor": 13,
+      "goalsAgainst": 12,
+      "goalDifference": 1,
       "points": 11
     },
     {
@@ -271,13 +270,12 @@
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8581.png",
       "played": 8,
       "won": 1,
-      "drawn": 3,
-      "lost": 4,
-      "goalsFor": 11,
+      "drawn": 4,
+      "lost": 3,
+      "goalsFor": 12,
       "goalsAgainst": 16,
-      "goalDifference": -5,
-      "points": 6,
-      "qualificationZone": "Active"
+      "goalDifference": -4,
+      "points": 7
     },
     {
       "position": 18,
