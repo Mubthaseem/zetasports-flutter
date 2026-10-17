@@ -2,10 +2,20 @@
   "competitionId": "54",
   "competitionName": "Bundesliga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-17T10:13:13.506Z",
+  "updatedAt": "2026-10-17T15:02:55.918Z",
   "scorers": [
     {
       "rank": 1,
+      "playerId": "276791",
+      "playerName": "Niclas Füllkrug",
+      "teamId": "8697",
+      "teamName": "SV Werder Bremen",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8697.png",
+      "goals": 6,
+      "assists": 0
+    },
+    {
+      "rank": 2,
       "playerId": "540097",
       "playerName": "Patrik Schick",
       "teamId": "8178",
@@ -15,23 +25,13 @@
       "assists": 0
     },
     {
-      "rank": 2,
-      "playerId": "1447050",
-      "playerName": "Younes Ebnoutalib",
-      "teamId": "9810",
-      "teamName": "Eintracht Frankfurt",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9810.png",
-      "goals": 5,
-      "assists": 0
-    },
-    {
       "rank": 3,
-      "playerId": "704523",
-      "playerName": "Christopher Nkunku",
-      "teamId": "178475",
-      "teamName": "RB Leipzig",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/178475.png",
-      "goals": 4,
+      "playerId": "686315",
+      "playerName": "Phillip Tietz",
+      "teamId": "9905",
+      "teamName": "1. FSV Mainz 05",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9905.png",
+      "goals": 5,
       "assists": 0
     }
   ]
