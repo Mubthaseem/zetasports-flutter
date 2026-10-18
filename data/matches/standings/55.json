@@ -2,7 +2,7 @@
   "competitionId": "55",
   "competitionName": "Serie A",
   "season": "2026/2027",
-  "updatedAt": "2026-10-18T10:28:57.474Z",
+  "updatedAt": "2026-10-18T15:27:04.656Z",
   "table": [
     {
       "position": 1,
@@ -60,6 +60,24 @@
     },
     {
       "position": 4,
+      "teamId": "10171",
+      "teamName": "Como",
+      "shortName": "Como",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10171.png",
+      "played": 7,
+      "won": 4,
+      "drawn": 2,
+      "lost": 1,
+      "goalsFor": 12,
+      "goalsAgainst": 7,
+      "goalDifference": 5,
+      "points": 14,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 5,
       "teamId": "9891",
       "teamName": "Frosinone",
       "shortName": "Frosinone",
@@ -73,11 +91,11 @@
       "goalDifference": 4,
       "points": 13,
       "form": [
-        "#2AD572"
+        "#0046A7"
       ]
     },
     {
-      "position": 5,
+      "position": 6,
       "teamId": "8529",
       "teamName": "Cagliari",
       "shortName": "Cagliari",
@@ -91,11 +109,11 @@
       "goalDifference": 3,
       "points": 13,
       "form": [
-        "#0046A7"
+        "#02CCF0"
       ]
     },
     {
-      "position": 6,
+      "position": 7,
       "teamId": "8564",
       "teamName": "Milan",
       "shortName": "Milan",
@@ -107,13 +125,10 @@
       "goalsFor": 11,
       "goalsAgainst": 5,
       "goalDifference": 6,
-      "points": 12,
-      "form": [
-        "#02CCF0"
-      ]
+      "points": 12
     },
     {
-      "position": 7,
+      "position": 8,
       "teamId": "9885",
       "teamName": "Juventus",
       "shortName": "Juventus",
@@ -125,21 +140,6 @@
       "goalsFor": 9,
       "goalsAgainst": 5,
       "goalDifference": 4,
-      "points": 11
-    },
-    {
-      "position": 8,
-      "teamId": "10171",
-      "teamName": "Como",
-      "shortName": "Como",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10171.png",
-      "played": 6,
-      "won": 3,
-      "drawn": 2,
-      "lost": 1,
-      "goalsFor": 9,
-      "goalsAgainst": 6,
-      "goalDifference": 3,
       "points": 11
     },
     {
@@ -174,6 +174,21 @@
     },
     {
       "position": 11,
+      "teamId": "9888",
+      "teamName": "Lecce",
+      "shortName": "Lecce",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9888.png",
+      "played": 7,
+      "won": 3,
+      "drawn": 0,
+      "lost": 4,
+      "goalsFor": 9,
+      "goalsAgainst": 12,
+      "goalDifference": -3,
+      "points": 9
+    },
+    {
+      "position": 12,
       "teamId": "7943",
       "teamName": "Sassuolo",
       "shortName": "Sassuolo",
@@ -188,7 +203,7 @@
       "points": 8
     },
     {
-      "position": 12,
+      "position": 13,
       "teamId": "9804",
       "teamName": "Torino",
       "shortName": "Torino",
@@ -201,21 +216,6 @@
       "goalsAgainst": 9,
       "goalDifference": -2,
       "points": 7
-    },
-    {
-      "position": 13,
-      "teamId": "9888",
-      "teamName": "Lecce",
-      "shortName": "Lecce",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9888.png",
-      "played": 6,
-      "won": 2,
-      "drawn": 0,
-      "lost": 4,
-      "goalsFor": 6,
-      "goalsAgainst": 12,
-      "goalDifference": -6,
-      "points": 6
     },
     {
       "position": 14,
@@ -234,21 +234,6 @@
     },
     {
       "position": 15,
-      "teamId": "8600",
-      "teamName": "Udinese",
-      "shortName": "Udinese",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8600.png",
-      "played": 6,
-      "won": 1,
-      "drawn": 1,
-      "lost": 4,
-      "goalsFor": 9,
-      "goalsAgainst": 13,
-      "goalDifference": -4,
-      "points": 4
-    },
-    {
-      "position": 16,
       "teamId": "6504",
       "teamName": "Monza",
       "shortName": "Monza",
@@ -263,7 +248,7 @@
       "points": 4
     },
     {
-      "position": 17,
+      "position": 16,
       "teamId": "10167",
       "teamName": "Parma",
       "shortName": "Parma",
@@ -278,25 +263,22 @@
       "points": 4
     },
     {
-      "position": 18,
-      "teamId": "8535",
-      "teamName": "Fiorentina",
-      "shortName": "Fiorentina",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8535.png",
-      "played": 6,
+      "position": 17,
+      "teamId": "8600",
+      "teamName": "Udinese",
+      "shortName": "Udinese",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8600.png",
+      "played": 7,
       "won": 1,
       "drawn": 1,
-      "lost": 4,
-      "goalsFor": 7,
-      "goalsAgainst": 14,
+      "lost": 5,
+      "goalsFor": 9,
+      "goalsAgainst": 16,
       "goalDifference": -7,
-      "points": 4,
-      "form": [
-        "#FF4646"
-      ]
+      "points": 4
     },
     {
-      "position": 19,
+      "position": 18,
       "teamId": "10233",
       "teamName": "Genoa",
       "shortName": "Genoa",
@@ -308,6 +290,24 @@
       "goalsFor": 5,
       "goalsAgainst": 13,
       "goalDifference": -8,
+      "points": 4,
+      "form": [
+        "#FF4646"
+      ]
+    },
+    {
+      "position": 19,
+      "teamId": "8535",
+      "teamName": "Fiorentina",
+      "shortName": "Fiorentina",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8535.png",
+      "played": 7,
+      "won": 1,
+      "drawn": 1,
+      "lost": 5,
+      "goalsFor": 8,
+      "goalsAgainst": 17,
+      "goalDifference": -9,
       "points": 4,
       "form": [
         "#FF4646"
