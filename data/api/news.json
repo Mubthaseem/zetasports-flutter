@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-10-17T22:10:19.268Z",
+    "generatedAt": "2026-10-18T00:13:28.865Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 1246
+      "fullArticlesCount": 1251
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,51 @@
     }
   },
   "news": [
+    {
+      "id": "ftbpro_01m54r7m77s8",
+      "title": "Nottingham Forest vs. Arsenal: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m54r7m77s8/nottingham-forest-vs-arsenal-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m553294apvk8mvtmcg.jpg",
+      "publishedAt": "2026-10-18T00:00:01.000Z"
+    },
+    {
+      "id": "ftbpro_01m5536zr634",
+      "title": "Leeds vs. Man Utd: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m5536zr634/leeds-vs-man-utd-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m557ya65bw6n395sn6.jpg",
+      "publishedAt": "2026-10-18T00:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m558nkfdnb",
+      "title": "Transfer Rumors: Barcelona Eye Wantaway Fernandes; Liverpool’s €140m Wirtz Replacement",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m558nkfdnb/transfer-rumors-barcelona-eye-wantaway-fernandes-liverpools-140m-wirtz-replacement",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55ed1gar2vancgf7k.jpg",
+      "publishedAt": "2026-10-17T23:05:00.000Z"
+    },
+    {
+      "id": "1awckzecix70419z8th9divu1y",
+      "title": "Maresca passes credit to Man City players after record-breaking Premier League start",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1awckzecix70419z8th9divu1y-maresca-passes-credit-man-city-players-after-record-breaking-premier-league-start",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/5a/e1/enzo-maresca_dbbs9wddut511n5uf51zjin57.jpg?t=1355099153&w=1260&h=708",
+      "publishedAt": "2026-10-17T22:27:38.000Z"
+    },
+    {
+      "id": "ftbpro_01m55bn8x63t",
+      "title": "Florian Wirtz and the Most Misleading Statistic of the Premier League Season",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m55bn8x63t/florian-wirtz-most-misleading-statistic-premier-league-season",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55bx8pjv6zg9pwp09.jpg",
+      "publishedAt": "2026-10-17T22:19:53.000Z"
+    },
     {
       "id": "jwyq4zlrxv61dgyugo49v88g",
       "title": "Spalletti unlikely to start Woltemade and Kolo Muani together for Juve",
@@ -148,51 +193,6 @@
       "sourceUrl": "/news/ujh51dkqxtog1r51runmdcod2-real-betis-2-5-barcelona-yamal-takes-centre-stage-heated-laliga-clash",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/93/e9/lamine-yamal_1nwomvwn81o641k76jmsri1d1u.jpg?t=1326597217&w=1260&h=708",
       "publishedAt": "2026-10-17T18:56:27.000Z"
-    },
-    {
-      "id": "51tvegbakana1ct70djfg6wbe",
-      "title": "​Newcastle United 0-1 Aston Villa: Manzambi downs former suitors as Jaissle's struggles continue",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/51tvegbakana1ct70djfg6wbe-newcastle-united-0-1-aston-villa-manzambi-downs-former-suitors-jaissles-struggles-continue",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/f2/8b/johan-manzambi_14gnqmtormjs91o2bknsig3r1d.jpg?t=1328681921&w=640&h=360",
-      "publishedAt": "2026-10-17T18:51:30.000Z"
-    },
-    {
-      "id": "6B978312462A1B39511604E1024DF100",
-      "title": "Newcastle 0-1 Aston Villa: Manzambi Downs Magpies as Jaissle’s Struggles Continue",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/newcastle-vs-aston-villa-stats-premier-league-10-2026",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/10/newcastle-v-aston-villa-report.png",
-      "publishedAt": "2026-10-17T18:51:14.000Z"
-    },
-    {
-      "id": "6i3c6t3qbebm1hu2np4w6844x",
-      "title": "Bologna 1-3 Inter: Chivu’s side go top after brilliant turnaround",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/6i3c6t3qbebm1hu2np4w6844x-bologna-1-3-inter-chivus-side-go-top-after-brilliant-turnaround",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/fe/67/inter-players-celebrate-scoring_1smugijs24ted1avtmfaf6labv.jpg?t=1324507153&w=1260&h=708",
-      "publishedAt": "2026-10-17T18:21:22.000Z"
-    },
-    {
-      "id": "ftbpro_01m55dy3ayc1",
-      "title": "Phil Parkinson Finds Tactical Fix to Wrexham’s Injury Woes",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m55dy3ayc1/phil-parkinson-finds-tactical-fix-wrexhams-injury-woes",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55e3bnxz7b0r62tkw.jpg",
-      "publishedAt": "2026-10-17T18:15:42.000Z"
-    },
-    {
-      "id": "ftbpro_01m5558q4qbn",
-      "title": "‘All the Offers He Had’—Jose Mourinho Makes Surprise Vinicius Jr Transfer Admission",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m5558q4qbn/all-offers-he-hadjose-mourinho-makes-surprise-vinicius-jr-transfer-admission",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2552,h_1435,x_200,y_76/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55746g1ydhkepq0t5.jpg",
-      "publishedAt": "2026-10-17T18:00:00.000Z"
     }
   ],
   "articles": {
@@ -3258,6 +3258,37 @@
         "Ireland have four points on the board ahead of their return fixture against Israel, who are bottom after earning their first point in a goalless draw with Kosovo on Thursday."
       ],
       "html": "<p>Heimir Hallgrimsson always expected the Republic of Ireland to &quot;run out of gas&quot; against Austria, as he put their 2-2 Nations League draw down to physical and mental fatigue.</p>\n\n<p>Ireland stormed into a 2-0 lead in their third match in Nations League Group B3, as they attempted to build on last Sunday&#39;s 3-0 victory over Israel.&nbsp;</p>\n\n<p>Troy Parrott scored both of Ireland&#39;s goals in Dublin, with his first being an incredible solo effort in which he skipped past two defenders before slotting past Florian Wiegele.</p>\n\n<p>Parrot&#39;s second was a penalty late in the first half, which came after the game had twice been halted due to protests related to Ireland&#39;s upcoming reverse fixture against Israel.</p>\n\n<p>And Hallgrimsson felt the mental toll of the debate surrounding that game – which will take place on Sunday on neutral ground in Belgrade – played a part in Ireland&#39;s second-half collapse.</p>\n\n<p>Liam Kitching&#39;s error allowed Alexander Prass to pull a goal back for Austria in the 71st minute, and shortly afterwards, fellow substitute Michael Gregoritsch curled a free-kick past Caoimhin Kelleher to equalise, with Austria remaining top of the group on seven points from three games.</p>\n\n<p>&quot;Obviously we were happy to be 2-0 up at half-time,&quot; Hallgrimsson told RTE Sport afterwards.&nbsp;</p>\n\n<p>&quot;We knew, and I told you before the game, that this team is high energy; and we knew that we needed to do some rotation and make changes.&nbsp;</p>\n\n\n<p>&quot;I felt like we just lost organisation, probably due to tiredness, and then you start to make mistakes.</p>\n\n<p>&quot;That was something that we were obviously not happy with, but the first half was good, the organisation was good, we know we can do this.</p>\n\n<p>&quot;I expected us to run out of gas at some point, but maybe not so quickly. This week has not only been physically difficult, but&nbsp;it&#39;s been mentally difficult and that takes a lot of energy as well.&quot;</p>\n\n<p>Parrott&#39;s brace took him to nine goals in his last six competitive outings for Ireland, while his four braces for his country are the most any player has ever scored for them while aged under 25, surpassing Robbie Keane&#39;s three.</p>\n\n<p>Prass scored Austria&#39;s first goal just 208 seconds after coming off the bench, opening his international account on his 23rd senior cap, while Gregoritsch has now netted 25 times for Thursday&#39;s visitors, becoming the 11th Austrian to hit that figure.&nbsp;</p>\n\n<p>Ireland have four points on the board ahead of their return fixture against Israel, who are bottom after earning their first point in a goalless draw with Kosovo on Thursday.</p>\n"
+    },
+    "1awckzecix70419z8th9divu1y": {
+      "id": "1awckzecix70419z8th9divu1y",
+      "title": "Maresca passes credit to Man City players after record-breaking Premier League start",
+      "subtitle": "Enzo Maresca's start with Manchester City has officially been the best in Premier League history, following their win over Ipswich Town.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1awckzecix70419z8th9divu1y-maresca-passes-credit-man-city-players-after-record-breaking-premier-league-start",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/5a/e1/enzo-maresca_dbbs9wddut511n5uf51zjin57.jpg?t=1355099153&w=1200&h=630",
+      "publishedAt": "2026-10-17T22:27:38.000Z",
+      "paragraphs": [
+        "Enzo Maresca insisted all the credit must go to his Manchester City players after recording the best start by any manager in charge of a Premier League club.",
+        "Saturday&#39;s 3-2 victory over Ipswich Town at the Etihad Stadium maintained City&#39;s perfect start to the campaign and made Maresca the first manager to ever win their first seven matches in charge of a club in the competition.&nbsp;",
+        "Only Chelsea under Jose Mourinho in 2005-06 (first nine games) and Liverpool under Jurgen Klopp in 2019-20 (first eight) have ever enjoyed longer winning starts to a Premier League campaign.",
+        "Both of those sides went on to win the title in those respective seasons, and Maresca could not have been more pleased with the way his players have adapted to his methods.",
+        "With so much off-the-pitch uncertainty surrounding City, who were recently found guilty of &quot;systematically&quot; breaching the Premier League&#39;s financial rules over a nine-year period, the Italian knows it would have been easy for them to lose their focus.",
+        "Asked if he was proud of his personal record, Maresca said: &quot;Absolutely, but I also understand we give credit to the players.&nbsp;",
+        "&quot;They only need to be worried about people inside the club, and I give the credit to them. They are not worried about people who judge from outside, because those are people working to create problems.&nbsp;",
+        "&quot;Inside, I promise the players are happy, they&#39;re getting credit and I give the credit to them.&nbsp;It&#39;s a matter of winning games in this business.",
+        "&quot;We were able to win seven in a row and what made me very happy was working day-by-day with the players, the way I can see them improving.",
+        "&quot;Today, I thought we controlled the game, created chances and were good off the ball. We are doing well, and I think that&#39;s the most important thing.&quot;",
+        "Though it was Erling Haaland&#39;s brace that ultimately secured the points for City, Phil Foden opened the scoring, ending his longest-ever run without a Premier League goal, having endured a 23-match drought since netting against Crystal Palace in December 2025.",
+        "And Maresca is determined for Foden to reclaim his place as one of the Premier League&#39;s best players, having won the competition&#39;s Player of the Season award as recently as 2023-24.",
+        "&quot;With Phil, I have said it many times, I knew him from years ago, and for me, he&#39;s one of the best Premier League players,&quot; Maresca said.",
+        "&quot;And since day one, it&#39;s been my duty to help him to be one of the best players again.",
+        "&quot;I&#39;m very happy about his goal, and hopefully it can be just the beginning of many goals and good performances.&quot;",
+        "Ipswich boss Gary O&#39;Neil, meanwhile, was generally positive about a performance in which the Tractor Boys generated 1.66 expected goals but gave up plenty of big chances at the other end, allowing City to rack up 3.53 xG.",
+        "&quot;We did have a go. There are a few things we need to do better, then it&#39;s fine margins in a game like that,&quot; O&#39;Neil said.&nbsp;",
+        "&quot;I&#39;m proud of the group. It&#39;s not what we came for, and we thought we could take points, so we&#39;re disappointed we haven&#39;t.&nbsp;",
+        "&quot;But the players gave everything. The second goal I&#39;m not happy with, and then there were a few bits that were just fine margins.&quot;"
+      ],
+      "html": "<p>Enzo Maresca insisted all the credit must go to his Manchester City players after recording the best start by any manager in charge of a Premier League club.</p>\n\n<p>Saturday&#39;s 3-2 victory over Ipswich Town at the Etihad Stadium maintained City&#39;s perfect start to the campaign and made Maresca the first manager to ever win their first seven matches in charge of a club in the competition.&nbsp;</p>\n\n<p>Only Chelsea under Jose Mourinho in 2005-06 (first nine games) and Liverpool under Jurgen Klopp in 2019-20 (first eight) have ever enjoyed longer winning starts to a Premier League campaign.</p>\n\n<p>Both of those sides went on to win the title in those respective seasons, and Maresca could not have been more pleased with the way his players have adapted to his methods.</p>\n\n<p>With so much off-the-pitch uncertainty surrounding City, who were recently found guilty of &quot;systematically&quot; breaching the Premier League&#39;s financial rules over a nine-year period, the Italian knows it would have been easy for them to lose their focus.</p>\n\n<p>Asked if he was proud of his personal record, Maresca said: &quot;Absolutely, but I also understand we give credit to the players.&nbsp;</p>\n\n<p>&quot;They only need to be worried about people inside the club, and I give the credit to them. They are not worried about people who judge from outside, because those are people working to create problems.&nbsp;</p>\n\n<p>&quot;Inside, I promise the players are happy, they&#39;re getting credit and I give the credit to them.&nbsp;It&#39;s a matter of winning games in this business.</p>\n\n<p>&quot;We were able to win seven in a row and what made me very happy was working day-by-day with the players, the way I can see them improving.</p>\n\n<p>&quot;Today, I thought we controlled the game, created chances and were good off the ball. We are doing well, and I think that&#39;s the most important thing.&quot;</p>\n\n\n<p>Though it was Erling Haaland&#39;s brace that ultimately secured the points for City, Phil Foden opened the scoring, ending his longest-ever run without a Premier League goal, having endured a 23-match drought since netting against Crystal Palace in December 2025.</p>\n\n<p>And Maresca is determined for Foden to reclaim his place as one of the Premier League&#39;s best players, having won the competition&#39;s Player of the Season award as recently as 2023-24.</p>\n\n<p>&quot;With Phil, I have said it many times, I knew him from years ago, and for me, he&#39;s one of the best Premier League players,&quot; Maresca said.</p>\n\n<p>&quot;And since day one, it&#39;s been my duty to help him to be one of the best players again.</p>\n\n<p>&quot;I&#39;m very happy about his goal, and hopefully it can be just the beginning of many goals and good performances.&quot;</p>\n\n<p>Ipswich boss Gary O&#39;Neil, meanwhile, was generally positive about a performance in which the Tractor Boys generated 1.66 expected goals but gave up plenty of big chances at the other end, allowing City to rack up 3.53 xG.</p>\n\n<p>&quot;We did have a go. There are a few things we need to do better, then it&#39;s fine margins in a game like that,&quot; O&#39;Neil said.&nbsp;</p>\n\n<p>&quot;I&#39;m proud of the group. It&#39;s not what we came for, and we thought we could take points, so we&#39;re disappointed we haven&#39;t.&nbsp;</p>\n\n<p>&quot;But the players gave everything. The second goal I&#39;m not happy with, and then there were a few bits that were just fine margins.&quot;</p>\n"
     },
     "1ay7lniq06mzw1m1807f3fdoe9": {
       "id": "1ay7lniq06mzw1m1807f3fdoe9",
@@ -31547,6 +31578,37 @@
         "feed. READ THE LATEST MAN CITY NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m54r7m77s8": {
+      "id": "ftbpro_01m54r7m77s8",
+      "title": "Nottingham Forest vs. Arsenal: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/nottingham-forest-vs-arsenal-preview-predictions-lineups-10-18-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m553294apvk8mvtmcg.jpg",
+      "publishedAt": "2026-10-18T00:00:01.000Z",
+      "paragraphs": [
+        "By Barnaby Lane8:00 PM EDTNottingham Forest host Arsenal on Sunday. / Visionhaus/Getty Images (Nottingham Forest), Stuart MacFarlane/Arsenal FC/Getty Images (Arsenal)Arsenal travel to the City Ground on Sunday to close out the weekend’s Premier League fixtures, with Mikel Arteta’s side looking to maintain their strong start to the season.",
+        "Although the Gunners have yet to consistently reach the heights of their title-winning campaign last year, five victories from their opening six matches have kept them firmly in the hunt.",
+        "They sit second in the standings heading into the weekend, and with league-leaders Manchester City facing the prospect of a points deduction, Arsenal could yet see their position improve without needing to make up much ground on the pitch.",
+        "For Nottingham Forest, the priority is finding a way to turn promising displays into victories. Oliver Glasner’s side remain in the bottom half of the standings and need to start picking up points to avoid being dragged further down the table.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Kai Havertz could prove the difference maker. / Julian Finney/Getty ImagesArsenal have yet to find consistent rhythm following their defeat to Brighton, but Arteta’s side have still managed to get results. The Gunners recovered from a slow start to overcome Leeds before securing a comfortable Champions League victory over Lille.",
+        "Forest, by contrast, head into this contest looking to bounce back from consecutive defeats against Coventry City and Crystal Palace. Their loss to Palace will be particularly frustrating, as they controlled much of the first half but squandered several opportunities before eventually being punished for their lack of cutting edge.",
+        "Recent history suggests Arsenal could face another stubborn afternoon at the City Ground. The Gunners have been held to goalless draws on their previous two visits, and their occasional struggles in front of goal this season may offer Forest encouragement. Aside from the Palace setback, Forest have generally looked organized defensively and will likely prioritize keeping Arsenal at bay.",
+        "However, Arsenal do possess the individual quality to find a breakthrough, even if they have to work hard for it.",
+        "Prediction: Nottingham Forest 0–1 Arsenal",
+        "Forest are managing several injury concerns heading into their clash with Arsenal.",
+        "Striker Igor Jesus is ruled out through injury, as is Nicolò Savona, while Nikola Milenković is also unlikely to return after spending a few weeks on the sidelines.",
+        "The biggest blow, however, could be Morgan Gibbs-White. Having suffered a minor muscle injury against Crystal Palace, his potential absence would be difficult to overcome. Gibbs-White has created the most big chances (seven) and open-play chances (15) of any Forest player in the league this season, while only Pascal Groß (18) has created more chances overall heading into the weekend.",
+        "His absence could pave the way for Gustavo Sá to earn a start.",
+        "Nottingham Forest predicted lineup vs. Arsenal (3-4-2-1): Sels; Cunha, Diomande, Murillo; Muñoz, Schalger, McAtee, Williams; Ndoye, Sá; Delap.",
+        "Arsenal also have several selection headaches to contend with.",
+        "William Saliba remains sidelined by a back injury, while Piero Hincapié is unavailable after suffering an ankle problem against Leeds. Christos Tzolis is another absentee, having sustained a hamstring injury while representing Greece during the international break.",
+        "Martín Zubimendi is a more uncertain case. The midfielder picked up an injury in the same incident as Hincapié, but his recovery has progressed sufficiently to leave the door open for a possible return.",
+        "Should Zubimendi miss out, Declan Rice and Bruno Guimarães could form the midfield partnership in front of a reconfigured defense. Ezri Konsa is expected to join Gabriel Magalhães at center back, while Bukayo Saka, Martin Ødegaard and Eberechi Eze could operate behind Kai Havertz in attack.",
+        "Arsenal predicted lineup vs. Nottingham Forest (4-2-3-1): Raya; White, Konsa, Gabriel, Calafiori; Guimarães, Rice; Saka, Ødegaard, Eze; Havertz."
+      ]
+    },
     "ftbpro_01m54t4scm8a": {
       "id": "ftbpro_01m54t4scm8a",
       "title": "Chelsea Player Ratings vs. Everton: Ugly Injury Sours Blues Victory",
@@ -31711,6 +31773,37 @@
         "feed. READ THE LATEST BARCELONA NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m5536zr634": {
+      "id": "ftbpro_01m5536zr634",
+      "title": "Leeds vs. Man Utd: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/leeds-vs-man-utd-preview-predictions-lineups-10-18-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m557ya65bw6n395sn6.jpg",
+      "publishedAt": "2026-10-18T00:00:00.000Z",
+      "paragraphs": [
+        "By Barnaby Lane8:00 PM EDTLeeds host the latest chapter in this famous rivalry. / Visionhaus/Getty ImagesManchester United rarely relish a trip to Elland Road to face fierce rivals Leeds United, but this Sunday’s visit could hardly come at a worse time for the Red Devils.",
+        "There is little doubt that Man Utd are a club in crisis.",
+        "Michael Carrick’s side sit 13th in the league heading into the weekend and have gone over a month without a win in all competitions. Tensions reached a boiling point following a Champions League defeat to Atlético Madrid, after which defender Lisandro Martínez publicly criticized the club’s hierarchy.",
+        "Although Martínez has since been formally punished, the fallout from the incident is unlikely to disappear overnight. His comments hardly paint the picture of a harmonious dressing room, and a hostile trip to Elland Road is unlikely to provide the ideal remedy for Carrick’s struggling side.",
+        "Meanwhile, Daniel Farke’s stubborn Leeds outfit have shown plenty of fight this season. After giving Arsenal a scare last weekend, the hosts will be eager to build on that performance and strengthen their credentials as potential contenders for European qualification.",
+        "Given United’s recent struggles, another difficult afternoon could await the visitors.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Dominic Calvert-Lewin could be the difference maker. / Visionhaus/Getty ImagesLast season, Leeds held Man Utd to a 1–1 draw at Elland Road before going on to beat their rivals at Old Trafford later in the campaign.",
+        "With Farke’s side looking considerably stronger than they did last term, thanks in part to some smart summer transfer business, and enjoying a solid run of form, the hosts will be confident of extending that unbeaten run against the Red Devils.",
+        "That said, even in their current predicament, Man Utd possess enough quality to hurt Leeds, particularly through captain Bruno Fernandes. The Portuguese midfielder has a habit of delivering against the Whites, registering nine goal contributions in seven Premier League appearances against them.",
+        "Prediction: Leeds United 2–1 Manchester United",
+        "Leeds have no fresh injury concerns heading into their clash with Man Utd, meaning Daniel Farke could name an unchanged lineup from the defeat to Arsenal and draw with Crystal Palace.",
+        "That would see James Trafford start in goal behind a back three of Tarik Muharemović, Nico Elvedi and James Justin, with Gabriel Gudmundsson and Jaden Bogle operating as wingbacks.",
+        "Anton Stach, Ao Tanaka and Ethan Ampadu are expected to form the midfield trio, while Calvert-Lewin leads the line with support from Noah Okafor.",
+        "Leeds predicted lineup vs. Man Utd (3-4-2-1): Trafford; Justin, Elvedi, Muharemović; Bogle, Ampadu, Tanaka, Stach, Justin; Okafor, Calvert-Lewin.",
+        "As mentioned earlier, Martínez is likely to drop out of the starting lineup, paving the way for Yoro to partner Harry Maguire at the heart of United’s defense.",
+        "Elsewhere, following a strong cameo in the draw with Tottenham, Carlos Baleba could earn his first Premier League start for United in place of the struggling Youri Tielemans. He would partner Kobbie Mainoo in central midfield as Carrick looks to find a more effective balance in the middle of the park.",
+        "Benjamin Šeško remains sidelined through injury, meaning Bryan Mbeumo is almost certain to lead the line, with Matheus Cunha, Bruno Fernandes and Amad Diallo operating behind him.",
+        "Man Utd predicted lineup vs. Leeds (4-2-3-1): Lammens; Dalot, Yoro, Maguire, Shaw; Mainoo, Baleba; Amad, Fernandes, Cunha; Mbeumo.",
+        "fuboTV, USA Network, Telemundo, Telemundo Deportes En Vivo"
+      ]
+    },
     "ftbpro_01m554dx4y64": {
       "id": "ftbpro_01m554dx4y64",
       "title": "Iraola Provides Worrying Three-Word Update on Szoboszlai Injury",
@@ -31828,6 +31921,35 @@
         "feed. READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m558nkfdnb": {
+      "id": "ftbpro_01m558nkfdnb",
+      "title": "Transfer Rumors: Barcelona Eye Wantaway Fernandes; Liverpool’s €140m Wirtz Replacement",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/transfer-rumors-barcelona-wantaway-fernandes-liverpool-wirtz-replacement/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55ed1gar2vancgf7k.jpg",
+      "publishedAt": "2026-10-17T23:05:00.000Z",
+      "paragraphs": [
+        "By SI FC Staff7:05 PM EDTBruno Fernandes (left) and Florian Wirtz (right) headline the gossip. / Michael Regan/Getty Images (Fernandes), Visionhaus/Getty Images (Wirtz)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "Viktor Gyökeres is fighting for his Arsenal future. / Marc Atkins/Getty ImagesViktor Gyökeres will push for a move away from Arsenal in January after growing tired of his limited role this season. There is interest across England, Italy, Germany and Spain, and the Gunners would be open to selling if they can find a replacement. (Source: TEAMtalk)",
+        "But Arsenal have concerns over their pursuit of Atlético Madrid striker Julián Alvarez. The Premier League champions fear Barcelona may have the advantage once again, after he changed to the agent that sealed Rodri’s Camp Nou transfer in the summer. (Source: SPORT)",
+        "Bruno Fernandes wants to leave Manchester United in January and has rejected the offer of a new contract over growing frustrations towards the direction of the club. Galatasaray are preparing a move but will have to fend off competition from Barcelona. (Source: Fanatik)",
+        "Similarly, Lisandro Martínez has made it clear he does not see a future for himself at Man Utd. (Source: Manchester Evening News)",
+        "Liverpool have identified Juventus defender Pierre Kalulu as a possible January target. (Source: Football Insider)",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Andoni Iraola has asked Liverpool to spend €140 million ($157 million) to sign Barcelona midfielder Fermín López as a replacement for Florian Wirtz, who is wanted by Bayern Munich, Borussia Dortmund, Chelsea, Newcastle United and Al Hilal. (Source: El Nacional)",
+        "Liverpool are also considering a move for Aston Villa midfielder Johan Manzambi amid doubts over the future of Alexis Mac Allister, who is being followed by Real Madrid. (Source: Fichajes)",
+        "Chelsea and Man Utd have opened talks over a deal for Real Betis center back Natan, but Barcelona are currently leading the race for his signature. (Source: fussball-news)",
+        "Tottenham Hotspur manager Roberto De Zerbi has requested the appointment of former Inter Milan sporting director Piero Ausilio and has also asked for a new striker to arrive in January, with Real Madrid’s Endrick being targeted. (Source: Mundo Deportivo)",
+        "Arsenal, Man Utd and Newcastle United are all tracking Roma right back Wesley. (Source: Asromalive)",
+        "Dani Olmo has been linked with an exit from Barcelona. / Eric Alonso/Getty ImagesBayern Munich have ruled out January moves for Barcelona pair Dani Olmo and Jules Koundé, despite holding longstanding interest in both players. (Source: Mundo Deportivo)",
+        "River Plate are ready to launch a spectacular move for Atlético Madrid striker Julián Alvarez, keen to offer him a temporary six-month loan deal that would pave the way for a permanent exit to Barcelona next summer. (Source: Fichajes)",
+        "Real Madrid are reassessing their midfield targets heading into the January window and are no longer prioritizing a move for Arsenal’s Martín Zubimendi. (Source: Bernabeu Digital)",
+        "Barcelona want a new right back and have been offered the chance to sign Manchester City’s Matheus Nunes by the player’s agent, Jorge Mendes. (Source: El Nacional)",
+        "Man Utd youngster JJ Gabriel is due to decide his next club in the near future. Barcelona or Real Madrid are seen as the most likely destinations ahead of either Bayern Munich or Paris Saint-Germain. (Source: SPORT)",
+        "READ THE LATEST TRANSFER RUMORS FROM THE PAST FEW DAYS. feed"
+      ]
+    },
     "ftbpro_01m558xs6dph": {
       "id": "ftbpro_01m558xs6dph",
       "title": "Wrexham’s Emphatic Win Delivers Perfect Response to Latest Phil Parkinson Claims",
@@ -31854,6 +31976,37 @@
         "Parkinson's substitutions were jeered in the closing stages of Tuesday's defeat to West Brom, but there were no complaints this time when Moore, James and O'Hare were given a rare rest in the final minutes, with victory already secured.",
         "In a week when Wrexham were sensationally linked with Liverpool legend Steven Gerrard as a potential future manager, Parkinson made sure the pressure did not get to him. His side delivered another win when it mattered most.",
         "feed. READ THE LATEST WREXHAM NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m55bn8x63t": {
+      "id": "ftbpro_01m55bn8x63t",
+      "title": "Florian Wirtz and the Most Misleading Statistic of the Premier League Season",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/florian-wirtz-misleading-statistic-premier-league-season/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m55bx8pjv6zg9pwp09.jpg",
+      "publishedAt": "2026-10-17T22:19:53.000Z",
+      "paragraphs": [
+        "By Grey Whitebloom6:19 PM EDTFlorian Wirtz’s Liverpool career is very confusing. / Liverpool FC/Getty ImagesLONDON — Paco Jémez, the manager Andoni Iraola replaced at Rayo Vallecano, had a great line last year. “Statistics are like thongs,” the Spanish tactician mused, “they show a lot, but cover the most important thing.”",
+        "Liverpool’s 2–1 win over Brentford on Saturday threw up one of the season’s most deceptive statistics thus far this season: Florian Wirtz created an unrivaled and remarkable nine chances for his teammates.",
+        "It’s been more than half a decade since anyone racked up so many scoring opportunities in a single Premier League match, while no Liverpool player has ever surpassed that statistic since Opta’s advanced data collection began in 2003–04, per Michael Reid.",
+        "For those who didn’t watch the game—and that is everyone in the United Kingdom, to begin with, given it was televised during the Saturday, 3 p.m. blackout—it would be easy to conclude that this was therefore a sublime performance by Wirtz. After 15 months of nearly’s and not-quite’s, Liverpool’s $154 million (£116 million) had finally gone nuclear, exploding with a performance of such attacking creativity that the record books have to be rewritten. Well, no.",
+        "Wirtz was decent but by no means devastating, alright and quite a long way from awesome. Like Liverpool as a collective, it took Yehor Yarmoliuk’s bone-headed red card on the cusp of halftime for the playmaker to really get into the contest, and even then, the source of acclaim shifted his way, that eye-opening statistic, doesn’t stand up to any scrutiny.",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "Dominik Szoboszlai started an early trend. / BrentfordThis set the tone for the vast majority of the chances Wirtz created: rolling a sideways or backward pass for a teammate to blaze over.",
+        "Alexis Mac Allister also wanted a crack. / BrentfordLiverpool’s beleaguered No. 7 shouldn’t be blamed for the poor choices of his colleagues, but he also shouldn’t be praised for teeing up hopeful pot shots.",
+        "Bradley Barcola spurned one of many chances. / BrentfordDuring an even opening 45 minutes, in which Brentford took a 1–0 lead, Wirtz was left to gently prod at the tight stitching of the hosts’ rearguard. The mobile midfielder is at his best when given license to roam, tiptoeing laterally in search of the weak spot in the opposition’s defense.",
+        "To begin with on Saturday, Wirtz was lured toward the right halfspace, where he would invariably roll a pass across the face of the box rather than trying to find a way through Brentford’s shell.",
+        "Florian Wirtz can’t be blamed for his teammates’ poor choices. / BrentfordMost of the chances that Wirtz created were wild efforts from range, but two were concerningly from corners. Liverpool are one of only four sides in the Premier League yet to score from a set piece this season. For all Arne Slot’s complaining last term, the Reds still racked up 18 goals from this fruitful avenue, the fourth-most in the entire division.",
+        "If the best scheme that Iraola’s backroom staff can draw up is Wirtz rolling the ball back for Trey Nyoni to have a shot from 25 yards, then this could be a very long campaign.",
+        "Alexis Mac Allister didn’t have his radar tuned. / BrentfordIraola has been a fierce advocate of Wirtz, but even the Basque boss waved away his swollen tally of chances created. “In the second half, no?” Iraola clarified, correctly pointing out that Yarmoliuk’s dismissal preceded the majority of Wirtz’s questionable dexterity.",
+        "Trey Nyoni joined the act. / BrentfordWhile this was no performance worthy of an significant statistical celebration, it would be unfair to completely dismiss Wirtz’s virtues. Faced with the massed ranks of 10 Brentford players in retreat, Iraola could turn to his chief lock picker.",
+        "“There are very few spaces, small pockets and [very little] time on the ball,” Iraola said of that second half. “You have to find delicate things because Brentford is a team that defends the box really, really well. You need players like Flo.”",
+        "You also need players who can take advantage of being presented with the ball inside a crowded penalty area. Nyoni, for all his talent, isn’t yet one of them.",
+        "This was Florian Wirtz’s best moment. / BrentfordEven calling Wirtz’s pass for Víctor Muñoz’s equalizer an “assist” is somewhat overstating it. Liverpool’s flying right winger collected the ball 35 yards from goal and had to chop past Keane Lewis-Potter to create space to pick out the bottom corner with his weaker left foot.",
+        "Nevertheless, Wirtz showed an excellent deftness of touch to shift his weight away from Kristoffer Ajer with his first contact of the ball before quickly sliding it ahead of Muñoz, who had the beating of Brentford’s fullback for pace. At a time when Liverpool were still trailing and frustrated by the staccato nature of a contest their hosts were trying to see out any way they could, it was a crucial piece of play.",
+        "Florian Wirtz’s performance was inflated. / BrentfordThis is the most ridiculous case of a chance going down as “created.” Ajer headed the ball onto Wirtz’s shoulder, sending it ricocheting into the path for Barcola to slash wide.",
+        "All of Florian Wirtz’s chances created came from open play. / BrentfordAnother pass going any direction but forward and another shot failing to test Brentford goalkeeper Caoimhin Kelleher."
       ]
     },
     "ftbpro_01m55dy3ayc1": {
