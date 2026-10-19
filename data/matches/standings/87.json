@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-19T12:16:31.946Z",
+  "updatedAt": "2026-10-19T22:02:09.282Z",
   "table": [
     {
       "position": 1,
@@ -204,6 +204,36 @@
     },
     {
       "position": 13,
+      "teamId": "8370",
+      "teamName": "Rayo Vallecano",
+      "shortName": "Rayo Vallecano",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8370.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 12,
+      "goalsAgainst": 17,
+      "goalDifference": -5,
+      "points": 9
+    },
+    {
+      "position": 14,
+      "teamId": "8305",
+      "teamName": "Getafe",
+      "shortName": "Getafe",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8305.png",
+      "played": 9,
+      "won": 2,
+      "drawn": 3,
+      "lost": 4,
+      "goalsFor": 5,
+      "goalsAgainst": 11,
+      "goalDifference": -6,
+      "points": 9
+    },
+    {
+      "position": 15,
       "teamId": "8558",
       "teamName": "Espanyol",
       "shortName": "Espanyol",
@@ -215,36 +245,6 @@
       "goalsFor": 11,
       "goalsAgainst": 12,
       "goalDifference": -1,
-      "points": 8
-    },
-    {
-      "position": 14,
-      "teamId": "8370",
-      "teamName": "Rayo Vallecano",
-      "shortName": "Rayo Vallecano",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8370.png",
-      "played": 7,
-      "won": 2,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 11,
-      "goalsAgainst": 16,
-      "goalDifference": -5,
-      "points": 8
-    },
-    {
-      "position": 15,
-      "teamId": "8305",
-      "teamName": "Getafe",
-      "shortName": "Getafe",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8305.png",
-      "played": 8,
-      "won": 2,
-      "drawn": 2,
-      "lost": 4,
-      "goalsFor": 4,
-      "goalsAgainst": 10,
-      "goalDifference": -6,
       "points": 8
     },
     {

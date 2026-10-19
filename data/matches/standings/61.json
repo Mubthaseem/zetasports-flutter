@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-19T12:16:57.705Z",
+  "updatedAt": "2026-10-19T22:02:34.263Z",
   "table": [
     {
       "position": 1,
@@ -96,6 +96,21 @@
     },
     {
       "position": 6,
+      "teamId": "9764",
+      "teamName": "Gil Vicente",
+      "shortName": "Gil Vicente",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9764.png",
+      "played": 8,
+      "won": 4,
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 8,
+      "goalsAgainst": 6,
+      "goalDifference": 2,
+      "points": 14
+    },
+    {
+      "position": 7,
       "teamId": "1786",
       "teamName": "Académico Viseu",
       "shortName": "Académico Viseu",
@@ -110,7 +125,22 @@
       "points": 14
     },
     {
-      "position": 7,
+      "position": 8,
+      "teamId": "10264",
+      "teamName": "Braga",
+      "shortName": "Braga",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
+      "played": 8,
+      "won": 3,
+      "drawn": 2,
+      "lost": 3,
+      "goalsFor": 9,
+      "goalsAgainst": 10,
+      "goalDifference": -1,
+      "points": 11
+    },
+    {
+      "position": 9,
       "teamId": "9780",
       "teamName": "Alverca",
       "shortName": "Alverca",
@@ -122,36 +152,6 @@
       "goalsFor": 13,
       "goalsAgainst": 12,
       "goalDifference": 1,
-      "points": 11
-    },
-    {
-      "position": 8,
-      "teamId": "9764",
-      "teamName": "Gil Vicente",
-      "shortName": "Gil Vicente",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9764.png",
-      "played": 7,
-      "won": 3,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 6,
-      "goalsAgainst": 5,
-      "goalDifference": 1,
-      "points": 11
-    },
-    {
-      "position": 9,
-      "teamId": "10264",
-      "teamName": "Braga",
-      "shortName": "Braga",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
-      "played": 7,
-      "won": 3,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 8,
-      "goalsAgainst": 8,
-      "goalDifference": 0,
       "points": 11
     },
     {

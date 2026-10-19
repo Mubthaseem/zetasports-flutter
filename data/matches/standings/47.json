@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-19T12:16:29.402Z",
+  "updatedAt": "2026-10-19T22:02:07.162Z",
   "table": [
     {
       "position": 1,
@@ -246,21 +246,36 @@
     },
     {
       "position": 16,
-      "teamId": "8669",
-      "teamName": "Coventry City",
-      "shortName": "Coventry",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8669.png",
-      "played": 6,
-      "won": 2,
-      "drawn": 0,
-      "lost": 4,
-      "goalsFor": 5,
-      "goalsAgainst": 11,
-      "goalDifference": -6,
+      "teamId": "8586",
+      "teamName": "Tottenham Hotspur",
+      "shortName": "Tottenham",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png",
+      "played": 7,
+      "won": 1,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 6,
+      "goalsAgainst": 10,
+      "goalDifference": -4,
       "points": 6
     },
     {
       "position": 17,
+      "teamId": "8669",
+      "teamName": "Coventry City",
+      "shortName": "Coventry",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8669.png",
+      "played": 7,
+      "won": 2,
+      "drawn": 0,
+      "lost": 5,
+      "goalsFor": 6,
+      "goalsAgainst": 14,
+      "goalDifference": -8,
+      "points": 6
+    },
+    {
+      "position": 18,
       "teamId": "9879",
       "teamName": "Fulham",
       "shortName": "Fulham",
@@ -272,10 +287,13 @@
       "goalsFor": 7,
       "goalsAgainst": 10,
       "goalDifference": -3,
-      "points": 5
+      "points": 5,
+      "form": [
+        "#FF4646"
+      ]
     },
     {
-      "position": 18,
+      "position": 19,
       "teamId": "10203",
       "teamName": "Nottingham Forest",
       "shortName": "Nottm Forest",
@@ -293,7 +311,7 @@
       ]
     },
     {
-      "position": 19,
+      "position": 20,
       "teamId": "8472",
       "teamName": "Sunderland",
       "shortName": "Sunderland",
@@ -306,24 +324,6 @@
       "goalsAgainst": 14,
       "goalDifference": -8,
       "points": 4,
-      "form": [
-        "#FF4646"
-      ]
-    },
-    {
-      "position": 20,
-      "teamId": "8586",
-      "teamName": "Tottenham Hotspur",
-      "shortName": "Tottenham",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png",
-      "played": 6,
-      "won": 0,
-      "drawn": 3,
-      "lost": 3,
-      "goalsFor": 3,
-      "goalsAgainst": 9,
-      "goalDifference": -6,
-      "points": 3,
       "form": [
         "#FF4646"
       ]
