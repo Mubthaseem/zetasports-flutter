@@ -2,7 +2,7 @@
   "competitionId": "54",
   "competitionName": "Bundesliga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-18T15:27:05.866Z",
+  "updatedAt": "2026-10-19T03:28:05.888Z",
   "table": [
     {
       "position": 1,
@@ -219,6 +219,21 @@
     },
     {
       "position": 14,
+      "teamId": "8226",
+      "teamName": "Hoffenheim",
+      "shortName": "Hoffenheim",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8226.png",
+      "played": 6,
+      "won": 2,
+      "drawn": 0,
+      "lost": 4,
+      "goalsFor": 11,
+      "goalsAgainst": 14,
+      "goalDifference": -3,
+      "points": 6
+    },
+    {
+      "position": 15,
       "teamId": "10189",
       "teamName": "Schalke 04",
       "shortName": "Schalke 04",
@@ -233,7 +248,7 @@
       "points": 5
     },
     {
-      "position": 15,
+      "position": 16,
       "teamId": "8460",
       "teamName": "Paderborn",
       "shortName": "Paderborn",
@@ -245,10 +260,13 @@
       "goalsFor": 5,
       "goalsAgainst": 9,
       "goalDifference": -4,
-      "points": 5
+      "points": 5,
+      "form": [
+        "#FFA72F"
+      ]
     },
     {
-      "position": 16,
+      "position": 17,
       "teamId": "8149",
       "teamName": "Union Berlin",
       "shortName": "Union Berlin",
@@ -262,24 +280,6 @@
       "goalDifference": -12,
       "points": 5,
       "form": [
-        "#FFA72F"
-      ]
-    },
-    {
-      "position": 17,
-      "teamId": "8226",
-      "teamName": "Hoffenheim",
-      "shortName": "Hoffenheim",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8226.png",
-      "played": 5,
-      "won": 1,
-      "drawn": 0,
-      "lost": 4,
-      "goalsFor": 9,
-      "goalsAgainst": 13,
-      "goalDifference": -4,
-      "points": 3,
-      "form": [
         "#FF4646"
       ]
     },
@@ -289,13 +289,13 @@
       "teamName": "Borussia Mönchengladbach",
       "shortName": "M'gladbach",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9788.png",
-      "played": 5,
+      "played": 6,
       "won": 0,
       "drawn": 0,
-      "lost": 5,
-      "goalsFor": 7,
-      "goalsAgainst": 18,
-      "goalDifference": -11,
+      "lost": 6,
+      "goalsFor": 8,
+      "goalsAgainst": 20,
+      "goalDifference": -12,
       "points": 0,
       "form": [
         "#FF4646"

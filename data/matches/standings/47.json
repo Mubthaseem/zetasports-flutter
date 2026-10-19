@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-18T15:27:00.287Z",
+  "updatedAt": "2026-10-19T03:27:59.254Z",
   "table": [
     {
       "position": 1,
@@ -24,6 +24,24 @@
     },
     {
       "position": 2,
+      "teamId": "9825",
+      "teamName": "Arsenal",
+      "shortName": "Arsenal",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+      "played": 7,
+      "won": 6,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 11,
+      "goalsAgainst": 5,
+      "goalDifference": 6,
+      "points": 18,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 3,
       "teamId": "10204",
       "teamName": "Brighton & Hove Albion",
       "shortName": "Brighton",
@@ -36,24 +54,6 @@
       "goalsAgainst": 5,
       "goalDifference": 18,
       "points": 16,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 3,
-      "teamId": "9825",
-      "teamName": "Arsenal",
-      "shortName": "Arsenal",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-      "played": 6,
-      "won": 5,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 10,
-      "goalsAgainst": 5,
-      "goalDifference": 5,
-      "points": 15,
       "form": [
         "#2AD572"
       ]
@@ -280,13 +280,13 @@
       "teamName": "Nottingham Forest",
       "shortName": "Nottm Forest",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10203.png",
-      "played": 6,
+      "played": 7,
       "won": 1,
       "drawn": 2,
-      "lost": 3,
+      "lost": 4,
       "goalsFor": 5,
-      "goalsAgainst": 8,
-      "goalDifference": -3,
+      "goalsAgainst": 9,
+      "goalDifference": -4,
       "points": 5,
       "form": [
         "#FF4646"

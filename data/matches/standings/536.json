@@ -2,7 +2,7 @@
   "competitionId": "536",
   "competitionName": "Saudi Pro League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-18T15:27:17.985Z",
+  "updatedAt": "2026-10-19T03:28:19.139Z",
   "table": [
     {
       "position": 1,
@@ -159,6 +159,21 @@
     },
     {
       "position": 10,
+      "teamId": "550433",
+      "teamName": "Al Khaleej",
+      "shortName": "Al Khaleej",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/550433.png",
+      "played": 10,
+      "won": 2,
+      "drawn": 6,
+      "lost": 2,
+      "goalsFor": 9,
+      "goalsAgainst": 13,
+      "goalDifference": -4,
+      "points": 12
+    },
+    {
+      "position": 11,
       "teamId": "101911",
       "teamName": "Al Hazem",
       "shortName": "Al Hazem",
@@ -170,21 +185,6 @@
       "goalsFor": 10,
       "goalsAgainst": 13,
       "goalDifference": -3,
-      "points": 9
-    },
-    {
-      "position": 11,
-      "teamId": "550433",
-      "teamName": "Al Khaleej",
-      "shortName": "Al Khaleej",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/550433.png",
-      "played": 9,
-      "won": 1,
-      "drawn": 6,
-      "lost": 2,
-      "goalsFor": 6,
-      "goalsAgainst": 11,
-      "goalDifference": -5,
       "points": 9
     },
     {
@@ -253,13 +253,13 @@
       "teamName": "Al Fateh FC",
       "shortName": "Al Fateh FC",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/177356.png",
-      "played": 9,
+      "played": 10,
       "won": 1,
       "drawn": 3,
-      "lost": 5,
-      "goalsFor": 7,
-      "goalsAgainst": 17,
-      "goalDifference": -10,
+      "lost": 6,
+      "goalsFor": 9,
+      "goalsAgainst": 20,
+      "goalDifference": -11,
       "points": 6,
       "form": [
         "#FF4646"

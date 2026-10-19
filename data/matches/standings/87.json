@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-18T15:27:03.092Z",
+  "updatedAt": "2026-10-19T03:28:02.113Z",
   "table": [
     {
       "position": 1,
@@ -42,6 +42,24 @@
     },
     {
       "position": 3,
+      "teamId": "8633",
+      "teamName": "Real Madrid",
+      "shortName": "Real Madrid",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
+      "played": 9,
+      "won": 7,
+      "drawn": 0,
+      "lost": 2,
+      "goalsFor": 23,
+      "goalsAgainst": 9,
+      "goalDifference": 14,
+      "points": 21,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 4,
       "teamId": "8603",
       "teamName": "Real Betis",
       "shortName": "Real Betis",
@@ -59,55 +77,37 @@
       ]
     },
     {
-      "position": 4,
-      "teamId": "8633",
-      "teamName": "Real Madrid",
-      "shortName": "Real Madrid",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
-      "played": 8,
-      "won": 6,
-      "drawn": 0,
-      "lost": 2,
-      "goalsFor": 19,
-      "goalsAgainst": 8,
-      "goalDifference": 11,
-      "points": 18,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
       "position": 5,
-      "teamId": "8302",
-      "teamName": "Sevilla",
-      "shortName": "Sevilla",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8302.png",
-      "played": 8,
-      "won": 4,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 13,
-      "goalsAgainst": 12,
-      "goalDifference": 1,
-      "points": 14,
+      "teamId": "8560",
+      "teamName": "Real Sociedad",
+      "shortName": "Real Sociedad",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
+      "played": 9,
+      "won": 5,
+      "drawn": 1,
+      "lost": 3,
+      "goalsFor": 17,
+      "goalsAgainst": 17,
+      "goalDifference": 0,
+      "points": 16,
       "form": [
         "#0046A7"
       ]
     },
     {
       "position": 6,
-      "teamId": "8560",
-      "teamName": "Real Sociedad",
-      "shortName": "Real Sociedad",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
-      "played": 8,
+      "teamId": "8302",
+      "teamName": "Sevilla",
+      "shortName": "Sevilla",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8302.png",
+      "played": 9,
       "won": 4,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 15,
-      "goalDifference": -3,
-      "points": 13,
+      "goalsFor": 14,
+      "goalsAgainst": 16,
+      "goalDifference": -2,
+      "points": 14,
       "form": [
         "#02CCF0"
       ]
@@ -122,11 +122,10 @@
       "won": 3,
       "drawn": 2,
       "lost": 4,
-      "goalsFor": 12,
-      "goalsAgainst": 9,
+      "goalsFor": 13,
+      "goalsAgainst": 10,
       "goalDifference": 3,
-      "points": 11,
-      "qualificationZone": "Active"
+      "points": 11
     },
     {
       "position": 8,
@@ -138,11 +137,10 @@
       "won": 2,
       "drawn": 5,
       "lost": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 6,
+      "goalsFor": 10,
+      "goalsAgainst": 7,
       "goalDifference": 3,
-      "points": 11,
-      "qualificationZone": "Active"
+      "points": 11
     },
     {
       "position": 9,
@@ -321,13 +319,13 @@
       "teamName": "Málaga",
       "shortName": "Málaga",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9864.png",
-      "played": 8,
+      "played": 9,
       "won": 0,
       "drawn": 4,
-      "lost": 4,
-      "goalsFor": 4,
-      "goalsAgainst": 13,
-      "goalDifference": -9,
+      "lost": 5,
+      "goalsFor": 6,
+      "goalsAgainst": 18,
+      "goalDifference": -12,
       "points": 4,
       "form": [
         "#FF4646"
