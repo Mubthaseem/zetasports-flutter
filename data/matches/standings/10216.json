@@ -2,10 +2,28 @@
   "competitionId": "10216",
   "competitionName": "UEFA Conference League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-22T11:14:29.360Z",
+  "updatedAt": "2026-10-22T16:42:47.037Z",
   "table": [
     {
       "position": 1,
+      "teamId": "10200",
+      "teamName": "Panathinaikos",
+      "shortName": "Panathinaikos",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10200.png",
+      "played": 2,
+      "won": 2,
+      "drawn": 0,
+      "lost": 0,
+      "goalsFor": 7,
+      "goalsAgainst": 2,
+      "goalDifference": 5,
+      "points": 6,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 2,
       "teamId": "10204",
       "teamName": "Brighton & Hove Albion",
       "shortName": "Brighton",
@@ -23,7 +41,7 @@
       ]
     },
     {
-      "position": 2,
+      "position": 3,
       "teamId": "8391",
       "teamName": "FC København",
       "shortName": "FC København",
@@ -41,7 +59,7 @@
       ]
     },
     {
-      "position": 3,
+      "position": 4,
       "teamId": "9752",
       "teamName": "Trabzonspor",
       "shortName": "Trabzonspor",
@@ -59,7 +77,7 @@
       ]
     },
     {
-      "position": 4,
+      "position": 5,
       "teamId": "8524",
       "teamName": "Atalanta",
       "shortName": "Atalanta",
@@ -77,7 +95,7 @@
       ]
     },
     {
-      "position": 5,
+      "position": 6,
       "teamId": "8127",
       "teamName": "Mjällby",
       "shortName": "Mjällby",
@@ -95,7 +113,7 @@
       ]
     },
     {
-      "position": 6,
+      "position": 7,
       "teamId": "9997",
       "teamName": "St.Truiden",
       "shortName": "St.Truiden",
@@ -113,7 +131,7 @@
       ]
     },
     {
-      "position": 7,
+      "position": 8,
       "teamId": "8358",
       "teamName": "Freiburg",
       "shortName": "Freiburg",
@@ -131,7 +149,7 @@
       ]
     },
     {
-      "position": 8,
+      "position": 9,
       "teamId": "7896",
       "teamName": "Lugano",
       "shortName": "Lugano",
@@ -145,11 +163,11 @@
       "goalDifference": 1,
       "points": 3,
       "form": [
-        "#2AD572"
+        "#0294F0"
       ]
     },
     {
-      "position": 9,
+      "position": 10,
       "teamId": "9829",
       "teamName": "Monaco",
       "shortName": "Monaco",
@@ -167,7 +185,7 @@
       ]
     },
     {
-      "position": 10,
+      "position": 11,
       "teamId": "8468",
       "teamName": "Brann",
       "shortName": "Brann",
@@ -185,29 +203,11 @@
       ]
     },
     {
-      "position": 11,
+      "position": 12,
       "teamId": "10154",
       "teamName": "Hajduk Split",
       "shortName": "Hajduk Split",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10154.png",
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "goalDifference": 1,
-      "points": 3,
-      "form": [
-        "#0294F0"
-      ]
-    },
-    {
-      "position": 12,
-      "teamId": "10200",
-      "teamName": "Panathinaikos",
-      "shortName": "Panathinaikos",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10200.png",
       "played": 1,
       "won": 1,
       "drawn": 0,
@@ -312,24 +312,6 @@
     },
     {
       "position": 18,
-      "teamId": "8037",
-      "teamName": "Kairat Almaty",
-      "shortName": "Kairat Almaty",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8037.png",
-      "played": 1,
-      "won": 0,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 1,
-      "goalsAgainst": 1,
-      "goalDifference": 0,
-      "points": 1,
-      "form": [
-        "#0294F0"
-      ]
-    },
-    {
-      "position": 19,
       "teamId": "10039",
       "teamName": "Egnatia",
       "shortName": "Egnatia",
@@ -347,7 +329,7 @@
       ]
     },
     {
-      "position": 20,
+      "position": 19,
       "teamId": "9860",
       "teamName": "Heart of Midlothian",
       "shortName": "Hearts",
@@ -365,7 +347,7 @@
       ]
     },
     {
-      "position": 21,
+      "position": 20,
       "teamId": "624924",
       "teamName": "Riga FC",
       "shortName": "Riga FC",
@@ -383,7 +365,7 @@
       ]
     },
     {
-      "position": 22,
+      "position": 21,
       "teamId": "480286",
       "teamName": "Universitatea Craiova",
       "shortName": "Universitatea Craiova",
@@ -395,6 +377,24 @@
       "goalsFor": 1,
       "goalsAgainst": 1,
       "goalDifference": 0,
+      "points": 1,
+      "form": [
+        "#0294F0"
+      ]
+    },
+    {
+      "position": 22,
+      "teamId": "8037",
+      "teamName": "Kairat Almaty",
+      "shortName": "Kairat Almaty",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8037.png",
+      "played": 2,
+      "won": 0,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 6,
+      "goalDifference": -4,
       "points": 1,
       "form": [
         "#0294F0"
