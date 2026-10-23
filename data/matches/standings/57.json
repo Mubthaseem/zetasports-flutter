@@ -2,7 +2,7 @@
   "competitionId": "57",
   "competitionName": "Eredivisie",
   "season": "2026/2027",
-  "updatedAt": "2026-10-23T16:33:26.727Z",
+  "updatedAt": "2026-10-23T21:03:37.009Z",
   "table": [
     {
       "position": 1,
@@ -132,6 +132,21 @@
     },
     {
       "position": 8,
+      "teamId": "6433",
+      "teamName": "Go Ahead Eagles",
+      "shortName": "Go Ahead Eagles",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6433.png",
+      "played": 10,
+      "won": 3,
+      "drawn": 5,
+      "lost": 2,
+      "goalsFor": 23,
+      "goalsAgainst": 23,
+      "goalDifference": 0,
+      "points": 14
+    },
+    {
+      "position": 9,
       "teamId": "10228",
       "teamName": "SC Heerenveen",
       "shortName": "SC Heerenveen",
@@ -144,21 +159,6 @@
       "goalsAgainst": 11,
       "goalDifference": 4,
       "points": 12
-    },
-    {
-      "position": 9,
-      "teamId": "6433",
-      "teamName": "Go Ahead Eagles",
-      "shortName": "Go Ahead Eagles",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6433.png",
-      "played": 9,
-      "won": 2,
-      "drawn": 5,
-      "lost": 2,
-      "goalsFor": 20,
-      "goalsAgainst": 21,
-      "goalDifference": -1,
-      "points": 11
     },
     {
       "position": 10,
@@ -252,24 +252,6 @@
     },
     {
       "position": 16,
-      "teamId": "6414",
-      "teamName": "Telstar",
-      "shortName": "Telstar",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6414.png",
-      "played": 9,
-      "won": 1,
-      "drawn": 3,
-      "lost": 5,
-      "goalsFor": 10,
-      "goalsAgainst": 18,
-      "goalDifference": -8,
-      "points": 6,
-      "form": [
-        "#FFA72F"
-      ]
-    },
-    {
-      "position": 17,
       "teamId": "10217",
       "teamName": "ADO Den Haag",
       "shortName": "ADO Den Haag",
@@ -280,6 +262,24 @@
       "lost": 5,
       "goalsFor": 11,
       "goalsAgainst": 20,
+      "goalDifference": -9,
+      "points": 6,
+      "form": [
+        "#FFA72F"
+      ]
+    },
+    {
+      "position": 17,
+      "teamId": "6414",
+      "teamName": "Telstar",
+      "shortName": "Telstar",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6414.png",
+      "played": 10,
+      "won": 1,
+      "drawn": 3,
+      "lost": 6,
+      "goalsFor": 12,
+      "goalsAgainst": 21,
       "goalDifference": -9,
       "points": 6,
       "form": [
