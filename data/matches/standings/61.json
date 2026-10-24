@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-24T15:27:50.016Z",
+  "updatedAt": "2026-10-24T20:18:59.557Z",
   "table": [
     {
       "position": 1,
@@ -10,17 +10,18 @@
       "teamName": "FC Porto",
       "shortName": "FC Porto",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9773.png",
-      "played": 8,
+      "played": 9,
       "won": 8,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
       "goalsFor": 20,
       "goalsAgainst": 4,
       "goalDifference": 16,
-      "points": 24,
+      "points": 25,
       "form": [
         "#2AD572"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 2,
@@ -82,14 +83,14 @@
       "teamName": "Arouca",
       "shortName": "Arouca",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/158085.png",
-      "played": 8,
-      "won": 4,
+      "played": 9,
+      "won": 5,
       "drawn": 2,
       "lost": 2,
-      "goalsFor": 11,
+      "goalsFor": 12,
       "goalsAgainst": 7,
-      "goalDifference": 4,
-      "points": 14,
+      "goalDifference": 5,
+      "points": 17,
       "form": [
         "#02CCF0"
       ]
@@ -100,14 +101,15 @@
       "teamName": "Gil Vicente",
       "shortName": "Gil Vicente",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9764.png",
-      "played": 8,
+      "played": 9,
       "won": 4,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 2,
       "goalsFor": 8,
       "goalsAgainst": 6,
       "goalDifference": 2,
-      "points": 14
+      "points": 15,
+      "qualificationZone": "Active"
     },
     {
       "position": 7,
@@ -145,13 +147,13 @@
       "teamName": "Alverca",
       "shortName": "Alverca",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9780.png",
-      "played": 8,
+      "played": 9,
       "won": 3,
       "drawn": 2,
-      "lost": 3,
+      "lost": 4,
       "goalsFor": 13,
-      "goalsAgainst": 12,
-      "goalDifference": 1,
+      "goalsAgainst": 13,
+      "goalDifference": 0,
       "points": 11
     },
     {
@@ -165,10 +167,9 @@
       "drawn": 4,
       "lost": 3,
       "goalsFor": 14,
-      "goalsAgainst": 16,
-      "goalDifference": -2,
-      "points": 10,
-      "qualificationZone": "Active"
+      "goalsAgainst": 17,
+      "goalDifference": -3,
+      "points": 10
     },
     {
       "position": 11,
@@ -255,14 +256,13 @@
       "won": 2,
       "drawn": 1,
       "lost": 6,
-      "goalsFor": 4,
+      "goalsFor": 5,
       "goalsAgainst": 17,
-      "goalDifference": -13,
+      "goalDifference": -12,
       "points": 7,
       "form": [
         "#FFA72F"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 17,

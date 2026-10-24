@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-24T15:27:17.130Z",
+  "updatedAt": "2026-10-24T20:18:28.817Z",
   "table": [
     {
       "position": 1,
@@ -38,8 +38,7 @@
       "points": 21,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 3,
@@ -65,13 +64,13 @@
       "teamName": "Chelsea",
       "shortName": "Chelsea",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8455.png",
-      "played": 7,
+      "played": 8,
       "won": 4,
       "drawn": 1,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 17,
-      "goalsAgainst": 13,
-      "goalDifference": 4,
+      "goalsAgainst": 15,
+      "goalDifference": 2,
       "points": 13,
       "form": [
         "#2AD572"
@@ -153,8 +152,7 @@
       "goalsFor": 8,
       "goalsAgainst": 9,
       "goalDifference": -1,
-      "points": 10,
-      "qualificationZone": "Active"
+      "points": 10
     },
     {
       "position": 10,
@@ -188,6 +186,36 @@
     },
     {
       "position": 12,
+      "teamId": "8586",
+      "teamName": "Tottenham Hotspur",
+      "shortName": "Tottenham",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 8,
+      "goalsAgainst": 10,
+      "goalDifference": -2,
+      "points": 9
+    },
+    {
+      "position": 13,
+      "teamId": "9879",
+      "teamName": "Fulham",
+      "shortName": "Fulham",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 8,
+      "goalsAgainst": 10,
+      "goalDifference": -2,
+      "points": 8
+    },
+    {
+      "position": 14,
       "teamId": "10261",
       "teamName": "Newcastle United",
       "shortName": "Newcastle",
@@ -202,7 +230,7 @@
       "points": 8
     },
     {
-      "position": 13,
+      "position": 15,
       "teamId": "10260",
       "teamName": "Manchester United",
       "shortName": "Man United",
@@ -217,7 +245,7 @@
       "points": 7
     },
     {
-      "position": 14,
+      "position": 16,
       "teamId": "9826",
       "teamName": "Crystal Palace",
       "shortName": "Crystal Palace",
@@ -230,38 +258,6 @@
       "goalsAgainst": 17,
       "goalDifference": -8,
       "points": 7
-    },
-    {
-      "position": 15,
-      "teamId": "8669",
-      "teamName": "Coventry City",
-      "shortName": "Coventry",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8669.png",
-      "played": 8,
-      "won": 2,
-      "drawn": 1,
-      "lost": 5,
-      "goalsFor": 6,
-      "goalsAgainst": 14,
-      "goalDifference": -8,
-      "points": 7,
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 16,
-      "teamId": "9879",
-      "teamName": "Fulham",
-      "shortName": "Fulham",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
-      "played": 8,
-      "won": 1,
-      "drawn": 3,
-      "lost": 4,
-      "goalsFor": 7,
-      "goalsAgainst": 10,
-      "goalDifference": -3,
-      "points": 6,
-      "qualificationZone": "Active"
     },
     {
       "position": 17,
@@ -298,17 +294,17 @@
     },
     {
       "position": 19,
-      "teamId": "8586",
-      "teamName": "Tottenham Hotspur",
-      "shortName": "Tottenham",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png",
-      "played": 7,
-      "won": 1,
-      "drawn": 3,
-      "lost": 3,
+      "teamId": "8669",
+      "teamName": "Coventry City",
+      "shortName": "Coventry",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8669.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 0,
+      "lost": 6,
       "goalsFor": 6,
-      "goalsAgainst": 10,
-      "goalDifference": -4,
+      "goalsAgainst": 15,
+      "goalDifference": -9,
       "points": 6,
       "form": [
         "#FF4646"

@@ -2,7 +2,7 @@
   "competitionId": "57",
   "competitionName": "Eredivisie",
   "season": "2026/2027",
-  "updatedAt": "2026-10-24T15:27:48.611Z",
+  "updatedAt": "2026-10-24T20:18:58.208Z",
   "table": [
     {
       "position": 1,
@@ -114,6 +114,25 @@
     },
     {
       "position": 7,
+      "teamId": "10228",
+      "teamName": "SC Heerenveen",
+      "shortName": "SC Heerenveen",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10228.png",
+      "played": 10,
+      "won": 4,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 17,
+      "goalsAgainst": 12,
+      "goalDifference": 5,
+      "points": 15,
+      "form": [
+        "#7FAEFF"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 8,
       "teamId": "8674",
       "teamName": "FC Groningen",
       "shortName": "FC Groningen",
@@ -125,13 +144,10 @@
       "goalsFor": 22,
       "goalsAgainst": 19,
       "goalDifference": 3,
-      "points": 14,
-      "form": [
-        "#7FAEFF"
-      ]
+      "points": 14
     },
     {
-      "position": 8,
+      "position": 9,
       "teamId": "6433",
       "teamName": "Go Ahead Eagles",
       "shortName": "Go Ahead Eagles",
@@ -146,22 +162,22 @@
       "points": 14
     },
     {
-      "position": 9,
-      "teamId": "10228",
-      "teamName": "SC Heerenveen",
-      "shortName": "SC Heerenveen",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10228.png",
-      "played": 9,
+      "position": 10,
+      "teamId": "7788",
+      "teamName": "Cambuur",
+      "shortName": "Cambuur",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7788.png",
+      "played": 10,
       "won": 3,
       "drawn": 3,
-      "lost": 3,
-      "goalsFor": 15,
-      "goalsAgainst": 11,
-      "goalDifference": 4,
+      "lost": 4,
+      "goalsFor": 19,
+      "goalsAgainst": 22,
+      "goalDifference": -3,
       "points": 12
     },
     {
-      "position": 10,
+      "position": 11,
       "teamId": "9908",
       "teamName": "FC Utrecht",
       "shortName": "FC Utrecht",
@@ -170,14 +186,13 @@
       "won": 3,
       "drawn": 3,
       "lost": 4,
-      "goalsFor": 16,
-      "goalsAgainst": 26,
+      "goalsFor": 17,
+      "goalsAgainst": 27,
       "goalDifference": -10,
-      "points": 12,
-      "qualificationZone": "Active"
+      "points": 12
     },
     {
-      "position": 11,
+      "position": 12,
       "teamId": "10218",
       "teamName": "Excelsior",
       "shortName": "Excelsior",
@@ -192,7 +207,7 @@
       "points": 11
     },
     {
-      "position": 12,
+      "position": 13,
       "teamId": "8464",
       "teamName": "NEC Nijmegen",
       "shortName": "NEC Nijmegen",
@@ -207,7 +222,7 @@
       "points": 10
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "8614",
       "teamName": "Sparta Rotterdam",
       "shortName": "Sparta Rotterdam",
@@ -222,21 +237,6 @@
       "points": 9
     },
     {
-      "position": 14,
-      "teamId": "7788",
-      "teamName": "Cambuur",
-      "shortName": "Cambuur",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7788.png",
-      "played": 9,
-      "won": 2,
-      "drawn": 3,
-      "lost": 4,
-      "goalsFor": 13,
-      "goalsAgainst": 21,
-      "goalDifference": -8,
-      "points": 9
-    },
-    {
       "position": 15,
       "teamId": "6413",
       "teamName": "PEC Zwolle",
@@ -246,32 +246,13 @@
       "won": 2,
       "drawn": 2,
       "lost": 6,
-      "goalsFor": 10,
-      "goalsAgainst": 22,
+      "goalsFor": 11,
+      "goalsAgainst": 23,
       "goalDifference": -12,
-      "points": 8,
-      "qualificationZone": "Active"
+      "points": 8
     },
     {
       "position": 16,
-      "teamId": "10217",
-      "teamName": "ADO Den Haag",
-      "shortName": "ADO Den Haag",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10217.png",
-      "played": 9,
-      "won": 1,
-      "drawn": 3,
-      "lost": 5,
-      "goalsFor": 11,
-      "goalsAgainst": 20,
-      "goalDifference": -9,
-      "points": 6,
-      "form": [
-        "#FFA72F"
-      ]
-    },
-    {
-      "position": 17,
       "teamId": "6414",
       "teamName": "Telstar",
       "shortName": "Telstar",
@@ -285,8 +266,27 @@
       "goalDifference": -9,
       "points": 6,
       "form": [
-        "#FF4646"
+        "#FFA72F"
       ]
+    },
+    {
+      "position": 17,
+      "teamId": "10217",
+      "teamName": "ADO Den Haag",
+      "shortName": "ADO Den Haag",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10217.png",
+      "played": 10,
+      "won": 1,
+      "drawn": 3,
+      "lost": 6,
+      "goalsFor": 12,
+      "goalsAgainst": 22,
+      "goalDifference": -10,
+      "points": 6,
+      "form": [
+        "#FF4646"
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 18,
@@ -294,13 +294,13 @@
       "teamName": "Willem II",
       "shortName": "Willem II",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8525.png",
-      "played": 9,
+      "played": 10,
       "won": 0,
       "drawn": 2,
-      "lost": 7,
-      "goalsFor": 9,
-      "goalsAgainst": 26,
-      "goalDifference": -17,
+      "lost": 8,
+      "goalsFor": 10,
+      "goalsAgainst": 32,
+      "goalDifference": -22,
       "points": 2,
       "form": [
         "#FF4646"
