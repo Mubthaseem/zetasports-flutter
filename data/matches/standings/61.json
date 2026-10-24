@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-24T10:23:00.172Z",
+  "updatedAt": "2026-10-24T15:27:50.016Z",
   "table": [
     {
       "position": 1,
@@ -160,14 +160,15 @@
       "teamName": "Estrela da Amadora",
       "shortName": "Estrela da Amadora",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1074320.png",
-      "played": 8,
+      "played": 9,
       "won": 2,
       "drawn": 4,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 14,
-      "goalsAgainst": 15,
-      "goalDifference": -1,
-      "points": 10
+      "goalsAgainst": 16,
+      "goalDifference": -2,
+      "points": 10,
+      "qualificationZone": "Active"
     },
     {
       "position": 11,
@@ -246,6 +247,25 @@
     },
     {
       "position": 16,
+      "teamId": "212821",
+      "teamName": "Casa Pia AC",
+      "shortName": "Casa Pia AC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212821.png",
+      "played": 9,
+      "won": 2,
+      "drawn": 1,
+      "lost": 6,
+      "goalsFor": 4,
+      "goalsAgainst": 17,
+      "goalDifference": -13,
+      "points": 7,
+      "form": [
+        "#FFA72F"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 17,
       "teamId": "10214",
       "teamName": "Nacional",
       "shortName": "Nacional",
@@ -257,24 +277,6 @@
       "goalsFor": 9,
       "goalsAgainst": 18,
       "goalDifference": -9,
-      "points": 4,
-      "form": [
-        "#FFA72F"
-      ]
-    },
-    {
-      "position": 17,
-      "teamId": "212821",
-      "teamName": "Casa Pia AC",
-      "shortName": "Casa Pia AC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212821.png",
-      "played": 8,
-      "won": 1,
-      "drawn": 1,
-      "lost": 6,
-      "goalsFor": 3,
-      "goalsAgainst": 17,
-      "goalDifference": -14,
       "points": 4,
       "form": [
         "#FF4646"

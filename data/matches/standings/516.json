@@ -2,7 +2,7 @@
   "competitionId": "516",
   "competitionName": "Algerian Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-10-24T10:23:17.286Z",
+  "updatedAt": "2026-10-24T15:28:06.473Z",
   "table": [
     {
       "position": 1,
@@ -24,6 +24,25 @@
     },
     {
       "position": 2,
+      "teamId": "101630",
+      "teamName": "JS Kabylie",
+      "shortName": "JS Kabylie",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101630.png",
+      "played": 6,
+      "won": 4,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 10,
+      "goalsAgainst": 3,
+      "goalDifference": 7,
+      "points": 13,
+      "form": [
+        "#FFD908"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 3,
       "teamId": "101633",
       "teamName": "CR Bélouizdad",
       "shortName": "CR Bélouizdad",
@@ -37,11 +56,11 @@
       "goalDifference": 4,
       "points": 13,
       "form": [
-        "#FFD908"
+        "#0294F0"
       ]
     },
     {
-      "position": 3,
+      "position": 4,
       "teamId": "1792386",
       "teamName": "MB Rouissat",
       "shortName": "MB Rouissat",
@@ -53,25 +72,7 @@
       "goalsFor": 6,
       "goalsAgainst": 3,
       "goalDifference": 3,
-      "points": 12,
-      "form": [
-        "#0294F0"
-      ]
-    },
-    {
-      "position": 4,
-      "teamId": "101630",
-      "teamName": "JS Kabylie",
-      "shortName": "JS Kabylie",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101630.png",
-      "played": 5,
-      "won": 3,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 7,
-      "goalsAgainst": 3,
-      "goalDifference": 4,
-      "points": 10
+      "points": 12
     },
     {
       "position": 5,
@@ -184,14 +185,15 @@
       "teamName": "USM Khenchela",
       "shortName": "USM Khenchela",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1387869.png",
-      "played": 5,
+      "played": 6,
       "won": 1,
       "drawn": 2,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 3,
-      "goalsAgainst": 3,
-      "goalDifference": 0,
-      "points": 5
+      "goalsAgainst": 6,
+      "goalDifference": -3,
+      "points": 5,
+      "qualificationZone": "Active"
     },
     {
       "position": 13,

@@ -2,7 +2,7 @@
   "competitionId": "536",
   "competitionName": "Saudi Pro League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-24T10:22:46.157Z",
+  "updatedAt": "2026-10-24T15:27:36.813Z",
   "table": [
     {
       "position": 1,
@@ -100,17 +100,18 @@
       "teamName": "Neom SC",
       "shortName": "Neom SC",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1699505.png",
-      "played": 10,
-      "won": 5,
+      "played": 11,
+      "won": 6,
       "drawn": 1,
       "lost": 4,
-      "goalsFor": 14,
+      "goalsFor": 16,
       "goalsAgainst": 9,
-      "goalDifference": 5,
-      "points": 16,
+      "goalDifference": 7,
+      "points": 19,
       "form": [
         "#0046A7"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 7,
@@ -118,14 +119,15 @@
       "teamName": "Al-Ettifaq",
       "shortName": "Al-Ettifaq",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/101915.png",
-      "played": 10,
+      "played": 11,
       "won": 4,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 3,
       "goalsFor": 14,
       "goalsAgainst": 16,
       "goalDifference": -2,
-      "points": 15
+      "points": 16,
+      "qualificationZone": "Active"
     },
     {
       "position": 8,
@@ -148,14 +150,15 @@
       "teamName": "Al Kholood",
       "shortName": "Al Kholood",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1523706.png",
-      "played": 9,
+      "played": 10,
       "won": 3,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 3,
       "goalsFor": 14,
       "goalsAgainst": 18,
       "goalDifference": -4,
-      "points": 12
+      "points": 13,
+      "qualificationZone": "Active"
     },
     {
       "position": 10,
@@ -289,17 +292,18 @@
       "teamName": "Abha",
       "shortName": "Abha",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/150414.png",
-      "played": 8,
+      "played": 9,
       "won": 0,
       "drawn": 2,
-      "lost": 6,
+      "lost": 7,
       "goalsFor": 6,
-      "goalsAgainst": 15,
-      "goalDifference": -9,
+      "goalsAgainst": 17,
+      "goalDifference": -11,
       "points": 2,
       "form": [
         "#FF4646"
-      ]
+      ],
+      "qualificationZone": "Active"
     }
   ]
 }
