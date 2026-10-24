@@ -2,7 +2,7 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - Leagues & Tables Feed",
-    "generatedAt": "2026-10-24T01:54:16.131Z",
+    "generatedAt": "2026-10-24T03:30:02.531Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "competitionsCount": 26,
@@ -411,7 +411,7 @@
       "competitionId": "42",
       "competitionName": "UEFA Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:07.030Z",
+      "updatedAt": "2026-10-24T03:29:06.098Z",
       "table": [
         {
           "position": 1,
@@ -1031,14 +1031,14 @@
       "competitionId": "44",
       "competitionName": "Copa América",
       "season": "2024",
-      "updatedAt": "2026-10-23T21:03:43.300Z",
+      "updatedAt": "2026-10-24T03:29:48.958Z",
       "table": []
     },
     "47": {
       "competitionId": "47",
       "competitionName": "Premier League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:05.759Z",
+      "updatedAt": "2026-10-24T03:29:04.361Z",
       "table": [
         {
           "position": 1,
@@ -1370,14 +1370,14 @@
       "competitionId": "50",
       "competitionName": "UEFA EURO",
       "season": "2028",
-      "updatedAt": "2026-10-23T21:03:42.347Z",
+      "updatedAt": "2026-10-24T03:29:47.420Z",
       "table": []
     },
     "53": {
       "competitionId": "53",
       "competitionName": "Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:12.604Z",
+      "updatedAt": "2026-10-24T03:29:12.555Z",
       "table": [
         {
           "position": 1,
@@ -1682,7 +1682,7 @@
       "competitionId": "54",
       "competitionName": "Bundesliga",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:11.573Z",
+      "updatedAt": "2026-10-24T03:29:10.895Z",
       "table": [
         {
           "position": 1,
@@ -1987,7 +1987,7 @@
       "competitionId": "55",
       "competitionName": "Serie A",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:10.248Z",
+      "updatedAt": "2026-10-24T03:29:08.946Z",
       "table": [
         {
           "position": 1,
@@ -2322,7 +2322,7 @@
       "competitionId": "57",
       "competitionName": "Eredivisie",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:37.009Z",
+      "updatedAt": "2026-10-24T03:29:40.278Z",
       "table": [
         {
           "position": 1,
@@ -2630,7 +2630,7 @@
       "competitionId": "61",
       "competitionName": "Liga Portugal",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:38.094Z",
+      "updatedAt": "2026-10-24T03:29:42.381Z",
       "table": [
         {
           "position": 1,
@@ -2807,30 +2807,13 @@
           "won": 2,
           "drawn": 2,
           "lost": 5,
-          "goalsFor": 7,
+          "goalsFor": 10,
           "goalsAgainst": 10,
-          "goalDifference": -3,
-          "points": 8,
-          "qualificationZone": "Active"
+          "goalDifference": 0,
+          "points": 8
         },
         {
           "position": 12,
-          "teamId": "10212",
-          "teamName": "Marítimo",
-          "shortName": "Marítimo",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
-          "played": 9,
-          "won": 2,
-          "drawn": 2,
-          "lost": 5,
-          "goalsFor": 9,
-          "goalsAgainst": 16,
-          "goalDifference": -7,
-          "points": 8,
-          "qualificationZone": "Active"
-        },
-        {
-          "position": 13,
           "teamId": "8348",
           "teamName": "Moreirense",
           "shortName": "Moreirense",
@@ -2842,6 +2825,21 @@
           "goalsFor": 8,
           "goalsAgainst": 15,
           "goalDifference": -7,
+          "points": 8
+        },
+        {
+          "position": 13,
+          "teamId": "10212",
+          "teamName": "Marítimo",
+          "shortName": "Marítimo",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
+          "played": 9,
+          "won": 2,
+          "drawn": 2,
+          "lost": 5,
+          "goalsFor": 9,
+          "goalsAgainst": 19,
+          "goalDifference": -10,
           "points": 8
         },
         {
@@ -2934,7 +2932,7 @@
       "competitionId": "73",
       "competitionName": "UEFA Europa League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:13.766Z",
+      "updatedAt": "2026-10-24T03:29:13.956Z",
       "table": [
         {
           "position": 1,
@@ -3554,14 +3552,14 @@
       "competitionId": "77",
       "competitionName": "FIFA World Cup",
       "season": "2026",
-      "updatedAt": "2026-10-23T21:03:41.083Z",
+      "updatedAt": "2026-10-24T03:29:46.316Z",
       "table": []
     },
     "87": {
       "competitionId": "87",
       "competitionName": "LaLiga",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:08.549Z",
+      "updatedAt": "2026-10-24T03:29:07.322Z",
       "table": [
         {
           "position": 1,
@@ -3896,14 +3894,14 @@
       "competitionId": "130",
       "competitionName": "MLS",
       "season": "2026",
-      "updatedAt": "2026-10-23T21:03:23.482Z",
+      "updatedAt": "2026-10-24T03:29:25.221Z",
       "table": []
     },
     "264": {
       "competitionId": "264",
       "competitionName": "AFC Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:27.032Z",
+      "updatedAt": "2026-10-24T03:29:29.023Z",
       "table": [
         {
           "position": 1,
@@ -4157,7 +4155,7 @@
       "competitionId": "268",
       "competitionName": "Brasileirão Série A",
       "season": "2026",
-      "updatedAt": "2026-10-23T21:03:39.669Z",
+      "updatedAt": "2026-10-24T03:29:44.670Z",
       "table": [
         {
           "position": 1,
@@ -4197,6 +4195,24 @@
         },
         {
           "position": 3,
+          "teamId": "9781",
+          "teamName": "Cruzeiro",
+          "shortName": "Cruzeiro",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9781.png",
+          "played": 32,
+          "won": 16,
+          "drawn": 6,
+          "lost": 10,
+          "goalsFor": 51,
+          "goalsAgainst": 46,
+          "goalDifference": 5,
+          "points": 54,
+          "form": [
+            "#2AD572"
+          ]
+        },
+        {
+          "position": 4,
           "teamId": "10273",
           "teamName": "Athletico Paranaense",
           "shortName": "Athletico Paranaense",
@@ -4209,24 +4225,6 @@
           "goalsAgainst": 37,
           "goalDifference": 12,
           "points": 53,
-          "form": [
-            "#2AD572"
-          ]
-        },
-        {
-          "position": 4,
-          "teamId": "9781",
-          "teamName": "Cruzeiro",
-          "shortName": "Cruzeiro",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9781.png",
-          "played": 31,
-          "won": 15,
-          "drawn": 6,
-          "lost": 10,
-          "goalsFor": 50,
-          "goalsAgainst": 46,
-          "goalDifference": 4,
-          "points": 51,
           "form": [
             "#2AD572"
           ]
@@ -4474,13 +4472,13 @@
           "teamName": "Remo",
           "shortName": "Remo",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1626.png",
-          "played": 31,
+          "played": 32,
           "won": 5,
           "drawn": 11,
-          "lost": 15,
+          "lost": 16,
           "goalsFor": 34,
-          "goalsAgainst": 49,
-          "goalDifference": -15,
+          "goalsAgainst": 50,
+          "goalDifference": -16,
           "points": 26,
           "form": [
             "#FF4646"
@@ -4510,7 +4508,7 @@
       "competitionId": "516",
       "competitionName": "Algerian Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:54.689Z",
+      "updatedAt": "2026-10-24T03:30:02.004Z",
       "table": [
         {
           "position": 1,
@@ -4776,7 +4774,7 @@
       "competitionId": "536",
       "competitionName": "Saudi Pro League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:25.263Z",
+      "updatedAt": "2026-10-24T03:29:27.631Z",
       "table": [
         {
           "position": 1,
@@ -5081,14 +5079,14 @@
       "competitionId": "9806",
       "competitionName": "UEFA Nations League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:53.358Z",
+      "updatedAt": "2026-10-24T03:29:59.855Z",
       "table": []
     },
     "10216": {
       "competitionId": "10216",
       "competitionName": "UEFA Conference League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:14.804Z",
+      "updatedAt": "2026-10-24T03:29:15.573Z",
       "table": [
         {
           "position": 1,
@@ -5710,7 +5708,7 @@
       "competitionId": "42",
       "competitionName": "UEFA Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:07.076Z",
+      "updatedAt": "2026-10-24T03:29:06.118Z",
       "scorers": [
         {
           "rank": 1,
@@ -5748,7 +5746,7 @@
       "competitionId": "44",
       "competitionName": "Copa América",
       "season": "2024",
-      "updatedAt": "2026-10-23T21:03:43.346Z",
+      "updatedAt": "2026-10-24T03:29:48.980Z",
       "scorers": [
         {
           "rank": 1,
@@ -5786,7 +5784,7 @@
       "competitionId": "47",
       "competitionName": "Premier League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:05.813Z",
+      "updatedAt": "2026-10-24T03:29:04.392Z",
       "scorers": [
         {
           "rank": 1,
@@ -5824,14 +5822,14 @@
       "competitionId": "50",
       "competitionName": "UEFA EURO",
       "season": "2028",
-      "updatedAt": "2026-10-23T21:03:42.382Z",
+      "updatedAt": "2026-10-24T03:29:47.434Z",
       "scorers": []
     },
     "53": {
       "competitionId": "53",
       "competitionName": "Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:12.647Z",
+      "updatedAt": "2026-10-24T03:29:12.579Z",
       "scorers": [
         {
           "rank": 1,
@@ -5869,7 +5867,7 @@
       "competitionId": "54",
       "competitionName": "Bundesliga",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:11.621Z",
+      "updatedAt": "2026-10-24T03:29:10.920Z",
       "scorers": [
         {
           "rank": 1,
@@ -5907,7 +5905,7 @@
       "competitionId": "55",
       "competitionName": "Serie A",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:10.295Z",
+      "updatedAt": "2026-10-24T03:29:08.977Z",
       "scorers": [
         {
           "rank": 1,
@@ -5945,7 +5943,7 @@
       "competitionId": "57",
       "competitionName": "Eredivisie",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:37.055Z",
+      "updatedAt": "2026-10-24T03:29:40.305Z",
       "scorers": [
         {
           "rank": 1,
@@ -5983,7 +5981,7 @@
       "competitionId": "61",
       "competitionName": "Liga Portugal",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:38.139Z",
+      "updatedAt": "2026-10-24T03:29:42.407Z",
       "scorers": [
         {
           "rank": 1,
@@ -6021,7 +6019,7 @@
       "competitionId": "73",
       "competitionName": "UEFA Europa League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:13.810Z",
+      "updatedAt": "2026-10-24T03:29:13.979Z",
       "scorers": [
         {
           "rank": 1,
@@ -6059,7 +6057,7 @@
       "competitionId": "77",
       "competitionName": "FIFA World Cup",
       "season": "2026",
-      "updatedAt": "2026-10-23T21:03:41.124Z",
+      "updatedAt": "2026-10-24T03:29:46.337Z",
       "scorers": [
         {
           "rank": 1,
@@ -6097,7 +6095,7 @@
       "competitionId": "87",
       "competitionName": "LaLiga",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:08.598Z",
+      "updatedAt": "2026-10-24T03:29:07.350Z",
       "scorers": [
         {
           "rank": 1,
@@ -6135,7 +6133,7 @@
       "competitionId": "130",
       "competitionName": "MLS",
       "season": "2026",
-      "updatedAt": "2026-10-23T21:03:23.535Z",
+      "updatedAt": "2026-10-24T03:29:25.251Z",
       "scorers": [
         {
           "rank": 1,
@@ -6173,14 +6171,14 @@
       "competitionId": "132",
       "competitionName": "FA Cup",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:16.141Z",
+      "updatedAt": "2026-10-24T03:29:17.077Z",
       "scorers": []
     },
     "133": {
       "competitionId": "133",
       "competitionName": "Carabao Cup",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:17.519Z",
+      "updatedAt": "2026-10-24T03:29:18.649Z",
       "scorers": [
         {
           "rank": 1,
@@ -6218,14 +6216,14 @@
       "competitionId": "138",
       "competitionName": "Copa del Rey",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:18.716Z",
+      "updatedAt": "2026-10-24T03:29:19.971Z",
       "scorers": []
     },
     "141": {
       "competitionId": "141",
       "competitionName": "Coppa Italia",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:21.743Z",
+      "updatedAt": "2026-10-24T03:29:23.088Z",
       "scorers": [
         {
           "rank": 1,
@@ -6263,7 +6261,7 @@
       "competitionId": "209",
       "competitionName": "DFB-Pokal",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:20.063Z",
+      "updatedAt": "2026-10-24T03:29:21.410Z",
       "scorers": [
         {
           "rank": 1,
@@ -6301,7 +6299,7 @@
       "competitionId": "264",
       "competitionName": "AFC Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:27.076Z",
+      "updatedAt": "2026-10-24T03:29:29.050Z",
       "scorers": [
         {
           "rank": 1,
@@ -6339,7 +6337,7 @@
       "competitionId": "268",
       "competitionName": "Brasileirão Série A",
       "season": "2026",
-      "updatedAt": "2026-10-23T21:03:39.713Z",
+      "updatedAt": "2026-10-24T03:29:44.695Z",
       "scorers": [
         {
           "rank": 1,
@@ -6377,7 +6375,7 @@
       "competitionId": "516",
       "competitionName": "Algerian Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:54.728Z",
+      "updatedAt": "2026-10-24T03:30:02.026Z",
       "scorers": [
         {
           "rank": 1,
@@ -6415,7 +6413,7 @@
       "competitionId": "536",
       "competitionName": "Saudi Pro League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:25.308Z",
+      "updatedAt": "2026-10-24T03:29:27.653Z",
       "scorers": [
         {
           "rank": 1,
@@ -6453,7 +6451,7 @@
       "competitionId": "9806",
       "competitionName": "UEFA Nations League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:53.407Z",
+      "updatedAt": "2026-10-24T03:29:59.882Z",
       "scorers": [
         {
           "rank": 1,
@@ -6491,7 +6489,7 @@
       "competitionId": "10216",
       "competitionName": "UEFA Conference League",
       "season": "2026/2027",
-      "updatedAt": "2026-10-23T21:03:14.846Z",
+      "updatedAt": "2026-10-24T03:29:15.595Z",
       "scorers": [
         {
           "rank": 1,

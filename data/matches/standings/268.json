@@ -2,7 +2,7 @@
   "competitionId": "268",
   "competitionName": "Brasileirão Série A",
   "season": "2026",
-  "updatedAt": "2026-10-23T21:03:39.669Z",
+  "updatedAt": "2026-10-24T03:29:44.670Z",
   "table": [
     {
       "position": 1,
@@ -42,6 +42,24 @@
     },
     {
       "position": 3,
+      "teamId": "9781",
+      "teamName": "Cruzeiro",
+      "shortName": "Cruzeiro",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9781.png",
+      "played": 32,
+      "won": 16,
+      "drawn": 6,
+      "lost": 10,
+      "goalsFor": 51,
+      "goalsAgainst": 46,
+      "goalDifference": 5,
+      "points": 54,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 4,
       "teamId": "10273",
       "teamName": "Athletico Paranaense",
       "shortName": "Athletico Paranaense",
@@ -54,24 +72,6 @@
       "goalsAgainst": 37,
       "goalDifference": 12,
       "points": 53,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 4,
-      "teamId": "9781",
-      "teamName": "Cruzeiro",
-      "shortName": "Cruzeiro",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9781.png",
-      "played": 31,
-      "won": 15,
-      "drawn": 6,
-      "lost": 10,
-      "goalsFor": 50,
-      "goalsAgainst": 46,
-      "goalDifference": 4,
-      "points": 51,
       "form": [
         "#2AD572"
       ]
@@ -319,13 +319,13 @@
       "teamName": "Remo",
       "shortName": "Remo",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1626.png",
-      "played": 31,
+      "played": 32,
       "won": 5,
       "drawn": 11,
-      "lost": 15,
+      "lost": 16,
       "goalsFor": 34,
-      "goalsAgainst": 49,
-      "goalDifference": -15,
+      "goalsAgainst": 50,
+      "goalDifference": -16,
       "points": 26,
       "form": [
         "#FF4646"

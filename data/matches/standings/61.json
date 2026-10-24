@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-23T21:03:38.094Z",
+  "updatedAt": "2026-10-24T03:29:42.381Z",
   "table": [
     {
       "position": 1,
@@ -179,30 +179,13 @@
       "won": 2,
       "drawn": 2,
       "lost": 5,
-      "goalsFor": 7,
+      "goalsFor": 10,
       "goalsAgainst": 10,
-      "goalDifference": -3,
-      "points": 8,
-      "qualificationZone": "Active"
+      "goalDifference": 0,
+      "points": 8
     },
     {
       "position": 12,
-      "teamId": "10212",
-      "teamName": "Marítimo",
-      "shortName": "Marítimo",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
-      "played": 9,
-      "won": 2,
-      "drawn": 2,
-      "lost": 5,
-      "goalsFor": 9,
-      "goalsAgainst": 16,
-      "goalDifference": -7,
-      "points": 8,
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 13,
       "teamId": "8348",
       "teamName": "Moreirense",
       "shortName": "Moreirense",
@@ -214,6 +197,21 @@
       "goalsFor": 8,
       "goalsAgainst": 15,
       "goalDifference": -7,
+      "points": 8
+    },
+    {
+      "position": 13,
+      "teamId": "10212",
+      "teamName": "Marítimo",
+      "shortName": "Marítimo",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10212.png",
+      "played": 9,
+      "won": 2,
+      "drawn": 2,
+      "lost": 5,
+      "goalsFor": 9,
+      "goalsAgainst": 19,
+      "goalDifference": -10,
       "points": 8
     },
     {
