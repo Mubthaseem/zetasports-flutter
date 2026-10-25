@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-10-25T20:43:20.938Z",
+    "generatedAt": "2026-10-25T23:09:07.827Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 1690
+      "fullArticlesCount": 1701
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -15,12 +15,111 @@
   },
   "news": [
     {
+      "id": "ftbpro_01m5s649s673",
+      "title": "Transfer Rumors: Rashford’s Premier League Switch; Barcelona Eye Double Man City Swoop",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m5s649s673/transfer-rumors-rashfords-premier-league-switch-barcelona-eye-double-man-city-swoop",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5tfx3wvywhvqbrq44.jpg",
+      "publishedAt": "2026-10-25T23:05:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m5t352h2nn",
+      "title": "Barcelona vs. Real Madrid Player Ratings: Mbappe Hits 100 As Los Blancos Stun Camp Nou",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m5t352h2nn/barcelona-vs-real-madrid-player-ratings-mbappe-hits-100-los-blancos-stun-camp-nou",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_56/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5tkafzf4s9khr6sfn.jpg",
+      "publishedAt": "2026-10-25T22:51:12.000Z"
+    },
+    {
+      "id": "1jg3gmmr4mhqn10zc3m0m08oxc",
+      "title": "Danks reveals congratulatory message from Kompany after Bayern beat Freiburg",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1jg3gmmr4mhqn10zc3m0m08oxc-danks-reveals-congratulatory-message-from-kompany-after-bayern-beat-freiburg",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/f4/a4/aaron-danks_p5fyrvze5cw016jjatbons3lp.jpg?t=2029981217&w=1260&h=708",
+      "publishedAt": "2026-10-25T22:40:50.000Z"
+    },
+    {
+      "id": "xf931mi8g5j61ko5pel33bxtf",
+      "title": "Barcelona 1-2 Real Madrid: Mbappe at the double as Mourinho gets Clasico win",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/xf931mi8g5j61ko5pel33bxtf-barcelona-1-2-real-madrid-mbappe-at-double-mourinho-gets-clasico-win",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/58/d8/kylian-mbappe_1280uy0cnv0re11b3bgu716l2d.jpg?t=2041413217&w=640&h=360",
+      "publishedAt": "2026-10-25T22:18:32.000Z"
+    },
+    {
+      "id": "8E2E03B8700DC38ACE0F651E1EA5ED23",
+      "title": "Barcelona 1-2 Real Madrid: Kylian Mbappé Strikes Twice as José Mourinho Claims Clásico Win",
+      "description": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/barcelona-vs-real-madrid-el-clasico-live-stats-10-2026",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/10/barcelona-vs-real-madrid-stats-clasico-oct-2026-3.png",
+      "publishedAt": "2026-10-25T22:14:56.000Z"
+    },
+    {
+      "id": "ftbpro_01m5q65wexhv",
+      "title": "Ranking All 20 Premier League Teams’ Performances on Matchday 8",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m5q65wexhv/ranking-all-20-premier-league-teams-performances-matchday-8",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5tcvcyzf4ghr7qkfb.jpg",
+      "publishedAt": "2026-10-25T22:00:00.000Z"
+    },
+    {
+      "id": "klp9qw2wgkxo1h22snaj4t0hq",
+      "title": "Udinese 0-2 AC Milan: Pulisic and Hutchinson extend Amorim's unbeaten Serie A start",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/klp9qw2wgkxo1h22snaj4t0hq-udinese-0-2-ac-milan-pulisic-hutchinson-extend-amorims-unbeaten-serie-start",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/6f/8d/ac-milan_1cl1mttckr7d919h2uemkhwlm8.png?t=2037373729&w=1260&h=708",
+      "publishedAt": "2026-10-25T21:56:38.000Z"
+    },
+    {
+      "id": "ftbpro_01m5t229dxgh",
+      "title": "Is Landon Donovan an All-Time Legend of the Game? Not to His Former USMNT Teammate",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m5t229dxgh/is-landon-donovan-all-time-legend-game-not-his-former-usmnt-teammate",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5t3snh26rx1zb9rj5.jpg",
+      "publishedAt": "2026-10-25T21:30:00.000Z"
+    },
+    {
+      "id": "7pi8k9av8r9q1gg83djbub5li",
+      "title": "Hull boss Jakirovic left with regret despite maintaining unbeaten home record",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/7pi8k9av8r9q1gg83djbub5li-hull-boss-jakirovic-left-regret-despite-maintaining-unbeaten-home-record",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/bc/9c/sergej-jakirovic-and-keith-andrews_1lstunptfb5641by26fdp74pkn.jpg?t=2004963665&w=1260&h=708",
+      "publishedAt": "2026-10-25T21:08:41.000Z"
+    },
+    {
+      "id": "ftbpro_01m5t5v9vpw3",
+      "title": "Julian Alvarez Makes Barcelona Transfer U-Turn With Massive Atletico Apology",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m5t5v9vpw3/julian-alvarez-makes-barcelona-transfer-u-turn-massive-atletico-apology",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1962,h_1103,x_321,y_41/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5t63np4dphm8j7zje.jpg",
+      "publishedAt": "2026-10-25T21:00:00.000Z"
+    },
+    {
+      "id": "1qotyczxokwan1i4corupg1mg9",
+      "title": "'Things starting to click' for Bournemouth under Rose, says Hill",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1qotyczxokwan1i4corupg1mg9-things-starting-click-bournemouth-under-rose-says-hill",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/7/47/marco-rose_v19cx3k2jdt018urtdpr0t1if.jpg?t=2024685985&w=1260&h=708",
+      "publishedAt": "2026-10-25T20:46:11.000Z"
+    },
+    {
       "id": "e4urb2jfczeg1puiz58kg2vu5",
       "title": "Brighton boss Hurzeler claims only 'one team' tried to create chances at Anfield",
       "description": "FotMob",
       "source": "FotMob",
       "sourceUrl": "/news/e4urb2jfczeg1puiz58kg2vu5-brighton-boss-hurzeler-claims-only-one-team-tried-create-chances-at-anfield",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d9/c3/hurzeler_1azmuf3ecczzp1xdjp0fx29n51.jpg?t=2022649665&w=1260&h=708",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d9/c3/hurzeler_1azmuf3ecczzp1xdjp0fx29n51.jpg?t=2022649665&w=640&h=360",
       "publishedAt": "2026-10-25T20:25:06.000Z"
     },
     {
@@ -94,105 +193,6 @@
       "sourceUrl": "/news/k5j1x0og8hth1akcd69a5lwq4-lecce-0-2-juventus-luiz-stars-clinch-much-needed-win-spalletti",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/b8/fb/luiz_mfgu8ths4ru31ob42imt7fnnn.jpg?t=2018547409&w=640&h=360",
       "publishedAt": "2026-10-25T19:15:51.000Z"
-    },
-    {
-      "id": "ftbpro_01m5sxkvew9f",
-      "title": "Lionel Messi’s Hectic Travels Hurt Inter Miami—And Ballon d’Or Trip Signals More Trouble",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m5sxkvew9f/lionel-messis-hectic-travels-hurt-inter-miamiand-ballon-dor-trip-signals-more-trouble",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_107/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5t0a1gc1dzppjzavd.jpg",
-      "publishedAt": "2026-10-25T19:00:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m5t0mmt46j",
-      "title": "Barcelona vs. Real Madrid: Confirmed Lineups for First Clasico of 2026–27 Season",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m5t0mmt46j/barcelona-vs-real-madrid-confirmed-lineups-first-clasico-2026-27-season",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5t2c5d5y3jvvnsk46.jpg",
-      "publishedAt": "2026-10-25T18:56:03.000Z"
-    },
-    {
-      "id": "1vxm1vww1isok138ypj7prtukq",
-      "title": "Sunderland 0-0 Leeds United: Le Bris' men still bottom after bore draw",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1vxm1vww1isok138ypj7prtukq-sunderland-0-0-leeds-united-le-bris-men-still-bottom-after-bore-draw",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/27/da/brian-brobbey_225r884p8c0j1mkgssvs2bt1y.png?t=2014569921&w=1260&h=708",
-      "publishedAt": "2026-10-25T18:50:59.000Z"
-    },
-    {
-      "id": "ftbpro_01m5mvsemb42",
-      "title": "Why Thibaut Courtois Isn’t Playing for Real Madrid vs. Barcelona",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m5mvsemb42/why-thibaut-courtois-isnt-playing-real-madrid-vs-barcelona",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_854,h_480,x_72,y_29/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5shfc3ed6zpxpkj2r.jpg",
-      "publishedAt": "2026-10-25T18:45:49.000Z"
-    },
-    {
-      "id": "y3u6ulpbp7zw1o7xr32uwb8wl",
-      "title": "Freiburg 1-3 Bayern Munich: Upamecano scores stunner as Gnabry brings up Bundesliga century",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/y3u6ulpbp7zw1o7xr32uwb8wl-freiburg-1-3-bayern-munich-upamecano-scores-stunner-gnabry-brings-up-bundesliga-century",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/e3/aa/dayot-upamecano_1bd67qzwi1p9g1auxdfhhy3zdt.jpg?t=2014825921&w=1260&h=708",
-      "publishedAt": "2026-10-25T18:41:00.000Z"
-    },
-    {
-      "id": "4eqailkp9p3g1ebv389gbhn4f",
-      "title": "'There's no noise inside Palace' – Sage remains defiant after loss",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/4eqailkp9p3g1ebv389gbhn4f-theres-no-noise-inside-palace-sage-remains-defiant-after-loss",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/a4/34/pierre-sage_ye9nmgg0xmrd15j98cn3ia515.jpg?t=2004431729&w=640&h=360",
-      "publishedAt": "2026-10-25T18:34:45.000Z"
-    },
-    {
-      "id": "ftbpro_01m5sw8s6vfw",
-      "title": "‘Fight’—Alexander-Arnold’s Stance on Real Madrid Exit Amid Wild Transfer Rumors",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m5sw8s6vfw/fightalexander-arnolds-stance-real-madrid-exit-amid-wild-transfer-rumors",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_959,h_539,x_65,y_83/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5sya6fjyfy2f2gqx4.jpg",
-      "publishedAt": "2026-10-25T18:30:00.000Z"
-    },
-    {
-      "id": "v3k2hknhlj3x1bt1j66c16eb5",
-      "title": "'It hurts to see Man Utd going through this', says under-pressure Carrick",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/v3k2hknhlj3x1bt1j66c16eb5-it-hurts-see-man-utd-going-through-this-says-under-pressure-carrick",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/0/4a/man-united-boss-michael-carrick_1ontjmb2mww1p12dzwyxb64ic8.jpg?t=2007221473&w=1260&h=708",
-      "publishedAt": "2026-10-25T18:09:01.000Z"
-    },
-    {
-      "id": "ftbpro_01m5ssp19dr5",
-      "title": "The Internet Races to Crack Hidden Code That Reveals 2026 Ballon d’Or Winner",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m5ssp19dr5/internet-races-crack-hidden-code-that-reveals-2026-ballon-dor-winner",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_40/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5swg2xkptzwcbs64z.jpg",
-      "publishedAt": "2026-10-25T18:00:00.000Z"
-    },
-    {
-      "id": "ftbpro_01m5srz8ywfv",
-      "title": "Cavan Sullivan Suffers Injury Setback Two Weeks Out From USMNT Competitive Matches",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m5srz8ywfv/cavan-sullivan-suffers-injury-setback-two-weeks-out-from-usmnt-competitive-matches",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_979,h_550,x_0,y_132/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5sxbhccqs84chew2y.jpg",
-      "publishedAt": "2026-10-25T17:30:00.000Z"
-    },
-    {
-      "id": "yaxpi5gfiki010zpfrdyaknu1",
-      "title": "Hoffenheim 3-0 Bayer Leverkusen: Kramaric stars in eventful win as Martinez's men falter",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/yaxpi5gfiki010zpfrdyaknu1-hoffenheim-3-0-bayer-leverkusen-kramaric-stars-eventful-win-martinezs-men-falter",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ff/dd/vladimir-coufal-ozan-kabak-and-andrej-kramaric-celebrate_1adessm60cpdx1fimv0u809hfp.jpg?t=2002135985&w=1260&h=708",
-      "publishedAt": "2026-10-25T17:26:10.000Z"
     }
   ],
   "articles": {
@@ -4139,13 +4139,26 @@
       "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/10/barcelona-vs-real-madrid-stats-clasico-oct-2026.png",
       "publishedAt": "2026-10-25T20:11:38.000Z",
       "paragraphs": [
-        "Search\n  \n\n    \n  \n\t  \t  \t\t\t  \t\n    Premier League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Expected Points Table  \n\n\t  \n  Power Rankings  \n\n\t  \n  FPL  \n\n\t  \n  Newsletter  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Champions League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Football Predictions      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  English Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Opta Stats      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  Ligue 1  \n\n\t  \n  Serie A  \n\n\t  \n  Bundesliga  \n\n\t  \n  La Liga  \n\n\t  \n  Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Women's Football      \n  \n\t  \n  WSL  \n\n\t  \n  Champions League  \n\n\t  \n  Power Rankings  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More Football      \n  \n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  Champions League  \n\n\t  \n  Europa League  \n\n\t  \n  Conference League  \n\n\t  \n  Championship  \n\n\t  \n  League One  \n\n\t  \n  League Two  \n\n\t  \n  WSL  \n\n\t  \n  Scottish Premiership  \n\n\t  \n  SPL  \n\n\t  \n  MLS  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    NFL      \n  \n\t  \n  NFL Articles  \n\n\t  \n  Fantasy Articles  \n\n\t  \n  Standings  \n\n\t  \n  Rankings  \n\n\t  \n  Player Ratings  \n\n\t  \n  Fantasy Tools  \n\n\t  \n  Scores & Schedule  \n\n\t  \n  Stats  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Baseball      \n  \n\t  \n  MLB Leaderboards  \n\n\t  \n  MLB Predictions  \n\n\t  \n  NPB Predictions  \n\n\t  \n  KBO Predictions  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More      \n  \n\t  \n  Newsletter  \n\n\t  \t  \t\t\t\t\t  \t\n    Basketball      \n  \n\t  \t  \t\t\t  \t\n    NBA      \n  \n\t  \n  NBA Predictions  \n\n\t  \n  NBA Leaderboards  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WNBA      \n  \n\t  \n  WNBA Predictions  \n\n\n  \n\n\t  \n  Men's College Basketball  \n\n\t  \n  Women’s College Basketball  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    College Football      \n  \n\t  \n  FBS  \n\n\t  \n  FBS Rankings and Predictions  \n\n\t  \n  FCS  \n\n\n  \n\n\t  \n  Tennis  \n\n\t  \n  Rugby  \n\n\t  \n  Golf  \n\n\t  \n  Hockey  \n\n\t  \n  Explainers  \n\n\n  \n\n\n    \n      \n    \n    \n      \n    \n  \n\n  \n\n        \n      \n        \n          \n        \n      \n      \n                \n                      \n              \n                                  LIVE                                Premier League 2026-27 Predictions 🔮\n              \n            \n                      \n              \n                                  LIVE                                2026 NFL Predictions 🔮\n              \n            \n                      \n              \n                                  \n                                Discover the Latest Opta Power Rankings 🔋\n              \n            \n                      \n              \n                                  \n                                Subscribe to our Free Football Newsletter ✉️\n              \n            \n                  \n      \n      \n        \n          \n        \n      \n    \n    \n\n  \n\n  \n    \n            \n                \n                      \n      \n                                \n                                        La Liga\n                      \n              \n              \n          Barcelona vs Real Madrid: El Clásico Live Stats\n        \n      \n                          \n                      LIVE\n          \n                      Opta Analyst / Author\n                  \n      \n              \n                      \n                  \n          \n\n    \n              \n      \n              \n                    \nBarcelona are looking to extend their lead at the top of La Liga with a win against José Mourinho's Real Madrid. Follow the Clásico on our match stats page.",
-        "Our Opta match centre delivers you all the Barcelona vs Real Madrid stats from their La Liga meeting at Camp Nou on Sunday 25 October.",
-        "The match centre below includes team and player stats, expected goals data, passing networks, an Opta chalkboard and more. It gives you everything you need to do your own match analysis.",
-        "Underneath the match centre you can find the official Opta stats on the game as well.",
-        "Enjoy this? Add Opta Analyst as a preferred source by clicking here.",
-        "Enjoy this? Subscribe to our football newsletter to receive exclusive weekly content. You should also follow our social accounts over on X, Instagram, TikTok and Facebook.",
-        "Sign up and be the first to receive exclusive stats, news, and updates\n        from Opta Analyst."
+        "Search\n  \n\n    \n  \n\t  \t  \t\t\t  \t\n    Premier League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Expected Points Table  \n\n\t  \n  Power Rankings  \n\n\t  \n  FPL  \n\n\t  \n  Newsletter  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Champions League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Football Predictions      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  English Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Opta Stats      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  Ligue 1  \n\n\t  \n  Serie A  \n\n\t  \n  Bundesliga  \n\n\t  \n  La Liga  \n\n\t  \n  Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Women's Football      \n  \n\t  \n  WSL  \n\n\t  \n  Champions League  \n\n\t  \n  Power Rankings  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More Football      \n  \n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  Champions League  \n\n\t  \n  Europa League  \n\n\t  \n  Conference League  \n\n\t  \n  Championship  \n\n\t  \n  League One  \n\n\t  \n  League Two  \n\n\t  \n  WSL  \n\n\t  \n  Scottish Premiership  \n\n\t  \n  SPL  \n\n\t  \n  MLS  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    NFL      \n  \n\t  \n  NFL Articles  \n\n\t  \n  Fantasy Articles  \n\n\t  \n  Standings  \n\n\t  \n  Rankings  \n\n\t  \n  Player Ratings  \n\n\t  \n  Fantasy Tools  \n\n\t  \n  Scores & Schedule  \n\n\t  \n  Stats  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Baseball      \n  \n\t  \n  MLB Leaderboards  \n\n\t  \n  MLB Predictions  \n\n\t  \n  NPB Predictions  \n\n\t  \n  KBO Predictions  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More      \n  \n\t  \n  Newsletter  \n\n\t  \t  \t\t\t\t\t  \t\n    Basketball      \n  \n\t  \t  \t\t\t  \t\n    NBA      \n  \n\t  \n  NBA Predictions  \n\n\t  \n  NBA Leaderboards  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WNBA      \n  \n\t  \n  WNBA Predictions  \n\n\n  \n\n\t  \n  Men's College Basketball  \n\n\t  \n  Women’s College Basketball  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    College Football      \n  \n\t  \n  FBS  \n\n\t  \n  FBS Rankings and Predictions  \n\n\t  \n  FCS  \n\n\n  \n\n\t  \n  Tennis  \n\n\t  \n  Rugby  \n\n\t  \n  Golf  \n\n\t  \n  Hockey  \n\n\t  \n  Explainers  \n\n\n  \n\n\n    \n      \n    \n    \n      \n    \n  \n\n  \n\n        \n      \n        \n          \n        \n      \n      \n                \n                      \n              \n                                  LIVE                                Premier League 2026-27 Predictions 🔮\n              \n            \n                      \n              \n                                  LIVE                                2026 NFL Predictions 🔮\n              \n            \n                      \n              \n                                  \n                                Discover the Latest Opta Power Rankings 🔋\n              \n            \n                      \n              \n                                  \n                                Subscribe to our Free Football Newsletter ✉️\n              \n            \n                  \n      \n      \n        \n          \n        \n      \n    \n    \n\n  \n\n  \n    \n            \n                \n                      \n      \n                                \n                                        La Liga\n                      \n              \n              \n          Barcelona 1-2 Real Madrid: Kylian Mbappé Strikes Twice as José Mourinho Claims Clásico Win\n        \n      \n                          \n                      Oct 25, 2026\n          \n                      Harry Carr / Author\n                  \n      \n              \n                      \n                  \n          \n\n    \n              \n      \n              \n                    \nKylian Mbappé was the hero as Real Madrid cut the gap at the top of La Liga with a deserved win at Barcelona. Check out all the best Clásico numbers with our stats page.",
+        "Kylian Mbappé scored twice, including an 87th-minute winner, as Real Madrid claimed a huge 2-1 victory over their Clásico rivals Barcelona at Camp Nou.",
+        "Barça were hoping to become the first team to ever start a season in one of Europe's top five leagues with 10 straight victories, having already built a six-point buffer to Madrid ahead of Sunday's clash.",
+        "Hansi Flick's hosts were up against it when Gerard Martín's attempted clearance ricocheted in off Mbappé in the 41st minute, although Raphinha's 13th league goal of the season drew them level shortly after the hour mark.",
+        "However, Mbappé was on hand to slot into an empty net following a lightning quick Madrid break late on, prompting wild celebrations from manager José Mourinho on the sidelines.",
+        "Madrid quickly got on the front foot as they looked to quiet a raucous Catalan crowd, but no white shirts were lurking for a tap-in when Joan García could only parry Arda Güler's drive.",
+        "Raphinha had three efforts at the other end, the second of which was the most threatening as his first-time strike whistled over the crossbar following some industrious work from Pedri, while Andrii Lunin – standing in for the ill Thibaut Courtois – denied Anthony Gordon at his near post.",
+        "Yan Diomande was one of Madrid's brightest sparks in attack, and their opening goal came from him being slipped into the area by Marc Cucurella. The Ivorian's centre was far from his best, but Martín blasted it straight off Mbappé and into the net.",
+        "Barça should have had a quickfire equaliser when Lamine Yamal scuffed an uncharacteristically poor finish wide, but Flick's team were cut open on two more occasions before the interval.",
+        "Mbappé rifled against the inside of the post, only for the offside flag to go up against him, but Diomande was onside when he broke in behind and hit the side netting moments later.",
+        "Madrid spurned another excellent counter-attacking chance early in the second half, with Jude Bellingham failing to get his pass off when Mbappé was supporting him against an isolated Martín.",
+        "And Barça made those reprieves count when Raphinha's shot proved too hot for Lunin to handle, after the Brazilian was cleverly found by Pedri on the right side of the area.",
+        "Lunin made a terrific, one-handed save to keep out Martín's header shortly afterwards, though he was lucky to see one Yamal effort drift narrowly wide and another smack Dean Huijsen in the face.",
+        "However, there was a cruel twist to come at the other end as, after some superb work from the outstanding Bellingham, substitute Eduardo Camavinga burst down the right flank and centred for Mbappé, who simply could not miss.",
+        "Just 24 hours before the 2026 Ballon d'Or ceremony takes place in London, Sunday's Clasico saw two of the main contenders for the prize – Yamal and Mbappé – go head-to-head.",
+        "And though the voting has long since been finalised, it was Mbappé who provided one final reminder of his credentials to be crowned the best player in the world.",
+        "There may have been a huge slice of fortune about Mbappé's opener, but his brace took him to five goals in two visits to Barça as a Madrid player. That is the most by any Blancos player since the start of 2013-14, surpassing Cristiano Ronaldo and Karim Benzema (four each).",
+        "Yamal, meanwhile, missed a glaring chance to equalise in the first half and was unable to hit the net with any of his five shots, which were worth a team-high 0.51 expected goals (xG). He also failed to create a single chance and only completed 76.6% of his passes (47/76)",
+        "And, on a night where Barça could have opened up a huge nine-point gap to Madrid and made La Liga history in the process, it was Mourinho who earned the bragging rights.",
+        "His unbeaten run in Clásico matches – which dates back to his previous spell in charge of Madrid – now stands at six games (W4 D2). He is just the third Blancos coach to enjoy such a run, after Miguel Muñoz (1962 to 1965) and Vicente del Bosque (2001 to 2003) both had seven-match streaks."
       ]
     },
     "1E4E085EEFDD68B70368E7DE0495A7B9": {
@@ -6862,6 +6875,32 @@
       ],
       "html": "<p>Brian Schmetzer already believed the Seattle Sounders were building some momentum even before they ended their four-month wait for a victory on Wednesday, as they look to go back-to-back against Minnesota United.</p>\n\n<p>The Sounders went 13 games without victory after beating the San Jose Earthquakes on May 13, prior to the World Cup break.&nbsp;</p>\n\n<p>They lost eight straight matches before turning the corner somewhat by drawing five in a row, prior to overcoming Real Salt Lake – who are also on a long winless streak of their own – by a 2-0 scoreline in midweek.</p>\n\n<p>Now only outside the playoff spots on games won&nbsp;in the Western Conference, Seattle will look to inject some more impetus at home to Minnesota on Saturday.</p>\n\n<p>But Schmetzer believes they were already on an upward trajectory of sorts, saying: &quot;Well, I think we&#39;ve already been starting to build – the five draws have been something.&nbsp;</p>\n\n<p>&quot;It&#39;s been a long time – May 13, for the guys that are publishing the facts. I think all the people in this room are good reporters. There&#39;s no fake news in here!</p>\n\n<p>&quot;I told those guys in there to enjoy the moment. And on a personal note, there were fans behind the bench saying, &#39;Congratulations Brian, enjoy this moment&#39;.</p>\n\n<p>&quot;So I listened to those fans, and I told the same thing to the guys in there. I think we&#39;ve been building some momentum, but this really gives them a lot of belief and that’s what we discussed before the game.&quot;</p>\n\n\n<p>Minnesota are second from bottom in the West, albeit only three points behind the Sounders, after losing four straight games.</p>\n\n<p>Their most recent defeat came by a 3-2 scoreline against the LA Galaxy last weekend, and if the Loons are to make a late push for the postseason, head coach Cameron Knowles knows it will take a collective effort.</p>\n\n<p>&quot;We&#39;re going to need everyone. We need everyone to push, whether it&#39;s in training during the week or whether it&#39;s coming into a game,&quot; he said.&nbsp;</p>\n\n<p>&quot;We need guys to step up and everyone to give exactly what they&#39;re capable of. Everyone in that locker room has shown they&#39;re capable of contributing.&quot;</p>\n\n<p><strong>PLAYERS TO WATCH&nbsp;</strong></p>\n\n<p><strong>Seattle Sounders – Paul Arriola</strong></p>\n\n<p>Arriola assisted both Seattle goals against RSL on Wednesday, while he also had a joint-game-high three shots and the only Opta-defined &#39;big&#39; chance of the match.</p>\n\n<p>He also scored his first MLS goal for the Sounders earlier this month, to salvage a point against the Galaxy in a 1-1 draw on September 12.</p>\n\n<p><strong>Minnesota United – Kelvin Yeboah</strong></p>\n\n<p>Only Lionel Messi (20), Petar Musa (18), Brian White and Sam Surridge (16 each) have scored more goals in MLS this year than Yeboah&#39;s 14.</p>\n\n<p>The Minnesota forward – who was on target against the Galaxy last weekend – also ranks third in the league for expected goals (14.6&nbsp;xG), only behind Messi (17.2) and White (16.1).</p>\n\n<p><strong>MATCH PREDICTION:&nbsp;SEATTLE SOUNDERS WIN</strong></p>\n\n<p>When these two sides last met in MLS action, they played out a 0-0 draw at Allianz Field in March.</p>\n\n<p>All of a sudden, Seattle&#39;s club-record winless streak has turned into a six-game unbeaten run, even if they did play out five draws in that time.</p>\n\n<p>And they are the Opta supercomputer&#39;s favourites for this one, with Minnesota only managing one win in their last six MLS games (D1 L4).</p>\n\n<p>Away from home, the Loons have lost their last two matches while conceding a total of nine goals (5-4 at Portland Timbers, 4-2 at St. Louis City SC), so without a big defensive improvement, they could be up against it.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>Seattle Sounders – 45.8%</p>\n\n<p>Minnesota United – 30.5%&nbsp;</p>\n\n<p>Draw – 23.7%</p>\n"
     },
+    "1jg3gmmr4mhqn10zc3m0m08oxc": {
+      "id": "1jg3gmmr4mhqn10zc3m0m08oxc",
+      "title": "Danks reveals congratulatory message from Kompany after Bayern beat Freiburg",
+      "subtitle": "Vincent Kompany was not in the Bayern Munich dugout after his health scare, but he did offer his thoughts on their win at Freiburg.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1jg3gmmr4mhqn10zc3m0m08oxc-danks-reveals-congratulatory-message-from-kompany-after-bayern-beat-freiburg",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/f4/a4/aaron-danks_p5fyrvze5cw016jjatbons3lp.jpg?t=2029981217&w=1200&h=630",
+      "publishedAt": "2026-10-25T22:40:50.000Z",
+      "paragraphs": [
+        "Bayern Munich&#39;s assistant coach Aaron Danks revealed he received a congratulatory message from the absent Vincent Kompany after Sunday&#39;s 3-1 victory over Freiburg.",
+        "Dayot Upamecano, Serge Gnabry and Michael Olise were on target as the reigning Bundesliga champions went back above Borussia Dortmund on goal difference, returning to the top of the table.&nbsp;",
+        "Bayern&#39;s win came without Kompany on the touchline after he collapsed at the club&#39;s training ground on Friday, with the club subsequently confirming he was stable and undergoing tests in hospital.",
+        "Sporting director Max Eberl said Kompany could miss several weeks, but the former Manchester City centre-back watched Sunday&#39;s win and passed on a post-match message to Danks.&nbsp;",
+        "&quot;I just opened my phone to a WhatsApp from Vince straight away, saying &#39;well done&#39;, and he was happy,&quot; Danks told reporters afterwards.&nbsp;",
+        "&quot;I just replied saying, &#39;Brilliant, now rest&#39;, and sent him a kissing emoji. So hopefully, he rests up.&quot;",
+        "Bayern only had one shot more than their opponents, tallying 17 to Freiburg&#39;s 16, yet their opportunities were of a higher quality as they dominated the expected goals (xG) battle by 2.99 to 0.9.",
+        "&quot;We&#39;re really pleased with the performance,&quot; he said. &quot;We always knew it was going to be such a difficult place to come. They&#39;re a top team; they&#39;re in really good form.&nbsp;",
+        "&quot;And even for the last 10 minutes there, where they have that momentum and the crowd is up, and they&#39;re trying to chase an equaliser, it&#39;s good for us.&nbsp;",
+        "&quot;We had to show a bit of resilience, a bit of character, and I thought we defended those moments quite well.&quot;",
+        "Kompany was not the only Bayern absentee at Europa-Park Stadion, with first-choice goalkeeper Manuel Neuer ruled out with a foot injury.",
+        "Although Danks is uncertain whether Neuer will return in time to face Magdeburg in the DFB-Pokal on Wednesday – or Dortmund in the upcoming Klassiker – he does not expect the 40-year-old to be out for the long term.",
+        "&quot;I&#39;m not too sure. He had a small aggravation in his foot. It depends on how much time that takes to settle,&quot; he said.",
+        "&quot;It could be a little bit uncomfortable for him at the moment, but I don&#39;t think it will take too long.&quot;"
+      ],
+      "html": "<p>Bayern Munich&#39;s assistant coach Aaron Danks revealed he received a congratulatory message from the absent Vincent Kompany after Sunday&#39;s 3-1 victory over Freiburg.</p>\n\n<p>Dayot Upamecano, Serge Gnabry and Michael Olise were on target as the reigning Bundesliga champions went back above Borussia Dortmund on goal difference, returning to the top of the table.&nbsp;</p>\n\n<p>Bayern&#39;s win came without Kompany on the touchline after he collapsed at the club&#39;s training ground on Friday, with the club subsequently confirming he was stable and undergoing tests in hospital.</p>\n\n<p>Sporting director Max Eberl said Kompany could miss several weeks, but the former Manchester City centre-back watched Sunday&#39;s win and passed on a post-match message to Danks.&nbsp;</p>\n\n<p>&quot;I just opened my phone to a WhatsApp from Vince straight away, saying &#39;well done&#39;, and he was happy,&quot; Danks told reporters afterwards.&nbsp;</p>\n\n<p>&quot;I just replied saying, &#39;Brilliant, now rest&#39;, and sent him a kissing emoji. So hopefully, he rests up.&quot;</p>\n\n<p>Bayern only had one shot more than their opponents, tallying 17 to Freiburg&#39;s 16, yet their opportunities were of a higher quality as they dominated the expected goals (xG) battle by 2.99 to 0.9.</p>\n\n<p>&quot;We&#39;re really pleased with the performance,&quot; he said. &quot;We always knew it was going to be such a difficult place to come. They&#39;re a top team; they&#39;re in really good form.&nbsp;</p>\n\n<p>&quot;And even for the last 10 minutes there, where they have that momentum and the crowd is up, and they&#39;re trying to chase an equaliser, it&#39;s good for us.&nbsp;</p>\n\n<p>&quot;We had to show a bit of resilience, a bit of character, and I thought we defended those moments quite well.&quot;</p>\n\n\n<p>Kompany was not the only Bayern absentee at Europa-Park Stadion, with first-choice goalkeeper Manuel Neuer ruled out with a foot injury.</p>\n\n<p>Although Danks is uncertain whether Neuer will return in time to face Magdeburg in the DFB-Pokal on Wednesday – or Dortmund in the upcoming Klassiker – he does not expect the 40-year-old to be out for the long term.</p>\n\n<p>&quot;I&#39;m not too sure. He had a small aggravation in his foot. It depends on how much time that takes to settle,&quot; he said.</p>\n\n<p>&quot;It could be a little bit uncomfortable for him at the moment, but I don&#39;t think it will take too long.&quot;</p>\n"
+    },
     "1jgme7xwo0l71vbfphceoiqfo": {
       "id": "1jgme7xwo0l71vbfphceoiqfo",
       "title": "Bayern Munich 2-2 Arsenal: Rice salvages late draw to deny Kane winner",
@@ -9135,6 +9174,32 @@
         "After the extended international break, Madrid host Villarreal in LaLiga on October 10, before visiting Roma in the Champions League four days later."
       ],
       "html": "<p>Ex-Real Madrid midfielder Claude Makelele did not hold back on his former team&#39;s performance in their derby defeat to Atletico Madrid, saying they had &quot;no gameplan and no ideas.&quot;</p>\n\n<p>Madrid slipped to a 2-1 loss against their cross-city rivals on Sunday, their second in the first seven games of their LaLiga campaign.</p>\n\n<p>With defending champions Barcelona making a perfect start, Los Blancos are already six points off the title pace, and Makelele feels there are glaring issues in their side.</p>\n\n<p>During Sunday&#39;s game, Madrid only managed eight shots and 0.3 expected goals, compared to Atleti&#39;s 18 attempts and 2.35 xG, though that latter figure was boosted by the penalty from which Alejandro Grimaldo opened the scoring early in the second half.</p>\n\n<p>Dean Huijsen was sent off and conceded that spot-kick for denying Giuliano Simeone a clear goalscoring opportunity, though Madrid had been flat in attack even with 11 men on the pitch, only posting 0.16 xG and one shot on target in the first half.</p>\n\n<p>And Makelele, who represented Madrid 145 times between 2000 and 2003, before working under Mourinho at Chelsea, was bemused by their lacklustre display.</p>\n\n<p>&quot;There is no understanding between the players, nor with the coach. Mourinho must talk to them,&quot; he told ESPN.</p>\n\n<p>&quot;The team is weak, there is no gameplan and no clear ideas. There is nothing. Nothing, nothing, nothing... Absolutely nothing. We must demand more from them.&quot;</p>\n\n<p>In stark contrast to Madrid&#39;s stuttering performance, Atleti scored their second goal – via Jonathan David – at the end of an 18-pass move – the most for any goal scored by either team in a Madrid derby in LaLiga since at least 2005-06.</p>\n\n<p>Afterwards, Mourinho said &quot;the story of the game&quot; was an inept refereeing performance from Ortiz Arias, arguing both Lee Kang-in and Cristian Romero should have seen red for Atleti, the former for a high challenge on Federico Valverde and the latter for treading on Jude Bellingham.</p>\n\n<p>Mourinho brought printed images of both incidents to his post-match press conference, prompting Atleti to hit back on social media, posting: &quot;Stop referee harassment now.&quot;</p>\n\n\n<p>But Makelele was not interested in playing the blame game, saying: &quot;The problem is not the referee; there is an obvious deficiency in the team.&quot;&nbsp;</p>\n\n<p>After the extended international break, Madrid host Villarreal in LaLiga on October 10, before visiting Roma in the Champions League four days later.</p>\n"
+    },
+    "1qotyczxokwan1i4corupg1mg9": {
+      "id": "1qotyczxokwan1i4corupg1mg9",
+      "title": "'Things starting to click' for Bournemouth under Rose, says Hill",
+      "subtitle": "After a tough start under Marco Rose, Bournemouth have recorded four straight wins, the latest of which came at Old Trafford.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1qotyczxokwan1i4corupg1mg9-things-starting-click-bournemouth-under-rose-says-hill",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/7/47/marco-rose_v19cx3k2jdt018urtdpr0t1if.jpg?t=2024685985&w=1200&h=630",
+      "publishedAt": "2026-10-25T20:46:11.000Z",
+      "paragraphs": [
+        "It was only ever a matter of time before things clicked for Bournemouth under Marco Rose, defender James Hill declared after their 3-0 victory over Manchester United.",
+        "The Cherries piled further pressure on embattled United head coach Michael Carrick on Sunday, with Rayan, Marcus Tavernier and Evanilson on target at Old Trafford.",
+        "While United are now 16th in the Premier League, having made their worst start to a campaign since 1986-87, when they had four points from seven matches, Bournemouth are up to 13th after piecing together back-to-back wins.",
+        "Bournemouth&nbsp;failed to win their first six league games under Rose, but they are now on a four-match winning streak across the Premier League and the Europa League – their best run since December 2023.",
+        "And Hill always expected their results to turn, telling the club&#39;s website: &quot;It was a really special performance. Coming here and getting three points is hard for any team.",
+        "&quot;But for us to come here and keep a clean sheet as well and score the three goals, credit to the whole team, they were brilliant.",
+        "&quot;They [United] are in a difficult position, but we didn&#39;t focus on that, we focused on putting a good performance in. We focused on ourselves coming into a massive fixture against a team with a lot of quality.",
+        "&quot;We&#39;ve been really good recently and we&#39;re pleased with our clean sheets recently. We were outstanding to a man.",
+        "&quot;We have had lots of games recently, but we wouldn&#39;t want it any other way, it&#39;s been an incredible journey.",
+        "&quot;It was an incredible performance from everybody and a good confidence builder for the team. I am absolutely delighted.",
+        "&quot;We were unlucky at the start of the season. but things are starting to click under Marco and we have momentum now. It was only a matter of time.&quot;",
+        "Bournemouth&#39;s victory made them just the third team to go seven Premier League games unbeaten against United (W3 D4), along with Chelsea (eight between May 2013 and October 2016) and Liverpool (eight between December 2018 and April 2022).",
+        "The Cherries have scored 18 goals in 10 games at Old Trafford in the Premier League and have the best goals-per-game ratio of any side to play away at Man Utd more than once in Football League history (1.8).",
+        "They are at home to Aston Villa in the EFL Cup fourth round on Wednesday, before hosting Leeds United in the Premier League three days later.&nbsp;"
+      ],
+      "html": "<p>It was only ever a matter of time before things clicked for Bournemouth under Marco Rose, defender James Hill declared after their 3-0 victory over Manchester United.</p>\n\n<p>The Cherries piled further pressure on embattled United head coach Michael Carrick on Sunday, with Rayan, Marcus Tavernier and Evanilson on target at Old Trafford.</p>\n\n<p>While United are now 16th in the Premier League, having made their worst start to a campaign since 1986-87, when they had four points from seven matches, Bournemouth are up to 13th after piecing together back-to-back wins.</p>\n\n<p>Bournemouth&nbsp;failed to win their first six league games under Rose, but they are now on a four-match winning streak across the Premier League and the Europa League – their best run since December 2023.</p>\n\n<p>And Hill always expected their results to turn, telling the club&#39;s website: &quot;It was a really special performance. Coming here and getting three points is hard for any team.</p>\n\n<p>&quot;But for us to come here and keep a clean sheet as well and score the three goals, credit to the whole team, they were brilliant.</p>\n\n<p>&quot;They [United] are in a difficult position, but we didn&#39;t focus on that, we focused on putting a good performance in. We focused on ourselves coming into a massive fixture against a team with a lot of quality.</p>\n\n<p>&quot;We&#39;ve been really good recently and we&#39;re pleased with our clean sheets recently. We were outstanding to a man.</p>\n\n<p>&quot;We have had lots of games recently, but we wouldn&#39;t want it any other way, it&#39;s been an incredible journey.</p>\n\n<p>&quot;It was an incredible performance from everybody and a good confidence builder for the team. I am absolutely delighted.</p>\n\n<p>&quot;We were unlucky at the start of the season. but things are starting to click under Marco and we have momentum now. It was only a matter of time.&quot;</p>\n\n\n<p>Bournemouth&#39;s victory made them just the third team to go seven Premier League games unbeaten against United (W3 D4), along with Chelsea (eight between May 2013 and October 2016) and Liverpool (eight between December 2018 and April 2022).</p>\n\n<p>The Cherries have scored 18 goals in 10 games at Old Trafford in the Premier League and have the best goals-per-game ratio of any side to play away at Man Utd more than once in Football League history (1.8).</p>\n\n<p>They are at home to Aston Villa in the EFL Cup fourth round on Wednesday, before hosting Leeds United in the Premier League three days later.&nbsp;</p>\n"
     },
     "1qp9dymp1h5ms16dr2xnfomhgl": {
       "id": "1qp9dymp1h5ms16dr2xnfomhgl",
@@ -15541,6 +15606,37 @@
       ],
       "html": "<p>FC Dallas head coach Eric Quill is confident his team will &quot;be better&quot;&nbsp;than their last performance when they host Los Angeles FC in MLS on Saturday.</p>\n\n<p>Dallas head into the match on the back of a five-match unbeaten streak, but after three straight wins, they were held to a 0-0 draw by Austin FC last time out.</p>\n\n<p>It was just the seventh time this season they have been shut out – as they are the second-highest scorers in the Western Conference.</p>\n\n<p>They currently sit fourth in the West, but are one of three teams on 44 points, and they know a win could help them close the gap to the leaders Vancouver Whitecaps.</p>\n\n<p>Quill is looking for a big improvement from the performance against Austin, especially in the final third.</p>\n\n<p>&quot;It wasn&#39;t our typical game,&quot; Quill said of the draw with Austin. &quot;I think everybody&#39;s used to four goals from us, so it wasn&#39;t there.</p>\n\n<p>&quot;But it wasn&#39;t for a lack of trying or a lack of opportunities that we created.</p>\n\n<p>&quot;We&#39;ll work in front of goal, get our confidence up and go into LAFC ready.</p>\n\n<p>&quot;[The players were] down because ties don&#39;t excite us, but there&#39;s plenty more football to come from us, and we&#39;re going to be better for this game.&quot;</p>\n\n<p>LAFC, meanwhile, are sixth in the West, three points behind Dallas after failing to win their last two matches.</p>\n\n<p>Following a shock 3-1 loss to Sporting Kansas City, they threw away a lead against the San Jose Earthquakes, conceding a 98th-minute equaliser.</p>\n\n<p>Son Heung-min and Denis Bouanga both scored in that game but are among the list of absentees due to international duty. Head coach Marc Dos Santos is not making any excuses, though.</p>\n\n<p>&quot;We never approach the week crying about who&#39;s not here,&quot; he said.</p>\n\n<p>&quot;We have seven players out, but we embrace from day one of preparing as best as we can for the Dallas game with everybody that is here.&quot;</p>\n\n\n<p><strong>PLAYERS TO WATCH</strong></p>\n\n<p><strong>FC Dallas – Joaquin Valiente</strong></p>\n\n<p>Joaquin Valiente has recorded 11 assists for Dallas this season, the first player to have double-digit assists in a single season for the club since Michael Barrios had 15 in 2019.</p>\n\n<p>Over the last 15 seasons, four Dallas players have had 10+ assists in a season and all hail from South American countries (Valiente – Uruguay, Barrios – Colombia, Maximiliano Urruti and Mauro Diaz – Argentina).</p>\n\n<p><strong>Los Angeles FC – Mathieu Choiniere</strong></p>\n\n<p>Son and Bouanga are both on international duty and will miss the match have combined to score half of LAFC&#39;s regular-season goals (20/40 excl. own goals) in 2026.&nbsp;</p>\n\n<p>With David Martinez (six goals) also departing in September, that means Mathieu Choiniere is the club&#39;s next highest scorer with two goals, but he did not manage a single shot against San Jose and only had one touch in the opposition box.</p>\n\n<p><strong>MATCH PREDICTION: FC DALLAS WIN</strong></p>\n\n<p>Dallas have won four of their 15 regular-season meetings with Los Angeles FC (D3 L8), with all four of those wins coming at home.</p>\n\n<p>They have lost just once (W4 D2) at home to LAFC, conceding multiple goals only once, while scoring two or more goals five times.</p>\n\n<p>Dallas have also scored two or more goals in seven of their last 10 home games, and four of their last five. Since the start of the 2024 season, they have registered two or more goals in 29 home games, with only Inter Miami (37) having more in that time.</p>\n\n<p>LAFC surrendered a late goal to San Jose for their fourth draw in their last six road games (L2). They have now drawn six road games this regular season and 13 total over the last two seasons combined after drawing 12 total road regular-season matches from 2022-24.</p>\n\n<p><strong>OPTA WIN PROBABILITY</strong></p>\n\n<p>FC Dallas – 44.1%</p>\n\n<p>Draw – 26.8%</p>\n\n<p>Los Angeles FC – 29.1%</p>\n"
     },
+    "7pi8k9av8r9q1gg83djbub5li": {
+      "id": "7pi8k9av8r9q1gg83djbub5li",
+      "title": "Hull boss Jakirovic left with regret despite maintaining unbeaten home record",
+      "subtitle": "Despite Hull City maintaining their unbeaten home record, Sergej Jakirovic was left to rue what might have been against Brentford.",
+      "source": "FotMob",
+      "sourceUrl": "/news/7pi8k9av8r9q1gg83djbub5li-hull-boss-jakirovic-left-regret-despite-maintaining-unbeaten-home-record",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/bc/9c/sergej-jakirovic-and-keith-andrews_1lstunptfb5641by26fdp74pkn.jpg?t=2004963665&w=1200&h=630",
+      "publishedAt": "2026-10-25T21:08:41.000Z",
+      "paragraphs": [
+        "Hull City boss Sergej Jakirovic was left with &quot;regret&quot; after his side were held to a 1-1 draw by Brentford at the MKM Stadium on Sunday.",
+        "Hull went ahead in the 24th minute, thanks to&nbsp;Oliver McBurnie&#39;s&nbsp;penalty after Aaron Hickey bundled over Tim Iroegbunam inside the box, following Caoimhin Kelleher’s poor pass.",
+        "Dango Ouattara blazed over the woodwork shortly afterwards, but he eventually brought Brentford level midway through the second half.",
+        "That all came after Ryan Giles failed to clear Jaidon Anthony’s left-wing centre, allowing Igor Thiago to pick up the loose ball and square it to Ouattara for a tap-in at the back post.",
+        "Anthony almost won it for the Bees, but his fierce strike flew inches past the upright before Mohamed-Ali Cho forced Kelleher into a smart stop at the other end. &nbsp;",
+        "Hull moved up to 10th in the Premier League, having earned 10 points from their opening eight games.&nbsp;",
+        "The Tigers are unbeaten across their last 15 home Premier League games in which they have netted the opening goal (W9 D6), since a 2-1 defeat to Tottenham in November 2014.",
+        "Jakirovic, though, was left wanting more.",
+        "&quot;I think we played a good game, especially in the first half,&quot; said Jakirovic.&nbsp;",
+        "&quot;We were much more aggressive in duels, we won a lot of first and second balls.&nbsp;",
+        "&quot;Maybe there were some cheap mistakes, bad passing, bad receiving, but you see how fast they are – in five seconds they were in our box.",
+        "&quot;We should have scored one or maybe two more with better decisions.",
+        "&quot;I can regret the chance we had through Mohamed-Ali Cho and [Joe]&nbsp;Gelhardt, maybe it should have been 2-1, but in the end I think it&#39;s a fair result.&quot;",
+        "Brentford, meanwhile, are now&nbsp;winless in three Premier League games.",
+        "McBurnie&#39;s penalty marked the first time Brentford have conceded the first goal in a league game this season, making them the 20th and final team to suffer that fate in 2026-27.",
+        "&quot;It was a tough game and it was always going to be a tough game. I’ve got a lot of respect for Sergej and the journey he’s taken this team on – I think it&#39;s&nbsp;been remarkable,&quot; said Brentford boss Keith Andrews, a former Hull player.",
+        "&quot;We reacted well at half-time, the impact from the bench was pretty good but it was a tough game.",
+        "&quot;We lacked a bit of cohesion at times in how we played, we&#39;ve got very good players and good players on the bench and I think it&#39;s important that when they come on they realise that they have to impact the game.",
+        "&quot;It&#39;s&nbsp;nice today that they had that impact.&quot;"
+      ],
+      "html": "<p>Hull City boss Sergej Jakirovic was left with &quot;regret&quot; after his side were held to a 1-1 draw by Brentford at the MKM Stadium on Sunday.</p>\n\n<p>Hull went ahead in the 24th minute, thanks to&nbsp;Oliver McBurnie&#39;s&nbsp;penalty after Aaron Hickey bundled over Tim Iroegbunam inside the box, following Caoimhin Kelleher’s poor pass.</p>\n\n<p>Dango Ouattara blazed over the woodwork shortly afterwards, but he eventually brought Brentford level midway through the second half.</p>\n\n<p>That all came after Ryan Giles failed to clear Jaidon Anthony’s left-wing centre, allowing Igor Thiago to pick up the loose ball and square it to Ouattara for a tap-in at the back post.</p>\n\n<p>Anthony almost won it for the Bees, but his fierce strike flew inches past the upright before Mohamed-Ali Cho forced Kelleher into a smart stop at the other end. &nbsp;</p>\n\n<p>Hull moved up to 10th in the Premier League, having earned 10 points from their opening eight games.&nbsp;</p>\n\n<p>The Tigers are unbeaten across their last 15 home Premier League games in which they have netted the opening goal (W9 D6), since a 2-1 defeat to Tottenham in November 2014.</p>\n\n<p>Jakirovic, though, was left wanting more.</p>\n\n<p>&quot;I think we played a good game, especially in the first half,&quot; said Jakirovic.&nbsp;</p>\n\n<p>&quot;We were much more aggressive in duels, we won a lot of first and second balls.&nbsp;</p>\n\n<p>&quot;Maybe there were some cheap mistakes, bad passing, bad receiving, but you see how fast they are – in five seconds they were in our box.</p>\n\n<p>&quot;We should have scored one or maybe two more with better decisions.</p>\n\n<p>&quot;I can regret the chance we had through Mohamed-Ali Cho and [Joe]&nbsp;Gelhardt, maybe it should have been 2-1, but in the end I think it&#39;s a fair result.&quot;</p>\n\n\n<p>Brentford, meanwhile, are now&nbsp;winless in three Premier League games.</p>\n\n<p>McBurnie&#39;s penalty marked the first time Brentford have conceded the first goal in a league game this season, making them the 20th and final team to suffer that fate in 2026-27.</p>\n\n<p>&quot;It was a tough game and it was always going to be a tough game. I’ve got a lot of respect for Sergej and the journey he’s taken this team on – I think it&#39;s&nbsp;been remarkable,&quot; said Brentford boss Keith Andrews, a former Hull player.</p>\n\n<p>&quot;We reacted well at half-time, the impact from the bench was pretty good but it was a tough game.</p>\n\n<p>&quot;We lacked a bit of cohesion at times in how we played, we&#39;ve got very good players and good players on the bench and I think it&#39;s important that when they come on they realise that they have to impact the game.</p>\n\n<p>&quot;It&#39;s&nbsp;nice today that they had that impact.&quot;</p>\n"
+    },
     "7qnwzr4ovt1g14hhg42jy1uj5": {
       "id": "7qnwzr4ovt1g14hhg42jy1uj5",
       "title": "Fabregas insists Man Utd not in crisis ahead of Champions League clash",
@@ -15903,6 +15999,37 @@
         "Arguably their best display of the season, however, came in the EFL Cup defeat at Anfield. Though it came against a weakened Liverpool side and still ended in an early exit from one of only two competitions Spurs had any chance of winning, their display was still worthy of some praise. They created a couple of huge early chances, the type of which they simply must start putting away with even the slightest regularity. They could have been out of sight after half an hour but, as has been a theme of their season so far, they were punished ruthlessly for failing to build on a positive start.",
         "That has become a bit of a problem, and they simply have to become more resilient, more durable, when it comes to the defensive side of things. Consecutive clean sheets against Forest and Everton were positive signs, but the ease with which Villa tore through the Spurs defence last time out was concerning.",
         "“I am very disappointed, sad and frustrated for the performance,” De Zerbi said after that defeat. “We can’t lose the game in this way, we can’t concede the second goal.”"
+      ]
+    },
+    "8E2E03B8700DC38ACE0F651E1EA5ED23": {
+      "id": "8E2E03B8700DC38ACE0F651E1EA5ED23",
+      "title": "Barcelona 1-2 Real Madrid: Kylian Mbappé Strikes Twice as José Mourinho Claims Clásico Win",
+      "subtitle": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/barcelona-vs-real-madrid-el-clasico-live-stats-10-2026",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/10/barcelona-vs-real-madrid-stats-clasico-oct-2026-3.png",
+      "publishedAt": "2026-10-25T22:14:56.000Z",
+      "paragraphs": [
+        "Search\n  \n\n    \n  \n\t  \t  \t\t\t  \t\n    Premier League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\t  \n  Expected Points Table  \n\n\t  \n  Power Rankings  \n\n\t  \n  FPL  \n\n\t  \n  Newsletter  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Champions League      \n  \n\t  \n  Articles  \n\n\t  \n  Stats  \n\n\t  \n  Predictions  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Football Predictions      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  English Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Opta Stats      \n  \n\t  \n  Premier League  \n\n\t  \n  Champions League  \n\n\t  \n  Ligue 1  \n\n\t  \n  Serie A  \n\n\t  \n  Bundesliga  \n\n\t  \n  La Liga  \n\n\t  \n  Championship  \n\n\t  \n  WSL  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Women's Football      \n  \n\t  \n  WSL  \n\n\t  \n  Champions League  \n\n\t  \n  Power Rankings  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More Football      \n  \n\t  \n  La Liga  \n\n\t  \n  Bundesliga  \n\n\t  \n  Serie A  \n\n\t  \n  Ligue 1  \n\n\t  \n  Champions League  \n\n\t  \n  Europa League  \n\n\t  \n  Conference League  \n\n\t  \n  Championship  \n\n\t  \n  League One  \n\n\t  \n  League Two  \n\n\t  \n  WSL  \n\n\t  \n  Scottish Premiership  \n\n\t  \n  SPL  \n\n\t  \n  MLS  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    NFL      \n  \n\t  \n  NFL Articles  \n\n\t  \n  Fantasy Articles  \n\n\t  \n  Standings  \n\n\t  \n  Rankings  \n\n\t  \n  Player Ratings  \n\n\t  \n  Fantasy Tools  \n\n\t  \n  Scores & Schedule  \n\n\t  \n  Stats  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    Baseball      \n  \n\t  \n  MLB Leaderboards  \n\n\t  \n  MLB Predictions  \n\n\t  \n  NPB Predictions  \n\n\t  \n  KBO Predictions  \n\n\n  \n\n\t  \t  \t\t\t  \t\n    More      \n  \n\t  \n  Newsletter  \n\n\t  \t  \t\t\t\t\t  \t\n    Basketball      \n  \n\t  \t  \t\t\t  \t\n    NBA      \n  \n\t  \n  NBA Predictions  \n\n\t  \n  NBA Leaderboards  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    WNBA      \n  \n\t  \n  WNBA Predictions  \n\n\n  \n\n\t  \n  Men's College Basketball  \n\n\t  \n  Women’s College Basketball  \n\n\n  \n\n\t  \t  \t\t\t\t\t  \t\n    College Football      \n  \n\t  \n  FBS  \n\n\t  \n  FBS Rankings and Predictions  \n\n\t  \n  FCS  \n\n\n  \n\n\t  \n  Tennis  \n\n\t  \n  Rugby  \n\n\t  \n  Golf  \n\n\t  \n  Hockey  \n\n\t  \n  Explainers  \n\n\n  \n\n\n    \n      \n    \n    \n      \n    \n  \n\n  \n\n        \n      \n        \n          \n        \n      \n      \n                \n                      \n              \n                                  LIVE                                Premier League 2026-27 Predictions 🔮\n              \n            \n                      \n              \n                                  LIVE                                2026 NFL Predictions 🔮\n              \n            \n                      \n              \n                                  \n                                Discover the Latest Opta Power Rankings 🔋\n              \n            \n                      \n              \n                                  \n                                Subscribe to our Free Football Newsletter ✉️\n              \n            \n                  \n      \n      \n        \n          \n        \n      \n    \n    \n\n  \n\n  \n    \n            \n                \n                      \n      \n                                \n                                        La Liga\n                      \n              \n              \n          Barcelona 1-2 Real Madrid: Kylian Mbappé Strikes Twice as José Mourinho Claims Clásico Win\n        \n      \n                          \n                      Oct 25, 2026\n          \n                      Harry Carr / Author\n                  \n      \n              \n                      \n                  \n          \n\n    \n              \n      \n              \n                    \nKylian Mbappé was the hero as Real Madrid cut the gap at the top of La Liga with a deserved win at Barcelona. Check out all the best Clásico numbers with our stats page.",
+        "Kylian Mbappé scored twice, including an 87th-minute winner, as Real Madrid claimed a huge 2-1 victory over their Clásico rivals Barcelona at Camp Nou.",
+        "Barça were hoping to become the first team to ever start a season in one of Europe's top five leagues with 10 straight victories, having already built a six-point buffer to Madrid ahead of Sunday's clash.",
+        "Hansi Flick's hosts were up against it when Gerard Martín's attempted clearance ricocheted in off Mbappé in the 41st minute, although Raphinha's 13th league goal of the season drew them level shortly after the hour mark.",
+        "However, Mbappé was on hand to slot into an empty net following a lightning quick Madrid break late on, prompting wild celebrations from manager José Mourinho on the sidelines.",
+        "Madrid quickly got on the front foot as they looked to quiet a raucous Catalan crowd, but no white shirts were lurking for a tap-in when Joan García could only parry Arda Güler's drive.",
+        "Raphinha had three efforts at the other end, the second of which was the most threatening as his first-time strike whistled over the crossbar following some industrious work from Pedri, while Andrii Lunin – standing in for the ill Thibaut Courtois – denied Anthony Gordon at his near post.",
+        "Yan Diomande was one of Madrid's brightest sparks in attack, and their opening goal came from him being slipped into the area by Marc Cucurella. The Ivorian's centre was far from his best, but Martín blasted it straight off Mbappé and into the net.",
+        "Barça should have had a quickfire equaliser when Lamine Yamal scuffed an uncharacteristically poor finish wide, but Flick's team were cut open on two more occasions before the interval.",
+        "Mbappé rifled against the inside of the post, only for the offside flag to go up against him, but Diomande was onside when he broke in behind and hit the side netting moments later.",
+        "Madrid spurned another excellent counter-attacking chance early in the second half, with Jude Bellingham failing to get his pass off when Mbappé was supporting him against an isolated Martín.",
+        "And Barça made those reprieves count when Raphinha's shot proved too hot for Lunin to handle, after the Brazilian was cleverly found by Pedri on the right side of the area.",
+        "Lunin made a terrific, one-handed save to keep out Martín's header shortly afterwards, though he was lucky to see one Yamal effort drift narrowly wide and another smack Dean Huijsen in the face.",
+        "However, there was a cruel twist to come at the other end as, after some superb work from the outstanding Bellingham, substitute Eduardo Camavinga burst down the right flank and centred for Mbappé, who simply could not miss.",
+        "Just 24 hours before the 2026 Ballon d'Or ceremony takes place in London, Sunday's Clasico saw two of the main contenders for the prize – Yamal and Mbappé – go head-to-head.",
+        "And though the voting has long since been finalised, it was Mbappé who provided one final reminder of his credentials to be crowned the best player in the world.",
+        "There may have been a huge slice of fortune about Mbappé's opener, but his brace took him to five goals in two visits to Barça as a Madrid player. That is the most by any Blancos player since the start of 2013-14, surpassing Cristiano Ronaldo and Karim Benzema (four each).",
+        "Yamal, meanwhile, missed a glaring chance to equalise in the first half and was unable to hit the net with any of his five shots, which were worth a team-high 0.51 expected goals (xG). He also failed to create a single chance and only completed 76.6% of his passes (47/76)",
+        "And, on a night where Barça could have opened up a huge nine-point gap to Madrid and made La Liga history in the process, it was Mourinho who earned the bragging rights.",
+        "His unbeaten run in Clásico matches – which dates back to his previous spell in charge of Madrid – now stands at six games (W4 D2). He is just the third Blancos coach to enjoy such a run, after Miguel Muñoz (1962 to 1965) and Vicente del Bosque (2001 to 2003) both had seven-match streaks."
       ]
     },
     "8EA82CF562E3FD1DC68504FE001D463B": {
@@ -42752,6 +42879,37 @@
         "CM: Declan Rice—7.9: A fairly typical all-action performance."
       ]
     },
+    "ftbpro_01m5q65wexhv": {
+      "id": "ftbpro_01m5q65wexhv",
+      "title": "Ranking All 20 Premier League Teams’ Performances on Matchday 8",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/ranking-all-20-premier-league-teams-performances-matchday-8-2026-27/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5tcvcyzf4ghr7qkfb.jpg",
+      "publishedAt": "2026-10-25T22:00:00.000Z",
+      "paragraphs": [
+        "By Grey Whitebloom6:00 PM EDTThere was a real contrast of emotions across the Premier League weekend. / Dan Istitene/Getty Images (Dalot), Liverpool FC/Getty Images (Isak), Julian Finney/Getty Images (Gabriel)The Real Madrid legend Alfredo Di Stéfano used to say: “A game without a goal is like a day without sunshine.” There was no sun spotted on English shores as Storm Boelo washed across the nation, coating every match in a wall of rain powered by an unrelenting wind. But, fortunately for those of a Di Stéfano persuasion, there was only one 0–0 draw.",
+        "Some managed to tiptoe between the raindrops while others were caught in the deluge on a Premier League weekend which could have lasting ramifications.",
+        "The illusions of a pre-appeal title race took a twist on Saturday before Manchester United sunk to a new nadir 24 hours later. Liverpool’s signings actually started clicking and Tottenham Hotspur even managed to win a game at Stamford Bridge.",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "It didn’t go Mason Mount’s way. / James Gill/Danehouse/Getty ImagesWhile Michael Carrick’s precarious future could understandably distract from the machinations on the pitch, it should not be overlooked how dreadful Manchester United were, once again.Any whisper of threat which the hosts were able to muster came long after the result had been decided, with United—shorn of their divisive creative lynchpin Bruno Fernandes—resolutely devoid of any attacking spark. Bournemouth, by contrast, could afford to miss half of the Opta-defined “big chances” they created and still romp to a comfortable 3–0 win.",
+        "Xabi Alonso oversaw Chelsea’s first home defeat to Tottenham since 2018. / Glyn KIRK/AFP/Getty ImagesThis was not a high spec contest of quality action. At times, it was reminiscent of two bald men fighting over a comb. Neither team had much use for the ball, which scarcely looked like finding the back of the net until Chelsea’s stand-in goalkeeper Mike Penders handed Tottenham the lead. Cole Palmer capped off a night of infamy with two entirely needless yellow cards.A steely eyed Xabi Alonso made it abundantly clear what he thought of the performance by repeating the insistence that Chelsea “can do better” three times in a matter of seconds.",
+        "Coventry are desperately short of goals. / Mike Egerton/PA Images/Getty ImagesFulham hardly tore Coventry apart but Frank Lampard’s hosts were typically toothless once again. The Premier League’s lowest scorers scarcely looked like adding to their meager tally with just two shots on target. The most trouble Coventry caused Fulham’s Bernd Leno was when Ephron Mason-Clark inadvertently kicked the goalkeeper in the groin.",
+        "Promising results and performances are hard to come by for Crystal Palace. / Sebastian Frej/Getty ImagesCrystal Palace had denied Newcastle a single shot on target across the opening 45 minutes. Yet, they were trailing within 120 seconds of the restart.Pierre Sage’s team talk had a disastrous effect and the second half crumpling inspired boos from a restless Selhurst Park. Whether the beaten French boss will be around to deliver another address to his players is very much up in the air.",
+        "Thierno Barry had a thankless task at the Emirates. / Julian Finney/Getty ImagesThe only people who took more of a battering at the Emirates on Saturday than Everton’s players were the luckless Arsenal fans exposed to the torrential downpour in the front row.The Toffees scarcely had a sniff, with their efforts punctured by an early concession. After tumbling 1–0 down, Everton bizarrely opted to press Arsenal—perhaps Bruno Fernandes had been on the phone—which only played into the hands of their hosts.",
+        "The bench getting around Enciso. 🙌 pic.twitter.com/kljs1LHQ8U",
+        "Ipswich spent the bulk of the contest shunted firmly onto the back foot. Nottingham Forest leaped upon the hosts’ sloppy buildup play in the first half and calmly dealt with the direct game Ipswich reverted to in the second 45 minutes. Neither approach worked yet the Tractor Boys still emerged with an even share of the spoils. As Forest’s Oliver Glasner shrugged: “It is football.”",
+        "Brentford had a battle on their hands on Sunday. / Mike Egerton/PA Images/Getty ImagesFor a Brentford side whose only defeat of the season came against Liverpool after being reduced to 10 men, Sunday’s stalemate away to newly promoted opposition inspired an understandably frustrating reaction.“We have to be better,” manager Keith Andrews and wingback Michael Kayode both stressed, with some justification.",
+        "The wind caused havoc at the Stadium of Light. / Ian MacNicol/Getty ImagesThe conditions got the better of both teams at the Stadium of Light. The storm sweeping across the U.K. undoubtedly played a major factor in the technical flaws on display, with each side combining to complete just 73% of their passes (the Premier League average is above 82%). As Leeds goalkeeper James Trafford so eloquently put it: “The wind was obviously extremely windy.”",
+        "It was all a bit messy in Sunderland. / ANDY BUCHANAN/AFP/Getty ImagesSunderland’s Premier League winless streak may have extended to six games on Sunday, but Régis Le Bris was enthused by the performance behind a goalless draw. As he pointed out after watching a contest defined by more grit than grace, “We were Sunderland today.”",
+        "Another away game, another goal ⚽️ pic.twitter.com/DT39808mi2",
+        "Enzo Maresca had been able to rely upon two certainties during his record-breaking start to the Premier League season: Erling Haaland’s goals and Gianluigi Donnarumma’s saves. His striker continued to deliver but the Italian goalkeeper let Nicolas Jackson’s daisy-cutter scuttle under his huge frame.City were caught cold by Villa’s tactical setup and deservedly trailed 1–0 after six minutes. The visitors grew into the contest, taking advantage of that questionably funded wealth of playing talent, but the ball would not fall their way for once. “It was a good game, good performance,” Maresca insisted, “but unfortunately we lost.”",
+        "Continuing our unbeaten streak at the MKM 🔥 pic.twitter.com/tIx6TR0U6z",
+        "In a bitty game which will test the creativity of highlights package editors everywhere, Hull gave as good as they got. Both sides amassed 1.8 xG and two big chances, with one spurned apiece. The Tigers boss Sergej Jakirović was not alone in hailing a draw as “a fair result.”",
+        "Fabian Hürzeler was not impressed. / Jan Kruger/Getty ImagesFabian Hürzeler drilled to the heart of Sunday’s clash at Anfield. “The difference was just that they scored and we didn’t.” Brighton went close to breaking the deadlock through Yasin Ayari before Pascal Groß inadvertently picked out the back of his own net while trying to block Florian Wirtz’s shot. Alexander Isak’s second two minutes later whisked the contest away from Brighton, who would still out-shoot and out-run their illustrious hosts on a day of frustration.“It was a missed opportunity for us,” Hürzeler huffed.",
+        "Goodnight, Fulham fam. 🤍 pic.twitter.com/foItoNI8tf"
+      ]
+    },
     "ftbpro_01m5q88p5ncv": {
       "id": "ftbpro_01m5q88p5ncv",
       "title": "Why Joao Pedro Is Not Playing for Chelsea vs. Tottenham",
@@ -42944,6 +43102,35 @@
         "Balance is clearly important. “We need to get a bit of both. It is a fine line, to be honest, that aggressiveness. When you don’t have the ball and when you have the ball, you want that calmness, that being able to play from the back and being able to play through the press.",
         "“I think it’s just finding that fine line in ourselves.”",
         "feed. READ THE LATEST MAN UTD NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m5s649s673": {
+      "id": "ftbpro_01m5s649s673",
+      "title": "Transfer Rumors: Rashford’s Premier League Switch; Barcelona Eye Double Man City Swoop",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/transfer-rumors-rashford-premier-league-barcelona-double-man-city-swoop/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5tfx3wvywhvqbrq44.jpg",
+      "publishedAt": "2026-10-25T23:05:00.000Z",
+      "paragraphs": [
+        "By SI FC Staff7:05 PM EDTMarcus Rashford (left) and Erling Haaland headline the gossip. / Shaun Brooks/CameraSport/Getty Images (Rashford), Carl Recine/Getty Images (Haaland)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "JJ Gabriel’s future has taken a twist. / Manchester United/Getty ImagesMarcus Rashford’s Manchester United return could conclude as soon as January, with the Red Devils in talks with Everton regarding a winter move for the academy graduate. (Source: Football Transfers)",
+        "Chelsea have elbowed their way into the race for Brighton & Hove Albion center back Luka Vušković, who is also being tracked by Liverpool, Real Madrid and Bayern Munich. (Source: TEAMtalk)",
+        "Liverpool are ready to rival Manchester United in their pursuit of Everton center back Jarrad Branthwaite, who is expected to cost upward of £80 million ($107 million). (Source: Football Insider)",
+        "Valencia winger David Otorbi has emerged as an unexpected figure of interest at Liverpool as a potential Mohamed Salah replacement, with efforts recently intensified to sign a €30 million ($33.7 million) gem. (Source: Tribuna Deportiva)",
+        "JJ Gabriel is expected to wait until January before making his Manchester United exit, with the likes of Paris Saint-Germain and Real Madrid billed as big admirers. (Source: Football Insider)",
+        "Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed",
+        "Manchester City academy graduate Rico Lewis is expected to push for a January exit with Nottingham Forest credited as an interested party. (Source: Football Insider)",
+        "Former Manchester United manager Ruben Amorim could poach one of his ex-players, with Leny Yoro on AC Milan’s shortlist of targets. (Source: Calciomercato)",
+        "Rennes’ prolific striker Esteban Lepaul is the subject of competing interest from Everton and Leeds United. (Source: Football Insider)",
+        "An increasingly frustrated Estêvão is set to hold talks with Chelsea regarding a potential January switch, while his minutes remain desperately limited. (Source: TEAMtalk)",
+        "Known Liverpool target Ismaïla Sarr remains keen on a move away from Selhurst Park. However, while interest from Merseyside has waned, Galatasaray remain keen. (Source: Football Insider)",
+        "Jérémy Doku could be on the move. / Paul ELLIS/AFP/Getty ImagesNot content with the capture of Erling Haaland, Barcelona are also eyeing up Manchester City’s Jérémy Doku in a brazen double swoop. (Source: Indykaila)",
+        "Real Madrid’s pursuit of Arsenal midfielder Martín Zubimendi is at risk of being hijacked by Chelsea. (Source: El Nacional)",
+        "Brighton have dismissed claims that Real Madrid boast a buyback clause for their talented summer recruit Chema Andrés. It had been previously reported that Madrid could re-sign their academy product for as little as €13.5 million ($15.2 million). (Source: TEAMtalk)",
+        "Fiorentina fullback Dodo is hurtling toward free agency next summer and is a name to have come across Barcelona’s radar. There will be competition from the Italian pair of Milan and Juventus. (Source: Football Italia)",
+        "Barcelona are closely monitoring the future of Real Betis’ Ez Abde, who is a figure of interest for a PSG side trying to replace Khvicha Kvaratskhelia. Barça are set to earn 20% of whatever profit is made on Abde, with those funds set to be diverted toward a move for RB Leipzig center back Castello Lukeba. (Source: El Nacional)",
+        "READ THE LATEST TRANSFER RUMORS FROM THE PAST FEW DAYS. feed"
       ]
     },
     "ftbpro_01m5sawjp252": {
@@ -43334,6 +43521,95 @@
         "Starting XI (4-2-3-1): Lunin; Valverde, Konaté, Huijsen, Cucurella; Tchouaméni, Silva; Güler, Bellingham, Diomande; Mbappé.",
         "Substitutes: Sergio Mestre (GK), Álvaro Carreras, Antonio Rüdiger, Denzel Dumfries, Éder Militão, Trent Alexander-Arnold, Eduardo Camavinga, Thiago Pitarch, Brahim Díaz, Carlos Espí, Endrick.",
         "feed. READ THE LATEST LA LIGA NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m5t229dxgh": {
+      "id": "ftbpro_01m5t229dxgh",
+      "title": "Is Landon Donovan an All-Time Legend of the Game? Not to His Former USMNT Teammate",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/is-landon-donovan-all-time-legend-not-to-former-usmnt-teammate/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5t3snh26rx1zb9rj5.jpg",
+      "publishedAt": "2026-10-25T21:30:00.000Z",
+      "paragraphs": [
+        "By Sophia Vesely5:30 PM EDTJermaine Jones (left) had a lot say about Landon Donovan’s career. /  Nick Potts/PA Images/Getty Images (Donovan); Jan Fromme/firo sportphoto/Getty Images (Jones)What does it take to be an American legend of the game? According to former U.S. men’s national team star Jermaine Jones, it should be so much more than the soccer career his old teammate, Landon Donovan, had. And there’s a distinct reason why he himself is not at the top of that list.",
+        "Sure, Donovan is the second-most capped player in USMNT history (157) and is tied with Clint Dempsey for the most goals scored (57). He is a six-time MLS Cup winner (2001, 2003, 2005, 2011, 2012, 2014) and a two-time Supporters’ Shield winner (2010, 2011). He was even named the FIFA World Cup Best Young Player in 2002, after leading the Americans to a historic quarterfinal finish at just 20 years old.",
+        "But to Jones, “greatness” is so much more than the factors that can be quantified—caps, trophies and honors. It’s the “the level you compete at, the challenges you face, and the path you choose,” he wrote on X this week.",
+        "And to him, Donovan intentionally chose “the easier path,” whereas he “competed at the level where [Donovan] clearly felt he couldn’t establish himself.”",
+        "“I know firsthand what it takes to compete at the highest level in European football, and I also know the difference between choosing the harder road and taking the easier one,” the midfielder added.",
+        "Both now 44 years old, Jones and Donovan had the briefest overlap at Bayer Leverkusen back in 2005 and spent four years competing together for the USMNT. This is not even the first time this month that Donovan has come under fire from a former USMNT teammate and certainly not the first time he and Jones have had their differences.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Donovan has a full trophy cabinet. / Victor Decolongon/Getty ImagesJones spent the bulk of his career competing overseas at the highest levels of the game in the Bundesliga, the Champions League and the Europa League. Meanwhile, an unfruitful stint at Bayer Leverkusen saw Donovan quickly return stateside, playing the majority of his career in MLS with the San Jose Earthquakes (2001–2004) and the LA Galaxy (2005–2014, 2016).",
+        "Donovan won two MLS titles with the Earthquakes (2001, 2003) and then a whopping four with the Galaxy (2005, 2011, 2012, 2014). Although impressive feats, Jones believes there is something crucial to consider about that trophy-laden stint.",
+        "“Let’s not forget which team he played for,” Jones warned. “He wasn’t playing for the Colorado Rapids or Real Salt Lake with all respect. He played for the LA Galaxy, a club that was the face of MLS for years, with some of the league’s biggest stars.",
+        "“We’re talking about a team with three top Designated Players [including David Beckham], league rules that were adjusted, and several other players earning top money.” Just another example of Donovan taking the “easier” road, according to Jones.",
+        "Donovan dominated MLS. / Harry How/Getty ImagesJones’s trophy cabinet may be significantly less exciting, winning just the German Cup and the German Super Cup with Schalke 04 back in 2011, but that’s not what defines “greatness” to him.",
+        "“There’s a difference between dominating a league and proving yourself against the best players in the world, week after week, at the highest level,” said Jones, who racked up 129 appearances with Schalke 04 between 2007 and 2014. “... My definition of greatness might be very different from all of yours.”",
+        "Although Jones ended his career in MLS—remembered for his time with the New England Revolution, he has no doubt that he “would have dominated MLS” had he arrived on American soil earlier.",
+        "Jones is a German-American dual national. /  Jamie McDonald/Getty ImagesJones is certainly regarded as one of the most talented players to represent the Stars and Stripes, anchoring the midfield on numerous occasions, including throughout the 2014 World Cup; however, he does not hold the same legendary stature in the U.S. that Donovan does.",
+        "It is a reality that can be explained by more than just the fact that Donovan was a glamorous forward that scored a lot of goals. To Jones, it is a result of his own status as a German-American.",
+        "“Would I be considered one of the greats if I had been born in the United States and played my entire career in Europe?” Jones wrote. “For sure, period!!!”",
+        "Jones was born in Frankfurt, West Germany to an American father and German mother and represented Germany at the youth levels and even at the senior level three times in 2008. He only switched allegiances and began playing for the USMNT in 2010 at 28 years old, before racking up 69 caps across seven years with the Stars and Stripes.",
+        "The midfielder believes his career as an American has been discredited precisely because he is a dual-national, perhaps as a result of Donovan’s own scathing remarks of the past.",
+        "After Donovan was shockingly snubbed by then-USMNT manager Jürgen Klinsmann for the 2014 World Cup roster, he and Klinsmann shared candid words to bury the hatchet, a conversation Donovan recounted in 2023 on CBS Sports."
+      ]
+    },
+    "ftbpro_01m5t352h2nn": {
+      "id": "ftbpro_01m5t352h2nn",
+      "title": "Barcelona vs. Real Madrid Player Ratings: Mbappe Hits 100 As Los Blancos Stun Camp Nou",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/barcelona-vs-real-madrid-player-ratings-mbappe-100-los-blancos-stun-camp-nou/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_56/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5tkafzf4s9khr6sfn.jpg",
+      "publishedAt": "2026-10-25T22:51:12.000Z",
+      "paragraphs": [
+        "By Andrew Headspeath6:43 PM EDTThe night was all about Kylian Mbappé. / David Ramos/Getty ImagesReal Madrid put themselves right back into the La Liga title race with a stunning 2–1 win over Barcelona at Camp Nou on Sunday night.",
+        "In a match in which six Ballon d’Or nominees started, it was Kylian Mbappé who stole the headlines with his match-winning double, though the performance was as much about José Mourinho as any player.",
+        "As expected, Barça dominated the possession, but they struggled to break down their opponents, while Madrid got an unexpected breakthrough five minutes before half-time as Gerard Martín’s attempted clearance cannoned back off Mbappé and into the goal.",
+        "The hosts fought back after the interval with Raphinha’s equalizer and pushed frantically for a winner that never came. Instead, it was Madrid who came away with bragging rights and renewed hope as a superb late counterattack ended up at the feet of Mbappé, who tapped into an open net to silence the Camp Nou and dramatically change the narrative in La Liga this season.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "It was a classic Mourinho performance. / Alberto Gardin/NurPhoto/Getty ImagesThe last time these two met, Barcelona ran out winners to officially confirm their La Liga title at the end of last season.",
+        "This time around—though neither manager would publicly admit it—the state of play prior to kick-off meant that a win for Barcelona would essentially end a floundering Real Madrid’s title hopes even before Halloween.",
+        "With Mbappé’s bizarre point-blank ricochet and late tap-in—his 99th and 100th goals for Real Madrid—Los Blancos are very much still alive and kicking in the race.",
+        "Barcelona did not face the same team that struggled to cope in the Madrid derby prior to the international break. Instead, the host came up against what felt like the archetypal, teak-tough, counter-heavy Mourinho side, only too delighted to play the role of party poopers. Hansi Flick’s team didn’t seem to know quite what to do with Madrid’s competence.",
+        "It’s a result that changes everything. Barça no longer look unstoppable, and Madrid are very much back.",
+        "Raphinha scored his 13th of the season. /  Lluis GENE/AFP/Getty Images*Ratings provided by FotMob*",
+        "GK: Joan García—7.2: Made three saves on the night but nothing he could’ve have done about the first goal.",
+        "RB: Xavi Espart—6.2: Espart’s first Clásico lasted just half and hour, with the teenager trudging off after feeling the lasting effects of a heavy challenge from Aurélien Tchouaméni.",
+        "CB: Pau Cubarsí—6.3: Struggled in his duels and will be unhappy at how he was played around on the counter at times.",
+        "CB: Gerard Martín—6.3: In hindsight, it was a poor decision to clear a cross—without pressure—straight into the onrushing shins of the world’s best striker.",
+        "LB: João Cancelo—7.7: Started at left back and ended on the right, the Portugal international was effective in creating chances and did well in his battles with Yan Diomande.",
+        "CM: Rodri—6.9: Missed midweek, Rodri asserted control but not creativity here with Barça somewhat lacking.",
+        "CM: Pedri—7.7: As against PSG, he looked a soft touch in the first half, failing to win his duels and uncharacteristically sloppy in possession. A delicious disguised assist for Raphinha’s equalizer largely made up for all previous sins.",
+        "RW: Lamine Yamal—6.9: Off the pace. The Ballon d’Or contender skewed a gift of a chance to equalize right before half time and was ultimately outshone by the stone-cold Mbappé.",
+        "AM: Fermín López—6.3: A frustrating night for López, who was unable to affect the game against Madrid’s solid midfield."
+      ]
+    },
+    "ftbpro_01m5t5v9vpw3": {
+      "id": "ftbpro_01m5t5v9vpw3",
+      "title": "Julian Alvarez Makes Barcelona Transfer U-Turn With Massive Atletico Apology",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/julian-alvarez-barcelona-transfer-atletico-apology/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1962,h_1103,x_321,y_41/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m5t63np4dphm8j7zje.jpg",
+      "publishedAt": "2026-10-25T21:00:00.000Z",
+      "paragraphs": [
+        "By Roberto Casillas5:00 PM EDTJulián Alvarez is returning to form with Atlético Madrid after a chaotic summer saga.  / Angel Martinez/Getty Images Julián Alvarez has apologized to Atlético Madrid fans after publicly stating his desire to leave the club this summer, admitting “it was a mistake” to try to force his way out to Barcelona.",
+        "Barcelona pursued Alvarez for months in attempt to sign a new striker to replace Robert Lewandowski. Alvarez was also keen on the move, but Atlético Madrid refused to even negotiate with the Catalans.",
+        "In one of the most spectacular chapters of the prolonged transfer saga, while Alvarez was representing Argentina in the 2026 World Cup, he publicly stated the best thing for everyone was for him to leave Atlético Madrid because he wanted to “fulfill [his] dream.”",
+        "Despite his comments, Atlético never budged from their stance, and the transfer never materialized. Alvarez was showered with boos, whistles and insults when he made his season debut for Los Rojiblancos.",
+        "The relationship between the disgruntled striker and Atlético seemed to be broken beyond repair; however, Alvarez is slowly returning to form and recently went out of his way to mend things with the club.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Julián Alvarez (front) has scored in consecutive games for the first time this season.  / Jan-Philipp Strobel/picture alliance/Getty ImagesThe transfer saga took a toll on Alvarez, who had a very slow start to the 2026–27 season. Now, though, the Argentine is back to looking menacing, and after scoring his first goal of the term in the Champions League midweek, he scored Atléti’s winner against Deportivo A Coruña on Saturday.",
+        "Alvarez spoke with reporters post-match, and before answering any questions, he issued a heartfelt apology to Atlético Madrid for his public transfer plea.",
+        "“First of all, if I could, I want to say a few words,” Alvarez said. “I want to apologize to our fans for my words during the World Cup. The truth is that it was a mistake from my part, both in the ways and the moment.",
+        "“Most of all, I understand the anger from people, as a fan I would’ve also been angry too, especially because of how much they’ve supported me always throughout the years. These last few weeks they’ve also been very generous, and I really appreciate that.",
+        "“Now I have to focus on working and continuing to improve my form alongside the whole team, whom I want to thank because they have supported me all this time. So, it’s time to get to work because we have very important things to do with the team.”",
+        "Raphinha has been phenomenal as Barcelona’s striker this season.  / Lluis Gene/AFP/Getty ImagesBarcelona have also moved on from the Argentine and are thriving, despite failing in their summer pursuit.",
+        "Without Alvarez, Raphinha has been spectacular operating as Barça’s center forward. The Brazilian leads the Pichichi race in La Liga and is performing like one of the best players in the world, helping the Catalans quickly forget about Alvarez.",
+        "“Julián Álvarez is the past,” Barcelona sporting director Deco said in late September, via ESPN. “Barcelona now have to look forward. It wasn’t possible in the end. We made an offer. Atlético said they would not transfer him and we had to look for other solutions. I hope things go well for him and that he can help his club.”",
+        "Barcelona currently top the La Liga standings with Atlético as their nearest chasers in second. Following the highly publicized saga, the rivalry between the two Spanish giants has never been more intense. Their first meeting of the season is on Nov. 8 when Barça visits the Metropolitano.",
+        "READ THE LATEST LA LIGA NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
     "fuvk7p3c6b561s66ow0vu2529": {
@@ -44645,6 +44921,33 @@
         "&quot;Offensively, we still lack ideas, there isn&#39;t yet a collective effort. It&#39;s normal: I haven&#39;t had time for that.&quot;"
       ],
       "html": "<p>Jorge Jesus insisted it was a &quot;tactical choice&quot; to leave Cristiano Ronaldo on the bench during Portugal&#39;s Nations League victory over Norway.</p>\n\n<p>Portugal won 2-1 on Sunday at Ullevaal Stadion after goals from Joao Felix and Goncalo Ramos, which came either side of a strike from Erling Haaland.</p>\n\n<p>Joao Felix has now scored six goals in his last 11 games as a starter for Portugal as he continues to thrive under Jesus, whom he also worked under at Al-Nassr.</p>\n\n<p>Jesus&#39; side struggled for much of the contest, accumulating just 1.04 expected goals (xG) after being restricted to just 38% of possession, while Norway registered 2.52 xG from 22 shots.</p>\n\n<p>Nevertheless, Portugal continued their perfect start to their Nations League title defence, even with Ronaldo unable to get minutes off the bench.</p>\n\n<p>&quot;It wasn&#39;t the right moment to bring Ronaldo into the game; it was a tactical choice,&quot; said Jesus on the matter.</p>\n\n<p>&quot;I needed a player with different characteristics, but that doesn&#39;t mean he&#39;s out of the options. Perhaps he&#39;ll play against Denmark.&quot;</p>\n\n\n<p>Haaland posed the biggest threat to Portugal&#39;s win; the Manchester City striker led the match in shots (eight) and was responsible for 1.5 of Norway&#39;s xG tally.</p>\n\n<p>Although Haaland managed to score, Jesus was satisfied with the way his side defended against Norway.</p>\n\n<p>&quot;It was an excellent victory because we played against one of the best teams in Europe right now. They are in the top five, like Portugal,&quot; added Jesus.</p>\n\n<p>&quot;They have a striker who can score at any moment. It’s incredible.</p>\n\n<p>&quot;Our back line, and especially the two centre-backs, with the help of Joao Palhinha and Ruben Neves when they moved into the defensive phase, were very strong in the central corridor. Even so, Haaland had seven shots inside the box and scored once.</p>\n\n<p>&quot;We were once again organised defensively and more creative offensively, also with the introduction of new players.</p>\n\n<p>&quot;Offensively, we still lack ideas, there isn&#39;t yet a collective effort. It&#39;s normal: I haven&#39;t had time for that.&quot;</p>\n"
+    },
+    "klp9qw2wgkxo1h22snaj4t0hq": {
+      "id": "klp9qw2wgkxo1h22snaj4t0hq",
+      "title": "Udinese 0-2 AC Milan: Pulisic and Hutchinson extend Amorim's unbeaten Serie A start",
+      "subtitle": "AC Milan provided the perfect response to their Europa League defeat to Bournemouth by beating Udinese comfortably on Sunday.",
+      "source": "FotMob",
+      "sourceUrl": "/news/klp9qw2wgkxo1h22snaj4t0hq-udinese-0-2-ac-milan-pulisic-hutchinson-extend-amorims-unbeaten-serie-start",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/6f/8d/ac-milan_1cl1mttckr7d919h2uemkhwlm8.png?t=2037373729&w=1200&h=630",
+      "publishedAt": "2026-10-25T21:56:38.000Z",
+      "paragraphs": [
+        "Ruben Amorim&#39;s unbeaten start to life in Serie A continued&nbsp;as goals in either half from&nbsp;Christian Pulisic and Omari Hutchinson earned AC Milan a 2-0 win over Udinese.",
+        "Milan remain within four points of leaders Inter after eight games of their season, as they delivered the perfect response to their Europa League thrashing by Bournemouth.",
+        "The Rossoneri needed just six minutes to get ahead after some quick thinking from Luka Modric, whose&nbsp;free-kick caught the Udinese defence napping, with Pulisic plucking the ball out the sky before finishing coolly beyond&nbsp;Maduka Okoye.",
+        "Davide Bartesaghi should have doubled Milan&#39;s lead five minutes later after he was slipped in by Pulisic, but as he closed in on goal, he lashed his left-footed effort over the bar.&nbsp;",
+        "Bartesaghi and Pulisic then somehow failed to turn&nbsp;Fikayo Tomori&#39;s cross home, with some last-ditch defending from&nbsp;James Abankwah then denying&nbsp;Strahinja Pavlovic a shot at goal just before the break.&nbsp;",
+        "Milan upped the pressure on the hour mark, with&nbsp;Pulisic thwarted at the near post by&nbsp;Okoye, with Goncalo Ramos then curling over from outside the area moments later.&nbsp;",
+        "But the visitors&#39; dominance was rewarded in the 65th minute through Hutchinson.&nbsp;Ardon Jashari&#39;s strike was only parried into the path of the on-loan&nbsp;attacker, who was the quickest to react.&nbsp;",
+        "A wonderful piece of goalkeeping denied Milan a third soon after. Pulisic&#39;s goal-bound effort deflected off&nbsp;Christian Kabasele and into the path of Ramos, but his first-time shot was superbly tipped onto the crossbar by&nbsp;Okoye.&nbsp;",
+        "Mike Maignan, sent off in midweek against Bournemouth, preserved his clean sheet late on after thwarting&nbsp;Keinan Davis from point-blank range, as Milan comfortably held on.&nbsp;",
+        "Timeless Modric rolls back the years as Milan keep up the pressure",
+        "After enduring a difficult return to England on Thursday as Milan were thumped 3-0 by Bournemouth in the Europa League, Amorim had a point to prove, and his strong start in Serie A extended to eight matches.&nbsp;",
+        "It is the third&nbsp;time in the last 20 top-flight seasons that&nbsp;Milan have gone this long without defeat, after 2020-21 and 2021-22, and it was a moment of class and quality that got them up and running at&nbsp;Bluenergy Stadium.&nbsp;",
+        "Modric&#39;s delicate ball over the top saw him become the player who has provided the most assists after turning 40 since Serie A returned to 20 teams (from 2004-05), with this his fourth, which saw him surpass Zlatan Ibrahimovic (three).&nbsp;",
+        "Milan have made it four straight Serie A away wins against Udinese, doing so with an aggregate scoreline of 12-2, matching their best record against the same opposition in the competition between 1999 and 2001, and they could have won by a more handsome scoreline here.&nbsp;",
+        "Amorim&#39;s side finished with an expected goals (xG) total of 3.12 from their 19 shots, seven of which were on target, compared to Udinese&#39;s total of 0.42 from their 12 attempts.&nbsp;"
+      ],
+      "html": "<p>Ruben Amorim&#39;s unbeaten start to life in Serie A continued&nbsp;as goals in either half from&nbsp;Christian Pulisic and Omari Hutchinson earned AC Milan a 2-0 win over Udinese.</p>\n\n<p>Milan remain within four points of leaders Inter after eight games of their season, as they delivered the perfect response to their Europa League thrashing by Bournemouth.</p>\nPulisic capitalised on some woeful Udinese defending early on, with Hutchinson tucking home his first goal since joining Milan on loan to seal all three points after the break.&nbsp;\n\n<p>The Rossoneri needed just six minutes to get ahead after some quick thinking from Luka Modric, whose&nbsp;free-kick caught the Udinese defence napping, with Pulisic plucking the ball out the sky before finishing coolly beyond&nbsp;Maduka Okoye.</p>\n\n<p>Davide Bartesaghi should have doubled Milan&#39;s lead five minutes later after he was slipped in by Pulisic, but as he closed in on goal, he lashed his left-footed effort over the bar.&nbsp;</p>\n\n<p>Bartesaghi and Pulisic then somehow failed to turn&nbsp;Fikayo Tomori&#39;s cross home, with some last-ditch defending from&nbsp;James Abankwah then denying&nbsp;Strahinja Pavlovic a shot at goal just before the break.&nbsp;</p>\n\n<p>Milan upped the pressure on the hour mark, with&nbsp;Pulisic thwarted at the near post by&nbsp;Okoye, with Goncalo Ramos then curling over from outside the area moments later.&nbsp;</p>\n\n<p>But the visitors&#39; dominance was rewarded in the 65th minute through Hutchinson.&nbsp;Ardon Jashari&#39;s strike was only parried into the path of the on-loan&nbsp;attacker, who was the quickest to react.&nbsp;</p>\n\n<p>A wonderful piece of goalkeeping denied Milan a third soon after. Pulisic&#39;s goal-bound effort deflected off&nbsp;Christian Kabasele and into the path of Ramos, but his first-time shot was superbly tipped onto the crossbar by&nbsp;Okoye.&nbsp;</p>\n\n<p>Mike Maignan, sent off in midweek against Bournemouth, preserved his clean sheet late on after thwarting&nbsp;Keinan Davis from point-blank range, as Milan comfortably held on.&nbsp;</p>\n\n\n<p><strong>Timeless Modric rolls back the years as Milan keep up the pressure</strong></p>\n\n<p>After enduring a difficult return to England on Thursday as Milan were thumped 3-0 by Bournemouth in the Europa League, Amorim had a point to prove, and his strong start in Serie A extended to eight matches.&nbsp;</p>\n\n<p>It is the third&nbsp;time in the last 20 top-flight seasons that&nbsp;Milan have gone this long without defeat, after 2020-21 and 2021-22, and it was a moment of class and quality that got them up and running at&nbsp;Bluenergy Stadium.&nbsp;</p>\n\n<p>Modric&#39;s delicate ball over the top saw him become the player who has provided the most assists after turning 40 since Serie A returned to 20 teams (from 2004-05), with this his fourth, which saw him surpass Zlatan Ibrahimovic (three).&nbsp;</p>\n\n<p>Milan have made it four straight Serie A away wins against Udinese, doing so with an aggregate scoreline of 12-2, matching their best record against the same opposition in the competition between 1999 and 2001, and they could have won by a more handsome scoreline here.&nbsp;</p>\n\n<p>Amorim&#39;s side finished with an expected goals (xG) total of 3.12 from their 19 shots, seven of which were on target, compared to Udinese&#39;s total of 0.42 from their 12 attempts.&nbsp;</p>\n"
     },
     "kqlgyhi2hciz1o73ornof6ij0": {
       "id": "kqlgyhi2hciz1o73ornof6ij0",
@@ -48472,6 +48775,39 @@
         "&quot;Of course, we&#39;re disappointed. We created enough chances to maybe take the game, but yeah, we came off having given it all.&quot;"
       ],
       "html": "<p>Sebastien Pocognoli said there were plenty of positives from his first match in charge of Scotland as they began their Nations League campaign with a 0-0 draw against Slovenia.</p>\n\n<p>Pocognoli, sitting in the Scotland dugout for the first time since replacing Steve Clarke, watched on as his side overcame a tepid first-half display to claim a point away from home.</p>\n\n<p>Andraz Sporar thought he had given Slovenia an eighth-minute lead when he crashed an effort in off the post, but the goal was ruled out for an offside against&nbsp;Danijel Sturm.&nbsp;</p>\n\n<p>The Slovenia number nine then diverted an attempt just wide of the right post, with debutant&nbsp;Robbie Ure seeing his left-footed strike hit the post just before the break.&nbsp;</p>\n\n<p>From there, the visitors dominated, and they should have gone in front when&nbsp;Oli&nbsp;McBurnie&nbsp;burst into the area, but he was unable to take the ball around Jan Oblak.&nbsp;</p>\n\n<p>Aaron Hickey flicked a header from a corner just wide before substitute Kieron Bowie saw his shot from a tight angle smothered by Oblak as Scotland continued to probe.&nbsp;</p>\n\n<p>McBurnie&#39;s header from point-blank range was repelled by the goalkeeper, but the best chance fell to Bowie late on. However, he scuffed his shot wide of the right post from close range.</p>\n\n<p>Scotland had 17 shots against Slovenia, their most attempts in a match without scoring since June 2021 (19 shots against Czechia), but&nbsp;Pocognoli remained upbeat.&nbsp;</p>\n\n<p>&quot;I think we had two games in the same game, but you can analyse it in a positive way,&quot;&nbsp;Pocognoli said. &quot;The first half was not what we expected in terms of structure.</p>\n\n<p>&quot;We were in between for the press. We were a bit surprised about the formation of Slovenia, but at half-time we fixed this, and you can see that the second half was much better.</p>\n\n<p>&quot;We produced what we wanted to show every minute, but in the first half we learned to stick together, to defend the box, to be resilient and to be patient to change the game.</p>\n\n<p>&quot;We were also challenged about set-pieces. After five minutes, we had many set-pieces to defend on, so that&#39;s the positive way to look at the first half.</p>\n\n\n<p>&quot;It was not always positive, but in the second half we had a game on the ball against a low block.</p>\n\n<p>&quot;So we had a lot of good movement through the side, through the lines, and we should have scored, to be honest, but the counter-press was good, the high [line] of the defence was good, just because the position of the players was better.</p>\n\n<p>&quot;Clean sheet, that&#39;s also positive, but we want to win, but I think we can take this positively.&quot;</p>\n\n<p>Scotland are also now unbeaten in three consecutive away games in the Nations League for the first time (W2 D1), though they may feel they were deserving of all three points.&nbsp;</p>\n\n<p>They finished with an expected goals (xG) total of 1.9, with five of their 17 attempts on target, compared to Slovenia&#39;s tally of 0.5&nbsp;from&nbsp;four shots.&nbsp;</p>\n\n<p>However,&nbsp;Scotland failed to score in three competitive matches in a row for the first time since October 2004, something Billy Gilmour said must improve moving forward.&nbsp;</p>\n\n<p>&quot;Yeah, the two halves were totally different,&quot; Gilmour said.&nbsp;&quot;I think in the first half we were still getting to grips with the situations off the ball and on the ball, but the second half was a good performance.</p>\n\n<p>&quot;Obviously, you need to score. We&#39;ve had great chances. We never took them, but it&#39;s definitely something to build on. I mean, we&#39;re walking off gutted that we never scored, but in the second half it was really good.</p>\n\n<p>&quot;We came out in the second half, we were right at it, we stayed up there, we were putting pressure on them, creating chances, and the final part just never came.</p>\n\n<p>&quot;Of course, we&#39;re disappointed. We created enough chances to maybe take the game, but yeah, we came off having given it all.&quot;</p>\n"
+    },
+    "xf931mi8g5j61ko5pel33bxtf": {
+      "id": "xf931mi8g5j61ko5pel33bxtf",
+      "title": "Barcelona 1-2 Real Madrid: Mbappe at the double as Mourinho gets Clasico win",
+      "subtitle": "Kylian Mbappe, who is aiming to win the Ballon d'Or on Monday, decided Sunday's Clasico as Real Madrid defeated Barcelona.",
+      "source": "FotMob",
+      "sourceUrl": "/news/xf931mi8g5j61ko5pel33bxtf-barcelona-1-2-real-madrid-mbappe-at-double-mourinho-gets-clasico-win",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/58/d8/kylian-mbappe_1280uy0cnv0re11b3bgu716l2d.jpg?t=2041413217&w=1200&h=630",
+      "publishedAt": "2026-10-25T22:18:32.000Z",
+      "paragraphs": [
+        "Kylian Mbappe&nbsp;scored twice, grabbing an 87th-minute winner, as Real Madrid claimed a 2-1 away victory over Barcelona in El Clasico.",
+        "Barca were hoping to become the first team on record to start a season in one of Europe&#39;s top five leagues with 10 straight victories, having already built a six-point buffer to Madrid.",
+        "But Hansi Flick&#39;s side were up against it when Gerard Martin&#39;s attempted clearance ricocheted in off Mbappe&nbsp;in the 41st minute, although Raphinha&#39;s 13th goal of the LaLiga season drew them level shortly after the hour mark.",
+        "However, a wonderful, late counter from Madrid resulted in Mbappe slotting home to silence Camp Nou,&nbsp;with Jose Mourinho celebrating with a knee slide on the sidelines.&nbsp;",
+        "Madrid quickly got on the front foot as they looked to quiet the crowd, but no white shirts were lurking for a tap-in when Joan Garcia could only parry Arda Guler&#39;s drive.",
+        "Raphinha had three efforts at the other end, the second of which was the most threatening as his first-time strike whistled over the crossbar following some industrious work from Pedri, while Andrii Lunin – standing in for Thibaut Courtois, who was suffering from flu – denied Anthony Gordon.",
+        "Yan Diomande was one of Madrid&#39;s bright sparks in attack, and their opening goal came from him being slipped into the area by Marc Cucurella. The Ivorian&#39;s centre was far from his best, but Martin blasted it straight off Mbappe&nbsp;and in.&nbsp;",
+        "Barca should have had a quickfire equaliser when Lamine Yamal scuffed an uncharacteristically poor finish wide, but Flick&#39;s team were cut open on two more occasions before the interval.",
+        "Mbappe&nbsp;rifled against the inside of the post, only for the offside flag to go up against him, but Diomande was onside when he broke in behind and hit the side-netting moments later.&nbsp;",
+        "Madrid spurned another excellent counter-attacking chance early in the second half, with Jude Bellingham failing to get his pass off when Mbappe was supporting him against an isolated Martin.",
+        "And Barca made those reprieves count when Raphinha&#39;s shot proved too hot for Lunin to handle, after the Brazilian was cleverly found by Pedri on the right side of the area.",
+        "Lunin made a&nbsp;one-handed save to keep out Martin&#39;s header, though he was lucky to see one Yamal effort drift narrowly wide and another smack Dean Huijsen in the face.",
+        "However, there was a twist to come at the other end as, after more superb work from the outstanding Bellingham, substitute Eduardo Camavinga burst into the area and centred for Mbappe, who simply could not miss.",
+        "Mbappe&nbsp;outduels Yamal ahead of Ballon d&#39;Or ceremony&nbsp;",
+        "Just 24 hours before the 2026 Ballon d&#39;Or ceremony takes place in London, Sunday&#39;s Clasico featured two of the main contenders for the prize – Yamal and Mbappe.",
+        "And though the voting has long since been finalised, it was Mbappe who provided one final reminder of his credentials to be crowned the best player in the world.",
+        "There may have been a huge slice of fortune about Mbappe&#39;s opener, but his brace took him to five goals in two visits to Barca as a Madrid player. That is the most by any Blancos player since the start of 2013-14, surpassing Cristiano Ronaldo and Karim Benzema (four each).",
+        "Yamal, meanwhile, missed a glaring chance to equalise in the first half and was unable to hit the net with any of his five shots, which were worth a team-high 0.51 expected goals (xG). He also failed to create a single chance and only completed 76.6% of his passes (47/76).",
+        "And, on a night where Barca could have opened up a huge nine-point gap to Madrid and made LaLiga history in the process, it was Mourinho who earned the bragging rights.&nbsp;",
+        "His unbeaten run in Clasico matches – which dates back to his previous spell in charge of Madrid – now stands at six games (W4 D2). He is just the third Blancos coach to enjoy such a run, after Miguel Munoz (1962 to 1965) and Vicente del Bosque (2001 to 2003) both had seven-match streaks.&nbsp;",
+        "Flick, meanwhile, also continues his wait for his 100th Barca win, having seen his team now lose back-to-back games in the space of five days, following the midweek Champions League defeat to Paris Saint-Germain."
+      ],
+      "html": "<p>Kylian Mbappe&nbsp;scored twice, grabbing an 87th-minute winner, as Real Madrid claimed a 2-1 away victory over Barcelona in El Clasico.</p>\n\n<p>Barca were hoping to become the first team on record to start a season in one of Europe&#39;s top five leagues with 10 straight victories, having already built a six-point buffer to Madrid.</p>\n\n<p>But Hansi Flick&#39;s side were up against it when Gerard Martin&#39;s attempted clearance ricocheted in off Mbappe&nbsp;in the 41st minute, although Raphinha&#39;s 13th goal of the LaLiga season drew them level shortly after the hour mark.</p>\n\n<p>However, a wonderful, late counter from Madrid resulted in Mbappe slotting home to silence Camp Nou,&nbsp;with Jose Mourinho celebrating with a knee slide on the sidelines.&nbsp;</p>\n\n<p>Madrid quickly got on the front foot as they looked to quiet the crowd, but no white shirts were lurking for a tap-in when Joan Garcia could only parry Arda Guler&#39;s drive.</p>\n\n<p>Raphinha had three efforts at the other end, the second of which was the most threatening as his first-time strike whistled over the crossbar following some industrious work from Pedri, while Andrii Lunin – standing in for Thibaut Courtois, who was suffering from flu – denied Anthony Gordon.</p>\n\n<p>Yan Diomande was one of Madrid&#39;s bright sparks in attack, and their opening goal came from him being slipped into the area by Marc Cucurella. The Ivorian&#39;s centre was far from his best, but Martin blasted it straight off Mbappe&nbsp;and in.&nbsp;</p>\n\n<p>Barca should have had a quickfire equaliser when Lamine Yamal scuffed an uncharacteristically poor finish wide, but Flick&#39;s team were cut open on two more occasions before the interval.</p>\n\n<p>Mbappe&nbsp;rifled against the inside of the post, only for the offside flag to go up against him, but Diomande was onside when he broke in behind and hit the side-netting moments later.&nbsp;</p>\n\n<p>Madrid spurned another excellent counter-attacking chance early in the second half, with Jude Bellingham failing to get his pass off when Mbappe was supporting him against an isolated Martin.</p>\n\n<p>And Barca made those reprieves count when Raphinha&#39;s shot proved too hot for Lunin to handle, after the Brazilian was cleverly found by Pedri on the right side of the area.</p>\n\n<p>Lunin made a&nbsp;one-handed save to keep out Martin&#39;s header, though he was lucky to see one Yamal effort drift narrowly wide and another smack Dean Huijsen in the face.</p>\n\n<p>However, there was a twist to come at the other end as, after more superb work from the outstanding Bellingham, substitute Eduardo Camavinga burst into the area and centred for Mbappe, who simply could not miss.</p>\n\n\n<p><strong>Mbappe&nbsp;outduels Yamal ahead of Ballon d&#39;Or ceremony&nbsp;</strong></p>\n\n<p>Just 24 hours before the 2026 Ballon d&#39;Or ceremony takes place in London, Sunday&#39;s Clasico featured two of the main contenders for the prize – Yamal and Mbappe.</p>\n\n<p>And though the voting has long since been finalised, it was Mbappe who provided one final reminder of his credentials to be crowned the best player in the world.</p>\n\n<p>There may have been a huge slice of fortune about Mbappe&#39;s opener, but his brace took him to five goals in two visits to Barca as a Madrid player. That is the most by any Blancos player since the start of 2013-14, surpassing Cristiano Ronaldo and Karim Benzema (four each).</p>\n\n<p>Yamal, meanwhile, missed a glaring chance to equalise in the first half and was unable to hit the net with any of his five shots, which were worth a team-high 0.51 expected goals (xG). He also failed to create a single chance and only completed 76.6% of his passes (47/76).</p>\n\n<p>And, on a night where Barca could have opened up a huge nine-point gap to Madrid and made LaLiga history in the process, it was Mourinho who earned the bragging rights.&nbsp;</p>\n\n<p>His unbeaten run in Clasico matches – which dates back to his previous spell in charge of Madrid – now stands at six games (W4 D2). He is just the third Blancos coach to enjoy such a run, after Miguel Munoz (1962 to 1965) and Vicente del Bosque (2001 to 2003) both had seven-match streaks.&nbsp;</p>\n\n<p>Flick, meanwhile, also continues his wait for his 100th Barca win, having seen his team now lose back-to-back games in the space of five days, following the midweek Champions League defeat to Paris Saint-Germain.</p>\n"
     },
     "xj8xneulbxt13zk7nw3wcuxl": {
       "id": "xj8xneulbxt13zk7nw3wcuxl",
