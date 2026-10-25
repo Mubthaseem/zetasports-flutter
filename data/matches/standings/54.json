@@ -2,7 +2,7 @@
   "competitionId": "54",
   "competitionName": "Bundesliga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-25T10:49:47.336Z",
+  "updatedAt": "2026-10-25T15:37:56.274Z",
   "table": [
     {
       "position": 1,
@@ -42,6 +42,25 @@
     },
     {
       "position": 3,
+      "teamId": "8178",
+      "teamName": "Bayer Leverkusen",
+      "shortName": "Leverkusen",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8178.png",
+      "played": 7,
+      "won": 4,
+      "drawn": 2,
+      "lost": 1,
+      "goalsFor": 16,
+      "goalsAgainst": 9,
+      "goalDifference": 7,
+      "points": 14,
+      "form": [
+        "#2AD572"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 4,
       "teamId": "8358",
       "teamName": "Freiburg",
       "shortName": "Freiburg",
@@ -53,24 +72,6 @@
       "goalsFor": 15,
       "goalsAgainst": 6,
       "goalDifference": 9,
-      "points": 13,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 4,
-      "teamId": "8178",
-      "teamName": "Bayer Leverkusen",
-      "shortName": "Leverkusen",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8178.png",
-      "played": 6,
-      "won": 4,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 16,
-      "goalsAgainst": 9,
-      "goalDifference": 7,
       "points": 13,
       "form": [
         "#2AD572"
@@ -223,14 +224,15 @@
       "teamName": "Hoffenheim",
       "shortName": "Hoffenheim",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8226.png",
-      "played": 6,
+      "played": 7,
       "won": 2,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 4,
       "goalsFor": 11,
       "goalsAgainst": 14,
       "goalDifference": -3,
-      "points": 6
+      "points": 7,
+      "qualificationZone": "Active"
     },
     {
       "position": 15,

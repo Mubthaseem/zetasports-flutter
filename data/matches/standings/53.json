@@ -2,10 +2,48 @@
   "competitionId": "53",
   "competitionName": "Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-10-25T10:49:48.464Z",
+  "updatedAt": "2026-10-25T15:37:57.622Z",
   "table": [
     {
       "position": 1,
+      "teamId": "8639",
+      "teamName": "Lille",
+      "shortName": "Lille",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8639.png",
+      "played": 8,
+      "won": 4,
+      "drawn": 3,
+      "lost": 1,
+      "goalsFor": 11,
+      "goalsAgainst": 6,
+      "goalDifference": 5,
+      "points": 15,
+      "form": [
+        "#2AD572"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 2,
+      "teamId": "9829",
+      "teamName": "Monaco",
+      "shortName": "Monaco",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9829.png",
+      "played": 8,
+      "won": 4,
+      "drawn": 3,
+      "lost": 1,
+      "goalsFor": 11,
+      "goalsAgainst": 7,
+      "goalDifference": 4,
+      "points": 15,
+      "form": [
+        "#2AD572"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 3,
       "teamId": "9748",
       "teamName": "Lyon",
       "shortName": "Lyon",
@@ -23,7 +61,7 @@
       ]
     },
     {
-      "position": 2,
+      "position": 4,
       "teamId": "9847",
       "teamName": "Paris Saint-Germain",
       "shortName": "PSG",
@@ -37,29 +75,11 @@
       "goalDifference": 5,
       "points": 14,
       "form": [
-        "#2AD572"
+        "#FFD908"
       ]
     },
     {
-      "position": 3,
-      "teamId": "8639",
-      "teamName": "Lille",
-      "shortName": "Lille",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8639.png",
-      "played": 7,
-      "won": 4,
-      "drawn": 2,
-      "lost": 1,
-      "goalsFor": 10,
-      "goalsAgainst": 5,
-      "goalDifference": 5,
-      "points": 14,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 4,
+      "position": 5,
       "teamId": "6379",
       "teamName": "Paris FC",
       "shortName": "Paris FC",
@@ -70,24 +90,6 @@
       "lost": 2,
       "goalsFor": 13,
       "goalsAgainst": 9,
-      "goalDifference": 4,
-      "points": 14,
-      "form": [
-        "#FFD908"
-      ]
-    },
-    {
-      "position": 5,
-      "teamId": "9829",
-      "teamName": "Monaco",
-      "shortName": "Monaco",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9829.png",
-      "played": 7,
-      "won": 4,
-      "drawn": 2,
-      "lost": 1,
-      "goalsFor": 10,
-      "goalsAgainst": 6,
       "goalDifference": 4,
       "points": 14,
       "form": [

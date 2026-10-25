@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-25T10:50:12.341Z",
+  "updatedAt": "2026-10-25T15:38:22.287Z",
   "table": [
     {
       "position": 1,
@@ -171,6 +171,22 @@
     },
     {
       "position": 11,
+      "teamId": "8348",
+      "teamName": "Moreirense",
+      "shortName": "Moreirense",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8348.png",
+      "played": 9,
+      "won": 2,
+      "drawn": 3,
+      "lost": 4,
+      "goalsFor": 8,
+      "goalsAgainst": 15,
+      "goalDifference": -7,
+      "points": 9,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 12,
       "teamId": "7844",
       "teamName": "Vitória de Guimarães",
       "shortName": "Vitória de Guimarães",
@@ -182,21 +198,6 @@
       "goalsFor": 10,
       "goalsAgainst": 10,
       "goalDifference": 0,
-      "points": 8
-    },
-    {
-      "position": 12,
-      "teamId": "8348",
-      "teamName": "Moreirense",
-      "shortName": "Moreirense",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8348.png",
-      "played": 8,
-      "won": 2,
-      "drawn": 2,
-      "lost": 4,
-      "goalsFor": 8,
-      "goalsAgainst": 15,
-      "goalDifference": -7,
       "points": 8
     },
     {
@@ -286,17 +287,18 @@
       "teamName": "Estoril",
       "shortName": "Estoril",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7842.png",
-      "played": 8,
+      "played": 9,
       "won": 0,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 6,
       "goalsFor": 4,
       "goalsAgainst": 12,
       "goalDifference": -8,
-      "points": 2,
+      "points": 3,
       "form": [
         "#FF4646"
-      ]
+      ],
+      "qualificationZone": "Active"
     }
   ]
 }
