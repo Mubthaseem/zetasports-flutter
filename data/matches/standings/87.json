@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-25T15:37:53.717Z",
+  "updatedAt": "2026-10-25T20:26:14.049Z",
   "table": [
     {
       "position": 1,
@@ -10,17 +10,18 @@
       "teamName": "Barcelona",
       "shortName": "Barcelona",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8634.png",
-      "played": 9,
+      "played": 10,
       "won": 9,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
       "goalsFor": 39,
       "goalsAgainst": 9,
       "goalDifference": 30,
-      "points": 27,
+      "points": 28,
       "form": [
         "#2AD572"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 2,
@@ -46,17 +47,18 @@
       "teamName": "Real Madrid",
       "shortName": "Real Madrid",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
-      "played": 9,
+      "played": 10,
       "won": 7,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 2,
       "goalsFor": 23,
       "goalsAgainst": 9,
       "goalDifference": 14,
-      "points": 21,
+      "points": 22,
       "form": [
         "#2AD572"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 4,
@@ -74,8 +76,7 @@
       "points": 20,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 5,
@@ -83,14 +84,14 @@
       "teamName": "Real Sociedad",
       "shortName": "Real Sociedad",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
-      "played": 9,
-      "won": 5,
+      "played": 10,
+      "won": 6,
       "drawn": 1,
       "lost": 3,
-      "goalsFor": 17,
-      "goalsAgainst": 17,
-      "goalDifference": 0,
-      "points": 16,
+      "goalsFor": 19,
+      "goalsAgainst": 18,
+      "goalDifference": 1,
+      "points": 19,
       "form": [
         "#0046A7"
       ]
@@ -156,8 +157,7 @@
       "goalsFor": 10,
       "goalsAgainst": 7,
       "goalDifference": 3,
-      "points": 12,
-      "qualificationZone": "Active"
+      "points": 12
     },
     {
       "position": 10,
@@ -225,13 +225,13 @@
       "teamName": "Levante",
       "shortName": "Levante",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8581.png",
-      "played": 9,
+      "played": 10,
       "won": 2,
       "drawn": 4,
-      "lost": 3,
-      "goalsFor": 15,
-      "goalsAgainst": 17,
-      "goalDifference": -2,
+      "lost": 4,
+      "goalsFor": 16,
+      "goalsAgainst": 19,
+      "goalDifference": -3,
       "points": 10
     },
     {
