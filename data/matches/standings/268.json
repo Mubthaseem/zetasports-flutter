@@ -2,10 +2,28 @@
   "competitionId": "268",
   "competitionName": "Brasileirão Série A",
   "season": "2026",
-  "updatedAt": "2026-10-24T20:19:01.198Z",
+  "updatedAt": "2026-10-25T03:25:37.928Z",
   "table": [
     {
       "position": 1,
+      "teamId": "10283",
+      "teamName": "Palmeiras",
+      "shortName": "Palmeiras",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10283.png",
+      "played": 32,
+      "won": 20,
+      "drawn": 9,
+      "lost": 3,
+      "goalsFor": 56,
+      "goalsAgainst": 22,
+      "goalDifference": 34,
+      "points": 69,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 2,
       "teamId": "9770",
       "teamName": "Flamengo",
       "shortName": "Flamengo",
@@ -18,24 +36,6 @@
       "goalsAgainst": 25,
       "goalDifference": 36,
       "points": 67,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 2,
-      "teamId": "10283",
-      "teamName": "Palmeiras",
-      "shortName": "Palmeiras",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10283.png",
-      "played": 31,
-      "won": 19,
-      "drawn": 9,
-      "lost": 3,
-      "goalsFor": 54,
-      "goalsAgainst": 22,
-      "goalDifference": 32,
-      "points": 66,
       "form": [
         "#2AD572"
       ]
@@ -74,8 +74,7 @@
       "points": 54,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 5,
@@ -83,13 +82,13 @@
       "teamName": "Fluminense",
       "shortName": "Fluminense",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9863.png",
-      "played": 31,
+      "played": 32,
       "won": 14,
       "drawn": 9,
-      "lost": 8,
-      "goalsFor": 49,
-      "goalsAgainst": 39,
-      "goalDifference": 10,
+      "lost": 9,
+      "goalsFor": 50,
+      "goalsAgainst": 41,
+      "goalDifference": 9,
       "points": 51,
       "form": [
         "#FFD908"
@@ -119,14 +118,14 @@
       "teamName": "Bahia",
       "shortName": "Bahia",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7877.png",
-      "played": 31,
+      "played": 32,
       "won": 13,
-      "drawn": 10,
+      "drawn": 11,
       "lost": 8,
-      "goalsFor": 44,
-      "goalsAgainst": 39,
+      "goalsFor": 45,
+      "goalsAgainst": 40,
       "goalDifference": 5,
-      "points": 49,
+      "points": 50,
       "form": [
         "#0046A7"
       ]
@@ -137,14 +136,14 @@
       "teamName": "Santos",
       "shortName": "Santos",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8514.png",
-      "played": 31,
+      "played": 32,
       "won": 12,
-      "drawn": 9,
+      "drawn": 10,
       "lost": 10,
-      "goalsFor": 48,
-      "goalsAgainst": 46,
+      "goalsFor": 49,
+      "goalsAgainst": 47,
       "goalDifference": 2,
-      "points": 45,
+      "points": 46,
       "form": [
         "#0046A7"
       ]
@@ -165,8 +164,7 @@
       "points": 43,
       "form": [
         "#0046A7"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 10,
@@ -174,13 +172,13 @@
       "teamName": "RB Bragantino",
       "shortName": "RB Bragantino",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/109705.png",
-      "played": 31,
+      "played": 32,
       "won": 11,
       "drawn": 8,
-      "lost": 12,
+      "lost": 13,
       "goalsFor": 39,
-      "goalsAgainst": 36,
-      "goalDifference": 3,
+      "goalsAgainst": 38,
+      "goalDifference": 1,
       "points": 41,
       "form": [
         "#0046A7"
@@ -197,13 +195,12 @@
       "drawn": 9,
       "lost": 13,
       "goalsFor": 44,
-      "goalsAgainst": 50,
-      "goalDifference": -6,
+      "goalsAgainst": 51,
+      "goalDifference": -7,
       "points": 39,
       "form": [
         "#0046A7"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 12,
@@ -222,6 +219,21 @@
     },
     {
       "position": 13,
+      "teamId": "10276",
+      "teamName": "Vasco da Gama",
+      "shortName": "Vasco da Gama",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10276.png",
+      "played": 31,
+      "won": 10,
+      "drawn": 8,
+      "lost": 13,
+      "goalsFor": 39,
+      "goalsAgainst": 45,
+      "goalDifference": -6,
+      "points": 38
+    },
+    {
+      "position": 14,
       "teamId": "7733",
       "teamName": "Vitória",
       "shortName": "Vitória",
@@ -233,11 +245,10 @@
       "goalsFor": 35,
       "goalsAgainst": 46,
       "goalDifference": -11,
-      "points": 38,
-      "qualificationZone": "Active"
+      "points": 38
     },
     {
-      "position": 14,
+      "position": 15,
       "teamId": "163782",
       "teamName": "Mirassol",
       "shortName": "Mirassol",
@@ -249,23 +260,7 @@
       "goalsFor": 37,
       "goalsAgainst": 45,
       "goalDifference": -8,
-      "points": 37,
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 15,
-      "teamId": "10276",
-      "teamName": "Vasco da Gama",
-      "shortName": "Vasco da Gama",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10276.png",
-      "played": 30,
-      "won": 9,
-      "drawn": 8,
-      "lost": 13,
-      "goalsFor": 36,
-      "goalsAgainst": 43,
-      "goalDifference": -7,
-      "points": 35
+      "points": 37
     },
     {
       "position": 16,
@@ -277,11 +272,10 @@
       "won": 8,
       "drawn": 11,
       "lost": 13,
-      "goalsFor": 35,
+      "goalsFor": 36,
       "goalsAgainst": 40,
-      "goalDifference": -5,
-      "points": 35,
-      "qualificationZone": "Active"
+      "goalDifference": -4,
+      "points": 35
     },
     {
       "position": 17,
@@ -289,13 +283,13 @@
       "teamName": "Corinthians",
       "shortName": "Corinthians",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9808.png",
-      "played": 31,
+      "played": 32,
       "won": 8,
       "drawn": 9,
-      "lost": 14,
-      "goalsFor": 32,
-      "goalsAgainst": 39,
-      "goalDifference": -7,
+      "lost": 15,
+      "goalsFor": 34,
+      "goalsAgainst": 42,
+      "goalDifference": -8,
       "points": 33,
       "form": [
         "#FF4646"
@@ -343,14 +337,14 @@
       "teamName": "Chapecoense",
       "shortName": "Chapecoense",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/197693.png",
-      "played": 30,
-      "won": 3,
+      "played": 31,
+      "won": 4,
       "drawn": 9,
       "lost": 18,
-      "goalsFor": 30,
-      "goalsAgainst": 62,
-      "goalDifference": -32,
-      "points": 18,
+      "goalsFor": 32,
+      "goalsAgainst": 63,
+      "goalDifference": -31,
+      "points": 21,
       "form": [
         "#FF4646"
       ]
