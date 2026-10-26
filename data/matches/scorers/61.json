@@ -2,10 +2,20 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-26T12:21:01.964Z",
+  "updatedAt": "2026-10-26T22:21:09.024Z",
   "scorers": [
     {
       "rank": 1,
+      "playerId": "637749",
+      "playerName": "Vangelis Pavlidis",
+      "teamId": "9772",
+      "teamName": "Benfica",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
+      "goals": 9,
+      "assists": 0
+    },
+    {
+      "rank": 2,
       "playerId": "792303",
       "playerName": "Luis Suárez",
       "teamId": "9768",
@@ -15,23 +25,13 @@
       "assists": 0
     },
     {
-      "rank": 2,
-      "playerId": "637749",
-      "playerName": "Vangelis Pavlidis",
+      "rank": 3,
+      "playerId": "1363660",
+      "playerName": "Gianluca Prestianni",
       "teamId": "9772",
       "teamName": "Benfica",
       "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
-      "goals": 8,
-      "assists": 0
-    },
-    {
-      "rank": 3,
-      "playerId": "1027396",
-      "playerName": "Barbero",
-      "teamId": "158085",
-      "teamName": "Arouca",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/158085.png",
-      "goals": 5,
+      "goals": 6,
       "assists": 0
     }
   ]
