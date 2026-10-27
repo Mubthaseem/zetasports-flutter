@@ -2,7 +2,7 @@
   "competitionId": "536",
   "competitionName": "Saudi Pro League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-27T11:40:55.565Z",
+  "updatedAt": "2026-10-27T17:32:31.255Z",
   "table": [
     {
       "position": 1,
@@ -219,6 +219,21 @@
     },
     {
       "position": 14,
+      "teamId": "205687",
+      "teamName": "Al-Faisaly",
+      "shortName": "Al-Faisaly",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/205687.png",
+      "played": 11,
+      "won": 2,
+      "drawn": 4,
+      "lost": 5,
+      "goalsFor": 12,
+      "goalsAgainst": 20,
+      "goalDifference": -8,
+      "points": 10
+    },
+    {
+      "position": 15,
       "teamId": "582749",
       "teamName": "Al-Fayha",
       "shortName": "Al-Fayha",
@@ -231,21 +246,6 @@
       "goalsAgainst": 19,
       "goalDifference": -7,
       "points": 8
-    },
-    {
-      "position": 15,
-      "teamId": "205687",
-      "teamName": "Al-Faisaly",
-      "shortName": "Al-Faisaly",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/205687.png",
-      "played": 10,
-      "won": 1,
-      "drawn": 4,
-      "lost": 5,
-      "goalsFor": 11,
-      "goalsAgainst": 20,
-      "goalDifference": -9,
-      "points": 7
     },
     {
       "position": 16,
@@ -289,13 +289,13 @@
       "teamName": "Abha",
       "shortName": "Abha",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/150414.png",
-      "played": 9,
+      "played": 10,
       "won": 0,
       "drawn": 2,
-      "lost": 7,
+      "lost": 8,
       "goalsFor": 6,
-      "goalsAgainst": 17,
-      "goalDifference": -11,
+      "goalsAgainst": 18,
+      "goalDifference": -12,
       "points": 2,
       "form": [
         "#FF4646"
