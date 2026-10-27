@@ -2,7 +2,7 @@
   "competitionId": "55",
   "competitionName": "Serie A",
   "season": "2026/2027",
-  "updatedAt": "2026-10-27T17:32:18.467Z",
+  "updatedAt": "2026-10-27T21:51:30.423Z",
   "scorers": [
     {
       "rank": 1,
@@ -16,22 +16,22 @@
     },
     {
       "rank": 2,
+      "playerId": "660301",
+      "playerName": "Donyell Malen",
+      "teamId": "8686",
+      "teamName": "Roma",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8686.png",
+      "goals": 7,
+      "assists": 0
+    },
+    {
+      "rank": 3,
       "playerId": "1585676",
       "playerName": "Gustavo Varela",
       "teamId": "6504",
       "teamName": "Monza",
       "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6504.png",
       "goals": 7,
-      "assists": 0
-    },
-    {
-      "rank": 3,
-      "playerId": "660301",
-      "playerName": "Donyell Malen",
-      "teamId": "8686",
-      "teamName": "Roma",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8686.png",
-      "goals": 6,
       "assists": 0
     }
   ]
