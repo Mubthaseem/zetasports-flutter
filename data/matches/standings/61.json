@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-10-30T12:14:13.462Z",
+  "updatedAt": "2026-10-30T21:58:28.191Z",
   "table": [
     {
       "position": 1,
@@ -46,17 +46,18 @@
       "teamName": "Sporting CP",
       "shortName": "Sporting CP",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9768.png",
-      "played": 9,
-      "won": 5,
+      "played": 10,
+      "won": 6,
       "drawn": 3,
       "lost": 1,
-      "goalsFor": 21,
+      "goalsFor": 22,
       "goalsAgainst": 11,
-      "goalDifference": 10,
-      "points": 18,
+      "goalDifference": 11,
+      "points": 21,
       "form": [
         "#FFD908"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 4,
@@ -246,24 +247,6 @@
     },
     {
       "position": 16,
-      "teamId": "212821",
-      "teamName": "Casa Pia AC",
-      "shortName": "Casa Pia AC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212821.png",
-      "played": 9,
-      "won": 2,
-      "drawn": 1,
-      "lost": 6,
-      "goalsFor": 5,
-      "goalsAgainst": 17,
-      "goalDifference": -12,
-      "points": 7,
-      "form": [
-        "#FFA72F"
-      ]
-    },
-    {
-      "position": 17,
       "teamId": "7841",
       "teamName": "Rio Ave",
       "shortName": "Rio Ave",
@@ -277,8 +260,27 @@
       "goalDifference": -13,
       "points": 7,
       "form": [
-        "#FF4646"
+        "#FFA72F"
       ]
+    },
+    {
+      "position": 17,
+      "teamId": "212821",
+      "teamName": "Casa Pia AC",
+      "shortName": "Casa Pia AC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212821.png",
+      "played": 10,
+      "won": 2,
+      "drawn": 1,
+      "lost": 7,
+      "goalsFor": 5,
+      "goalsAgainst": 18,
+      "goalDifference": -13,
+      "points": 7,
+      "form": [
+        "#FF4646"
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 18,

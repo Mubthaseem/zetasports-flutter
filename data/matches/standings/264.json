@@ -2,7 +2,7 @@
   "competitionId": "264",
   "competitionName": "AFC Champions League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-30T12:13:59.718Z",
+  "updatedAt": "2026-10-30T21:58:16.154Z",
   "table": [
     {
       "position": 1,
@@ -111,6 +111,21 @@
     },
     {
       "position": 7,
+      "teamId": "1379188",
+      "teamName": "Gent U23",
+      "shortName": "Gent U23",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1379188.png",
+      "played": 8,
+      "won": 3,
+      "drawn": 2,
+      "lost": 3,
+      "goalsFor": 11,
+      "goalsAgainst": 13,
+      "goalDifference": -2,
+      "points": 11
+    },
+    {
+      "position": 8,
       "teamId": "8174",
       "teamName": "Virton",
       "shortName": "Virton",
@@ -125,7 +140,7 @@
       "points": 10
     },
     {
-      "position": 8,
+      "position": 9,
       "teamId": "274583",
       "teamName": "Patro Eisden",
       "shortName": "Patro Eisden",
@@ -140,7 +155,7 @@
       "points": 9
     },
     {
-      "position": 9,
+      "position": 10,
       "teamId": "1173026",
       "teamName": "Club Brugge NXT",
       "shortName": "Club Brugge NXT",
@@ -153,21 +168,6 @@
       "goalsAgainst": 13,
       "goalDifference": -2,
       "points": 9
-    },
-    {
-      "position": 10,
-      "teamId": "465631",
-      "teamName": "K. Lierse SK",
-      "shortName": "K. Lierse SK",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/465631.png",
-      "played": 6,
-      "won": 2,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 7,
-      "goalsAgainst": 8,
-      "goalDifference": -1,
-      "points": 8
     },
     {
       "position": 11,
@@ -186,17 +186,17 @@
     },
     {
       "position": 12,
-      "teamId": "1379188",
-      "teamName": "Gent U23",
-      "shortName": "Gent U23",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1379188.png",
+      "teamId": "465631",
+      "teamName": "K. Lierse SK",
+      "shortName": "K. Lierse SK",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/465631.png",
       "played": 7,
       "won": 2,
       "drawn": 2,
       "lost": 3,
-      "goalsFor": 9,
-      "goalsAgainst": 13,
-      "goalDifference": -4,
+      "goalsFor": 7,
+      "goalsAgainst": 10,
+      "goalDifference": -3,
       "points": 8
     },
     {
@@ -205,14 +205,14 @@
       "teamName": "RFC Seraing",
       "shortName": "RFC Seraing",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/149408.png",
-      "played": 8,
-      "won": 1,
+      "played": 9,
+      "won": 2,
       "drawn": 2,
       "lost": 5,
-      "goalsFor": 11,
+      "goalsFor": 12,
       "goalsAgainst": 16,
-      "goalDifference": -5,
-      "points": 5
+      "goalDifference": -4,
+      "points": 8
     },
     {
       "position": 14,
@@ -220,13 +220,13 @@
       "teamName": "FC Liège",
       "shortName": "FC Liège",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6363.png",
-      "played": 8,
+      "played": 9,
       "won": 1,
       "drawn": 2,
-      "lost": 5,
+      "lost": 6,
       "goalsFor": 13,
-      "goalsAgainst": 21,
-      "goalDifference": -8,
+      "goalsAgainst": 22,
+      "goalDifference": -9,
       "points": 5,
       "form": [
         "#FF4646"

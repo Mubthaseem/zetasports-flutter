@@ -2,7 +2,7 @@
   "competitionId": "54",
   "competitionName": "Bundesliga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-30T12:13:43.506Z",
+  "updatedAt": "2026-10-30T21:58:00.615Z",
   "table": [
     {
       "position": 1,
@@ -78,6 +78,24 @@
     },
     {
       "position": 5,
+      "teamId": "8232",
+      "teamName": "Elversberg",
+      "shortName": "Elversberg",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8232.png",
+      "played": 8,
+      "won": 4,
+      "drawn": 1,
+      "lost": 3,
+      "goalsFor": 16,
+      "goalsAgainst": 16,
+      "goalDifference": 0,
+      "points": 13,
+      "form": [
+        "#0046A7"
+      ]
+    },
+    {
+      "position": 6,
       "teamId": "178475",
       "teamName": "RB Leipzig",
       "shortName": "RB Leipzig",
@@ -91,11 +109,11 @@
       "goalDifference": 9,
       "points": 12,
       "form": [
-        "#0046A7"
+        "#02CCF0"
       ]
     },
     {
-      "position": 6,
+      "position": 7,
       "teamId": "8697",
       "teamName": "Werder Bremen",
       "shortName": "Werder Bremen",
@@ -107,39 +125,21 @@
       "goalsFor": 15,
       "goalsAgainst": 14,
       "goalDifference": 1,
-      "points": 12,
-      "form": [
-        "#02CCF0"
-      ]
+      "points": 12
     },
     {
-      "position": 7,
+      "position": 8,
       "teamId": "9905",
       "teamName": "Mainz 05",
       "shortName": "Mainz",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9905.png",
-      "played": 7,
+      "played": 8,
       "won": 3,
       "drawn": 1,
-      "lost": 3,
-      "goalsFor": 16,
-      "goalsAgainst": 13,
-      "goalDifference": 3,
-      "points": 10
-    },
-    {
-      "position": 8,
-      "teamId": "8232",
-      "teamName": "Elversberg",
-      "shortName": "Elversberg",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8232.png",
-      "played": 7,
-      "won": 3,
-      "drawn": 1,
-      "lost": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 15,
-      "goalDifference": -3,
+      "lost": 4,
+      "goalsFor": 17,
+      "goalsAgainst": 17,
+      "goalDifference": 0,
       "points": 10
     },
     {

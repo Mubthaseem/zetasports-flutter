@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-10-30T12:13:40.381Z",
+  "updatedAt": "2026-10-30T21:57:57.616Z",
   "table": [
     {
       "position": 1,
@@ -163,13 +163,13 @@
       "teamName": "Villarreal",
       "shortName": "Villarreal",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10205.png",
-      "played": 10,
+      "played": 11,
       "won": 3,
       "drawn": 3,
-      "lost": 4,
+      "lost": 5,
       "goalsFor": 15,
-      "goalsAgainst": 14,
-      "goalDifference": 1,
+      "goalsAgainst": 15,
+      "goalDifference": 0,
       "points": 12
     },
     {
@@ -189,6 +189,21 @@
     },
     {
       "position": 12,
+      "teamId": "8558",
+      "teamName": "Espanyol",
+      "shortName": "Espanyol",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8558.png",
+      "played": 11,
+      "won": 3,
+      "drawn": 2,
+      "lost": 6,
+      "goalsFor": 13,
+      "goalsAgainst": 14,
+      "goalDifference": -1,
+      "points": 11
+    },
+    {
+      "position": 13,
       "teamId": "8371",
       "teamName": "Osasuna",
       "shortName": "Osasuna",
@@ -203,7 +218,7 @@
       "points": 11
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "8696",
       "teamName": "Racing Santander",
       "shortName": "Racing Santander",
@@ -218,7 +233,7 @@
       "points": 11
     },
     {
-      "position": 14,
+      "position": 15,
       "teamId": "8581",
       "teamName": "Levante",
       "shortName": "Levante",
@@ -233,7 +248,7 @@
       "points": 10
     },
     {
-      "position": 15,
+      "position": 16,
       "teamId": "10268",
       "teamName": "Elche",
       "shortName": "Elche",
@@ -248,7 +263,7 @@
       "points": 10
     },
     {
-      "position": 16,
+      "position": 17,
       "teamId": "8370",
       "teamName": "Rayo Vallecano",
       "shortName": "Rayo Vallecano",
@@ -263,7 +278,7 @@
       "points": 9
     },
     {
-      "position": 17,
+      "position": 18,
       "teamId": "8305",
       "teamName": "Getafe",
       "shortName": "Getafe",
@@ -275,22 +290,7 @@
       "goalsFor": 5,
       "goalsAgainst": 15,
       "goalDifference": -10,
-      "points": 9
-    },
-    {
-      "position": 18,
-      "teamId": "8558",
-      "teamName": "Espanyol",
-      "shortName": "Espanyol",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8558.png",
-      "played": 10,
-      "won": 2,
-      "drawn": 2,
-      "lost": 6,
-      "goalsFor": 12,
-      "goalsAgainst": 14,
-      "goalDifference": -2,
-      "points": 8,
+      "points": 9,
       "form": [
         "#FF4646"
       ]
