@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-31T16:53:18.218Z",
+  "updatedAt": "2026-10-31T21:03:02.775Z",
   "table": [
     {
       "position": 1,
@@ -20,8 +20,7 @@
       "points": 21,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 2,
@@ -57,8 +56,7 @@
       "points": 19,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 4,
@@ -113,6 +111,22 @@
     },
     {
       "position": 7,
+      "teamId": "10252",
+      "teamName": "Aston Villa",
+      "shortName": "Aston Villa",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10252.png",
+      "played": 9,
+      "won": 4,
+      "drawn": 2,
+      "lost": 3,
+      "goalsFor": 10,
+      "goalsAgainst": 12,
+      "goalDifference": -2,
+      "points": 14,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 8,
       "teamId": "8678",
       "teamName": "AFC Bournemouth",
       "shortName": "Bournemouth",
@@ -121,30 +135,28 @@
       "won": 3,
       "drawn": 3,
       "lost": 3,
-      "goalsFor": 13,
+      "goalsFor": 14,
       "goalsAgainst": 13,
-      "goalDifference": 0,
-      "points": 12,
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 8,
-      "teamId": "8463",
-      "teamName": "Leeds United",
-      "shortName": "Leeds",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8463.png",
-      "played": 9,
-      "won": 2,
-      "drawn": 5,
-      "lost": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 7,
-      "goalDifference": 2,
-      "points": 11,
-      "qualificationZone": "Active"
+      "goalDifference": 1,
+      "points": 12
     },
     {
       "position": 9,
+      "teamId": "8586",
+      "teamName": "Tottenham Hotspur",
+      "shortName": "Tottenham",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png",
+      "played": 9,
+      "won": 3,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 10,
+      "goalsAgainst": 10,
+      "goalDifference": 0,
+      "points": 12
+    },
+    {
+      "position": 10,
       "teamId": "8667",
       "teamName": "Hull City",
       "shortName": "Hull",
@@ -156,11 +168,25 @@
       "goalsFor": 11,
       "goalsAgainst": 10,
       "goalDifference": 1,
-      "points": 11,
-      "qualificationZone": "Active"
+      "points": 11
     },
     {
-      "position": 10,
+      "position": 11,
+      "teamId": "8463",
+      "teamName": "Leeds United",
+      "shortName": "Leeds",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8463.png",
+      "played": 9,
+      "won": 2,
+      "drawn": 5,
+      "lost": 2,
+      "goalsFor": 9,
+      "goalsAgainst": 8,
+      "goalDifference": 1,
+      "points": 11
+    },
+    {
+      "position": 12,
       "teamId": "10261",
       "teamName": "Newcastle United",
       "shortName": "Newcastle",
@@ -175,22 +201,7 @@
       "points": 11
     },
     {
-      "position": 11,
-      "teamId": "10252",
-      "teamName": "Aston Villa",
-      "shortName": "Aston Villa",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10252.png",
-      "played": 8,
-      "won": 3,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 9,
-      "goalsAgainst": 12,
-      "goalDifference": -3,
-      "points": 11
-    },
-    {
-      "position": 12,
+      "position": 13,
       "teamId": "9902",
       "teamName": "Ipswich Town",
       "shortName": "Ipswich",
@@ -202,11 +213,10 @@
       "goalsFor": 14,
       "goalsAgainst": 18,
       "goalDifference": -4,
-      "points": 11,
-      "qualificationZone": "Active"
+      "points": 11
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "8668",
       "teamName": "Everton",
       "shortName": "Everton",
@@ -221,21 +231,6 @@
       "points": 10
     },
     {
-      "position": 14,
-      "teamId": "8586",
-      "teamName": "Tottenham Hotspur",
-      "shortName": "Tottenham",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8586.png",
-      "played": 8,
-      "won": 2,
-      "drawn": 3,
-      "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 10,
-      "goalDifference": -2,
-      "points": 9
-    },
-    {
       "position": 15,
       "teamId": "8669",
       "teamName": "Coventry City",
@@ -248,8 +243,7 @@
       "goalsFor": 9,
       "goalsAgainst": 16,
       "goalDifference": -7,
-      "points": 9,
-      "qualificationZone": "Active"
+      "points": 9
     },
     {
       "position": 16,
@@ -257,14 +251,15 @@
       "teamName": "Fulham",
       "shortName": "Fulham",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
-      "played": 8,
+      "played": 9,
       "won": 2,
       "drawn": 2,
-      "lost": 4,
+      "lost": 5,
       "goalsFor": 8,
-      "goalsAgainst": 10,
-      "goalDifference": -2,
-      "points": 8
+      "goalsAgainst": 11,
+      "goalDifference": -3,
+      "points": 8,
+      "qualificationZone": "Active"
     },
     {
       "position": 17,
@@ -287,13 +282,13 @@
       "teamName": "Crystal Palace",
       "shortName": "Crystal Palace",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9826.png",
-      "played": 8,
+      "played": 9,
       "won": 2,
       "drawn": 1,
-      "lost": 5,
+      "lost": 6,
       "goalsFor": 9,
-      "goalsAgainst": 19,
-      "goalDifference": -10,
+      "goalsAgainst": 21,
+      "goalDifference": -12,
       "points": 7,
       "form": [
         "#FF4646"
@@ -333,8 +328,7 @@
       "points": 5,
       "form": [
         "#FF4646"
-      ],
-      "qualificationZone": "Active"
+      ]
     }
   ]
 }
