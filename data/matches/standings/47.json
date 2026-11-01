@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-10-31T21:03:02.775Z",
+  "updatedAt": "2026-11-01T04:39:03.608Z",
   "table": [
     {
       "position": 1,
@@ -111,22 +111,6 @@
     },
     {
       "position": 7,
-      "teamId": "10252",
-      "teamName": "Aston Villa",
-      "shortName": "Aston Villa",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10252.png",
-      "played": 9,
-      "won": 4,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 10,
-      "goalsAgainst": 12,
-      "goalDifference": -2,
-      "points": 14,
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 8,
       "teamId": "8678",
       "teamName": "AFC Bournemouth",
       "shortName": "Bournemouth",
@@ -141,7 +125,7 @@
       "points": 12
     },
     {
-      "position": 9,
+      "position": 8,
       "teamId": "8586",
       "teamName": "Tottenham Hotspur",
       "shortName": "Tottenham",
@@ -153,6 +137,21 @@
       "goalsFor": 10,
       "goalsAgainst": 10,
       "goalDifference": 0,
+      "points": 12
+    },
+    {
+      "position": 9,
+      "teamId": "10252",
+      "teamName": "Aston Villa",
+      "shortName": "Aston Villa",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10252.png",
+      "played": 9,
+      "won": 3,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 10,
+      "goalsAgainst": 13,
+      "goalDifference": -3,
       "points": 12
     },
     {
@@ -232,6 +231,21 @@
     },
     {
       "position": 15,
+      "teamId": "9879",
+      "teamName": "Fulham",
+      "shortName": "Fulham",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
+      "played": 9,
+      "won": 2,
+      "drawn": 3,
+      "lost": 4,
+      "goalsFor": 9,
+      "goalsAgainst": 11,
+      "goalDifference": -2,
+      "points": 9
+    },
+    {
+      "position": 16,
       "teamId": "8669",
       "teamName": "Coventry City",
       "shortName": "Coventry",
@@ -244,22 +258,6 @@
       "goalsAgainst": 16,
       "goalDifference": -7,
       "points": 9
-    },
-    {
-      "position": 16,
-      "teamId": "9879",
-      "teamName": "Fulham",
-      "shortName": "Fulham",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
-      "played": 9,
-      "won": 2,
-      "drawn": 2,
-      "lost": 5,
-      "goalsFor": 8,
-      "goalsAgainst": 11,
-      "goalDifference": -3,
-      "points": 8,
-      "qualificationZone": "Active"
     },
     {
       "position": 17,
