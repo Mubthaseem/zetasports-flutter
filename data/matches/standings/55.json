@@ -2,7 +2,7 @@
   "competitionId": "55",
   "competitionName": "Serie A",
   "season": "2026/2027",
-  "updatedAt": "2026-11-01T04:39:08.069Z",
+  "updatedAt": "2026-11-01T12:44:33.426Z",
   "table": [
     {
       "position": 1,
@@ -60,6 +60,25 @@
     },
     {
       "position": 4,
+      "teamId": "10171",
+      "teamName": "Como",
+      "shortName": "Como",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10171.png",
+      "played": 10,
+      "won": 7,
+      "drawn": 2,
+      "lost": 1,
+      "goalsFor": 18,
+      "goalsAgainst": 8,
+      "goalDifference": 10,
+      "points": 23,
+      "form": [
+        "#2AD572"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 5,
       "teamId": "8564",
       "teamName": "Milan",
       "shortName": "Milan",
@@ -72,24 +91,6 @@
       "goalsAgainst": 12,
       "goalDifference": 9,
       "points": 21,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 5,
-      "teamId": "10171",
-      "teamName": "Como",
-      "shortName": "Como",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10171.png",
-      "played": 9,
-      "won": 6,
-      "drawn": 2,
-      "lost": 1,
-      "goalsFor": 17,
-      "goalsAgainst": 8,
-      "goalDifference": 9,
-      "points": 20,
       "form": [
         "#0046A7"
       ]
@@ -319,17 +320,18 @@
       "teamName": "Venezia",
       "shortName": "Venezia",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7881.png",
-      "played": 9,
+      "played": 10,
       "won": 1,
       "drawn": 0,
-      "lost": 8,
+      "lost": 9,
       "goalsFor": 6,
-      "goalsAgainst": 19,
-      "goalDifference": -13,
+      "goalsAgainst": 20,
+      "goalDifference": -14,
       "points": 3,
       "form": [
         "#FF4646"
-      ]
+      ],
+      "qualificationZone": "Active"
     }
   ]
 }
