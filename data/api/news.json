@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-11-01T04:39:56.253Z",
+    "generatedAt": "2026-11-01T05:45:57.789Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 1994
+      "fullArticlesCount": 2001
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -15,12 +15,75 @@
   },
   "news": [
     {
+      "id": "ftbpro_01m66ew0k2j8",
+      "title": "Liverpool vs. Arsenal: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m66ew0k2j8/liverpool-vs-arsenal-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m66fhnr45beswr02fg.jpg",
+      "publishedAt": "2026-11-01T02:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m63wyz7n4g",
+      "title": "Racing Santander vs. Real Madrid: Preview, Predictions and Lineups",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m63wyz7n4g/racing-santander-vs-real-madrid-preview-predictions-lineups",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m649bpx3ha1fg5dzew.jpg",
+      "publishedAt": "2026-11-01T01:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m69gm6399c",
+      "title": "Supercomputer Predicts Man Utd’s Chances of Relegation After Chelsea Defeat",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m69gm6399c/supercomputer-predicts-man-utds-chances-relegation-after-chelsea-defeat",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_20/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m69gtfqpxjsa4hnshq.jpg",
+      "publishedAt": "2026-11-01T01:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m69d5qmytm",
+      "title": "Transfer Rumors: Barcelona Chase Martinez; Man Utd Ready €100m Estevao Bid",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m69d5qmytm/transfer-rumors-barcelona-chase-martinez-man-utd-ready-100m-estevao-bid",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m69j40p0wb7a7k0g2s.jpg",
+      "publishedAt": "2026-11-01T00:05:00.000Z"
+    },
+    {
+      "id": "1p9yzaj0bqt1v1oq7rq9trvgui",
+      "title": "Van Hecke: There is more to come from Tottenham",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/1p9yzaj0bqt1v1oq7rq9trvgui-van-hecke-there-is-more-come-from-tottenham",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ed/14/van-hecke_fg899tylyojs1szk7i0hwco9m.jpg?t=-1728719567&w=1260&h=708",
+      "publishedAt": "2026-10-31T23:58:54.000Z"
+    },
+    {
+      "id": "DB69A2030BB2537FE14D666D4CECC70E",
+      "title": "Are Manchester United really at risk of a relegation scrap?",
+      "description": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c8g47wl06vkqo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/c471/live/62195190-d55c-11f1-b937-61b94454a4cf.jpg",
+      "publishedAt": "2026-10-31T23:52:28.000Z"
+    },
+    {
+      "id": "ml23ltiglwo01lim1ikho6i72",
+      "title": "Charlotte FC 4-0 Orlando City: Saint-Maximin scores, misses penalty and sees red in MLS rout",
+      "description": "FotMob",
+      "source": "FotMob",
+      "sourceUrl": "/news/ml23ltiglwo01lim1ikho6i72-charlotte-fc-4-0-orlando-city-saint-maximin-scores-misses-penalty-sees-red-mls-rout",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ec/13/allan-saint-maximin_1gzoo45yw02ul1nw1k7u7f0nxm.jpg?t=-1728661887&w=1260&h=708",
+      "publishedAt": "2026-10-31T23:37:13.000Z"
+    },
+    {
       "id": "ibaf5d7nul1sircbvt41i7d",
       "title": "Rangers reach League Cup final as McInnes emphasises 'important opportunity'",
       "description": "FotMob",
       "source": "FotMob",
       "sourceUrl": "/news/ibaf5d7nul1sircbvt41i7d-rangers-reach-league-cup-final-mcinnes-emphasises-important-opportunity",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/17/65/ryan-naderi_nrv3ilt3iwvv1m24rgjppisuc.jpg?t=-1732431567&w=1260&h=708",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/17/65/ryan-naderi_nrv3ilt3iwvv1m24rgjppisuc.jpg?t=-1732431567&w=640&h=360",
       "publishedAt": "2026-10-31T23:16:13.000Z"
     },
     {
@@ -130,69 +193,6 @@
       "sourceUrl": "/embed/news/01m69ph7vxwg/wild-rule-that-helped-messi-escape-suspension-fifth-mls-yellow-card",
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_71/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m69sj8qwqq0pcjj6g6.jpg",
       "publishedAt": "2026-10-31T21:30:01.000Z"
-    },
-    {
-      "id": "1cvs5i40imrq3100spw4ph4zfi",
-      "title": "Winning stretch has changed momentum at Bournemouth, says Rose",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1cvs5i40imrq3100spw4ph4zfi-winning-stretch-has-changed-momentum-at-bournemouth-says-rose",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d3/af/marco-rose_zq16jq86vj1y1rd2nz13swk24.png?t=-1748951823&w=1260&h=708",
-      "publishedAt": "2026-10-31T21:18:31.000Z"
-    },
-    {
-      "id": "DF88C93166640036EC8F03458D85D8EB",
-      "title": "Are De Zerbi's Spurs finding elusive consistency?",
-      "description": "BBC",
-      "source": "BBC",
-      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c6n04v897qe4o?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/9051/live/7b9bec80-d567-11f1-910b-9bd7c745c627.jpg",
-      "publishedAt": "2026-10-31T21:16:11.000Z"
-    },
-    {
-      "id": "ftbpro_01m69fqjhp95",
-      "title": "Alexander-Arnold Makes January ‘Transfer Decision’ As Premier League Links Swirl",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m69fqjhp95/alexander-arnold-makes-january-transfer-decision-premier-league-links-swirl",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_9/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m69hx4aqnkde9vxae8.jpg",
-      "publishedAt": "2026-10-31T21:00:01.000Z"
-    },
-    {
-      "id": "3cfc8hmxayvm1qj86sg14t6pz",
-      "title": "Jakirovic wants better control from Hull after more dropped points",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/3cfc8hmxayvm1qj86sg14t6pz-jakirovic-wants-better-control-from-hull-after-more-dropped-points",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/44/ad/jakirovic_kmsi5nychvda140bd6qiri0zz.jpg?t=-1762667887&w=1260&h=708",
-      "publishedAt": "2026-10-31T20:36:27.000Z"
-    },
-    {
-      "id": "ED2F23E6D366D8885846C7CBEB2D5C56",
-      "title": "Verbruggen spreads belief as impressive Brighton beat Man City",
-      "description": "BBC",
-      "source": "BBC",
-      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c6d7qwnz1jnjo?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/5bee/live/dc360db0-d561-11f1-bf97-5ff9d5d5ecd0.jpg",
-      "publishedAt": "2026-10-31T20:36:26.000Z"
-    },
-    {
-      "id": "A7D564A3410B91B15DDC8B16D4097C34",
-      "title": "Glasner fears he will be next Forest sacking if wins don't follow",
-      "description": "BBC",
-      "source": "BBC",
-      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cvn067174knjo?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/7552/live/dc226d60-d55b-11f1-b937-61b94454a4cf.jpg",
-      "publishedAt": "2026-10-31T20:26:15.000Z"
-    },
-    {
-      "id": "9CFFA8B3E1B2702B2DF0B2DD7CBBFC62",
-      "title": "Sunderland's paradox - San Siro trip amid relegation battle",
-      "description": "BBC",
-      "source": "BBC",
-      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cmrry892zpkro?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/4d7e/live/ae855140-d562-11f1-bf97-5ff9d5d5ecd0.jpg",
-      "publishedAt": "2026-10-31T20:03:10.000Z"
     }
   ],
   "articles": {
@@ -10099,6 +10099,41 @@
         "&quot;Salzburg are good technically, so we need to be strong on the runs, physically prepared and play our game.&quot;"
       ],
       "html": "<p>Ruben Amorim insisted he was not feeling the pressure during his AC Milan tenure, but he acknowledged it was &quot;impossible to have a lot of time&quot; at a football club.&nbsp;</p>\n\n<p>Amorim has had a mixed start to life in charge of Milan. They are unbeaten in their first six Serie A matches, though they have drawn three of their last four league outings.&nbsp;</p>\n\n<p>The Rossoneri began their Europa League campaign with a 2-0 defeat at home to Benfica, with their next European clash seeing them make the trip to Salzburg on Thursday.</p>\n\n<p>Milan have won nine of their 13 major European games against Austrian sides, with this their first since a 4-0 win against Salzburg&nbsp;in the&nbsp;Champions League in November 2022.</p>\n\n<p>Amorim, however,&nbsp;has now lost each of his last two Europa League matches, as many as in his previous 21 games combined in the competition (W12 D7).</p>\n\n<p>There is already growing pressure on the former Manchester United boss, but ahead of taking on Salzburg, Amorim remained focused on matters on the pitch.&nbsp;</p>\n\n<p>&quot;I don&#39;t read papers or watch TV, so that I can focus on my work,&quot; Amorim told Sky Italia as quoted by Football Italia.</p>\n\n<p>&quot;We are at the start of something. Obviously, we want to win more games and have more points. In regard to&nbsp;the rest, it&#39;s normal at a big club.</p>\n\n<p>&quot;Every project needs time, but nowadays with football media it is impossible to have a lot of time, so it is necessary to win games.</p>\n\n<p>&quot;I am not worried about that, I am focused on winning games, everything else that happens around that is not a concern.&quot;</p>\n\n\n<p>Salzburg have never beaten Milan in four previous major European encounters, all in the Champions League (D1 L3).</p>\n\n<p>It&#39;s the joint most they have faced a side without winning, along with Bayern Munich (D1 L3) and Inter&nbsp;(L4), but they did start their Europa League campaign with a win.&nbsp;</p>\n\n<p>Danny Rohl&#39;s side&nbsp;won 1-0 against Levski Sofia on MD1, but they have not&nbsp;won consecutive major European games since October 2021, while they last did so with a clean sheet each time in October 2017.</p>\n\n<p>And though they are competing in the Europa League after missing out on the Champions League last season, Amorim urged his players to treat the game as if it is the latter.&nbsp;</p>\n\n<p>&quot;It is always the Champions League, everything is important, every detail, every match is important and difficult,&quot; Amorim added.</p>\n\n<p>&quot;Salzburg are good technically, so we need to be strong on the runs, physically prepared and play our game.&quot;</p>\n"
+    },
+    "1p9yzaj0bqt1v1oq7rq9trvgui": {
+      "id": "1p9yzaj0bqt1v1oq7rq9trvgui",
+      "title": "Van Hecke: There is more to come from Tottenham",
+      "subtitle": "Tottenham are building some momentum in the Premier League, having now won three on the bounce in the competition.",
+      "source": "FotMob",
+      "sourceUrl": "/news/1p9yzaj0bqt1v1oq7rq9trvgui-van-hecke-there-is-more-come-from-tottenham",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ed/14/van-hecke_fg899tylyojs1szk7i0hwco9m.jpg?t=-1728719567&w=1200&h=630",
+      "publishedAt": "2026-10-31T23:58:54.000Z",
+      "paragraphs": [
+        "Jan Paul van Hecke insists there is &quot;a lot more to come from Tottenham&quot;,&nbsp;after they recorded a third straight Premier League victory with a 2-0 win over 10-man Crystal Palace.",
+        "Spurs have struggled for consistency in the last few seasons, but they have put together an impressive run, with their latest victory moving them up to eighth in the top-flight table.",
+        "They played with a numerical advantage for the majority of the game after Jean-Philippe was sent off for catching Micky van de Ven from behind with his studs, receiving a 13th-minute red card following a VAR review.",
+        "Archie Gray and Van Hecke then scored the goals in either half to secure all three points for Spurs, who had 34 shots overall in this match – the most they have had in a Premier League game since February 2016 against Swansea City (34).",
+        "It is the first time they have won three consecutive league games since February 2025, and as many wins as they had in their previous 26 outings combined (D10 L13).",
+        "Van Hecke was full of praise for Roberto De Zerbi, whom he played under at Brighton, and is confident Spurs will continue to improve.",
+        "&quot;He&#39;s a top manager. I have a really good relationship with him,&quot; he told Sky Sports.",
+        "&quot;That&#39;s a big reason why I came here because he gets the best out of me, and I think there&#39;s a lot more to come from us.",
+        "&quot;When you win games, the confidence grows. When you keep a clean sheet, that also helps.",
+        "&quot;Now we need to stay calm and keep going, and we will win a lot of games for sure.&quot;",
+        "De Zerbi was impressed by the team&#39;s overall performance, but he also singled out Sandro Tonali in the middle of the park.",
+        "&quot;I&#39;m very happy with the performance because we showed to be a mature team with clear ideas, and we didn&#39;t concede a counter-attack, maybe just one in the second half,&quot; he said in his press conference.",
+        "&quot;We created many, many chances. If we want to follow the perfection, we have to be more nasty.",
+        "&quot;[Sandro] Tonali was unbelievable, incredible. We played with two players more. Tonali was the double.&quot;",
+        "As for Palace, they finish the day sitting in the relegation zone. It is the first time they have lost three straight league games without scoring since March 2023.",
+        "The Eagles have conceded six headed goals in the Premier League this season, twice as many as any other side (Chelsea and Aston Villa – both three).",
+        "Among ever-present sides, Palace have lost the most games (15) and conceded the most goals (52) of any Premier League side in 2026, with their latest win piling more pressure on Pierre Sage.",
+        "Some of that had eased with their mid-week EFL Cup win over Fulham, but Sage is not letting it get to him as he vowed to keep fighting.",
+        "&quot;Yes, [relegation], it&#39;s a disaster for every club in the Premier League and especially that I have to speak about my club,&quot; he said.",
+        "&quot;You know I&#39;m not comfortable with the situation in the table, but it&#39;s a consequence of what we did bad on the pitch.",
+        "&quot;My only way to change a thing is to go on the pitch. That is why I talk to the players, and I want to be the first on the pitch on Monday. They can trust in me. I will never give up.",
+        "&quot;I will do the best session I can do on Monday because now I have the rage to train more because the game I saw was not in line with my conviction.",
+        "&quot;They [Palace fans] can trust in me because I will give my life. I am the kind of person who never gives up.&quot;"
+      ],
+      "html": "<p>Jan Paul van Hecke insists there is &quot;a lot more to come from Tottenham&quot;,&nbsp;after they recorded a third straight Premier League victory with a 2-0 win over 10-man Crystal Palace.</p>\n\n<p>Spurs have struggled for consistency in the last few seasons, but they have put together an impressive run, with their latest victory moving them up to eighth in the top-flight table.</p>\n\n<p>They played with a numerical advantage for the majority of the game after Jean-Philippe was sent off for catching Micky van de Ven from behind with his studs, receiving a 13th-minute red card following a VAR review.</p>\n\n<p>Archie Gray and Van Hecke then scored the goals in either half to secure all three points for Spurs, who had 34 shots overall in this match – the most they have had in a Premier League game since February 2016 against Swansea City (34).</p>\n\n<p>It is the first time they have won three consecutive league games since February 2025, and as many wins as they had in their previous 26 outings combined (D10 L13).</p>\n\n<p>Van Hecke was full of praise for Roberto De Zerbi, whom he played under at Brighton, and is confident Spurs will continue to improve.</p>\n\n<p>&quot;He&#39;s a top manager. I have a really good relationship with him,&quot; he told Sky Sports.</p>\n\n<p>&quot;That&#39;s a big reason why I came here because he gets the best out of me, and I think there&#39;s a lot more to come from us.</p>\n\n<p>&quot;When you win games, the confidence grows. When you keep a clean sheet, that also helps.</p>\n\n<p>&quot;Now we need to stay calm and keep going, and we will win a lot of games for sure.&quot;</p>\n\n\n<p>De Zerbi was impressed by the team&#39;s overall performance, but he also singled out Sandro Tonali in the middle of the park.</p>\n\n<p>&quot;I&#39;m very happy with the performance because we showed to be a mature team with clear ideas, and we didn&#39;t concede a counter-attack, maybe just one in the second half,&quot; he said in his press conference.</p>\n\n<p>&quot;We created many, many chances. If we want to follow the perfection, we have to be more nasty.</p>\n\n<p>&quot;[Sandro] Tonali was unbelievable, incredible. We played with two players more. Tonali was the double.&quot;</p>\n\n<p>As for Palace, they finish the day sitting in the relegation zone. It is the first time they have lost three straight league games without scoring since March 2023.</p>\n\n<p>The Eagles have conceded six headed goals in the Premier League this season, twice as many as any other side (Chelsea and Aston Villa – both three).</p>\n\n<p>Among ever-present sides, Palace have lost the most games (15) and conceded the most goals (52) of any Premier League side in 2026, with their latest win piling more pressure on Pierre Sage.</p>\n\n<p>Some of that had eased with their mid-week EFL Cup win over Fulham, but Sage is not letting it get to him as he vowed to keep fighting.</p>\n\n<p>&quot;Yes, [relegation], it&#39;s a disaster for every club in the Premier League and especially that I have to speak about my club,&quot; he said.</p>\n\n<p>&quot;You know I&#39;m not comfortable with the situation in the table, but it&#39;s a consequence of what we did bad on the pitch.</p>\n\n<p>&quot;My only way to change a thing is to go on the pitch. That is why I talk to the players, and I want to be the first on the pitch on Monday. They can trust in me. I will never give up.</p>\n\n<p>&quot;I will do the best session I can do on Monday because now I have the rage to train more because the game I saw was not in line with my conviction.</p>\n\n<p>&quot;They [Palace fans] can trust in me because I will give my life. I am the kind of person who never gives up.&quot;</p>\n"
     },
     "1pb3eym1hal1u1kk8ido1epgg2": {
       "id": "1pb3eym1hal1u1kk8ido1epgg2",
@@ -22031,6 +22066,37 @@
         "Fleetwood have won just three of their 13 League Two games so far this term, winning two of six at home. Across all competitions they’ve lost six of the last nine. Arsenal are of course a total contrast, winning every match this term except defeat to Brighton before the international break and drawing at Bayern Munich last week.",
         "Lewis McCann is suspended for the hosts, while Kane Thompson-Sommers is injured. Rhys Bennett is back from a ban.",
         "Bukayo Saka will miss at least six weeks for Arsenal and William Saliba is sidelined too, with Christos Tzolis hoping to make a comeback."
+      ]
+    },
+    "DB69A2030BB2537FE14D666D4CECC70E": {
+      "id": "DB69A2030BB2537FE14D666D4CECC70E",
+      "title": "Are Manchester United really at risk of a relegation scrap?",
+      "subtitle": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c8g47wl06vkqo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/c471/live/62195190-d55c-11f1-b937-61b94454a4cf.jpg",
+      "publishedAt": "2026-10-31T23:52:28.000Z",
+      "paragraphs": [
+        "BBC HomepageSkip to contentAccessibility HelpYour accountHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsMore menuMore menuSearch BBCHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsClose menu BBC SportMenuHomeFootballCricketFormula 1Rugby UTennisGolfCyclingAthleticsMoreA-Z SportsAmerican FootballAthleticsBasketballBoxingCricketCyclingDartsDisability SportFootballFormula 1Gaelic GamesGolfGymnasticsHorse RacingMixed Martial ArtsMotorsportNetballRugby LeagueRugby UnionSnookerSwimmingTennisFull Sports A-ZMore from SportEnglandScotlandWalesNorthern IrelandQuizzesNews FeedsHelp & FAQsManchester UnitedScores & FixturesTableLive Match UpdatesOn BBC SoundsTop ScorersWho Am I? QuizAre Manchester United really at risk of a relegation scrap?To play this video you need to enable JavaScript in your browser.This video can not be played",
+        "Chelsea beat 10-man Man Utd to pile more pressure on Michael Carrick",
+        "Manchester United reporterPublished5 hours ago\"We&#x27;ve got to keep moving forward and winning games, simple as that,\" said Michael Carrick in that considered way of his, after their 2-0 defeat by Chelsea on Saturday.",
+        "Carrick did get relegated once, with West Ham at the start of his playing career.",
+        "The Hammers were supposed to be too good to go down in 2002-03. Aside from Carrick, they had England goalkeeper David James in their squad. Joe Cole, Jermain Defoe and Trevor Sinclair all played more than 40 games in all competitions.",
+        "But down they went, finishing third bottom with 42 points. It remains the highest tally any side has been relegated with across a 38-game Premier League campaign.",
+        "To put that into context, Manchester United&#x27;s current tally of seven points from nine games would not even get them 30 points if it was continued for the full season.",
+        "So, are United really destined for a relegation scrap?",
+        "To play this video you need to enable JavaScript in your browser.This video can not be played",
+        "Chelsea v Manchester United - Michael Carrick post-match",
+        "You would have to be touching 60 to have any recollection of the last time United were relegated.",
+        "Legend has it that old boy Denis Law sent them down with an impudent back heel he didn&#x27;t celebrate when he was at Manchester City. The reality is United were already doomed under then-boss Tommy Docherty.",
+        "United have not been in the relegation zone after nine games or more since November 1986, when they collected a single point in Sir Alex Ferguson&#x27;s first two games in charge following Ron Atkinson&#x27;s dismissal.",
+        "Their lowest position after at least nine games of a season since then was 17th in 1989-90. They are back there again right now, mainly thanks to the failings of others in results elsewhere on Saturday.",
+        "It is now nine games in all competitions since Carrick&#x27;s side won, their worst run since 1988-89. Their single Premier League win of the season was when they came from behind to beat Ipswich at home in August.",
+        "Of course, United&#x27;s supporters have very recent experience of seeing their team in the lower reaches of the table. They were 16th under Ruben Amorim after 37 games of the 2024-25 season. The caveat is they were 14 points clear of third-bottom Leicester and at no point in that tortuous campaign were they in danger of relegation.",
+        "One club that has been at real risk in recent years is Tottenham, who were third bottom and two points behind West Ham with four games of last season remaining.",
+        "So, it could happen, even if it remains unlikely a club that should post revenues in excess of £700m for the current campaign will finish in the bottom three.",
+        "\"You can look at it like that, or you can look at how far you can move up the league quite quickly if you win football matches,\" was Carrick&#x27;s response when asked if his players are equipped for the \"mentality shift\" required to deal with the present situation. \"That&#x27;s the way it&#x27;s got to be approached.\"",
+        "Martinez&#x27;s &#x27;inexplicable&#x27; 83 seconds cost Man Utd and Carrick"
       ]
     },
     "DF88C93166640036EC8F03458D85D8EB": {
@@ -49992,6 +50058,37 @@
         "He’s registered 20+ goals in each of his past three seasons and finished in La Liga’s top four scorers in two of those campaigns, despite the fact he’s often not been a regular starter since moving to Atlético."
       ]
     },
+    "ftbpro_01m63wyz7n4g": {
+      "id": "ftbpro_01m63wyz7n4g",
+      "title": "Racing Santander vs. Real Madrid: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/racing-santander-vs-real-madrid-preview-predictions-lineups-11-1-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m649bpx3ha1fg5dzew.jpg",
+      "publishedAt": "2026-11-01T01:00:00.000Z",
+      "paragraphs": [
+        "By Andrew HeadspeathOct 31, 2026Racing Santander host Real Madrid. / Visionhaus/Getty ImagesA week ago, Real Madrid were seemingly on the verge of conceding a third straight La Liga title, with José Mourinho’s stuttering team no match for the indomitable Barcelona. Then, the Clásico happened.",
+        "Appropriately, with the Day of the Dead this weekend, Madrid have been given new life and the gap at the top of La Liga has been cut to just three points heading into the action.",
+        "For all the renewed positivity at the club, José Mourinho will be very wary of the banana skin-shaped challenge posed by Racing Santander this weekend and Madrid can ill afford a careless slip up so close to their biggest result of the season so far.",
+        "Racing are unbeaten in five at the Estadio El Sardinero since their return to La Liga and would surely relish knocking Madrid back down to earth this Sunday.",
+        "These are very much the sort of games Los Blancos must win if they are to be more than just a nuisance to Barcelona this season.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Real Madrid’s attack is hard to deny. / David Ramirez/Soccrates/Getty ImagesMadrid are on a run of five straight wins in all competitions since the defeat to Atlético before the last international break, scoring 15 times.",
+        "For all the early teething problems and unconvincing performances, there is a sense that Mourinho is starting to figure out how to get the best out of this incredibly talented roster.",
+        "Racing have been strong at home in 2026–27, but José Alberto’s men have only faced one of La Liga’s top eight from last season so far. That was Villarreal on the opening day in a 2–2 draw and Racing have since had one the game’s goalscorers in Sergio Martínez poached by Real Madrid.",
+        "At Camp Nou, Racing fell 7–2. It is unlikely to be as much of a bloodbath at home, but the difference in resources should quickly become as apparent as it did against Barça.",
+        "Yassir Zabiri has been on fire this season. / Cesar Ortiz Gonzalez/NurPhoto/Getty ImagesFirst-choice left back Jorge Salinas is out of this one with a suspension he picked up after collecting five yellow cards this season. Summer signing Aarón Martin may be forced into service as an emergency defender as a result.",
+        "21-year-old Moroccan striker Yassir Zabiri is Racing’s danger man and has been one of the breakout stars in La Liga this season, with eight goals in 10 games. Only Raphinha and Mbappé have more thus far.",
+        "Veteran midfielder Sergio Canales spent a season with Real Madrid way back in 2010–11. He faces a reunion with his old boss Mourinho this Sunday.",
+        "Racing Santander predicted lineup vs. Real Madrid (4-2-3-1): Agirrezabala; Mantilla, Ramón, Belocian, Aarón; Prati, Martín; Martín, Canales, Vicente; Zabiri.",
+        "Madrid have few pressing availability issues ahead of the weekend’s trip to Cantabria. Trio Raúl Asencio, Ferland Mendy and Rodrygo all remain out of contention as they continue their injury recoveries. Vinícius Jr is now on game three of his four-match suspension.",
+        "Thibaut Courtois, who missed the Clásico with the flu, should come back in, while Mourinho must decide how much to rotate his team after last weekend’s taxing victory. He has already confirmed Federico Valverde will not start at right back.",
+        "Álvaro Carreras could get a run out, while Bernardo Silva and Eduardo Camavinga are both looking to make their case to be midfielder starters.",
+        "Fringe stars like Endrick, Espí and Brahim Díaz will all be hopeful of some game time here too, though maybe not from kick off. It may not be beyond the sentimentality of Mourinho to include young Martínez, signed from Racing, in the squad list.",
+        "Real Madrid predicted lineup vs. Racing Santander (4-2-3-1): Courtois; Valverde, Konaté, Huijsen, Carrreras; Tchouaméni, Silva; Güler, Bellingham, Diomande; Mbappé.",
+        "feed. READ THE LATEST REAL MADRID NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
     "ftbpro_01m63zj5542y": {
       "id": "ftbpro_01m63zj5542y",
       "title": "Lionel Messi, Luis Suarez Help Set New MLS Goalscoring Record",
@@ -50435,6 +50532,37 @@
         "Despite his impressive availability this season, Araújo has a far shakier injury track record. Across his six years in Barcelona’s senior side, the towering figure missed 100 games through injury, an average of more than 16 per season.",
         "With all the uncertainties that any transfer will bring, Liverpool would perhaps be best served following Araújo’s example of playing a waiting game.",
         "feed. READ THE LATEST TRANSFER NEWS AND RUMORS FROM WORLD SOCCER"
+      ]
+    },
+    "ftbpro_01m66ew0k2j8": {
+      "id": "ftbpro_01m66ew0k2j8",
+      "title": "Liverpool vs. Arsenal: Preview, Predictions and Lineups",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/liverpool-vs-arsenal-preview-predictions-lineups-11-1-26/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m66fhnr45beswr02fg.jpg",
+      "publishedAt": "2026-11-01T02:00:00.000Z",
+      "paragraphs": [
+        "By Ewan Ross-MurrayOct 31, 2026This fixture rarely disappoints. / Kristian Skeie/UEFA/Getty Images (Liverpool), Visionhaus/Getty Images (Arsenal)Sunday’s sole Premier League match will test Arsenal’s title-winning credentials as they visit Anfield to face Liverpool.",
+        "The reigning champions have made an encouraging start to the their title defense, winning seven of their opening eight matches. Their only misstep thus far came away at Brighton & Hove Albion, where they were deservedly thrashed 3–0 during a rare off-day.",
+        "The Gunners experienced another away day to forget midweek, however, as they were stunned by League Two outfit Fleetwood Town in the Carabao Cup fourth round. Following a draw in regulation time, Bruno Guimarães missed the crucial spot kick as their quadruple dreams were shattered in humiliating fashion.",
+        "By contrast, Liverpool triumphed in their midweek penalty shootout, beating Chelsea to book their spot in the quarterfinals of the Carabao Cup. It was their seventh win from their past eight matches, with Andoni Iraola’s men beginning to find form at the perfect juncture.",
+        "Their progress under the Spaniard will be put to the ultimate test this weekend, though, with Arsenal formidable opponents. The Reds can take solace from their unbeaten record in this fixture last season, which included a hard-fought 1–0 win on home soil early in the campaign.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Arsenal need a rare Anfield win. / Visionhaus/Getty ImagesWhile Arsenal are clearly the superior side with greater depth and balance, Liverpool’s current form will certainly offer the Anfield faithful encouragement. They’ve lost just once since Iraola took charge and appear to be slowly adapting to the Spaniard’s demands.",
+        "However, Liverpool’s Premier League record on their own patch leaves much to be desired. Before their victory over Brighton & Hove Albion last weekend, the Reds hadn’t won a home game in the competition since April, during which time they failed to beat Nottingham Forest, Fulham and Manchester City this season.",
+        "Mikel Arteta will lean on his side’s watertight defense on Merseyside, especially with injuries in his forward line. Arsenal reverted to last season’s strengths when beating Everton 2–0 last weekend, scoring twice from set pieces and utilizing their physicality to overpower their visitors.",
+        "Nobody has conceded fewer than Arsenal’s five in the league, while Liverpool have been defensively vulnerable and unspectacular in front of goal domestically.",
+        "This will be an undoubtedly close contest, but Arsenal’s resilience might edge them over the line.",
+        "Liverpool remain without several long-term absentees, with Hugo Ekitiké, Conor Bradley and Giovanni Leoni still missing through injuries suffered last season. Jeremie Frimpong is also in the treatment room until after the November international break.",
+        "In better news, Iraola has revealed that Dominik Szoboszlai and Victor Muñoz “have a chance” of making the matchday squad this weekend, although neither appear likely to start if they’re available.",
+        "Bradley Barcola, Florian Wirtz and Alexander Isak will all return to the starting lineup after being used from the bench midweek, while Alexis Mac Allister, Milos Kerkez, Jérémy Jacquet and Alisson will also re-enter the XI.",
+        "Ronald Araújo will return to right back having been used centrally against Chelsea, while Cody Gakpo will move to the opposite flank following his outing as a striker.",
+        "Liverpool predicted lineup vs. Arsenal (4-2-3-1): Alisson; Araújo, Jacquet, Van Dijk, Kerkez; Gravenberch, Mac Allister; Barcola, Wirtz, Gakpo; Isak.",
+        "Arteta has offered positive updates on the fitness of Declan Rice, Christos Tzolis and Riccardo Calafiori, all of whom trained on Friday and should be available.",
+        "Noni Madueke’s involvement is less certain as he battles an ankle injury, but with Bukayo Saka injured and Max Dowman suspended, Arteta will be eager to have the former Chelsea winger involved from the start.",
+        "After sweeping changes for the Fleetwood defeat, an entirely new defense should be selected—although William Saliba is still injured. David Raya will return between the posts, likely joined by Calafiori, Ben White, Ezri Konsa and Gabriel.",
+        "Bruno Guimarães and Martin Ødegaard should come back into midfield alongside Rice, while Eberechi Eze and Kai Havertz appear likeliest to make up the remainder of the offense."
       ]
     },
     "ftbpro_01m66gneshpf": {
@@ -50951,6 +51079,37 @@
         "feed. READ THE LATEST MAN UTD NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m69d5qmytm": {
+      "id": "ftbpro_01m69d5qmytm",
+      "title": "Transfer Rumors: Barcelona Chase Martinez; Man Utd Ready €100m Estevao Bid",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/transfer-rumors-barcelona-chase-martinez-man-utd-ready-estevao-bid/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m69j40p0wb7a7k0g2s.jpg",
+      "publishedAt": "2026-11-01T00:05:00.000Z",
+      "paragraphs": [
+        "By SI FC StaffOct 31, 2026Lisandro Martínez (left) and Estêvão (right) headline the gossip. / James Gill - Danehouse/Getty Images (Martínez), Chris Lee - Chelsea FC/Getty Images (Estêvão)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "Endrick has admirers in England. / Alvaro Medranda/Quality Sport Images/Getty ImagesArsenal remain interested in Real Madrid striker Endrick and have retained their line of communication with the Brazilian’s agent. (Source: TEAMtalk)",
+        "Manchester United are readying an offer of €100 million ($112 million) to sign unsettled Chelsea winger Estêvão, who is also being tracked by Barcelona. (Source: Fichajes)",
+        "Liverpool are exploring a January loan deal for Real Madrid right back Trent Alexander-Arnold, who José Mourinho hopes to replace with Tottenham Hotspur’s Pedro Porro. (Source: Cadena SER)",
+        "A return to Liverpool is Alexander-Arnold’s priority heading in the winter transfer window. (Source: indykaila)",
+        "Meanwhile, a new left back is also on Liverpool’s wish list amid concerns over both Milos Kerkez and Kostas Tsimikas. Among those under consideration are Newcastle United’s Lewis Hall, Inter Milan’s Federico Dimarco, Brentford’s El Hadji Malick Diouf, Real Madrid’s Álvaro Carreras and Sporting CP’s Maximiliano Araújo. (Source: El Nacional)",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "Bournemouth are doing all they can to fend off interest from Man Utd in winger Marcus Tavernier. (Source: Football Insider)",
+        "Aston Villa, Everton and Leeds United are all exploring moves for Tottenham Hotspur midfielder Conor Gallagher. (Source: Ekrem Konur)",
+        "Chelsea are sweating over the future of defender Josh Acheampong, who is no closer to agreeing a new contract. The most concrete interest in the 20-year-old comes from Bayern Munich and Real Madrid, but domestic rivals Arsenal, Manchester City, Man Utd and Liverpool are all admirers. (Source: fussball-news)",
+        "Coming in at Chelsea could be Barcelona right back Jules Koundé, who has emerged as the Blues’ top priority this January. (Source: Juan Jesus)",
+        "Turkish giants Beşiktaş are ready to make an offer of €10 million ($11 million) to sign Newcastle midfielder Joe Willock when the winter window opens. (Source: Aksam)",
+        "Enzo Fernández continues to be linked with Real Madrid. / Gary Oakley/MB Media/Getty ImagesReal Madrid want a big-name midfielder in 2027 and are back in pursuit of Man City’s Enzo Fernández. (Source: Bernabéu Digital)",
+        "Signing a new center back will be considered by Barcelona this winter. Inter Milan’s Alessandro Bastoni, Man Utd’s Lisandro Martínez and Real Betis’ Natan are all on the radar. (Source: Fichajes)",
+        "Alongside Barcelona, Atlético Madrid are also looking into a deal for Martínez, whose contract with Man Utd expires next summer. Neither club nor player have any interest in discussing an extension. (Source: AS)",
+        "Hull City’s Lucas Herrington is another player on Barcelona’s radar. (Source: TEAMtalk)",
+        "Barcelona sporting director Deco has held several meetings with 19-year-old Athletico Paranaense center back Arthur Dias ahead of a move that could cost around €20 million ($22 million). (Source: El Nacional)",
+        "Endrick has not ruled out leaving Real Madrid in January but intends to do everything he can to force his way into José Mourinho’s plans before considering an exit. (Source: AS)",
+        "Juventus fullback Andrea Cambiaso is set to be the subject of a €20 million ($22 million) bid from Barcelona in January, with a potential swap deal involving Alejandro Balde also an option. (Source: 4-4-2)",
+        "UD Logroñés midfielder Latif Issman, 19, is close to signing a deal to join Real Madrid’s youth setup. (Source: ESPN)"
+      ]
+    },
     "ftbpro_01m69fa21716": {
       "id": "ftbpro_01m69fa21716",
       "title": "‘We Will See’—Mac Allister Shares Head-Turning Update on Liverpool Future",
@@ -50981,6 +51140,35 @@
         "READ THE LATEST LIVERPOOL NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
+    "ftbpro_01m69gm6399c": {
+      "id": "ftbpro_01m69gm6399c",
+      "title": "Supercomputer Predicts Man Utd’s Chances of Relegation After Chelsea Defeat",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/supercomputer-predicts-man-utd-chances-relegation-after-chelsea-defeat/app/?utm_source=fotmob",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_20/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m69gtfqpxjsa4hnshq.jpg",
+      "publishedAt": "2026-11-01T01:00:00.000Z",
+      "paragraphs": [
+        "By Ewan Ross-MurrayOct 31, 2026Manchester United can’t escape crisis. / Alex Pantling/Getty ImagesJust as Manchester United supporters felt their club couldn’t sink any deeper into the abyss, Lisandro Martínez reminded them there is no end to their suffering—well, not yet at least.",
+        "The Argentine’s utterly brainless red card fueled their misery during Saturday’s 2–0 defeat to Chelsea at Stamford Bridge. The Red Devils are now nine matches without victory in all competitions—the club’s worst run since 1988—and Michael Carrick is inching closer and closer to the guillotine.",
+        "For now, United’s crisis has provoked anger and bewilderment in equal measure, but at what point do they genuinely start fearing for their Premier League safety?",
+        "Having amassed just seven points from their opening nine matches in the league—their sole victory coming over newly promoted Ipswich Town—they sit perilously close the relegation zone. Remarkably, they find themselves just two points above last-placed Sunderland as we enter November.",
+        "With that in mind, Opta’s supercomputer has been busy recalculating its Premier League projections following United’s latest setback. So, what are the chances they’re actually demoted this season?",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Carrick is on the precipice. / Adam Davy/PA Images/Getty ImagesGiven the quality and resources possessed by United, there’s very little realistic chance they will be relegated to the second tier. However, many assumed the same about Tottenham Hotspur, who only clinched survival and their 17th-place finish on the final day of the campaign last season.",
+        "In the most unforgiving division in world soccer, nobody is too good to go down.",
+        "Opta certainly agree. While United are not among the favorites to finish in the bottom three, they’re still given a staggering 20.77% chance of dropping into the Championship come the end of the season. Over two months into the campaign, that’s pretty astonishing for the record 13-time Premier League champions.",
+        "They’re predicted to amass just 44.82 points across the season, which the supercomputer believes would result in a 13th-place finish. Alarmingly, that would still be two places higher than United finished during the 2024–25 season under a combination of Erik ten Hag and Ruben Amorim.",
+        "Considering the Red Devils entered the current season eager to solidify their position as a Champions League regular, it’s deeply concerning that they’re given a mere 1.64% chance of qualifying for Europe’s premier competition. Even the likelihood of making the Europa League only sits at 1.87%.",
+        "Of course, things can swiftly change, and several positive results would completely alter the supercomputer’s predictions. But the problem for United is things might get worse before they get better.",
+        "Some tough fixtures lie ahead for the Red Devils. / Pedro Porru/MB Media/Getty ImagesRegardless of whether Carrick is sacked in the immediate future, United are braced for some really challenging fixtures during November. Five matches across two competitions bookend the upcoming international break.",
+        "Things begin in the Champions League on Tuesday, where United return to Old Trafford for an awkward encounter with Roma. The Italians are in fine form under Gian Piero Gasperini and among the current contenders in the Serie A title race.",
+        "Aston Villa then journey to Manchester in the Premier League. While a fixture in which United typically prosper, Unai Emery’s men will almost certainly be favorites for next weekend’s duel.",
+        "Immediately after club soccer’s hiatus, United face a trip to play bitter rivals Liverpool. They won at Anfield under Amorim last season, but that was their first victory at the stadium since January 2016, during which time they have lost 7–0 and 4–0.",
+        "United’s subsequent journey to Lisbon for a Champions League tie with Sporting CP could feasibly end in more heartbreak, as could their final match of November at home to Brentford, who have won two of their last three against the Red Devils.",
+        "READ THE LATEST MAN UTD NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
+      ]
+    },
     "ftbpro_01m69mndk5r3": {
       "id": "ftbpro_01m69mndk5r3",
       "title": "Real Madrid Handed ‘Massive Boost’ in Pursuit of Man Utd Wonderkid JJ Gabriel",
@@ -50990,7 +51178,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2151,h_1209,x_0,y_128/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m69mvsr6mdyh2jcy0q.jpg",
       "publishedAt": "2026-10-31T23:00:01.000Z",
       "paragraphs": [
-        "By Roberto Casillas7:00 PM EDTJJ Gabriel is considered one of the most exciting young prospects in world soccer.  / Manchester United/Getty ImagesThe JJ Gabriel saga added a new chapter after the teenager reportedly turned down an offer from Paris Saint-Germain, making Real Madrid the undisputed favorites to land Manchester United’s disgruntled wonderkid.",
+        "By Roberto CasillasOct 31, 2026JJ Gabriel is considered one of the most exciting young prospects in world soccer.  / Manchester United/Getty ImagesThe JJ Gabriel saga added a new chapter after the teenager reportedly turned down an offer from Paris Saint-Germain, making Real Madrid the undisputed favorites to land Manchester United’s disgruntled wonderkid.",
         "You might have never heard of him or much less seen him play, but the 2010-born Gabriel is viewed as a superstar in the making. Manchester United thought they had one of the most exciting talents in the world rising through their ranks, but back in September, Gabriel and his camp formally asked the Red Devils to terminate his contract with the club.",
         "“Broken promises” regarding first-team minutes, as well as issues between the 16-year-old’s family and the club reportedly led to the request. Although United offered him a scholarship contract that prevents Gabriel from leaving for free, his future appears destined to be away from Old Trafford.",
         "Some of the biggest clubs in the world were instantly linked with last season’s U-18 Premier League Player of the Year. But as a bidding war started to brew, Real Madrid looked like the favorites to land Gabriel from the start.",
@@ -51046,7 +51234,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_82/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m69zchpmyf9btrsas2.jpg",
       "publishedAt": "2026-10-31T22:19:21.000Z",
       "paragraphs": [
-        "By Roberto Casillas6:19 PM EDTLamine Yamal (middle) added another three goal contributions to his spectacular start of the season.     / Alex Caparros/Getty ImagesBarcelona returned to winning ways with a relentless 6–1 pummeling of a powerless Alavés at the Camp Nou on Saturday.",
+        "By Roberto CasillasOct 31, 2026Lamine Yamal (middle) added another three goal contributions to his spectacular start of the season.     / Alex Caparros/Getty ImagesBarcelona returned to winning ways with a relentless 6–1 pummeling of a powerless Alavés at the Camp Nou on Saturday.",
         "After a nightmare week that saw Barcelona suffer their first two defeats of the season, Hansi Flick’s men returned to their old ways with a devastating first half performance that decided the game by the time the halftime whistle blew.",
         "The hosts struck inside the opening 10 minutes when Fermín López squared Raphinha for a tap-in following a brilliant Pedri pass. López went from provider to finisher later, doubling Barça’s lead with an absolute bullet into the far post from a tight angle, before once again assisting the Brazilian to complete his brace. Determined to join the party, Lamine Yamal fired a rocket from just outside the penalty area to make it 4–0 on the verge of halftime.",
         "The lopsided advantage allowed Flick to rest some players in the second half, but Barcelona still dominated and Yamal completed his brace just past the hour-mark. Anthony Gordon came off the bench to add Barça's sixth, but it was quickly erased when Mariano Díaz bagged a consolation goal for the visitors.",
@@ -51077,7 +51265,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_17/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m69yrvrpy8vsbff7en.jpg",
       "publishedAt": "2026-10-31T22:59:28.000Z",
       "paragraphs": [
-        "By Amanda Langell6:00 PM EDTMichael Carrick likely only has limited time left at Manchester United. / Michael CarrickManchester United have reportedly decided to give Michael Carrick until the November international break to try and save his job.",
+        "By Amanda LangellOct 31, 2026Michael Carrick likely only has limited time left at Manchester United. / Michael CarrickManchester United have reportedly decided to give Michael Carrick until the November international break to try and save his job.",
         "Many expected the under-fire manager to be fired following the team’s dismal 3–0 loss to Bournemouth last weekend, which extended the Red Devils’ winless run to eight matches across all competitions. Carrick survived the horrific display, though, and hoped to turn things around on Saturday at Stamford Bridge.",
         "Except United suffered a 2–0 defeat to Chelsea, a game that truly got away from the visitors after Lisandro Martínez was sent off just past the hour-mark. The last time the club went nine games without a victory came all the way back in 1988, before the Premier League even existed.",
         "Once again, the world waited with bated breath to see if Carrick would even last the rest of the day in charge of the 20-time English champions. But The Athletic report United are trying to get to the international break before “having to act” on Carrick’s position.",
@@ -53426,6 +53614,33 @@
         "England have one more game to play in this international break, against Czechia at Wembley on Tuesday, when three points could all but secure a spot in the quarter-finals next March."
       ],
       "html": "<p>England turned in a devastating attacking performance to rout Croatia 7-0 in a remarkable Nations League encounter in Rijeka on Saturday.</p>\n\n<p>Amid a bizarre atmosphere generated by a crowd made up almost entirely of schoolchildren, due to restrictions imposed on Croatia by UEFA, Thomas Tuchel&#39;s forwards effectively had the game won by half-time.</p>\n\n<p>Harry Kane, Jude Bellingham, Anthony Gordon and Bukayo Saka were all on target before the break, with Kane and Saka getting another goal apiece in the second half and Morgan Rogers coming off the bench to get in on the act.&nbsp;</p>\n\n<p>As they did in the second half of the teams&#39; previous meeting, at the World Cup in June, England came flying out of the traps. On his first senior start, Alex Scott fed Bellingham on the edge of the area, and when the Real Madrid star slipped in Kane, he lifted his finish into the top-left corner for an eighth-minute opener.</p>\n\n<p>Dominik Livakovic denied his Barcelona team-mate Gordon on two occasions either side of that goal, but a tremendous piece of skill from the winger led to England doubling their lead in the 21st minute.</p>\n\n<p>Gordon plucked Saka&#39;s overhit cross out of the air with a glorious touch on the outside of his right boot, then centred for Bellingham to prod into a gaping net.</p>\n\n<p>Both Saka and Gordon missed opportunities to add a quickfire third for England, but the visitors&#39; relentless attacking play was rewarded again in the 39th minute, with Gordon darting in at the far post to nod Jarell Quansah&#39;s cross home.&nbsp;</p>\n\n<p>Mateo Kovacic somehow failed to get Croatia back into the contest when he rounded Pickford and sliced wide of a completely unguarded goal, and it was 4-0 on the stroke of half-time as Gordon and Bellingham linked up on the left, with the latter providing a pinpoint delivery from which Saka could not miss.</p>\n\n<p>And if Slaven Bilic hoped England might ease up after the interval, the Croatia boss was mistaken. Elliot Anderson played a superb give-and-go with Saka before steering a cross in from the right, with Kane sliding in to secure his brace in the 53rd minute.&nbsp;&nbsp;</p>\n\n\n<p>Bellingham passed up a chance to make it 6-0 before the hour mark, but Josip Stanisic soon gifted England another goal. He planted a dismal pass straight into the chest of Saka inside the area, and after an exchange of passes with Kane, the winger finished into the top-left corner.</p>\n\n<p>Saka should have had the match ball when he lifted a cross from Rogers over the crossbar, but the latter joined the fun three minutes from time, having rounded Livakovic following Bellingham&#39;s defence-splitting pass.</p>\n\n<p><strong>Magnificent seven as Three Lions feast on crumbling Croatia</strong></p>\n\n<p>There was plenty of frustration about the way Tuchel reined in England&#39;s attackers when it mattered at the World Cup, but he has let them strut their stuff at the start of this new cycle.</p>\n\n<p>Before Saturday, Croatia&#39;s record defeat was a 6-0 loss in Spain eight years ago, and they had never lost at home by a margin greater than three goals. Here, they were arguably fortunate to only concede seven – England racked up 6.14 expected goals (xG) to their 1.37.</p>\n\n\n<p>In front of just 100 travelling fans, all of England&#39;s front four were at their brilliant best. Kane&#39;s brace took him to 11 international goals this year, making him the first player to reach double figures in three different calendar years for the Three Lions (also 12 in 2019 and 16 in 2021).</p>\n\n<p>Kane and Gordon are the first pair of players to score in three straight games for England since November 2019, when Kane achieved the same feat alongside Marcus Rashford.</p>\n\n<p>Bellingham&#39;s goal was perhaps the pick of the bunch, with Gordon doing brilliantly to tee him up at the end of a 27-pass move – the most for any England goal in the Nations League.</p>\n\n<p>Bellingham also became the first England player to record three assists in a single game since Trent Alexander-Arnold versus San Marino in November 2021, while Saka scored twice with his right foot in a senior match for the first time, in 378 outings for club and country.</p>\n\n<p>England have one more game to play in this international break, against Czechia at Wembley on Tuesday, when three points could all but secure a spot in the quarter-finals next March.</p>\n"
+    },
+    "ml23ltiglwo01lim1ikho6i72": {
+      "id": "ml23ltiglwo01lim1ikho6i72",
+      "title": "Charlotte FC 4-0 Orlando City: Saint-Maximin scores, misses penalty and sees red in MLS rout",
+      "subtitle": "Antoine Griezmann and Orlando City failed to clinch a playoff spot after an eventual outing for Charlotte FC's Allan Saint-Maximin.",
+      "source": "FotMob",
+      "sourceUrl": "/news/ml23ltiglwo01lim1ikho6i72-charlotte-fc-4-0-orlando-city-saint-maximin-scores-misses-penalty-sees-red-mls-rout",
+      "imageUrl": "https://images.performgroup.com/di/library/omnisport/ec/13/allan-saint-maximin_1gzoo45yw02ul1nw1k7u7f0nxm.jpg?t=-1728661887&w=1200&h=630",
+      "publishedAt": "2026-10-31T23:37:13.000Z",
+      "paragraphs": [
+        "Allan Saint-Maximin scored, missed a penalty and was sent off as Charlotte FC thrashed Orlando City 4-0 at Bank of America Stadium.",
+        "Henry Kessler, Abdoulaye Doucoure and Rodolfo Aloko also got on the scoresheet for Dean Smith&#39;s side, who have now recorded back-to-back 4-0 victories in MLS.",
+        "Charlotte needed just six minutes to break the deadlock as Kessler headed past Maxime Crepeau from Ashley Westwood&#39;s free-kick delivery.",
+        "Iago Teodoro hit the woodwork on the stroke of half-time for Orlando, failing to get a clean connection on Antoine Griezmann&#39;s cross, and it proved costly as Saint-Maximin scored a brilliant solo strike four minutes after the break.",
+        "Pep Biel curled a wonderful effort onto the crossbar in the 67th minute, with Charlotte waiting until the 84th minute for their third goal.",
+        "Aloko was fouled in the box by Ivan Angulo, and though Saint-Maximin saw his spot-kick saved, Doucoure scored on the rebound for his first Charlotte goal.",
+        "The action was not yet over, as after Saint-Maximin was sent off for an inappropriate gesture towards an Orlando player, Aloko volleyed in from Tyger Smalls&#39; cross in stoppage time.",
+        "Elsewhere, FC Cincinnati secured their place in the playoffs with a 1-0 win over the Philadelphia Union.",
+        "New York City FC, meanwhile, are now out of postseason contention after conceding a 91st-minute equaliser in a 1-1 draw with CF Montreal.",
+        "Charlotte heating up ahead of MLS Cup push",
+        "After three MLS games without a win, Charlotte have responded in impressive fashion to defeat both Montreal and Orlando 4-0 in the space of four days.",
+        "On this occasion, the Crown accumulated 2.26 expected goals from 16 shots, though their figure was boosted by their penalty, while restricting Orlando to 0.84.",
+        "Saint-Maximin may not have a more eventful game in his career, with the Frenchman also leading his team-mates in shots (four), touches in the box (seven), successful dribbles (five), duels won (nine) and tackles won (two – joint-high).",
+        "A lot of credit must also go to Charlotte goalkeeper Kristijan Khalina, who made eight saves to earn his clean sheet.",
+        "Griezmann and Orlando still have their playoff hopes in their own hands, with a home match against the New England Revolution next on Decision Day."
+      ],
+      "html": "<p>Allan Saint-Maximin scored, missed a penalty and was sent off as Charlotte FC thrashed Orlando City 4-0 at Bank of America Stadium.</p>\n\n<p>Henry Kessler, Abdoulaye Doucoure and Rodolfo Aloko also got on the scoresheet for Dean Smith&#39;s side, who have now recorded back-to-back 4-0 victories in MLS.</p>\n\n<p>Charlotte needed just six minutes to break the deadlock as Kessler headed past Maxime Crepeau from Ashley Westwood&#39;s free-kick delivery.</p>\n\n<p>Iago Teodoro hit the woodwork on the stroke of half-time for Orlando, failing to get a clean connection on Antoine Griezmann&#39;s cross, and it proved costly as Saint-Maximin scored a brilliant solo strike four minutes after the break.</p>\n\n<p>Pep Biel curled a wonderful effort onto the crossbar in the 67th minute, with Charlotte waiting until the 84th minute for their third goal.</p>\n\n<p>Aloko was fouled in the box by Ivan Angulo, and though Saint-Maximin saw his spot-kick saved, Doucoure scored on the rebound for his first Charlotte goal.</p>\n\n<p>The action was not yet over, as after Saint-Maximin was sent off for an inappropriate gesture towards an Orlando player, Aloko volleyed in from Tyger Smalls&#39; cross in stoppage time.</p>\n\n\n<p>Elsewhere, FC Cincinnati secured their place in the playoffs with a 1-0 win over the Philadelphia Union.</p>\n\n<p>New York City FC, meanwhile, are now out of postseason contention after conceding a 91st-minute equaliser in a 1-1 draw with CF Montreal.</p>\n\n<p><strong>Charlotte heating up ahead of MLS Cup push</strong></p>\n\n<p>After three MLS games without a win, Charlotte have responded in impressive fashion to defeat both Montreal and Orlando 4-0 in the space of four days.</p>\n\n<p>On this occasion, the Crown accumulated 2.26 expected goals from 16 shots, though their figure was boosted by their penalty, while restricting Orlando to 0.84.</p>\n\n<p>Saint-Maximin may not have a more eventful game in his career, with the Frenchman also leading his team-mates in shots (four), touches in the box (seven), successful dribbles (five), duels won (nine) and tackles won (two – joint-high).</p>\n\n<p>A lot of credit must also go to Charlotte goalkeeper Kristijan Khalina, who made eight saves to earn his clean sheet.</p>\n\n<p>Griezmann and Orlando still have their playoff hopes in their own hands, with a home match against the New England Revolution next on Decision Day.</p>\n"
     },
     "mmi7g1n06ape19ev8uvfhbhip": {
       "id": "mmi7g1n06ape19ev8uvfhbhip",
