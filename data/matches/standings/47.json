@@ -2,10 +2,28 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-11-01T12:44:29.021Z",
+  "updatedAt": "2026-11-01T21:44:26.649Z",
   "table": [
     {
       "position": 1,
+      "teamId": "9825",
+      "teamName": "Arsenal",
+      "shortName": "Arsenal",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
+      "played": 9,
+      "won": 8,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 14,
+      "goalsAgainst": 5,
+      "goalDifference": 9,
+      "points": 24,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 2,
       "teamId": "8456",
       "teamName": "Manchester City",
       "shortName": "Man City",
@@ -17,24 +35,6 @@
       "goalsFor": 20,
       "goalsAgainst": 10,
       "goalDifference": 10,
-      "points": 21,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 2,
-      "teamId": "9825",
-      "teamName": "Arsenal",
-      "shortName": "Arsenal",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9825.png",
-      "played": 8,
-      "won": 7,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 13,
-      "goalsAgainst": 5,
-      "goalDifference": 8,
       "points": 21,
       "form": [
         "#2AD572"
@@ -82,13 +82,13 @@
       "teamName": "Liverpool",
       "shortName": "Liverpool",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
-      "played": 8,
+      "played": 9,
       "won": 4,
       "drawn": 3,
-      "lost": 1,
+      "lost": 2,
       "goalsFor": 11,
-      "goalsAgainst": 8,
-      "goalDifference": 3,
+      "goalsAgainst": 9,
+      "goalDifference": 2,
       "points": 15,
       "form": [
         "#0046A7"

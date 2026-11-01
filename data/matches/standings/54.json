@@ -2,7 +2,7 @@
   "competitionId": "54",
   "competitionName": "Bundesliga",
   "season": "2026/2027",
-  "updatedAt": "2026-11-01T12:44:35.006Z",
+  "updatedAt": "2026-11-01T21:44:31.414Z",
   "table": [
     {
       "position": 1,
@@ -129,6 +129,21 @@
     },
     {
       "position": 8,
+      "teamId": "9810",
+      "teamName": "Eintracht Frankfurt",
+      "shortName": "Frankfurt",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9810.png",
+      "played": 8,
+      "won": 3,
+      "drawn": 2,
+      "lost": 3,
+      "goalsFor": 13,
+      "goalsAgainst": 18,
+      "goalDifference": -5,
+      "points": 11
+    },
+    {
+      "position": 9,
       "teamId": "9905",
       "teamName": "Mainz 05",
       "shortName": "Mainz",
@@ -143,7 +158,7 @@
       "points": 10
     },
     {
-      "position": 9,
+      "position": 10,
       "teamId": "8406",
       "teamName": "Augsburg",
       "shortName": "Augsburg",
@@ -158,7 +173,7 @@
       "points": 9
     },
     {
-      "position": 10,
+      "position": 11,
       "teamId": "10269",
       "teamName": "VfB Stuttgart",
       "shortName": "VfB Stuttgart",
@@ -173,7 +188,7 @@
       "points": 9
     },
     {
-      "position": 11,
+      "position": 12,
       "teamId": "8226",
       "teamName": "Hoffenheim",
       "shortName": "Hoffenheim",
@@ -188,7 +203,22 @@
       "points": 9
     },
     {
-      "position": 12,
+      "position": 13,
+      "teamId": "8722",
+      "teamName": "1. FC Köln",
+      "shortName": "Köln",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8722.png",
+      "played": 8,
+      "won": 2,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 9,
+      "goalsAgainst": 12,
+      "goalDifference": -3,
+      "points": 9
+    },
+    {
+      "position": 14,
       "teamId": "8460",
       "teamName": "Paderborn",
       "shortName": "Paderborn",
@@ -203,52 +233,40 @@
       "points": 9
     },
     {
-      "position": 13,
+      "position": 15,
       "teamId": "9790",
       "teamName": "Hamburger SV",
       "shortName": "Hamburger SV",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9790.png",
-      "played": 7,
+      "played": 8,
       "won": 3,
       "drawn": 0,
-      "lost": 4,
-      "goalsFor": 6,
-      "goalsAgainst": 16,
-      "goalDifference": -10,
+      "lost": 5,
+      "goalsFor": 7,
+      "goalsAgainst": 19,
+      "goalDifference": -12,
       "points": 9
     },
     {
-      "position": 14,
-      "teamId": "8722",
-      "teamName": "1. FC Köln",
-      "shortName": "Köln",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8722.png",
-      "played": 7,
-      "won": 2,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 11,
-      "goalDifference": -3,
-      "points": 8
-    },
-    {
-      "position": 15,
-      "teamId": "9810",
-      "teamName": "Eintracht Frankfurt",
-      "shortName": "Frankfurt",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9810.png",
-      "played": 7,
-      "won": 2,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 10,
-      "goalsAgainst": 17,
-      "goalDifference": -7,
-      "points": 8
-    },
-    {
       "position": 16,
+      "teamId": "8149",
+      "teamName": "Union Berlin",
+      "shortName": "Union Berlin",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8149.png",
+      "played": 8,
+      "won": 1,
+      "drawn": 4,
+      "lost": 3,
+      "goalsFor": 7,
+      "goalsAgainst": 19,
+      "goalDifference": -12,
+      "points": 7,
+      "form": [
+        "#FFA72F"
+      ]
+    },
+    {
+      "position": 17,
       "teamId": "10189",
       "teamName": "Schalke 04",
       "shortName": "Schalke 04",
@@ -260,24 +278,6 @@
       "goalsFor": 4,
       "goalsAgainst": 9,
       "goalDifference": -5,
-      "points": 6,
-      "form": [
-        "#FFA72F"
-      ]
-    },
-    {
-      "position": 17,
-      "teamId": "8149",
-      "teamName": "Union Berlin",
-      "shortName": "Union Berlin",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8149.png",
-      "played": 7,
-      "won": 1,
-      "drawn": 3,
-      "lost": 3,
-      "goalsFor": 6,
-      "goalsAgainst": 18,
-      "goalDifference": -12,
       "points": 6,
       "form": [
         "#FF4646"

@@ -2,7 +2,7 @@
   "competitionId": "264",
   "competitionName": "AFC Champions League",
   "season": "2026/2027",
-  "updatedAt": "2026-11-01T12:44:52.221Z",
+  "updatedAt": "2026-11-01T21:44:45.512Z",
   "table": [
     {
       "position": 1,
@@ -28,14 +28,14 @@
       "teamName": "FCV Dender EH",
       "shortName": "FCV Dender EH",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7947.png",
-      "played": 7,
+      "played": 8,
       "won": 6,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
-      "goalsFor": 11,
-      "goalsAgainst": 2,
+      "goalsFor": 12,
+      "goalsAgainst": 3,
       "goalDifference": 9,
-      "points": 18,
+      "points": 19,
       "form": [
         "#FFD908"
       ]
@@ -46,13 +46,13 @@
       "teamName": "Eupen",
       "shortName": "Eupen",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6351.png",
-      "played": 7,
+      "played": 8,
       "won": 5,
       "drawn": 0,
-      "lost": 2,
-      "goalsFor": 14,
-      "goalsAgainst": 7,
-      "goalDifference": 7,
+      "lost": 3,
+      "goalsFor": 15,
+      "goalsAgainst": 9,
+      "goalDifference": 6,
       "points": 15,
       "form": [
         "#FFD908"
@@ -78,6 +78,24 @@
     },
     {
       "position": 5,
+      "teamId": "8174",
+      "teamName": "Virton",
+      "shortName": "Virton",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8174.png",
+      "played": 8,
+      "won": 4,
+      "drawn": 1,
+      "lost": 3,
+      "goalsFor": 14,
+      "goalsAgainst": 10,
+      "goalDifference": 4,
+      "points": 13,
+      "form": [
+        "#FFD908"
+      ]
+    },
+    {
+      "position": 6,
       "teamId": "213307",
       "teamName": "KSC Lokeren",
       "shortName": "KSC Lokeren",
@@ -89,13 +107,10 @@
       "goalsFor": 16,
       "goalsAgainst": 14,
       "goalDifference": 2,
-      "points": 13,
-      "form": [
-        "#FFD908"
-      ]
+      "points": 13
     },
     {
-      "position": 6,
+      "position": 7,
       "teamId": "274583",
       "teamName": "Patro Eisden",
       "shortName": "Patro Eisden",
@@ -110,7 +125,7 @@
       "points": 12
     },
     {
-      "position": 7,
+      "position": 8,
       "teamId": "96953",
       "teamName": "Francs Borains",
       "shortName": "Francs Borains",
@@ -125,7 +140,7 @@
       "points": 12
     },
     {
-      "position": 8,
+      "position": 9,
       "teamId": "1379188",
       "teamName": "Gent U23",
       "shortName": "Gent U23",
@@ -138,21 +153,6 @@
       "goalsAgainst": 13,
       "goalDifference": -2,
       "points": 11
-    },
-    {
-      "position": 9,
-      "teamId": "8174",
-      "teamName": "Virton",
-      "shortName": "Virton",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8174.png",
-      "played": 7,
-      "won": 3,
-      "drawn": 1,
-      "lost": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 9,
-      "goalDifference": 3,
-      "points": 10
     },
     {
       "position": 10,
@@ -175,14 +175,14 @@
       "teamName": "Genk U23",
       "shortName": "Genk U23",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1378463.png",
-      "played": 8,
+      "played": 9,
       "won": 2,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 4,
-      "goalsFor": 12,
-      "goalsAgainst": 15,
+      "goalsFor": 13,
+      "goalsAgainst": 16,
       "goalDifference": -3,
-      "points": 8
+      "points": 9
     },
     {
       "position": 12,
