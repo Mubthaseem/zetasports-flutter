@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-11-01T21:44:57.362Z",
+  "updatedAt": "2026-11-02T04:41:41.179Z",
   "table": [
     {
       "position": 1,
@@ -111,6 +111,21 @@
     },
     {
       "position": 7,
+      "teamId": "10264",
+      "teamName": "Braga",
+      "shortName": "Braga",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
+      "played": 10,
+      "won": 4,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 12,
+      "goalsAgainst": 11,
+      "goalDifference": 1,
+      "points": 14
+    },
+    {
+      "position": 8,
       "teamId": "9764",
       "teamName": "Gil Vicente",
       "shortName": "Gil Vicente",
@@ -123,22 +138,6 @@
       "goalsAgainst": 7,
       "goalDifference": 1,
       "points": 14
-    },
-    {
-      "position": 8,
-      "teamId": "10264",
-      "teamName": "Braga",
-      "shortName": "Braga",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
-      "played": 10,
-      "won": 4,
-      "drawn": 2,
-      "lost": 4,
-      "goalsFor": 10,
-      "goalsAgainst": 11,
-      "goalDifference": -1,
-      "points": 14,
-      "qualificationZone": "Active"
     },
     {
       "position": 9,
@@ -181,10 +180,9 @@
       "drawn": 4,
       "lost": 4,
       "goalsFor": 14,
-      "goalsAgainst": 12,
-      "goalDifference": 2,
-      "points": 10,
-      "qualificationZone": "Active"
+      "goalsAgainst": 14,
+      "goalDifference": 0,
+      "points": 10
     },
     {
       "position": 12,
