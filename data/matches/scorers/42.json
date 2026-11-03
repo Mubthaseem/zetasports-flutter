@@ -2,10 +2,20 @@
   "competitionId": "42",
   "competitionName": "UEFA Champions League",
   "season": "2026/2027",
-  "updatedAt": "2026-11-03T13:41:54.221Z",
+  "updatedAt": "2026-11-03T22:56:32.890Z",
   "scorers": [
     {
       "rank": 1,
+      "playerId": "1504343",
+      "playerName": "Aleksey Batrakov",
+      "teamId": "8637",
+      "teamName": "Galatasaray",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8637.png",
+      "goals": 4,
+      "assists": 0
+    },
+    {
+      "rank": 2,
       "playerId": "737066",
       "playerName": "Erling Haaland",
       "teamId": "8456",
@@ -15,22 +25,12 @@
       "assists": 0
     },
     {
-      "rank": 2,
+      "rank": 3,
       "playerId": "840241",
       "playerName": "Ermedin Demirović",
       "teamId": "10269",
       "teamName": "VfB Stuttgart",
       "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10269.png",
-      "goals": 4,
-      "assists": 0
-    },
-    {
-      "rank": 3,
-      "playerId": "448540",
-      "playerName": "Serhou Guirassy",
-      "teamId": "9789",
-      "teamName": "Borussia Dortmund",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9789.png",
       "goals": 4,
       "assists": 0
     }
