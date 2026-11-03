@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-11-02T14:53:18.593Z",
+  "updatedAt": "2026-11-03T00:35:16.527Z",
   "table": [
     {
       "position": 1,
@@ -28,14 +28,14 @@
       "teamName": "Benfica",
       "shortName": "Benfica",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
-      "played": 9,
-      "won": 7,
+      "played": 10,
+      "won": 8,
       "drawn": 1,
       "lost": 1,
-      "goalsFor": 26,
+      "goalsFor": 27,
       "goalsAgainst": 8,
-      "goalDifference": 18,
-      "points": 22,
+      "goalDifference": 19,
+      "points": 25,
       "form": [
         "#2AD572"
       ]
@@ -111,6 +111,21 @@
     },
     {
       "position": 7,
+      "teamId": "9764",
+      "teamName": "Gil Vicente",
+      "shortName": "Gil Vicente",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9764.png",
+      "played": 10,
+      "won": 4,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 8,
+      "goalsAgainst": 7,
+      "goalDifference": 1,
+      "points": 15
+    },
+    {
+      "position": 8,
       "teamId": "10264",
       "teamName": "Braga",
       "shortName": "Braga",
@@ -121,21 +136,6 @@
       "lost": 4,
       "goalsFor": 12,
       "goalsAgainst": 11,
-      "goalDifference": 1,
-      "points": 14
-    },
-    {
-      "position": 8,
-      "teamId": "9764",
-      "teamName": "Gil Vicente",
-      "shortName": "Gil Vicente",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9764.png",
-      "played": 9,
-      "won": 4,
-      "drawn": 2,
-      "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 7,
       "goalDifference": 1,
       "points": 14
     },
@@ -160,13 +160,13 @@
       "teamName": "Alverca",
       "shortName": "Alverca",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9780.png",
-      "played": 9,
+      "played": 10,
       "won": 3,
       "drawn": 2,
-      "lost": 4,
+      "lost": 5,
       "goalsFor": 13,
-      "goalsAgainst": 13,
-      "goalDifference": 0,
+      "goalsAgainst": 14,
+      "goalDifference": -1,
       "points": 11
     },
     {
@@ -205,14 +205,14 @@
       "teamName": "Vitória de Guimarães",
       "shortName": "Vitória de Guimarães",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7844.png",
-      "played": 9,
+      "played": 10,
       "won": 2,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 5,
       "goalsFor": 10,
       "goalsAgainst": 10,
       "goalDifference": 0,
-      "points": 8
+      "points": 9
     },
     {
       "position": 14,

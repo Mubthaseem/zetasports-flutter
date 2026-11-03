@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-11-02T14:52:49.339Z",
+  "updatedAt": "2026-11-03T00:34:50.379Z",
   "table": [
     {
       "position": 1,
@@ -111,6 +111,21 @@
     },
     {
       "position": 7,
+      "teamId": "8668",
+      "teamName": "Everton",
+      "shortName": "Everton",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png",
+      "played": 9,
+      "won": 3,
+      "drawn": 4,
+      "lost": 2,
+      "goalsFor": 9,
+      "goalsAgainst": 9,
+      "goalDifference": 0,
+      "points": 13
+    },
+    {
+      "position": 8,
       "teamId": "8678",
       "teamName": "AFC Bournemouth",
       "shortName": "Bournemouth",
@@ -125,7 +140,7 @@
       "points": 12
     },
     {
-      "position": 8,
+      "position": 9,
       "teamId": "8586",
       "teamName": "Tottenham Hotspur",
       "shortName": "Tottenham",
@@ -140,7 +155,7 @@
       "points": 12
     },
     {
-      "position": 9,
+      "position": 10,
       "teamId": "10252",
       "teamName": "Aston Villa",
       "shortName": "Aston Villa",
@@ -155,7 +170,7 @@
       "points": 12
     },
     {
-      "position": 10,
+      "position": 11,
       "teamId": "8667",
       "teamName": "Hull City",
       "shortName": "Hull",
@@ -170,7 +185,7 @@
       "points": 11
     },
     {
-      "position": 11,
+      "position": 12,
       "teamId": "8463",
       "teamName": "Leeds United",
       "shortName": "Leeds",
@@ -185,22 +200,22 @@
       "points": 11
     },
     {
-      "position": 12,
+      "position": 13,
       "teamId": "10261",
       "teamName": "Newcastle United",
       "shortName": "Newcastle",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10261.png",
-      "played": 8,
+      "played": 9,
       "won": 3,
       "drawn": 2,
-      "lost": 3,
+      "lost": 4,
       "goalsFor": 12,
-      "goalsAgainst": 14,
-      "goalDifference": -2,
+      "goalsAgainst": 15,
+      "goalDifference": -3,
       "points": 11
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "9902",
       "teamName": "Ipswich Town",
       "shortName": "Ipswich",
@@ -213,21 +228,6 @@
       "goalsAgainst": 18,
       "goalDifference": -4,
       "points": 11
-    },
-    {
-      "position": 14,
-      "teamId": "8668",
-      "teamName": "Everton",
-      "shortName": "Everton",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png",
-      "played": 8,
-      "won": 2,
-      "drawn": 4,
-      "lost": 2,
-      "goalsFor": 8,
-      "goalsAgainst": 9,
-      "goalDifference": -1,
-      "points": 10
     },
     {
       "position": 15,
