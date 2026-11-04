@@ -2,10 +2,28 @@
   "competitionId": "73",
   "competitionName": "UEFA Europa League",
   "season": "2026/2027",
-  "updatedAt": "2026-11-04T13:51:25.336Z",
+  "updatedAt": "2026-11-04T23:15:45.476Z",
   "table": [
     {
       "position": 1,
+      "teamId": "8638",
+      "teamName": "Olympiacos",
+      "shortName": "Olympiacos",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8638.png",
+      "played": 4,
+      "won": 3,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "goalDifference": 3,
+      "points": 10,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 2,
       "teamId": "9772",
       "teamName": "Benfica",
       "shortName": "Benfica",
@@ -23,7 +41,7 @@
       ]
     },
     {
-      "position": 2,
+      "position": 3,
       "teamId": "8178",
       "teamName": "Bayer Leverkusen",
       "shortName": "Leverkusen",
@@ -41,7 +59,7 @@
       ]
     },
     {
-      "position": 3,
+      "position": 4,
       "teamId": "8678",
       "teamName": "AFC Bournemouth",
       "shortName": "Bournemouth",
@@ -59,7 +77,7 @@
       ]
     },
     {
-      "position": 4,
+      "position": 5,
       "teamId": "8222",
       "teamName": "Ferencváros",
       "shortName": "Ferencváros",
@@ -71,24 +89,6 @@
       "goalsFor": 9,
       "goalsAgainst": 3,
       "goalDifference": 6,
-      "points": 9,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 5,
-      "teamId": "8638",
-      "teamName": "Olympiacos",
-      "shortName": "Olympiacos",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8638.png",
-      "played": 3,
-      "won": 3,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 4,
-      "goalsAgainst": 1,
-      "goalDifference": 3,
       "points": 9,
       "form": [
         "#2AD572"
@@ -204,6 +204,24 @@
     },
     {
       "position": 12,
+      "teamId": "9851",
+      "teamName": "Rennes",
+      "shortName": "Rennes",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9851.png",
+      "played": 4,
+      "won": 1,
+      "drawn": 3,
+      "lost": 0,
+      "goalsFor": 4,
+      "goalsAgainst": 3,
+      "goalDifference": 1,
+      "points": 6,
+      "form": [
+        "#0294F0"
+      ]
+    },
+    {
+      "position": 13,
       "teamId": "9748",
       "teamName": "Lyon",
       "shortName": "Lyon",
@@ -216,24 +234,6 @@
       "goalsAgainst": 6,
       "goalDifference": -1,
       "points": 6,
-      "form": [
-        "#0294F0"
-      ]
-    },
-    {
-      "position": 13,
-      "teamId": "9851",
-      "teamName": "Rennes",
-      "shortName": "Rennes",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9851.png",
-      "played": 3,
-      "won": 1,
-      "drawn": 2,
-      "lost": 0,
-      "goalsFor": 4,
-      "goalsAgainst": 3,
-      "goalDifference": 1,
-      "points": 5,
       "form": [
         "#0294F0"
       ]
