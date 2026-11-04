@@ -2,7 +2,7 @@
   "competitionId": "268",
   "competitionName": "Brasileirão Série A",
   "season": "2026",
-  "updatedAt": "2026-11-03T22:56:55.944Z",
+  "updatedAt": "2026-11-04T05:00:23.483Z",
   "table": [
     {
       "position": 1,
@@ -190,13 +190,13 @@
       "teamName": "Coritiba",
       "shortName": "Coritiba",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9767.png",
-      "played": 33,
+      "played": 34,
       "won": 11,
       "drawn": 9,
-      "lost": 13,
+      "lost": 14,
       "goalsFor": 40,
-      "goalsAgainst": 50,
-      "goalDifference": -10,
+      "goalsAgainst": 51,
+      "goalDifference": -11,
       "points": 42,
       "form": [
         "#0046A7"
@@ -204,6 +204,21 @@
     },
     {
       "position": 12,
+      "teamId": "163782",
+      "teamName": "Mirassol",
+      "shortName": "Mirassol",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/163782.png",
+      "played": 34,
+      "won": 10,
+      "drawn": 10,
+      "lost": 14,
+      "goalsFor": 39,
+      "goalsAgainst": 48,
+      "goalDifference": -9,
+      "points": 40
+    },
+    {
+      "position": 13,
       "teamId": "8517",
       "teamName": "Botafogo",
       "shortName": "Botafogo",
@@ -218,7 +233,7 @@
       "points": 39
     },
     {
-      "position": 13,
+      "position": 14,
       "teamId": "10276",
       "teamName": "Vasco da Gama",
       "shortName": "Vasco da Gama",
@@ -233,7 +248,7 @@
       "points": 38
     },
     {
-      "position": 14,
+      "position": 15,
       "teamId": "7733",
       "teamName": "Vitória",
       "shortName": "Vitória",
@@ -248,7 +263,22 @@
       "points": 38
     },
     {
-      "position": 15,
+      "position": 16,
+      "teamId": "8702",
+      "teamName": "Internacional",
+      "shortName": "Internacional",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8702.png",
+      "played": 34,
+      "won": 9,
+      "drawn": 11,
+      "lost": 14,
+      "goalsFor": 38,
+      "goalsAgainst": 42,
+      "goalDifference": -4,
+      "points": 38
+    },
+    {
+      "position": 17,
       "teamId": "9769",
       "teamName": "Grêmio",
       "shortName": "Grêmio",
@@ -260,26 +290,13 @@
       "goalsFor": 37,
       "goalsAgainst": 44,
       "goalDifference": -7,
-      "points": 37
-    },
-    {
-      "position": 16,
-      "teamId": "163782",
-      "teamName": "Mirassol",
-      "shortName": "Mirassol",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/163782.png",
-      "played": 34,
-      "won": 9,
-      "drawn": 10,
-      "lost": 15,
-      "goalsFor": 37,
-      "goalsAgainst": 48,
-      "goalDifference": -11,
       "points": 37,
-      "qualificationZone": "Active"
+      "form": [
+        "#FF4646"
+      ]
     },
     {
-      "position": 17,
+      "position": 18,
       "teamId": "9808",
       "teamName": "Corinthians",
       "shortName": "Corinthians",
@@ -292,24 +309,6 @@
       "goalsAgainst": 42,
       "goalDifference": -6,
       "points": 36,
-      "form": [
-        "#FF4646"
-      ]
-    },
-    {
-      "position": 18,
-      "teamId": "8702",
-      "teamName": "Internacional",
-      "shortName": "Internacional",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8702.png",
-      "played": 33,
-      "won": 8,
-      "drawn": 11,
-      "lost": 14,
-      "goalsFor": 37,
-      "goalsAgainst": 42,
-      "goalDifference": -5,
-      "points": 35,
       "form": [
         "#FF4646"
       ]
@@ -339,17 +338,16 @@
       "shortName": "Chapecoense",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/197693.png",
       "played": 33,
-      "won": 5,
+      "won": 4,
       "drawn": 9,
-      "lost": 19,
+      "lost": 20,
       "goalsFor": 33,
-      "goalsAgainst": 66,
-      "goalDifference": -33,
-      "points": 24,
+      "goalsAgainst": 68,
+      "goalDifference": -35,
+      "points": 21,
       "form": [
         "#FF4646"
-      ],
-      "qualificationZone": "Active"
+      ]
     }
   ]
 }
