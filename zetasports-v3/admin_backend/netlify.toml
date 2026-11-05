@@ -1,0 +1,65 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Proxy /api requests to Netlify Serverless Functions
+[[redirects]]
+  from = "/api/auth/*"
+  to = "/.netlify/functions/auth/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/settings/*"
+  to = "/.netlify/functions/settings/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/settings"
+  to = "/.netlify/functions/settings"
+  status = 200
+
+[[redirects]]
+  from = "/api/thumbnail/*"
+  to = "/.netlify/functions/thumbnail/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/blogger/*"
+  to = "/.netlify/functions/blogger/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/fotmob/*"
+  to = "/.netlify/functions/fotmob/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/audit/*"
+  to = "/.netlify/functions/audit/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/audit"
+  to = "/.netlify/functions/audit"
+  status = 200
+
+# OAuth2 callback proxy
+[[redirects]]
+  from = "/oauth2callback"
+  to = "/.netlify/functions/blogger/oauth2callback"
+  status = 200
+
+
+# OWASP Top 10 Enterprise Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"

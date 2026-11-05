@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/oauth2callback", "destination": "/api/blogger" },
+    { "source": "/api/auth/:match*", "destination": "/api/auth" },
+    { "source": "/api/auth", "destination": "/api/auth" },
+    { "source": "/api/settings/:match*", "destination": "/api/settings" },
+    { "source": "/api/settings", "destination": "/api/settings" },
+    { "source": "/api/blogger/:match*", "destination": "/api/blogger" },
+    { "source": "/api/blogger", "destination": "/api/blogger" },
+    { "source": "/api/fotmob/:match*", "destination": "/api/fotmob" },
+    { "source": "/api/fotmob", "destination": "/api/fotmob" },
+    { "source": "/api/audit/:match*", "destination": "/api/audit" },
+    { "source": "/api/audit", "destination": "/api/audit" },
+    { "source": "/api/thumbnail/:match*", "destination": "/api/thumbnail" },
+    { "source": "/api/thumbnail", "destination": "/api/thumbnail" },
+    { "source": "/api/matches/:match*", "destination": "/api/matches" },
+    { "source": "/api/matches", "destination": "/api/matches" },
+    { "source": "/api/streams/:match*", "destination": "/api/streams" },
+    { "source": "/api/streams", "destination": "/api/streams" },
+    { "source": "/", "destination": "/api/index" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Credentials", "value": "true" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
+        { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization" }
+      ]
+    }
+  ]
+}

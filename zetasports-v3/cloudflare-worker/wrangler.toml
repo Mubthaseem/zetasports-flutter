@@ -1,0 +1,11 @@
+name = "zetasports-live-worker"
+main = "worker.js"
+compatibility_date = "2024-09-01"
+preview_urls = false
+
+[triggers]
+crons = ["* * * * *", "5 0 * * *"] # Every minute live poller + Daily 00:05 UTC sliding window sync
+
+[vars]
+SUPABASE_URL = "https://udlncusvhmydivtjkjcy.supabase.co"
+SUPABASE_KEY = "sb_publishable_VXZvAq86GvVgqY-c23gwmQ_RtuTSlWF"

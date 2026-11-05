@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZetaSports Serverless API Gateway v3</title>
+  <style>
+    body {
+      background: #050A12;
+      color: #38bdf8;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .box {
+      background: #101827;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 32px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+    h1 {
+      color: #ffffff;
+      font-size: 20px;
+      margin: 12px 0 6px 0;
+      letter-spacing: -0.02em;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0 0 16px 0;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #34d399;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 8px #34d399;
+    }
+    pre {
+      background: #080E1A;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 16px;
+      border-radius: 12px;
+      color: #7dd3fc;
+      font-size: 12px;
+      line-height: 1.7;
+      overflow-x: auto;
+      margin: 0 0 20px 0;
+    }
+    .footer {
+      font-size: 11px;
+      color: #64748b;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <span class="tag">⚡ HEADLESS API GATEWAY</span>
+      <span class="status"><span class="dot"></span> ONLINE</span>
+    </div>
+    <h1>ZetaSports Admin API Gateway v3</h1>
+    <p>
+      This is the decoupled, headless serverless backend for ZetaSports. UI access is strictly decoupled and hosted on the frontend client portal.
+    </p>
+
+    <pre>
+GET  /api/auth/me           (Session verify)
+POST /api/auth/google       (Google OIDC login)
+POST /api/auth/logout       (Terminate session)
+GET  /api/settings          (100 settings hub)
+POST /api/settings          (Update & audit log)
+GET  /api/blogger/config    (Blogger API status)
+POST /api/blogger/publish   (Auto-post match)
+GET  /api/fotmob/matches    (Live telemetry)
+POST /api/thumbnail/render  (Canvas generator)
+GET  /api/audit             (Immutable security)
+    </pre>
+
+    <div class="footer">
+      <span>Frontend Portal:</span>
+      <a href="https://zetasports-admin-portal.netlify.app" target="_blank">zetasports-admin-portal.netlify.app →</a>
+    </div>
+  </div>
+</body>
+</html>
