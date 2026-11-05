@@ -68,11 +68,12 @@ GoogleService-Info.plist
 *.sw?
 
 # ZetaSports Local Agent Ignores
-local-agent/client_secrets.json
-local-agent/token.json
-local-agent/settings.json
-local-agent/agent.log
-local-agent/python-embed/
+local-agent/
+hf-backend/
+huggingface-proxy/
+*.db
+*.zip
+*.pb
 
 # Node.js & Web Platform
 node_modules/
@@ -81,3 +82,6 @@ frontend/dist/
 data-pipeline/dist/
 *.tmp.*
 
+
+# Local Netlify folder
+.netlify
