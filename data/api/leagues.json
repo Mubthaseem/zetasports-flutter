@@ -2,7 +2,7 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - Leagues & Tables Feed",
-    "generatedAt": "2026-11-05T22:38:29.194Z",
+    "generatedAt": "2026-11-05T23:19:01.943Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "competitionsCount": 26,
@@ -411,7 +411,7 @@
       "competitionId": "42",
       "competitionName": "UEFA Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:28.870Z",
+      "updatedAt": "2026-11-05T23:18:29.620Z",
       "table": [
         {
           "position": 1,
@@ -1031,14 +1031,14 @@
       "competitionId": "44",
       "competitionName": "Copa América",
       "season": "2024",
-      "updatedAt": "2026-11-05T14:04:56.101Z",
+      "updatedAt": "2026-11-05T23:18:52.575Z",
       "table": []
     },
     "47": {
       "competitionId": "47",
       "competitionName": "Premier League",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:27.847Z",
+      "updatedAt": "2026-11-05T23:18:28.872Z",
       "table": [
         {
           "position": 1,
@@ -1370,14 +1370,14 @@
       "competitionId": "50",
       "competitionName": "UEFA EURO",
       "season": "2028",
-      "updatedAt": "2026-11-05T14:04:55.378Z",
+      "updatedAt": "2026-11-05T23:18:51.653Z",
       "table": []
     },
     "53": {
       "competitionId": "53",
       "competitionName": "Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:32.890Z",
+      "updatedAt": "2026-11-05T23:18:32.713Z",
       "table": [
         {
           "position": 1,
@@ -1682,7 +1682,7 @@
       "competitionId": "54",
       "competitionName": "Bundesliga",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:32.026Z",
+      "updatedAt": "2026-11-05T23:18:31.936Z",
       "table": [
         {
           "position": 1,
@@ -1987,14 +1987,14 @@
       "competitionId": "55",
       "competitionName": "Serie A",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:30.968Z",
+      "updatedAt": "2026-11-05T23:18:31.198Z",
       "table": []
     },
     "57": {
       "competitionId": "57",
       "competitionName": "Eredivisie",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:51.840Z",
+      "updatedAt": "2026-11-05T23:18:48.838Z",
       "table": [
         {
           "position": 1,
@@ -2302,7 +2302,7 @@
       "competitionId": "61",
       "competitionName": "Liga Portugal",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:52.762Z",
+      "updatedAt": "2026-11-05T23:18:49.598Z",
       "table": [
         {
           "position": 1,
@@ -2604,10 +2604,100 @@
       "competitionId": "73",
       "competitionName": "UEFA Europa League",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:33.832Z",
+      "updatedAt": "2026-11-05T23:18:33.468Z",
       "table": [
         {
           "position": 1,
+          "teamId": "9772",
+          "teamName": "Benfica",
+          "shortName": "Benfica",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
+          "played": 4,
+          "won": 4,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 13,
+          "goalsAgainst": 3,
+          "goalDifference": 10,
+          "points": 12,
+          "form": [
+            "#2AD572"
+          ]
+        },
+        {
+          "position": 2,
+          "teamId": "8678",
+          "teamName": "AFC Bournemouth",
+          "shortName": "Bournemouth",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8678.png",
+          "played": 4,
+          "won": 4,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 11,
+          "goalsAgainst": 2,
+          "goalDifference": 9,
+          "points": 12,
+          "form": [
+            "#2AD572"
+          ]
+        },
+        {
+          "position": 3,
+          "teamId": "8222",
+          "teamName": "Ferencváros",
+          "shortName": "Ferencváros",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8222.png",
+          "played": 4,
+          "won": 4,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 11,
+          "goalsAgainst": 3,
+          "goalDifference": 8,
+          "points": 12,
+          "form": [
+            "#2AD572"
+          ]
+        },
+        {
+          "position": 4,
+          "teamId": "7978",
+          "teamName": "Union St.Gilloise",
+          "shortName": "Union St.Gilloise",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7978.png",
+          "played": 4,
+          "won": 3,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 10,
+          "goalsAgainst": 2,
+          "goalDifference": 8,
+          "points": 10,
+          "form": [
+            "#2AD572"
+          ]
+        },
+        {
+          "position": 5,
+          "teamId": "9885",
+          "teamName": "Juventus",
+          "shortName": "Juventus",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9885.png",
+          "played": 4,
+          "won": 3,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 11,
+          "goalsAgainst": 4,
+          "goalDifference": 7,
+          "points": 10,
+          "form": [
+            "#2AD572"
+          ]
+        },
+        {
+          "position": 6,
           "teamId": "8638",
           "teamName": "Olympiacos",
           "shortName": "Olympiacos",
@@ -2625,109 +2715,19 @@
           ]
         },
         {
-          "position": 2,
-          "teamId": "9772",
-          "teamName": "Benfica",
-          "shortName": "Benfica",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
-          "played": 3,
-          "won": 3,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 10,
-          "goalsAgainst": 2,
-          "goalDifference": 8,
-          "points": 9,
-          "form": [
-            "#2AD572"
-          ]
-        },
-        {
-          "position": 3,
+          "position": 7,
           "teamId": "8178",
           "teamName": "Bayer Leverkusen",
           "shortName": "Leverkusen",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8178.png",
-          "played": 3,
+          "played": 4,
           "won": 3,
           "drawn": 0,
-          "lost": 0,
-          "goalsFor": 8,
-          "goalsAgainst": 0,
-          "goalDifference": 8,
-          "points": 9,
-          "form": [
-            "#2AD572"
-          ]
-        },
-        {
-          "position": 4,
-          "teamId": "8678",
-          "teamName": "AFC Bournemouth",
-          "shortName": "Bournemouth",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8678.png",
-          "played": 3,
-          "won": 3,
-          "drawn": 0,
-          "lost": 0,
+          "lost": 1,
           "goalsFor": 8,
           "goalsAgainst": 1,
           "goalDifference": 7,
           "points": 9,
-          "form": [
-            "#2AD572"
-          ]
-        },
-        {
-          "position": 5,
-          "teamId": "8222",
-          "teamName": "Ferencváros",
-          "shortName": "Ferencváros",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8222.png",
-          "played": 3,
-          "won": 3,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 9,
-          "goalsAgainst": 3,
-          "goalDifference": 6,
-          "points": 9,
-          "form": [
-            "#2AD572"
-          ]
-        },
-        {
-          "position": 6,
-          "teamId": "7978",
-          "teamName": "Union St.Gilloise",
-          "shortName": "Union St.Gilloise",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7978.png",
-          "played": 3,
-          "won": 2,
-          "drawn": 1,
-          "lost": 0,
-          "goalsFor": 8,
-          "goalsAgainst": 1,
-          "goalDifference": 7,
-          "points": 7,
-          "form": [
-            "#2AD572"
-          ]
-        },
-        {
-          "position": 7,
-          "teamId": "9885",
-          "teamName": "Juventus",
-          "shortName": "Juventus",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9885.png",
-          "played": 3,
-          "won": 2,
-          "drawn": 1,
-          "lost": 0,
-          "goalsFor": 9,
-          "goalsAgainst": 3,
-          "goalDifference": 6,
-          "points": 7,
           "form": [
             "#2AD572"
           ]
@@ -2738,13 +2738,13 @@
           "teamName": "Beşiktaş",
           "shortName": "Beşiktaş",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10188.png",
-          "played": 3,
+          "played": 4,
           "won": 2,
           "drawn": 1,
-          "lost": 0,
-          "goalsFor": 9,
-          "goalsAgainst": 5,
-          "goalDifference": 4,
+          "lost": 1,
+          "goalsFor": 11,
+          "goalsAgainst": 8,
+          "goalDifference": 3,
           "points": 7,
           "form": [
             "#2AD572"
@@ -2752,17 +2752,17 @@
         },
         {
           "position": 9,
-          "teamId": "8472",
-          "teamName": "Sunderland",
-          "shortName": "Sunderland",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8472.png",
-          "played": 3,
+          "teamId": "10156",
+          "teamName": "Dinamo Zagreb",
+          "shortName": "Dinamo Zagreb",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10156.png",
+          "played": 4,
           "won": 2,
           "drawn": 1,
-          "lost": 0,
-          "goalsFor": 4,
-          "goalsAgainst": 2,
-          "goalDifference": 2,
+          "lost": 1,
+          "goalsFor": 5,
+          "goalsAgainst": 4,
+          "goalDifference": 1,
           "points": 7,
           "form": [
             "#0294F0"
@@ -2770,32 +2770,122 @@
         },
         {
           "position": 10,
-          "teamId": "10229",
-          "teamName": "AZ Alkmaar",
-          "shortName": "AZ Alkmaar",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10229.png",
-          "played": 3,
+          "teamId": "8632",
+          "teamName": "Levski Sofia",
+          "shortName": "Levski Sofia",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8632.png",
+          "played": 4,
           "won": 2,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
-          "goalsFor": 6,
-          "goalsAgainst": 2,
-          "goalDifference": 4,
-          "points": 6,
+          "goalsFor": 4,
+          "goalsAgainst": 3,
+          "goalDifference": 1,
+          "points": 7,
           "form": [
             "#0294F0"
           ]
         },
         {
           "position": 11,
-          "teamId": "8044",
-          "teamName": "Omonia Nicosia",
-          "shortName": "Omonia Nicosia",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8044.png",
-          "played": 3,
+          "teamId": "8472",
+          "teamName": "Sunderland",
+          "shortName": "Sunderland",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8472.png",
+          "played": 4,
+          "won": 2,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 4,
+          "goalsAgainst": 4,
+          "goalDifference": 0,
+          "points": 7,
+          "form": [
+            "#0294F0"
+          ]
+        },
+        {
+          "position": 12,
+          "teamId": "8464",
+          "teamName": "NEC Nijmegen",
+          "shortName": "NEC Nijmegen",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8464.png",
+          "played": 4,
+          "won": 2,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 8,
+          "goalsAgainst": 9,
+          "goalDifference": -1,
+          "points": 7,
+          "form": [
+            "#0294F0"
+          ]
+        },
+        {
+          "position": 13,
+          "teamId": "9748",
+          "teamName": "Lyon",
+          "shortName": "Lyon",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9748.png",
+          "played": 4,
+          "won": 2,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 6,
+          "goalsAgainst": 7,
+          "goalDifference": -1,
+          "points": 7,
+          "form": [
+            "#0294F0"
+          ]
+        },
+        {
+          "position": 14,
+          "teamId": "10229",
+          "teamName": "AZ Alkmaar",
+          "shortName": "AZ Alkmaar",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10229.png",
+          "played": 4,
           "won": 2,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
+          "goalsFor": 7,
+          "goalsAgainst": 4,
+          "goalDifference": 3,
+          "points": 6,
+          "form": [
+            "#0294F0"
+          ]
+        },
+        {
+          "position": 15,
+          "teamId": "8635",
+          "teamName": "Anderlecht",
+          "shortName": "Anderlecht",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8635.png",
+          "played": 4,
+          "won": 2,
+          "drawn": 0,
+          "lost": 2,
+          "goalsFor": 6,
+          "goalsAgainst": 3,
+          "goalDifference": 3,
+          "points": 6,
+          "form": [
+            "#0294F0"
+          ]
+        },
+        {
+          "position": 16,
+          "teamId": "7753",
+          "teamName": "OFI Crete",
+          "shortName": "OFI Crete",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7753.png",
+          "played": 4,
+          "won": 2,
+          "drawn": 0,
+          "lost": 2,
           "goalsFor": 5,
           "goalsAgainst": 4,
           "goalDifference": 1,
@@ -2805,7 +2895,7 @@
           ]
         },
         {
-          "position": 12,
+          "position": 17,
           "teamId": "9851",
           "teamName": "Rennes",
           "shortName": "Rennes",
@@ -2823,17 +2913,17 @@
           ]
         },
         {
-          "position": 13,
-          "teamId": "9748",
-          "teamName": "Lyon",
-          "shortName": "Lyon",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9748.png",
-          "played": 3,
+          "position": 18,
+          "teamId": "8044",
+          "teamName": "Omonia Nicosia",
+          "shortName": "Omonia Nicosia",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8044.png",
+          "played": 4,
           "won": 2,
           "drawn": 0,
-          "lost": 1,
-          "goalsFor": 5,
-          "goalsAgainst": 6,
+          "lost": 2,
+          "goalsFor": 6,
+          "goalsAgainst": 7,
           "goalDifference": -1,
           "points": 6,
           "form": [
@@ -2841,163 +2931,73 @@
           ]
         },
         {
-          "position": 14,
-          "teamId": "8560",
-          "teamName": "Real Sociedad",
-          "shortName": "Real Sociedad",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
-          "played": 3,
-          "won": 1,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 8,
-          "goalsAgainst": 3,
-          "goalDifference": 5,
-          "points": 4,
-          "form": [
-            "#0294F0"
-          ]
-        },
-        {
-          "position": 15,
-          "teamId": "9826",
-          "teamName": "Crystal Palace",
-          "shortName": "Crystal Palace",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9826.png",
-          "played": 3,
-          "won": 1,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 8,
-          "goalsAgainst": 5,
-          "goalDifference": 3,
-          "points": 4,
-          "form": [
-            "#0294F0"
-          ]
-        },
-        {
-          "position": 16,
-          "teamId": "10247",
-          "teamName": "Sparta Prague",
-          "shortName": "Sparta Prague",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10247.png",
-          "played": 3,
-          "won": 1,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 5,
-          "goalsAgainst": 3,
-          "goalDifference": 2,
-          "points": 4,
-          "form": [
-            "#0294F0"
-          ]
-        },
-        {
-          "position": 17,
-          "teamId": "8632",
-          "teamName": "Levski Sofia",
-          "shortName": "Levski Sofia",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8632.png",
-          "played": 3,
-          "won": 1,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 3,
-          "goalsAgainst": 3,
-          "goalDifference": 0,
-          "points": 4,
-          "form": [
-            "#0294F0"
-          ]
-        },
-        {
-          "position": 18,
-          "teamId": "10156",
-          "teamName": "Dinamo Zagreb",
-          "shortName": "Dinamo Zagreb",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10156.png",
-          "played": 3,
-          "won": 1,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 3,
-          "goalsAgainst": 4,
-          "goalDifference": -1,
-          "points": 4,
-          "form": [
-            "#0294F0"
-          ]
-        },
-        {
           "position": 19,
-          "teamId": "10014",
-          "teamName": "Sturm Graz",
-          "shortName": "Sturm Graz",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10014.png",
-          "played": 3,
-          "won": 1,
-          "drawn": 1,
-          "lost": 1,
-          "goalsFor": 1,
-          "goalsAgainst": 3,
+          "teamId": "212820",
+          "teamName": "Torreense",
+          "shortName": "Torreense",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212820.png",
+          "played": 4,
+          "won": 2,
+          "drawn": 0,
+          "lost": 2,
+          "goalsFor": 7,
+          "goalsAgainst": 9,
           "goalDifference": -2,
-          "points": 4,
+          "points": 6,
           "form": [
             "#0294F0"
           ]
         },
         {
           "position": 20,
-          "teamId": "8464",
-          "teamName": "NEC Nijmegen",
-          "shortName": "NEC Nijmegen",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8464.png",
-          "played": 3,
+          "teamId": "8560",
+          "teamName": "Real Sociedad",
+          "shortName": "Real Sociedad",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
+          "played": 4,
           "won": 1,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 1,
-          "goalsFor": 5,
-          "goalsAgainst": 8,
-          "goalDifference": -3,
-          "points": 4,
+          "goalsFor": 9,
+          "goalsAgainst": 4,
+          "goalDifference": 5,
+          "points": 5,
           "form": [
             "#0294F0"
           ]
         },
         {
           "position": 21,
-          "teamId": "10013",
-          "teamName": "Salzburg",
-          "shortName": "Salzburg",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10013.png",
-          "played": 3,
+          "teamId": "9826",
+          "teamName": "Crystal Palace",
+          "shortName": "Crystal Palace",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9826.png",
+          "played": 4,
           "won": 1,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 1,
-          "goalsFor": 3,
+          "goalsFor": 9,
           "goalsAgainst": 6,
-          "goalDifference": -3,
-          "points": 4,
+          "goalDifference": 3,
+          "points": 5,
           "form": [
             "#0294F0"
           ]
         },
         {
           "position": 22,
-          "teamId": "8635",
-          "teamName": "Anderlecht",
-          "shortName": "Anderlecht",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8635.png",
-          "played": 3,
+          "teamId": "10247",
+          "teamName": "Sparta Prague",
+          "shortName": "Sparta Prague",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10247.png",
+          "played": 4,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 2,
-          "goalsFor": 4,
-          "goalsAgainst": 3,
-          "goalDifference": 1,
-          "points": 3,
+          "goalsFor": 6,
+          "goalsAgainst": 6,
+          "goalDifference": 0,
+          "points": 4,
           "form": [
             "#0294F0"
           ]
@@ -3008,76 +3008,76 @@
           "teamName": "Hoffenheim",
           "shortName": "Hoffenheim",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8226.png",
-          "played": 3,
+          "played": 4,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 2,
-          "goalsFor": 5,
-          "goalsAgainst": 5,
+          "goalsFor": 6,
+          "goalsAgainst": 6,
           "goalDifference": 0,
-          "points": 3,
+          "points": 4,
           "form": [
             "#0294F0"
           ]
         },
         {
           "position": 24,
-          "teamId": "8564",
-          "teamName": "Milan",
-          "shortName": "Milan",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8564.png",
-          "played": 3,
+          "teamId": "10014",
+          "teamName": "Sturm Graz",
+          "shortName": "Sturm Graz",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10014.png",
+          "played": 4,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 2,
-          "goalsFor": 4,
-          "goalsAgainst": 5,
-          "goalDifference": -1,
-          "points": 3,
+          "goalsFor": 3,
+          "goalsAgainst": 6,
+          "goalDifference": -3,
+          "points": 4,
           "form": [
             "#0294F0"
           ]
         },
         {
           "position": 25,
+          "teamId": "4622",
+          "teamName": "NK Celje",
+          "shortName": "NK Celje",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/4622.png",
+          "played": 4,
+          "won": 1,
+          "drawn": 1,
+          "lost": 2,
+          "goalsFor": 5,
+          "goalsAgainst": 9,
+          "goalDifference": -4,
+          "points": 4
+        },
+        {
+          "position": 26,
+          "teamId": "10013",
+          "teamName": "Salzburg",
+          "shortName": "Salzburg",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10013.png",
+          "played": 4,
+          "won": 1,
+          "drawn": 1,
+          "lost": 2,
+          "goalsFor": 3,
+          "goalsAgainst": 8,
+          "goalDifference": -5,
+          "points": 4
+        },
+        {
+          "position": 27,
           "teamId": "9910",
           "teamName": "Celta Vigo",
           "shortName": "Celta Vigo",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9910.png",
-          "played": 3,
+          "played": 4,
           "won": 1,
           "drawn": 0,
-          "lost": 2,
-          "goalsFor": 3,
-          "goalsAgainst": 4,
-          "goalDifference": -1,
-          "points": 3
-        },
-        {
-          "position": 26,
-          "teamId": "7753",
-          "teamName": "OFI Crete",
-          "shortName": "OFI Crete",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7753.png",
-          "played": 3,
-          "won": 1,
-          "drawn": 0,
-          "lost": 2,
-          "goalsFor": 3,
-          "goalsAgainst": 4,
-          "goalDifference": -1,
-          "points": 3
-        },
-        {
-          "position": 27,
-          "teamId": "1957",
-          "teamName": "Jagiellonia Białystok",
-          "shortName": "Jagiellonia Białystok",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1957.png",
-          "played": 3,
-          "won": 1,
-          "drawn": 0,
-          "lost": 2,
+          "lost": 3,
           "goalsFor": 4,
           "goalsAgainst": 6,
           "goalDifference": -2,
@@ -3085,14 +3085,14 @@
         },
         {
           "position": 28,
-          "teamId": "212820",
-          "teamName": "Torreense",
-          "shortName": "Torreense",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212820.png",
-          "played": 3,
+          "teamId": "8564",
+          "teamName": "Milan",
+          "shortName": "Milan",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8564.png",
+          "played": 4,
           "won": 1,
           "drawn": 0,
-          "lost": 2,
+          "lost": 3,
           "goalsFor": 4,
           "goalsAgainst": 7,
           "goalDifference": -3,
@@ -3100,108 +3100,108 @@
         },
         {
           "position": 29,
-          "teamId": "4622",
-          "teamName": "NK Celje",
-          "shortName": "NK Celje",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/4622.png",
-          "played": 3,
-          "won": 0,
-          "drawn": 1,
-          "lost": 2,
-          "goalsFor": 2,
+          "teamId": "1957",
+          "teamName": "Jagiellonia Białystok",
+          "shortName": "Jagiellonia Białystok",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1957.png",
+          "played": 4,
+          "won": 1,
+          "drawn": 0,
+          "lost": 3,
+          "goalsFor": 4,
           "goalsAgainst": 7,
-          "goalDifference": -5,
-          "points": 1
+          "goalDifference": -3,
+          "points": 3
         },
         {
           "position": 30,
-          "teamId": "9754",
-          "teamName": "Hapoel Beer Sheva",
-          "shortName": "Hapoel Beer Sheva",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9754.png",
-          "played": 3,
-          "won": 0,
-          "drawn": 1,
-          "lost": 2,
-          "goalsFor": 1,
-          "goalsAgainst": 6,
-          "goalDifference": -5,
-          "points": 1
-        },
-        {
-          "position": 31,
-          "teamId": "8476",
-          "teamName": "Lillestrøm",
-          "shortName": "Lillestrøm",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8476.png",
-          "played": 3,
-          "won": 0,
-          "drawn": 1,
-          "lost": 2,
-          "goalsFor": 2,
-          "goalsAgainst": 9,
-          "goalDifference": -7,
-          "points": 1
-        },
-        {
-          "position": 32,
-          "teamId": "2182",
-          "teamName": "Lech Poznań",
-          "shortName": "Lech Poznań",
-          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2182.png",
-          "played": 3,
-          "won": 0,
-          "drawn": 1,
-          "lost": 2,
-          "goalsFor": 1,
-          "goalsAgainst": 9,
-          "goalDifference": -8,
-          "points": 1
-        },
-        {
-          "position": 33,
           "teamId": "6033",
           "teamName": "Viktoria Plzeň",
           "shortName": "Viktoria Plzeň",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6033.png",
-          "played": 3,
-          "won": 0,
+          "played": 4,
+          "won": 1,
           "drawn": 0,
           "lost": 3,
-          "goalsFor": 2,
+          "goalsFor": 3,
           "goalsAgainst": 7,
-          "goalDifference": -5,
-          "points": 0
+          "goalDifference": -4,
+          "points": 3
         },
         {
-          "position": 34,
+          "position": 31,
           "teamId": "8592",
           "teamName": "Marseille",
           "shortName": "Marseille",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8592.png",
-          "played": 3,
-          "won": 0,
+          "played": 4,
+          "won": 1,
           "drawn": 0,
           "lost": 3,
-          "goalsFor": 1,
+          "goalsFor": 2,
           "goalsAgainst": 6,
-          "goalDifference": -5,
-          "points": 0
+          "goalDifference": -4,
+          "points": 3
         },
         {
-          "position": 35,
+          "position": 32,
           "teamId": "9925",
           "teamName": "Celtic",
           "shortName": "Celtic",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9925.png",
-          "played": 3,
-          "won": 0,
+          "played": 4,
+          "won": 1,
           "drawn": 0,
           "lost": 3,
-          "goalsFor": 3,
-          "goalsAgainst": 9,
-          "goalDifference": -6,
-          "points": 0
+          "goalsFor": 6,
+          "goalsAgainst": 11,
+          "goalDifference": -5,
+          "points": 3
+        },
+        {
+          "position": 33,
+          "teamId": "9754",
+          "teamName": "Hapoel Beer Sheva",
+          "shortName": "Hapoel Beer Sheva",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9754.png",
+          "played": 4,
+          "won": 0,
+          "drawn": 1,
+          "lost": 3,
+          "goalsFor": 1,
+          "goalsAgainst": 8,
+          "goalDifference": -7,
+          "points": 1
+        },
+        {
+          "position": 34,
+          "teamId": "8476",
+          "teamName": "Lillestrøm",
+          "shortName": "Lillestrøm",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8476.png",
+          "played": 4,
+          "won": 0,
+          "drawn": 1,
+          "lost": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 10,
+          "goalDifference": -8,
+          "points": 1
+        },
+        {
+          "position": 35,
+          "teamId": "2182",
+          "teamName": "Lech Poznań",
+          "shortName": "Lech Poznań",
+          "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/2182.png",
+          "played": 4,
+          "won": 0,
+          "drawn": 1,
+          "lost": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 12,
+          "goalDifference": -10,
+          "points": 1
         },
         {
           "position": 36,
@@ -3209,13 +3209,13 @@
           "teamName": "Ararat Armenia",
           "shortName": "Ararat Armenia",
           "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/866109.png",
-          "played": 3,
+          "played": 4,
           "won": 0,
           "drawn": 0,
-          "lost": 3,
-          "goalsFor": 2,
-          "goalsAgainst": 11,
-          "goalDifference": -9,
+          "lost": 4,
+          "goalsFor": 4,
+          "goalsAgainst": 14,
+          "goalDifference": -10,
           "points": 0
         }
       ]
@@ -3224,14 +3224,14 @@
       "competitionId": "77",
       "competitionName": "FIFA World Cup",
       "season": "2026",
-      "updatedAt": "2026-11-05T14:04:54.725Z",
+      "updatedAt": "2026-11-05T23:18:51.074Z",
       "table": []
     },
     "87": {
       "competitionId": "87",
       "competitionName": "LaLiga",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:30.113Z",
+      "updatedAt": "2026-11-05T23:18:30.531Z",
       "table": [
         {
           "position": 1,
@@ -3566,49 +3566,49 @@
       "competitionId": "130",
       "competitionName": "MLS",
       "season": "2026",
-      "updatedAt": "2026-11-05T14:04:40.327Z",
+      "updatedAt": "2026-11-05T23:18:39.131Z",
       "table": []
     },
     "264": {
       "competitionId": "264",
       "competitionName": "AFC Champions League",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:42.025Z",
+      "updatedAt": "2026-11-05T23:18:40.639Z",
       "table": []
     },
     "268": {
       "competitionId": "268",
       "competitionName": "Brasileirão Série A",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:53.624Z",
+      "updatedAt": "2026-11-05T23:18:50.316Z",
       "table": []
     },
     "516": {
       "competitionId": "516",
       "competitionName": "Algerian Ligue 1",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:05:05.680Z",
+      "updatedAt": "2026-11-05T23:19:01.397Z",
       "table": []
     },
     "536": {
       "competitionId": "536",
       "competitionName": "Saudi Pro League",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:41.096Z",
+      "updatedAt": "2026-11-05T23:18:39.874Z",
       "table": []
     },
     "9806": {
       "competitionId": "9806",
       "competitionName": "UEFA Nations League",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:05:04.956Z",
+      "updatedAt": "2026-11-05T23:19:00.767Z",
       "table": []
     },
     "10216": {
       "competitionId": "10216",
       "competitionName": "UEFA Conference League",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:34.575Z",
+      "updatedAt": "2026-11-05T23:18:34.518Z",
       "table": []
     }
   },
@@ -3617,7 +3617,7 @@
       "competitionId": "42",
       "competitionName": "UEFA Champions League",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:28.924Z",
+      "updatedAt": "2026-11-05T23:18:29.642Z",
       "scorers": [
         {
           "rank": 1,
@@ -3655,7 +3655,7 @@
       "competitionId": "44",
       "competitionName": "Copa América",
       "season": "2024",
-      "updatedAt": "2026-11-05T14:04:56.145Z",
+      "updatedAt": "2026-11-05T23:18:52.593Z",
       "scorers": [
         {
           "rank": 1,
@@ -3693,7 +3693,7 @@
       "competitionId": "47",
       "competitionName": "Premier League",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:27.911Z",
+      "updatedAt": "2026-11-05T23:18:28.906Z",
       "scorers": [
         {
           "rank": 1,
@@ -3731,14 +3731,14 @@
       "competitionId": "50",
       "competitionName": "UEFA EURO",
       "season": "2028",
-      "updatedAt": "2026-11-05T14:04:55.420Z",
+      "updatedAt": "2026-11-05T23:18:51.667Z",
       "scorers": []
     },
     "53": {
       "competitionId": "53",
       "competitionName": "Ligue 1",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:32.941Z",
+      "updatedAt": "2026-11-05T23:18:32.739Z",
       "scorers": [
         {
           "rank": 1,
@@ -3776,7 +3776,7 @@
       "competitionId": "54",
       "competitionName": "Bundesliga",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:32.092Z",
+      "updatedAt": "2026-11-05T23:18:31.960Z",
       "scorers": [
         {
           "rank": 1,
@@ -3814,14 +3814,14 @@
       "competitionId": "55",
       "competitionName": "Serie A",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:31.010Z",
+      "updatedAt": "2026-11-05T23:18:31.216Z",
       "scorers": []
     },
     "57": {
       "competitionId": "57",
       "competitionName": "Eredivisie",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:51.894Z",
+      "updatedAt": "2026-11-05T23:18:48.864Z",
       "scorers": [
         {
           "rank": 1,
@@ -3859,7 +3859,7 @@
       "competitionId": "61",
       "competitionName": "Liga Portugal",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:52.816Z",
+      "updatedAt": "2026-11-05T23:18:49.621Z",
       "scorers": [
         {
           "rank": 1,
@@ -3897,10 +3897,20 @@
       "competitionId": "73",
       "competitionName": "UEFA Europa League",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:33.882Z",
+      "updatedAt": "2026-11-05T23:18:33.490Z",
       "scorers": [
         {
           "rank": 1,
+          "playerId": "1186606",
+          "playerName": "Dion Drena Beljo",
+          "teamId": "10156",
+          "teamName": "Dinamo Zagreb",
+          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10156.png",
+          "goals": 4,
+          "assists": 0
+        },
+        {
+          "rank": 2,
           "playerId": "1445650",
           "playerName": "Alphadjo Cissè",
           "teamId": "8564",
@@ -3910,19 +3920,9 @@
           "assists": 0
         },
         {
-          "rank": 2,
-          "playerId": "844477",
-          "playerName": "Sergio Gómez",
-          "teamId": "8560",
-          "teamName": "Real Sociedad",
-          "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8560.png",
-          "goals": 3,
-          "assists": 0
-        },
-        {
           "rank": 3,
-          "playerId": "117541",
-          "playerName": "Tjaronn Chery",
+          "playerId": "147594",
+          "playerName": "Bryan Linssen",
           "teamId": "8464",
           "teamName": "N.E.C.",
           "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8464.png",
@@ -3935,7 +3935,7 @@
       "competitionId": "77",
       "competitionName": "FIFA World Cup",
       "season": "2026",
-      "updatedAt": "2026-11-05T14:04:54.780Z",
+      "updatedAt": "2026-11-05T23:18:51.095Z",
       "scorers": [
         {
           "rank": 1,
@@ -3973,7 +3973,7 @@
       "competitionId": "87",
       "competitionName": "LaLiga",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:30.176Z",
+      "updatedAt": "2026-11-05T23:18:30.558Z",
       "scorers": [
         {
           "rank": 1,
@@ -4011,7 +4011,7 @@
       "competitionId": "130",
       "competitionName": "MLS",
       "season": "2026",
-      "updatedAt": "2026-11-05T14:04:40.388Z",
+      "updatedAt": "2026-11-05T23:18:39.160Z",
       "scorers": [
         {
           "rank": 1,
@@ -4049,14 +4049,14 @@
       "competitionId": "132",
       "competitionName": "FA Cup",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:35.332Z",
+      "updatedAt": "2026-11-05T23:18:35.153Z",
       "scorers": []
     },
     "133": {
       "competitionId": "133",
       "competitionName": "Carabao Cup",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:36.204Z",
+      "updatedAt": "2026-11-05T23:18:35.944Z",
       "scorers": [
         {
           "rank": 1,
@@ -4094,7 +4094,7 @@
       "competitionId": "138",
       "competitionName": "Copa del Rey",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:37.198Z",
+      "updatedAt": "2026-11-05T23:18:36.648Z",
       "scorers": [
         {
           "rank": 1,
@@ -4132,7 +4132,7 @@
       "competitionId": "141",
       "competitionName": "Coppa Italia",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:39.227Z",
+      "updatedAt": "2026-11-05T23:18:37.924Z",
       "scorers": [
         {
           "rank": 1,
@@ -4170,7 +4170,7 @@
       "competitionId": "209",
       "competitionName": "DFB-Pokal",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:04:38.290Z",
+      "updatedAt": "2026-11-05T23:18:37.268Z",
       "scorers": [
         {
           "rank": 1,
@@ -4208,35 +4208,35 @@
       "competitionId": "264",
       "competitionName": "AFC Champions League",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:42.069Z",
+      "updatedAt": "2026-11-05T23:18:40.653Z",
       "scorers": []
     },
     "268": {
       "competitionId": "268",
       "competitionName": "Brasileirão Série A",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:53.668Z",
+      "updatedAt": "2026-11-05T23:18:50.328Z",
       "scorers": []
     },
     "516": {
       "competitionId": "516",
       "competitionName": "Algerian Ligue 1",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:05:05.722Z",
+      "updatedAt": "2026-11-05T23:19:01.409Z",
       "scorers": []
     },
     "536": {
       "competitionId": "536",
       "competitionName": "Saudi Pro League",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:41.138Z",
+      "updatedAt": "2026-11-05T23:18:39.888Z",
       "scorers": []
     },
     "9806": {
       "competitionId": "9806",
       "competitionName": "UEFA Nations League",
       "season": "2026/2027",
-      "updatedAt": "2026-11-05T14:05:05.080Z",
+      "updatedAt": "2026-11-05T23:19:00.785Z",
       "scorers": [
         {
           "rank": 1,
@@ -4274,7 +4274,7 @@
       "competitionId": "10216",
       "competitionName": "UEFA Conference League",
       "season": "Current",
-      "updatedAt": "2026-11-05T14:04:34.618Z",
+      "updatedAt": "2026-11-05T23:18:34.531Z",
       "scorers": []
     }
   }
