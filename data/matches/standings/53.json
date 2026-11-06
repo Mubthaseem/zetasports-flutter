@@ -2,7 +2,7 @@
   "competitionId": "53",
   "competitionName": "Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-11-06T13:48:17.635Z",
+  "updatedAt": "2026-11-06T22:45:29.040Z",
   "table": [
     {
       "position": 1,
@@ -159,6 +159,21 @@
     },
     {
       "position": 10,
+      "teamId": "9941",
+      "teamName": "Toulouse",
+      "shortName": "Toulouse",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9941.png",
+      "played": 10,
+      "won": 3,
+      "drawn": 4,
+      "lost": 3,
+      "goalsFor": 15,
+      "goalsAgainst": 14,
+      "goalDifference": 1,
+      "points": 13
+    },
+    {
+      "position": 11,
       "teamId": "8521",
       "teamName": "Brest",
       "shortName": "Brest",
@@ -173,7 +188,7 @@
       "points": 12
     },
     {
-      "position": 11,
+      "position": 12,
       "teamId": "8689",
       "teamName": "Lorient",
       "shortName": "Lorient",
@@ -188,33 +203,18 @@
       "points": 12
     },
     {
-      "position": 12,
-      "teamId": "9941",
-      "teamName": "Toulouse",
-      "shortName": "Toulouse",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9941.png",
-      "played": 9,
-      "won": 2,
-      "drawn": 4,
-      "lost": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 13,
-      "goalDifference": -1,
-      "points": 10
-    },
-    {
       "position": 13,
       "teamId": "9848",
       "teamName": "Strasbourg",
       "shortName": "Strasbourg",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9848.png",
-      "played": 9,
+      "played": 10,
       "won": 3,
       "drawn": 1,
-      "lost": 5,
-      "goalsFor": 17,
-      "goalsAgainst": 19,
-      "goalDifference": -2,
+      "lost": 6,
+      "goalsFor": 18,
+      "goalsAgainst": 22,
+      "goalDifference": -4,
       "points": 10
     },
     {

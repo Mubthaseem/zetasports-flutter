@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-11-06T13:48:37.256Z",
+  "updatedAt": "2026-11-06T22:45:51.936Z",
   "table": [
     {
       "position": 1,
@@ -82,13 +82,13 @@
       "teamName": "Arouca",
       "shortName": "Arouca",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/158085.png",
-      "played": 10,
+      "played": 11,
       "won": 6,
       "drawn": 2,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 13,
-      "goalsAgainst": 7,
-      "goalDifference": 6,
+      "goalsAgainst": 8,
+      "goalDifference": 5,
       "points": 20,
       "form": [
         "#02CCF0"
@@ -156,6 +156,21 @@
     },
     {
       "position": 10,
+      "teamId": "1634",
+      "teamName": "Famalicão",
+      "shortName": "Famalicão",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1634.png",
+      "played": 11,
+      "won": 3,
+      "drawn": 4,
+      "lost": 4,
+      "goalsFor": 15,
+      "goalsAgainst": 14,
+      "goalDifference": 1,
+      "points": 13
+    },
+    {
+      "position": 11,
       "teamId": "9780",
       "teamName": "Alverca",
       "shortName": "Alverca",
@@ -168,21 +183,6 @@
       "goalsAgainst": 14,
       "goalDifference": -1,
       "points": 11
-    },
-    {
-      "position": 11,
-      "teamId": "1634",
-      "teamName": "Famalicão",
-      "shortName": "Famalicão",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1634.png",
-      "played": 10,
-      "won": 2,
-      "drawn": 4,
-      "lost": 4,
-      "goalsFor": 14,
-      "goalsAgainst": 14,
-      "goalDifference": 0,
-      "points": 10
     },
     {
       "position": 12,

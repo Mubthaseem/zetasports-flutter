@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-11-06T13:48:12.889Z",
+  "updatedAt": "2026-11-06T22:45:23.741Z",
   "table": [
     {
       "position": 1,
@@ -78,6 +78,24 @@
     },
     {
       "position": 5,
+      "teamId": "8668",
+      "teamName": "Everton",
+      "shortName": "Everton",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png",
+      "played": 10,
+      "won": 4,
+      "drawn": 4,
+      "lost": 2,
+      "goalsFor": 12,
+      "goalsAgainst": 10,
+      "goalDifference": 2,
+      "points": 16,
+      "form": [
+        "#0046A7"
+      ]
+    },
+    {
+      "position": 6,
       "teamId": "8650",
       "teamName": "Liverpool",
       "shortName": "Liverpool",
@@ -89,13 +107,10 @@
       "goalsFor": 11,
       "goalsAgainst": 9,
       "goalDifference": 2,
-      "points": 15,
-      "form": [
-        "#0046A7"
-      ]
+      "points": 15
     },
     {
-      "position": 6,
+      "position": 7,
       "teamId": "9937",
       "teamName": "Brentford",
       "shortName": "Brentford",
@@ -108,21 +123,6 @@
       "goalsAgainst": 9,
       "goalDifference": 7,
       "points": 14
-    },
-    {
-      "position": 7,
-      "teamId": "8668",
-      "teamName": "Everton",
-      "shortName": "Everton",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8668.png",
-      "played": 9,
-      "won": 3,
-      "drawn": 4,
-      "lost": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 9,
-      "goalDifference": 0,
-      "points": 13
     },
     {
       "position": 8,
@@ -250,13 +250,13 @@
       "teamName": "Coventry City",
       "shortName": "Coventry",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8669.png",
-      "played": 9,
+      "played": 10,
       "won": 3,
       "drawn": 0,
-      "lost": 6,
-      "goalsFor": 9,
-      "goalsAgainst": 16,
-      "goalDifference": -7,
+      "lost": 7,
+      "goalsFor": 10,
+      "goalsAgainst": 19,
+      "goalDifference": -9,
       "points": 9
     },
     {
