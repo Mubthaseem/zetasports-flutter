@@ -348,7 +348,7 @@
                 (group.stats || []).forEach(item => {
                   const title = (item.title || '').toLowerCase().trim();
                   const vals = item.stats || [];
-                  if (vals.length >= 2) {
+                  if (vals.length >= 2 && vals[0] != null) {
                     if (title.includes('possession')) matchStats.possession = vals;
                     else if (title.includes('total shots') || title === 'shots') matchStats.shots = vals;
                     else if (title.includes('shots on target')) matchStats.shots_on_target = vals;
@@ -357,9 +357,25 @@
                     else if (title.includes('yellow card')) matchStats.yellow_cards = vals;
                     else if (title.includes('red card')) matchStats.red_cards = vals;
                     else if (title.includes('offside')) matchStats.offsides = vals;
+                    else if (title.includes('expected goals') || title.includes('(xg)') || title === 'xg') {
+                      matchStats.expected_goals = vals;
+                      matchStats.xg = vals;
+                    } else if (title === 'big chances') {
+                      matchStats.big_chances = vals;
+                      matchStats.bigChances = vals;
+                    } else if (title.includes('accurate passes') || title === 'accurate passes') {
+                      matchStats.accurate_passes = vals;
+                      matchStats.pass_accuracy = vals;
+                    }
                   }
                 });
               });
+
+              // Ingest FotMob live match momentum
+              const momentumData = data.content?.momentum?.main?.data;
+              if (Array.isArray(momentumData) && momentumData.length > 0) {
+                matchStats.momentum = momentumData;
+              }
 
               // 1D. Venue & Referee
               const infoBox = data.content?.matchFacts?.infoBox || {};
@@ -393,6 +409,20 @@
                 referee,
                 h2h
               };
+            }
+
+            // Extracts dynamic player rating and roster signature for delta cache
+            function getLineupRatingSignature(lineups) {
+              if (!lineups || (!lineups.home && !lineups.away)) return '';
+              const extract = (arr) => {
+                if (!Array.isArray(arr)) return '';
+                return arr.map(p => `${p.id}:${p.rating != null ? p.rating : ''}`).join(';');
+              };
+              const hStart = extract(lineups.home?.starting);
+              const aStart = extract(lineups.away?.starting);
+              const hBench = extract(lineups.home?.bench);
+              const aBench = extract(lineups.away?.bench);
+              return `${hStart}|${aStart}|${hBench}|${aBench}`;
             }
 
             // In-memory signature cache for Delta-Only Ingestion (skips DB writes when telemetry is unchanged)
@@ -486,8 +516,15 @@
                   const hasLineups = Object.keys(parsed.lineups).length > 0;
                   const hasStats = Object.keys(parsed.matchStats).length > 0;
 
+                  // Enhanced Delta Signature Caching:
+                  // Incorporate score, status, elapsed time, events, xG, momentum points length, and dynamic player ratings
+                  const xgSig = (parsed.matchStats?.expected_goals || parsed.matchStats?.xg || []).join(',') || '0,0';
+                  const momentumLen = (parsed.matchStats?.momentum || []).length;
+                  const lineupRatingSig = getLineupRatingSignature(parsed.lineups);
+                  const lineupRatingHash = lineupRatingSig ? md5(lineupRatingSig) : '0';
+
                   // DELTA-ONLY INGESTION: Skip DB write if telemetry unchanged from previous poll
-                  const telemetrySig = `${parsed.homeScore}-${parsed.awayScore}|${parsed.status}|${parsed.timeElapsed}|${parsed.goalScorers?.length || 0}|${parsed.cards?.length || 0}|${parsed.subs?.length || 0}`;
+                  const telemetrySig = `${parsed.homeScore}-${parsed.awayScore}|${parsed.status}|${parsed.timeElapsed}|${parsed.goalScorers?.length || 0}|${parsed.cards?.length || 0}|${parsed.subs?.length || 0}|${xgSig}|${momentumLen}|${lineupRatingHash}`;
                   const cacheKey = `fb_${match.id}`;
                   if (telemetrySignatureCache.get(cacheKey) === telemetrySig) {
                     return; // Telemetry unchanged. Skip DB write and WAL log generation!
@@ -540,8 +577,8 @@
                         awayTeam: match.away_team,
                         homeScore: parsed.homeScore,
                         awayScore: parsed.awayScore,
-                        homeLogo: hB64 || match.home_logo,
-                        awayLogo: aB64 || match.away_logo,
+                        homeLogo: hB64 || (typeof match.home_logo === 'string' && match.home_logo.startsWith('data:image/') ? match.home_logo : ''),
+                        awayLogo: aB64 || (typeof match.away_logo === 'string' && match.away_logo.startsWith('data:image/') ? match.away_logo : ''),
                         league: match.league_name,
                         status: parsed.status,
                         timeElapsed: parsed.timeElapsed,
@@ -555,9 +592,10 @@
                     }
                   }
 
-                  // 3. Upsert into dedicated subtable zeta_match_lineups (once per match session)
-                  if (hasLineups && !telemetrySignatureCache.has(`lineup_${match.id}`)) {
-                    telemetrySignatureCache.set(`lineup_${match.id}`, true);
+                  // 3. Upsert into dedicated subtable zeta_match_lineups (refreshes in real-time when player ratings or lineup shifts)
+                  const lineupCacheKey = `lineup_${match.id}`;
+                  if (hasLineups && telemetrySignatureCache.get(lineupCacheKey) !== lineupRatingHash) {
+                    telemetrySignatureCache.set(lineupCacheKey, lineupRatingHash);
                     try {
                       await fetch(`${sbUrl}/rest/v1/zeta_match_lineups`, {
                         method: 'POST',
@@ -573,7 +611,10 @@
                   }
 
                   // 4. Upsert into dedicated subtable zeta_match_stats if stats available
-                  if (hasStats) {
+                  const statsSig = `${xgSig}|${momentumLen}|${(parsed.matchStats.possession || []).join(',')}|${(parsed.matchStats.shots || []).join(',')}`;
+                  const statsCacheKey = `stats_${match.id}`;
+                  if (hasStats && telemetrySignatureCache.get(statsCacheKey) !== statsSig) {
+                    telemetrySignatureCache.set(statsCacheKey, statsSig);
                     try {
                       await fetch(`${sbUrl}/rest/v1/zeta_match_stats`, {
                         method: 'POST',
@@ -886,6 +927,24 @@
               }
             }
 
+            // Extracts crisp 3-character monogram acronym for vector fallback
+            function getTeamAcronym(name) {
+              if (!name) return 'ZET';
+              let clean = String(name).trim().toUpperCase().replace(/[^A-Z0-9\s]/g, '');
+              let words = clean.split(/\s+/).filter(Boolean);
+              if (words.length > 1 && (words[0] === 'FC' || words[0] === 'AFC' || words[0] === 'CF' || words[0] === 'SC')) {
+                words = words.slice(1);
+                clean = words.join(' ');
+              }
+              if (words.length >= 3) {
+                return words.slice(0, 3).map(w => w[0]).join('');
+              }
+              if (words.length === 2) {
+                return (words[0][0] + words[1].slice(0, 2)).slice(0, 3);
+              }
+              return clean.slice(0, 3);
+            }
+
             function generateEdgeMatchdaySvg({
               homeTeam = 'Home Team',
               awayTeam = 'Away Team',
@@ -981,15 +1040,22 @@
                 `;
               }
 
-              const homeLogoTag = escHomeLogo
+              // Chrome disallows external HTTP subresources inside SVG images; only allow base64 data URIs
+              const isHomeValidDataUri = typeof homeLogo === 'string' && homeLogo.startsWith('data:image/');
+              const isAwayValidDataUri = typeof awayLogo === 'string' && awayLogo.startsWith('data:image/');
+
+              const homeAcronym = escapeXml(getTeamAcronym(homeTeam));
+              const awayAcronym = escapeXml(getTeamAcronym(awayTeam));
+
+              const homeLogoTag = isHomeValidDataUri
                 ? `<image href="${escHomeLogo}" x="-80" y="-120" width="160" height="160" preserveAspectRatio="xMidYMid meet" filter="url(#crestShadow)"/>`
                 : `<circle cx="0" cy="-40" r="60" fill="#1e293b" stroke="#334155" stroke-width="2"/>
-                   <text x="0" y="-28" font-family="'Oswald', sans-serif" font-size="32" font-weight="800" fill="#94a3b8" text-anchor="middle">${escHome.slice(0, 3)}</text>`;
+                   <text x="0" y="-28" font-family="'Oswald', sans-serif" font-size="32" font-weight="800" fill="#94a3b8" text-anchor="middle">${homeAcronym}</text>`;
 
-              const awayLogoTag = escAwayLogo
+              const awayLogoTag = isAwayValidDataUri
                 ? `<image href="${escAwayLogo}" x="-80" y="-120" width="160" height="160" preserveAspectRatio="xMidYMid meet" filter="url(#crestShadow)"/>`
                 : `<circle cx="0" cy="-40" r="60" fill="#1e293b" stroke="#334155" stroke-width="2"/>
-                   <text x="0" y="-28" font-family="'Oswald', sans-serif" font-size="32" font-weight="800" fill="#94a3b8" text-anchor="middle">${escAway.slice(0, 3)}</text>`;
+                   <text x="0" y="-28" font-family="'Oswald', sans-serif" font-size="32" font-weight="800" fill="#94a3b8" text-anchor="middle">${awayAcronym}</text>`;
 
               return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720">
               <defs>
@@ -1370,8 +1436,8 @@
                     awayTeam,
                     homeScore,
                     awayScore,
-                    homeLogo: hB64 || homeLogo,
-                    awayLogo: aB64 || awayLogo,
+                    homeLogo: hB64 || (typeof homeLogo === 'string' && homeLogo.startsWith('data:image/') ? homeLogo : ''),
+                    awayLogo: aB64 || (typeof awayLogo === 'string' && awayLogo.startsWith('data:image/') ? awayLogo : ''),
                     league,
                     status,
                     timeElapsed,
@@ -1444,8 +1510,8 @@
                     awayTeam: m.away_team,
                     homeScore: m.home_score || 0,
                     awayScore: m.away_score || 0,
-                    homeLogo: hB64 || m.home_logo || '',
-                    awayLogo: aB64 || m.away_logo || '',
+                    homeLogo: hB64 || (typeof m.home_logo === 'string' && m.home_logo.startsWith('data:image/') ? m.home_logo : ''),
+                    awayLogo: aB64 || (typeof m.away_logo === 'string' && m.away_logo.startsWith('data:image/') ? m.away_logo : ''),
                     league: m.league_name || 'Matchday',
                     status: m.status || 'scheduled',
                     timeElapsed: m.time_elapsed || '',

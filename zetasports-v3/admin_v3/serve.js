@@ -25,8 +25,8 @@ try {
   console.warn('Font register warning:', fErr.message);
 }
 const PORT = process.env.PORT || 2121;
-const SUPABASE_HOST = 'voocdrpetiyspuhyeapi.supabase.co';
-const ANON_KEY = '';
+const SUPABASE_HOST = 'udlncusvhmydivtjkjcy.supabase.co';
+const ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkbG5jdXN2aG15ZGl2dGpramN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM4MTE2MDgsImV4cCI6MjEwOTM4NzYwOH0.gsnxlDww-fUC4HG7R7VasXSaQvqkSsDhhmf16KUCLZY';
 const CONFIG_FILE = path.join(__dirname, 'blogger_config.json');
 
 const MIME_TYPES = {
@@ -1051,7 +1051,24 @@ async function generateAiThumbnail(homeTeam, awayTeam, league, homeLogo, awayLog
   return 'https://files.catbox.moe/jhr0wa.jpg';
 }
 
-// Helper: Generate Broadcast Hero Matchday Poster Markup (HTML with Logos & ZetaSports Branding)
+// Helper: Generate Team Acronym for Monogram Fallback
+function getTeamAcronym(name) {
+  if (!name) return 'FC';
+  const clean = String(name).replace(/[^a-zA-Z0-9\s]/g, '').trim();
+  const words = clean.split(/\s+/).filter(Boolean);
+  if (words.length >= 3) return (words[0][0] + words[1][0] + words[2][0]).toUpperCase();
+  if (words.length === 2) return (words[0][0] + words[1][0]).toUpperCase();
+  return clean.substring(0, 3).toUpperCase();
+}
+
+// Helper: Generate Inline SVG Vector Monogram Data URI (No broken images in Chrome/Safari)
+function getVectorMonogramDataUri(name, color = '#38bdf8') {
+  const acronym = getTeamAcronym(name);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76"><defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></radialGradient></defs><circle cx="38" cy="38" r="35" fill="url(#g)" stroke="${color}" stroke-width="2.5"/><text x="38" y="46" font-family="'Oswald', -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">${acronym}</text></svg>`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+}
+
+// Helper: Generate Broadcast Hero Matchday Poster Markup (16:9 Broadcast Hero Graphic)
 function generateHeroPosterMarkup(homeTeam, awayTeam, league, homeLogo, awayLogo, matchMeta = {}) {
   const cleanHome = homeTeam || 'Home Team';
   const cleanAway = awayTeam || 'Away Team';
@@ -1062,38 +1079,48 @@ function generateHeroPosterMarkup(homeTeam, awayTeam, league, homeLogo, awayLogo
   const hasScore = matchMeta.homeScore !== null && matchMeta.homeScore !== undefined && matchMeta.homeScore !== '';
   const scoreStr = hasScore ? `${matchMeta.homeScore} - ${matchMeta.awayScore ?? 0}` : 'VS';
   const centerBadgeText = (isFinished || isLive) ? scoreStr : 'VS';
-  const statusPill = isFinished ? 'FULL TIME' : (isLive ? (matchMeta.timeElapsed || matchMeta.minute ? `LIVE ${matchMeta.timeElapsed || matchMeta.minute}` : 'LIVE IN-PLAY') : cleanLeague);
 
-  return `<div class="zeta-matchday-hero" style="position: relative; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #070d18 0%, #0d1b33 50%, #060c16 100%); border: 1px solid rgba(255,255,255,0.1); padding: 28px 20px; text-align: center; margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
+  // Strict compliance: no minute count in pill!
+  const statusPill = isFinished ? 'FULL TIME' : (isLive ? 'LIVE IN-PLAY' : cleanLeague.toUpperCase());
+
+  const homeFallback = getVectorMonogramDataUri(cleanHome, '#38bdf8');
+  const awayFallback = getVectorMonogramDataUri(cleanAway, '#ef4444');
+  const homeLogoSrc = homeLogo ? homeLogo : homeFallback;
+  const awayLogoSrc = awayLogo ? awayLogo : awayFallback;
+
+  return `<div class="zeta-matchday-hero" style="position: relative; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #070d18 0%, #0d1b33 50%, #060c16 100%); border: 1px solid rgba(255,255,255,0.1); padding: 28px 24px; text-align: center; margin: 0 auto 24px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.35); box-sizing: border-box; max-width: 820px; width: 100%;">
   <!-- ZetaSports Official Top Brand Bar -->
-  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 18px; flex-wrap: wrap;">
-    <img src="https://voocdrpetiyspuhyeapi.supabase.co/storage/v1/object/public/scripts/transparent%20zeta%20new%20logo.png" alt="ZetaSports" style="width: 28px; height: 28px; object-fit: contain; vertical-align: middle; filter: drop-shadow(0 0 10px rgba(56,189,248,0.5));" />
-    <span style="font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; letter-spacing: 2px; text-transform: uppercase;">ZETASPORTS <span style="color: #38bdf8;">MATCH CENTER</span></span>
-    <span style="background: ${isLive ? 'rgba(220, 38, 38, 0.2)' : 'rgba(56, 189, 248, 0.15)'}; border: 1px solid ${isLive ? '#dc2626' : 'rgba(56, 189, 248, 0.3)'}; color: ${isLive ? '#f87171' : '#38bdf8'}; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; text-transform: uppercase;">${statusPill}</span>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; filter: drop-shadow(0 0 8px rgba(56,189,248,0.6));">
+      <circle cx="14" cy="14" r="13" fill="#0062b2" stroke="#38bdf8" stroke-width="1.5"/>
+      <path d="M8 8.5H20L10 19.5H20" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; letter-spacing: 2px; text-transform: uppercase;">ZETASPORTS <span style="color: #38bdf8;">MATCH CENTER</span></span>
+    <span style="background: ${isLive ? 'rgba(220, 38, 38, 0.2)' : 'rgba(56, 189, 248, 0.15)'}; border: 1px solid ${isLive ? '#dc2626' : 'rgba(56, 189, 248, 0.3)'}; color: ${isLive ? '#f87171' : '#38bdf8'}; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px;">${statusPill}</span>
   </div>
 
   <!-- Team Crests & VS / Score Presentation -->
-  <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 24px; margin: 18px 0; flex-wrap: nowrap;">
     <!-- Home Team -->
-    <div style="flex: 1; text-align: center; max-width: 180px;">
-      ${homeLogo ? `<img src="${homeLogo}" alt="${cleanHome}" style="width: 72px; height: 72px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5)); margin: 0 auto 8px; display: block;" />` : ''}
-      <span style="font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 700; color: #ffffff; display: block; line-height: 1.2;">${cleanHome}</span>
+    <div style="flex: 1; text-align: center; max-width: 220px;">
+      <img src="${homeLogoSrc}" alt="${cleanHome}" style="width: 76px; height: 76px; object-fit: contain; filter: drop-shadow(0 4px 14px rgba(0,0,0,0.6)); margin: 0 auto 10px; display: block;" onerror="this.onerror=null; this.src='${homeFallback}';" />
+      <span style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; display: block; line-height: 1.2; text-shadow: 0 2px 8px rgba(0,0,0,0.8);">${cleanHome}</span>
     </div>
 
     <!-- Center Badge -->
-    <div id="zetaLiveScoreHero" style="min-width: 54px; height: 44px; padding: 0 12px; border-radius: 22px; background: ${isLive ? 'linear-gradient(135deg, #dc2626, #0062b2)' : 'linear-gradient(135deg, #0062b2, #38bdf8)'}; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-weight: 800; font-size: 16px; color: #ffffff; box-shadow: 0 0 20px ${isLive ? 'rgba(220, 38, 38, 0.4)' : 'rgba(56, 189, 248, 0.4)'}; flex-shrink: 0; letter-spacing: 1px;">
+    <div id="zetaLiveScoreHero" style="min-width: 72px; height: 50px; padding: 0 16px; border-radius: 25px; background: ${isLive ? 'linear-gradient(135deg, #dc2626, #991b1b)' : 'linear-gradient(135deg, #0062b2, #38bdf8)'}; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', -apple-system, sans-serif; font-weight: 800; font-size: 20px; color: #ffffff; box-shadow: 0 0 24px ${isLive ? 'rgba(220, 38, 38, 0.5)' : 'rgba(56, 189, 248, 0.5)'}; flex-shrink: 0; letter-spacing: 1.5px;">
       ${centerBadgeText}
     </div>
 
     <!-- Away Team -->
-    <div style="flex: 1; text-align: center; max-width: 180px;">
-      ${awayLogo ? `<img src="${awayLogo}" alt="${cleanAway}" style="width: 72px; height: 72px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5)); margin: 0 auto 8px; display: block;" />` : ''}
-      <span style="font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 700; color: #ffffff; display: block; line-height: 1.2;">${cleanAway}</span>
+    <div style="flex: 1; text-align: center; max-width: 220px;">
+      <img src="${awayLogoSrc}" alt="${cleanAway}" style="width: 76px; height: 76px; object-fit: contain; filter: drop-shadow(0 4px 14px rgba(0,0,0,0.6)); margin: 0 auto 10px; display: block;" onerror="this.onerror=null; this.src='${awayFallback}';" />
+      <span style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; display: block; line-height: 1.2; text-shadow: 0 2px 8px rgba(0,0,0,0.8);">${cleanAway}</span>
     </div>
   </div>
 
   <!-- Telemetry Bar -->
-  <div style="display: inline-block; background: rgba(255,255,255,0.06); padding: 6px 16px; border-radius: 20px; font-size: 11px; color: #94a3b8; font-weight: 600; letter-spacing: 1px;">
+  <div style="display: inline-block; background: rgba(255,255,255,0.06); padding: 7px 18px; border-radius: 20px; font-size: 11px; color: #94a3b8; font-weight: 600; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.08); margin-top: 10px;">
     ${isFinished ? 'FINAL SCORE • MATCH HIGHLIGHTS • FOTMOB PLAYER STATS' : (isLive ? 'LIVE TELEMETRY • PITCH FORMATION • REAL-TIME SCORES' : 'STARTING XI • FOTMOB PITCH FORMATIONS • HD STREAM GATEWAY')}
   </div>
 </div>`;
@@ -1234,11 +1261,14 @@ async function fetchAndSyncFotMobMatch(matchId, fotmobId) {
     let status = isFinished ? 'finished' : (isStarted ? 'live' : 'scheduled');
     let minute = isFinished ? 'FT' : (isStarted ? (statusObj.liveTime?.short || 'LIVE') : '');
 
-    // 1. Lineups & Formations
-    // 1. Events & Goals & Cards
+    // 1. Events, Goals, Cards & Substitutions
     const goalScorers = [];
     const playerEventsMap = {};
     const events = raw.content?.matchFacts?.events?.events || [];
+    const fullEventsList = [];
+    const cardsList = [];
+    const subsList = [];
+
     events.forEach(e => {
       let rawName = '';
       if (typeof e.player === 'string') rawName = e.player;
@@ -1247,26 +1277,56 @@ async function fetchAndSyncFotMobMatch(matchId, fotmobId) {
       else if (typeof e.nameStr === 'string') rawName = e.nameStr;
       else if (typeof e.name === 'string') rawName = e.name;
       const pName = rawName.toLowerCase().trim();
-      if (pName) {
-        if (!playerEventsMap[pName]) playerEventsMap[pName] = { goals: [], yellow: null, red: null };
+      const min = e.time || e.timeStr || e.minute || 0;
+
+      if (pName && !playerEventsMap[pName]) {
+        playerEventsMap[pName] = { goals: [], yellow: null, red: null };
       }
+
       if (e.type === 'Goal') {
-        const minute = e.time || e.minute || 0;
-        goalScorers.push({
+        const gObj = {
           team: e.isHome ? 'home' : 'away',
           player: e.fullName || e.nameStr || e.name || 'Goal',
-          minute: minute,
+          minute: min,
           assist: e.assistStr || (e.assist?.name) || '',
           penalty: !!e.isPenalty,
-          own_goal: !!e.isOwnGoal
-        });
+          own_goal: !!e.isOwnGoal,
+          xg: e.shotmapEvent?.expectedGoals || null
+        };
+        goalScorers.push(gObj);
         if (pName && playerEventsMap[pName]) {
-          playerEventsMap[pName].goals.push(minute);
+          playerEventsMap[pName].goals.push(min);
         }
-      } else if (e.type === 'Card' && pName) {
+        fullEventsList.push({ type: 'Goal', ...gObj });
+      } else if (e.type === 'Card') {
         const cardStr = (e.card || '').toLowerCase();
-        if (cardStr.includes('yellow')) playerEventsMap[pName].yellow = e.time || e.minute || true;
-        if (cardStr.includes('red')) playerEventsMap[pName].red = e.time || e.minute || true;
+        const isRed = cardStr.includes('red');
+        if (pName && playerEventsMap[pName]) {
+          if (cardStr.includes('yellow')) playerEventsMap[pName].yellow = min || true;
+          if (isRed) playerEventsMap[pName].red = min || true;
+        }
+        const cObj = {
+          team: e.isHome ? 'home' : 'away',
+          player: rawName || 'Player',
+          minute: min,
+          card: e.card || (isRed ? 'Red' : 'Yellow'),
+          cardReason: e.cardReason?.defaultText || e.cardDescription?.defaultText || ''
+        };
+        cardsList.push(cObj);
+        fullEventsList.push({ type: 'Card', ...cObj });
+      } else if (e.type === 'Substitution') {
+        const swap = Array.isArray(e.swap) ? e.swap : [];
+        const sObj = {
+          team: e.isHome ? 'home' : 'away',
+          minute: min,
+          playerIn: swap[0]?.name || '',
+          playerInId: swap[0]?.id || null,
+          playerOut: swap[1]?.name || '',
+          playerOutId: swap[1]?.id || null,
+          swap: swap.map(s => ({ name: s.name, id: s.id }))
+        };
+        subsList.push(sObj);
+        fullEventsList.push({ type: 'Substitution', ...sObj });
       }
     });
 
@@ -1314,12 +1374,16 @@ async function fetchAndSyncFotMobMatch(matchId, fotmobId) {
       away: { formation: awayFormation, coach: awayCoach, starting: awayStarters, bench: awaySubs }
     } : null;
 
-    // 3. Venue & Referee
+    // 3. Venue, Referee, Tournament & Attendance
     const infoBox = raw.content?.matchFacts?.infoBox || {};
     const venueObj = infoBox['Stadium'] || infoBox['Venue'];
     const venue = venueObj ? (venueObj.name + (venueObj.city ? ', ' + venueObj.city : '')) : '';
+    const stadiumName = venueObj?.name || venue || '';
     const refObj = infoBox['Referee'];
     const referee = refObj ? (refObj.text + (refObj.country ? ' (' + refObj.country + ')' : '')) : '';
+    const tournamentObj = infoBox['Tournament'] || {};
+    const roundStr = tournamentObj.roundName || tournamentObj.round || '';
+    const attendanceVal = infoBox['Attendance'] || null;
 
     // 4. H2H Meetings
     const h2hRaw = raw.content?.h2h?.matches || [];
@@ -1331,24 +1395,49 @@ async function fetchAndSyncFotMobMatch(matchId, fotmobId) {
       league: m.league?.name || ''
     }));
 
-    // 5. Stats
+    // 5. Advanced Stats & Momentum Ingestion
     const matchStats = {};
     const statsPeriod = raw.content?.stats?.Periods?.All?.stats || [];
     statsPeriod.forEach(group => {
       (group.stats || []).forEach(item => {
         const title = (item.title || '').toLowerCase().trim();
+        const key = (item.key || '').toLowerCase().trim();
         const vals = item.stats || [];
-        if (vals.length >= 2) {
-          if (title.includes('possession')) matchStats.possession = vals;
-          else if (title.includes('total shots') || title === 'shots') matchStats.shots = vals;
-          else if (title.includes('shots on target')) matchStats.shots_on_target = vals;
-          else if (title.includes('corner')) matchStats.corners = vals;
-          else if (title.includes('foul')) matchStats.fouls = vals;
-          else if (title.includes('yellow card')) matchStats.yellow_cards = vals;
-          else if (title.includes('red card')) matchStats.red_cards = vals;
+        if (vals.length >= 2 && vals[0] !== null && vals[0] !== undefined) {
+          if (key === 'expected_goals' || title.includes('expected goals') || title.includes('(xg)')) {
+            matchStats.xg = vals;
+            matchStats.expected_goals = vals;
+          } else if (key === 'ballpossesion' || title.includes('possession')) {
+            matchStats.possession = vals;
+          } else if (key === 'total_shots' || title.includes('total shots') || title === 'shots') {
+            matchStats.shots = vals;
+          } else if (key === 'shotsontarget' || title.includes('shots on target')) {
+            matchStats.shots_on_target = vals;
+          } else if (key === 'big_chance' || title === 'big chances') {
+            matchStats.big_chances = vals;
+          } else if (key === 'accurate_passes' || title.includes('accurate passes')) {
+            matchStats.accurate_passes = vals;
+            matchStats.passes_accuracy = vals;
+          } else if (key === 'corners' || title.includes('corner')) {
+            matchStats.corners = vals;
+          } else if (key === 'fouls' || title.includes('foul')) {
+            matchStats.fouls = vals;
+          } else if (key === 'yellow_cards' || title.includes('yellow card')) {
+            matchStats.yellow_cards = vals;
+          } else if (key === 'red_cards' || title.includes('red card')) {
+            matchStats.red_cards = vals;
+          } else if (key === 'touches_opp_box' || title.includes('touches in opposition box')) {
+            matchStats.touches_opp_box = vals;
+          }
         }
       });
     });
+
+    // Ingest FotMob momentum data
+    const momentumData = raw.content?.momentum?.main?.data || [];
+    if (momentumData.length > 0) {
+      matchStats.momentum = momentumData;
+    }
 
     const updatePayload = {
       status,
@@ -1359,15 +1448,36 @@ async function fetchAndSyncFotMobMatch(matchId, fotmobId) {
     if (lineups) updatePayload.lineups = lineups;
     if (homeFormation || awayFormation) updatePayload.formations = { home: homeFormation, away: awayFormation };
     if (venue) updatePayload.venue = venue;
+    if (stadiumName) updatePayload.stadium = stadiumName;
     if (referee) updatePayload.referee = referee;
+    if (roundStr) updatePayload.round = String(roundStr);
     if (goalScorers.length > 0) updatePayload.goal_scorers = goalScorers;
+    if (cardsList.length > 0) updatePayload.cards = cardsList;
+    if (subsList.length > 0) updatePayload.substitutions = subsList;
+    if (fullEventsList.length > 0) updatePayload.events = fullEventsList;
     if (h2h.length > 0) updatePayload.h2h = h2h;
     if (Object.keys(matchStats).length > 0) {
       updatePayload.match_stats = matchStats;
       updatePayload.stats = matchStats;
     }
+    // In-memory momentum property
+    updatePayload.momentum = momentumData;
 
     if (matchId) {
+      // Safe filter: only include verified columns that exist in Supabase zeta_matches schema
+      const allowedDbColumns = new Set([
+        'status', 'minute', 'time_elapsed', 'home_score', 'away_score',
+        'lineups', 'formations', 'venue', 'stadium', 'referee', 'round',
+        'goal_scorers', 'h2h', 'cards', 'substitutions', 'events',
+        'match_stats', 'stats', 'updated_at'
+      ]);
+      const dbPatch = { updated_at: new Date().toISOString() };
+      for (const [k, v] of Object.entries(updatePayload)) {
+        if (allowedDbColumns.has(k)) {
+          dbPatch[k] = v;
+        }
+      }
+
       await httpsRequest({
         hostname: SUPABASE_HOST,
         path: `/rest/v1/zeta_matches?id=eq.${encodeURIComponent(matchId)}`,
@@ -1378,8 +1488,8 @@ async function fetchAndSyncFotMobMatch(matchId, fotmobId) {
           'Content-Type': 'application/json',
           'Prefer': 'return=minimal'
         }
-      }, updatePayload);
-      console.log(`✔ [FotMob Sync]: Match ${matchId} enriched & synced in Supabase!`);
+      }, JSON.stringify(dbPatch));
+      console.log(`✔ [FotMob Sync]: Match ${matchId} enriched & synced in Supabase (xG, Big Chances, Passes, Momentum)!`);
     }
 
     return updatePayload;
@@ -1389,44 +1499,381 @@ async function fetchAndSyncFotMobMatch(matchId, fotmobId) {
   }
 }
 
-// --- SCHEMA.ORG SPORTSEVENT JSON-LD GENERATOR ---
+// ==============================================================================
+// 17 BLOGGER POST HTML COMPONENTS GENERATOR FOR ZETASPORTS BROADCAST POSTS
+// ==============================================================================
+
+// --- COMPONENT 1: DUAL SCHEMA.ORG JSON-LD (SportsEvent + FAQPage with 4 Q&As) ---
 function generateSchemaJsonLd(m, isFinished, isLive) {
   const home = m.home_team || 'Home Team';
   const away = m.away_team || 'Away Team';
   const league = m.league_name || m.league || 'Football League';
-  const eventStatus = isFinished ? 'https://schema.org/EventFinished' : (isLive ? 'https://schema.org/EventLive' : 'https://schema.org/EventScheduled');
+  const venue = m.stadium || m.venue || 'Official Stadium';
+  const homeLogo = m.home_logo || '';
+  const awayLogo = m.away_logo || '';
+  const homeForm = m.formations?.home || m.lineups?.home?.formation || '4-3-3';
+  const awayForm = m.formations?.away || m.lineups?.away?.formation || '4-2-3-1';
+  const homeCoach = m.lineups?.home?.coach || m.home_coach || 'Head Coach';
+  const awayCoach = m.lineups?.away?.coach || m.away_coach || 'Head Coach';
+  const kickoffStr = m.kickoff_ist ? `${m.kickoff_ist} IST` : (m.time || 'Matchday');
 
-  const schema = {
+  const eventStatus = isFinished
+    ? 'https://schema.org/EventFinished'
+    : (isLive ? 'https://schema.org/EventLive' : 'https://schema.org/EventScheduled');
+
+  let startDate = m.date || new Date().toISOString().split('T')[0];
+  if (m.kickoff_time) {
+    startDate = m.kickoff_time;
+  } else if (m.kickoff_ist) {
+    startDate = `${m.date || new Date().toISOString().split('T')[0]}T${m.kickoff_ist}:00+05:30`;
+  }
+
+  const sportsEventSchema = {
     '@context': 'https://schema.org',
     '@type': 'SportsEvent',
     'name': `${home} vs ${away} Lineups, Live Score & Match Center - ${league}`,
-    'description': `Official match center for ${home} vs ${away}. Confirmed starting XI lineups, tactical formations, live telemetry scores, and match statistics.`,
+    'description': `Official match center for ${home} vs ${away} in ${league}. Confirmed starting lineups, tactical formations, live telemetry, xG stats, and broadcast schedule.`,
     'sport': 'Soccer',
     'eventStatus': eventStatus,
     'homeTeam': {
       '@type': 'SportsTeam',
       'name': home,
-      'logo': m.home_logo || undefined
+      'logo': homeLogo || undefined
     },
     'awayTeam': {
       '@type': 'SportsTeam',
       'name': away,
-      'logo': m.away_logo || undefined
+      'logo': awayLogo || undefined
     },
     'location': {
       '@type': 'Place',
-      'name': m.venue || 'Official Stadium'
-    }
+      'name': venue
+    },
+    'startDate': startDate
   };
 
-  if (m.date) {
-    schema.startDate = m.date + (m.kickoff_ist ? 'T' + m.kickoff_ist : '');
-  }
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': `Where can I watch ${home} vs ${away} live stream and television broadcast?`,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': `Live score updates, real-time momentum telemetry, starting formations, and pitch analytics are hosted on the ZetaSports Match Center. Official regional television broadcasters include TNT Sports and Sky Sports in the UK, Paramount+ in the USA, Sony LIV in India, and SuperSport in Africa.`
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': `What time is kickoff and where is the stadium venue for ${home} vs ${away}?`,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': `The fixture takes place at ${venue} with kickoff scheduled for ${kickoffStr} (IST) / international broadcast time.`
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': `What are the confirmed starting lineups and tactical formations for ${home} and ${away}?`,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': `${home} deploys in a ${homeForm} tactical shape under manager ${homeCoach}, while ${away} lines up in a ${awayForm} tactical formation instructed by ${awayCoach}.`
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': `What is the historical head-to-head (H2H) record between ${home} and ${away}?`,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': `${home} and ${away} have contested high-intensity encounters in recent competitions, showcasing tactical resilience and competitive goal differentials in ${league}.`
+        }
+      }
+    ]
+  };
 
-  return `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n</script>\n`;
+  return `<script type="application/ld+json">\n${JSON.stringify([sportsEventSchema, faqSchema], null, 2)}\n</script>\n`;
 }
 
-// --- STARTING XI & TACTICAL FORMATIONS HTML TABLE GENERATOR (FOR GOOGLE SEO) ---
+// --- COMPONENT 3: REAL-TIME STATUS / COUNTDOWN TICKER ---
+function generateStatusCountdownTicker(m, isFinished, isLive) {
+  const kickoffTime = m.kickoff_ist || m.time || 'Kickoff';
+  const kickoffIso = m.date ? `${m.date}T${m.kickoff_ist || '00:00'}:00` : '';
+
+  if (isLive) {
+    const liveTime = m.minute || m.time_elapsed || 'LIVE';
+    return `
+    <div class="zeta-ticker-live" style="background: linear-gradient(90deg, rgba(220,38,38,0.12) 0%, rgba(15,23,42,0.9) 50%, rgba(220,38,38,0.12) 100%); border: 1px solid rgba(220,38,38,0.35); border-radius: 12px; padding: 12px 18px; margin: 18px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; box-shadow: 0 4px 15px rgba(220,38,38,0.15);">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ef4444; box-shadow: 0 0 10px #ef4444; animation: pulse 1.5s infinite;"></span>
+        <span style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 14px; font-weight: 700; color: #f87171; letter-spacing: 1px; text-transform: uppercase;">MATCH IN-PLAY:</span>
+        <span style="background: #dc2626; color: #ffffff; font-weight: 800; font-size: 12px; padding: 2px 8px; border-radius: 4px;">${liveTime}</span>
+      </div>
+      <div style="font-size: 12px; color: #cbd5e1; font-weight: 600;">
+        ⚡ Sub-second Live Telemetry Active • Auto-hydrating Match Center
+      </div>
+    </div>`;
+  }
+
+  if (isFinished) {
+    return `
+    <div class="zeta-ticker-finished" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 18px; margin: 18px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="background: #16a34a; color: #ffffff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">🏁 FULL TIME</span>
+        <span style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 14px; font-weight: 700; color: #0f172a; text-transform: uppercase;">Final Scoreline Confirmed</span>
+      </div>
+      <div style="font-size: 12px; color: #64748b; font-weight: 600;">
+        Match finished • Comprehensive post-match analysis and player ratings below
+      </div>
+    </div>`;
+  }
+
+  return `
+  <div class="zeta-ticker-countdown" data-kickoff="${kickoffIso}" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 14px 20px; margin: 18px 0; color: #ffffff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="font-size: 18px;">⏳</span>
+      <div>
+        <div style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 14px; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px;">MATCHDAY COUNTDOWN</div>
+        <div style="font-size: 12px; color: #94a3b8;">Scheduled Kickoff: <strong style="color: #ffffff;">${kickoffTime} IST</strong></div>
+      </div>
+    </div>
+    <div style="display: flex; gap: 8px; font-family: 'Oswald', -apple-system, sans-serif; font-size: 13px; font-weight: 700;">
+      <div style="background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; text-align: center;"><span style="color: #38bdf8;">LIVE</span> <span style="font-size: 10px; color: #94a3b8; display: block; font-weight: 400;">RADAR</span></div>
+      <div style="background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; text-align: center;"><span style="color: #ffffff;">HD</span> <span style="font-size: 10px; color: #94a3b8; display: block; font-weight: 400;">STREAM</span></div>
+    </div>
+  </div>`;
+}
+
+// --- COMPONENT 4: 4-CARD TELEMETRY GRID (Stadium, Referee, League, Time) ---
+function generateMatchTelemetryGrid(m) {
+  const venue = m.stadium || m.venue || 'Official Stadium';
+  const referee = m.referee || 'Assigned Official';
+  const league = m.league_name || m.league || 'Football League';
+  const round = m.round ? ` • Round ${m.round}` : '';
+  const kickoff = m.kickoff_ist ? `${m.kickoff_ist} IST` : (m.time || 'Matchday');
+
+  return `
+    <div class="zeta-meta-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 24px 0;">
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+        <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 5px; letter-spacing: 0.5px;">🏟 Stadium &amp; Venue</span>
+        <span style="font-size: 13px; font-weight: 700; color: #0f172a; line-height: 1.3; display: block;">${venue}</span>
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+        <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 5px; letter-spacing: 0.5px;">👮 Head Referee</span>
+        <span style="font-size: 13px; font-weight: 700; color: #0f172a; line-height: 1.3; display: block;">${referee}</span>
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+        <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 5px; letter-spacing: 0.5px;">🏆 Tournament &amp; Stage</span>
+        <span style="font-size: 13px; font-weight: 700; color: #0062b2; line-height: 1.3; display: block;">${league}${round}</span>
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+        <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 5px; letter-spacing: 0.5px;">⏰ Kickoff Schedule</span>
+        <span style="font-size: 13px; font-weight: 700; color: #0f172a; line-height: 1.3; display: block;">${kickoff}</span>
+      </div>
+    </div>
+  `;
+}
+
+// --- COMPONENT 5: KEY MATCH FACTS & TRIVIA STRIP ---
+function generateMatchFactsStrip(m) {
+  const home = m.home_team || 'Home';
+  const away = m.away_team || 'Away';
+  const league = m.league_name || m.league || 'Football League';
+  const venue = m.stadium || m.venue || 'Stadium';
+  const ref = m.referee || 'Match Official';
+  const homeForm = m.formations?.home || m.lineups?.home?.formation || '4-3-3';
+  const awayForm = m.formations?.away || m.lineups?.away?.formation || '4-2-3-1';
+
+  return `
+    <div class="zeta-facts-strip" style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0062b2; border-radius: 10px; padding: 16px 20px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+      <h4 style="margin: 0 0 10px; font-family: 'Oswald', -apple-system, sans-serif; font-size: 14px; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px;">
+        📌 Key Match Facts &amp; Context
+      </h4>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; font-size: 13px; color: #475569;">
+        <div>📍 <strong>Venue Atmosphere:</strong> Hosted at ${venue}, setting a cauldron stage for European football.</div>
+        <div>⚖️ <strong>Discipline:</strong> Officiated by ${ref}, maintaining strict control over tempo and set-pieces.</div>
+        <div>🎯 <strong>Tournament Stakes:</strong> Crucial points in ${league} with both clubs competing for knockout progression.</div>
+        <div>⚡ <strong>Tactical Profile:</strong> High-pressing systems with transition speed between ${homeForm} and ${awayForm} setups.</div>
+      </div>
+    </div>
+  `;
+}
+
+// --- COMPONENT 6: MARQUEE PLAYER SPOTLIGHT & TACTICAL DUEL ---
+function generatePlayerSpotlightDuel(m) {
+  const home = m.home_team || 'Home';
+  const away = m.away_team || 'Away';
+  const lu = m.lineups || {};
+  const homeStarters = Array.isArray(lu.home?.starting) ? lu.home.starting : [];
+  const awayStarters = Array.isArray(lu.away?.starting) ? lu.away.starting : [];
+
+  const getTopPlayer = (starters, defaultName) => {
+    if (!starters || starters.length === 0) return { name: defaultName, number: '10', pos: 'FW', rating: 7.5, id: null };
+    const sorted = [...starters].sort((a, b) => {
+      const rA = parseFloat(a.rating) || 0;
+      const rB = parseFloat(b.rating) || 0;
+      return rB - rA;
+    });
+    return sorted[0];
+  };
+
+  const pHome = getTopPlayer(homeStarters, `${home} Star`);
+  const pAway = getTopPlayer(awayStarters, `${away} Star`);
+
+  const pHomePhoto = pHome.photo || (pHome.id ? `https://images.fotmob.com/image_resources/playerimages/${pHome.id}.png` : '');
+  const pAwayPhoto = pAway.photo || (pAway.id ? `https://images.fotmob.com/image_resources/playerimages/${pAway.id}.png` : '');
+
+  const pHomeFallback = getVectorMonogramDataUri(pHome.name, '#0062b2');
+  const pAwayFallback = getVectorMonogramDataUri(pAway.name, '#dc2626');
+
+  const renderPlayerCard = (player, photo, fallback, teamName, isHome) => {
+    const rVal = parseFloat(player.rating);
+    const rText = (!isNaN(rVal) && rVal > 0) ? `${rVal.toFixed(1)} ★` : 'KEY STAR';
+    return `
+      <div style="flex: 1; min-width: 240px; display: flex; align-items: center; gap: 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px;">
+        <img src="${photo || fallback}" alt="${player.name}" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; background: #e2e8f0; border: 2px solid ${isHome ? '#0062b2' : '#dc2626'}; flex-shrink: 0;" onerror="this.onerror=null; this.src='${fallback}';" />
+        <div style="flex: 1; min-width: 0;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px;">
+            <span style="font-size: 11px; font-weight: 700; color: ${isHome ? '#0062b2' : '#dc2626'}; text-transform: uppercase;">${teamName}</span>
+            <span style="background: ${isHome ? '#0062b2' : '#dc2626'}; color: #ffffff; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px;">${rText}</span>
+          </div>
+          <div style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 16px; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 2px 0;">
+            #${player.number || ''} ${player.name}
+          </div>
+          <div style="font-size: 11px; color: #64748b; font-weight: 600;">Position: <strong>${player.pos || 'Attacker'}</strong></div>
+        </div>
+      </div>
+    `;
+  };
+
+  return `
+    <div class="zeta-player-duel" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 20px; margin: 24px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+        <h4 style="margin: 0; font-family: 'Oswald', -apple-system, sans-serif; font-size: 15px; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px;">
+          ⚡ Marquee Player Spotlight &amp; Key Duel
+        </h4>
+        <span style="background: #eff6ff; color: #0284c7; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; border: 1px solid #bfdbfe;">
+          Tactical Matchup
+        </span>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+        ${renderPlayerCard(pHome, pHomePhoto, pHomeFallback, home, true)}
+        <div style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 15px; font-weight: 800; color: #94a3b8; text-align: center; flex-shrink: 0; padding: 0 4px;">VS</div>
+        ${renderPlayerCard(pAway, pAwayPhoto, pAwayFallback, away, false)}
+      </div>
+    </div>
+  `;
+}
+
+// --- COMPONENT 7: GOOGLE ADSENSE SLOT 1 (Mid-Article Native: 336x280 / Zero CLS Container) ---
+function generateAdSenseSlot1(cfg) {
+  const client = cfg?.adsenseClient || 'ca-pub-XXXXXXXXXXXXXXXX';
+  const slot = cfg?.adSlot1 || '1234567890';
+  return `
+    <!-- Google AdSense Slot 1: Mid-Article Native (Zero CLS Container) -->
+    <div class="zeta-ad-slot-1" style="min-height: 280px; width: 100%; max-width: 336px; margin: 28px auto; text-align: center; overflow: hidden; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; contain: layout size;">
+      <span style="font-size: 10px; font-weight: 700; color: #94a3b8; letter-spacing: 1.5px; text-transform: uppercase; margin: 8px 0 4px; display: block;">ADVERTISEMENT</span>
+      <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px;" data-ad-client="${client}" data-ad-slot="${slot}"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  `;
+}
+
+// --- COMPONENT 8: EDITORIAL TACTICAL NARRATIVE (300+ Words SEO Article) ---
+function generateEditorialNarrative(m, isFinished, isLive) {
+  const home = m.home_team || 'Home Team';
+  const away = m.away_team || 'Away Team';
+  const league = m.league_name || m.league || 'Football League';
+  const homeForm = m.formations?.home || m.lineups?.home?.formation || '4-3-3';
+  const awayForm = m.formations?.away || m.lineups?.away?.formation || '4-2-3-1';
+  const homeCoach = m.lineups?.home?.coach || m.home_coach || 'Head Coach';
+  const awayCoach = m.lineups?.away?.coach || m.away_coach || 'Head Coach';
+  const venue = m.stadium || m.venue || 'Stadium';
+  const homeScore = m.home_score ?? 0;
+  const awayScore = m.away_score ?? 0;
+  const scoreStr = `${homeScore}-${awayScore}`;
+
+  if (isFinished) {
+    return `
+      <div class="zeta-editorial-narrative" style="font-size: 15px; color: #334155; line-height: 1.75; margin: 28px 0;">
+        <h3 style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 21px; font-weight: 700; color: #0f172a; margin: 0 0 12px; text-transform: uppercase;">
+          Full-Time Tactical Breakdown: ${home} ${scoreStr} ${away}
+        </h3>
+        <p>The highly anticipated continental clash between <strong>${home}</strong> and <strong>${away}</strong> in the <strong>${league}</strong> delivered exceptional sporting drama, culminating in a pulsating <strong>${scoreStr}</strong> full-time scoreline at <strong>${venue}</strong>. From the opening whistle, both tacticians demonstrated astute structural preparation, challenging each other's defensive pressing shapes across all three phases of play in an engrossing showcase of elite continental competition.</p>
+        <p>Tactically, ${home} deployed in their signature <strong>${homeForm}</strong> system under the astute guidance of <strong>${homeCoach}</strong>, focusing on aggressive midfield overloads, diagonal third-man runs, and rapid rotational transitions through wide half-spaces. Conversely, ${away}, led by manager <strong>${awayCoach}</strong> in a disciplined <strong>${awayForm}</strong> formation, sought to disrupt central buildup passing lanes through a compact mid-block defensive structure and lightning-fast direct counter-attacks behind the opposition fullbacks.</p>
+        <p>Throughout the ninety minutes of play, statistical telemetry reflected a ferocious duel for pitch territory and territorial possession dominance. Both goalkeepers and defensive center-back pairings were tested repeatedly under heavy pressure during set-pieces and high-turnover moments inside the final third. The expected goals (xG) metrics and shot-map telemetry illustrated just how finely balanced this showdown proved to be, with decisive moments and substitutions swinging momentum during key tactical phases.</p>
+        <p>Midfield control proved to be the pivotal battleground where the contest was ultimately decided. With second-ball recoveries and high-intensity counter-pressing dictating tempo, both sets of central midfielders worked tirelessly to choke passing corridors while attempting to feed creative line-breaking passes into the attacking channels. The sheer physical output and tactical discipline on display underscored the immense continental stakes riding on this encounter.</p>
+        <p>As the final whistle blew, supporters were treated to a showcase of top-tier footballing craft, technical precision, and physical resilience. Fans and tactical analysts can explore the complete interactive pitch formation, chronological moments timeline, comparative statistics meters, and verified player ratings presented below in the official ZetaSports Match Center report.</p>
+      </div>
+    `;
+  }
+
+  if (isLive) {
+    return `
+      <div class="zeta-editorial-narrative" style="font-size: 15px; color: #334155; line-height: 1.75; margin: 28px 0;">
+        <h3 style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 21px; font-weight: 700; color: #0f172a; margin: 0 0 12px; text-transform: uppercase;">
+          Live In-Play Tactical Analysis: ${home} vs ${away}
+        </h3>
+        <p>Action is underway at <strong>${venue}</strong> as <strong>${home}</strong> squares off against <strong>${away}</strong> in this critical <strong>${league}</strong> showdown. The atmosphere inside the stadium is electric as both squads vie for supremacy on the pitch, executing tactical instructions drilled during training with utmost intensity and tactical commitment.</p>
+        <p>From an organizational perspective, ${home} is set up in a fluid <strong>${homeForm}</strong> shape orchestrated by manager <strong>${homeCoach}</strong>. Their approach centers around dominant vertical possession, fluid positional interchanges between wingers and overlapping fullbacks, and sustained territorial pressure in the attacking third. Meanwhile, ${away}'s tactical blueprint under manager <strong>${awayCoach}</strong> utilizes a sturdy <strong>${awayForm}</strong> setup constructed to absorb attacking waves, maintain strict horizontal distances between midfield lines, and capitalize on defensive transition errors.</p>
+        <p>With momentum constantly shifting back and forth, both sides have created dangerous scoring opportunities. The live telemetry engine continues to track real-time attack pressure momentum, expected goals distribution, duels won, and high-turnover zones. Every tackle, tactical foul, and substitution is proving vital in shaping the outcome of this contest.</p>
+        <p>In the center of the park, individual duels are reaching boiling point as both squads fight tenaciously for territorial advantage. Coaches on both sidelines are constantly issuing positional adjustments to exploit emerging half-space pockets and defensive mismatches before defensive blocks can reset.</p>
+        <p>Stay locked to the ZetaSports Match Center for minute-by-minute updates, real-time scoreboard synchronization, official player performance ratings, and pitch visualizations updated in sub-second intervals as this thrilling ${league} fixture progresses.</p>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="zeta-editorial-narrative" style="font-size: 15px; color: #334155; line-height: 1.75; margin: 28px 0;">
+      <h3 style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 21px; font-weight: 700; color: #0f172a; margin: 0 0 12px; text-transform: uppercase;">
+        Match Preview &amp; Tactical Blueprint: ${home} vs ${away}
+      </h3>
+      <p>Football enthusiasts and tactical purists around the globe turn their focus toward <strong>${venue}</strong> as <strong>${home}</strong> prepares to battle <strong>${away}</strong> in a marquee <strong>${league}</strong> clash. With vital league standing implications and competitive pride at stake, both managers have formulated meticulous game plans to outwit and outmaneuver their counterparts across the 90 minutes.</p>
+      <p>The tactical battle promises to be fascinating. ${home}, operating in a structured <strong>${homeForm}</strong> under head coach <strong>${homeCoach}</strong>, will prioritize tempo control, progressive ball circulation through defensive lines, and relentless counter-pressing upon turnovers. On the opposite sideline, ${away} and manager <strong>${awayCoach}</strong> are anticipated to field a versatile <strong>${awayForm}</strong> shape capable of toggling between compact low-block defending and explosive vertical transitions into the opposition's half.</p>
+      <p>Key individual duels across the pitch will likely dictate the final outcome. In particular, the midfield battle for second balls and transition control will test both squads' physical stamina and spatial awareness. Both managers also possess deep substitution benches featuring game-changing dynamic talent capable of altering the flow of the game in the final thirty minutes.</p>
+      <p>Set-piece execution and defensive organization against aerial deliveries could prove equally decisive in breaking down compact defensive barriers. Analytical telemetry indicates that converting high-probability big chances will be paramount in securing maximum points under heavy continental scrutiny.</p>
+      <p>Explore the full confirmed starting lineups, player telemetry ratings, historical head-to-head records, and official broadcasting networks below. The ZetaSports live telemetry gateway will automatically hydrate with real-time live scores, attacking momentum charts, and instant event alerts as soon as the opening whistle sounds.</p>
+    </div>
+  `;
+}
+
+// --- COMPONENT 9: TEAM RECENT FORM GUIDE (W - D - L Badges) ---
+function generateFormGuide(m) {
+  const home = m.home_team || 'Home';
+  const away = m.away_team || 'Away';
+
+  const parseFormBadges = (formStr, defaultSeq) => {
+    let badges = [];
+    if (typeof formStr === 'string' && formStr.trim()) {
+      badges = formStr.trim().toUpperCase().split('').filter(c => ['W', 'D', 'L'].includes(c));
+    } else if (Array.isArray(formStr)) {
+      badges = formStr.map(s => String(s).toUpperCase().charAt(0)).filter(c => ['W', 'D', 'L'].includes(c));
+    }
+    if (badges.length === 0) badges = defaultSeq;
+    while (badges.length < 5) badges.push('W');
+    return badges.slice(0, 5).map(res => {
+      const bg = res === 'W' ? '#16a34a' : (res === 'D' ? '#d97706' : '#dc2626');
+      return `<span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: ${bg}; color: #ffffff; font-size: 11px; font-weight: 800; box-shadow: 0 1px 3px rgba(0,0,0,0.15);">${res}</span>`;
+    }).join('');
+  };
+
+  const homePills = parseFormBadges(m.home_form, ['W', 'W', 'D', 'W', 'L']);
+  const awayPills = parseFormBadges(m.away_form, ['W', 'D', 'W', 'L', 'W']);
+
+  return `
+    <div class="zeta-form-guide" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; margin: 24px 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 12px; font-weight: 700; color: #0062b2; text-transform: uppercase;">${home} Form:</span>
+        <div style="display: flex; gap: 5px;">${homePills}</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 12px; font-weight: 700; color: #dc2626; text-transform: uppercase;">${away} Form:</span>
+        <div style="display: flex; gap: 5px;">${awayPills}</div>
+      </div>
+    </div>
+  `;
+}
+
+// --- COMPONENT 10: STARTING LINEUPS & SUBSTITUTES BENCH TABLE ---
 function generateStartingXITable(m) {
   const home = m.home_team || 'Home';
   const away = m.away_team || 'Away';
@@ -1551,10 +1998,222 @@ function generateStartingXITable(m) {
   `;
 }
 
-// --- HEAD-TO-HEAD (H2H) HISTORICAL TABLE GENERATOR ---
+// --- COMPONENT 11: DECISIVE MOMENTS LOG & MATCH EVENTS TIMELINE ---
+function generateMatchEventsTimeline(m, isFinished, isLive) {
+  const home = m.home_team || 'Home';
+  const away = m.away_team || 'Away';
+
+  const timeline = [];
+  const events = Array.isArray(m.events) ? m.events : [];
+  
+  if (events.length > 0) {
+    events.forEach(e => {
+      const min = parseInt(e.minute, 10) || 0;
+      const teamName = e.team === 'home' || e.team === home ? home : away;
+      const isHome = e.team === 'home' || e.team === home;
+      if (e.type === 'Goal') {
+        timeline.push({
+          minute: min,
+          type: 'goal',
+          icon: '⚽',
+          title: `Goal - ${e.player}`,
+          team: teamName,
+          isHome,
+          desc: `${e.penalty ? '(Penalty) ' : ''}${e.own_goal ? '(Own Goal) ' : ''}${e.assist ? 'Assist: ' + e.assist : ''}${e.xg ? ' • xG: ' + parseFloat(e.xg).toFixed(2) : ''}`
+        });
+      } else if (e.type === 'Card') {
+        const isRed = (e.card || '').toLowerCase().includes('red');
+        timeline.push({
+          minute: min,
+          type: 'card',
+          icon: isRed ? '🟥' : '🟨',
+          title: `${isRed ? 'Red Card' : 'Yellow Card'} - ${e.player}`,
+          team: teamName,
+          isHome,
+          desc: e.cardReason || e.reason || (isRed ? 'Expulsion' : 'Caution')
+        });
+      } else if (e.type === 'Substitution' && e.swap && e.swap.length >= 2) {
+        timeline.push({
+          minute: min,
+          type: 'sub',
+          icon: '🔄',
+          title: `Substitution (${teamName})`,
+          team: teamName,
+          isHome,
+          desc: `In: <strong>${e.swap[0].name}</strong> | Out: ${e.swap[1].name}`
+        });
+      }
+    });
+  } else {
+    // Check goal_scorers
+    (m.goal_scorers || []).forEach(g => {
+      const min = parseInt(g.minute, 10) || 0;
+      const teamName = g.team === 'home' || g.team === home ? home : away;
+      timeline.push({
+        minute: min,
+        type: 'goal',
+        icon: '⚽',
+        title: `Goal - ${g.player}`,
+        team: teamName,
+        isHome: g.team === 'home' || g.team === home,
+        desc: `${g.penalty ? '(Penalty) ' : ''}${g.own_goal ? '(Own Goal) ' : ''}${g.assist ? 'Assist: ' + g.assist : ''}`
+      });
+    });
+    // Check cards
+    (m.cards || []).forEach(c => {
+      const min = parseInt(c.minute, 10) || 0;
+      const isRed = (c.card || '').toLowerCase().includes('red');
+      timeline.push({
+        minute: min,
+        type: 'card',
+        icon: isRed ? '🟥' : '🟨',
+        title: `${isRed ? 'Red Card' : 'Yellow Card'} - ${c.player}`,
+        team: c.team === 'home' || c.team === home ? home : away,
+        isHome: c.team === 'home' || c.team === home,
+        desc: c.reason || 'Caution'
+      });
+    });
+    // Check substitutions
+    (m.substitutions || []).forEach(s => {
+      const min = parseInt(s.minute, 10) || 0;
+      timeline.push({
+        minute: min,
+        type: 'sub',
+        icon: '🔄',
+        title: `Substitution`,
+        team: s.team === 'home' || s.team === home ? home : away,
+        isHome: s.team === 'home' || s.team === home,
+        desc: `In: <strong>${s.playerIn}</strong> | Out: ${s.playerOut}`
+      });
+    });
+  }
+
+  timeline.sort((a, b) => a.minute - b.minute);
+
+  let eventsHtml = '';
+  if (timeline.length > 0) {
+    eventsHtml = timeline.map(ev => `
+      <div style="display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px dashed #e2e8f0;">
+        <span style="background: #0f172a; color: #ffffff; font-family: 'Oswald', -apple-system, sans-serif; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px; min-width: 32px; text-align: center; flex-shrink: 0;">${ev.minute}'</span>
+        <div style="font-size: 16px; flex-shrink: 0; line-height: 1.2;">${ev.icon}</div>
+        <div style="flex: 1;">
+          <div style="font-size: 13px; font-weight: 700; color: #0f172a;">
+            ${ev.title} <span style="font-size: 11px; font-weight: 600; color: ${ev.isHome ? '#0062b2' : '#dc2626'};">(${ev.team})</span>
+          </div>
+          ${ev.desc ? `<div style="font-size: 12px; color: #64748b; margin-top: 2px;">${ev.desc}</div>` : ''}
+        </div>
+      </div>
+    `).join('');
+  } else {
+    eventsHtml = `
+      <div style="text-align: center; padding: 20px; color: #94a3b8; font-size: 13px;">
+        ${isFinished ? 'Official decisive moments recorded. See statistics below.' : (isLive ? 'No major incidents yet. Match telemetry streaming live.' : 'Match events timeline will update in real-time as soon as kickoff begins.')}
+      </div>
+    `;
+  }
+
+  return `
+    <div class="zeta-timeline-container" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; margin: 28px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+        <h3 style="margin: 0; font-family: 'Oswald', -apple-system, sans-serif; font-size: 17px; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px;">
+          ⏱ Decisive Moments Log &amp; Match Events Timeline
+        </h3>
+        <span style="background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px;">
+          Chronological
+        </span>
+      </div>
+      <div>${eventsHtml}</div>
+    </div>
+  `;
+}
+
+// --- COMPONENT 12: MATCH STATISTICS & COMPARATIVE PROGRESS METERS ---
+function generateMatchStatsMeters(m, isFinished, isLive) {
+  const home = m.home_team || 'Home';
+  const away = m.away_team || 'Away';
+  const stats = m.match_stats || m.stats || {};
+
+  const possession = stats.possession || [50, 50];
+  const shots = stats.shots || [0, 0];
+  const shotsOnTarget = stats.shots_on_target || [0, 0];
+  const xg = stats.xg || stats.expected_goals || [null, null];
+  const bigChances = stats.big_chances || [0, 0];
+  const accuratePasses = stats.accurate_passes || stats.passes_accuracy || [null, null];
+  const corners = stats.corners || [0, 0];
+  const fouls = stats.fouls || [0, 0];
+
+  const renderMeter = (label, vHome, vAway, isPercent = false) => {
+    if (vHome === null || vHome === undefined || vAway === null || vAway === undefined) return '';
+    const parseNum = (v) => {
+      if (typeof v === 'string') {
+        const match = v.match(/(\d+(\.\d+)?)/);
+        return match ? parseFloat(match[1]) : 0;
+      }
+      return parseFloat(v) || 0;
+    };
+    const nHome = parseNum(vHome);
+    const nAway = parseNum(vAway);
+    const total = (nHome + nAway) > 0 ? (nHome + nAway) : 100;
+    const pctHome = isPercent ? Math.min(100, Math.max(0, nHome)) : Math.round((nHome / total) * 100);
+    const pctAway = 100 - pctHome;
+
+    return `
+      <div style="margin-bottom: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-bottom: 5px;">
+          <span style="font-weight: 700; color: #0062b2;">${vHome}${isPercent && !String(vHome).includes('%') ? '%' : ''}</span>
+          <span style="color: #64748b; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">${label}</span>
+          <span style="font-weight: 700; color: #dc2626;">${vAway}${isPercent && !String(vAway).includes('%') ? '%' : ''}</span>
+        </div>
+        <div style="height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; display: flex;">
+          <div style="width: ${pctHome}%; background: #0062b2; transition: width 0.3s ease;"></div>
+          <div style="width: ${pctAway}%; background: #dc2626; transition: width 0.3s ease;"></div>
+        </div>
+      </div>
+    `;
+  };
+
+  return `
+    <div class="zeta-stats-meters" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; margin: 28px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h4 style="font-family: 'Oswald', -apple-system, sans-serif; font-size: 16px; font-weight: 700; color: #0f172a; text-transform: uppercase; margin: 0; letter-spacing: 0.5px;">
+          📊 Match Telemetry &amp; Comparative Performance Meters
+        </h4>
+        <div style="display: flex; gap: 12px; font-size: 11px; font-weight: 700;">
+          <span style="color: #0062b2;">● ${home}</span>
+          <span style="color: #dc2626;">● ${away}</span>
+        </div>
+      </div>
+      <div>
+        ${xg[0] !== null ? renderMeter('Expected Goals (xG)', xg[0], xg[1]) : ''}
+        ${renderMeter('Ball Possession', possession[0], possession[1], true)}
+        ${renderMeter('Total Shots', shots[0], shots[1])}
+        ${renderMeter('Shots on Target', shotsOnTarget[0], shotsOnTarget[1])}
+        ${(bigChances[0] !== 0 || bigChances[1] !== 0) ? renderMeter('Big Chances', bigChances[0], bigChances[1]) : ''}
+        ${accuratePasses[0] !== null ? renderMeter('Accurate Passes', accuratePasses[0], accuratePasses[1]) : ''}
+        ${renderMeter('Corner Kicks', corners[0], corners[1])}
+        ${renderMeter('Fouls Committed', fouls[0], fouls[1])}
+      </div>
+    </div>
+  `;
+}
+
+// --- COMPONENT 13: HEAD-TO-HEAD (H2H) HISTORICAL TABLE ---
 function generateH2HTable(m) {
+  const home = m.home_team || 'Home';
+  const away = m.away_team || 'Away';
+  const league = m.league_name || m.league || 'Football League';
   const h2h = Array.isArray(m.h2h) ? m.h2h : [];
-  if (h2h.length === 0) return '';
+
+  if (h2h.length === 0) {
+    return `
+      <div class="zeta-h2h-container" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin: 28px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+        <h3 style="margin: 0 0 10px; font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px;">
+          ⚔️ Head-to-Head (H2H) Historical Record
+        </h3>
+        <p style="font-size: 13px; color: #64748b; margin: 0;">First official competitive meeting between ${home} and ${away} in ${league}.</p>
+      </div>
+    `;
+  }
 
   const rows = h2h.map((h, i) => `
     <tr style="border-bottom: 1px solid #f1f5f9; ${i % 2 === 1 ? 'background: #f8fafc;' : ''}">
@@ -1591,160 +2250,60 @@ function generateH2HTable(m) {
   `;
 }
 
-// --- MATCH TELEMETRY & LOGISTICS GRID GENERATOR ---
-function generateMatchTelemetryGrid(m) {
-  const venue = m.venue || 'Official Stadium';
-  const referee = m.referee || 'Assigned Official';
+// --- COMPONENT 14: GLOBAL TV & LIVE STREAMING BROADCAST GUIDE ---
+function generateBroadcastGuide(m) {
   const league = m.league_name || m.league || 'Football League';
-  const kickoff = m.kickoff_ist || m.time || 'Matchday';
 
   return `
-    <div class="zeta-meta-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 24px 0;">
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px;">
-        <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 4px;">🏟 Stadium &amp; Venue</span>
-        <span style="font-size: 13px; font-weight: 700; color: #0f172a;">${venue}</span>
-      </div>
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px;">
-        <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 4px;">👮 Head Referee</span>
-        <span style="font-size: 13px; font-weight: 700; color: #0f172a;">${referee}</span>
-      </div>
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px;">
-        <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 4px;">🏆 Competition</span>
-        <span style="font-size: 13px; font-weight: 700; color: #0062b2;">${league}</span>
-      </div>
-      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px;">
-        <span style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; display: block; margin-bottom: 4px;">⏰ Kickoff Time</span>
-        <span style="font-size: 13px; font-weight: 700; color: #0f172a;">${kickoff}</span>
-      </div>
-    </div>
-  `;
-}
-
-// --- EDITORIAL MATCH NARRATIVE / PREVIEW GENERATOR ---
-function generateEditorialNarrative(m, isFinished, isLive) {
-  const home = m.home_team || 'Home';
-  const away = m.away_team || 'Away';
-  const league = m.league_name || m.league || 'Football League';
-  const homeForm = m.formations?.home || m.lineups?.home?.formation || 'tactical setup';
-  const awayForm = m.formations?.away || m.lineups?.away?.formation || 'tactical setup';
-
-  if (isFinished) {
-    const score = (m.home_score !== null && m.away_score !== null) ? `${m.home_score} - ${m.away_score}` : 'concluded';
-    return `
-      <div class="zeta-editorial-narrative" style="font-size: 15px; color: #334155; line-height: 1.7; margin: 24px 0;">
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 19px; font-weight: 700; color: #0f172a; margin: 0 0 10px; text-transform: uppercase;">
-          Full-Time Match Analysis: ${home} ${score} ${away}
+    <div class="zeta-broadcast-guide" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; margin: 28px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+        <h3 style="margin: 0; font-family: 'Oswald', -apple-system, sans-serif; font-size: 17px; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px;">
+          📺 Global TV Channels &amp; Live Streaming Directory
         </h3>
-        <p>The showdown between <strong>${home}</strong> and <strong>${away}</strong> in the <strong>${league}</strong> has concluded with a final score of <strong>${score}</strong>. Over the course of 90 high-intensity minutes, both squads battled tactically across the pitch, testing defensive structures and transitioning rapidly on the counter-attack.</p>
-        <p>Tactically, ${home} lined up in a <strong>${homeForm}</strong> formation, aiming to dictate tempo and control midfield possession, while ${away} answered with a <strong>${awayForm}</strong> system built to exploit wide channels and set-piece opportunities. Scroll down for the complete goalscorers log, decisive match events, and comprehensive telemetry statistics.</p>
+        <span style="background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px;">
+          Official Broadcasters
+        </span>
       </div>
-    `;
-  }
-
-  return `
-    <div class="zeta-editorial-narrative" style="font-size: 15px; color: #334155; line-height: 1.7; margin: 24px 0;">
-      <h3 style="font-family: 'Oswald', sans-serif; font-size: 19px; font-weight: 700; color: #0f172a; margin: 0 0 10px; text-transform: uppercase;">
-        Match Preview &amp; Tactical Breakdown: ${home} vs ${away}
-      </h3>
-      <p>Football fans around the world turn their attention to this mouth-watering clash as <strong>${home}</strong> hosts <strong>${away}</strong> in the <strong>${league}</strong>. With vital points, league positioning, and tactical pride on the line, both managers enter this fixture with meticulously crafted game plans designed to seize momentum early.</p>
-      <p>From a tactical perspective, ${home}'s deployment in a <strong>${homeForm}</strong> setup provides defensive solidity while creating passing lanes through the half-spaces. Conversely, ${away}'s <strong>${awayForm}</strong> formation places an emphasis on tactical discipline, compact defensive lines, and incisive transition play in attacking phases.</p>
-      <p>Below you will find the complete confirmed starting lineups, substitute benches, head-to-head records, and official match telemetry. Real-time live score updates and pitch telemetry will activate automatically as soon as kickoff commences.</p>
-    </div>
-  `;
-}
-
-// --- MASTER GENERATOR: COMPLETE MAGAZINE-GRADE HTML FOR BLOGGER POSTS ---
-async function generateRichPostContent(m, cfg, forcedState = null, thumbUrl = null) {
-  const home = m.home_team || 'Home';
-  const away = m.away_team || 'Away';
-  const league = m.league_name || m.league || 'Football League';
-  const homeLogo = m.home_logo || '';
-  const awayLogo = m.away_logo || '';
-
-  const state = forcedState || getMatchLifecycleState(m.status, cfg?.thumbnailMode);
-  const isFinished = state === 'finished';
-  const isLive = state === 'live';
-
-  const matchMeta = {
-    mode: cfg?.thumbnailMode || 'auto',
-    homeScore: m.home_score,
-    awayScore: m.away_score,
-    kickoff: m.kickoff_time || m.kickoff_ist,
-    venue: m.venue,
-    status: isFinished ? 'FT' : (isLive ? 'LIVE' : m.status)
-  };
-
-  const finalThumb = thumbUrl || m.thumbnail_url || '';
-
-  let html = '';
-
-  // 1. Google Schema.org SportsEvent JSON-LD
-  html += generateSchemaJsonLd(m, isFinished, isLive);
-
-  // 2. 3-State Thumbnail Image (or Hero Poster Card if thumbnail not ready)
-  if (finalThumb) {
-    html += `<div class="separator" style="clear: both; text-align: center; margin-bottom: 20px;">\n` +
-      `  <img class="zeta-post-thumb" border="0" src="${finalThumb}" alt="${home} vs ${away} Match Center" style="width: 100%; max-width: 820px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); display: block; margin: 0 auto;" />\n` +
-      `</div>\n`;
-  } else {
-    // Fallback Hero Poster Card when image is not yet generated
-    html += generateHeroPosterMarkup(home, away, league, homeLogo, awayLogo, matchMeta);
-  }
-
-  // 3. Match Telemetry Grid (Stadium, Referee, League, Kickoff)
-  html += generateMatchTelemetryGrid(m);
-
-  // 4. Editorial Match Narrative / Preview
-  html += generateEditorialNarrative(m, isFinished, isLive);
-
-  // 5. Full-Time Match Review & Goalscorers (if finished)
-  if (isFinished) {
-    html += generateMatchReviewHtml(m);
-  }
-
-// --- TEAM RECENT FORM GUIDE (W - D - L PILLS) ---
-function generateFormGuide(m) {
-  const home = m.home_team || 'Home';
-  const away = m.away_team || 'Away';
-  const h2h = Array.isArray(m.h2h) ? m.h2h : [];
-
-  const computeFormPills = (isHome) => {
-    const pills = [];
-    h2h.slice(0, 5).forEach(match => {
-      const parts = (match.score || '').split('-').map(s => parseInt(s.trim(), 10));
-      if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
-        const teamScore = isHome ? parts[0] : parts[1];
-        const oppScore = isHome ? parts[1] : parts[0];
-        if (teamScore > oppScore) pills.push('W');
-        else if (teamScore === oppScore) pills.push('D');
-        else pills.push('L');
-      }
-    });
-    while (pills.length < 5) {
-      pills.push(isHome ? (pills.length % 2 === 0 ? 'W' : 'D') : (pills.length % 2 === 1 ? 'W' : 'D'));
-    }
-
-    return pills.slice(0, 5).map(res => {
-      const bg = res === 'W' ? '#16a34a' : (res === 'D' ? '#d97706' : '#dc2626');
-      return `<span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: ${bg}; color: #ffffff; font-size: 11px; font-weight: 800; box-shadow: 0 1px 3px rgba(0,0,0,0.15);">${res}</span>`;
-    }).join('');
-  };
-
-  return `
-    <div class="zeta-form-guide" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; margin: 20px 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <span style="font-size: 12px; font-weight: 700; color: #0062b2;">${home} Form:</span>
-        <div style="display: flex; gap: 5px;">${computeFormPills(true)}</div>
-      </div>
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <span style="font-size: 12px; font-weight: 700; color: #dc2626;">${away} Form:</span>
-        <div style="display: flex; gap: 5px;">${computeFormPills(false)}</div>
+      <p style="font-size: 13px; color: #64748b; margin: 0 0 14px; line-height: 1.5;">
+        Tune in to official rights-holders broadcasting live action of the <strong>${league}</strong> across major international regions:
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 16px;">
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px;">
+          <span style="font-size: 11px; font-weight: 700; color: #0062b2; text-transform: uppercase; display: block;">🇬🇧 United Kingdom</span>
+          <span style="font-size: 12px; font-weight: 700; color: #1e293b;">TNT Sports / discovery+ / Sky Sports</span>
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px;">
+          <span style="font-size: 11px; font-weight: 700; color: #0062b2; text-transform: uppercase; display: block;">🇺🇸 United States</span>
+          <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Paramount+ / CBS Sports Golazo / ViX</span>
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px;">
+          <span style="font-size: 11px; font-weight: 700; color: #0062b2; text-transform: uppercase; display: block;">🇮🇳 India &amp; Subcontinent</span>
+          <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Sony LIV / Sony Sports Ten Network</span>
+        </div>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px;">
+          <span style="font-size: 11px; font-weight: 700; color: #0062b2; text-transform: uppercase; display: block;">🌍 MENA &amp; Africa</span>
+          <span style="font-size: 12px; font-weight: 700; color: #1e293b;">beIN Sports / SuperSport Football</span>
+        </div>
       </div>
     </div>
   `;
 }
 
-// --- 1-CLICK VIRAL SOCIAL SHARE CARD (WHATSAPP, TELEGRAM, SCORECARD) ---
+// --- COMPONENT 15: GOOGLE ADSENSE SLOT 2 (High-CTR Bottom Placement: 728x250 / Zero CLS Container) ---
+function generateAdSenseSlot2(cfg) {
+  const client = cfg?.adsenseClient || 'ca-pub-XXXXXXXXXXXXXXXX';
+  const slot = cfg?.adSlot2 || '0987654321';
+  return `
+    <!-- Google AdSense Slot 2: High-CTR Bottom Placement (Zero CLS Container) -->
+    <div class="zeta-ad-slot-2" style="min-height: 250px; width: 100%; max-width: 728px; margin: 28px auto; text-align: center; overflow: hidden; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; contain: layout size;">
+      <span style="font-size: 10px; font-weight: 700; color: #94a3b8; letter-spacing: 1.5px; text-transform: uppercase; margin: 8px 0 4px; display: block;">ADVERTISEMENT</span>
+      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:250px;" data-ad-client="${client}" data-ad-slot="${slot}"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  `;
+}
+
+// --- COMPONENT 16: 1-CLICK VIRAL SOCIAL SHARE CARD (WHATSAPP, TELEGRAM, CLIPBOARD) ---
 function generateSocialShareCard(m) {
   const home = m.home_team || 'Home';
   const away = m.away_team || 'Away';
@@ -1785,21 +2344,89 @@ function generateSocialShareCard(m) {
   `;
 }
 
-  // 5b. Team Recent Form Guide
+// --- MASTER GENERATOR: COMPLETE 17-COMPONENT MAGAZINE-GRADE HTML FOR BLOGGER POSTS ---
+async function generateRichPostContent(m, cfg, forcedState = null, thumbUrl = null) {
+  const home = m.home_team || 'Home';
+  const away = m.away_team || 'Away';
+  const league = m.league_name || m.league || 'Football League';
+  const homeLogo = m.home_logo || '';
+  const awayLogo = m.away_logo || '';
+
+  const state = forcedState || getMatchLifecycleState(m.status, cfg?.thumbnailMode);
+  const isFinished = state === 'finished';
+  const isLive = state === 'live';
+
+  const matchMeta = {
+    mode: cfg?.thumbnailMode || 'auto',
+    homeScore: m.home_score,
+    awayScore: m.away_score,
+    kickoff: m.kickoff_time || m.kickoff_ist,
+    venue: m.stadium || m.venue,
+    status: isFinished ? 'FT' : (isLive ? 'LIVE' : m.status)
+  };
+
+  const finalThumb = thumbUrl || m.thumbnail_url || '';
+
+  let html = '';
+
+  // Component 1: Dual Schema.org JSON-LD (SportsEvent + FAQPage with 4 Q&As)
+  html += generateSchemaJsonLd(m, isFinished, isLive);
+
+  // Optional Featured Thumbnail Top Lead
+  if (finalThumb) {
+    html += `<div class="separator" style="clear: both; text-align: center; margin-bottom: 20px;">\n` +
+      `  <img class="zeta-post-thumb" border="0" src="${finalThumb}" alt="${home} vs ${away} Match Center" style="width: 100%; max-width: 820px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); display: block; margin: 0 auto;" />\n` +
+      `</div>\n`;
+  }
+
+  // Component 2: 16:9 Broadcast Hero Graphic (Crests with Monogram Fallback, Score, No Minute in Pill)
+  html += generateHeroPosterMarkup(home, away, league, homeLogo, awayLogo, matchMeta);
+
+  // Component 3: Real-Time Status / Countdown Ticker
+  html += generateStatusCountdownTicker(m, isFinished, isLive);
+
+  // Component 4: 4-Card Telemetry Grid (Stadium, Referee, League, Time)
+  html += generateMatchTelemetryGrid(m);
+
+  // Component 5: Key Match Facts & Trivia Strip
+  html += generateMatchFactsStrip(m);
+
+  // Component 6: Marquee Player Spotlight & Tactical Duel
+  html += generatePlayerSpotlightDuel(m);
+
+  // Component 7: Google AdSense Slot 1: Mid-Article Native (336x280 / Zero CLS Container)
+  html += generateAdSenseSlot1(cfg);
+
+  // Component 8: Editorial Tactical Narrative (300+ Words SEO Article)
+  html += generateEditorialNarrative(m, isFinished, isLive);
+
+  // Component 9: Team Recent Form Guide (W - D - L Badges)
   html += generateFormGuide(m);
 
-  // 6. Official Starting XI & Tactical Formations (Static SEO HTML)
+  // Component 10: Starting Lineups & Substitutes Bench Table (Starters, Subs, Ratings, Events)
   html += generateStartingXITable(m);
 
-  // 7. Head-to-Head (H2H) Historical Encounters
+  // Component 11: Decisive Moments Log & Match Events Timeline
+  html += generateMatchEventsTimeline(m, isFinished, isLive);
+
+  // Component 12: Match Statistics & Comparative Progress Meters (xG, Possession, Shots, Fouls)
+  html += generateMatchStatsMeters(m, isFinished, isLive);
+
+  // Component 13: Head-to-Head (H2H) Historical Encounters (Last 5 Games)
   html += generateH2HTable(m);
 
-  // 7b. 1-Click Viral Match Social Sharing Card
+  // Component 14: Global TV & Live Streaming Broadcast Guide
+  html += generateBroadcastGuide(m);
+
+  // Component 15: Google AdSense Slot 2: High-CTR Bottom Placement (728x250 / Zero CLS Container)
+  html += generateAdSenseSlot2(cfg);
+
+  // Component 16: 1-Click Viral Social Sharing Card (WhatsApp, Telegram)
   html += generateSocialShareCard(m);
 
-  // 8. Interactive Widget Mount Point (Theme Hydration)
+  // Component 17: Real-Time Token: zeta:ID for Colorify Theme Hydration
   const mountStatus = isFinished ? 'finished' : (isLive ? 'live' : 'upcoming');
-  html += `<div id="zetaMatchCenter" data-match-id="${m.id}" data-zeta-id="${m.id}" data-status="${mountStatus}" data-has-lineup-table="true" style="margin-top: 24px;">\n` +
+  html += `<div id="zetaMatchCenter" data-match-id="${m.id}" data-zeta-id="${m.id}" data-fotmob-id="${m.fotmob_id || ''}" data-status="${mountStatus}" data-kickoff="${m.kickoff_time || m.kickoff_ist || ''}" data-has-lineup-table="true" style="margin-top: 24px;">\n` +
     `  <span style="display:none;" id="zetaMatchToken" class="zeta-match-token">zeta:${m.id}</span>\n` +
     `</div>\n`;
 
@@ -2486,6 +3113,109 @@ const server = http.createServer(async (req, res) => {
         }));
       } catch (err) {
         console.error('[Customize Thumbnail Error]:', err);
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: err.message }));
+      }
+    });
+    return;
+  }
+
+  // --- 3A. PREVIEW & GENERATE FULL 17-COMPONENT LIVE POST HTML ---
+  if ((req.url === '/api/blogger/preview-html' || req.url === '/api/blogger/generate-html' || req.url.startsWith('/api/blogger/preview-html?') || req.url.startsWith('/api/blogger/generate-html?')) && (req.method === 'POST' || req.method === 'GET')) {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', async () => {
+      try {
+        let matchId = null;
+        if (req.method === 'POST') {
+          const parsed = JSON.parse(body || '{}');
+          matchId = parsed.matchId || parsed.id || parsed.fotmobId || parsed.fotmob_id;
+        } else {
+          const u = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+          matchId = u.searchParams.get('matchId') || u.searchParams.get('id') || u.searchParams.get('fotmobId') || u.searchParams.get('fotmob_id');
+        }
+
+        if (!matchId) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'matchId is required' }));
+          return;
+        }
+
+        // 1. Fetch match from Supabase
+        let matchRes = await httpsRequest({
+          hostname: SUPABASE_HOST,
+          path: `/rest/v1/zeta_matches?id=eq.${encodeURIComponent(matchId)}&select=*`,
+          method: 'GET',
+          headers: {
+            'apikey': ANON_KEY,
+            'authorization': `Bearer ${ANON_KEY}`
+          }
+        });
+
+        // Fallback: try lookup by fotmob_id
+        if (!Array.isArray(matchRes.data) || matchRes.data.length === 0) {
+          matchRes = await httpsRequest({
+            hostname: SUPABASE_HOST,
+            path: `/rest/v1/zeta_matches?fotmob_id=eq.${encodeURIComponent(matchId)}&select=*`,
+            method: 'GET',
+            headers: {
+              'apikey': ANON_KEY,
+              'authorization': `Bearer ${ANON_KEY}`
+            }
+          });
+        }
+
+        let m = (Array.isArray(matchRes.data) && matchRes.data.length > 0) ? matchRes.data[0] : null;
+
+        // If match not in Supabase yet but numeric ID is provided, build in-memory match object
+        if (!m && /^\d+$/.test(String(matchId).trim())) {
+          m = {
+            id: String(matchId),
+            fotmob_id: String(matchId),
+            status: 'scheduled',
+            home_team: 'Home Team',
+            away_team: 'Away Team'
+          };
+        }
+
+        if (!m) {
+          res.writeHead(404, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: `Match ${matchId} not found in Supabase` }));
+          return;
+        }
+
+        // 2. Deep sync freshest FotMob telemetry if fotmob_id is available
+        if (m.fotmob_id) {
+          try {
+            const syncedM = await fetchAndSyncFotMobMatch(m.id, m.fotmob_id);
+            if (syncedM) Object.assign(m, syncedM);
+          } catch (syncErr) {
+            console.warn('[Preview HTML]: FotMob telemetry sync notice:', syncErr.message);
+          }
+        }
+
+        const cfg = loadConfig();
+        const homeTeam = m.home_team || 'Home';
+        const awayTeam = m.away_team || 'Away';
+        const league = m.league_name || m.league || 'Football League';
+        const thumbUrl = m.thumbnail_url || '';
+
+        const postTitle = `${homeTeam} vs ${awayTeam} Lineups, Live Score & Match Center - ${league}`;
+        const searchDescription = `zeta:${m.id} - ${homeTeam} vs ${awayTeam} live score, starting lineups, tactical formation and HD broadcast stream.`;
+
+        const html = await generateRichPostContent(m, cfg, null, thumbUrl);
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({
+          success: true,
+          matchId: m.id,
+          fotmobId: m.fotmob_id || null,
+          title: postTitle,
+          searchDescription,
+          html
+        }));
+      } catch (err) {
+        console.error('[Preview HTML Error]:', err);
         res.writeHead(500, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ error: err.message }));
       }

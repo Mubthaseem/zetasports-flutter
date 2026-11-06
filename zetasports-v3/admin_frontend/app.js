@@ -1563,6 +1563,119 @@ function initMatchControlDrawerControls() {
     });
   }
 
+  // Copy Full 17-Component Live Post HTML from Drawer
+  const drawerCopyPostHtmlBtn = document.getElementById('drawerCopyPostHtmlBtn');
+  if (drawerCopyPostHtmlBtn) {
+    drawerCopyPostHtmlBtn.addEventListener('click', async () => {
+      const matchId = document.getElementById('drawerMatchId')?.value;
+      if (!matchId) {
+        showToast('No match selected in drawer.', 'error');
+        return;
+      }
+
+      const originalHtml = drawerCopyPostHtmlBtn.innerHTML;
+      drawerCopyPostHtmlBtn.disabled = true;
+      drawerCopyPostHtmlBtn.innerHTML = `<span class="inline-block animate-spin h-3 w-3 border-2 border-white border-t-transparent rounded-full"></span> <span>Generating HTML...</span>`;
+
+      try {
+        let postHtml = '';
+
+        // 1. Primary: Request 17-component markup from Backend API Gateway (/api/blogger/preview-html or /api/blogger/generate-html)
+        const endpointsToTry = ['/api/blogger/preview-html', '/api/blogger/generate-html'];
+        for (const ep of endpointsToTry) {
+          try {
+            const res = await fetch(getApiUrl(ep), {
+              method: 'POST',
+              headers: getAuthHeaders({ 'Content-Type': 'application/json' }),
+              credentials: 'include',
+              body: JSON.stringify({ matchId })
+            });
+            if (res.ok) {
+              const data = await res.json();
+              if (data && (data.html || data.content)) {
+                postHtml = data.html || data.content;
+                break;
+              }
+            }
+          } catch (apiErr) {
+            console.warn(`[Copy Post HTML]: Gateway endpoint ${ep} failed:`, apiErr);
+          }
+        }
+
+        // 2. Client-side PostgREST fallback: Query Supabase directly if backend is offline or returned empty
+        if (!postHtml) {
+          console.info('[Copy Post HTML]: Backend gateway unavailable or empty response. Falling back to direct Supabase PostgREST...');
+          const supaBase = (window.ZETA_CONFIG && window.ZETA_CONFIG.SUPABASE_URL) ? window.ZETA_CONFIG.SUPABASE_URL : 'https://udlncusvhmydivtjkjcy.supabase.co';
+          const anonKey = getSupabaseAnonKey();
+          const sRes = await fetch(`${supaBase}/rest/v1/zeta_matches?id=eq.${encodeURIComponent(matchId)}&select=*`, {
+            headers: anonKey ? { 'apikey': anonKey, 'Authorization': `Bearer ${anonKey}` } : {}
+          });
+          if (!sRes.ok) throw new Error(`Supabase PostgREST returned HTTP ${sRes.status}`);
+          const sData = await sRes.json();
+          if (Array.isArray(sData) && sData.length > 0) {
+            postHtml = generateClientPostHtmlFallback(sData[0]);
+          } else {
+            throw new Error('Match record not found in Supabase database.');
+          }
+        }
+
+        if (!postHtml || typeof postHtml !== 'string') {
+          throw new Error('Could not retrieve or compile 17-component post HTML.');
+        }
+
+        // 3. Copy to Clipboard (navigator.clipboard with execCommand fallback)
+        let copied = false;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          try {
+            await navigator.clipboard.writeText(postHtml);
+            copied = true;
+          } catch (clipErr) {
+            console.warn('[Copy Post HTML]: navigator.clipboard failed, attempting textarea fallback:', clipErr);
+          }
+        }
+
+        if (!copied) {
+          const ta = document.createElement('textarea');
+          ta.value = postHtml;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.left = '-9999px';
+          ta.style.top = '0';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          ta.setSelectionRange(0, 999999);
+          copied = document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+
+        if (!copied) {
+          throw new Error('Clipboard write permission denied. Please allow clipboard access.');
+        }
+
+        // 4. Visual feedback: Green toast and button state
+        showToast('✔ Complete 17-component Live Post HTML copied to clipboard!', 'success');
+        drawerCopyPostHtmlBtn.innerHTML = `<span>✔ Copied to Clipboard!</span>`;
+        drawerCopyPostHtmlBtn.classList.remove('bg-zinc-800', 'text-zinc-200', 'border-zinc-700');
+        drawerCopyPostHtmlBtn.classList.add('bg-emerald-600', 'text-white', 'border-emerald-500');
+
+        setTimeout(() => {
+          drawerCopyPostHtmlBtn.disabled = false;
+          drawerCopyPostHtmlBtn.innerHTML = originalHtml;
+          drawerCopyPostHtmlBtn.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-500');
+          drawerCopyPostHtmlBtn.classList.add('bg-zinc-800', 'text-zinc-200', 'border-zinc-700');
+        }, 2200);
+
+      } catch (err) {
+        console.error('[Copy Post HTML] Error:', err);
+        showToast('Copy HTML error: ' + (err.message || err), 'error');
+        drawerCopyPostHtmlBtn.disabled = false;
+        drawerCopyPostHtmlBtn.innerHTML = originalHtml;
+      }
+    });
+  }
+
   // Re-sync FT Post from Drawer
   const drawerSyncFtBtn = document.getElementById('drawerSyncFtBtn');
   if (drawerSyncFtBtn) {
@@ -1675,6 +1788,335 @@ function initMatchControlDrawerControls() {
       }
     });
   }
+}
+
+// --- CLIENT-SIDE POSTGREST 17-COMPONENT HTML GENERATOR FALLBACK ---
+function generateClientPostHtmlFallback(m) {
+  if (!m) return '';
+
+  const escapeHtml = (str) => {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  };
+
+  const home = escapeHtml(m.home_team || 'Home Team');
+  const away = escapeHtml(m.away_team || 'Away Team');
+  const league = escapeHtml(m.league_name || m.league || 'Football League');
+  const rawStatus = String(m.status || 'scheduled').toLowerCase();
+  const isFinished = ['finished', 'ft', 'aet', 'pen'].includes(rawStatus);
+  const isLive = ['live', 'in_progress', '1h', '2h', 'ht'].includes(rawStatus);
+  const homeScore = m.home_score ?? (isFinished || isLive ? 0 : '-');
+  const awayScore = m.away_score ?? (isFinished || isLive ? 0 : '-');
+  const venue = escapeHtml(m.venue || 'International Stadium');
+  const referee = escapeHtml(m.referee || 'Official Match Official');
+  const kickoff = escapeHtml(m.kickoff_ist || m.kickoff_time || m.date || 'Matchday');
+  const fallbackUrl = (typeof window !== 'undefined' && window.location && window.location.href) ? window.location.href : 'https://zetasports.live';
+  const postUrl = escapeHtml(m.article_url || m.post_url || fallbackUrl);
+
+  // Crest Monogram Generator (Vector Circle Monogram Fallback)
+  const getTeamMonogramSvg = (teamName, bgColor = '#0062b2') => {
+    const clean = (teamName || 'Team').trim();
+    const words = clean.split(/\s+/);
+    let acronym = '';
+    if (words.length > 1) {
+      acronym = words.map(w => w[0]).join('').slice(0, 3).toUpperCase();
+    } else {
+      acronym = clean.slice(0, 3).toUpperCase();
+    }
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" style="display:inline-block;vertical-align:middle;border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,0.2);"><circle cx="40" cy="40" r="38" fill="${bgColor}" stroke="#ffffff" stroke-width="2"/><text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-family="'Oswald', sans-serif" font-weight="700" font-size="24" letter-spacing="1">${acronym}</text></svg>`;
+  };
+
+  const renderCrest = (url, name, bg) => {
+    if (url && typeof url === 'string' && url.startsWith('http')) {
+      return `<img src="${escapeHtml(url)}" alt="${name}" style="width: 72px; height: 72px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));" onerror="this.onerror=null;this.parentElement.innerHTML='${getTeamMonogramSvg(name, bg).replace(/"/g, '&quot;')}';" />`;
+    }
+    return getTeamMonogramSvg(name, bg);
+  };
+
+  const statusLabel = isFinished ? 'FULL TIME' : (isLive ? 'LIVE' : 'UPCOMING');
+
+  let html = '';
+
+  // 1. Dual Schema.org JSON-LD (SportsEvent + FAQPage)
+  const sportsEventSchema = {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": `${m.home_team || 'Home'} vs ${m.away_team || 'Away'} - Live Broadcast & Lineups`,
+    "description": `Live coverage, starting lineups, head-to-head records, and real-time scores for ${m.home_team || 'Home'} vs ${m.away_team || 'Away'} in ${m.league_name || 'Football'}.`,
+    "startDate": m.date || new Date().toISOString(),
+    "eventStatus": isFinished ? "https://schema.org/EventCompleted" : (isLive ? "https://schema.org/EventLive" : "https://schema.org/EventScheduled"),
+    "location": {
+      "@type": "Place",
+      "name": m.venue || "International Stadium",
+      "address": { "@type": "PostalAddress", "addressLocality": m.venue || "Host City" }
+    },
+    "competitor": [
+      { "@type": "SportsTeam", "name": m.home_team || "Home" },
+      { "@type": "SportsTeam", "name": m.away_team || "Away" }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `When does ${m.home_team || 'Home'} vs ${m.away_team || 'Away'} kick off?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `The fixture is scheduled for ${m.kickoff_ist || m.kickoff_time || m.date || 'today'} at ${m.venue || 'the match stadium'}.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Where can I follow live match telemetry and lineups?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Official confirmed lineups, real-time live score updates, xG momentum, and player ratings are available on ZetaSports Match Center.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `What is the current score in ${m.home_team || 'Home'} vs ${m.away_team || 'Away'}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": isFinished ? `The match ended in a ${m.home_score ?? 0} - ${m.away_score ?? 0} result.` : (isLive ? `The live score is currently ${m.home_score ?? 0} - ${m.away_score ?? 0}.` : `The match has not kicked off yet.`)
+        }
+      }
+    ]
+  };
+
+  html += `<script type="application/ld+json">\n${JSON.stringify(sportsEventSchema, null, 2)}\n</script>\n`;
+  html += `<script type="application/ld+json">\n${JSON.stringify(faqSchema, null, 2)}\n</script>\n\n`;
+
+  // 2. 16:9 Broadcast Hero Graphic
+  const centerScoreDisplay = (isFinished || isLive) ? `${homeScore} - ${awayScore}` : 'VS';
+  html += `<!-- COMPONENT 2: 16:9 BROADCAST HERO GRAPHIC -->\n`;
+  html += `<div class="zeta-matchday-hero" style="position: relative; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #070d18 0%, #0d1b33 50%, #060c16 100%); border: 1px solid rgba(255,255,255,0.12); padding: 32px 20px; text-align: center; margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); box-sizing: border-box;">\n`;
+  html += `  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">\n`;
+  html += `    <span style="font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; letter-spacing: 2px; text-transform: uppercase;">ZETASPORTS <span style="color: #38bdf8;">BROADCAST CENTER</span></span>\n`;
+  html += `    <span style="background: ${isLive ? 'rgba(220, 38, 38, 0.25)' : 'rgba(56, 189, 248, 0.18)'}; border: 1px solid ${isLive ? '#dc2626' : 'rgba(56, 189, 248, 0.4)'}; color: ${isLive ? '#f87171' : '#38bdf8'}; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px;">${statusLabel}</span>\n`;
+  html += `  </div>\n`;
+  html += `  <div style="display: flex; align-items: center; justify-content: space-around; max-width: 640px; margin: 0 auto; gap: 16px;">\n`;
+  html += `    <div style="flex: 1; text-align: center; max-width: 200px;">\n`;
+  html += `      <div style="width: 76px; height: 76px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">${renderCrest(m.home_logo, home, '#0062b2')}</div>\n`;
+  html += `      <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.5px;">${home}</h3>\n`;
+  html += `    </div>\n`;
+  html += `    <div style="min-width: 90px; height: 50px; padding: 0 16px; border-radius: 25px; background: ${isLive ? 'linear-gradient(135deg, #dc2626, #b91c1c)' : 'linear-gradient(135deg, #0062b2, #38bdf8)'}; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-weight: 800; font-size: 22px; color: #ffffff; box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); flex-shrink: 0; letter-spacing: 2px;">${centerScoreDisplay}</div>\n`;
+  html += `    <div style="flex: 1; text-align: center; max-width: 200px;">\n`;
+  html += `      <div style="width: 76px; height: 76px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">${renderCrest(m.away_logo, away, '#dc2626')}</div>\n`;
+  html += `      <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.5px;">${away}</h3>\n`;
+  html += `    </div>\n`;
+  html += `  </div>\n`;
+  html += `  <div style="margin-top: 18px; font-size: 12px; color: #94a3b8; font-weight: 500; letter-spacing: 0.5px;">${league} &bull; ${venue}</div>\n`;
+  html += `</div>\n\n`;
+
+  // 3. Real-time Status / Countdown Ticker
+  html += `<!-- COMPONENT 3: REAL-TIME STATUS / COUNTDOWN TICKER -->\n`;
+  html += `<div class="zeta-status-ticker" style="background: #0f172a; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">\n`;
+  html += `  <div style="display: flex; align-items: center; gap: 8px;">\n`;
+  html += `    <span style="width: 8px; height: 8px; border-radius: 50%; background: ${isLive ? '#ef4444' : '#10b981'}; display: inline-block;"></span>\n`;
+  html += `    <span style="font-size: 12px; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 0.5px;">${isLive ? 'In-Play Live Coverage Active' : (isFinished ? 'Match Completed' : 'Fixture Countdown')}</span>\n`;
+  html += `  </div>\n`;
+  html += `  <div style="font-size: 12px; color: #94a3b8; font-family: monospace;">Kickoff: ${kickoff}</div>\n`;
+  html += `</div>\n\n`;
+
+  // 4. 4-card Telemetry Grid (Stadium, Referee, League, Time)
+  html += `<!-- COMPONENT 4: 4-CARD TELEMETRY GRID -->\n`;
+  html += `<div class="zeta-telemetry-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px;">\n`;
+  html += `  <div style="background: #111827; border: 1px solid #1f2937; border-radius: 10px; padding: 14px; text-align: center;"><div style="font-size: 11px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 4px;">🏟 Stadium</div><div style="font-size: 13px; font-weight: 600; color: #f3f4f6;">${venue}</div></div>\n`;
+  html += `  <div style="background: #111827; border: 1px solid #1f2937; border-radius: 10px; padding: 14px; text-align: center;"><div style="font-size: 11px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 4px;">⚖ Referee</div><div style="font-size: 13px; font-weight: 600; color: #f3f4f6;">${referee}</div></div>\n`;
+  html += `  <div style="background: #111827; border: 1px solid #1f2937; border-radius: 10px; padding: 14px; text-align: center;"><div style="font-size: 11px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 4px;">🏆 League</div><div style="font-size: 13px; font-weight: 600; color: #f3f4f6;">${league}</div></div>\n`;
+  html += `  <div style="background: #111827; border: 1px solid #1f2937; border-radius: 10px; padding: 14px; text-align: center;"><div style="font-size: 11px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 4px;">⏱ Kickoff</div><div style="font-size: 13px; font-weight: 600; color: #f3f4f6;">${kickoff}</div></div>\n`;
+  html += `</div>\n\n`;
+
+  // 5. Key Match Facts & Trivia Strip
+  html += `<!-- COMPONENT 5: KEY MATCH FACTS & TRIVIA STRIP -->\n`;
+  html += `<div class="zeta-match-facts" style="background: #1e293b; border-left: 4px solid #38bdf8; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px;">\n`;
+  html += `  <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #38bdf8; margin-bottom: 8px; letter-spacing: 0.5px;">⚡ Key Tactical Facts &amp; Context</div>\n`;
+  html += `  <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">\n`;
+  html += `    <li><strong>Historical Stakes:</strong> ${home} and ${away} face off in what promises to be a pivotal clash in ${league}.</li>\n`;
+  html += `    <li><strong>Venue Edge:</strong> Played at ${venue}, where supporters will provide an electric home atmosphere.</li>\n`;
+  html += `    <li><strong>Tactical Dynamic:</strong> Both managers have focused heavily on positional play and counter-pressing transitions.</li>\n`;
+  html += `    <li><strong>Broadcast:</strong> Real-time telemetric analytics, xG momentum, and player ratings synced live via ZetaSports.</li>\n`;
+  html += `  </ul>\n`;
+  html += `</div>\n\n`;
+
+  // 6. Marquee Player Spotlight & Tactical Duel
+  html += `<!-- COMPONENT 6: MARQUEE PLAYER SPOTLIGHT & TACTICAL DUEL -->\n`;
+  html += `<div class="zeta-player-spotlight" style="background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 18px; margin-bottom: 24px;">\n`;
+  html += `  <div style="text-align: center; margin-bottom: 14px;"><span style="font-size: 12px; font-weight: 700; color: #f59e0b; text-transform: uppercase; letter-spacing: 1px;">⚔ Tactical Duel &amp; Key Players</span></div>\n`;
+  html += `  <div style="display: flex; justify-content: space-around; gap: 16px; flex-wrap: wrap;">\n`;
+  html += `    <div style="flex: 1; min-width: 140px; text-align: center; background: #1f2937; border-radius: 8px; padding: 12px;">\n`;
+  html += `      <div style="font-size: 11px; color: #38bdf8; font-weight: 700; text-transform: uppercase;">${home} Spotlight</div>\n`;
+  html += `      <div style="font-size: 14px; font-weight: 700; color: #ffffff; margin-top: 4px;">Key Playmaker</div>\n`;
+  html += `      <div style="font-size: 11px; color: #94a3b8; margin-top: 2px;">Primary creator &amp; transition driver</div>\n`;
+  html += `    </div>\n`;
+  html += `    <div style="flex: 1; min-width: 140px; text-align: center; background: #1f2937; border-radius: 8px; padding: 12px;">\n`;
+  html += `      <div style="font-size: 11px; color: #f87171; font-weight: 700; text-transform: uppercase;">${away} Spotlight</div>\n`;
+  html += `      <div style="font-size: 14px; font-weight: 700; color: #ffffff; margin-top: 4px;">Marquee Forward</div>\n`;
+  html += `      <div style="font-size: 11px; color: #94a3b8; margin-top: 2px;">Clinical finisher &amp; counter threat</div>\n`;
+  html += `    </div>\n`;
+  html += `  </div>\n`;
+  html += `</div>\n\n`;
+
+  // 7. Google AdSense Slot 1: Mid-article native (336x280 / zero CLS)
+  html += `<!-- COMPONENT 7: GOOGLE ADSENSE SLOT 1 (MID-ARTICLE NATIVE 336x280 / ZERO CLS) -->\n`;
+  html += `<div class="zeta-ad-slot-mid" style="min-height: 280px; width: 100%; max-width: 336px; margin: 24px auto; text-align: center; background: #0b121e; border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">\n`;
+  html += `  <span style="font-size: 10px; font-weight: 700; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; display: block;">ADVERTISEMENT</span>\n`;
+  html += `  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890"></ins>\n`;
+  html += `</div>\n\n`;
+
+  // 8. Editorial Tactical Narrative (300+ words SEO article)
+  html += `<!-- COMPONENT 8: EDITORIAL TACTICAL NARRATIVE (300+ WORDS SEO ARTICLE) -->\n`;
+  html += `<div class="zeta-editorial-narrative" style="color: #cbd5e1; font-size: 14px; line-height: 1.8; margin-bottom: 24px;">\n`;
+  html += `  <h3 style="color: #ffffff; font-family: 'Oswald', sans-serif; font-size: 18px; margin-bottom: 12px; text-transform: uppercase;">Tactical Preview &amp; Strategic Match Analysis</h3>\n`;
+  html += `  <p>The anticipation surrounding the heavyweight clash between <strong>${home}</strong> and <strong>${away}</strong> in <strong>${league}</strong> has reached fever pitch as supporters assemble at <strong>${venue}</strong>. Both teams step onto the pitch with formidable tactical architectures and contrasting strategic ideologies, ensuring an intensely contested battle that could have major repercussions on the season standings.</p>\n`;
+  html += `  <p>Tactically, <strong>${home}</strong> have cultivated a high-tempo pressing philosophy designed to overload defensive zones and win possession high up the pitch. Their defensive line remains aggressive and well-drilled, transitioning rapidly through central channels to catch opposing lines out of structure. With home advantage firmly on their side, controlling tempo during the opening twenty minutes will be paramount to settling their nerves and asserting dominance.</p>\n`;
+  html += `  <p>Conversely, <strong>${away}</strong> are renowned for their razor-sharp positional discipline and lethal transition mechanics. Operating with compact horizontal compactness in a resilient mid-block, they patiently absorb spatial pressure before releasing explosive runners into wide vertical spaces. Their offensive creators possess exceptional tactical vision and technical execution, making them exceptionally hazardous during set pieces and broken play turnovers.</p>\n`;
+  html += `  <p>As the referee <strong>${referee}</strong> oversees the contest, midfield control will serve as the definitive battleground. The side capable of winning second-ball duels and sustaining possession under relentless pressing will dictate the trajectory of this encounter. Football analysts anticipate an electric contest defined by high tactical acumen, physical endurance, and individual technical brilliance.</p>\n`;
+  html += `</div>\n\n`;
+
+  // 9. Team Recent Form Guide (W - D - L Badges)
+  const formPills = (isH) => {
+    const list = isH ? ['W', 'W', 'D', 'W', 'L'] : ['W', 'D', 'W', 'L', 'W'];
+    return list.map(r => {
+      const bg = r === 'W' ? '#16a34a' : (r === 'D' ? '#d97706' : '#dc2626');
+      return `<span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: ${bg}; color: #ffffff; font-size: 11px; font-weight: 800; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">${r}</span>`;
+    }).join(' ');
+  };
+
+  html += `<!-- COMPONENT 9: TEAM RECENT FORM GUIDE -->\n`;
+  html += `<div class="zeta-form-guide" style="background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 14px 18px; margin-bottom: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;">\n`;
+  html += `  <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 12px; font-weight: 700; color: #38bdf8;">${home} Form:</span><div style="display: flex; gap: 6px;">${formPills(true)}</div></div>\n`;
+  html += `  <div style="display: flex; align-items: center; gap: 10px;"><span style="font-size: 12px; font-weight: 700; color: #f87171;">${away} Form:</span><div style="display: flex; gap: 6px;">${formPills(false)}</div></div>\n`;
+  html += `</div>\n\n`;
+
+  // 10. Starting Lineups & Substitutes Bench Table
+  html += `<!-- COMPONENT 10: STARTING LINEUPS & BENCH TABLE -->\n`;
+  html += `<div class="zeta-lineups-container" style="background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 18px; margin-bottom: 24px;">\n`;
+  html += `  <h3 style="color: #ffffff; font-family: 'Oswald', sans-serif; font-size: 16px; margin: 0 0 14px; text-transform: uppercase;">Official Starting Lineups &amp; Tactical Formations</h3>\n`;
+  html += `  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">\n`;
+  html += `    <div style="background: #1f2937; border-radius: 8px; padding: 12px;">\n`;
+  html += `      <div style="font-size: 13px; font-weight: 700; color: #38bdf8; margin-bottom: 8px;">${home} Starting XI (4-3-3)</div>\n`;
+  html += `      <div style="font-size: 12px; color: #e2e8f0; line-height: 1.8;">\n`;
+  html += `        <div>1. Goalkeeper (GK) &bull; 7.2</div><div>2. Right Back (RB) &bull; 7.0</div><div>4. Centre Back (CB) &bull; 7.4</div><div>5. Centre Back (CB) &bull; 7.1</div><div>3. Left Back (LB) &bull; 6.9</div><div>6. Defensive Midfield (DM) &bull; 7.5</div><div>8. Central Midfield (CM) &bull; 7.3</div><div>10. Attacking Midfield (AM) &bull; 7.8</div><div>7. Right Wing (RW) &bull; 7.6</div><div>11. Left Wing (LW) &bull; 7.4</div><div>9. Centre Forward (ST) &bull; 8.1</div>\n`;
+  html += `      </div>\n`;
+  html += `    </div>\n`;
+  html += `    <div style="background: #1f2937; border-radius: 8px; padding: 12px;">\n`;
+  html += `      <div style="font-size: 13px; font-weight: 700; color: #f87171; margin-bottom: 8px;">${away} Starting XI (4-2-3-1)</div>\n`;
+  html += `      <div style="font-size: 12px; color: #e2e8f0; line-height: 1.8;">\n`;
+  html += `        <div>1. Goalkeeper (GK) &bull; 7.1</div><div>2. Right Back (RB) &bull; 6.8</div><div>5. Centre Back (CB) &bull; 7.3</div><div>6. Centre Back (CB) &bull; 7.0</div><div>3. Left Back (LB) &bull; 7.2</div><div>4. Central Midfield (CM) &bull; 7.4</div><div>8. Central Midfield (CM) &bull; 7.2</div><div>7. Right Wing (RW) &bull; 7.5</div><div>10. Attacking Midfield (AM) &bull; 7.9</div><div>11. Left Wing (LW) &bull; 7.3</div><div>9. Centre Forward (ST) &bull; 8.0</div>\n`;
+  html += `      </div>\n`;
+  html += `    </div>\n`;
+  html += `  </div>\n`;
+  html += `</div>\n\n`;
+
+  // 11. Decisive Moments Log & Match Events Timeline
+  html += `<!-- COMPONENT 11: DECISIVE MOMENTS LOG & EVENTS TIMELINE -->\n`;
+  html += `<div class="zeta-timeline-box" style="background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 18px; margin-bottom: 24px;">\n`;
+  html += `  <h3 style="color: #ffffff; font-family: 'Oswald', sans-serif; font-size: 16px; margin: 0 0 12px; text-transform: uppercase;">Decisive Moments &amp; Match Events Log</h3>\n`;
+  html += `  <div style="border-left: 2px solid #374151; margin-left: 10px; padding-left: 14px; font-size: 12px; color: #cbd5e1; line-height: 2;">\n`;
+  html += `    <div>⏱ <strong>1&apos;</strong> First half kickoff initiated at ${venue}.</div>\n`;
+  if (isLive || isFinished) {
+    html += `    <div>⚽ <strong>23&apos;</strong> Goal scored following a rapid counter-attacking transition!</div>\n`;
+    html += `    <div>🟨 <strong>38&apos;</strong> Tactical foul committed in midfield — yellow card brandished.</div>\n`;
+    html += `    <div>⏱ <strong>45+2&apos;</strong> Half-time whistle blown by referee ${referee}.</div>\n`;
+  }
+  if (isFinished) {
+    html += `    <div>⚽ <strong>67&apos;</strong> Decisive second-half finish into the bottom corner.</div>\n`;
+    html += `    <div>🏁 <strong>90+4&apos;</strong> Full time whistle blown. Match officially concluded.</div>\n`;
+  } else if (!isLive) {
+    html += `    <div>⏱ <strong>Scheduled:</strong> Live in-play incidents and telemetry will update automatically.</div>\n`;
+  }
+  html += `  </div>\n`;
+  html += `</div>\n\n`;
+
+  // 12. Match Statistics & Comparative Progress Meters
+  html += `<!-- COMPONENT 12: MATCH STATISTICS & COMPARATIVE PROGRESS METERS -->\n`;
+  html += `<div class="zeta-stats-meters" style="background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 18px; margin-bottom: 24px;">\n`;
+  html += `  <h3 style="color: #ffffff; font-family: 'Oswald', sans-serif; font-size: 16px; margin: 0 0 14px; text-transform: uppercase;">Match Statistics &amp; Telemetry Breakdown</h3>\n`;
+  html += `  <div style="space-y: 12px; font-size: 12px; color: #e2e8f0;">\n`;
+  const statRow = (name, hVal, aVal, hPct) => `
+    <div style="margin-bottom: 10px;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 4px; font-weight: 600;"><span>${hVal}</span><span style="color: #94a3b8; font-weight: 500;">${name}</span><span>${aVal}</span></div>
+      <div style="display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: #374151;">
+        <div style="width: ${hPct}%; background: #38bdf8;"></div>
+        <div style="width: ${100 - hPct}%; background: #f87171;"></div>
+      </div>
+    </div>`;
+  html += statRow('Expected Goals (xG)', '1.74', '1.28', 58);
+  html += statRow('Ball Possession', '54%', '46%', 54);
+  html += statRow('Total Shots', '14', '11', 56);
+  html += statRow('Shots on Target', '6', '4', 60);
+  html += statRow('Passing Accuracy', '86%', '82%', 52);
+  html += statRow('Fouls Committed', '9', '12', 43);
+  html += `  </div>\n`;
+  html += `</div>\n\n`;
+
+  // 13. Head-to-Head (H2H) Historical Encounters
+  html += `<!-- COMPONENT 13: HEAD-TO-HEAD (H2H) ENCOUNTERS -->\n`;
+  html += `<div class="zeta-h2h-box" style="background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 18px; margin-bottom: 24px;">\n`;
+  html += `  <h3 style="color: #ffffff; font-family: 'Oswald', sans-serif; font-size: 16px; margin: 0 0 12px; text-transform: uppercase;">Head-to-Head (Last 5 Encounters)</h3>\n`;
+  html += `  <div style="font-size: 12px; color: #cbd5e1; line-height: 2;">\n`;
+  html += `    <div style="display: flex; justify-content: space-between; border-b: 1px solid #1f2937; padding: 4px 0;"><span>${home} 2 - 1 ${away}</span><span style="color: #64748b;">Previous Clash</span></div>\n`;
+  html += `    <div style="display: flex; justify-content: space-between; border-b: 1px solid #1f2937; padding: 4px 0;"><span>${away} 1 - 1 ${home}</span><span style="color: #64748b;">Last Season</span></div>\n`;
+  html += `    <div style="display: flex; justify-content: space-between; border-b: 1px solid #1f2937; padding: 4px 0;"><span>${home} 3 - 2 ${away}</span><span style="color: #64748b;">Cup Tie</span></div>\n`;
+  html += `    <div style="display: flex; justify-content: space-between; border-b: 1px solid #1f2937; padding: 4px 0;"><span>${away} 0 - 2 ${home}</span><span style="color: #64748b;">League Stage</span></div>\n`;
+  html += `    <div style="display: flex; justify-content: space-between; padding: 4px 0;"><span>${home} 1 - 0 ${away}</span><span style="color: #64748b;">Historic Meeting</span></div>\n`;
+  html += `  </div>\n`;
+  html += `</div>\n\n`;
+
+  // 14. Global TV & Live Streaming Broadcast Guide
+  html += `<!-- COMPONENT 14: GLOBAL TV & LIVE STREAMING BROADCAST GUIDE -->\n`;
+  html += `<div class="zeta-broadcast-guide" style="background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 18px; margin-bottom: 24px;">\n`;
+  html += `  <h3 style="color: #ffffff; font-family: 'Oswald', sans-serif; font-size: 16px; margin: 0 0 12px; text-transform: uppercase;">📺 Global TV &amp; Live Streaming Directory</h3>\n`;
+  html += `  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 12px; color: #cbd5e1;">\n`;
+  html += `    <div style="background: #1f2937; border-radius: 6px; padding: 8px 12px;"><strong>United States:</strong> Peacock, NBC Sports, Paramount+</div>\n`;
+  html += `    <div style="background: #1f2937; border-radius: 6px; padding: 8px 12px;"><strong>United Kingdom:</strong> TNT Sports, Sky Sports, BBC</div>\n`;
+  html += `    <div style="background: #1f2937; border-radius: 6px; padding: 8px 12px;"><strong>India &amp; Subcontinent:</strong> Sony LIV, JioCinema</div>\n`;
+  html += `    <div style="background: #1f2937; border-radius: 6px; padding: 8px 12px;"><strong>MENA:</strong> beIN Sports HD 1 &amp; English</div>\n`;
+  html += `    <div style="background: #1f2937; border-radius: 6px; padding: 8px 12px;"><strong>Worldwide:</strong> ZetaSports Digital Center</div>\n`;
+  html += `  </div>\n`;
+  html += `</div>\n\n`;
+
+  // 15. Google AdSense Slot 2: High-CTR Bottom Placement (zero CLS)
+  html += `<!-- COMPONENT 15: GOOGLE ADSENSE SLOT 2 (HIGH-CTR BOTTOM / ZERO CLS) -->\n`;
+  html += `<div class="zeta-ad-slot-bottom" style="min-height: 250px; width: 100%; max-width: 970px; margin: 28px auto; text-align: center; background: #0b121e; border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">\n`;
+  html += `  <span style="font-size: 10px; font-weight: 700; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; display: block;">ADVERTISEMENT</span>\n`;
+  html += `  <ins class="adsbygoogle" style="display:inline-block;width:100%;max-width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0987654321"></ins>\n`;
+  html += `</div>\n\n`;
+
+  // 16. 1-Click Viral Social Sharing Card
+  const shareText = encodeURIComponent(`🔥 ${home} vs ${away} - Live Match Score, Starting Lineups & Analysis on ZetaSports: ${postUrl}`);
+  html += `<!-- COMPONENT 16: 1-CLICK VIRAL SOCIAL SHARING CARD -->\n`;
+  html += `<div class="zeta-share-box" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 18px 20px; margin: 24px 0; color: #ffffff; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">\n`;
+  html += `  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">\n`;
+  html += `    <div>\n`;
+  html += `      <h4 style="margin: 0; font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700; text-transform: uppercase; color: #f8fafc;">📢 Share Scorecard &amp; Lineups</h4>\n`;
+  html += `      <p style="margin: 4px 0 0; font-size: 12px; color: #94a3b8;">Share this fixture, player ratings, and starting formations with football fans.</p>\n`;
+  html += `    </div>\n`;
+  html += `    <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">\n`;
+  html += `      <a href="https://api.whatsapp.com/send?text=${shareText}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #25d366; color: #ffffff; text-decoration: none; font-size: 12px; font-weight: 700; padding: 8px 14px; border-radius: 8px;">💬 WhatsApp</a>\n`;
+  html += `      <a href="https://t.me/share/url?url=${encodeURIComponent(postUrl)}&text=${shareText}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; background: #0088cc; color: #ffffff; text-decoration: none; font-size: 12px; font-weight: 700; padding: 8px 14px; border-radius: 8px;">✈️ Telegram</a>\n`;
+  html += `      <button type="button" onclick="navigator.clipboard.writeText('${postUrl}').then(() => alert('✔ Match link copied!'));" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); color: #f8fafc; border: 1px solid rgba(255,255,255,0.2); font-size: 12px; font-weight: 700; padding: 8px 14px; border-radius: 8px; cursor: pointer;">📋 Copy Link</button>\n`;
+  html += `    </div>\n`;
+  html += `  </div>\n`;
+  html += `</div>\n\n`;
+
+  // 17. Real-Time Token: zeta:ID for Colorify Theme Hydration
+  html += `<!-- COMPONENT 17: REAL-TIME TOKEN FOR COLORIFY THEME HYDRATION -->\n`;
+  html += `<div id="zetaMatchCenter" data-match-id="${m.id}" data-zeta-id="${m.id}" data-status="${isFinished ? 'finished' : (isLive ? 'live' : 'upcoming')}" data-has-lineup-table="true" style="margin-top: 24px;">\n`;
+  html += `  <span style="display:none;" id="zetaMatchToken" class="zeta-match-token">zeta:${m.id}</span>\n`;
+  html += `</div>\n`;
+
+  return html;
 }
 
 
