@@ -2,7 +2,7 @@
   "competitionId": "53",
   "competitionName": "Ligue 1",
   "season": "2026/2027",
-  "updatedAt": "2026-11-07T12:32:09.647Z",
+  "updatedAt": "2026-11-07T21:29:25.766Z",
   "table": [
     {
       "position": 1,
@@ -10,20 +10,39 @@
       "teamName": "Paris Saint-Germain",
       "shortName": "PSG",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9847.png",
-      "played": 9,
-      "won": 6,
+      "played": 10,
+      "won": 7,
       "drawn": 2,
       "lost": 1,
-      "goalsFor": 21,
+      "goalsFor": 22,
       "goalsAgainst": 10,
-      "goalDifference": 11,
+      "goalDifference": 12,
+      "points": 23,
+      "form": [
+        "#2AD572"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 2,
+      "teamId": "6379",
+      "teamName": "Paris FC",
+      "shortName": "Paris FC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6379.png",
+      "played": 10,
+      "won": 6,
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 17,
+      "goalsAgainst": 10,
+      "goalDifference": 7,
       "points": 20,
       "form": [
         "#2AD572"
       ]
     },
     {
-      "position": 2,
+      "position": 3,
       "teamId": "8639",
       "teamName": "Lille",
       "shortName": "Lille",
@@ -41,7 +60,7 @@
       ]
     },
     {
-      "position": 3,
+      "position": 4,
       "teamId": "9748",
       "teamName": "Lyon",
       "shortName": "Lyon",
@@ -53,24 +72,6 @@
       "goalsFor": 15,
       "goalsAgainst": 7,
       "goalDifference": 8,
-      "points": 17,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 4,
-      "teamId": "6379",
-      "teamName": "Paris FC",
-      "shortName": "Paris FC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6379.png",
-      "played": 9,
-      "won": 5,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 16,
-      "goalsAgainst": 10,
-      "goalDifference": 6,
       "points": 17,
       "form": [
         "#FFD908"
@@ -223,13 +224,13 @@
       "teamName": "Auxerre",
       "shortName": "Auxerre",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8583.png",
-      "played": 9,
+      "played": 10,
       "won": 3,
       "drawn": 1,
-      "lost": 5,
+      "lost": 6,
       "goalsFor": 13,
-      "goalsAgainst": 23,
-      "goalDifference": -10,
+      "goalsAgainst": 24,
+      "goalDifference": -11,
       "points": 10
     },
     {
@@ -253,17 +254,18 @@
       "teamName": "Troyes",
       "shortName": "Troyes",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10242.png",
-      "played": 9,
+      "played": 10,
       "won": 2,
       "drawn": 2,
-      "lost": 5,
+      "lost": 6,
       "goalsFor": 7,
-      "goalsAgainst": 16,
-      "goalDifference": -9,
+      "goalsAgainst": 17,
+      "goalDifference": -10,
       "points": 8,
       "form": [
         "#FFA72F"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 17,

@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-11-07T12:32:30.600Z",
+  "updatedAt": "2026-11-07T21:29:48.754Z",
   "table": [
     {
       "position": 1,
@@ -46,17 +46,18 @@
       "teamName": "Sporting CP",
       "shortName": "Sporting CP",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9768.png",
-      "played": 10,
+      "played": 11,
       "won": 6,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 1,
       "goalsFor": 23,
       "goalsAgainst": 11,
       "goalDifference": 12,
-      "points": 21,
+      "points": 22,
       "form": [
         "#FFD908"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 4,
@@ -126,6 +127,22 @@
     },
     {
       "position": 8,
+      "teamId": "8348",
+      "teamName": "Moreirense",
+      "shortName": "Moreirense",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8348.png",
+      "played": 11,
+      "won": 4,
+      "drawn": 3,
+      "lost": 4,
+      "goalsFor": 13,
+      "goalsAgainst": 17,
+      "goalDifference": -4,
+      "points": 15,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 9,
       "teamId": "10264",
       "teamName": "Braga",
       "shortName": "Braga",
@@ -137,21 +154,6 @@
       "goalsFor": 12,
       "goalsAgainst": 11,
       "goalDifference": 1,
-      "points": 14
-    },
-    {
-      "position": 9,
-      "teamId": "8348",
-      "teamName": "Moreirense",
-      "shortName": "Moreirense",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8348.png",
-      "played": 10,
-      "won": 4,
-      "drawn": 2,
-      "lost": 4,
-      "goalsFor": 13,
-      "goalsAgainst": 17,
-      "goalDifference": -4,
       "points": 14
     },
     {
@@ -175,14 +177,14 @@
       "teamName": "Alverca",
       "shortName": "Alverca",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9780.png",
-      "played": 10,
+      "played": 11,
       "won": 3,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 5,
-      "goalsFor": 13,
-      "goalsAgainst": 14,
+      "goalsFor": 14,
+      "goalsAgainst": 15,
       "goalDifference": -1,
-      "points": 11
+      "points": 12
     },
     {
       "position": 12,
@@ -231,18 +233,18 @@
     },
     {
       "position": 15,
-      "teamId": "10214",
-      "teamName": "Nacional",
-      "shortName": "Nacional",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10214.png",
-      "played": 10,
+      "teamId": "212821",
+      "teamName": "Casa Pia AC",
+      "shortName": "Casa Pia AC",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212821.png",
+      "played": 11,
       "won": 2,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 7,
-      "goalsFor": 10,
-      "goalsAgainst": 19,
-      "goalDifference": -9,
-      "points": 7
+      "goalsFor": 6,
+      "goalsAgainst": 20,
+      "goalDifference": -14,
+      "points": 8
     },
     {
       "position": 16,
@@ -264,17 +266,17 @@
     },
     {
       "position": 17,
-      "teamId": "212821",
-      "teamName": "Casa Pia AC",
-      "shortName": "Casa Pia AC",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/212821.png",
+      "teamId": "10214",
+      "teamName": "Nacional",
+      "shortName": "Nacional",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10214.png",
       "played": 10,
       "won": 2,
       "drawn": 1,
       "lost": 7,
-      "goalsFor": 5,
+      "goalsFor": 10,
       "goalsAgainst": 19,
-      "goalDifference": -14,
+      "goalDifference": -9,
       "points": 7,
       "form": [
         "#FF4646"
