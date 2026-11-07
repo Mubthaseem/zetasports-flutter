@@ -7,9 +7,11 @@ import http from 'http';
 import https from 'https';
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import { exec } from 'child_process';
 import { createCanvas, loadImage, GlobalFonts } from '@napi-rs/canvas';
+import { verifyJWT } from './netlify/functions/auth.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -27,6 +29,8 @@ try {
 const PORT = process.env.PORT || 2121;
 const SUPABASE_HOST = 'udlncusvhmydivtjkjcy.supabase.co';
 const ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkbG5jdXN2aG15ZGl2dGpramN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM4MTE2MDgsImV4cCI6MjEwOTM4NzYwOH0.gsnxlDww-fUC4HG7R7VasXSaQvqkSsDhhmf16KUCLZY';
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY || '';
+const SESSION_SECRET = process.env.SESSION_SECRET || (process.env.SUPABASE_SERVICE_ROLE_KEY ? crypto.createHash('sha256').update(process.env.SUPABASE_SERVICE_ROLE_KEY).digest('hex') : 'zeta_admin_auth_entropy');
 const CONFIG_FILE = path.join(__dirname, 'blogger_config.json');
 
 const MIME_TYPES = {
@@ -56,11 +60,15 @@ function loadConfig() {
     accessToken: '',
     refreshToken: '',
     geminiApiKey: '',
+    tokenExpiry: 0,
+    connectionStatus: 'disconnected',
+    targetBlogIds: [],
     thumbnailPromptTemplate: "Cinematic 16:9 television broadcast matchday graphic poster for {homeTeam} vs {awayTeam} in {league}. Left side: Official {homeTeam} team crest with stadium lighting. Right side: Official {awayTeam} team crest with floodlight beams. Center: Dramatic glowing 'VS' emblem with kickoff telemetry. Watermark & Branding: Official 'ZetaSports Match Center & Live Broadcasts' network logo in electric blue (#0062b2) and white. Atmosphere: Photorealistic packed stadium under floodlights, dynamic sports television presentation, 8k resolution.",
     useNanoBananaThumbnail: true,
     autoPublish: true,
     detailsBlogDomain: '',
-    streamBlogDomain: ''
+    streamBlogDomain: '',
+    thumbnailMode: 'auto'
   };
 
   try {
@@ -122,6 +130,148 @@ function httpsRequest(options, postData = null) {
   });
 }
 
+// Helper: Check if Google OAuth access token is expired or expiring within 5 minutes (300,000ms)
+function isGoogleTokenExpired(cfg) {
+  if (!cfg || !cfg.accessToken) return true;
+  if (!cfg.tokenExpiry) return true;
+  const now = Date.now();
+  const bufferMs = 5 * 60 * 1000;
+  return now >= (Number(cfg.tokenExpiry) - bufferMs);
+}
+
+// Helper: Load Blogger credentials and config from Supabase zeta_settings
+async function loadConfigFromSupabase() {
+  if (!SUPABASE_SERVICE_KEY) {
+    return null;
+  }
+  try {
+    const res = await httpsRequest({
+      hostname: SUPABASE_HOST,
+      path: '/rest/v1/zeta_settings?key=eq.blogger_oauth&select=*',
+      method: 'GET',
+      headers: {
+        'apikey': SUPABASE_SERVICE_KEY,
+        'authorization': `Bearer ${SUPABASE_SERVICE_KEY}`
+      }
+    });
+
+    if (Array.isArray(res.data) && res.data.length > 0 && res.data[0].value) {
+      return res.data[0].value;
+    }
+  } catch (err) {
+    console.warn('[Supabase Sync]: Failed to fetch remote Blogger config from zeta_settings:', err.message);
+  }
+  return null;
+}
+
+// Helper: Save Blogger credentials to Supabase zeta_settings
+async function syncConfigToSupabase(cfg) {
+  if (!SUPABASE_SERVICE_KEY) {
+    return false;
+  }
+  try {
+    const payload = {
+      key: 'blogger_oauth',
+      value: {
+        clientId: cfg.clientId || '',
+        clientSecret: cfg.clientSecret || '',
+        refreshToken: cfg.refreshToken || '',
+        accessToken: cfg.accessToken || '',
+        tokenExpiry: cfg.tokenExpiry || 0,
+        connectionStatus: cfg.connectionStatus || (cfg.accessToken ? 'connected' : 'disconnected'),
+        targetBlogIds: Array.isArray(cfg.targetBlogIds) && cfg.targetBlogIds.length > 0
+          ? cfg.targetBlogIds
+          : (cfg.blogId ? String(cfg.blogId).split(',').map(s => s.trim()).filter(Boolean) : []),
+        blogId: cfg.blogId || '',
+        blogsList: cfg.blogsList || [],
+        projectId: cfg.projectId || '',
+        apiKey: cfg.apiKey || '',
+        geminiApiKey: cfg.geminiApiKey || '',
+        thumbnailPromptTemplate: cfg.thumbnailPromptTemplate || '',
+        useNanoBananaThumbnail: cfg.useNanoBananaThumbnail !== false,
+        autoPublish: cfg.autoPublish !== false,
+        detailsBlogDomain: cfg.detailsBlogDomain || '',
+        streamBlogDomain: cfg.streamBlogDomain || '',
+        thumbnailMode: cfg.thumbnailMode || 'auto',
+        updatedAt: new Date().toISOString()
+      },
+      description: 'Central Google Blogger OAuth configuration, refresh token & active access token',
+      updated_at: new Date().toISOString()
+    };
+
+    const res = await httpsRequest({
+      hostname: SUPABASE_HOST,
+      path: '/rest/v1/zeta_settings',
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_SERVICE_KEY,
+        'authorization': `Bearer ${SUPABASE_SERVICE_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'resolution=merge-duplicates'
+      }
+    }, payload);
+
+    if (res.status >= 200 && res.status < 300) {
+      console.log('[Supabase Sync]: Successfully synchronized Blogger config to zeta_settings.');
+      return true;
+    } else {
+      console.warn('[Supabase Sync Warning]: HTTP status', res.status, res.data || res.raw);
+      return false;
+    }
+  } catch (err) {
+    console.warn('[Supabase Sync Error]:', err.message);
+    return false;
+  }
+}
+
+// Helper: Sanitize Blogger config for client (CRITICAL CYBERSECURITY: Strip secrets)
+function sanitizeBloggerConfigForClient(cfg) {
+  const safe = { ...cfg };
+  delete safe.clientSecret;
+  delete safe.refreshToken;
+
+  if (safe.geminiApiKey) {
+    safe.hasGeminiKey = true;
+    if (typeof safe.geminiApiKey === 'string' && safe.geminiApiKey.length > 8) {
+      safe.geminiApiKey = `${safe.geminiApiKey.slice(0, 4)}••••${safe.geminiApiKey.slice(-4)}`;
+    } else {
+      safe.geminiApiKey = '••••••••';
+    }
+  } else {
+    safe.hasGeminiKey = false;
+    safe.geminiApiKey = '';
+  }
+
+  safe.isConnected = !!safe.accessToken;
+  if (!Array.isArray(safe.targetBlogIds) || safe.targetBlogIds.length === 0) {
+    safe.targetBlogIds = safe.blogId ? String(safe.blogId).split(',').map(s => s.trim()).filter(Boolean) : [];
+  }
+  if (!Array.isArray(safe.blogsList)) {
+    safe.blogsList = [];
+  }
+
+  return safe;
+}
+
+function parseCookies(header = '') {
+  const list = {};
+  if (!header || typeof header !== 'string') return list;
+  header.split(';').forEach(c => {
+    const parts = c.split('=');
+    if (parts.length >= 2) list[parts[0].trim()] = decodeURIComponent(parts.slice(1).join('=').trim());
+  });
+  return list;
+}
+
+function verifyAdminSession(req) {
+  const authHeader = req.headers['authorization'] || req.headers['Authorization'] || '';
+  const token = (authHeader.startsWith('Bearer ') ? authHeader.substring(7) : '') ||
+    parseCookies(req.headers['cookie'] || '').zeta_admin_session;
+    
+  if (!token) return null;
+  return verifyJWT(token, SESSION_SECRET);
+}
+
 // Helper: Refresh Google OAuth2 Access Token using Refresh Token
 async function refreshGoogleAccessToken(cfg) {
   if (!cfg.refreshToken || !cfg.clientId || !cfg.clientSecret) {
@@ -146,12 +296,24 @@ async function refreshGoogleAccessToken(cfg) {
   }, postBody);
 
   if (res.status === 200 && res.data?.access_token) {
+    const expiresIn = Number(res.data.expires_in) || 3600;
     cfg.accessToken = res.data.access_token;
+    cfg.tokenExpiry = Date.now() + (expiresIn * 1000);
+    cfg.connectionStatus = 'connected';
+    if (res.data.refresh_token) {
+      cfg.refreshToken = res.data.refresh_token;
+    }
     saveConfig(cfg);
-    console.log('[Google OAuth]: Successfully refreshed access token!');
+    await syncConfigToSupabase(cfg);
+    console.log(`[Google OAuth]: Successfully refreshed access token! Valid for ${expiresIn}s.`);
     return cfg.accessToken;
   } else {
     console.error('[Google OAuth Refresh Failed]:', res.data || res.raw);
+    if (res.data?.error === 'invalid_grant') {
+      cfg.connectionStatus = 'reauth_required';
+      saveConfig(cfg);
+      await syncConfigToSupabase(cfg);
+    }
     throw new Error(`Token refresh failed: ${JSON.stringify(res.data || res.raw)}`);
   }
 }
@@ -2436,7 +2598,7 @@ async function generateRichPostContent(m, cfg, forcedState = null, thumbUrl = nu
 // Helper: Update Blogger Post to Full-Time with Fresh Thumbnail, Review & Stream Removal
 async function updateBloggerPostToFullTime(m) {
   let cfg = loadConfig();
-  if (!cfg.accessToken && cfg.refreshToken) {
+  if (cfg.refreshToken && isGoogleTokenExpired(cfg)) {
     try {
       await refreshGoogleAccessToken(cfg);
       cfg = loadConfig();
@@ -2742,21 +2904,79 @@ const server = http.createServer(async (req, res) => {
   // --- 2. BLOGGER & GEMINI API CONFIGURATION ENDPOINTS ---
   if (req.url === '/api/blogger/config') {
     if (req.method === 'GET') {
-      const cfg = loadConfig();
+      let cfg = loadConfig();
+
+      // 1. Central Supabase Sync: Fetch remote configuration from zeta_settings
+      try {
+        const remoteConfig = await loadConfigFromSupabase();
+        if (remoteConfig) {
+          const remoteExpiry = Number(remoteConfig.tokenExpiry) || 0;
+          const localExpiry = Number(cfg.tokenExpiry) || 0;
+          const preferRemote = remoteExpiry > localExpiry || (!cfg.refreshToken && remoteConfig.refreshToken) || (!cfg.accessToken && remoteConfig.accessToken);
+
+          cfg = preferRemote ? { ...cfg, ...remoteConfig } : { ...remoteConfig, ...cfg };
+          cfg.refreshToken = cfg.refreshToken || remoteConfig.refreshToken || '';
+          cfg.clientSecret = cfg.clientSecret || remoteConfig.clientSecret || '';
+          saveConfig(cfg);
+        }
+      } catch (syncErr) {
+        console.warn('[Blogger Config]: Supabase pull warning:', syncErr.message);
+      }
+
+      // 2. Auto-refresh if token is expired or near expiry and refreshToken is present
+      if (cfg.refreshToken && isGoogleTokenExpired(cfg)) {
+        console.log('[Blogger Config]: Google Access Token expired or near expiry. Auto-refreshing...');
+        try {
+          await refreshGoogleAccessToken(cfg);
+          cfg = loadConfig();
+        } catch (refErr) {
+          console.warn('[Blogger Config]: Auto-refresh failed:', refErr.message);
+        }
+      }
+
+      // 3. Ensure targetBlogIds is populated
+      if (!Array.isArray(cfg.targetBlogIds) || cfg.targetBlogIds.length === 0) {
+        cfg.targetBlogIds = cfg.blogId ? String(cfg.blogId).split(',').map(s => s.trim()).filter(Boolean) : [];
+      }
+      cfg.isConnected = !!cfg.accessToken;
+
+      // 4. CRITICAL CYBERSECURITY SANITIZATION: NEVER return clientSecret or refreshToken!
+      const safeConfig = sanitizeBloggerConfigForClient(cfg);
+
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify(cfg));
+      res.end(JSON.stringify(safeConfig));
       return;
     } else if (req.method === 'POST') {
+      if (!verifyAdminSession(req)) {
+        res.writeHead(401, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Unauthorized: Admin authentication required to update Blogger configuration' }));
+        return;
+      }
       let body = '';
       req.on('data', chunk => body += chunk);
-      req.on('end', () => {
+      req.on('end', async () => {
         try {
           const newCfg = JSON.parse(body);
           const current = loadConfig();
+
+          // Never overwrite real geminiApiKey with a masked value
+          if (newCfg.geminiApiKey && newCfg.geminiApiKey.includes('••••')) {
+            delete newCfg.geminiApiKey;
+          }
+          // Preserve existing secrets if omitted from client payload
+          if (!newCfg.clientSecret && current.clientSecret) {
+            newCfg.clientSecret = current.clientSecret;
+          }
+          if (!newCfg.refreshToken && current.refreshToken) {
+            newCfg.refreshToken = current.refreshToken;
+          }
+
           const merged = { ...current, ...newCfg };
           saveConfig(merged);
+          await syncConfigToSupabase(merged);
+
           res.writeHead(200, { 'Content-Type': 'application/json' });
-          res.end(JSON.stringify({ success: true, config: merged }));
+          res.end(JSON.stringify({ success: true, config: sanitizeBloggerConfigForClient(merged) }));
         } catch (e) {
           res.writeHead(400, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ error: e.message }));
@@ -2768,9 +2988,14 @@ const server = http.createServer(async (req, res) => {
 
   // --- 2A-2. UPLOAD CLIENT SECRET JSON FILE ---
   if (req.url === '/api/blogger/upload-client-secret' && req.method === 'POST') {
+    if (!verifyAdminSession(req)) {
+      res.writeHead(401, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Unauthorized: Admin authentication required' }));
+      return;
+    }
     let body = '';
     req.on('data', chunk => body += chunk);
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
         let json = JSON.parse(body);
         if (json.fileContent) {
@@ -2790,6 +3015,7 @@ const server = http.createServer(async (req, res) => {
         cfg.authUri = creds.auth_uri || cfg.authUri || '';
         cfg.tokenUri = creds.token_uri || cfg.tokenUri || '';
         saveConfig(cfg);
+        await syncConfigToSupabase(cfg);
 
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: true, clientId: cfg.clientId, projectId: cfg.projectId }));
@@ -2845,7 +3071,10 @@ const server = http.createServer(async (req, res) => {
       }, postBody);
 
       if (tokenRes.data && tokenRes.data.access_token) {
+        const expiresIn = Number(tokenRes.data.expires_in) || 3600;
         cfg.accessToken = tokenRes.data.access_token;
+        cfg.tokenExpiry = Date.now() + (expiresIn * 1000);
+        cfg.connectionStatus = 'connected';
         if (tokenRes.data.refresh_token) {
           cfg.refreshToken = tokenRes.data.refresh_token;
         }
@@ -2867,12 +3096,18 @@ const server = http.createServer(async (req, res) => {
             if (!cfg.blogId) {
               cfg.blogId = blogsRes.data.items[0].id;
             }
+            if (!cfg.targetBlogIds || cfg.targetBlogIds.length === 0) {
+              cfg.targetBlogIds = [cfg.blogId];
+            }
             saveConfig(cfg);
             console.log(`✔ Auto-detected ${blogsRes.data.items.length} Blogger blogs for account!`);
           }
         } catch (blogErr) {
           console.warn('Could not auto-fetch blogs:', blogErr.message);
         }
+
+        // Persist fresh tokens and blogs centrally to Supabase
+        await syncConfigToSupabase(cfg);
 
         res.writeHead(302, { 'Location': '/index.html?blogger_auth=success' });
         res.end();
@@ -2892,7 +3127,7 @@ const server = http.createServer(async (req, res) => {
   // --- 2D. LIST USER'S BLOGGER BLOGS ---
   if (req.url === '/api/blogger/blogs' && req.method === 'GET') {
     let cfg = loadConfig();
-    if (!cfg.accessToken && cfg.refreshToken) {
+    if (cfg.refreshToken && isGoogleTokenExpired(cfg)) {
       try {
         await refreshGoogleAccessToken(cfg);
         cfg = loadConfig();
@@ -3225,6 +3460,11 @@ const server = http.createServer(async (req, res) => {
 
   // --- 3B. APPROVE MATCH & GENERATE 16:9 BROADCAST THUMBNAIL ON DEMAND ---
   if (req.url === '/api/blogger/approve-and-generate' && req.method === 'POST') {
+    if (!verifyAdminSession(req)) {
+      res.writeHead(401, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Unauthorized: Admin authentication required' }));
+      return;
+    }
     let body = '';
     req.on('data', chunk => body += chunk);
     req.on('end', async () => {
@@ -3321,6 +3561,11 @@ const server = http.createServer(async (req, res) => {
 
   // --- 4. PUBLISH MATCH TO BLOGGER (AUTO-POSTER) ---
   if ((req.url === '/api/blogger/publish-match' || req.url === '/api/blogger/publish') && req.method === 'POST') {
+    if (!verifyAdminSession(req)) {
+      res.writeHead(401, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Unauthorized: Admin authentication required to publish matches' }));
+      return;
+    }
     let body = '';
     req.on('data', chunk => body += chunk);
     req.on('end', async () => {
@@ -3333,7 +3578,7 @@ const server = http.createServer(async (req, res) => {
         }
 
         let cfg = loadConfig();
-        if (!cfg.accessToken && cfg.refreshToken) {
+        if (cfg.refreshToken && isGoogleTokenExpired(cfg)) {
           try {
             await refreshGoogleAccessToken(cfg);
             cfg = loadConfig();
@@ -3523,6 +3768,11 @@ const server = http.createServer(async (req, res) => {
 
   // --- 4B. FINALIZE MATCH (AFTER-MATCH FULL TIME UPDATE) ---
   if (req.url === '/api/blogger/finalize' && req.method === 'POST') {
+    if (!verifyAdminSession(req)) {
+      res.writeHead(401, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Unauthorized: Admin authentication required to finalize matches' }));
+      return;
+    }
     let body = '';
     req.on('data', chunk => body += chunk);
     req.on('end', async () => {
@@ -3564,6 +3814,11 @@ const server = http.createServer(async (req, res) => {
 
   // --- 4C. DELETE POST FROM BLOGGER & UNLINK MATCH ---
   if ((req.url === '/api/blogger/delete-post' || req.url === '/api/blogger/delete') && req.method === 'POST') {
+    if (!verifyAdminSession(req)) {
+      res.writeHead(401, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Unauthorized: Admin authentication required to delete posts' }));
+      return;
+    }
     let body = '';
     req.on('data', chunk => body += chunk);
     req.on('end', async () => {
@@ -3578,7 +3833,7 @@ const server = http.createServer(async (req, res) => {
         }
 
         let cfg = loadConfig();
-        if (!cfg.accessToken && cfg.refreshToken) {
+        if (cfg.refreshToken && isGoogleTokenExpired(cfg)) {
           try {
             await refreshGoogleAccessToken(cfg);
             cfg = loadConfig();
@@ -3756,6 +4011,11 @@ const server = http.createServer(async (req, res) => {
 
   // --- 4C-2. LINK ARTICLE URL DIRECTLY TO MATCH ---
   if (req.url === '/api/match/link-article' && req.method === 'POST') {
+    if (!verifyAdminSession(req)) {
+      res.writeHead(401, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Unauthorized: Admin authentication required' }));
+      return;
+    }
     let body = '';
     req.on('data', chunk => body += chunk);
     req.on('end', async () => {
@@ -3799,6 +4059,11 @@ const server = http.createServer(async (req, res) => {
 
   // --- 4D. SYNC FOTMOB MATCH DETAILS ---
   if (req.url === '/api/fotmob/sync-match' && req.method === 'POST') {
+    if (!verifyAdminSession(req)) {
+      res.writeHead(401, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Unauthorized: Admin authentication required' }));
+      return;
+    }
     let body = '';
     req.on('data', chunk => body += chunk);
     req.on('end', async () => {

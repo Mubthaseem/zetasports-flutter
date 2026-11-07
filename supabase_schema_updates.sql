@@ -429,3 +429,32 @@ BEGIN
 EXCEPTION WHEN duplicate_object THEN NULL;
 END $$;
 
+
+-- =============================================================================
+-- 16. CENTRAL APP & OAUTH SETTINGS (zeta_settings)
+-- =============================================================================
+CREATE TABLE IF NOT EXISTS public.zeta_settings (
+    key         TEXT PRIMARY KEY,
+    value       JSONB NOT NULL,
+    description TEXT,
+    updated_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+ALTER TABLE public.zeta_settings ENABLE ROW LEVEL SECURITY;
+
+-- Restrict access exclusively to service_role (remediation iteration 2)
+REVOKE ALL ON TABLE public.zeta_settings FROM anon;
+REVOKE ALL ON TABLE public.zeta_settings FROM authenticated;
+GRANT ALL ON TABLE public.zeta_settings TO service_role;
+
+DROP POLICY IF EXISTS "Public read zeta_settings" ON public.zeta_settings;
+DROP POLICY IF EXISTS "Public insert zeta_settings" ON public.zeta_settings;
+DROP POLICY IF EXISTS "Public update zeta_settings" ON public.zeta_settings;
+DROP POLICY IF EXISTS "Service role full access on zeta_settings" ON public.zeta_settings;
+
+CREATE POLICY "Service role full access on zeta_settings"
+    ON public.zeta_settings
+    FOR ALL
+    TO service_role
+    USING (true)
+    WITH CHECK (true);

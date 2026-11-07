@@ -1,3 +1,93 @@
+// ==============================================================================
+// Resilient Multi-Tier Auth Storage (localStorage with sessionStorage fallback)
+// ==============================================================================
+const AuthStorage = {
+  get(key) {
+    try {
+      if (typeof localStorage !== 'undefined') {
+        const val = localStorage.getItem(key);
+        if (val !== null && val !== undefined) return val;
+      }
+    } catch (e) {
+      console.warn('[AuthStorage] localStorage read error:', e);
+    }
+    try {
+      if (typeof sessionStorage !== 'undefined') {
+        return sessionStorage.getItem(key);
+      }
+    } catch (e) {
+      console.warn('[AuthStorage] sessionStorage read error:', e);
+    }
+    return null;
+  },
+  set(key, val) {
+    let savedInLocal = false;
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem(key, val);
+        savedInLocal = true;
+      }
+    } catch (e) {
+      console.warn('[AuthStorage] localStorage write error, falling back to sessionStorage:', e);
+    }
+    try {
+      if (typeof sessionStorage !== 'undefined') {
+        sessionStorage.setItem(key, val);
+      }
+    } catch (e) {
+      if (!savedInLocal) {
+        console.error('[AuthStorage] Both localStorage and sessionStorage write failed:', e);
+      }
+    }
+  },
+  remove(key) {
+    try { if (typeof localStorage !== 'undefined') localStorage.removeItem(key); } catch (_) {}
+    try { if (typeof sessionStorage !== 'undefined') sessionStorage.removeItem(key); } catch (_) {}
+  },
+  clear() {
+    const keys = [
+      'zeta_bearer_token',
+      'zeta_admin_user',
+      'zeta_blogger_config',
+      'zeta_blogger_connected'
+    ];
+    keys.forEach(k => {
+      try { if (typeof localStorage !== 'undefined') localStorage.removeItem(k); } catch (_) {}
+      try { if (typeof sessionStorage !== 'undefined') sessionStorage.removeItem(k); } catch (_) {}
+    });
+  }
+};
+if (typeof window !== 'undefined') {
+  window.AuthStorage = AuthStorage;
+}
+
+function isTokenExpired(token) {
+  if (!token || typeof token !== 'string') return true;
+  try {
+    const parts = token.split('.');
+    if (parts.length !== 3) return true;
+    let base64 = parts[1].replace(/-/g, '+').replace(/_/g, '/');
+    while (base64.length % 4) {
+      base64 += '=';
+    }
+    const decodeFn = (typeof atob === 'function')
+      ? atob
+      : (str) => Buffer.from(str, 'base64').toString('utf-8');
+    const jsonStr = decodeFn(base64);
+    const payload = JSON.parse(jsonStr);
+    if (payload && typeof payload.exp === 'number') {
+      const nowSec = Math.floor(Date.now() / 1000);
+      return payload.exp <= nowSec;
+    }
+    return false;
+  } catch (_) {
+    return true;
+  }
+}
+if (typeof window !== 'undefined') {
+  window.isTokenExpired = isTokenExpired;
+}
+
 // Decoupled API URL & Bearer Token Helpers
 function getApiUrl(path) {
   const base = (window.ZETA_CONFIG && window.ZETA_CONFIG.API_BASE_URL) ? window.ZETA_CONFIG.API_BASE_URL.replace(/\/+$/, '') : '';
@@ -5,12 +95,32 @@ function getApiUrl(path) {
 }
 
 function getAuthHeaders(extraHeaders = {}) {
-  const token = sessionStorage.getItem('zeta_bearer_token');
+  const token = AuthStorage.get('zeta_bearer_token');
   const headers = { ...extraHeaders };
   if (token) {
     headers['Authorization'] = 'Bearer ' + token;
   }
   return headers;
+}
+if (typeof window !== 'undefined') {
+  window.getApiUrl = getApiUrl;
+  window.getAuthHeaders = getAuthHeaders;
+}
+
+// Cross-Tab Logout Synchronization
+if (typeof window !== 'undefined') {
+  window.addEventListener('storage', (event) => {
+    if (event.key === 'zeta_bearer_token' && !event.newValue) {
+      console.log('[AuthStorage] Session terminated in another tab. Locking dashboard.');
+      AuthStorage.clear();
+      if (typeof lockDashboard === 'function') {
+        lockDashboard();
+      }
+      if (typeof initGoogleIdentity === 'function') {
+        initGoogleIdentity();
+      }
+    }
+  });
 }
 
 // ==============================================================================
@@ -52,7 +162,45 @@ async function ensureBackendConfig() {
   return window.ZETA_CONFIG;
 }
 
+// Synchronously restore cached Blogger auth state from localStorage to eliminate UI flicker (0ms delay)
+function restoreCachedBloggerState() {
+  try {
+    const cachedConnected = AuthStorage.get('zeta_blogger_connected') || (typeof localStorage !== 'undefined' ? localStorage.getItem('zeta_blogger_connected') : null);
+    const cachedConfigStr = AuthStorage.get('zeta_blogger_config') || (typeof localStorage !== 'undefined' ? localStorage.getItem('zeta_blogger_config') : null);
+    if (cachedConfigStr) {
+      try {
+        const parsed = JSON.parse(cachedConfigStr);
+        if (parsed && typeof parsed === 'object') {
+          bloggerConfig = Object.assign({}, bloggerConfig, parsed);
+        }
+      } catch (_) {}
+    }
+
+    if (cachedConnected === 'true' || (bloggerConfig && (bloggerConfig.accessToken || bloggerConfig.isConnected))) {
+      const dot = document.getElementById('bloggerDot');
+      const txt = document.getElementById('bloggerStatusText');
+      const oauthBadge = document.getElementById('oauthStatusBadge');
+      if (dot) {
+        dot.className = 'w-2 h-2 rounded-full bg-emerald-400';
+      }
+      if (txt) {
+        txt.innerText = 'Blogger Connected';
+      }
+      if (oauthBadge) {
+        oauthBadge.className = 'px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300';
+        oauthBadge.innerText = 'Connected';
+      }
+    }
+  } catch (_) {}
+}
+if (typeof window !== 'undefined') {
+  window.restoreCachedBloggerState = restoreCachedBloggerState;
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
+  // Synchronously restore cached Blogger connection state immediately (0ms visual flicker)
+  restoreCachedBloggerState();
+
   initNavigation();
   setupEventListeners();
 
@@ -66,12 +214,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
-  // 2. Only if authenticated, load dashboard data
-  initBloggerConfig();
-  await Promise.all([loadMatches(), loadStreams()]);
-  renderLeaguesGrid();
-  initSettingsHub();
-  initAuditLogs();
+  // 2. Only if authenticated and not already loaded, load dashboard data
+  if (!isDashboardDataLoaded) {
+    isDashboardDataLoaded = true;
+    initBloggerConfig();
+    await Promise.all([loadMatches(), loadStreams()]);
+    renderLeaguesGrid();
+    initSettingsHub();
+    initAuditLogs();
+  }
 });
 
 // --- URL ROUTING & NAVIGATION TABS ---
@@ -111,11 +262,46 @@ function getRouteFromUrl() {
   return ROUTE_ALIASES[raw] || 'dashboard';
 }
 
+// --- MOBILE OFFCANVAS DRAWER CONTROLS ---
+function openMobileSidebar() {
+  const sidebar = document.getElementById('adminSidebar');
+  const backdrop = document.getElementById('sidebarMobileBackdrop');
+  if (sidebar) {
+    sidebar.classList.remove('-translate-x-full');
+    sidebar.classList.add('translate-x-0');
+  }
+  if (backdrop) {
+    backdrop.classList.remove('hidden');
+  }
+}
+
+function closeMobileSidebar() {
+  const sidebar = document.getElementById('adminSidebar');
+  const backdrop = document.getElementById('sidebarMobileBackdrop');
+  if (sidebar) {
+    sidebar.classList.remove('translate-x-0');
+    sidebar.classList.add('-translate-x-full');
+  }
+  if (backdrop) {
+    backdrop.classList.add('hidden');
+  }
+}
+
+function toggleMobileSidebar() {
+  const sidebar = document.getElementById('adminSidebar');
+  if (sidebar && sidebar.classList.contains('translate-x-0')) {
+    closeMobileSidebar();
+  } else {
+    openMobileSidebar();
+  }
+}
+
 function navigateToTab(tabId, updateUrl = true) {
   const targetTab = ROUTE_ALIASES[tabId] || (ROUTE_TITLES[tabId] ? tabId : 'dashboard');
   const navButtons = document.querySelectorAll('.nav-btn');
   const sections = document.querySelectorAll('.tab-content');
   const titleEl = document.getElementById('currentSectionTitle');
+  const mobileTitleEl = document.getElementById('mobileSectionTitle');
 
   navButtons.forEach(b => {
     b.classList.remove('active', 'bg-zinc-800', 'text-zinc-100', 'bg-[#0062b2]', 'text-white');
@@ -138,6 +324,23 @@ function navigateToTab(tabId, updateUrl = true) {
 
   if (titleEl) titleEl.innerText = ROUTE_TITLES[targetTab] || 'Admin Portal v3';
 
+  // Synchronize mobile top bar section title
+  if (mobileTitleEl) {
+    const shortTitles = {
+      'dashboard': 'Dashboard',
+      'matches': 'Match Center',
+      'streams': 'Streams',
+      'blogger-config': 'Blogger & AI',
+      'leagues': 'Competitions',
+      'settings-hub': 'Settings Hub',
+      'audit-logs': 'Audit Logs'
+    };
+    mobileTitleEl.innerText = shortTitles[targetTab] || ROUTE_TITLES[targetTab] || 'ZetaAdmin';
+  }
+
+  // Auto-close mobile drawer on navigation
+  closeMobileSidebar();
+
   if (updateUrl) {
     const newPath = targetTab === 'dashboard' ? '/' : `/${targetTab}`;
     if (window.location.pathname !== newPath) {
@@ -152,6 +355,31 @@ function navigateToTab(tabId, updateUrl = true) {
 
 function initNavigation() {
   const navButtons = document.querySelectorAll('.nav-btn');
+
+  // Hamburger toggle button on mobile top bar
+  const toggleBtn = document.getElementById('mobileMenuToggleBtn');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMobileSidebar();
+    });
+  }
+
+  // Mobile sidebar backdrop overlay tap to close
+  const backdrop = document.getElementById('sidebarMobileBackdrop');
+  if (backdrop) {
+    backdrop.addEventListener('click', () => {
+      closeMobileSidebar();
+    });
+  }
+
+  // Close button inside sidebar header on mobile
+  const closeSidebarBtn = document.getElementById('closeMobileSidebarBtn');
+  if (closeSidebarBtn) {
+    closeSidebarBtn.addEventListener('click', () => {
+      closeMobileSidebar();
+    });
+  }
 
   navButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -189,12 +417,44 @@ function initNavigation() {
 
 // --- BLOGGER CONFIGURATION & STATUS ---
 async function initBloggerConfig() {
+  // Preload from AuthStorage / localStorage to eliminate status pill flicker
+  restoreCachedBloggerState();
+
   try {
     const res = await fetch(getApiUrl('/api/blogger/config'), {
       headers: getAuthHeaders(),
       credentials: 'include'
     });
-    bloggerConfig = await res.json();
+    if (res.ok) {
+      bloggerConfig = await res.json();
+      if (bloggerConfig && (bloggerConfig.accessToken || bloggerConfig.isConnected)) {
+        const safeCache = {
+          accessToken: bloggerConfig.accessToken || '',
+          blogId: bloggerConfig.blogId || '',
+          targetBlogIds: bloggerConfig.targetBlogIds || [],
+          blogsList: bloggerConfig.blogsList || [],
+          isConnected: true,
+          detailsBlogDomain: bloggerConfig.detailsBlogDomain || '',
+          streamBlogDomain: bloggerConfig.streamBlogDomain || '',
+          thumbnailMode: bloggerConfig.thumbnailMode || 'auto'
+        };
+        AuthStorage.set('zeta_blogger_config', JSON.stringify(safeCache));
+        AuthStorage.set('zeta_blogger_connected', 'true');
+        try {
+          if (typeof localStorage !== 'undefined') {
+            localStorage.setItem('zeta_blogger_connected', 'true');
+            localStorage.setItem('zeta_blogger_config', JSON.stringify(safeCache));
+          }
+        } catch (_) {}
+      } else {
+        AuthStorage.set('zeta_blogger_connected', 'false');
+        try {
+          if (typeof localStorage !== 'undefined') {
+            localStorage.setItem('zeta_blogger_connected', 'false');
+          }
+        } catch (_) {}
+      }
+    }
 
     const idEl = document.getElementById('cfgBlogId');
     const tokenEl = document.getElementById('cfgAccessToken');
@@ -356,7 +616,7 @@ function updateStatusPills() {
   const gemPill = document.getElementById('geminiStatusPill');
   const oauthBadge = document.getElementById('oauthStatusBadge');
 
-  if (bloggerConfig.accessToken) {
+  if (bloggerConfig.accessToken || bloggerConfig.isConnected) {
     if (dot) dot.className = 'w-2 h-2 rounded-full bg-emerald-400';
     if (txt) txt.innerText = 'Blogger Connected';
     if (oauthBadge) {
@@ -809,11 +1069,11 @@ function renderMatches() {
               </div>
 
               <!-- Bottom Row: Quick Add Button & Drawer Trigger -->
-              <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80">
-                <button type="button" class="add-to-domain-btn h-7 px-2.5 rounded-md bg-zinc-100 hover:bg-zinc-200 text-zinc-900 font-medium text-[11px] shadow-sm transition-colors flex items-center gap-1" data-id="${m.id}">
+              <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-zinc-800/80">
+                <button type="button" class="add-to-domain-btn min-h-[44px] px-3.5 rounded-md bg-zinc-100 hover:bg-zinc-200 text-zinc-900 font-medium text-xs shadow-sm transition-colors flex items-center gap-1.5" data-id="${m.id}" title="1-tap touch action to list on site without drag & drop">
                   <span>+ List on Site</span>
                 </button>
-                <button type="button" class="open-drawer-btn h-7 px-2 rounded-md border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-100 font-medium text-[11px] transition-colors flex items-center gap-1" data-id="${m.id}" title="Configure all settings for this match">
+                <button type="button" class="open-drawer-btn min-h-[44px] px-3 rounded-md border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-100 font-medium text-xs transition-colors flex items-center gap-1.5" data-id="${m.id}" title="Configure all settings for this match">
                   <span>⚙️ Settings</span>
                 </button>
               </div>
@@ -878,25 +1138,25 @@ function renderMatches() {
               </div>
 
               <!-- Action Bar: Publish Status, Drawer Trigger, Unlist -->
-              <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80 text-xs">
-                <div class="flex items-center gap-1.5">
+              <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-zinc-800/80 text-xs">
+                <div class="flex flex-wrap items-center gap-1.5">
                   ${hasPost
-                    ? `<a href="${postUrl}" target="_blank" class="h-7 px-2.5 rounded-md text-[11px] font-medium bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30 transition-colors flex items-center gap-1">
+                    ? `<a href="${postUrl}" target="_blank" class="min-h-[44px] px-3 rounded-md text-xs font-medium bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30 transition-colors flex items-center gap-1">
                         <span>View ↗</span>
                        </a>
-                       <button type="button" class="sync-ft-btn h-7 w-7 rounded-md text-[11px] font-medium bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 transition-colors flex items-center justify-center" data-id="${m.id}" title="Re-sync post">
+                       <button type="button" class="sync-ft-btn min-h-[44px] min-w-[44px] rounded-md text-xs font-medium bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 transition-colors flex items-center justify-center" data-id="${m.id}" title="Re-sync post">
                         <span>🔄</span>
                        </button>`
-                    : `<button type="button" class="publish-btn h-7 px-2.5 rounded-md text-[11px] font-medium bg-zinc-100 hover:bg-zinc-200 text-zinc-900 shadow-sm transition-colors flex items-center gap-1" data-id="${m.id}">
+                    : `<button type="button" class="publish-btn min-h-[44px] px-3.5 rounded-md text-xs font-medium bg-zinc-100 hover:bg-zinc-200 text-zinc-900 shadow-sm transition-colors flex items-center gap-1.5" data-id="${m.id}">
                         <span>⚡ Publish</span>
                        </button>`
                   }
-                  <button type="button" class="open-drawer-btn h-7 px-2 rounded-md border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-100 font-medium text-[11px] transition-colors" data-id="${m.id}" title="Open full match settings (Streams, AI Thumbnail, Blogger)">
+                  <button type="button" class="open-drawer-btn min-h-[44px] px-3 rounded-md border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-100 font-medium text-xs transition-colors flex items-center gap-1.5" data-id="${m.id}" title="Open full match settings (Streams, AI Thumbnail, Blogger)">
                     <span>⚙️ Studio</span>
                   </button>
                 </div>
 
-                <button type="button" class="remove-from-domain-btn h-7 px-2 rounded-md text-zinc-400 hover:text-red-400 hover:bg-zinc-800 text-[11px] transition-colors" data-id="${m.id}" title="Unlist from Main Domain and return to Available Inbox">
+                <button type="button" class="remove-from-domain-btn min-h-[44px] px-3 rounded-md text-zinc-400 hover:text-red-400 hover:bg-zinc-800 text-xs font-medium transition-colors flex items-center gap-1" data-id="${m.id}" title="Unlist from Main Domain and return to Available Inbox (1-tap touch action)">
                   <span>✕ Unlist</span>
                 </button>
               </div>
@@ -983,10 +1243,10 @@ function renderMatches() {
               <span class="px-2 py-0.5 rounded text-[10px] font-bold ${m.is_approved ? 'bg-emerald-500/20 text-emerald-300' : 'bg-white/5 text-slate-400'}">${m.is_approved ? '✔ Listed' : 'Available'}</span>
             </td>
             <td class="px-5 py-3 text-center">
-              ${hasPost ? `<a href="${postUrl}" target="_blank" class="text-xs text-emerald-400 font-bold">View ↗</a>` : `<button type="button" class="publish-btn text-xs text-sky-400 font-bold" data-id="${m.id}">Publish</button>`}
+              ${hasPost ? `<a href="${postUrl}" target="_blank" class="min-h-[44px] px-3 py-2 inline-flex items-center justify-center text-xs text-emerald-400 font-bold">View ↗</a>` : `<button type="button" class="publish-btn min-h-[44px] px-3 py-2 inline-flex items-center justify-center text-xs text-sky-400 font-bold" data-id="${m.id}">Publish</button>`}
             </td>
             <td class="px-5 py-3 text-right">
-              <button type="button" class="open-drawer-btn px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 text-xs font-semibold text-white" data-id="${m.id}">⚙️ Settings</button>
+              <button type="button" class="open-drawer-btn min-h-[44px] px-3 py-2 rounded bg-white/5 hover:bg-white/10 text-xs font-semibold text-white inline-flex items-center justify-center" data-id="${m.id}">⚙️ Settings</button>
             </td>
           </tr>
         `;
@@ -2357,7 +2617,7 @@ function renderStreamsTable() {
       <td class="px-5 py-3 text-xs font-mono text-slate-400 truncate max-w-xs">${s.server2_url || '-'}</td>
       <td class="px-5 py-3 text-xs font-mono text-slate-400 truncate max-w-xs">${s.server3_url || '-'}</td>
       <td class="px-5 py-3 text-right">
-        <button class="px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 text-xs font-semibold text-white">Edit</button>
+        <button class="min-h-[44px] px-3.5 py-2 rounded-md bg-white/5 hover:bg-white/10 text-xs font-semibold text-white">Edit</button>
       </td>
     </tr>
   `).join('');
@@ -2441,7 +2701,7 @@ async function renderLeaguesGrid() {
           </div>
         </div>
       </div>
-      <button type="button" class="filter-league-btn opacity-0 group-hover:opacity-100 text-[11px] text-zinc-400 hover:text-zinc-100 px-2 py-1 rounded bg-zinc-800 hover:bg-zinc-700 transition-all shrink-0" data-league="${l.name}">
+      <button type="button" class="filter-league-btn opacity-100 sm:opacity-0 sm:group-hover:opacity-100 min-h-[44px] px-3 text-xs text-zinc-300 hover:text-zinc-100 rounded-md bg-zinc-800 hover:bg-zinc-700 transition-all shrink-0 flex items-center justify-center font-medium" data-league="${l.name}">
         Filter
       </button>
     </div>
@@ -2738,6 +2998,10 @@ function setupEventListeners() {
         const data = await res.json();
         if (data.success) {
           bloggerConfig = data.config;
+          if (bloggerConfig && bloggerConfig.accessToken) {
+            AuthStorage.set('zeta_blogger_config', JSON.stringify(bloggerConfig));
+            AuthStorage.set('zeta_blogger_connected', 'true');
+          }
           updateStatusPills();
           showToast(`✔ Configuration saved! Targeting ${targetBlogIds.length} Blogger blog${targetBlogIds.length !== 1 ? 's' : ''}.`, 'success');
         }
@@ -2977,8 +3241,40 @@ function showToast(message, type = 'info') {
 // GOOGLE IDENTITY SERVICES AUTHENTICATION & ZERO-TRUST REVEAL
 // ==============================================================================
 let currentAdminUser = null;
+let isDashboardDataLoaded = false;
+if (typeof window !== 'undefined') {
+  Object.defineProperty(window, 'currentAdminUser', {
+    get: () => currentAdminUser,
+    set: (v) => { currentAdminUser = v; },
+    configurable: true
+  });
+  Object.defineProperty(window, 'isDashboardDataLoaded', {
+    get: () => isDashboardDataLoaded,
+    set: (v) => { isDashboardDataLoaded = v; },
+    configurable: true
+  });
+}
 
-function unlockDashboard(user) {
+function lockDashboard() {
+  const modal = document.getElementById('googleLoginGateModal');
+  const appContainer = document.getElementById('adminPortalApp');
+  const badge = document.getElementById('adminUserBadge');
+  if (modal) {
+    modal.style.removeProperty('display');
+    modal.classList.remove('hidden');
+    modal.style.setProperty('display', 'flex', 'important');
+  }
+  if (appContainer) {
+    appContainer.classList.add('hidden');
+    appContainer.style.setProperty('display', 'none', 'important');
+  }
+  if (badge) {
+    badge.classList.add('hidden');
+    badge.classList.remove('inline-flex');
+  }
+}
+
+function unlockDashboard(user, loadData = true) {
   if (!user) user = { name: 'Admin', email: 'admin@zetasports' };
   currentAdminUser = user;
 
@@ -3007,41 +3303,71 @@ function unlockDashboard(user) {
   const currentRoute = getRouteFromUrl();
   navigateToTab(currentRoute, false);
 
-  // Load operational data
-  initBloggerConfig();
-  loadMatches();
-  loadStreams();
-  renderLeaguesGrid();
-  initSettingsHub();
-  initAuditLogs();
+  // Load operational data only if loadData is true and not already loaded
+  if (loadData && !isDashboardDataLoaded) {
+    isDashboardDataLoaded = true;
+    initBloggerConfig();
+    loadMatches();
+    loadStreams();
+    renderLeaguesGrid();
+    initSettingsHub();
+    initAuditLogs();
+  }
 }
 
 async function checkAuthStatus() {
-  const modal = document.getElementById('googleLoginGateModal');
-  const appContainer = document.getElementById('adminPortalApp');
+  // 1. Instant session restore from persistent storage (localStorage with sessionStorage fallback)
+  const savedToken = AuthStorage.get('zeta_bearer_token');
+  const savedUserStr = AuthStorage.get('zeta_admin_user');
 
-  // 1. Instant session restore from local session storage
-  const savedToken = sessionStorage.getItem('zeta_bearer_token');
-  const savedUserStr = sessionStorage.getItem('zeta_admin_user');
   if (savedToken) {
-    try {
-      const savedUser = savedUserStr ? JSON.parse(savedUserStr) : { name: 'Admin', email: 'admin' };
-      unlockDashboard(savedUser);
-      // Validate in background without blocking or re-locking UI
-      fetch(getApiUrl('/api/auth/me'), { headers: getAuthHeaders(), credentials: 'include' })
-        .then(r => r.json())
-        .then(data => {
-          if (data && data.user) {
-            currentAdminUser = data.user;
-            sessionStorage.setItem('zeta_admin_user', JSON.stringify(data.user));
-          }
-        })
-        .catch(() => {});
-      return true;
-    } catch (_) {}
+    // Cybersecurity: verify token has not expired
+    if (isTokenExpired(savedToken)) {
+      console.warn('[Admin Portal] Saved session token is expired. Purging storage.');
+      AuthStorage.clear();
+    } else {
+      try {
+        const savedUser = savedUserStr ? JSON.parse(savedUserStr) : { name: 'Admin', email: 'admin' };
+        // Unlock UI instantly without double loading data (DOMContentLoaded handles operational data)
+        unlockDashboard(savedUser, false);
+
+        // Validate in background against serverless backend without blocking UI
+        fetch(getApiUrl('/api/auth/me'), { headers: getAuthHeaders(), credentials: 'include' })
+          .then(async r => {
+            if (r.status === 401 || r.status === 403) {
+              console.warn('[Admin Portal] Background auth rejected session. Relocking dashboard.');
+              AuthStorage.clear();
+              currentAdminUser = null;
+              isDashboardDataLoaded = false;
+              lockDashboard();
+              initGoogleIdentity();
+              return;
+            }
+            const data = await r.json();
+            if (data && data.authenticated && data.user) {
+              currentAdminUser = data.user;
+              AuthStorage.set('zeta_admin_user', JSON.stringify(data.user));
+            } else if (data && data.authenticated === false) {
+              console.warn('[Admin Portal] Server reported unauthenticated session.');
+              AuthStorage.clear();
+              currentAdminUser = null;
+              isDashboardDataLoaded = false;
+              lockDashboard();
+              initGoogleIdentity();
+            }
+          })
+          .catch((err) => {
+            console.warn('[Admin Portal] Background session check network warning:', err);
+          });
+
+        return true;
+      } catch (_) {
+        AuthStorage.clear();
+      }
+    }
   }
 
-  // 2. Query remote auth session if no saved token
+  // 2. Query remote auth session if no saved token (e.g. cookie-based session)
   try {
     const res = await fetch(getApiUrl('/api/auth/me'), {
       headers: getAuthHeaders(),
@@ -3050,25 +3376,25 @@ async function checkAuthStatus() {
     if (res.ok) {
       const data = await res.json();
       if (data.authenticated && data.user) {
-        sessionStorage.setItem('zeta_admin_user', JSON.stringify(data.user));
-        unlockDashboard(data.user);
+        if (data.token) {
+          AuthStorage.set('zeta_bearer_token', data.token);
+        }
+        AuthStorage.set('zeta_admin_user', JSON.stringify(data.user));
+        unlockDashboard(data.user, false);
         return true;
       }
     }
   } catch (_) {}
 
-  // Unauthenticated: Show Google Login Gate & Hide Dashboard
-  if (modal) {
-    modal.style.removeProperty('display');
-    modal.classList.remove('hidden');
-  }
-  if (appContainer) {
-    appContainer.classList.add('hidden');
-  }
-  const badge = document.getElementById('adminUserBadge');
-  if (badge) badge.classList.add('hidden');
+  // 3. Unauthenticated: Lock dashboard & render Google Login Gate
+  lockDashboard();
   initGoogleIdentity();
   return false;
+}
+if (typeof window !== 'undefined') {
+  window.lockDashboard = lockDashboard;
+  window.unlockDashboard = unlockDashboard;
+  window.checkAuthStatus = checkAuthStatus;
 }
 
 async function initGoogleIdentity() {
@@ -3142,17 +3468,17 @@ async function handleGoogleCredentialResponse(response) {
 
     if (res.ok && data.success) {
       if (data.token) {
-        sessionStorage.setItem('zeta_bearer_token', data.token);
+        AuthStorage.set('zeta_bearer_token', data.token);
       }
       if (data.user) {
-        sessionStorage.setItem('zeta_admin_user', JSON.stringify(data.user));
+        AuthStorage.set('zeta_admin_user', JSON.stringify(data.user));
       }
       if (feedback) feedback.innerHTML = '<span class="text-emerald-400 font-bold">✔ Access Granted! Entering portal...</span>';
       showToast('✔ Successfully authenticated with Google!', 'success');
 
       // Immediately unlock the dashboard without waiting or risking secondary check failure
       setTimeout(() => {
-        unlockDashboard(data.user || { name: 'Admin', email: 'admin' });
+        unlockDashboard(data.user || { name: 'Admin', email: 'admin' }, true);
       }, 300);
     } else {
       const err = data.error || 'Authentication rejected by security gate.';
@@ -3168,11 +3494,30 @@ async function handleGoogleCredentialResponse(response) {
 document.getElementById('adminSignOutBtn')?.addEventListener('click', async () => {
   if (confirm('Are you sure you want to sign out of the ZetaSports Admin Portal?')) {
     try {
-      await fetch(getApiUrl('/api/auth/logout'), { method: 'POST' });
+      await fetch(getApiUrl('/api/auth/logout'), {
+        method: 'POST',
+        headers: getAuthHeaders(),
+        credentials: 'include'
+      });
     } catch (_) {}
-    sessionStorage.removeItem('zeta_bearer_token');
-    sessionStorage.removeItem('zeta_admin_user');
-    window.location.href = '/';
+
+    // Comprehensive purge of both localStorage and sessionStorage
+    AuthStorage.clear();
+    currentAdminUser = null;
+    bloggerConfig = {};
+    allMatches = [];
+    allStreams = [];
+    isDashboardDataLoaded = false;
+
+    // Disable Google auto-select if API is present
+    try {
+      if (window.google?.accounts?.id?.disableAutoSelect) {
+        window.google.accounts.id.disableAutoSelect();
+      }
+    } catch (_) {}
+
+    // Redirect cleanly without retaining back history
+    window.location.replace('/');
   }
 });
 
