@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-11-08T12:51:03.578Z",
+  "updatedAt": "2026-11-08T21:44:37.400Z",
   "table": [
     {
       "position": 1,
@@ -10,14 +10,14 @@
       "teamName": "FC Porto",
       "shortName": "FC Porto",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9773.png",
-      "played": 10,
-      "won": 10,
+      "played": 11,
+      "won": 11,
       "drawn": 0,
       "lost": 0,
-      "goalsFor": 25,
-      "goalsAgainst": 4,
-      "goalDifference": 21,
-      "points": 30,
+      "goalsFor": 27,
+      "goalsAgainst": 5,
+      "goalDifference": 22,
+      "points": 33,
       "form": [
         "#2AD572"
       ]
@@ -28,17 +28,18 @@
       "teamName": "Benfica",
       "shortName": "Benfica",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
-      "played": 10,
+      "played": 11,
       "won": 8,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 1,
-      "goalsFor": 27,
-      "goalsAgainst": 8,
+      "goalsFor": 28,
+      "goalsAgainst": 9,
       "goalDifference": 19,
-      "points": 25,
+      "points": 26,
       "form": [
         "#2AD572"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 3,
@@ -64,13 +65,13 @@
       "teamName": "Santa Clara",
       "shortName": "Santa Clara",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1567.png",
-      "played": 10,
+      "played": 11,
       "won": 6,
       "drawn": 3,
-      "lost": 1,
-      "goalsFor": 15,
-      "goalsAgainst": 6,
-      "goalDifference": 9,
+      "lost": 2,
+      "goalsFor": 16,
+      "goalsAgainst": 8,
+      "goalDifference": 8,
       "points": 21,
       "form": [
         "#0294F0"
@@ -100,13 +101,13 @@
       "teamName": "Académico Viseu",
       "shortName": "Académico Viseu",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1786.png",
-      "played": 10,
+      "played": 11,
       "won": 6,
       "drawn": 2,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 15,
-      "goalsAgainst": 12,
-      "goalDifference": 3,
+      "goalsAgainst": 13,
+      "goalDifference": 2,
       "points": 20
     },
     {
@@ -115,14 +116,14 @@
       "teamName": "Gil Vicente",
       "shortName": "Gil Vicente",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9764.png",
-      "played": 10,
-      "won": 4,
+      "played": 11,
+      "won": 5,
       "drawn": 3,
       "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 7,
-      "goalDifference": 1,
-      "points": 15
+      "goalsFor": 10,
+      "goalsAgainst": 8,
+      "goalDifference": 2,
+      "points": 18
     },
     {
       "position": 8,
@@ -130,14 +131,15 @@
       "teamName": "Braga",
       "shortName": "Braga",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
-      "played": 10,
+      "played": 11,
       "won": 4,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 4,
       "goalsFor": 12,
       "goalsAgainst": 11,
       "goalDifference": 1,
-      "points": 14
+      "points": 15,
+      "qualificationZone": "Active"
     },
     {
       "position": 9,
@@ -190,32 +192,48 @@
       "teamName": "Estrela da Amadora",
       "shortName": "Estrela da Amadora",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1074320.png",
-      "played": 10,
+      "played": 11,
       "won": 2,
-      "drawn": 4,
+      "drawn": 5,
       "lost": 4,
-      "goalsFor": 15,
-      "goalsAgainst": 19,
+      "goalsFor": 16,
+      "goalsAgainst": 20,
       "goalDifference": -4,
-      "points": 10
+      "points": 11,
+      "qualificationZone": "Active"
     },
     {
       "position": 13,
+      "teamId": "10214",
+      "teamName": "Nacional",
+      "shortName": "Nacional",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10214.png",
+      "played": 11,
+      "won": 3,
+      "drawn": 1,
+      "lost": 7,
+      "goalsFor": 11,
+      "goalsAgainst": 19,
+      "goalDifference": -8,
+      "points": 10
+    },
+    {
+      "position": 14,
       "teamId": "7844",
       "teamName": "Vitória de Guimarães",
       "shortName": "Vitória de Guimarães",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7844.png",
-      "played": 10,
+      "played": 11,
       "won": 2,
       "drawn": 3,
-      "lost": 5,
-      "goalsFor": 10,
-      "goalsAgainst": 10,
-      "goalDifference": 0,
+      "lost": 6,
+      "goalsFor": 11,
+      "goalsAgainst": 12,
+      "goalDifference": -1,
       "points": 9
     },
     {
-      "position": 14,
+      "position": 15,
       "teamId": "10212",
       "teamName": "Marítimo",
       "shortName": "Marítimo",
@@ -230,7 +248,26 @@
       "points": 8
     },
     {
-      "position": 15,
+      "position": 16,
+      "teamId": "7841",
+      "teamName": "Rio Ave",
+      "shortName": "Rio Ave",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7841.png",
+      "played": 11,
+      "won": 2,
+      "drawn": 2,
+      "lost": 7,
+      "goalsFor": 9,
+      "goalsAgainst": 23,
+      "goalDifference": -14,
+      "points": 8,
+      "form": [
+        "#FFA72F"
+      ],
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 17,
       "teamId": "212821",
       "teamName": "Casa Pia AC",
       "shortName": "Casa Pia AC",
@@ -242,40 +279,7 @@
       "goalsFor": 6,
       "goalsAgainst": 20,
       "goalDifference": -14,
-      "points": 8
-    },
-    {
-      "position": 16,
-      "teamId": "7841",
-      "teamName": "Rio Ave",
-      "shortName": "Rio Ave",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7841.png",
-      "played": 10,
-      "won": 2,
-      "drawn": 1,
-      "lost": 7,
-      "goalsFor": 9,
-      "goalsAgainst": 23,
-      "goalDifference": -14,
-      "points": 7,
-      "form": [
-        "#FFA72F"
-      ]
-    },
-    {
-      "position": 17,
-      "teamId": "10214",
-      "teamName": "Nacional",
-      "shortName": "Nacional",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10214.png",
-      "played": 10,
-      "won": 2,
-      "drawn": 1,
-      "lost": 7,
-      "goalsFor": 10,
-      "goalsAgainst": 19,
-      "goalDifference": -9,
-      "points": 7,
+      "points": 8,
       "form": [
         "#FF4646"
       ]
