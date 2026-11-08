@@ -2,7 +2,7 @@
   "competitionId": "57",
   "competitionName": "Eredivisie",
   "season": "2026/2027",
-  "updatedAt": "2026-11-07T21:29:47.386Z",
+  "updatedAt": "2026-11-08T04:42:19.179Z",
   "table": [
     {
       "position": 1,
@@ -132,6 +132,21 @@
     },
     {
       "position": 8,
+      "teamId": "6433",
+      "teamName": "Go Ahead Eagles",
+      "shortName": "Go Ahead Eagles",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6433.png",
+      "played": 12,
+      "won": 4,
+      "drawn": 5,
+      "lost": 3,
+      "goalsFor": 24,
+      "goalsAgainst": 27,
+      "goalDifference": -3,
+      "points": 17
+    },
+    {
+      "position": 9,
       "teamId": "8674",
       "teamName": "FC Groningen",
       "shortName": "FC Groningen",
@@ -146,7 +161,7 @@
       "points": 15
     },
     {
-      "position": 9,
+      "position": 10,
       "teamId": "7788",
       "teamName": "Cambuur",
       "shortName": "Cambuur",
@@ -159,22 +174,6 @@
       "goalsAgainst": 22,
       "goalDifference": 1,
       "points": 15
-    },
-    {
-      "position": 10,
-      "teamId": "6433",
-      "teamName": "Go Ahead Eagles",
-      "shortName": "Go Ahead Eagles",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6433.png",
-      "played": 12,
-      "won": 3,
-      "drawn": 6,
-      "lost": 3,
-      "goalsFor": 23,
-      "goalsAgainst": 27,
-      "goalDifference": -4,
-      "points": 15,
-      "qualificationZone": "Active"
     },
     {
       "position": 11,
@@ -223,22 +222,6 @@
     },
     {
       "position": 14,
-      "teamId": "10218",
-      "teamName": "Excelsior",
-      "shortName": "Excelsior",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10218.png",
-      "played": 12,
-      "won": 3,
-      "drawn": 3,
-      "lost": 6,
-      "goalsFor": 16,
-      "goalsAgainst": 28,
-      "goalDifference": -12,
-      "points": 12,
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 15,
       "teamId": "8464",
       "teamName": "NEC Nijmegen",
       "shortName": "NEC Nijmegen",
@@ -250,6 +233,21 @@
       "goalsFor": 17,
       "goalsAgainst": 19,
       "goalDifference": -2,
+      "points": 11
+    },
+    {
+      "position": 15,
+      "teamId": "10218",
+      "teamName": "Excelsior",
+      "shortName": "Excelsior",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10218.png",
+      "played": 12,
+      "won": 3,
+      "drawn": 2,
+      "lost": 7,
+      "goalsFor": 16,
+      "goalsAgainst": 29,
+      "goalDifference": -13,
       "points": 11
     },
     {
