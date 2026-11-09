@@ -1717,6 +1717,64 @@ function initMatchControlDrawerControls() {
     });
   }
 
+  // Copy Link Selection URL (Full-Page Refresh to Blog 1)
+  const copyLinksUrlBtn = document.getElementById('drawerCopyLinksUrlBtn');
+  if (copyLinksUrlBtn) {
+    copyLinksUrlBtn.addEventListener('click', async () => {
+      const matchId = document.getElementById('drawerMatchId')?.value;
+      if (!matchId) return;
+
+      const rawDetailsDomain = (bloggerConfig?.detailsBlogDomain || document.getElementById('cfgDetailsDomain')?.value || '').replace(/^https?:\/\//i, '').replace(/\/+$/, '').trim();
+      const domain = rawDetailsDomain ? `https://${rawDetailsDomain}` : (window.location.origin || 'https://www.keralahub.online');
+      const linksUrl = `${domain}/?links=${encodeURIComponent(matchId)}`;
+
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(linksUrl);
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = linksUrl;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        showToast('✔ Link Selection URL copied: ' + linksUrl, 'success');
+      } catch (err) {
+        prompt('Copy Link Selection URL:', linksUrl);
+      }
+    });
+  }
+
+  // Copy Live Stream Player URL (Full-Page Refresh to Blog 2)
+  const copyStreamUrlBtn = document.getElementById('drawerCopyStreamUrlBtn');
+  if (copyStreamUrlBtn) {
+    copyStreamUrlBtn.addEventListener('click', async () => {
+      const matchId = document.getElementById('drawerMatchId')?.value;
+      if (!matchId) return;
+
+      const rawStreamDomain = (bloggerConfig?.streamBlogDomain || document.getElementById('cfgStreamDomain')?.value || '').replace(/^https?:\/\//i, '').replace(/\/+$/, '').trim();
+      const domain = rawStreamDomain ? `https://${rawStreamDomain}` : (window.location.origin || 'https://www.zetasports.live');
+      const streamUrl = `${domain}/?stream=${encodeURIComponent(matchId)}`;
+
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(streamUrl);
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = streamUrl;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        showToast('✔ Stream Player URL copied: ' + streamUrl, 'success');
+      } catch (err) {
+        prompt('Copy Stream URL:', streamUrl);
+      }
+    });
+  }
+
   // Live Stream Player Tester
   const testStreamBtn = document.getElementById('drawerTestStreamBtn');
   if (testStreamBtn) {

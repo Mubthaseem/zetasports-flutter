@@ -1,23 +1,77 @@
-// ── VIEW SWITCHERS & ROUTING ──
+// ── VIEW SWITCHERS & ROUTING (2-BLOGGER CROSS-DOMAIN & FULL-PAGE REFRESH) ──
+    function cleanDomain(d) {
+      if (!d) return '';
+      return String(d).trim().replace(/^https?:\/\//i, '').replace(/\/+$/, '');
+    }
+
+    function getDetailsOrigin() {
+      var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.DETAILS_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.detailsBlogDomain);
+      var cd = cleanDomain(d);
+      if (cd) return 'https://' + cd;
+      return window.location.origin;
+    }
+
+    function getStreamOrigin() {
+      var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.STREAM_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.streamBlogDomain);
+      var cd = cleanDomain(d);
+      if (cd) return 'https://' + cd;
+      return window.location.origin;
+    }
+
+    function getHomeUrl() {
+      return getDetailsOrigin() + '/';
+    }
+
+    function getMatchPostUrl(matchOrId) {
+      var mId = (typeof matchOrId === 'object' && matchOrId) ? matchOrId.id : matchOrId;
+      var match = (typeof matchOrId === 'object' && matchOrId) ? matchOrId : (allMatches ? allMatches.find(function(m){ return String(m.id) === String(mId); }) : null);
+      if (match && match.article_url && match.article_url.startsWith('http')) {
+        return match.article_url;
+      }
+      return getDetailsOrigin() + '/?match=' + encodeURIComponent(mId);
+    }
+
+    function getLinksUrl(matchId) {
+      // Link Selection Gateway lives on Blogger Blog 1 (Details Domain)
+      return getDetailsOrigin() + '/?links=' + encodeURIComponent(matchId);
+    }
+
+    function getStreamUrl(matchId, serverIdx) {
+      // Stream Video Player lives on Blogger Blog 2 (Stream Domain)
+      var sIdx = (serverIdx != null && serverIdx !== undefined) ? serverIdx : 0;
+      return getStreamOrigin() + '/?stream=' + encodeURIComponent(matchId) + '&server=' + sIdx;
+    }
+
     window.goHome = function() {
-      window.history.pushState(null, '', '/');
-      document.title = 'ZetaSports — Live Football Scores, Today Matches & Streams';
-      showView('home');
-      stopStream();
+      window.location.href = getHomeUrl();
     };
 
     window.returnToMatch = function() {
       if (currentMatchId) {
-        window.openMatchPage(currentMatchId, true);
+        window.location.href = getMatchPostUrl(currentMatchId);
       } else {
-        goHome();
+        window.location.href = getHomeUrl();
+      }
+    };
+
+    window.returnToLinks = function() {
+      if (currentMatchId) {
+        window.location.href = getLinksUrl(currentMatchId);
+      } else {
+        window.location.href = getHomeUrl();
       }
     };
 
     function showView(viewName) {
-      document.getElementById('homeView').style.display = viewName === 'home' ? 'block' : 'none';
-      document.getElementById('matchView').style.display = viewName === 'match' ? 'block' : 'none';
-      document.getElementById('streamView').style.display = viewName === 'stream' ? 'block' : 'none';
+      var homeEl = document.getElementById('homeView');
+      var matchEl = document.getElementById('matchView');
+      var linksEl = document.getElementById('linksView');
+      var streamEl = document.getElementById('streamView');
+
+      if (homeEl) homeEl.style.display = (viewName === 'home') ? 'block' : 'none';
+      if (matchEl) matchEl.style.display = (viewName === 'match') ? 'block' : 'none';
+      if (linksEl) linksEl.style.display = (viewName === 'links') ? 'block' : 'none';
+      if (streamEl) streamEl.style.display = (viewName === 'stream') ? 'block' : 'none';
     }
 
     function extractMatchId(str) {
@@ -26,7 +80,7 @@
       var match = str.match(uuidRegex);
       if (match) return match[0];
 
-      for (var i = 0; i < allMatches.length; i++) {
+      for (var i = 0; i < (allMatches || []).length; i++) {
         if (str.indexOf(String(allMatches[i].id)) !== -1) {
           return allMatches[i].id;
         }
@@ -239,17 +293,9 @@
         '<!-- TAB PANE 1: OVERVIEW -->' +
         '<div class="mtab-pane active" id="mpane-overview">' +
           '<div class="watch-action-box" style="border-radius:14px;margin-bottom:14px;">' +
-            '<button class="btn-watch-stream" id="watchBtn" onclick="startStreamCountdown(\'' + match.id + '\')">' +
-              '<span>▶</span> ' + (hasLiveStream ? ('Watch Live Stream HD (' + mServers.length + ' Server' + (mServers.length > 1 ? 's' : '') + ' Online)') : 'Live Match Stream (Starts at Kickoff)') +
-            '</button>' +
-
-            '<div class="countdown-box" id="countdownBox">' +
-              '<div style="font-size:15px;font-weight:800;">Connecting to Live HD Broadcast Server...</div>' +
-              '<div style="font-size:13px;color:#64748b;margin-top:4px;">Redirecting you to stream player at <code>/stream/' + match.id + '</code> in:</div>' +
-              '<div class="countdown-timer-circle" id="countTimer">5</div>' +
-              '<div class="progress-bar-wrap"><div class="progress-bar-fill" id="countBar"></div></div>' +
-              '<div style="font-size:12px;color:#64748b;font-weight:600;">Preparing HD adaptive video feed with zero delay...</div>' +
-            '</div>' +
+            '<a href="' + getLinksUrl(match.id) + '" class="btn-watch-stream" id="watchBtn" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">' +
+              '<span>▶</span> ' + (hasLiveStream ? ('Select Live Stream Server (' + mServers.length + ' Channels Online)') : 'Live Stream Gateway (Starts at Kickoff)') +
+            '</a>' +
           '</div>' +
 
           '<!-- Fan Prediction Poll (Feature #1) -->' +
@@ -441,26 +487,7 @@
 
     // ── 5-SECOND COUNTDOWN & REDIRECT TO STREAM PAGE ──
     window.startStreamCountdown = function(matchId) {
-      var btn = document.getElementById('watchBtn');
-      var box = document.getElementById('countdownBox');
-      if (btn) btn.style.display = 'none';
-      if (box) box.style.display = 'block';
-
-      var count = 5;
-      var timerEl = document.getElementById('countTimer');
-      var barEl = document.getElementById('countBar');
-      if (timerEl) timerEl.textContent = count;
-      if (barEl) barEl.style.width = '100%';
-
-      var interval = setInterval(function() {
-        count--;
-        if (timerEl) timerEl.textContent = count;
-        if (barEl) barEl.style.width = (count / 5 * 100) + '%';
-        if (count <= 0) {
-          clearInterval(interval);
-          openStreamPage(matchId, true);
-        }
-      }, 1000);
+      window.location.href = getLinksUrl(matchId);
     };
 
     // ── STREAM SERVER DETECTION & DYNAMIC SERVER RESOLVER (ZERO MOCK STREAMS) ──
@@ -573,14 +600,155 @@
       return servers;
     }
 
-    // ── ROUTE 2: DEDICATED STREAMING PAGE WITH DYNAMIC MULTI-SERVER (domain.com/stream/id) ──
-    window.openStreamPage = function(matchId, pushState) {
+    // ── ROUTE 1.5: DEDICATED LINK SELECTION GATEWAY (domain.com/?links=id) ──
+    window.openLinksPage = function(matchId, pushState) {
       var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
       if (!match) return;
 
       currentMatchId = match.id;
+      stopStream();
+
       if (pushState !== false) {
-        window.history.pushState({ streamId: match.id }, '', '/stream/' + match.id);
+        window.history.pushState({ linksId: match.id }, '', '/?links=' + encodeURIComponent(match.id));
+      }
+
+      var homeName = match.home_team || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'Home Team';
+      var awayName = match.away_team || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].name) || 'Away Team';
+      var homeLogo = match.home_logo || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png';
+      var awayLogo = match.away_logo || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png';
+      var leagueName = match.league_name || (leaguesMap[match.league_id] && leaguesMap[match.league_id].name) || 'Live Match Center';
+
+      document.title = 'Watch Live Links: ' + homeName + ' vs ' + awayName + ' | ZetaSports';
+
+      var liveInfo = getMatchLiveInfo(match);
+      var isLive = liveInfo.isLive;
+      var statusClass = liveInfo.statusClass;
+      var statusText = liveInfo.statusText;
+      var scoreText = liveInfo.scoreText;
+      var kickoffFull = match.date ? new Date(match.date).toLocaleString() : 'TBD';
+
+      var mServers = getMatchServers(match);
+      var hasLiveStream = mServers.length > 0;
+
+      var linksBox = document.getElementById('linksBox');
+      if (!linksBox) return;
+
+      var postUrl = getMatchPostUrl(match);
+
+      var html = 
+        '<!-- Scoreboard Header on Link Selection Page -->' +
+        '<div class="match-page-header">' +
+          '<div style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#93c5fd;font-weight:700;margin-bottom:4px;">' + leagueName + ' • Live Broadcasting Gateway</div>' +
+          '<h1 style="font-size:22px;font-weight:800;">' + homeName + ' vs ' + awayName + '</h1>' +
+          '<div style="margin-top:8px;"><span class="' + statusClass + '">' + statusText + '</span></div>' +
+        '</div>' +
+
+        '<div class="match-scoreboard-grid">' +
+          '<div class="team-unit">' +
+            '<img src="' + homeLogo + '" alt="' + homeName + '" />' +
+            '<h3>' + homeName + '</h3>' +
+          '</div>' +
+          '<div class="score-unit">' +
+            '<div class="big-score">' + scoreText + '</div>' +
+            '<div style="font-size:12px;color:#64748b;font-weight:700;">' + (isLive ? 'Current Match Score' : 'Kickoff') + '</div>' +
+          '</div>' +
+          '<div class="team-unit">' +
+            '<img src="' + awayLogo + '" alt="' + awayName + '" />' +
+            '<h3>' + awayName + '</h3>' +
+          '</div>' +
+        '</div>' +
+
+        '<div class="match-meta-list">' +
+          '<div class="match-meta-item"><span>Stadium:</span><strong>' + (match.venue || 'National Stadium') + '</strong></div>' +
+          '<div class="match-meta-item"><span>Kickoff Date:</span><strong>' + kickoffFull + '</strong></div>' +
+          '<div class="match-meta-item"><span>Active Channels:</span><strong style="color:#22c55e;">' + (hasLiveStream ? (mServers.length + ' HD Streams Online') : 'Standby Mode') + '</strong></div>' +
+          '<div class="match-meta-item"><span>Max Quality:</span><strong>1080p 60FPS Ultra HD</strong></div>' +
+        '</div>' +
+
+        '<!-- AdSense Slot 1: Top Gateway Leaderboard -->' +
+        '<div class="links-ad-container" style="min-height:90px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;margin:16px 0;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">' +
+          '<span>ADVERTISEMENT • 728x90 LEADERBOARD</span>' +
+        '</div>' +
+
+        '<!-- Server Selection Header -->' +
+        '<div class="links-selection-header" style="margin:20px 0 12px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">' +
+          '<div>' +
+            '<h2 style="font-size:18px;font-weight:800;color:#0f172a;margin:0;">Select Streaming Server</h2>' +
+            '<p style="font-size:12px;color:#64748b;margin:3px 0 0;">Choose your preferred broadcaster feed, audio language, and resolution:</p>' +
+          '</div>' +
+          '<span style="background:#dbeafe;color:#1e40af;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;">' + mServers.length + ' Available Channels</span>' +
+        '</div>';
+
+      if (!hasLiveStream) {
+        html += 
+          '<div class="no-stream-card" style="background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:32px 20px;text-align:center;margin:14px 0;">' +
+            '<div style="font-size:40px;margin-bottom:10px;">📡</div>' +
+            '<h3 style="font-size:17px;font-weight:800;color:#0f172a;margin:0 0 6px;">Live Stream Feeds Preparing</h3>' +
+            '<p style="font-size:13px;color:#64748b;max-width:500px;margin:0 auto 16px;line-height:1.5;">Direct broadcast feeds for this fixture connect approximately 15 minutes prior to scheduled kickoff. Refresh closer to match time.</p>' +
+            '<div style="display:flex;gap:10px;justify-content:center;">' +
+              '<a href="' + postUrl + '" class="match-chip-btn">← Return to Match Post</a>' +
+              '<button onclick="location.reload()" class="match-chip-btn" style="background:#2563eb;color:#fff;border-color:#2563eb;">🔄 Check for Live Feeds</button>' +
+            '</div>' +
+          '</div>';
+      } else {
+        html += '<div class="links-servers-grid">';
+        mServers.forEach(function(srv, idx) {
+          var streamTargetUrl = getStreamUrl(match.id, idx);
+          var qBadge = srv.quality || '1080p HD';
+          var lang = srv.language || 'English';
+          var typeBadge = (srv.type === 'mpd' ? 'DASH ClearKey' : (srv.type === 'iframe' ? 'Web Player' : 'HLS Fast CDN'));
+          var statusGlow = '🟢 Ultra Fast CDN • 99.9% Uptime';
+
+          html += 
+            '<div class="link-server-card">' +
+              '<div class="link-server-card-top">' +
+                '<div class="link-server-title">' +
+                  '<span class="server-num-badge">#' + (idx + 1) + '</span> ' +
+                  '<strong>' + srv.name + '</strong>' +
+                '</div>' +
+                '<span class="link-server-status">' + statusGlow + '</span>' +
+              '</div>' +
+              '<div class="link-server-meta-row">' +
+                '<span class="badge-chip badge-quality">' + qBadge + '</span>' +
+                '<span class="badge-chip badge-lang">🎙️ ' + lang + '</span>' +
+                '<span class="badge-chip badge-type">⚡ ' + typeBadge + '</span>' +
+              '</div>' +
+              '<a href="' + streamTargetUrl + '" class="btn-launch-stream">' +
+                '<span>▶</span> Watch Live Stream on Server ' + (idx + 1) +
+              '</a>' +
+            '</div>';
+        });
+        html += '</div>';
+      }
+
+      html += 
+        '<!-- AdSense Slot 2: In-Grid High-CTR Rectangle -->' +
+        '<div class="links-ad-container" style="min-height:250px;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;margin:20px 0;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">' +
+          '<span>ADVERTISEMENT • 300x250 IN-ARTICLE UNIT</span>' +
+        '</div>' +
+
+        '<div style="margin-top:20px;text-align:center;">' +
+          '<a href="' + postUrl + '" class="match-chip-btn" style="display:inline-flex;padding:10px 20px;font-size:13px;">' +
+            '← Back to Match Post &amp; Tactical Lineups' +
+          '</a>' +
+        '</div>';
+
+      linksBox.innerHTML = html;
+      showView('links');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // ── ROUTE 2: DEDICATED STREAMING PAGE WITH DYNAMIC MULTI-SERVER (domain.com/stream/id) ──
+    window.openStreamPage = function(matchId, pushState, serverIdx) {
+      var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
+      if (!match) return;
+
+      currentMatchId = match.id;
+      var targetServerIdx = (serverIdx != null && serverIdx !== undefined) ? parseInt(serverIdx, 10) : 0;
+      if (isNaN(targetServerIdx)) targetServerIdx = 0;
+
+      if (pushState !== false) {
+        window.history.pushState({ streamId: match.id, server: targetServerIdx }, '', '/?stream=' + encodeURIComponent(match.id) + '&server=' + targetServerIdx);
       }
 
       var homeName = match.home_team || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'Home Team';
@@ -591,22 +759,29 @@
       var titleEl = document.getElementById('streamTitle');
       if (titleEl) titleEl.textContent = title;
 
+      // Update back navigation buttons to point back to Blogger Blog 1 (Details Domain)
+      var backLinksBtn = document.getElementById('btnBackToLinks');
+      if (backLinksBtn) backLinksBtn.href = getLinksUrl(match.id);
+      var backPostBtn = document.getElementById('btnBackToPost');
+      if (backPostBtn) backPostBtn.href = getMatchPostUrl(match);
+      var backHomeBtn = document.getElementById('btnBackToHome');
+      if (backHomeBtn) backHomeBtn.href = getHomeUrl();
+
       showView('stream');
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
       // Resolve real servers matching Admin Panel 1:1
       currentMatchServers = getMatchServers(match);
-      currentServerIndex = 0;
+      currentServerIndex = (targetServerIdx < currentMatchServers.length) ? targetServerIdx : 0;
 
       renderServerButtons();
 
       if (currentMatchServers.length === 0) {
-        // ZERO MOCK STREAMS: Display clean broadcast offline notice
         stopStream();
         showNoStreamUI();
       } else {
         hideNoStreamUI();
-        loadStreamServer(currentMatchServers[0]);
+        loadStreamServer(currentMatchServers[currentServerIndex]);
       }
     };
 
@@ -998,18 +1173,31 @@
       var path = window.location.pathname || '';
       var params = new URLSearchParams(window.location.search);
       var streamParam = params.get('stream');
+      var linksParam = params.get('links') || params.get('link');
       var matchParam = params.get('match');
+      var serverParam = params.get('server');
+      var serverIdx = parseInt(serverParam || '0', 10);
+      if (isNaN(serverIdx)) serverIdx = 0;
 
-      // 1. Stream Route: /stream/{match-id} or ?stream={match-id}
-      if (path.indexOf('/stream/') !== -1 || streamParam) {
+      // 1. Stream Route on Blogger Blog 2: ?stream={id} or /stream/{id}
+      if (streamParam || path.indexOf('/stream/') !== -1) {
         var sId = streamParam || extractMatchId(path.split('/stream/')[1]);
         if (sId) {
-          openStreamPage(sId, false);
+          openStreamPage(sId, false, serverIdx);
           return;
         }
       }
 
-      // 2. Match Route: ?match=... or /{team1}-vs-{team2}-{match-id}
+      // 2. Link Selection Route on Blogger Blog 1: ?links={id} or /links/{id}
+      if (linksParam || path.indexOf('/links/') !== -1) {
+        var lId = linksParam || extractMatchId(path.split('/links/')[1]);
+        if (lId) {
+          openLinksPage(lId, false);
+          return;
+        }
+      }
+
+      // 3. Match Details Post Route on Blogger Blog 1: ?match={id} or /{slug}-{id}
       if (matchParam) {
         var mId = extractMatchId(matchParam);
         if (mId) {
@@ -1027,6 +1215,7 @@
         }
       }
 
+      // 4. Default Home View on Blogger Blog 1
       showView('home');
     }
 

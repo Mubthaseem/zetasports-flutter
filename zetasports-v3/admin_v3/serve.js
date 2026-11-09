@@ -2413,8 +2413,12 @@ function generateH2HTable(m) {
 }
 
 // --- COMPONENT 14: GLOBAL TV & LIVE STREAMING BROADCAST GUIDE ---
-function generateBroadcastGuide(m) {
+function generateBroadcastGuide(m, cfg) {
   const league = m.league_name || m.league || 'Football League';
+  const rawDetailsDomain = (cfg?.detailsBlogDomain || '').replace(/^https?:\/\//i, '').replace(/\/+$/, '').trim();
+  const linksUrl = rawDetailsDomain 
+    ? `https://${rawDetailsDomain}/?links=${m.id}`
+    : `/?links=${m.id}`;
 
   return `
     <div class="zeta-broadcast-guide" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; margin: 28px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
@@ -2445,6 +2449,15 @@ function generateBroadcastGuide(m) {
         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px;">
           <span style="font-size: 11px; font-weight: 700; color: #0062b2; text-transform: uppercase; display: block;">🌍 MENA &amp; Africa</span>
           <span style="font-size: 12px; font-weight: 700; color: #1e293b;">beIN Sports / SuperSport Football</span>
+        </div>
+      </div>
+      <!-- High-CTR Server Selection CTA (Full-Page Refresh to Link Selection Page) -->
+      <div class="zeta-live-server-cta" style="margin-top: 18px; padding-top: 16px; border-top: 1px dashed #cbd5e1; text-align: center;">
+        <a href="${linksUrl}" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: #ffffff; text-decoration: none; font-family: 'Oswald', -apple-system, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 14px 28px; border-radius: 8px; box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35); min-height: 48px; transition: transform 0.15s ease, background 0.15s ease;">
+          <span>🔴</span> Select Live Streaming Server (Multi-Server HD) <span>➔</span>
+        </a>
+        <div style="font-size: 11px; color: #64748b; margin-top: 8px;">
+          Choose from multiple high-speed broadcast feeds &amp; commentary languages
         </div>
       </div>
     </div>
@@ -2578,7 +2591,7 @@ async function generateRichPostContent(m, cfg, forcedState = null, thumbUrl = nu
   html += generateH2HTable(m);
 
   // Component 14: Global TV & Live Streaming Broadcast Guide
-  html += generateBroadcastGuide(m);
+  html += generateBroadcastGuide(m, cfg);
 
   // Component 15: Google AdSense Slot 2: High-CTR Bottom Placement (728x250 / Zero CLS Container)
   html += generateAdSenseSlot2(cfg);

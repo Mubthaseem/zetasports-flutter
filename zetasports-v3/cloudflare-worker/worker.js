@@ -1328,6 +1328,38 @@
                   return Response.redirect('https://www.keralahub.online/', 302);
                 }
 
+                // ── Serverless Link Selection Redirect to Details Blogger ──
+                if (url.pathname.startsWith('/links/') || url.pathname === '/links' || url.pathname === '/api/links-redirect') {
+                  let matchId = '';
+                  if (url.pathname.startsWith('/links/')) {
+                    matchId = decodeURIComponent(url.pathname.replace(/^\/links\//, '').trim());
+                  } else {
+                    matchId = url.searchParams.get('matchId') || url.searchParams.get('id') || '';
+                  }
+                  const rawDetailsBlog = (env.DETAILS_BLOG_DOMAIN || 'https://www.keralahub.online').replace(/\/+$/, '');
+                  const detailsBlog = rawDetailsBlog.startsWith('http') ? rawDetailsBlog : `https://${rawDetailsBlog}`;
+                  const targetUrl = matchId ? `${detailsBlog}/?links=${encodeURIComponent(matchId)}` : detailsBlog;
+                  return Response.redirect(targetUrl, 302);
+                }
+
+                // ── Serverless Stream Video Player Redirect to Stream Blogger ──
+                if (url.pathname.startsWith('/stream/') || url.pathname === '/stream' || url.pathname === '/api/stream-redirect') {
+                  let matchId = '';
+                  if (url.pathname.startsWith('/stream/')) {
+                    matchId = decodeURIComponent(url.pathname.replace(/^\/stream\//, '').trim());
+                  } else {
+                    matchId = url.searchParams.get('matchId') || url.searchParams.get('id') || '';
+                  }
+                  const serverParam = url.searchParams.get('server') || url.searchParams.get('s') || '';
+                  const rawStreamBlog = (env.STREAM_BLOG_DOMAIN || 'https://www.zetasports.live').replace(/\/+$/, '');
+                  const streamBlog = rawStreamBlog.startsWith('http') ? rawStreamBlog : `https://${rawStreamBlog}`;
+                  let targetUrl = matchId ? `${streamBlog}/?stream=${encodeURIComponent(matchId)}` : streamBlog;
+                  if (matchId && serverParam) {
+                    targetUrl += `&server=${encodeURIComponent(serverParam)}`;
+                  }
+                  return Response.redirect(targetUrl, 302);
+                }
+
                 // ── Dedicated FotMob Match Details Proxy (CORS & Edge Cache) ──
                 if (url.pathname === '/api/match-details') {
                   const matchId = url.searchParams.get('matchId');
