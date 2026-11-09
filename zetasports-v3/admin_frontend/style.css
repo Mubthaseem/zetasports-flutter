@@ -310,3 +310,15 @@ body {
   }
 }
 
+
+
+/* Responsive Viewport Collision Guards */
+@media (max-width: 640px) {
+  #mobileTopAppBar {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  .draggable-card {
+    padding: 0.625rem !important;
+  }
+}

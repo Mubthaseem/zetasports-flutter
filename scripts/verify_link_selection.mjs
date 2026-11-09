@@ -41,3 +41,4 @@ console.log('admin_frontend:', {
   hasCopyLinksHandler: appCode.includes("getElementById('drawerCopyLinksUrlBtn')"),
   hasCopyStreamHandler: appCode.includes("getElementById('drawerCopyStreamUrlBtn')")
 });
+

@@ -1,3 +1,24 @@
+
+  // ── XSS & URL Sanitization Helpers (Security Audit Hardening) ──
+  function escapeHtml(str) {
+    if (typeof str !== 'string') return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function sanitizeUrl(url) {
+    if (typeof url !== 'string') return '';
+    var trimmed = url.trim();
+    if (/^https?:\/\//i.test(trimmed) || /^\/\/?/i.test(trimmed)) {
+      return trimmed;
+    }
+    return '';
+  }
+
 // ── VIEW SWITCHERS & ROUTING (2-BLOGGER CROSS-DOMAIN & FULL-PAGE REFRESH) ──
     function cleanDomain(d) {
       if (!d) return '';

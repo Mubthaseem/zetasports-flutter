@@ -22,7 +22,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=Rajdhani:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Oswald:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=Rajdhani:wght@600;700;800&amp;display=swap" rel="stylesheet" />
 
   <!-- Plyr & HLS.js from jsDelivr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
@@ -1626,15 +1626,134 @@
     body.Night .STING-web-Menu { background: #131b2e; }
     .STING-web-Menu.open { display: flex; }
     .STING-web-Open-Menu { display: flex; }
-    .STING-web-Right-Team, .STING-web-Left-Team { width: 34%; gap: 6px; }
-    .STING-web-Team-Logo { width: 36px; height: 36px; }
-    .STING-web-Team-Logo img { max-width: 34px; max-height: 34px; }
-    .STING-web-Team-NAME { font-size: 12px; }
-    #STING-web-Result { font-size: 18px; letter-spacing: 2px; }
-    .STING-web-Title-Box { font-size: 13px; padding: 4px 10px; width: 100%; justify-content: center; }
-    .STING-web-Matches-Toggle { width: 100%; justify-content: center; }
-    .STING-web-Matches-Toggle > li { flex: 1; text-align: center; }
-    .STING-web-Matches-Toggle > li > a { padding: 6px 0; }
+    .STING-web-Matches-Toggle > li > a {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 4px;
+      font-size: 12px;
+    }
+    .STING-web-Right-Team, .STING-web-Left-Team {
+      flex: 1 1 0%;
+      min-width: 0;
+      width: auto !important;
+      max-width: 35%;
+      gap: 6px;
+    }
+    .STING-web-Team-Logo { width: 36px; height: 36px; flex-shrink: 0; }
+    .STING-web-Team-Logo img { max-width: 34px; max-height: 34px; object-fit: contain; }
+    .STING-web-Team-NAME {
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-width: 0;
+    }
+    .STING-web-Match-Center {
+      flex: 0 0 auto;
+      width: auto;
+      min-width: 96px;
+      max-width: 38%;
+      padding: 0 4px;
+    }
+    #STING-web-Result, .sting-match-result { font-size: 17px; letter-spacing: 1.5px; }
+    .STING-web-Title-Box { font-size: 13px; padding: 6px 10px; width: 100%; justify-content: center; line-height: 1.3; }
+    .STING-web-Matches-Toggle { width: 100%; justify-content: center; gap: 4px; }
+    .STING-web-Open-Menu, .STING-web-Open-Dark {
+      min-width: 44px;
+      min-height: 44px;
+    }
+  }
+
+  /* ── Tablet Viewport Collision Guards (769px - 1024px) ── */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .STING-web-Header-Right { gap: 10px; }
+    .STING-web-Menu { gap: 8px; }
+    .STING-web-Menu > li > a { font-size: 13px; padding: 6px 8px; }
+    .STING-web-Header-Logo { padding: 6px 12px; }
+    .STING-web-Right-Team, .STING-web-Left-Team { width: 33%; }
+    .STING-web-Team-NAME {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  /* ── Mobile Touch Target, Overlay & Server Card Guards ── */
+  @media (hover: none) {
+    .STING-web-Overlay { display: none !important; }
+  }
+  .STING-web-Overlay { pointer-events: none; }
+
+  /* Links Gateway & Server Cards Collision Guards */
+  #linksView .match-chip-btn,
+  #streamView .match-chip-btn {
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+  .link-server-card-top {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+  .link-server-title {
+    min-width: 0 !important;
+    word-break: break-word;
+  }
+  .badge-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    gap: 4px !important;
+  }
+  .links-servers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)) !important;
+  }
+
+  /* Stream Player Navigation Collision Guards */
+  .stream-player-header {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+  #streamTitle {
+    min-width: 0 !important;
+    word-break: break-word !important;
+  }
+
+  /* Match Scoreboard Hero Grid Mobile Collision Scaling */
+  @media (max-width: 600px) {
+    .match-scoreboard-grid {
+      padding: 16px 8px !important;
+      gap: 6px !important;
+    }
+    .team-unit {
+      width: 35% !important;
+      min-width: 0 !important;
+    }
+    .team-unit img {
+      width: 48px !important;
+      height: 48px !important;
+    }
+    .team-unit h3 {
+      font-size: 13px !important;
+      word-break: break-word !important;
+      line-height: 1.2 !important;
+    }
+    .score-unit {
+      width: 30% !important;
+      min-width: 80px !important;
+    }
+    .score-unit .big-score {
+      font-size: 30px !important;
+      letter-spacing: 2px !important;
+    }
+  }
+
+  /* AdSense Zero-CLS Reserved Isolation */
+  .STING-web-Ads, .links-ad-container {
+    contain: layout;
+    min-height: 90px;
+    overflow: hidden;
   }
   ]]></b:skin>
 </head>
@@ -1764,7 +1883,7 @@
 
   <!-- VIEW 2.5: DEDICATED LINK SELECTION GATEWAY (Blogger Blog 1) -->
   <div id="linksView" class="STING-web-Max-Size" style="display:none;">
-    <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; flex-wrap:wrap; gap:10px;">
       <button onclick="returnToMatch()" class="match-chip-btn" id="btnLinksBackToMatch" style="cursor:pointer;">
         ← Back to Match Post
       </button>
@@ -1784,7 +1903,7 @@
 
   <!-- VIEW 3: DEDICATED STREAMING PAGE (domain.com/?stream=id) -->
   <div id="streamView" class="STING-web-Max-Size">
-    <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; flex-wrap:wrap; gap:10px;">
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
         <a id="btnBackToLinks" href="#" class="match-chip-btn" style="background:#2563eb;color:#fff;border-color:#2563eb;text-decoration:none;">
           🔀 Change Server / Links
@@ -2220,7 +2339,7 @@
         '<div class="match-page-header">' +
           '<div style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#93c5fd;font-weight:700;margin-bottom:4px;">' + leagueName + '</div>' +
           '<h1 style="font-size:22px;font-weight:800;">' + homeName + ' vs ' + awayName + '</h1>' +
-          '<div style="margin-top:8px;"><span id="STING-web-Match-Time" class="' + statusClass + '">' + statusText + '</span></div>' +
+          '<div style="margin-top:8px;"><span class="sting-match-time" class="' + statusClass + '">' + statusText + '</span></div>' +
         '</div>' +
 
         '<div class="match-scoreboard-grid">' +
@@ -3117,8 +3236,8 @@
             '</div>' +
             '<div class="STING-web-Match-Center">' +
               '<div class="STING-web-Match-Timing">' +
-                '<div id="STING-web-Match-Time" class="' + statusClass + '">' + statusText + '</div>' +
-                '<div id="STING-web-Result">' + scoreText + '</div>' +
+                '<div class="sting-match-time ' + statusClass + '">' + statusText + '</div>' +
+                '<div class="sting-match-result">' + scoreText + '</div>' +
                 '<div class="STING-web-Match-Info">' + leagueName + ' (' + timeDisplay + ')</div>' +
               '</div>' +
             '</div>' +

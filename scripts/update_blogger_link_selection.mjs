@@ -445,3 +445,4 @@ try {
 // 8. Write updated file
 fs.writeFileSync('scripts/blogger_script_part.js', js, 'utf8');
 console.log('✔ Successfully saved scripts/blogger_script_part.js');
+
