@@ -4,133 +4,95 @@ import { execSync } from 'child_process';
 
 console.log('=== DEPLOYING ALL ZETASPORTS COLORIFY THEME ENHANCEMENTS ===');
 
-// 1. Read blogger_script_part.js and ensure security helpers (escapeHtml, sanitizeUrl) are present
+// 1. Read scripts/blogger_script_part.js and verify syntax
 let jsPart = fs.readFileSync('scripts/blogger_script_part.js', 'utf8');
-
-const securityHelpers = `
-  // ── XSS & URL Sanitization Helpers (Security Audit Hardening) ──
-  function escapeHtml(str) {
-    if (typeof str !== 'string') return '';
-    return str
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
-
-  function sanitizeUrl(url) {
-    if (typeof url !== 'string') return '';
-    var trimmed = url.trim();
-    if (/^https?:\\/\\//i.test(trimmed) || /^\\/\\/?/i.test(trimmed)) {
-      return trimmed;
-    }
-    return '';
-  }
-`;
-
-if (jsPart.indexOf('function escapeHtml(') === -1) {
-  jsPart = securityHelpers + '\n' + jsPart;
-  fs.writeFileSync('scripts/blogger_script_part.js', jsPart, 'utf8');
-  console.log('✔ Added escapeHtml and sanitizeUrl to scripts/blogger_script_part.js');
-}
-
-// Verify jsPart syntax
 new vm.Script(jsPart);
-console.log('✔ scripts/blogger_script_part.js syntax is 100% valid');
+console.log('✔ scripts/blogger_script_part.js syntax is 100% valid (' + jsPart.split('\n').length + ' lines)');
 
 // 2. Read base Colorify theme
 let xml = fs.readFileSync('zetasports-v3/web/colorify_zetasports_theme.xml', 'utf8');
 
-// A. Revamp Header: Replace generic COLORIFY logo and links in Header1 & LinkList101
+// Normalize CRLF to LF for consistent processing
+const hadCRLF = xml.includes('\r\n');
+xml = xml.replace(/\r\n/g, '\n');
+
+// A. Revamp Header1: Replace Header1 widget contents with ZetaSports Brand & Pulsing LIVE badge
 console.log('Step A: Revamping Header Logo & Navigation...');
 
-// In Header1, customize the includable for image to render ZetaSports branding with live counter
-const oldImageIncludable = `<b:includable id='image'>
-      <a class='logo-img' expr:href='data:blog.homepageUrl.canonical'>
-        <img expr:alt='data:blog.title.escaped' expr:data-height='data:height' expr:data-width='data:width' expr:src='data:image' expr:title='data:blog.title.escaped'/>
-        <b:if cond='data:view.isMultipleItems'><b:if cond='data:widget.sectionId == &quot;main-logo&quot;'><h1 id='h1-off'><data:title/></h1></b:if></b:if>
-      </a>
-    </b:includable>`;
+const headerWidgetRegex = /<b:widget id='Header1'[\s\S]*?<\/b:widget>/;
+const newHeaderWidget = `<b:widget id='Header1' locked='true' title='ZetaSports' type='Header' visible='true'>
+                    <b:widget-settings>
+                      <b:widget-setting name='useImage'>false</b:widget-setting>
+                      <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main' var='this'>
+                      <b:tag class='mobile-menu-toggle' href='javascript:;' name='a' role='button' title='Menu'/>
+                      <b:include name='image'/>
+                    </b:includable>
+                    <b:includable id='behindImageStyle'><b:comment>Replaced</b:comment></b:includable>
+                    <b:includable id='description'><b:comment>Replaced</b:comment></b:includable>
+                    <b:includable id='image'>
+                      <a class='logo-img' expr:href='data:blog.homepageUrl.canonical' style='display:inline-flex; align-items:center; gap:8px; text-decoration:none;'>
+                        <span style='background:#0062b2; color:#ffffff; font-family:"Oswald", sans-serif; font-size:22px; font-weight:700; padding:4px 12px; border-radius:8px; letter-spacing:0.5px;'>ZETASPORTS</span>
+                        <span id='zetaHeaderLiveCounter' style='display:inline-flex; align-items:center; gap:4px; font-size:11px; font-weight:700; background:#dcfce7; color:#15803d; border:1px solid #86efac; border-radius:999px; padding:2px 8px; font-family:"Inter", sans-serif;'>
+                          <span style='width:6px; height:6px; border-radius:50%; background:#16a34a; display:inline-block; animation:zetaPulse 1.5s infinite;'></span>
+                          LIVE
+                        </span>
+                      </a>
+                    </b:includable>
+                    <b:includable id='title'>
+                      <a class='logo-img' expr:href='data:blog.homepageUrl.canonical' style='display:inline-flex; align-items:center; gap:8px; text-decoration:none;'>
+                        <span style='background:#0062b2; color:#ffffff; font-family:"Oswald", sans-serif; font-size:22px; font-weight:700; padding:4px 12px; border-radius:8px; letter-spacing:0.5px;'>ZETASPORTS</span>
+                      </a>
+                    </b:includable>
+                  </b:widget>`;
 
-const newImageIncludable = `<b:includable id='image'>
-      <a class='logo-img' expr:href='data:blog.homepageUrl.canonical' style='display:inline-flex; align-items:center; gap:8px; text-decoration:none;'>
-        <span style='background:#0062b2; color:#ffffff; font-family:"Oswald", sans-serif; font-size:22px; font-weight:700; padding:4px 12px; border-radius:8px; letter-spacing:0.5px;'>ZETASPORTS</span>
-        <span id='zetaHeaderLiveCounter' style='display:inline-flex; align-items:center; gap:4px; font-size:11px; font-weight:700; background:#dcfce7; color:#15803d; border:1px solid #86efac; border-radius:999px; padding:2px 8px; font-family:"Inter", sans-serif;'>
-          <span style='width:6px; height:6px; border-radius:50%; background:#16a34a; display:inline-block; animation:zetaPulse 1.5s infinite;'></span>
-          LIVE
-        </span>
-      </a>
-    </b:includable>`;
-
-if (xml.indexOf(oldImageIncludable) !== -1) {
-  xml = xml.replace(oldImageIncludable, newImageIncludable);
-  console.log('  ✔ Replaced Header1 logo image includable with ZetaSports branding & #zetaHeaderLiveCounter');
+if (headerWidgetRegex.test(xml)) {
+  xml = xml.replace(headerWidgetRegex, newHeaderWidget);
+  console.log('  ✔ Replaced Header1 widget with ZetaSports branding & #zetaHeaderLiveCounter');
 } else {
-  // Check CRLF
-  const oldImageIncludableCRLF = oldImageIncludable.replace(/\n/g, '\r\n');
-  if (xml.indexOf(oldImageIncludableCRLF) !== -1) {
-    xml = xml.replace(oldImageIncludableCRLF, newImageIncludable.replace(/\n/g, '\r\n'));
-    console.log('  ✔ Replaced Header1 logo image includable with ZetaSports branding (CRLF)');
-  }
+  console.warn('  ⚠ Header1 widget regex did not match');
 }
 
-// In LinkList101, replace dummy links with Sports Navigation
-const oldLinkSettings = `<b:widget-setting name='text-10'>Blogger</b:widget-setting>
-                      <b:widget-setting name='sorting'>NONE</b:widget-setting>
-                      <b:widget-setting name='link-1'>#</b:widget-setting>
-                      <b:widget-setting name='link-2'>#</b:widget-setting>
-                      <b:widget-setting name='link-12'>/p/post-shortcodes.html</b:widget-setting>
-                      <b:widget-setting name='link-0'>{homepage}</b:widget-setting>
-                      <b:widget-setting name='link-11'>/p/post-tipography.html</b:widget-setting>
-                      <b:widget-setting name='link-10'>#</b:widget-setting>
-                      <b:widget-setting name='text-9'>_RTL Version</b:widget-setting>
-                      <b:widget-setting name='link-9'>?hl=ar</b:widget-setting>
-                      <b:widget-setting name='text-8'>_Error Page</b:widget-setting>
-                      <b:widget-setting name='link-7'>#</b:widget-setting>
-                      <b:widget-setting name='link-8'>/404</b:widget-setting>
-                      <b:widget-setting name='link-5'>/2021/01/top-10-old-rock-songs-from-80s.html</b:widget-setting>
-                      <b:widget-setting name='link-6'>/2021/01/these-are-10-best-restaurants-in-world.html</b:widget-setting>
-                      <b:widget-setting name='link-3'>#</b:widget-setting>
-                      <b:widget-setting name='link-4'>/2021/01/apps-integrations.html</b:widget-setting>
-                      <b:widget-setting name='text-1'>Features</b:widget-setting>
-                      <b:widget-setting name='text-0'>Home</b:widget-setting>
-                      <b:widget-setting name='text-3'>_Post Layouts</b:widget-setting>
-                      <b:widget-setting name='text-2'>_Featured Posts</b:widget-setting>
-                      <b:widget-setting name='text-5'>__Full Width</b:widget-setting>
-                      <b:widget-setting name='text-4'>__Left Sidebar</b:widget-setting>
-                      <b:widget-setting name='text-7'>_Contact Page</b:widget-setting>
-                      <b:widget-setting name='text-6'>__Right Sidebar</b:widget-setting>
-                      <b:widget-setting name='text-11'>Tipography</b:widget-setting>
-                      <b:widget-setting name='text-12'>Shortcodes</b:widget-setting>`;
+// B. Revamp Navigation Menu in linklist-content includable
+console.log('Step B: Injecting Sports Navigation Menu into linklist-content includable...');
 
-const newLinkSettings = `<b:widget-setting name='sorting'>NONE</b:widget-setting>
-                      <b:widget-setting name='text-0'>⚡ Live Scores</b:widget-setting>
-                      <b:widget-setting name='link-0'>/?filter=live</b:widget-setting>
-                      <b:widget-setting name='text-1'>⚽ Football</b:widget-setting>
-                      <b:widget-setting name='link-1'>/search/label/Football</b:widget-setting>
-                      <b:widget-setting name='text-2'>🏏 Cricket</b:widget-setting>
-                      <b:widget-setting name='link-2'>/search/label/Cricket</b:widget-setting>
-                      <b:widget-setting name='text-3'>🏆 Competitions</b:widget-setting>
-                      <b:widget-setting name='link-3'>#</b:widget-setting>
-                      <b:widget-setting name='text-4'>📺 Live Streams</b:widget-setting>
-                      <b:widget-setting name='link-4'>/?filter=live</b:widget-setting>
-                      <b:widget-setting name='text-5'>⭐ Highlights</b:widget-setting>
-                      <b:widget-setting name='link-5'>/search/label/Highlights</b:widget-setting>`;
+const linkListIncludableRegex = /<b:includable id='linklist-content'>[\s\S]*?<b:elseif cond='data:widget\.sectionId in \[&quot;sidebar&quot;/;
+const newLinkListIncludable = `<b:includable id='linklist-content'>
+      <b:if cond='data:widget.sectionId == &quot;colorify-free-main-nav&quot;'>
+        <ul id='colorify-free-main-nav-menu' role='menubar' style='display:flex; align-items:center; gap:16px; list-style:none; margin:0; padding:0;'>
+          <li><a href='/?filter=live' role='menuitem' style='font-family:"Oswald",sans-serif; font-weight:600; text-transform:uppercase;'>⚡ Live Scores</a></li>
+          <li><a href='/search/label/Football' role='menuitem' style='font-family:"Oswald",sans-serif; font-weight:600; text-transform:uppercase;'>⚽ Football</a></li>
+          <li><a href='/search/label/Cricket' role='menuitem' style='font-family:"Oswald",sans-serif; font-weight:600; text-transform:uppercase;'>🏏 Cricket</a></li>
+          <li><a href='#' role='menuitem' style='font-family:"Oswald",sans-serif; font-weight:600; text-transform:uppercase;'>🏆 Competitions</a></li>
+          <li><a href='/?filter=live' role='menuitem' style='font-family:"Oswald",sans-serif; font-weight:600; text-transform:uppercase;'>📺 Live Streams</a></li>
+          <li><a href='/search/label/Highlights' role='menuitem' style='font-family:"Oswald",sans-serif; font-weight:600; text-transform:uppercase;'>⭐ Highlights</a></li>
+        </ul>
+      <b:elseif cond='data:widget.sectionId in [&quot;sidebar&quot;`;
 
-if (xml.indexOf(oldLinkSettings) !== -1) {
-  xml = xml.replace(oldLinkSettings, newLinkSettings);
-  console.log('  ✔ Replaced LinkList101 settings with ZetaSports navigation menu');
+if (linkListIncludableRegex.test(xml)) {
+  xml = xml.replace(linkListIncludableRegex, newLinkListIncludable);
+  console.log('  ✔ Injected ZetaSports sports navigation into linklist-content includable');
 } else {
-  const oldLinkSettingsCRLF = oldLinkSettings.replace(/\n/g, '\r\n');
-  if (xml.indexOf(oldLinkSettingsCRLF) !== -1) {
-    xml = xml.replace(oldLinkSettingsCRLF, newLinkSettings.replace(/\n/g, '\r\n'));
-    console.log('  ✔ Replaced LinkList101 settings with ZetaSports navigation menu (CRLF)');
-  }
+  console.warn('  ⚠ linklist-content includable regex did not match');
 }
 
-// B. Inject Views into <main id='main-wrapper'>
-console.log("Step B: Injecting 4 Core Views into <main id='main-wrapper'>...");
+// C. Inject Brand CSS Overrides into <b:skin>
+console.log('Step C: Injecting Brand CSS Overrides into <b:skin>...');
+const brandCss = `
+/* ZetaSports Brand & Header Overrides */
+.main-logo .logo-img img, #Header1 img, #Header1_headerimg { display: none !important; }
+#featured, .featured-post-wrap, .hero-post { display: none !important; }
+@keyframes zetaPulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.15); } }
+`;
+
+if (!xml.includes('/* ZetaSports Brand & Header Overrides */')) {
+  xml = xml.replace(']]></b:skin>', brandCss + '\n]]></b:skin>');
+  console.log('  ✔ Injected ZetaSports Brand & Header Overrides CSS into <b:skin>');
+}
+
+// D. Inject 4 Views into <main id='main-wrapper'> if not already present
+console.log("Step D: Checking 4 Core Views into <main id='main-wrapper'>...");
 
 const viewsMarkup = `
       <!-- Top AdSense Leaderboard (728x90) Zero-CLS -->
@@ -289,61 +251,51 @@ const viewsMarkup = `
       </div>
 `;
 
-// Insert viewsMarkup directly after <main id='main-wrapper'>
-const mainWrapperTag = "<main id='main-wrapper'>";
-if (xml.indexOf(mainWrapperTag) !== -1) {
-  xml = xml.replace(mainWrapperTag, mainWrapperTag + '\n' + viewsMarkup);
-  console.log("  ✔ Injected 4 views (#homeView, #matchView, #linksView, #streamView) into <main id='main-wrapper'>");
+if (!xml.includes('id="homeView"')) {
+  const mainWrapperTag = "<main id='main-wrapper'>";
+  if (xml.includes(mainWrapperTag)) {
+    xml = xml.replace(mainWrapperTag, mainWrapperTag + '\n' + viewsMarkup);
+    console.log("  ✔ Injected 4 views (#homeView, #matchView, #linksView, #streamView) into <main id='main-wrapper'>");
+  }
 } else {
-  throw new Error("Could not find <main id='main-wrapper'> in Colorify theme");
+  console.log('  ✔ Views already present in <main id="main-wrapper">');
 }
 
-// C. Replace obsolete client script at the end of Colorify with master scripts/blogger_script_part.js
-console.log('Step C: Injecting Master 2-Blogger Engine & Router...');
+// E. Inject Master 2-Blogger Engine & Router Script at the end of the file
+console.log('Step E: Injecting Master 2-Blogger Engine & Router...');
 
-// Look for <script type='text/javascript'>//<![CDATA[\n/* ==========================================================================\n   ZetaSports Client Engine
-const scriptStartMarker = "/* ==========================================================================\n   ZetaSports Client Engine";
-const scriptStartMarkerCRLF = "/* ==========================================================================\r\n   ZetaSports Client Engine";
+// Find and replace the last <script type='text/javascript'> before </body>
+const bodyCloseIdx = xml.lastIndexOf('</body>');
+const lastScriptOpenIdx = xml.lastIndexOf("<script type='text/javascript'>", bodyCloseIdx);
+const lastScriptCloseIdx = xml.lastIndexOf('</script>', bodyCloseIdx);
 
-let scriptIdx = xml.indexOf(scriptStartMarker);
-if (scriptIdx === -1) {
-  scriptIdx = xml.indexOf(scriptStartMarkerCRLF);
-}
-
-if (scriptIdx !== -1) {
-  // Find </script> after scriptIdx
-  const closeScriptIdx = xml.indexOf('</script>', scriptIdx);
-  if (closeScriptIdx !== -1) {
-    const wrappedScript = `<script type='text/javascript'>
+const wrappedScript = `<script type='text/javascript'>
 //<![CDATA[
 ${jsPart}
 //]]>
 </script>`;
-    // Find the opening <script> before scriptIdx
-    const openScriptIdx = xml.lastIndexOf('<script', scriptIdx);
-    xml = xml.substring(0, openScriptIdx) + wrappedScript + xml.substring(closeScriptIdx + 9);
-    console.log('  ✔ Replaced obsolete inline script with master scripts/blogger_script_part.js');
-  }
+
+if (lastScriptOpenIdx !== -1 && lastScriptCloseIdx > lastScriptOpenIdx) {
+  xml = xml.substring(0, lastScriptOpenIdx) + wrappedScript + '\n' + xml.substring(lastScriptCloseIdx + 9);
+  console.log('  ✔ Replaced bottom script with master scripts/blogger_script_part.js');
 } else {
-  // If not found, inject before </body>
-  const bodyClose = '</body>';
-  const wrappedScript = `<script type='text/javascript'>
-//<![CDATA[
-${jsPart}
-//]]>
-</script>\n</body>`;
-  xml = xml.replace(bodyClose, wrappedScript);
+  xml = xml.replace('</body>', wrappedScript + '\n</body>');
   console.log('  ✔ Injected master script before </body>');
 }
 
+// Convert back to CRLF if needed
+if (hadCRLF) {
+  xml = xml.replace(/\n/g, '\r\n');
+}
+
 // Write to both targets
-console.log('Step D: Writing to zetasports-v3/web/colorify_zetasports_theme.xml and zetasports-colorify-blogger-theme.xml...');
+console.log('Step F: Writing to zetasports-v3/web/colorify_zetasports_theme.xml and zetasports-colorify-blogger-theme.xml...');
 fs.writeFileSync('zetasports-v3/web/colorify_zetasports_theme.xml', xml, 'utf8');
 fs.writeFileSync('zetasports-colorify-blogger-theme.xml', xml, 'utf8');
 console.log('✔ Both files written successfully.');
 
-// Step E: Run verify_colorify_parity.cjs to validate
-console.log('Step E: Running scripts/verify_colorify_parity.cjs...');
+// Step G: Run verify_colorify_parity.cjs to validate
+console.log('Step G: Running scripts/verify_colorify_parity.cjs...');
 try {
   const testOut = execSync('node scripts/verify_colorify_parity.cjs', { encoding: 'utf8' });
   console.log(testOut);

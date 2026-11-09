@@ -2174,6 +2174,28 @@
     };
 
     // ── Date Filters ──
+    window.filterLeague = function(league) {
+      currentLeagueFilter = league;
+      var container = document.getElementById('leagueFilterPills');
+      if (container) {
+        var buttons = container.querySelectorAll('button');
+        buttons.forEach(function(b) {
+          b.classList.remove('active');
+          b.style.background = '#f1f5f9';
+          b.style.color = '#334155';
+        });
+        buttons.forEach(function(b) {
+          var txt = b.textContent.trim().toLowerCase();
+          if (txt === league.toLowerCase() || (league === 'Indian Super League' && txt === 'isl')) {
+            b.classList.add('active');
+            b.style.background = '#0062b2';
+            b.style.color = '#fff';
+          }
+        });
+      }
+      renderMatches();
+    };
+
     window.filterDate = function(day) {
       currentDateFilter = day;
       ['yesterday', 'today', 'tomorrow'].forEach(function(d) {
@@ -3299,7 +3321,20 @@
         if (currentDateFilter === 'live') return m.status === 'live';
         if (currentDateFilter === 'yesterday') return mDateStr === yesterdayStr || m.status === 'finished';
         if (currentDateFilter === 'tomorrow') return mDateStr === tomorrowStr;
-        return mDateStr === todayStr || m.status === 'live' || m.status === 'upcoming' || allMatches.length <= 10;
+        return mDateStr === todayStr || m.status === 'live' || m.status === 'upcoming';
+      });
+
+      // Filter by League
+      if (typeof currentLeagueFilter !== 'undefined' && currentLeagueFilter && currentLeagueFilter !== 'all') {
+        filtered = filtered.filter(function(m) {
+          var leagueName = m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '';
+          return leagueName.toLowerCase().indexOf(currentLeagueFilter.toLowerCase()) !== -1;
+        });
+      }
+
+      // If no matches on today's calendar date, fallback to showing available active/recent matches so the UI is never blank
+      if (filtered.length === 0 && currentDateFilter === 'today' && (typeof currentLeagueFilter === 'undefined' || currentLeagueFilter === 'all')) {
+        filtered = allMatches.slice(0, 10);
       });
 
       // ── CRITICAL: STRICT CHRONOLOGICAL SORT BY KICKOFF TIME (Earliest First) ──
@@ -3554,7 +3589,8 @@
     setInterval(checkAndShow, 60000);
   }
 
-  window.showTelegramPopup = function() {
+  function showTelegramPopup() {
+    window.showTelegramPopup = showTelegramPopup;
     var existing = document.getElementById('zetaTgPopup');
     if (existing) existing.remove();
 
