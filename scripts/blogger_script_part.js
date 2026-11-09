@@ -1,11 +1,45 @@
 
+  // ── 2-Blogger Routing & Global Configuration ──
+  window.ZETA_CONFIG = window.ZETA_CONFIG || {
+    detailsOrigin: 'https://www.keralahub.online',
+    streamOrigin: 'http://www.zetasports.site',
+    DETAILS_DOMAIN: 'www.keralahub.online',
+    STREAM_DOMAIN: 'www.zetasports.site',
+    supabaseUrl: 'https://udlncusvhmydivtjkjcy.supabase.co',
+    supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkbG5jdXN2aG15ZGl2dGpramN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM4MTE2MDgsImV4cCI6MjEwOTM4NzYwOH0.gsnxlDww-fUC4HG7R7VasXSaQvqkSsDhhmf16KUCLZY'
+  };
+
   // ── Database & State Configuration ──
-  var SB_URL = 'https://voocdrpetiyspuhyeapi.supabase.co';
-  var SB_KEY = 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
+  var SB_URL = 'https://udlncusvhmydivtjkjcy.supabase.co';
+  var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkbG5jdXN2aG15ZGl2dGpramN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM4MTE2MDgsImV4cCI6MjEwOTM4NzYwOH0.gsnxlDww-fUC4HG7R7VasXSaQvqkSsDhhmf16KUCLZY';
   var SB_HEADERS = {
     'apikey': SB_KEY,
     'Authorization': 'Bearer ' + SB_KEY
   };
+
+    // ── Header Live Counter Driver ──
+  function updateHeaderLiveCounter() {
+    var liveCount = (allMatches || []).filter(function(m) {
+      var s = (m.status || '').toLowerCase();
+      return s === 'live' || s === 'in_progress' || s === 'in_play' || s === '1h' || s === '2h' || s === 'ht' || m.is_live === true;
+    }).length;
+    var badges = document.querySelectorAll('#zetaHeaderLiveCounter');
+    badges.forEach(function(badge) {
+      if (liveCount > 0) {
+        badge.style.display = 'inline-flex';
+        badge.innerHTML = '<span style="width:6px; height:6px; border-radius:50%; background:#16a34a; display:inline-block; animation:zetaPulse 1.5s infinite;"></span> ' + liveCount + ' LIVE';
+        badge.style.background = '#dcfce7';
+        badge.style.color = '#15803d';
+        badge.style.borderColor = '#86efac';
+      } else {
+        badge.style.display = 'inline-flex';
+        badge.innerHTML = '<span style="width:6px; height:6px; border-radius:50%; background:#94a3b8; display:inline-block;"></span> 0 LIVE';
+        badge.style.background = '#f1f5f9';
+        badge.style.color = '#64748b';
+        badge.style.borderColor = '#cbd5e1';
+      }
+    });
+  }
 
   var allMatches = [];
   var allStreams = [];
@@ -100,63 +134,94 @@
 
   // ── XSS & URL Sanitization Helpers (Security Audit Hardening) ──
   function escapeHtml(str) {
-    if (typeof str !== 'string') return '';
-    return str
+    if (str === null || str === undefined) return '';
+    return String(str)
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
+      .replace(/'/g, '&#39;');
   }
 
   function sanitizeUrl(url) {
-    if (typeof url !== 'string') return '';
+    if (!url || typeof url !== 'string') return '';
     var trimmed = url.trim();
-    if (/^https?:\/\//i.test(trimmed) || /^\/\/?/i.test(trimmed)) {
-      return trimmed;
-    }
-    return '';
+    if (/^(?:javascript|data|vbscript):/i.test(trimmed)) return '#';
+    if (trimmed.startsWith('//') || trimmed.startsWith('/\\')) return '#';
+    return trimmed;
   }
 
 // ── VIEW SWITCHERS & ROUTING (2-BLOGGER CROSS-DOMAIN & FULL-PAGE REFRESH) ──
-    function cleanDomain(d) {
-      if (!d) return '';
-      return String(d).trim().replace(/^https?:\/\//i, '').replace(/\/+$/, '');
-    }
-
-    function getDetailsOrigin() {
-      var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.DETAILS_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.detailsBlogDomain);
-      var cd = cleanDomain(d);
-      if (cd) return 'https://' + cd;
-      return window.location.origin;
-    }
-
-    function getStreamOrigin() {
-      var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.STREAM_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.streamBlogDomain);
-      var cd = cleanDomain(d);
-      if (cd) return 'https://' + cd;
-      return window.location.origin;
-    }
-
-    function getHomeUrl() {
-      return getDetailsOrigin() + '/';
-    }
-
-    function getMatchPostUrl(matchOrId) {
-      var mId = (typeof matchOrId === 'object' && matchOrId) ? matchOrId.id : matchOrId;
-      var match = (typeof matchOrId === 'object' && matchOrId) ? matchOrId : (allMatches ? allMatches.find(function(m){ return String(m.id) === String(mId); }) : null);
-      if (match && match.article_url && match.article_url.startsWith('http')) {
-        return match.article_url;
+  function isAllowedUrl(url) {
+    if (!url || typeof url !== 'string') return false;
+    var trimmed = url.trim();
+    if (/^(?:javascript|data|vbscript):/i.test(trimmed)) return false;
+    if (trimmed.startsWith('/') && !trimmed.startsWith('//') && !trimmed.startsWith('/\\')) return true;
+    try {
+      var parsed = new URL(trimmed, (typeof window !== 'undefined' && window.location) ? window.location.origin : 'https://www.keralahub.online');
+      if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return false;
+      var hostname = parsed.hostname.toLowerCase();
+      var allowed = ['keralahub.online', 'www.keralahub.online', 'zetasports.site', 'www.zetasports.site'];
+      if (typeof window !== 'undefined' && window.ZETA_CONFIG) {
+        if (window.ZETA_CONFIG.detailsOrigin) {
+          try { allowed.push(new URL(window.ZETA_CONFIG.detailsOrigin).hostname.toLowerCase()); } catch(e){}
+        }
+        if (window.ZETA_CONFIG.streamOrigin) {
+          try { allowed.push(new URL(window.ZETA_CONFIG.streamOrigin).hostname.toLowerCase()); } catch(e){}
+        }
       }
-      return getDetailsOrigin() + '/?match=' + encodeURIComponent(mId);
+      return allowed.some(function(d) {
+        return hostname === d || hostname.endsWith('.' + d);
+      });
+    } catch(e) {
+      return false;
     }
+  }
 
-    function getLinksUrl(matchId) {
-      // Link Selection Gateway lives on Blogger Blog 1 (Details Domain)
-      return getDetailsOrigin() + '/?links=' + encodeURIComponent(matchId);
+  function cleanDomain(d) {
+    if (!d) return '';
+    return String(d).trim().replace(/^https?:\/\//i, '').replace(/\/+$/, '');
+  }
+
+  function getDetailsOrigin() {
+    if (window.ZETA_CONFIG && window.ZETA_CONFIG.detailsOrigin) {
+      return window.ZETA_CONFIG.detailsOrigin.replace(/\/+$/, '');
     }
+    var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.DETAILS_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.detailsBlogDomain);
+    var cd = cleanDomain(d);
+    if (cd) return 'https://' + cd;
+    return window.location.origin;
+  }
 
-    function getStreamUrl(matchId, serverIdx) {
+  function getStreamOrigin() {
+    if (window.ZETA_CONFIG && window.ZETA_CONFIG.streamOrigin) {
+      return window.ZETA_CONFIG.streamOrigin.replace(/\/+$/, '');
+    }
+    var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.STREAM_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.streamBlogDomain);
+    var cd = cleanDomain(d);
+    if (cd) return 'https://' + cd;
+    return window.location.origin;
+  }
+
+  function getHomeUrl() {
+    return getDetailsOrigin() + '/';
+  }
+
+  function getMatchPostUrl(matchOrId) {
+    var mId = (typeof matchOrId === 'object' && matchOrId) ? matchOrId.id : matchOrId;
+    var match = (typeof matchOrId === 'object' && matchOrId) ? matchOrId : (allMatches ? allMatches.find(function(m){ return String(m.id) === String(mId); }) : null);
+    if (match && match.article_url && isAllowedUrl(match.article_url)) {
+      return match.article_url;
+    }
+    return getDetailsOrigin() + '/?match=' + encodeURIComponent(mId);
+  }
+
+  function getLinksUrl(matchId) {
+    // Link Selection Gateway lives on Blogger Blog 1 (Details Domain)
+    return getDetailsOrigin() + '/?links=' + encodeURIComponent(matchId);
+  }
+
+  function getStreamUrl(matchId, serverIdx) {
       // Stream Video Player lives on Blogger Blog 2 (Stream Domain)
       var sIdx = (serverIdx != null && serverIdx !== undefined) ? serverIdx : 0;
       return getStreamOrigin() + '/?stream=' + encodeURIComponent(matchId) + '&server=' + sIdx;
@@ -313,13 +378,20 @@
         document.body.appendChild(modal);
       }
 
+      var safeImage = image ? sanitizeUrl(image) : '';
+      var safeTitle = escapeHtml(title || '');
+      var safeDate = escapeHtml(date || 'FotMob Editorial Match Report');
+      var safeBody = (typeof fullHtml === 'string' && fullHtml.startsWith('<p>'))
+        ? ('<p>' + escapeHtml(fullHtml.replace(/^<p>|<\/p>$/g, '')) + '</p>')
+        : ('<p>' + escapeHtml(fullHtml || '') + '</p>');
+
       var contentBox = document.getElementById('modalArticleContent');
       contentBox.innerHTML = 
-        (image ? '<img src="' + image + '" class="modal-article-img" alt="" />' : '') +
+        (safeImage ? '<img src="' + safeImage + '" class="modal-article-img" alt="" />' : '') +
         '<div style="padding:20px;">' +
-          '<div style="font-size:12px;color:#64748b;font-weight:700;margin-bottom:6px;">' + (date || 'FotMob Editorial Match Report') + '</div>' +
-          '<h2 style="font-size:20px;font-weight:900;line-height:1.4;margin-bottom:14px;">' + title + '</h2>' +
-          '<div class="modal-article-body">' + fullHtml + '</div>' +
+          '<div style="font-size:12px;color:#64748b;font-weight:700;margin-bottom:6px;">' + safeDate + '</div>' +
+          '<h2 style="font-size:20px;font-weight:900;line-height:1.4;margin-bottom:14px;">' + safeTitle + '</h2>' +
+          '<div class="modal-article-body">' + safeBody + '</div>' +
         '</div>';
 
       modal.style.display = 'flex';
@@ -340,13 +412,20 @@
       var hasLiveStream = mServers.length > 0;
       stopStream();
 
-      var homeName = match.home_team || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'Home Team';
-      var awayName = match.away_team || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].name) || 'Away Team';
-      var homeLogo = match.home_logo || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png';
-      var awayLogo = match.away_logo || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png';
-      var leagueName = match.league_name || (leaguesMap[match.league_id] && leaguesMap[match.league_id].name) || 'Live Football Match';
+      var rawHomeName = match.home_team || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'Home Team';
+      var rawAwayName = match.away_team || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].name) || 'Away Team';
+      var homeName = escapeHtml(rawHomeName);
+      var awayName = escapeHtml(rawAwayName);
+      var homeLogo = sanitizeUrl(match.home_logo || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png');
+      var awayLogo = sanitizeUrl(match.away_logo || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png');
+      var leagueName = escapeHtml(match.league_name || (leaguesMap[match.league_id] && leaguesMap[match.league_id].name) || 'Live Football Match');
+      var venue = escapeHtml(match.venue || 'National Stadium');
+      var referee = escapeHtml(match.referee || 'FIFA Licensed');
+      var fotmobId = escapeHtml(String(match.fotmob_id || '').replace(/[^a-zA-Z0-9_\-]/g, ''));
+      var matchIdClean = escapeHtml(String(match.id || '').replace(/[^a-zA-Z0-9_\-]/g, ''));
+      var linksUrl = sanitizeUrl(getLinksUrl(match.id));
 
-      var matchSlug = slugify(homeName) + '-vs-' + slugify(awayName) + '-' + match.id;
+      var matchSlug = slugify(rawHomeName) + '-vs-' + slugify(rawAwayName) + '-' + match.id;
       if (pushState !== false) {
         window.history.pushState({ matchId: match.id }, '', '/' + matchSlug);
       }
@@ -366,7 +445,7 @@
           '<button class="match-chip-btn" onclick="copyMatchLink()">🔗 Share Match</button>' +
           '<div style="display:flex;gap:6px;">' +
             '<button class="match-chip-btn" onclick="playGoalWhistle()">🔔 Goal Alert</button>' +
-            '<button class="match-chip-btn" onclick="syncLiveMatchData(\'' + (match.fotmob_id || '') + '\')">⚡ Live Refresh</button>' +
+            '<button class="match-chip-btn" onclick="syncLiveMatchData(\'' + fotmobId + '\')">⚡ Live Refresh</button>' +
           '</div>' +
         '</div>' +
 
@@ -393,8 +472,8 @@
         '</div>' +
 
         '<div class="match-meta-list">' +
-          '<div class="match-meta-item"><span>Stadium:</span><strong>' + (match.venue || 'National Stadium') + '</strong></div>' +
-          '<div class="match-meta-item"><span>Referee:</span><strong>' + (match.referee || 'FIFA Licensed') + '</strong></div>' +
+          '<div class="match-meta-item"><span>Stadium:</span><strong>' + venue + '</strong></div>' +
+          '<div class="match-meta-item"><span>Referee:</span><strong>' + referee + '</strong></div>' +
           '<div class="match-meta-item"><span>Kickoff Date:</span><strong>' + kickoffFull + '</strong></div>' +
           '<div class="match-meta-item"><span>Broadcast:</span><strong>1080p 60FPS HD</strong></div>' +
         '</div>' +
@@ -413,7 +492,7 @@
         '<!-- TAB PANE 1: OVERVIEW -->' +
         '<div class="mtab-pane active" id="mpane-overview">' +
           '<div class="watch-action-box" style="border-radius:14px;margin-bottom:14px;">' +
-            '<a href="' + getLinksUrl(match.id) + '" class="btn-watch-stream" id="watchBtn" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">' +
+            '<a href="' + linksUrl + '" class="btn-watch-stream" id="watchBtn" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">' +
               '<span>▶</span> ' + (hasLiveStream ? ('Select Live Stream Server (' + mServers.length + ' Channels Online)') : 'Live Stream Gateway (Starts at Kickoff)') +
             '</a>' +
           '</div>' +
@@ -440,7 +519,7 @@
         '<!-- TAB PANE 2: TIMELINE / EVENTS -->' +
         '<div class="mtab-pane" id="mpane-timeline">' +
           '<div id="eventsListContainer">' +
-            '<div class="event-timeline-card"><div class="event-min-badge">1\'</div><div><strong>Match Kickoff</strong> • Whistle blown at ' + (match.venue || 'Stadium') + '</div></div>' +
+            '<div class="event-timeline-card"><div class="event-min-badge">1\'</div><div><strong>Match Kickoff</strong> • Whistle blown at ' + venue + '</div></div>' +
             (isLive || match.status === 'finished' ? 
               '<div class="event-timeline-card"><div class="event-min-badge" style="background:#2563eb;color:#fff;">30\'</div><div><strong>⚽ Goal!</strong> ' + homeName + ' scores with an emphatic finish!</div></div>' +
               '<div class="event-timeline-card"><div class="event-min-badge" style="background:#eab308;color:#000;">44\'</div><div><strong>🟨 Yellow Card</strong> shown for tactical foul.</div></div>' :
@@ -530,7 +609,7 @@
         '<!-- TAB PANE 7: ARTICLES & FOTMOB NEWS -->' +
         '<div class="mtab-pane" id="mpane-articles">' +
           '<div class="article-card-grid" id="articlesGridContainer">' +
-            '<div class="article-card" onclick="openArticleModal(\'Tactical Breakdown: ' + homeName + ' vs ' + awayName + '\', \'' + homeLogo + '\', \'Today\', \'<p>In-depth tactical preview of the match highlighting key matchups, expected lineups, and managerial systems.</p>\')">' +
+            '<div class="article-card" onclick="openArticleModal(\'Tactical Breakdown: ' + homeName.replace(/'/g, "\\'") + ' vs ' + awayName.replace(/'/g, "\\'") + '\', \'' + homeLogo.replace(/'/g, "\\'") + '\', \'Today\', \'<p>In-depth tactical preview of the match highlighting key matchups, expected lineups, and managerial systems.</p>\')">' +
               '<div style="background:#2563eb;height:120px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;">MATCH PREVIEW</div>' +
               '<div class="article-card-content">' +
                 '<div style="font-size:11px;color:#2563eb;font-weight:800;margin-bottom:4px;">EDITORIAL PREVIEW</div>' +
@@ -571,15 +650,17 @@
           var artContainer = document.getElementById('articlesGridContainer');
           if (artContainer) {
             artContainer.innerHTML = articles.map(function(art) {
-              var titleEsc = (art.title || '').replace(/"/g, '&quot;').replace(/'/g, "\\'");
-              var img = art.image || 'https://images.fotmob.com/image_resources/news/fotmob.png';
-              var desc = (art.description || 'Click to view the full match story and details.').replace(/'/g, "\\'");
-              return '<div class="article-card" onclick="openArticleModal(\'' + titleEsc + '\', \'' + img + '\', \'' + (art.dateUpdated || '') + '\', \'<p>' + desc + '</p>\')">' +
+              var titleEsc = escapeHtml(art.title || '');
+              var img = sanitizeUrl(art.image || 'https://images.fotmob.com/image_resources/news/fotmob.png');
+              var desc = escapeHtml(art.description || 'Click to view the full match story and details.');
+              var source = escapeHtml((art.source || 'FotMob').toUpperCase());
+              var dateUp = escapeHtml(art.dateUpdated || '');
+              return '<div class="article-card" onclick="openArticleModal(\'' + titleEsc.replace(/'/g, "\\'") + '\', \'' + img.replace(/'/g, "\\'") + '\', \'' + dateUp.replace(/'/g, "\\'") + '\', \'' + desc.replace(/'/g, "\\'") + '\')">' +
                 '<img src="' + img + '" alt="" onerror="this.style.display=\'none\'" />' +
                 '<div class="article-card-content">' +
-                  '<div style="font-size:11px;color:#2563eb;font-weight:800;margin-bottom:4px;">' + (art.source || 'FotMob').toUpperCase() + '</div>' +
-                  '<h4 style="font-size:14px;font-weight:800;line-height:1.4;margin-bottom:6px;">' + (art.title || '') + '</h4>' +
-                  '<p style="font-size:12px;color:#64748b;line-height:1.5;">' + (art.description || '') + '</p>' +
+                  '<div style="font-size:11px;color:#2563eb;font-weight:800;margin-bottom:4px;">' + source + '</div>' +
+                  '<h4 style="font-size:14px;font-weight:800;line-height:1.4;margin-bottom:6px;">' + titleEsc + '</h4>' +
+                  '<p style="font-size:12px;color:#64748b;line-height:1.5;">' + desc + '</p>' +
                 '</div>' +
               '</div>';
             }).join('');
@@ -593,11 +674,13 @@
           if (evContainer) {
             evContainer.innerHTML = events.map(function(ev) {
               var icon = ev.type === 'Goal' ? '⚽' : (ev.type === 'Card' ? (ev.card === 'Red' ? '🟥' : '🟨') : '⚡');
-              var playerName = ev.player?.name || ev.nameStr || '';
-              var subText = ev.assistInput ? (' (Assist: ' + ev.assistInput + ')') : '';
+              var playerName = escapeHtml(ev.player?.name || ev.nameStr || '');
+              var subText = ev.assistInput ? (' (Assist: ' + escapeHtml(ev.assistInput) + ')') : '';
+              var evType = escapeHtml(ev.type || '');
+              var timeStr = escapeHtml(String(ev.timeStr || ev.time || ''));
               return '<div class="event-timeline-card">' +
-                '<div class="event-min-badge">' + (ev.timeStr || ev.time || '') + '\'</div>' +
-                '<div><strong>' + icon + ' ' + (ev.type || '') + '</strong>: ' + playerName + subText + '</div>' +
+                '<div class="event-min-badge">' + timeStr + '\'</div>' +
+                '<div><strong>' + icon + ' ' + evType + '</strong>: ' + playerName + subText + '</div>' +
               '</div>';
             }).join('');
           }
@@ -732,11 +815,15 @@
         window.history.pushState({ linksId: match.id }, '', '/?links=' + encodeURIComponent(match.id));
       }
 
-      var homeName = match.home_team || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'Home Team';
-      var awayName = match.away_team || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].name) || 'Away Team';
-      var homeLogo = match.home_logo || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png';
-      var awayLogo = match.away_logo || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png';
-      var leagueName = match.league_name || (leaguesMap[match.league_id] && leaguesMap[match.league_id].name) || 'Live Match Center';
+      var rawHomeName = match.home_team || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'Home Team';
+      var rawAwayName = match.away_team || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].name) || 'Away Team';
+      var homeName = escapeHtml(rawHomeName);
+      var awayName = escapeHtml(rawAwayName);
+      var homeLogo = sanitizeUrl(match.home_logo || (teamsMap[match.home_team_id] && teamsMap[match.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png');
+      var awayLogo = sanitizeUrl(match.away_logo || (teamsMap[match.away_team_id] && teamsMap[match.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png');
+      var leagueName = escapeHtml(match.league_name || (leaguesMap[match.league_id] && leaguesMap[match.league_id].name) || 'Live Match Center');
+      var venue = escapeHtml(match.venue || 'National Stadium');
+      var postUrl = sanitizeUrl(getMatchPostUrl(match));
 
       document.title = 'Watch Live Links: ' + homeName + ' vs ' + awayName + ' | ZetaSports';
 
@@ -752,8 +839,6 @@
 
       var linksBox = document.getElementById('linksBox');
       if (!linksBox) return;
-
-      var postUrl = getMatchPostUrl(match);
 
       var html = 
         '<!-- Scoreboard Header on Link Selection Page -->' +
@@ -779,7 +864,7 @@
         '</div>' +
 
         '<div class="match-meta-list">' +
-          '<div class="match-meta-item"><span>Stadium:</span><strong>' + (match.venue || 'National Stadium') + '</strong></div>' +
+          '<div class="match-meta-item"><span>Stadium:</span><strong>' + venue + '</strong></div>' +
           '<div class="match-meta-item"><span>Kickoff Date:</span><strong>' + kickoffFull + '</strong></div>' +
           '<div class="match-meta-item"><span>Active Channels:</span><strong style="color:#22c55e;">' + (hasLiveStream ? (mServers.length + ' HD Streams Online') : 'Standby Mode') + '</strong></div>' +
           '<div class="match-meta-item"><span>Max Quality:</span><strong>1080p 60FPS Ultra HD</strong></div>' +
@@ -813,10 +898,11 @@
       } else {
         html += '<div class="links-servers-grid">';
         mServers.forEach(function(srv, idx) {
-          var streamTargetUrl = getStreamUrl(match.id, idx);
-          var qBadge = srv.quality || '1080p HD';
-          var lang = srv.language || 'English';
-          var typeBadge = (srv.type === 'mpd' ? 'DASH ClearKey' : (srv.type === 'iframe' ? 'Web Player' : 'HLS Fast CDN'));
+          var streamTargetUrl = sanitizeUrl(getStreamUrl(match.id, idx));
+          var srvName = escapeHtml(srv.name || ('Server ' + (idx + 1)));
+          var qBadge = escapeHtml(srv.quality || '1080p HD');
+          var lang = escapeHtml(srv.language || 'English');
+          var typeBadge = escapeHtml(srv.type === 'mpd' ? 'DASH ClearKey' : (srv.type === 'iframe' ? 'Web Player' : 'HLS Fast CDN'));
           var statusGlow = '🟢 Ultra Fast CDN • 99.9% Uptime';
 
           html += 
@@ -824,7 +910,7 @@
               '<div class="link-server-card-top">' +
                 '<div class="link-server-title">' +
                   '<span class="server-num-badge">#' + (idx + 1) + '</span> ' +
-                  '<strong>' + srv.name + '</strong>' +
+                  '<strong>' + srvName + '</strong>' +
                 '</div>' +
                 '<span class="link-server-status">' + statusGlow + '</span>' +
               '</div>' +
@@ -924,7 +1010,7 @@
         var bg = isActive ? '#2563eb' : '#334155';
         var border = isActive ? '2px solid #60a5fa' : '1px solid #475569';
         html += '<button class="match-chip-btn" onclick="switchServer(' + idx + ')" style="color:#fff;background:' + bg + ';border:' + border + ';font-size:12px;padding:6px 14px;font-weight:700;cursor:pointer;">' +
-          (isActive ? '▶ ' : '') + srv.name +
+          (isActive ? '▶ ' : '') + escapeHtml(srv.name) +
         '</button>';
       });
       container.innerHTML = html;
@@ -986,7 +1072,7 @@
         if (video) video.style.display = 'none';
         if (iframe) {
           iframe.style.display = 'block';
-          iframe.src = streamUrl;
+          iframe.src = sanitizeUrl(streamUrl);
         }
         if (badgeEl) {
           badgeEl.textContent = 'WEB EMBED PLAYER';
@@ -1107,7 +1193,7 @@
             }
           });
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-          video.src = streamUrl;
+          video.src = sanitizeUrl(streamUrl);
           if (window.Plyr) { plyrInstance = new window.Plyr(video); }
           video.play().catch(function(){});
         }
@@ -1117,7 +1203,7 @@
           badgeEl.textContent = 'HD VIDEO DIRECT';
           badgeEl.style.background = '#2563eb';
         }
-        video.src = streamUrl;
+        video.src = sanitizeUrl(streamUrl);
         if (window.Plyr) { plyrInstance = new window.Plyr(video); }
         video.play().catch(function(){});
       }
@@ -1225,16 +1311,29 @@
       var tomorrowStr = tomorrowDate.toISOString().split('T')[0];
 
       // Filter by Tab
-      var filtered = allMatches.filter(function(m) {
-        var mDateStr = m.date ? m.date.split('T')[0] : todayStr;
-        if (currentDateFilter === 'all') return true;
-        if (currentDateFilter === 'live') return m.status === 'live';
-        if (currentDateFilter === 'yesterday') return mDateStr === yesterdayStr || m.status === 'finished';
-        if (currentDateFilter === 'tomorrow') return mDateStr === tomorrowStr;
-        return mDateStr === todayStr || m.status === 'live' || m.status === 'upcoming' || allMatches.length <= 10;
-      });
+    var filtered = allMatches.filter(function(m) {
+      var mDateStr = m.date ? m.date.split('T')[0] : todayStr;
+      if (currentDateFilter === 'all') return true;
+      if (currentDateFilter === 'live') return m.status === 'live';
+      if (currentDateFilter === 'yesterday') return mDateStr === yesterdayStr;
+      if (currentDateFilter === 'tomorrow') return mDateStr === tomorrowStr;
+      return mDateStr === todayStr || m.status === 'live' || m.status === 'upcoming';
+    });
 
-      // ── CRITICAL: STRICT CHRONOLOGICAL SORT BY KICKOFF TIME (Earliest First) ──
+    // Filter by League
+    if (typeof currentLeagueFilter !== 'undefined' && currentLeagueFilter && currentLeagueFilter !== 'all') {
+      filtered = filtered.filter(function(m) {
+        var leagueName = m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '';
+        return leagueName.toLowerCase().indexOf(currentLeagueFilter.toLowerCase()) !== -1;
+      });
+    }
+
+    // If no matches on today's calendar date, fallback to showing available active/recent matches so the UI is never blank
+    if (filtered.length === 0 && currentDateFilter === 'today' && (typeof currentLeagueFilter === 'undefined' || currentLeagueFilter === 'all')) {
+      filtered = allMatches.slice(0, 10);
+    }
+
+    // ── CRITICAL: STRICT CHRONOLOGICAL SORT BY KICKOFF TIME (Earliest First) ──
       filtered.sort(function(a, b) {
         var tA = a.date ? new Date(a.date).getTime() : 0;
         var tB = b.date ? new Date(b.date).getTime() : 0;
@@ -1248,11 +1347,13 @@
 
       var html = '';
       filtered.forEach(function(m) {
-        var homeName = m.home_team || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].name) || 'Home Team';
-        var awayName = m.away_team || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].name) || 'Away Team';
-        var homeLogo = m.home_logo || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png';
-        var awayLogo = m.away_logo || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png';
-        var leagueName = m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || 'Live Match';
+        var rawHomeName = m.home_team || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].name) || 'Home Team';
+        var rawAwayName = m.away_team || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].name) || 'Away Team';
+        var homeName = escapeHtml(rawHomeName);
+        var awayName = escapeHtml(rawAwayName);
+        var homeLogo = sanitizeUrl(m.home_logo || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png');
+        var awayLogo = sanitizeUrl(m.away_logo || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png');
+        var leagueName = escapeHtml(m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || 'Live Match');
 
         var liveInfo = getMatchLiveInfo(m);
         var isLive = liveInfo.isLive;
@@ -1409,6 +1510,7 @@
 
       console.log('[ZetaSports] Loaded ' + allMatches.length + ' matches sorted by kickoff time.');
       try { renderMatches(); } catch(e) { console.error('[ZetaSports] renderMatches error:', e); }
+      try { updateHeaderLiveCounter(); } catch(e) { console.error('[ZetaSports] updateHeaderLiveCounter error:', e); }
       try { checkUrlRoute(); } catch(e) { console.error('[ZetaSports] checkUrlRoute error:', e); }
       try { syncFotMobScores(); } catch(e) { console.error('[ZetaSports] syncFotMobScores error:', e); }
     } catch (err) {
