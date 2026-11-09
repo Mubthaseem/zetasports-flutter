@@ -63,3 +63,4 @@ if (korra.includes(oldKorraFilter) && !korra.includes('// If no matches on today
 
 fs.writeFileSync('zetasports-korra-blogger-theme.xml', korra, 'utf8');
 console.log('✔ zetasports-korra-blogger-theme.xml updated successfully');
+

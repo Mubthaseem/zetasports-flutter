@@ -265,3 +265,4 @@ console.log('✔ Complete scripts/blogger_script_part.js syntax is 100% valid!')
 
 fs.writeFileSync('scripts/blogger_script_part.js', existingPart, 'utf8');
 console.log('✔ Wrote updated scripts/blogger_script_part.js successfully.');
+
