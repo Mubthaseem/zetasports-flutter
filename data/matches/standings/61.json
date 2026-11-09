@@ -2,7 +2,7 @@
   "competitionId": "61",
   "competitionName": "Liga Portugal",
   "season": "2026/2027",
-  "updatedAt": "2026-11-08T21:44:37.400Z",
+  "updatedAt": "2026-11-09T04:53:03.335Z",
   "table": [
     {
       "position": 1,
@@ -29,17 +29,16 @@
       "shortName": "Benfica",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9772.png",
       "played": 11,
-      "won": 8,
-      "drawn": 2,
+      "won": 9,
+      "drawn": 1,
       "lost": 1,
-      "goalsFor": 28,
-      "goalsAgainst": 9,
-      "goalDifference": 19,
-      "points": 26,
+      "goalsFor": 30,
+      "goalsAgainst": 10,
+      "goalDifference": 20,
+      "points": 28,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 3,
@@ -132,14 +131,13 @@
       "shortName": "Braga",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10264.png",
       "played": 11,
-      "won": 4,
-      "drawn": 3,
+      "won": 5,
+      "drawn": 2,
       "lost": 4,
-      "goalsFor": 12,
+      "goalsFor": 13,
       "goalsAgainst": 11,
-      "goalDifference": 1,
-      "points": 15,
-      "qualificationZone": "Active"
+      "goalDifference": 2,
+      "points": 17
     },
     {
       "position": 9,
@@ -194,13 +192,12 @@
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/1074320.png",
       "played": 11,
       "won": 2,
-      "drawn": 5,
-      "lost": 4,
-      "goalsFor": 16,
-      "goalsAgainst": 20,
-      "goalDifference": -4,
-      "points": 11,
-      "qualificationZone": "Active"
+      "drawn": 4,
+      "lost": 5,
+      "goalsFor": 17,
+      "goalsAgainst": 22,
+      "goalDifference": -5,
+      "points": 10
     },
     {
       "position": 13,
@@ -249,25 +246,6 @@
     },
     {
       "position": 16,
-      "teamId": "7841",
-      "teamName": "Rio Ave",
-      "shortName": "Rio Ave",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7841.png",
-      "played": 11,
-      "won": 2,
-      "drawn": 2,
-      "lost": 7,
-      "goalsFor": 9,
-      "goalsAgainst": 23,
-      "goalDifference": -14,
-      "points": 8,
-      "form": [
-        "#FFA72F"
-      ],
-      "qualificationZone": "Active"
-    },
-    {
-      "position": 17,
       "teamId": "212821",
       "teamName": "Casa Pia AC",
       "shortName": "Casa Pia AC",
@@ -280,6 +258,24 @@
       "goalsAgainst": 20,
       "goalDifference": -14,
       "points": 8,
+      "form": [
+        "#FFA72F"
+      ]
+    },
+    {
+      "position": 17,
+      "teamId": "7841",
+      "teamName": "Rio Ave",
+      "shortName": "Rio Ave",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/7841.png",
+      "played": 11,
+      "won": 2,
+      "drawn": 1,
+      "lost": 8,
+      "goalsFor": 9,
+      "goalsAgainst": 24,
+      "goalDifference": -15,
+      "points": 7,
       "form": [
         "#FF4646"
       ]
