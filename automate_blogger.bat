@@ -10,11 +10,13 @@ echo  [2] Publish ZetaSports Theme (http://www.zetasports.site)
 echo  [3] Publish BOTH Themes to Blogger (All Sites)
 echo  [4] First-Time Setup: Log in to Google Account (Visible Browser)
 echo  [5] Dry-Run Validation (Test Without Saving)
-echo  [6] Launch AI Niche Blogger Post Generator (Gemini/Ollama)
-echo  [7] Exit
+echo  [6] Update SEO Keywords, Titles & Announcement Banner (Live Cloud)
+echo  [7] Launch AI Niche Blogger Post Generator (Gemini/Ollama)
+echo  [8] Run All 5 Automated Test Suites (run_tests.bat)
+echo  [9] Exit
 echo.
 echo ======================================================================
-set /p choice="Enter choice [1-7]: "
+set /p choice="Enter choice [1-9]: "
 
 if "%choice%"=="1" (
     echo.
@@ -52,12 +54,23 @@ if "%choice%"=="5" (
     goto end
 )
 if "%choice%"=="6" (
+    node scripts/update_seo_keywords.cjs --interactive
+    pause
+    goto end
+)
+if "%choice%"=="7" (
     echo.
     echo Launching Niche Blogger AI Agent...
     call run_niche_blogger.bat
     goto end
 )
-if "%choice%"=="7" (
+if "%choice%"=="8" (
+    echo.
+    echo Running all automated test suites...
+    call run_tests.bat
+    goto end
+)
+if "%choice%"=="9" (
     exit
 )
 
