@@ -312,8 +312,12 @@
           return allMatches[i].id;
         }
       }
-      var parts = str.split('-');
-      return parts[parts.length - 1];
+      if (str.indexOf('-vs-') !== -1) {
+        var parts = str.split('-');
+        return parts[parts.length - 1] || null;
+      }
+      if (/^[0-9]+$/.test(str)) return str;
+      return null;
     }
 
     // ── FEATURE #4: GOAL WHISTLE AUDIO ──
@@ -1365,14 +1369,21 @@
     // ── RENDER MATCHES IN CHRONOLOGICAL TIME ORDER (Stitch v4 Tonal Cards) ──
     function syncDynamicLeagueChips() {
       var pillBox = document.getElementById('leagueFilterPills');
-      if (!pillBox || !allMatches || allMatches.length === 0) return;
+      if (!pillBox) return;
+      if (!allMatches || allMatches.length === 0) {
+        pillBox.innerHTML = '<button onclick="filterLeague(\'all\')" data-league="all" class="badge-chip active">All Competitions (0)</button>';
+        return;
+      }
       var counts = {};
       allMatches.forEach(function(m) {
         var ln = (m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '').trim();
         if (ln) counts[ln] = (counts[ln] || 0) + 1;
       });
       var leagues = Object.keys(counts).slice(0, 7);
-      if (leagues.length === 0) return;
+      if (leagues.length === 0) {
+        pillBox.innerHTML = '<button onclick="filterLeague(\'all\')" data-league="all" class="badge-chip active">All Competitions (' + allMatches.length + ')</button>';
+        return;
+      }
       var btns = '<button onclick="filterLeague(\'all\')" data-league="all" class="badge-chip ' + (currentLeagueFilter === 'all' ? 'active' : '') + '">All Competitions (' + allMatches.length + ')</button>';
       leagues.forEach(function(l) {
         var safeL = escapeHtml(l);
@@ -1388,7 +1399,7 @@
       var hasBloggerPosts = document.querySelectorAll('.blog-posts .index-post, .blog-posts .item-post').length > 0;
       if (hasBloggerPosts) { fb.style.display = 'none'; return; }
       var items = (allMatches || []).slice(0, 6);
-      if (items.length === 0) return;
+      if (items.length === 0) { fb.style.display = 'none'; return; }
       var cards = items.map(function(m) {
         var h = escapeHtml(m.home_team || 'Home Team');
         var a = escapeHtml(m.away_team || 'Away Team');
@@ -1465,7 +1476,11 @@
       });
 
       if (filtered.length === 0) {
-        container.innerHTML = '<div style="text-align:center;padding:40px;background:var(--zs-surface-lowest);border-radius:14px;color:var(--zs-secondary);font-weight:700;">No fixtures matched your filter. Try another tab or clear search!</div>';
+        if (!allMatches || allMatches.length === 0) {
+          container.innerHTML = '<div class="zs-empty-state-card"><span class="material-symbols-outlined" style="font-size:36px;color:var(--zs-primary);">event_busy</span><h3>No Approved Fixtures Published</h3><p>Only admin-approved fixtures appear on this schedule. Approve upcoming matches in the ZetaSports Admin Panel to publish them here.</p></div>';
+        } else {
+          container.innerHTML = '<div class="zs-empty-state-card"><span class="material-symbols-outlined" style="font-size:32px;color:var(--zs-outline);">filter_alt_off</span><h3>No Matching Fixtures</h3><p>No fixtures matched your current date or competition filter. Switch tabs or clear search.</p></div>';
+        }
         return;
       }
 
@@ -1666,25 +1681,28 @@
   }
 
   // ── Direct Supabase REST Fetch Helper with Resilient Backoff ──
-  async function fetchSupabaseTable(table) {
-    var res = await fetchWithResilientBackoff(SB_URL + '/rest/v1/' + table + '?select=*', {
+  async function fetchSupabaseTable(table, queryFilter) {
+    var qs = '?select=*' + (queryFilter ? '&' + queryFilter : '');
+    var res = await fetchWithResilientBackoff(SB_URL + '/rest/v1/' + table + qs, {
       headers: SB_HEADERS
     }, 2, 800);
     return await res.json();
   }
 
-  // ── Fetch Initial Data from Supabase ──
+  // ── Fetch Initial Data from Supabase (Strictly Approved Matches Only) ──
   async function loadData() {
     try {
-      console.log('[ZetaSports] Fetching fixtures in time order from Supabase...');
+      console.log('[ZetaSports] Fetching approved fixtures in time order from Supabase...');
       var results = await Promise.all([
-        fetchSupabaseTable('zeta_matches'),
+        fetchSupabaseTable('zeta_matches', 'is_approved=eq.true'),
         fetchSupabaseTable('zeta_teams'),
         fetchSupabaseTable('zeta_leagues'),
         fetchSupabaseTable('zeta_streams')
       ]);
 
-      allMatches = results[0] || [];
+      allMatches = (results[0] || []).filter(function(m) {
+        return m && m.is_approved === true;
+      });
       var teams = results[1] || [];
       var leagues = results[2] || [];
       allStreams = results[3] || [];
