@@ -51,7 +51,7 @@ function testResponsiveCSS() {
   // 8. Verify Colorify Theme Permalink Hydration & Scoreboard Contrast
   const colorifyXml = fs.readFileSync('zetasports-colorify-blogger-theme.xml', 'utf8');
   assert.ok(colorifyXml.includes('window.openMatchPage = async function'), 'Colorify openMatchPage must be async for permalink hydration');
-  assert.ok(colorifyXml.includes('background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%)'), 'Colorify matchBox must render dark gradient scoreboard');
+  assert.ok(colorifyXml.includes('zs-match-hero-card'), 'Colorify matchBox must render Google Stitch light scoreboard hero card');
 
   // 9. Verify packaged deliverables in project/src/
   assert.ok(fs.existsSync('project/src/css/zetasports-core.css'), 'Packaged core CSS must exist');

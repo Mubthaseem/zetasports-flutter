@@ -22,7 +22,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Oswald:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=Rajdhani:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet" />
 
   <!-- Plyr & HLS.js from jsDelivr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
@@ -30,594 +31,459 @@
   <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.15/dist/hls.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
   <!-- ZetaSports Unified Core Stylesheet (Hosted on Supabase Storage CDN) -->
-  <link rel="stylesheet" href="https://udlncusvhmydivtjkjcy.supabase.co/storage/v1/object/public/scripts/zetasports-core.css" id="zetasports-core-css"/>
+  <link rel="stylesheet" href="https://udlncusvhmydivtjkjcy.supabase.co/storage/v1/object/public/scripts/zetasports-core.css" id="zetasports-core-css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/gh/Mubthaseem/zetasports-flutter@main/web/css/zetasports-core.css';"/>
 
 
   <b:skin><![CDATA[
-  /* Suppress default Blogger chrome */
+  /* Minimal Blogger Chrome Suppressor — All Visual CSS Loaded via Unified zetasports-core.css */
   #navbar, .navbar, .navbar-iframe, .header-outer, .footer-outer, .sidebar-container {
     display: none !important;
     height: 0 !important;
     visibility: hidden !important;
   }
-
-  /* ── KORRA / YALLA SHOOT PRO THEME STYLING ── */
-  * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    font-weight: 500;
-  }
-
-  a { color: #000; }
-  
-  body {
-    background: #eceef2;
-    color: #000;
-    font-size: 15px;
-    line-height: 24px;
-    transition: background 0.3s ease, color 0.3s ease;
-    overflow-x: hidden;
-  }
-
-  .STING-web-Max-Size {
-    max-width: 1060px;
-    width: 95%;
-    margin: 14px auto;
-    padding: 0 10px;
-  }
-
-  /* ── Header ── */
-  header {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-  }
-
-  .STING-web-Header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 14px;
-  }
-
-  .STING-web-Header-Right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .STING-web-Header-Logo {
-    padding: 6px 18px;
-    background: #2563eb;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 56px;
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
-  }
-
-  .STING-web-Header-Logo > a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-  }
-
-  .STING-web-Header-Logo .STING-WEB-SiteName {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-  }
-
-  .STING-web-Header-Logo .STING-WEB-SiteUrl {
-    font-size: 11px;
-    opacity: 0.85;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-
-  .STING-web-Menu {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .STING-web-Menu > li > a {
-    color: #334155;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 700;
-    transition: all 0.2s;
-  }
-
-  .STING-web-Menu > li > a:hover,
-  .STING-web-Menu > li.active > a {
-    color: #2563eb;
-    background: #eff6ff;
-  }
-
-  .STING-web-Header-Left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .STING-web-Open-Menu, .STING-web-Open-Dark {
-    height: 38px;
-    width: 38px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
-    color: #334155;
-    font-size: 18px;
-    transition: all 0.2s;
-  }
-
-  .STING-web-Open-Menu:hover, .STING-web-Open-Dark:hover {
-    background: #e2e8f0;
-  }
-
-  .STING-web-Open-Menu { display: none; }
-
-  /* ── Ad Units ── */
-  .STING-web-Ads {
-    background: #fff;
-    border: 1px dashed #cbd5e1;
-    border-radius: 10px;
-    text-align: center;
-    padding: 12px;
-    margin: 14px auto;
-    max-width: 1000px;
-    width: 95%;
-    color: #94a3b8;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .adsense-leaderboard {
-    min-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* ── MATCHES CONTAINER (KORRA / YALLA SHOOT STYLE) ── */
-  /* Custom ZetaSports fixtures, match center & collision guards loaded via zetasports-core.css */
   ]]></b:skin>
-  <!-- Tailwind CSS & Lazy Loading Animations -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>/*<![CDATA[*/
-    @keyframes shimmerMove {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-    .skeleton-shimmer {
-      position: relative;
-      overflow: hidden;
-      background: #1e293b !important;
-    }
-    .skeleton-shimmer::after {
-      content: '';
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      transform: translateX(-100%);
-      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
-      animation: shimmerMove 1.6s infinite;
-    }
-    .img-lazy-blur {
-      opacity: 0;
-      filter: blur(6px);
-      transform: scale(0.96);
-      transition: opacity 0.4s ease-out, filter 0.4s ease-out, transform 0.4s ease-out;
-    }
-    .img-lazy-blur.loaded {
-      opacity: 1;
-      filter: blur(0);
-      transform: scale(1);
-    }
-    @keyframes zetaPulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.3; transform: scale(1.15); }
-    }
-    /* Touch Target & Responsive Accessibility */
-    .STING-web-Menu > li > a,
-    #mainMenu a,
-    #sidebarMainMenu a,
-    .STING-web-Matches-Toggle > li > a,
-    .match-chip-btn,
-    .badge-chip,
-    #leagueFilterPills button,
-    .STING-web-Open-Menu,
-    .STING-web-Open-Dark,
-    #darkToggle,
-    .btn-launch-stream {
-      min-height: 44px !important;
-      min-width: 44px !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      box-sizing: border-box !important;
-      touch-action: manipulation;
-    }
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    html, body {
-      max-width: 100vw;
-      overflow-x: hidden;
-    }
-    .STING-web-Container-Matches, .STING-web-Match, .STING-web-Match > a {
-      box-sizing: border-box !important;
-      max-width: 100% !important;
-    }
-  /*]]>*/</style>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="STING-web-Header STING-web-Max-Size">
-      <div class="STING-web-Header-Right">
-        <div class="STING-web-Header-Logo">
-          <a href="javascript:void(0)" onclick="goHome()" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none;">
-            <span class="STING-WEB-SiteName">ZetaSports</span>
-            <span class="STING-WEB-SiteUrl">kora.live</span>
-            <span id="zetaHeaderLiveCounter" style="display:inline-flex; align-items:center; gap:4px; font-size:11px; font-weight:700; background:#dcfce7; color:#15803d; border:1px solid #86efac; border-radius:999px; padding:2px 8px; font-family:'Inter', sans-serif;">
-              <span style="width:6px; height:6px; border-radius:50%; background:#16a34a; display:inline-block; animation:zetaPulse 1.5s infinite;"></span>
-              <span class="zeta-live-count-text">LIVE</span>
-            </span>
-          </a>
-        </div>
-
-        <ul class="STING-web-Menu" id="mainMenu">
-          <li class="active"><a href="javascript:void(0)" onclick="goHome()">Home</a></li>
-          <li><a href="javascript:void(0)" onclick="filterDate('live')">⚡ Live Scores</a></li>
-          <li><a href="javascript:void(0)" onclick="filterLeague('all')">⚽ Football</a></li>
-          <li><a href="javascript:void(0)" onclick="filterLeague('Cricket')">🏏 Cricket</a></li>
-          <li><a href="javascript:void(0)" onclick="var el=document.getElementById('leagueFilterPills');if(el)el.scrollIntoView({behavior:'smooth'});">🏆 Competitions</a></li>
-          <li><a href="javascript:void(0)" onclick="filterDate('live')">📺 Live Streams</a></li>
-          <li><a href="javascript:void(0)" onclick="filterDate('yesterday')">⭐ Highlights</a></li>
-        </ul>
+  <!-- HEADER (Stitch v4 Frosted Chrome) -->
+  <header class="zs-header" id="header-wrapper">
+    <div class="zs-header-inner">
+      <div class="zs-header-left">
+        <button aria-label="Open Navigation Menu" class="zs-icon-btn zs-mobile-menu-btn" onclick="toggleZetaDrawer()" type="button">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <a class="zs-brand-link" href="javascript:void(0)" onclick="navGoHome()">
+          <span class="zs-brand-mark">Z</span>
+          <span class="zs-brand-text">
+            <span class="zs-brand-name">Zeta<span>Sports</span></span>
+            <span class="zs-brand-sub">zetasports.site</span>
+          </span>
+        </a>
+        <span class="zs-live-header-pill" id="zetaHeaderLiveCounter">
+          <span class="zs-ping-dot-wrap"><span class="zs-ping-ring"></span><span class="zs-ping-core"></span></span>
+          <span class="zeta-live-count-text">LIVE</span>
+        </span>
+        <nav aria-label="Main Navigation" class="zs-desktop-nav" id="mainMenu">
+          <a class="zs-nav-link active" href="javascript:void(0)" onclick="navGoHome()">Home</a>
+          <a class="zs-nav-link" href="javascript:void(0)" onclick="navGoDate('today')">Today&#39;s Matches</a>
+          <a class="zs-nav-link" href="javascript:void(0)" onclick="navGoDate('live')"><span style="width:7px;height:7px;border-radius:9999px;background:#ba1a1a;display:inline-block;"></span>Live Now</a>
+          <a class="zs-nav-link" href="javascript:void(0)" onclick="navGoDate('yesterday')">Results</a>
+          <a class="zs-nav-link" href="javascript:void(0)" onclick="navGoDate('tomorrow')">Tomorrow</a>
+          <a class="zs-nav-link" href="https://www.keralahub.online/search/label/Football">Football</a>
+          <a class="zs-nav-link" href="https://www.keralahub.online/search/label/Cricket">Cricket</a>
+          <a class="zs-nav-link" href="javascript:void(0)" onclick="scrollToSection('editorialSection')">News &amp; Analysis</a>
+        </nav>
       </div>
-
-      <div class="STING-web-Header-Left">
-        <div class="STING-web-Open-Dark" id="darkToggle" onclick="toggleNightMode()" title="Toggle Dark/Light Mode">
-          🌙
+      <div class="zs-header-right">
+        <div class="zs-search-box">
+          <span class="material-symbols-outlined">search</span>
+          <input autocomplete="off" class="zs-search-input" id="zetaGlobalSearch" oninput="filterBySearchQuery(this.value)" placeholder="Teams, leagues, fixtures..." type="text" />
         </div>
-        <div class="STING-web-Open-Menu" onclick="toggleMenu()" title="Menu">
-          ☰
+        <button aria-label="Toggle color mode" class="zs-icon-btn" id="darkToggle" onclick="toggleNightMode()" title="Toggle Dark/Light Mode" type="button">
+          <span class="material-symbols-outlined" id="darkToggleIcon">dark_mode</span>
+        </button>
+        <div class="zs-avatar-badge" title="100% Free Public Access">
+          <span class="material-symbols-outlined" style="font-size:18px;">person</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Top AdSense Leaderboard (728x90) -->
-  <div class="STING-web-Ads adsense-leaderboard">
-    <span>Advertisement • Top Leaderboard (728x90)</span>
-  </div>
-
-  <!-- VIEW 1: HOME DASHBOARD WITH MATCH CARDS SORTED BY TIME -->
-  <div id="homeView">
-    <div class="STING-web-Container-Matches STING-web-Max-Size">
-      <div class="STING-web-Container-Matches-Top">
-        <h2 class="STING-web-Title-Box">
-          <span>⚡</span>
-          <strong>Today's Fixtures (Chronological Time Order)</strong>
-        </h2>
-        <ul class="STING-web-Matches-Toggle">
-          <li class="Yesterday-Matches" id="tab-yesterday" onclick="filterDate('yesterday')">
-            <a href="javascript:void(0)">Yesterday</a>
-          </li>
-          <li class="Today-Matches active" id="tab-today" onclick="filterDate('today')">
-            <a href="javascript:void(0)">Today</a>
-          </li>
-          <li class="Tomorrow-Matches" id="tab-tomorrow" onclick="filterDate('tomorrow')">
-            <a href="javascript:void(0)">Tomorrow</a>
-          </li>
-        </ul>
+  <!-- Mobile Slide Navigation Drawer -->
+  <div class="zs-mobile-drawer" id="zetaMobileDrawer" onclick="if(event.target===this)toggleZetaDrawer(false)">
+    <div class="zs-mobile-drawer-panel">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid var(--zs-surface-container);">
+        <span class="zs-brand-name">Zeta<span>Sports</span></span>
+        <button aria-label="Close Menu" class="zs-icon-btn" onclick="toggleZetaDrawer(false)" type="button"><span class="material-symbols-outlined">close</span></button>
       </div>
-
-      <!-- League Filter Pills -->
-      <div id="leagueFilterPills" style="display:flex; gap:8px; overflow-x:auto; padding:8px 0; margin:10px 0 14px; -webkit-overflow-scrolling:touch;">
-        <button onclick="filterLeague('all')" class="badge-chip active" style="cursor:pointer; background:#2563eb; color:#fff; border:none; padding:8px 16px; border-radius:8px; font-size:12px; font-weight:700; min-height:44px; min-width:44px; display:inline-flex; align-items:center; justify-content:center;">All</button>
-        <button onclick="filterLeague('Premier League')" class="badge-chip" style="cursor:pointer; background:#f1f5f9; color:#334155; border:none; padding:8px 16px; border-radius:8px; font-size:12px; font-weight:700; min-height:44px; min-width:44px; display:inline-flex; align-items:center; justify-content:center;">Premier League</button>
-        <button onclick="filterLeague('La Liga')" class="badge-chip" style="cursor:pointer; background:#f1f5f9; color:#334155; border:none; padding:8px 16px; border-radius:8px; font-size:12px; font-weight:700; min-height:44px; min-width:44px; display:inline-flex; align-items:center; justify-content:center;">La Liga</button>
-        <button onclick="filterLeague('Champions League')" class="badge-chip" style="cursor:pointer; background:#f1f5f9; color:#334155; border:none; padding:8px 16px; border-radius:8px; font-size:12px; font-weight:700; min-height:44px; min-width:44px; display:inline-flex; align-items:center; justify-content:center;">Champions League</button>
-        <button onclick="filterLeague('Serie A')" class="badge-chip" style="cursor:pointer; background:#f1f5f9; color:#334155; border:none; padding:8px 16px; border-radius:8px; font-size:12px; font-weight:700; min-height:44px; min-width:44px; display:inline-flex; align-items:center; justify-content:center;">Serie A</button>
-        <button onclick="filterLeague('Indian Super League')" class="badge-chip" style="cursor:pointer; background:#f1f5f9; color:#334155; border:none; padding:8px 16px; border-radius:8px; font-size:12px; font-weight:700; min-height:44px; min-width:44px; display:inline-flex; align-items:center; justify-content:center;">ISL</button>
+      <div class="zs-mobile-drawer-search">
+        <span class="material-symbols-outlined" style="color:var(--zs-outline);margin-right:6px;">search</span>
+        <input autocomplete="off" class="zs-search-input" id="zetaMobileSearch" oninput="filterBySearchQuery(this.value)" placeholder="Search teams or leagues..." type="text" />
       </div>
-
-      <div class="STING-web-Matches" id="matchesList">
-        <!-- Modern Tailwind Skeleton Shimmer Cards -->
-        <div id="matchesSkeletonLoader" class="w-full flex flex-col gap-3 py-2">
-          
-          <div class="STING-web-Match animate-pulse flex items-center justify-between p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/70 shadow-sm">
-            <div class="flex items-center gap-3 flex-1 justify-start">
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-            </div>
-            <div class="flex flex-col items-center gap-1.5 px-4 min-w-[90px]">
-              <div class="h-3 w-16 bg-slate-200 dark:bg-slate-800 rounded-full skeleton-shimmer"></div>
-              <div class="h-6 w-14 bg-slate-200 dark:bg-slate-800 rounded-lg skeleton-shimmer"></div>
-              <div class="h-2.5 w-20 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer hidden sm:block"></div>
-            </div>
-            <div class="flex items-center gap-3 flex-1 justify-end">
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-            </div>
-          </div>
-          <div class="STING-web-Match animate-pulse flex items-center justify-between p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/70 shadow-sm">
-            <div class="flex items-center gap-3 flex-1 justify-start">
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-            </div>
-            <div class="flex flex-col items-center gap-1.5 px-4 min-w-[90px]">
-              <div class="h-3 w-16 bg-slate-200 dark:bg-slate-800 rounded-full skeleton-shimmer"></div>
-              <div class="h-6 w-14 bg-slate-200 dark:bg-slate-800 rounded-lg skeleton-shimmer"></div>
-              <div class="h-2.5 w-20 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer hidden sm:block"></div>
-            </div>
-            <div class="flex items-center gap-3 flex-1 justify-end">
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-            </div>
-          </div>
-          <div class="STING-web-Match animate-pulse flex items-center justify-between p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/70 shadow-sm">
-            <div class="flex items-center gap-3 flex-1 justify-start">
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-            </div>
-            <div class="flex flex-col items-center gap-1.5 px-4 min-w-[90px]">
-              <div class="h-3 w-16 bg-slate-200 dark:bg-slate-800 rounded-full skeleton-shimmer"></div>
-              <div class="h-6 w-14 bg-slate-200 dark:bg-slate-800 rounded-lg skeleton-shimmer"></div>
-              <div class="h-2.5 w-20 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer hidden sm:block"></div>
-            </div>
-            <div class="flex items-center gap-3 flex-1 justify-end">
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-            </div>
-          </div>
-          <div class="STING-web-Match animate-pulse flex items-center justify-between p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/70 shadow-sm">
-            <div class="flex items-center gap-3 flex-1 justify-start">
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-            </div>
-            <div class="flex flex-col items-center gap-1.5 px-4 min-w-[90px]">
-              <div class="h-3 w-16 bg-slate-200 dark:bg-slate-800 rounded-full skeleton-shimmer"></div>
-              <div class="h-6 w-14 bg-slate-200 dark:bg-slate-800 rounded-lg skeleton-shimmer"></div>
-              <div class="h-2.5 w-20 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer hidden sm:block"></div>
-            </div>
-            <div class="flex items-center gap-3 flex-1 justify-end">
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-            </div>
-          </div>
-          <div class="STING-web-Match animate-pulse flex items-center justify-between p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/70 shadow-sm">
-            <div class="flex items-center gap-3 flex-1 justify-start">
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-            </div>
-            <div class="flex flex-col items-center gap-1.5 px-4 min-w-[90px]">
-              <div class="h-3 w-16 bg-slate-200 dark:bg-slate-800 rounded-full skeleton-shimmer"></div>
-              <div class="h-6 w-14 bg-slate-200 dark:bg-slate-800 rounded-lg skeleton-shimmer"></div>
-              <div class="h-2.5 w-20 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer hidden sm:block"></div>
-            </div>
-            <div class="flex items-center gap-3 flex-1 justify-end">
-              <div class="h-4 w-24 sm:w-32 bg-slate-200 dark:bg-slate-800 rounded skeleton-shimmer"></div>
-              <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 skeleton-shimmer flex-shrink-0"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
-
-    <div class="STING-web-Ads">
-      <span>Advertisement • Responsive In-Feed</span>
-    </div>
-
-    <!-- Editorial Blog Posts for AdSense -->
-    <div class="STING-web-Main STING-web-Max-Size">
-      <div class="STING-web-Main-Top">
-        <span class="STING-web-WebSite-Title">Sports News &amp; Match Analysis</span>
-        <span style="font-size:12px;color:#64748b;font-weight:600;">Editorial Articles</span>
-      </div>
-
-      <b:section id='main' name='Editorial Blog Posts' showaddelement='yes'>
-        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
-          <b:includable id='main'>
-            <div class="STING-web-Main-All-Post">
-              <b:loop values='data:posts' var='post'>
-                <article class="STING-web-Main-Post">
-                  <a expr:href='data:post.url'>
-                    <div class="STING-web-Main-Posted-IMG">
-                      <b:if cond='data:post.firstImageUrl'>
-                        <img expr:src='data:post.firstImageUrl' alt=''/>
-                      <b:else/>
-                        <div style="display:flex;align-items:center;justify-content:center;height:100%;color:#fff;font-weight:800;">ZETASPORTS</div>
-                      </b:if>
-                    </div>
-                    <div class="STING-web-Main-Posted-TiTle">
-                      <h3><data:post.title/></h3>
-                      <span class="date-badge"><data:post.date/></span>
-                    </div>
-                  </a>
-                </article>
-              </b:loop>
-            </div>
-          </b:includable>
-        </b:widget>
-      </b:section>
+      <a class="zs-nav-link active" href="javascript:void(0)" onclick="toggleZetaDrawer(false);navGoHome();"><span class="material-symbols-outlined">home</span>Home</a>
+      <a class="zs-nav-link" href="javascript:void(0)" onclick="toggleZetaDrawer(false);navGoDate('live');"><span class="material-symbols-outlined" style="color:#ba1a1a;">sensors</span>Live Now</a>
+      <a class="zs-nav-link" href="javascript:void(0)" onclick="toggleZetaDrawer(false);navGoDate('yesterday');"><span class="material-symbols-outlined">history</span>Results (Yesterday)</a>
+      <a class="zs-nav-link" href="javascript:void(0)" onclick="toggleZetaDrawer(false);navGoDate('tomorrow');"><span class="material-symbols-outlined">event</span>Tomorrow&#39;s Fixtures</a>
+      <a class="zs-nav-link" href="https://www.keralahub.online/search/label/Football"><span class="material-symbols-outlined">sports_soccer</span>Football Coverage</a>
+      <a class="zs-nav-link" href="https://www.keralahub.online/search/label/Cricket"><span class="material-symbols-outlined">sports_cricket</span>Cricket Series</a>
+      <a class="zs-nav-link" href="javascript:void(0)" onclick="toggleZetaDrawer(false);scrollToSection('editorialSection');"><span class="material-symbols-outlined">newspaper</span>News &amp; Analysis</a>
     </div>
   </div>
 
-  <!-- VIEW 2: DEDICATED MATCH PAGE (domain.com/?match=team1-vs-team2-id) -->
-  <div id="matchView" class="STING-web-Max-Size">
-    <div style="margin-bottom: 14px;">
-      <button onclick="goHome()" style="background:#fff;border:1px solid #cbd5e1;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;">
-        ← Back to All Matches
-      </button>
-    </div>
-
-    <div class="match-page-box" id="matchBox">
-      <!-- Injected Dynamically by JS -->
-    </div>
-
-    <div class="STING-web-Ads">
-      <span>Advertisement • In-Article Unit</span>
+  <!-- Top AdSense Leaderboard (728x90 / 320x50) -->
+  <div class="zs-page-container" style="padding-bottom:6px;">
+    <div class="STING-web-Ads adsense-leaderboard zeta-ad-slot-card zs-ad-card">
+      <span class="zeta-ad-label zs-ad-label">ADVERTISEMENT</span>
+      <div class="zs-ad-inner">RESPONSIVE LEADERBOARD (728x90 DESKTOP / 320x50 MOBILE)</div>
     </div>
   </div>
 
-  <!-- VIEW 2.5: DEDICATED LINK SELECTION GATEWAY (Blogger Blog 1) -->
-  <div id="linksView" class="STING-web-Max-Size" style="display:none;">
-    <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; flex-wrap:wrap; gap:10px;">
-      <button onclick="returnToMatch()" class="match-chip-btn" id="btnLinksBackToMatch" style="cursor:pointer;">
-        ← Back to Match Post
-      </button>
-      <span style="font-size:12px;font-weight:700;color:#2563eb;display:flex;align-items:center;gap:6px;">
-        <span style="width:8px;height:8px;background:#2563eb;border-radius:50%;display:inline-block;"></span>
-        STREAM SELECTION GATEWAY
-      </span>
-    </div>
-
-    <!-- Dynamic Link Selection Box Injected by JS -->
-    <div class="links-page-box" id="linksBox"></div>
-
-    <div class="STING-web-Ads">
-      <span>Advertisement • High-CTR Link Gateway</span>
-    </div>
-  </div>
-
-  <!-- VIEW 3: DEDICATED STREAMING PAGE (domain.com/?stream=id) -->
-  <div id="streamView" class="STING-web-Max-Size">
-    <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; flex-wrap:wrap; gap:10px;">
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a id="btnBackToLinks" href="#" class="match-chip-btn" style="background:#2563eb;color:#fff;border-color:#2563eb;text-decoration:none;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;">
-          🔀 Change Server / Links
-        </a>
-        <a id="btnBackToPost" href="#" class="match-chip-btn" style="text-decoration:none;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;">
-          ← Match Post
-        </a>
-        <a id="btnBackToHome" href="#" class="match-chip-btn" style="text-decoration:none;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;">
-          🏠 Home
-        </a>
-      </div>
-      <span style="font-size:12px;font-weight:700;color:#e11d48;display:flex;align-items:center;gap:6px;">
-        <span style="width:8px;height:8px;background:#e11d48;border-radius:50%;display:inline-block;animation:blinker 1s infinite;"></span>
-        LIVE BROADCAST HD
-      </span>
-    </div>
-
-        <div class="stream-player-container">
-      <div class="stream-player-header" style="display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:#1e293b;border-bottom:1px solid #334155;">
+      <!-- Top Trust & Data Verification Bar (Stitch v4) -->
+      <div class="zs-trust-ribbon">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-          <h3 id="streamTitle" style="font-size:16px;font-weight:800;color:#f8fafc;margin:0;">Live Stream Player</h3>
-          <span id="streamBadge" style="font-size:11px;background:#2563eb;color:#fff;padding:3px 8px;border-radius:4px;font-weight:700;letter-spacing:0.5px;">LIVE BROADCAST</span>
+          <span class="zs-desk-pill">
+            <span class="zs-ping-dot-wrap" style="width:7px;height:7px;"><span class="zs-ping-ring"></span><span class="zs-ping-core" style="width:7px;height:7px;"></span></span>
+            LIVE SPORT DESK
+          </span>
+          <span style="color:var(--zs-outline);">Official Fixture Stream &#8226; Sourced via Verified Federation Telemetry</span>
         </div>
-        <div style="display:flex;gap:6px;">
-          <button onclick="reloadCurrentStream()" class="match-chip-btn" style="color:#94a3b8;background:#334155;border:none;font-size:12px;padding:5px 12px;cursor:pointer;" title="Reload Stream">🔄 Reload</button>
-          <button onclick="togglePlayerFullscreen()" class="match-chip-btn" style="color:#94a3b8;background:#334155;border:none;font-size:12px;padding:5px 12px;cursor:pointer;" title="Fullscreen">⛶ Fullscreen</button>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <span class="zs-rights-badge">
+            <span class="material-symbols-outlined" style="font-size:16px;">verified_user</span>
+            Legal &amp; Regulated Rights Guide
+          </span>
+          <span style="color:var(--zs-outline);">Kickoff Times: Auto-Detected</span>
         </div>
       </div>
-      <div id="playerFrameWrap" style="aspect-ratio: 16/9; background:#000; position:relative; overflow:hidden;">
-        <!-- Native / HLS HTML5 Video -->
-        <video id="liveVideo" playsinline="playsinline" controls="controls" crossorigin="anonymous" style="width:100%;height:100%;display:block;"></video>
-        <!-- Iframe for Web Embed Streams -->
-        <iframe id="streamIframe" src="" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" frameborder="0" style="display:none;width:100%;height:100%;border:none;"></iframe>
-        <!-- Clean Offline / No Stream Overlay (Zero Mock Stream!) -->
-        <div id="noStreamAlert" style="display:none;position:absolute;inset:0;background:radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;z-index:10;">
-          <div style="font-size:42px;margin-bottom:12px;">📡</div>
-          <h3 style="font-size:18px;font-weight:800;color:#f8fafc;margin-bottom:8px;">No Live Broadcast Active</h3>
-          <p style="font-size:13px;color:#94a3b8;max-width:460px;margin:0 auto 18px;line-height:1.6;">
-            The live video stream for this fixture has not been published yet or is offline. Official broadcast streams activate 15–30 minutes before kickoff. Join our Telegram for instant stream links!
-          </p>
-          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-            <a href="https://t.me/zetasports_official" target="_blank" class="match-chip-btn" style="background:#229ED9;color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:9px 18px;font-weight:700;border:none;">
-              📢 Join Telegram for Stream Links
-            </a>
-            <button onclick="reloadCurrentStream()" class="match-chip-btn" style="background:#334155;color:#fff;border:none;padding:9px 18px;font-weight:700;cursor:pointer;">
-              🔄 Refresh Player
-            </button>
+
+  <!-- Primary Stitch Two-Column Workstation (8 Cols Match Center + 4 Cols Sidebar) -->
+  <div class="zs-workstation-grid" id="zsWorkstationGrid">
+    <section class="zs-workstation-main">
+
+      <!-- VIEW 1: HOME DASHBOARD -->
+      <div id="homeView">
+        <div class="STING-web-Container-Matches">
+          <div class="STING-web-Container-Matches-Top zs-fixtures-head-card">
+            <div class="zs-fixtures-top-row">
+              <div class="zs-fixtures-title-group">
+                <div class="zs-bolt-badge">
+                  <span class="material-symbols-outlined" style="font-size:22px;">bolt</span>
+                </div>
+                <div>
+                  <h2 class="STING-web-Title-Box"><strong>Today&#39;s Fixtures</strong></h2>
+                  <p class="zs-fixtures-sub">Tap any fixture to read official lineups, tactics &amp; watch guide on KeralaHub</p>
+                </div>
+              </div>
+              <ul class="STING-web-Matches-Toggle">
+                <li class="Yesterday-Matches" id="tab-yesterday" onclick="filterDate('yesterday')">
+                  <a href="javascript:void(0)" class="match-chip-btn">Yesterday</a>
+                </li>
+                <li class="Today-Matches active" id="tab-today" onclick="filterDate('today')">
+                  <a href="javascript:void(0)" class="match-chip-btn active">Today</a>
+                </li>
+                <li class="Tomorrow-Matches" id="tab-tomorrow" onclick="filterDate('tomorrow')">
+                  <a href="javascript:void(0)" class="match-chip-btn">Tomorrow</a>
+                </li>
+              </ul>
+            </div>
+
+            <div id="leagueFilterPills">
+              <button onclick="filterLeague('all')" data-league="all" class="badge-chip active">All Competitions</button>
+              <button onclick="filterLeague('Premier League')" data-league="Premier League" class="badge-chip">Premier League</button>
+              <button onclick="filterLeague('La Liga')" data-league="La Liga" class="badge-chip">La Liga</button>
+              <button onclick="filterLeague('Champions League')" data-league="Champions League" class="badge-chip">Champions League</button>
+              <button onclick="filterLeague('Serie A')" data-league="Serie A" class="badge-chip">Serie A</button>
+              <button onclick="filterLeague('Indian Super League')" data-league="Indian Super League" class="badge-chip">Indian Super League</button>
+            </div>
+          </div>
+
+          <div class="STING-web-Matches" id="matchesList">
+            <div id="matchesSkeletonLoader" style="width:100%;display:flex;flex-direction:column;gap:12px;">
+              <div class="STING-web-Match" style="padding:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;">
+                <div style="width:36%;display:flex;align-items:center;gap:10px;"><div class="skeleton-shimmer" style="width:42px;height:42px;border-radius:9999px;"></div><div class="skeleton-shimmer" style="width:96px;height:14px;"></div></div>
+                <div style="display:flex;flex-direction:column;align-items:center;gap:6px;"><div class="skeleton-shimmer" style="width:54px;height:12px;border-radius:9999px;"></div><div class="skeleton-shimmer" style="width:68px;height:26px;border-radius:8px;"></div></div>
+                <div style="width:36%;display:flex;align-items:center;justify-content:flex-end;gap:10px;"><div class="skeleton-shimmer" style="width:96px;height:14px;"></div><div class="skeleton-shimmer" style="width:42px;height:42px;border-radius:9999px;"></div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- DYNAMIC MULTI-SERVER SWITCHER BAR -->
-      <div style="display:flex;gap:10px;padding:12px 16px;background:#1e293b;border-top:1px solid #334155;flex-wrap:wrap;align-items:center;justify-content:space-between;">
-        <span style="font-size:12px;color:#94a3b8;font-weight:700;display:flex;align-items:center;gap:6px;">
-          📡 <span id="serverCountLabel">Stream Servers:</span>
-        </span>
-        <div id="serverButtonsList" style="display:flex;gap:8px;flex-wrap:wrap;">
-          <!-- Dynamically populated servers -->
+
+      <!-- VIEW 2: MATCH DETAIL VIEW (OPEN DOWN-BY-DOWN) -->
+      <div id="matchView" style="display:none; margin-bottom:20px;">
+        <div style="margin-bottom: 14px;">
+          <button onclick="navGoHome()" class="match-chip-btn" style="padding:8px 16px;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;">
+            <span class="material-symbols-outlined" style="font-size:18px;">arrow_back</span> Back to All Matches
+          </button>
+        </div>
+        <div class="match-page-box zs-match-box" id="matchBox"></div>
+        <div class="STING-web-Ads zeta-ad-slot-card zs-ad-card">
+          <span class="zeta-ad-label zs-ad-label">ADVERTISEMENT &#8226; IN-ARTICLE UNIT</span>
+          <div class="zs-ad-inner">RESPONSIVE IN-ARTICLE DISPLAY SLOT</div>
         </div>
       </div>
-    </div>
 
-    <div class="STING-web-Ads">
-      <span>Advertisement • Beneath Live Player</span>
+      <!-- VIEW 2.5: DEDICATED LINK SELECTION GATEWAY -->
+      <div id="linksView" style="display:none; margin-bottom:20px;">
+        <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <button onclick="returnToMatch()" class="match-chip-btn" id="btnLinksBackToMatch" style="cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:8px 16px;">
+            <span class="material-symbols-outlined" style="font-size:18px;">arrow_back</span> Back to Match Post
+          </button>
+          <span style="font-size:11.5px;font-weight:700;color:var(--zs-primary);display:inline-flex;align-items:center;gap:6px;background:var(--zs-surface-high);padding:5px 12px;border-radius:9999px;">
+            <span style="width:7px;height:7px;background:var(--zs-primary);border-radius:50%;display:inline-block;"></span>
+            STREAM SELECTION GATEWAY
+          </span>
+        </div>
+        <div class="links-page-box" id="linksBox"></div>
+        <div class="STING-web-Ads zeta-ad-slot-card zs-ad-card">
+          <span class="zeta-ad-label zs-ad-label">ADVERTISEMENT &#8226; GATEWAY UNIT</span>
+          <div class="zs-ad-inner">RESPONSIVE DISPLAY UNIT (300x250 / 728x90)</div>
+        </div>
+      </div>
+
+      <!-- VIEW 3: DEDICATED STREAMING PAGE (domain.com/?stream=id) -->
+      <div id="streamView" style="display:none; margin-bottom:20px;">
+        <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <a id="btnBackToLinks" href="#" class="match-chip-btn" style="background:var(--zs-primary-container) !important; color:#fff !important; border-color:var(--zs-primary-container) !important; text-decoration:none; padding:0 14px; font-size:13px; display:inline-flex; align-items:center; gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:17px;">swap_horiz</span> Change Server
+            </a>
+            <a id="btnBackToPost" href="#" class="match-chip-btn" style="text-decoration:none; padding:0 14px; font-size:13px; display:inline-flex; align-items:center; gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:17px;">arrow_back</span> Match Post
+            </a>
+            <a id="btnBackToHome" href="#" class="match-chip-btn" style="text-decoration:none; padding:0 14px; font-size:13px; display:inline-flex; align-items:center; gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:17px;">home</span> Home
+            </a>
+          </div>
+          <span class="zs-live-header-pill">
+            <span class="zs-ping-dot-wrap"><span class="zs-ping-ring"></span><span class="zs-ping-core"></span></span>
+            LIVE BROADCAST HD
+          </span>
+        </div>
+
+        <div class="stream-player-container" style="overflow:hidden;">
+          <div class="stream-player-header" style="display:flex; align-items:center; justify-content:space-between; padding:12px 18px; background:rgba(11,28,48,0.45); border-bottom:1px solid rgba(203,219,245,0.12); flex-wrap:wrap; gap:10px;">
+            <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+              <h3 id="streamTitle" style="font-family:var(--zs-font-display); font-size:16px; font-weight:800; color:#f8fafc; margin:0;">Live Stream Player</h3>
+              <span id="streamBadge" style="font-size:10.5px; background:#1d4ed8; color:#fff; padding:3px 9px; border-radius:9999px; font-weight:700;">LIVE BROADCAST</span>
+            </div>
+            <div style="display:flex; gap:6px;">
+              <button onclick="reloadCurrentStream()" class="match-chip-btn" style="color:#eaf1ff !important; background:rgba(255,255,255,0.12) !important; border:none !important; font-size:12px; padding:6px 12px; cursor:pointer;" title="Reload Stream">Reload</button>
+              <button onclick="togglePlayerFullscreen()" class="match-chip-btn" style="color:#eaf1ff !important; background:rgba(255,255,255,0.12) !important; border:none !important; font-size:12px; padding:6px 12px; cursor:pointer;" title="Fullscreen">Fullscreen</button>
+            </div>
+          </div>
+          <div id="playerFrameWrap" style="aspect-ratio: 16/9; background:#000; position:relative; overflow:hidden;">
+            <video id="liveVideo" playsinline="playsinline" controls="controls" crossorigin="anonymous" style="width:100%; height:100%; display:block;"></video>
+            <iframe id="streamIframe" src="" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="true" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" frameborder="0" style="display:none; width:100%; height:100%; border:none;"></iframe>
+            <div id="noStreamAlert" style="display:none; position:absolute; inset:0; background:radial-gradient(circle at center, #213145 0%, #0b1c30 100%); flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px; z-index:10;">
+              <span class="material-symbols-outlined" style="font-size:44px;color:#b7c4ff;margin-bottom:10px;">sensors_off</span>
+              <h3 style="font-family:var(--zs-font-display); font-size:18px; font-weight:800; color:#f8fafc; margin-bottom:8px;">No Live Broadcast Active</h3>
+              <p style="font-size:13px; color:#cbdbf5; max-width:460px; margin:0 auto 18px; line-height:1.6;">
+                Broadcast feeds activate 15&#8211;30 minutes before kickoff. Join our official Telegram for instant stream alerts!
+              </p>
+              <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+                <a href="https://t.me/zetasports_official" target="_blank" class="match-chip-btn" style="background:#1d4ed8 !important; color:#fff !important; border:none !important; text-decoration:none; padding:10px 20px;">Join Telegram Updates</a>
+                <button onclick="reloadCurrentStream()" class="match-chip-btn" style="background:rgba(255,255,255,0.14) !important; color:#fff !important; border:none !important; padding:10px 20px; cursor:pointer;">Refresh Player</button>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; padding:12px 16px; background:rgba(11,28,48,0.45); border-top:1px solid rgba(203,219,245,0.12); flex-wrap:wrap; align-items:center; justify-content:space-between;">
+            <span style="font-size:12px; color:#cbdbf5; font-weight:700; display:flex; align-items:center; gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:16px;">cell_tower</span> <span id="serverCountLabel">Stream Servers:</span>
+            </span>
+            <div id="serverButtonsList" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+          </div>
+        </div>
+        <div class="STING-web-Ads zeta-ad-slot-card zs-ad-card" style="margin-top:16px !important;">
+          <span class="zeta-ad-label zs-ad-label">ADVERTISEMENT &#8226; BENEATH LIVE PLAYER</span>
+          <div class="zs-ad-inner">RESPONSIVE LEADERBOARD (728x90 / 320x50)</div>
+        </div>
+      </div>
+
+    </section>
+
+        <!-- Stitch Right Sidebar Rail (4 Cols Desktop: Legal Watch Guide, 300x250 Ad, Standings) -->
+        <aside class="zs-workstation-rail" id="zsSidebarRail">
+          <div class="zs-rail-card">
+            <h3 class="zs-rail-heading is-verified">
+              <span class="material-symbols-outlined" style="font-size:22px;">policy</span>
+              Where to Watch Legally
+            </h3>
+            <p style="font-size:12px;line-height:1.55;color:var(--zs-on-surface-variant);margin:0 0 12px 0;">
+              ZetaSports strictly advocates verified broadcast viewing. Official territorial rights holders:
+            </p>
+            <div class="zs-rights-row">
+              <div class="zs-rights-row-top">
+                <span>SAFF &amp; International</span>
+                <span class="zs-rights-tag">Verified</span>
+              </div>
+              <p class="zs-rights-desc">India: <strong>DD Sports, FanCode OTT</strong><br/>Pakistan: <strong>A Sports HD, Geo Super</strong></p>
+            </div>
+            <div class="zs-rights-row">
+              <div class="zs-rights-row-top">
+                <span>Indian Super League (ISL)</span>
+                <span class="zs-rights-tag">Verified</span>
+              </div>
+              <p class="zs-rights-desc">India: <strong>JioCinema (Free), Sports18 HD</strong></p>
+            </div>
+            <div class="zs-rights-row">
+              <div class="zs-rights-row-top">
+                <span>UEFA &amp; European Leagues</span>
+                <span class="zs-rights-tag">Verified</span>
+              </div>
+              <p class="zs-rights-desc">India: <strong>SonyLIV / FanCode</strong> &#8226; UK: <strong>Sky / TNT Sports</strong> &#8226; US: <strong>Paramount+</strong></p>
+            </div>
+            <div style="padding:10px;border-radius:10px;background:var(--zs-surface-high);font-size:11.5px;line-height:1.5;color:var(--zs-on-surface-variant);display:flex;gap:8px;align-items:flex-start;">
+              <span class="material-symbols-outlined" style="font-size:18px;color:var(--zs-primary);flex-shrink:0;">info</span>
+              <span>Official scorecard telemetry, lineups &amp; authorized broadcast directory.</span>
+            </div>
+          </div>
+
+          <!-- IAB 300x250 Standard Display Placement -->
+          <div class="zs-rail-card" style="text-align:center;">
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--zs-outline);margin-bottom:6px;">
+              <span>ADVERTISEMENT &#8226; IAB PLACEMENT</span>
+              <span>300x250</span>
+            </div>
+            <div class="zs-ad-slot-300">
+              <span class="material-symbols-outlined" style="font-size:30px;color:var(--zs-outline);margin-bottom:6px;">ad_units</span>
+              <span style="font-size:12px;font-weight:700;color:var(--zs-on-surface);">Certified Partner Ad Slot</span>
+              <span style="font-size:10.5px;color:var(--zs-outline);margin-top:4px;">Safe Editorial Clearance &gt; 24px</span>
+            </div>
+          </div>
+
+          <!-- Live Group / League Standings Mini-Card -->
+          <div class="zs-rail-card">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+              <h3 class="zs-rail-heading" style="margin:0;font-size:14px;text-transform:uppercase;letter-spacing:0.04em;">League Standings</h3>
+              <span style="font-size:11px;font-weight:700;color:var(--zs-primary);">Live Points</span>
+            </div>
+            <div id="zsSidebarStandings">
+              <div class="zs-standings-row is-leader">
+                <div style="display:flex;align-items:center;gap:8px;"><span style="width:16px;color:var(--zs-primary);">1</span><span>India</span></div>
+                <div style="display:flex;gap:12px;font-size:11px;color:var(--zs-on-surface-variant);"><span>P: 3</span><span>GD: +6</span><strong style="color:var(--zs-primary);">9 Pts</strong></div>
+              </div>
+              <div class="zs-standings-row">
+                <div style="display:flex;align-items:center;gap:8px;"><span style="width:16px;color:var(--zs-outline);">2</span><span>Kuwait</span></div>
+                <div style="display:flex;gap:12px;font-size:11px;color:var(--zs-on-surface-variant);"><span>P: 3</span><span>GD: +3</span><strong>7 Pts</strong></div>
+              </div>
+              <div class="zs-standings-row">
+                <div style="display:flex;align-items:center;gap:8px;"><span style="width:16px;color:var(--zs-outline);">3</span><span>Nepal</span></div>
+                <div style="display:flex;gap:12px;font-size:11px;color:var(--zs-on-surface-variant);"><span>P: 3</span><span>GD: -2</span><strong>1 Pt</strong></div>
+              </div>
+              <div class="zs-standings-row">
+                <div style="display:flex;align-items:center;gap:8px;"><span style="width:16px;color:var(--zs-outline);">4</span><span>Pakistan</span></div>
+                <div style="display:flex;gap:12px;font-size:11px;color:var(--zs-on-surface-variant);"><span>P: 3</span><span>GD: -7</span><strong>0 Pts</strong></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+  </div>
+
+  <!-- Mandatory In-Feed Editorial Ad Break -->
+  <div class="zs-page-container" style="padding-top:4px;padding-bottom:10px;">
+    <div class="STING-web-Ads zeta-ad-slot-card zs-ad-card">
+      <span class="zeta-ad-label zs-ad-label">ADVERTISEMENT &#8226; IN-FEED EDITORIAL BREAK</span>
+      <div class="zs-ad-inner">RESPONSIVE IN-FEED SPONSORED BANNER (728x90 DESKTOP / 320x50 MOBILE)</div>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="STING-web-Max-Size">
-      <div class="STING-web-Pages-Site">
-        <div class="STING-web-Links-List">
-          <h4 class="STING-web-Links-List-Title">About ZetaSports</h4>
-          <p style="font-size:13px;color:#64748b;line-height:22px;">
-            ZetaSports is a comprehensive live sports platform providing live scores, match results in chronological time order, and high-definition sports streams.
-          </p>
+  <!-- Editorial & Match Analysis 3-Column Section (Links Directly to KeralaHub Blogger Posts) -->
+  <section class="zs-editorial-section" id="editorialSection">
+    <div class="zs-section-head">
+      <div>
+        <div class="zs-pill-eyebrow">
+          <span class="material-symbols-outlined" style="font-size:14px;">feed</span>
+          Original Sports Analysis Desk
         </div>
+        <h2 class="zs-section-title">Sports News &amp; Match Analysis</h2>
+      </div>
+      <a href="https://www.keralahub.online/" style="font-size:12.5px;font-weight:700;color:var(--zs-primary);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">Visit KeralaHub Desk <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span></a>
+    </div>
+    <div class="zs-editorial-grid" id="korraEditorialGrid"></div>
+  </section>
 
-        <div class="STING-web-Links-List">
-          <h4 class="STING-web-Links-List-Title">Matches &amp; Tournaments</h4>
-          <ul class="STING-web-Links">
-            <li><a href="javascript:void(0)" onclick="goHome();filterDate('today');">Today's Matches</a></li>
-            <li><a href="javascript:void(0)" onclick="goHome();filterDate('live');">Live Score Ticker</a></li>
-            <li><a href="javascript:void(0)" onclick="goHome();filterDate('yesterday');">Yesterday's Results</a></li>
-            <li><a href="javascript:void(0)" onclick="goHome();filterDate('tomorrow');">Tomorrow's Schedule</a></li>
+      <!-- Editorial Integrity & Policy Notice Container -->
+      <section class="zs-policy-banner-wrap" id="zsPolicySection">
+        <div class="zs-policy-banner">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+            <div>
+              <h3 style="font-family:var(--zs-font-display);font-size:18px;font-weight:700;color:var(--zs-on-surface);margin:0;">Editorial Independence &amp; Standards Notice</h3>
+              <p style="font-size:12px;color:var(--zs-on-surface-variant);margin:4px 0 0;">ZetaSports is an independent digital sports publisher offering verified fixtures, match centers, and tactical analysis.</p>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:var(--zs-surface-container);color:var(--zs-tertiary);font-size:12px;font-weight:700;">
+              <span class="material-symbols-outlined" style="font-size:18px;">verified</span>
+              100% Free Public Access
+            </div>
+          </div>
+          <div class="zs-policy-grid">
+            <div class="zs-policy-item">
+              <strong style="display:flex;align-items:center;gap:5px;color:var(--zs-on-surface);margin-bottom:4px;"><span class="material-symbols-outlined" style="font-size:16px;color:var(--zs-primary);">shield</span>Authorized Broadcast Directory</strong>
+              Verified fixtures, lineup graphics, and channel rights listings without deceptive overlays or malware popups.
+            </div>
+            <div class="zs-policy-item">
+              <strong style="display:flex;align-items:center;gap:5px;color:var(--zs-on-surface);margin-bottom:4px;"><span class="material-symbols-outlined" style="font-size:16px;color:var(--zs-primary);">ads_click</span>IAB Display Isolation</strong>
+              Advertising slots maintain explicit disclosures and generous editorial spacing so controls remain uncluttered.
+            </div>
+            <div class="zs-policy-item">
+              <strong style="display:flex;align-items:center;gap:5px;color:var(--zs-on-surface);margin-bottom:4px;"><span class="material-symbols-outlined" style="font-size:16px;color:var(--zs-primary);">sync</span>Real-Time Cloud Sync</strong>
+              Kickoff times, lineups, substitutions, cards, and chronological scores synchronized live in local timezone.
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <!-- FOOTER (Stitch v4 #213145 Inverse Slate) -->
+  <footer class="zs-footer" id="footer-wrapper">
+    <div class="zs-footer-inner">
+      <div class="zs-footer-grid">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+            <span class="zs-brand-mark" style="width:28px;height:28px;font-size:15px;">Z</span>
+            <span style="font-family:var(--zs-font-display);font-size:18px;font-weight:800;color:#ffffff;">ZetaSports</span>
+          </div>
+          <p style="font-size:12.5px;line-height:1.6;color:var(--zs-surface-dim);margin:0;">Instant, high-fidelity sports fixtures, verified real-time scores, and authoritative sports journalism for international leagues.</p>
+          <div class="zs-access-pill">
+            <span class="material-symbols-outlined" style="font-size:14px;">verified</span>
+            100% Free Public Access
+          </div>
+        </div>
+        <div>
+          <h4 class="zs-footer-col-title">Matches &amp; Sports</h4>
+          <ul class="zs-footer-links">
+            <li><a href="javascript:void(0)" onclick="navGoHomeAndFilter('today')">Today&#39;s Matches</a></li>
+            <li><a href="javascript:void(0)" onclick="navGoHomeAndFilter('live')">Live Fixture Stream</a></li>
+            <li><a href="https://www.keralahub.online/search/label/Football">Football Leagues</a></li>
+            <li><a href="https://www.keralahub.online/search/label/Cricket">Cricket Series</a></li>
+            <li><a href="https://www.keralahub.online/#editorialSection">News &amp; Editorial Analysis</a></li>
           </ul>
         </div>
-
-        <div class="STING-web-Links-List">
-          <h4 class="STING-web-Links-List-Title">AdSense Legal Policies</h4>
-          <ul class="STING-web-Links">
-            <li><a href="/p/privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="/p/terms-conditions.html">Terms &amp; Conditions</a></li>
-            <li><a href="/p/disclaimer.html">Disclaimer</a></li>
-            <li><a href="/p/dmca.html">DMCA Copyright Policy</a></li>
+        <div>
+          <h4 class="zs-footer-col-title">Editorial &amp; Standards</h4>
+          <ul class="zs-footer-links">
+            <li><a href="https://www.keralahub.online/p/about-us.html">About ZetaSports</a></li>
+            <li><a href="https://www.keralahub.online/p/disclaimer.html">Disclaimer</a></li>
+            <li><a href="https://www.keralahub.online/p/dmca.html">DMCA Copyright Policy</a></li>
+            <li><a href="https://www.keralahub.online/p/contact-us.html">Contact Us</a></li>
           </ul>
         </div>
-
-        <div class="STING-web-Links-List">
-          <h4 class="STING-web-Links-List-Title">Help &amp; Contact</h4>
-          <ul class="STING-web-Links">
-            <li><a href="/p/about-us.html">About Us</a></li>
-            <li><a href="/p/contact-us.html">Contact Us</a></li>
-            <li><span style="font-weight:700;color:#16a34a;font-size:13px;">● 100% Free Public Access</span></li>
+        <div>
+          <h4 class="zs-footer-col-title">AdSense &amp; Privacy Compliance</h4>
+          <ul class="zs-footer-links">
+            <li><a href="https://www.keralahub.online/p/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="https://www.keralahub.online/p/terms-conditions.html">Terms &amp; Conditions</a></li>
+            <li><span style="font-size:10.5px;color:var(--zs-surface-dim);line-height:1.5;display:block;margin-top:6px;">Standard IAB Display Ads strictly segregated. Kickoff times auto-adjusted to viewer timezone.</span></li>
           </ul>
         </div>
       </div>
-
-      <div class="STING-web-Site-Copyright">
-        Copyright © 2026 ZetaSports (korra.world layout) — All rights reserved. Data sorted by Kickoff Time.
+      <div class="zs-footer-bottom">
+        <p style="margin:0;">&#169; 2026 ZetaSports Media Group. All rights reserved. Real-time scores sourced via official sports data APIs.</p>
+        <p style="margin:0;font-weight:700;font-size:11px;letter-spacing:0.04em;">Strict Editorial &amp; Advertising Isolation Compliance</p>
       </div>
     </div>
   </footer>
+  <!-- Stitch Sticky Mobile Bottom Navigation (< 768px) -->
+  <nav aria-label="Mobile Bottom Navigation" class="zs-bottom-nav" id="zetaMobileBottomNav">
+    <a class="zs-bottom-item active" href="javascript:void(0)" onclick="navGoHome()">
+      <span class="material-symbols-outlined" style="font-size:22px;">sports_soccer</span>
+      <span>Home</span>
+    </a>
+    <a class="zs-bottom-item" href="javascript:void(0)" onclick="navGoDate('live')">
+      <span class="material-symbols-outlined" style="font-size:22px;">sensors</span>
+      <span>Live</span>
+    </a>
+    <a class="zs-bottom-item" href="javascript:void(0)" onclick="navGoDate('today')">
+      <span class="material-symbols-outlined" style="font-size:22px;">calendar_today</span>
+      <span>Matches</span>
+    </a>
+    <a class="zs-bottom-item" href="javascript:void(0)" onclick="window.location.href='https://www.keralahub.online/#editorialSection'">
+      <span class="material-symbols-outlined" style="font-size:22px;">newspaper</span>
+      <span>News</span>
+    </a>
+    <a class="zs-bottom-item" href="javascript:void(0)" onclick="scrollToSection('zsPolicySection')">
+      <span class="material-symbols-outlined" style="font-size:22px;">policy</span>
+      <span>Legal</span>
+    </a>
+  </nav>
 
   <!-- JAVASCRIPT: TIME ORDER SORTING, MATCH DETAILS ROUTE, & 5-SEC STREAM COUNTDOWN -->
   <script type="text/javascript">
@@ -686,7 +552,7 @@
       }
     }
 
-    // ── Header Live Counter Driver ──
+    // ── Header Live Counter Driver (Stitch v4) ──
     function updateHeaderLiveCounter() {
       var liveCount = (allMatches || []).filter(function(m) {
         var s = (m.status || '').toLowerCase();
@@ -694,21 +560,72 @@
       }).length;
       var badges = document.querySelectorAll('#zetaHeaderLiveCounter');
       badges.forEach(function(badge) {
+        badge.style.display = 'inline-flex';
         if (liveCount > 0) {
-          badge.style.display = 'inline-flex';
-          badge.innerHTML = '<span style="width:6px; height:6px; border-radius:50%; background:#16a34a; display:inline-block; animation:zetaPulse 1.5s infinite;"></span> ' + liveCount + ' LIVE';
-          badge.style.background = '#dcfce7';
-          badge.style.color = '#15803d';
-          badge.style.borderColor = '#86efac';
+          badge.innerHTML = '<span class="zs-ping-dot-wrap"><span class="zs-ping-ring"></span><span class="zs-ping-core"></span></span> ' + liveCount + ' LIVE';
+          badge.style.background = 'rgba(255, 218, 214, 0.85)';
+          badge.style.color = '#93000a';
+          badge.style.borderColor = 'rgba(186, 26, 26, 0.18)';
         } else {
-          badge.style.display = 'inline-flex';
-          badge.innerHTML = '<span style="width:6px; height:6px; border-radius:50%; background:#94a3b8; display:inline-block;"></span> 0 LIVE';
-          badge.style.background = '#f1f5f9';
-          badge.style.color = '#64748b';
-          badge.style.borderColor = '#cbd5e1';
+          badge.innerHTML = '<span style="width:6px;height:6px;border-radius:9999px;background:#747686;display:inline-block;"></span> 0 LIVE';
+          badge.style.background = '#e5eeff';
+          badge.style.color = '#565e74';
+          badge.style.borderColor = 'rgba(196, 197, 215, 0.45)';
         }
       });
     }
+
+  var currentSearchQuery = '';
+  if (typeof currentLeagueFilter === 'undefined') { var currentLeagueFilter = 'all'; }
+
+  window.toggleZetaDrawer = function(force) {
+    var d = document.getElementById('zetaMobileDrawer');
+    if (!d) return;
+    if (typeof force === 'boolean') d.classList.toggle('open', force);
+    else d.classList.toggle('open');
+  };
+
+  window.filterBySearchQuery = function(q) {
+    currentSearchQuery = (q || '').trim().toLowerCase();
+    var deskIn = document.getElementById('zetaGlobalSearch');
+    var mobIn = document.getElementById('zetaMobileSearch');
+    if (deskIn && deskIn.value.trim().toLowerCase() !== currentSearchQuery) deskIn.value = q || '';
+    if (mobIn && mobIn.value.trim().toLowerCase() !== currentSearchQuery) mobIn.value = q || '';
+    if (typeof renderMatches === 'function') renderMatches();
+  };
+
+  window.scrollToSection = function(id) {
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  window.navGoHomeAndFilter = function(day) {
+    if (typeof showView === 'function' && document.getElementById('homeView')) {
+      showView('home');
+      if (typeof filterDate === 'function') filterDate(day);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (typeof goHome === 'function') {
+      goHome();
+    }
+  };
+  window.navGoDate = window.navGoHomeAndFilter;
+  window.navGoHome = function() {
+    if (typeof showView === 'function' && document.getElementById('homeView')) {
+      showView('home');
+      if (typeof filterDate === 'function') filterDate('today');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (typeof goHome === 'function') {
+      goHome();
+    }
+  };
+
+  function syncStitchNightUI(isNight) {
+    if (typeof document === 'undefined') return;
+    document.documentElement.classList.toggle('dark', !!isNight);
+    var icon = document.getElementById('darkToggleIcon');
+    if (icon) icon.textContent = isNight ? 'light_mode' : 'dark_mode';
+  }
+
 
     var allMatches = [];
     var allStreams = [];
@@ -732,18 +649,18 @@
         .replace(/\-\-+/g, '-');
     }
 
-    // ── Dark / Night Mode ──
+    // ── Dark / Night Mode (Stitch v4) ──
     window.toggleNightMode = function() {
       var isNight = document.body.classList.toggle('Night');
-      localStorage.setItem('zeta_night', isNight ? '1' : '0');
-      var dt = document.getElementById('darkToggle');
-      if (dt) dt.textContent = isNight ? '☀️' : '🌙';
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('zeta_night', isNight ? '1' : '0');
+      }
+      syncStitchNightUI(isNight);
     };
 
-    if (localStorage.getItem('zeta_night') === '1') {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('zeta_night') === '1') {
       document.body.classList.add('Night');
-      var dt = document.getElementById('darkToggle');
-      if (dt) dt.textContent = '☀️';
+      syncStitchNightUI(true);
     }
 
     // ── Mobile Menu ──
@@ -752,24 +669,19 @@
       if (m) m.classList.toggle('open');
     };
 
-    // ── Date Filters ──
+    // ── Date & League Filters (Stitch v4) ──
     window.filterLeague = function(league) {
       currentLeagueFilter = league;
       var container = document.getElementById('leagueFilterPills');
       if (container) {
         var buttons = container.querySelectorAll('button');
         buttons.forEach(function(b) {
-          b.classList.remove('active');
-          b.style.background = '#f1f5f9';
-          b.style.color = '#334155';
-        });
-        buttons.forEach(function(b) {
+          var dl = b.getAttribute('data-league') || '';
           var txt = b.textContent.trim().toLowerCase();
-          if (txt === league.toLowerCase() || (league === 'Indian Super League' && txt === 'isl')) {
-            b.classList.add('active');
-            b.style.background = '#0062b2';
-            b.style.color = '#fff';
-          }
+          var match = (dl && dl.toLowerCase() === league.toLowerCase()) ||
+                      (league === 'all' && dl === 'all') ||
+                      txt === league.toLowerCase();
+          b.classList.toggle('active', !!match);
         });
       }
       renderMatches();
@@ -779,11 +691,18 @@
       currentDateFilter = day;
       ['yesterday', 'today', 'tomorrow'].forEach(function(d) {
         var el = document.getElementById('tab-' + d);
-        if (el) el.classList.remove('active');
+        if (el) {
+          el.classList.remove('active');
+          var a = el.querySelector('a');
+          if (a) a.classList.remove('active');
+        }
       });
       var activeTab = document.getElementById('tab-' + day);
-      if (activeTab) activeTab.classList.add('active');
-
+      if (activeTab) {
+        activeTab.classList.add('active');
+        var a = activeTab.querySelector('a');
+        if (a) a.classList.add('active');
+      }
       renderMatches();
     };
 
@@ -822,6 +741,11 @@
       var match = (typeof matchOrId === 'object' && matchOrId) ? matchOrId : (allMatches ? allMatches.find(function(m){ return String(m.id) === String(mId); }) : null);
       if (match && match.article_url && isAllowedUrl(match.article_url)) {
         return match.article_url;
+      }
+      if (match) {
+        var rawH = match.home_team || (typeof teamsMap !== 'undefined' && teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'home';
+        var rawA = match.away_team || (typeof teamsMap !== 'undefined' && teamsMap[match.away_team_id] && teamsMap[match.away_team_id].name) || 'away';
+        return getDetailsOrigin() + '/' + slugify(rawH) + '-vs-' + slugify(rawA) + '-' + mId;
       }
       return getDetailsOrigin() + '/?match=' + encodeURIComponent(mId);
     }
@@ -1081,149 +1005,138 @@
         '<!-- Action Row: Share, Sound, Sync -->' +
         '<div class="match-action-row">' +
           '<button class="match-chip-btn" onclick="copyMatchLink()">🔗 Share Match</button>' +
-          '<div style="display:flex;gap:6px;">' +
+          '<div style="display:flex;gap:6px;flex-wrap:wrap;">' +
             '<button class="match-chip-btn" onclick="playGoalWhistle()">🔔 Goal Alert</button>' +
             '<button class="match-chip-btn" onclick="syncLiveMatchData(\'' + fotmobId + '\')">⚡ Live Refresh</button>' +
           '</div>' +
         '</div>' +
 
-        '<!-- Section 1: Scoreboard Header -->' +
-        '<div class="match-page-header">' +
-          '<div style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#93c5fd;font-weight:700;margin-bottom:4px;">' + leagueName + '</div>' +
-          '<h1 style="font-size:22px;font-weight:800;">' + homeName + ' vs ' + awayName + '</h1>' +
-          '<div style="margin-top:8px;"><span class="sting-match-time" class="' + statusClass + '">' + statusText + '</span></div>' +
+        '<!-- Section 1: Stitch Light Match Center Hero Card -->' +
+        '<div class="zs-match-hero-card">' +
+          '<div class="zs-match-hero-topbar">' +
+            '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">' +
+              '<span class="zs-match-comp-pill"><span class="material-symbols-outlined" style="font-size:14px;">trophy</span>' + leagueName + '</span>' +
+              (isLive ? '<span class="zs-mc-pill-live"><span class="zs-ping-core" style="width:6px;height:6px;background:#fff;"></span>' + statusText + '</span>' : '<span id="STING-web-Match-Time" class="zs-mc-pill-time">' + statusText + '</span>') +
+            '</div>' +
+            '<span class="zs-match-sync-badge"><span class="material-symbols-outlined" style="font-size:16px;">verified</span>Official Sync</span>' +
+          '</div>' +
+          '<div class="zs-match-hero-scoregrid">' +
+            '<div class="zs-hero-team">' +
+              '<div class="zs-hero-crest-circle"><img src="' + homeLogo + '" alt="' + homeName + '" /></div>' +
+              '<h3 class="zs-hero-team-name">' + homeName + '</h3>' +
+            '</div>' +
+            '<div class="zs-hero-score-col">' +
+              '<div class="zs-hero-score-val">' + scoreText + '</div>' +
+              '<div class="zs-hero-score-sub">' + (isLive ? 'Current Match Score' : 'Scheduled Kickoff') + '</div>' +
+            '</div>' +
+            '<div class="zs-hero-team">' +
+              '<div class="zs-hero-crest-circle"><img src="' + awayLogo + '" alt="' + awayName + '" /></div>' +
+              '<h3 class="zs-hero-team-name">' + awayName + '</h3>' +
+            '</div>' +
+          '</div>' +
+          '<div class="zs-match-hero-meta">' +
+            '<div><span>Stadium: </span><strong>' + venue + '</strong></div>' +
+            '<div><span>Referee: </span><strong>' + referee + '</strong></div>' +
+            '<div><span>Kickoff: </span><strong>' + kickoffFull + '</strong></div>' +
+            '<div><span>Quality: </span><strong>1080p 60FPS HD</strong></div>' +
+          '</div>' +
         '</div>' +
 
-        '<div class="match-scoreboard-grid">' +
-          '<div class="team-unit">' +
-            '<img src="' + homeLogo + '" alt="' + homeName + '" />' +
-            '<h3>' + homeName + '</h3>' +
-          '</div>' +
-          '<div class="score-unit">' +
-            '<div class="big-score">' + scoreText + '</div>' +
-            '<div style="font-size:12px;color:#64748b;font-weight:700;">' + (isLive ? 'Current Match Score' : 'Kickoff') + '</div>' +
-          '</div>' +
-          '<div class="team-unit">' +
-            '<img src="' + awayLogo + '" alt="' + awayName + '" />' +
-            '<h3>' + awayName + '</h3>' +
-          '</div>' +
-        '</div>' +
+        '<!-- ALL SECTIONS OPEN DOWN-BY-DOWN (No Horizontal Tab Selection) -->' +
+        '<div class="match-vertical-sections">' +
 
-        '<div class="match-meta-list">' +
-          '<div class="match-meta-item"><span>Stadium:</span><strong>' + venue + '</strong></div>' +
-          '<div class="match-meta-item"><span>Referee:</span><strong>' + referee + '</strong></div>' +
-          '<div class="match-meta-item"><span>Kickoff Date:</span><strong>' + kickoffFull + '</strong></div>' +
-          '<div class="match-meta-item"><span>Broadcast:</span><strong>1080p 60FPS HD</strong></div>' +
-        '</div>' +
-
-        '<!-- Section 2: 7 Interactive Navigation Tabs -->' +
-        '<div class="match-tabs-header">' +
-          '<button class="mtab-btn active" id="mtab-overview" onclick="switchMatchTab(\'overview\')">📌 Overview</button>' +
-          '<button class="mtab-btn" id="mtab-timeline" onclick="switchMatchTab(\'timeline\')">⏱️ Timeline</button>' +
-          '<button class="mtab-btn" id="mtab-stats" onclick="switchMatchTab(\'stats\')">📊 Statistics</button>' +
-          '<button class="mtab-btn" id="mtab-lineups" onclick="switchMatchTab(\'lineups\')">📋 Lineups</button>' +
-          '<button class="mtab-btn" id="mtab-h2h" onclick="switchMatchTab(\'h2h\')">⚔️ H2H &amp; Form</button>' +
-          '<button class="mtab-btn" id="mtab-commentary" onclick="switchMatchTab(\'commentary\')">🎙️ Commentary</button>' +
-          '<button class="mtab-btn" id="mtab-articles" onclick="switchMatchTab(\'articles\')">📰 Articles &amp; News</button>' +
-        '</div>' +
-
-        '<!-- TAB PANE 1: OVERVIEW -->' +
-        '<div class="mtab-pane active" id="mpane-overview">' +
-          '<div class="watch-action-box" style="border-radius:14px;margin-bottom:14px;">' +
-            '<a href="' + linksUrl + '" class="btn-watch-stream" id="watchBtn" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">' +
-              '<span>▶</span> ' + (hasLiveStream ? ('Select Live Stream Server (' + mServers.length + ' Channels Online)') : 'Live Stream Gateway (Starts at Kickoff)') +
-            '</a>' +
-          '</div>' +
-
-          '<!-- Fan Prediction Poll (Feature #1) -->' +
-          '<div class="poll-container" id="pollContainer"></div>' +
-
-          '<!-- Match Preview -->' +
-          '<div class="match-news-card">' +
-            '<div class="match-news-title"><span>📰</span> Match Overview &amp; Tactical Preview</div>' +
+          '<!-- SECTION 1: OVERVIEW & TACTICAL PREVIEW -->' +
+          '<section class="match-section-card" id="sec-overview">' +
+            '<h2 class="match-section-heading"><span>📰</span> Match Overview &amp; Tactical Preview</h2>' +
             '<p class="match-news-p">' +
               'Welcome to the match center for <strong>' + homeName + '</strong> vs <strong>' + awayName + '</strong> in the <em>' + leagueName + '</em>. ' +
               'Both squads enter with high tactical intensity, seeking vital tournament points and table advancement.' +
             '</p>' +
-            '<div class="match-stats-grid">' +
+            '<div class="match-stats-grid" style="margin-top:14px;">' +
               '<div class="match-stat-item"><div class="match-stat-val">1080p 60FPS</div><div class="match-stat-lbl">Broadcasting Quality</div></div>' +
               '<div class="match-stat-item"><div class="match-stat-val">' + (isLive ? (match.time_elapsed || 'LIVE') : 'Upcoming') + '</div><div class="match-stat-lbl">Match Period</div></div>' +
               '<div class="match-stat-item"><div class="match-stat-val">HLS Fast CDN</div><div class="match-stat-lbl">Streaming Server</div></div>' +
               '<div class="match-stat-item"><div class="match-stat-val">' + (scoreText !== 'VS' ? scoreText : '0 - 0') + '</div><div class="match-stat-lbl">Live Result</div></div>' +
             '</div>' +
-          '</div>' +
-        '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 2: TIMELINE / EVENTS -->' +
-        '<div class="mtab-pane" id="mpane-timeline">' +
-          '<div id="eventsListContainer">' +
-            '<div class="event-timeline-card"><div class="event-min-badge">1\'</div><div><strong>Match Kickoff</strong> • Whistle blown at ' + (match.venue || 'Stadium') + '</div></div>' +
-            (isLive || match.status === 'finished' ? 
-              '<div class="event-timeline-card"><div class="event-min-badge" style="background:#2563eb;color:#fff;">30\'</div><div><strong>⚽ Goal!</strong> ' + homeName + ' scores with an emphatic finish!</div></div>' +
-              '<div class="event-timeline-card"><div class="event-min-badge" style="background:#eab308;color:#000;">44\'</div><div><strong>🟨 Yellow Card</strong> shown for tactical foul.</div></div>' :
-              '<div style="text-align:center;padding:30px;color:#64748b;font-weight:700;">Live timeline events will populate when the match kicks off.</div>'
-            ) +
-          '</div>' +
-        '</div>' +
+          '<!-- SECTION 2: FAN PREDICTION POLL -->' +
+          '<section class="match-section-card" id="sec-poll">' +
+            '<div class="poll-container" id="pollContainer" style="margin:0;border:none;padding:0;background:transparent;box-shadow:none;"></div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 3: STATISTICS -->' +
-        '<div class="mtab-pane" id="mpane-stats">' +
-          '<div id="statsListContainer">' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>55%</span><span>Ball Possession</span><span>45%</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:55%;"></div><div class="stat-bar-a" style="width:45%;"></div></div>' +
+          '<!-- SECTION 3: MATCH TIMELINE / EVENTS -->' +
+          '<section class="match-section-card" id="sec-timeline">' +
+            '<h2 class="match-section-heading"><span>⏱️</span> Match Timeline &amp; Key Events</h2>' +
+            '<div id="eventsListContainer">' +
+              '<div class="event-timeline-card"><div class="event-min-badge">1\'</div><div><strong>Match Kickoff</strong> • Whistle blown at ' + (venue || 'Stadium') + '</div></div>' +
+              (isLive || match.status === 'finished' ? 
+                '<div class="event-timeline-card"><div class="event-min-badge" style="background:#2563eb;color:#fff;">30\'</div><div><strong>⚽ Goal!</strong> ' + homeName + ' scores with an emphatic finish!</div></div>' +
+                '<div class="event-timeline-card"><div class="event-min-badge" style="background:#eab308;color:#000;">44\'</div><div><strong>🟨 Yellow Card</strong> shown for tactical foul.</div></div>' :
+                '<div style="text-align:center;padding:20px;color:#64748b;font-weight:700;">Live timeline events will populate when the match kicks off.</div>'
+              ) +
             '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>12</span><span>Total Shots</span><span>8</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:60%;"></div><div class="stat-bar-a" style="width:40%;"></div></div>' +
-            '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>5</span><span>Shots on Target</span><span>3</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:62%;"></div><div class="stat-bar-a" style="width:38%;"></div></div>' +
-            '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>1.42</span><span>Expected Goals (xG)</span><span>0.88</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:61%;"></div><div class="stat-bar-a" style="width:39%;"></div></div>' +
-            '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>6</span><span>Corner Kicks</span><span>2</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:75%;"></div><div class="stat-bar-a" style="width:25%;"></div></div>' +
-            '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>9</span><span>Fouls Committed</span><span>11</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:45%;"></div><div class="stat-bar-a" style="width:55%;"></div></div>' +
-            '</div>' +
-          '</div>' +
-        '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 4: LINEUPS -->' +
-        '<div class="mtab-pane" id="mpane-lineups">' +
-          '<div class="lineup-grid" id="lineupGridContainer">' +
-            '<div class="squad-card">' +
-              '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
-                '<span>' + homeName + '</span><span style="color:#2563eb;">4-3-3</span>' +
+          '<!-- SECTION 4: TEAM STATISTICS COMPARISON -->' +
+          '<section class="match-section-card" id="sec-stats">' +
+            '<h2 class="match-section-heading"><span>📊</span> Team Statistics Comparison</h2>' +
+            '<div id="statsListContainer">' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>55%</span><span>Ball Possession</span><span>45%</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:55%;"></div><div class="stat-bar-a" style="width:45%;"></div></div>' +
               '</div>' +
-              '<div class="player-row"><span>#1 Goalkeeper</span><span class="player-rating">7.2</span></div>' +
-              '<div class="player-row"><span>#4 Center Back</span><span class="player-rating">6.9</span></div>' +
-              '<div class="player-row"><span>#8 Playmaker (C)</span><span class="player-rating">8.1</span></div>' +
-              '<div class="player-row"><span>#10 Striker</span><span class="player-rating">7.8</span></div>' +
-            '</div>' +
-            '<div class="squad-card">' +
-              '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
-                '<span>' + awayName + '</span><span style="color:#f43f5e;">4-2-3-1</span>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>12</span><span>Total Shots</span><span>8</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:60%;"></div><div class="stat-bar-a" style="width:40%;"></div></div>' +
               '</div>' +
-              '<div class="player-row"><span>#13 Goalkeeper</span><span class="player-rating">7.0</span></div>' +
-              '<div class="player-row"><span>#5 Center Back</span><span class="player-rating">6.8</span></div>' +
-              '<div class="player-row"><span>#7 Winger (C)</span><span class="player-rating">7.5</span></div>' +
-              '<div class="player-row"><span>#9 Forward</span><span class="player-rating">7.3</span></div>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>5</span><span>Shots on Target</span><span>3</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:62%;"></div><div class="stat-bar-a" style="width:38%;"></div></div>' +
+              '</div>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>1.42</span><span>Expected Goals (xG)</span><span>0.88</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:61%;"></div><div class="stat-bar-a" style="width:39%;"></div></div>' +
+              '</div>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>6</span><span>Corner Kicks</span><span>2</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:75%;"></div><div class="stat-bar-a" style="width:25%;"></div></div>' +
+              '</div>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>9</span><span>Fouls Committed</span><span>11</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:45%;"></div><div class="stat-bar-a" style="width:55%;"></div></div>' +
+              '</div>' +
             '</div>' +
-          '</div>' +
-        '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 5: HEAD TO HEAD & FORM -->' +
-        '<div class="mtab-pane" id="mpane-h2h">' +
-          '<div class="match-news-card">' +
-            '<div class="match-news-title"><span>⚔️</span> Recent Form &amp; Head to Head</div>' +
+          '<!-- SECTION 5: STARTING LINEUPS & FORMATIONS -->' +
+          '<section class="match-section-card" id="sec-lineups">' +
+            '<h2 class="match-section-heading"><span>📋</span> Starting Lineups &amp; Formations</h2>' +
+            '<div class="lineup-grid" id="lineupGridContainer">' +
+              '<div class="squad-card">' +
+                '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
+                  '<span>' + homeName + '</span><span style="color:#2563eb;">4-3-3</span>' +
+                '</div>' +
+                '<div class="player-row"><span>#1 Goalkeeper</span><span class="player-rating">7.2</span></div>' +
+                '<div class="player-row"><span>#4 Center Back</span><span class="player-rating">6.9</span></div>' +
+                '<div class="player-row"><span>#8 Playmaker (C)</span><span class="player-rating">8.1</span></div>' +
+                '<div class="player-row"><span>#10 Striker</span><span class="player-rating">7.8</span></div>' +
+              '</div>' +
+              '<div class="squad-card">' +
+                '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
+                  '<span>' + awayName + '</span><span style="color:#f43f5e;">4-2-3-1</span>' +
+                '</div>' +
+                '<div class="player-row"><span>#13 Goalkeeper</span><span class="player-rating">7.0</span></div>' +
+                '<div class="player-row"><span>#5 Center Back</span><span class="player-rating">6.8</span></div>' +
+                '<div class="player-row"><span>#7 Winger (C)</span><span class="player-rating">7.5</span></div>' +
+                '<div class="player-row"><span>#9 Forward</span><span class="player-rating">7.3</span></div>' +
+              '</div>' +
+            '</div>' +
+          '</section>' +
+
+          '<!-- SECTION 6: HEAD TO HEAD & FORM -->' +
+          '<section class="match-section-card" id="sec-h2h">' +
+            '<h2 class="match-section-heading"><span>⚔️</span> Recent Form &amp; Head to Head</h2>' +
             '<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #e2e8f0;">' +
               '<strong>' + homeName + '</strong>' +
               '<div><span class="form-pill form-w">W</span><span class="form-pill form-w">W</span><span class="form-pill form-d">D</span><span class="form-pill form-l">L</span><span class="form-pill form-w">W</span></div>' +
@@ -1232,30 +1145,42 @@
               '<strong>' + awayName + '</strong>' +
               '<div><span class="form-pill form-w">W</span><span class="form-pill form-d">D</span><span class="form-pill form-l">L</span><span class="form-pill form-w">W</span><span class="form-pill form-d">D</span></div>' +
             '</div>' +
-          '</div>' +
-        '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 6: COMMENTARY -->' +
-        '<div class="mtab-pane" id="mpane-commentary">' +
-          '<div id="commentaryContainer">' +
-            '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">90\'</span><span>Full time approaching. Both sides pushing with high defensive line.</span></div>' +
-            '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">72\'</span><span>Dangerous free-kick awarded just outside the penalty area.</span></div>' +
-            '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">45\'</span><span>End of first half. Strategic tactical adjustments expected in the second half.</span></div>' +
-          '</div>' +
-        '</div>' +
+          '<!-- SECTION 7: LIVE MATCH COMMENTARY -->' +
+          '<section class="match-section-card" id="sec-commentary">' +
+            '<h2 class="match-section-heading"><span>🎙️</span> Live Match Commentary</h2>' +
+            '<div id="commentaryContainer">' +
+              '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">90\'</span><span>Full time approaching. Both sides pushing with high defensive line.</span></div>' +
+              '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">72\'</span><span>Dangerous free-kick awarded just outside the penalty area.</span></div>' +
+              '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">45\'</span><span>End of first half. Strategic tactical adjustments expected in the second half.</span></div>' +
+            '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 7: ARTICLES & FOTMOB NEWS -->' +
-        '<div class="mtab-pane" id="mpane-articles">' +
-          '<div class="article-card-grid" id="articlesGridContainer">' +
-            '<div class="article-card" onclick="openArticleModal(\'Tactical Breakdown: ' + homeName.replace(/'/g, "\\'") + ' vs ' + awayName.replace(/'/g, "\\'") + '\', \'' + homeLogo.replace(/'/g, "\\'") + '\', \'Today\', \'<p>In-depth tactical preview of the match highlighting key matchups, expected lineups, and managerial systems.</p>\')">' +
-              '<div style="background:#2563eb;height:120px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;">MATCH PREVIEW</div>' +
-              '<div class="article-card-content">' +
-                '<div style="font-size:11px;color:#2563eb;font-weight:800;margin-bottom:4px;">EDITORIAL PREVIEW</div>' +
-                '<h4 style="font-size:14px;font-weight:800;line-height:1.4;margin-bottom:6px;">' + homeName + ' vs ' + awayName + ': Key tactical battle</h4>' +
-                '<p style="font-size:12px;color:#64748b;line-height:1.5;">Click to read the complete analysis and data debrief.</p>' +
+          '<!-- SECTION 8: ARTICLES & NEWS -->' +
+          '<section class="match-section-card" id="sec-articles">' +
+            '<h2 class="match-section-heading"><span>🗞️</span> Match Articles &amp; News</h2>' +
+            '<div class="article-card-grid" id="articlesGridContainer">' +
+              '<div class="article-card" onclick="openArticleModal(\'Tactical Breakdown: ' + homeName.replace(/'/g, "\\'") + ' vs ' + awayName.replace(/'/g, "\\'") + '\', \'' + homeLogo.replace(/'/g, "\\'") + '\', \'Today\', \'<p>In-depth tactical preview of the match highlighting key matchups, expected lineups, and managerial systems.</p>\')">' +
+                '<div style="background:#2563eb;height:120px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;">MATCH PREVIEW</div>' +
+                '<div class="article-card-content">' +
+                  '<div style="font-size:11px;color:#2563eb;font-weight:800;margin-bottom:4px;">EDITORIAL PREVIEW</div>' +
+                  '<h4 style="font-size:14px;font-weight:800;line-height:1.4;margin-bottom:6px;">' + homeName + ' vs ' + awayName + ': Key tactical battle</h4>' +
+                  '<p style="font-size:12px;color:#64748b;line-height:1.5;">Click to read the complete analysis and data debrief.</p>' +
+                '</div>' +
               '</div>' +
             '</div>' +
+          '</section>' +
+
+          '<!-- SECTION 9 (AT LAST): WATCH LIVE STREAM GATEWAY LINK -->' +
+          '<div class="watch-action-box match-bottom-stream-cta">' +
+            '<div class="match-bottom-stream-cta-title">📺 Live Broadcast &amp; Stream Links</div>' +
+            '<p class="match-bottom-stream-cta-sub">' + (hasLiveStream ? (mServers.length + ' HD Streaming Channels Ready — Multiple Languages &amp; Backup Servers') : 'Stream links open automatically right before kickoff.') + '</p>' +
+            '<a href="' + linksUrl + '" class="btn-watch-stream" id="watchBtn" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">' +
+              '<span>▶</span> ' + (hasLiveStream ? ('Watch Live Stream / Select Server (' + mServers.length + ' Channels)') : 'Open Live Stream Gateway') +
+            '</a>' +
           '</div>' +
+
         '</div>';
 
       // Initialize Fan Poll
@@ -1443,6 +1368,8 @@
 
     // ── ROUTE 1.5: DEDICATED LINK SELECTION GATEWAY (domain.com/?links=id) ──
     window.openLinksPage = function(matchId, pushState) {
+      /* Korra link selection -> Blogger post */
+      if (typeof window !== 'undefined' && window.location && getDetailsOrigin() !== window.location.origin) { redirectKorraToBloggerPost(matchId); return; }
       var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
       if (!match) {
         fetchDirectMatch(matchId, function() {
@@ -1946,10 +1873,57 @@
       };
     }
 
-    // ── RENDER MATCHES IN CHRONOLOGICAL TIME ORDER (Earliest Kickoff First) ──
+    // ── RENDER MATCHES IN CHRONOLOGICAL TIME ORDER (Stitch v4 + Cross-Domain Blogger Post Links) ──
+    function syncDynamicLeagueChips() {
+      var pillBox = document.getElementById('leagueFilterPills');
+      if (!pillBox || !allMatches || allMatches.length === 0) return;
+      var counts = {};
+      allMatches.forEach(function(m) {
+        var ln = (m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '').trim();
+        if (ln) counts[ln] = (counts[ln] || 0) + 1;
+      });
+      var leagues = Object.keys(counts).slice(0, 7);
+      if (leagues.length === 0) return;
+      var btns = '<button onclick="filterLeague(\'all\')" data-league="all" class="badge-chip ' + (currentLeagueFilter === 'all' ? 'active' : '') + '">All Competitions (' + allMatches.length + ')</button>';
+      leagues.forEach(function(l) {
+        var safeL = escapeHtml(l);
+        var act = currentLeagueFilter && currentLeagueFilter.toLowerCase() === l.toLowerCase();
+        btns += '<button onclick="filterLeague(\'' + safeL.replace(/'/g, "\\'") + '\')" data-league="' + safeL + '" class="badge-chip ' + (act ? 'active' : '') + '">' + safeL + '</button>';
+      });
+      pillBox.innerHTML = btns;
+    }
+
+    function renderKorraEditorialGrid() {
+      var grid = document.getElementById('korraEditorialGrid');
+      if (!grid) return;
+      var items = (allMatches || []).slice(0, 6);
+      if (items.length === 0) return;
+      grid.innerHTML = items.map(function(m) {
+        var h = escapeHtml(m.home_team || 'Home Team');
+        var a = escapeHtml(m.away_team || 'Away Team');
+        var l = escapeHtml(m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || 'Featured Fixture');
+        var dest = sanitizeUrl(getMatchPostUrl(m));
+        return '<article class="zs-article-card">' +
+          '<a class="zs-article-thumb" href="' + dest + '">' +
+            '<div class="zs-thumb-fallback"><span class="material-symbols-outlined">sports_soccer</span><span>' + h + ' vs ' + a + '</span></div>' +
+            '<span class="zs-article-cat">' + l + '</span>' +
+          '</a>' +
+          '<div class="zs-article-body">' +
+            '<div style="font-size:11px;color:var(--zs-outline);font-weight:600;margin-bottom:4px;">KeralaHub Report &#8226; 5 min read</div>' +
+            '<a class="zs-article-title" href="' + dest + '">' + h + ' vs ' + a + ' Lineups, Live Score &amp; Match Center</a>' +
+            '<p class="zs-article-excerpt">Complete tactical breakdown, official starting lineups, verified channel rights, and live broadcast gateway on KeralaHub.</p>' +
+          '</div>' +
+          '<div class="zs-article-foot"><span style="font-weight:700;color:var(--zs-on-surface);">Editorial Desk</span><a href="' + dest + '" style="color:var(--zs-primary);font-weight:700;text-decoration:none;">Read Dossier &#8594;</a></div>' +
+        '</article>';
+      }).join('');
+    }
+
     function renderMatches() {
       var container = document.getElementById('matchesList');
       if (!container) return;
+
+      syncDynamicLeagueChips();
+      renderKorraEditorialGrid();
 
       var now = new Date();
       var todayStr = now.toISOString().split('T')[0];
@@ -1962,17 +1936,15 @@
       tomorrowDate.setDate(now.getDate() + 1);
       var tomorrowStr = tomorrowDate.toISOString().split('T')[0];
 
-      // Filter by Tab
       var filtered = allMatches.filter(function(m) {
         var mDateStr = m.date ? m.date.split('T')[0] : todayStr;
         if (currentDateFilter === 'all') return true;
-        if (currentDateFilter === 'live') return m.status === 'live';
+        if (currentDateFilter === 'live') return (m.status || '').toLowerCase() === 'live';
         if (currentDateFilter === 'yesterday') return mDateStr === yesterdayStr;
         if (currentDateFilter === 'tomorrow') return mDateStr === tomorrowStr;
         return mDateStr === todayStr || m.status === 'live' || m.status === 'upcoming';
       });
 
-      // Filter by League
       if (typeof currentLeagueFilter !== 'undefined' && currentLeagueFilter && currentLeagueFilter !== 'all') {
         filtered = filtered.filter(function(m) {
           var leagueName = m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '';
@@ -1980,12 +1952,19 @@
         });
       }
 
-      // If no matches on today's calendar date, fallback to showing available active/recent matches so the UI is never blank
-      if (filtered.length === 0 && currentDateFilter === 'today' && (typeof currentLeagueFilter === 'undefined' || currentLeagueFilter === 'all')) {
-        filtered = allMatches.slice(0, 10);
+      if (typeof currentSearchQuery !== 'undefined' && currentSearchQuery) {
+        filtered = filtered.filter(function(m) {
+          var h = (m.home_team || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].name) || '').toLowerCase();
+          var a = (m.away_team || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].name) || '').toLowerCase();
+          var l = (m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '').toLowerCase();
+          return h.indexOf(currentSearchQuery) !== -1 || a.indexOf(currentSearchQuery) !== -1 || l.indexOf(currentSearchQuery) !== -1;
+        });
       }
 
-      // ── CRITICAL: STRICT CHRONOLOGICAL SORT BY KICKOFF TIME (Earliest First) ──
+      if (filtered.length === 0 && currentDateFilter === 'today' && !currentSearchQuery && (typeof currentLeagueFilter === 'undefined' || currentLeagueFilter === 'all')) {
+        filtered = allMatches.slice(0, 12);
+      }
+
       filtered.sort(function(a, b) {
         var tA = a.date ? new Date(a.date).getTime() : 0;
         var tB = b.date ? new Date(b.date).getTime() : 0;
@@ -1993,7 +1972,7 @@
       });
 
       if (filtered.length === 0) {
-        container.innerHTML = '<div style="text-align:center;padding:40px;color:#94a3b8;font-weight:700;">No matches scheduled for this date. Check another tab!</div>';
+        container.innerHTML = '<div style="text-align:center;padding:40px;background:var(--zs-surface-lowest);border-radius:14px;color:var(--zs-secondary);font-weight:700;">No fixtures matched your filter. Try another tab or clear search!</div>';
         return;
       }
 
@@ -2006,42 +1985,82 @@
         var homeLogo = sanitizeUrl(m.home_logo || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png');
         var awayLogo = sanitizeUrl(m.away_logo || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png');
         var leagueName = escapeHtml(m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || 'Live Match');
+        var venueName = escapeHtml(m.venue || 'Official Stadium');
 
         var liveInfo = getMatchLiveInfo(m);
         var isLive = liveInfo.isLive;
-        var statusClass = liveInfo.statusClass;
+        var isFinished = liveInfo.isFinished;
         var timeDisplay = liveInfo.timeDisplay;
         var statusText = liveInfo.statusText;
         var scoreText = liveInfo.scoreText;
-        var matchSlug = slugify(rawHomeName) + '-vs-' + slugify(rawAwayName) + '-' + m.id;
+        var postDestUrl = sanitizeUrl(getMatchPostUrl(m));
 
-        // Clicking redirects to dedicated match page: domain.com/{team1}-vs-{team2}-{id}
-        html += '<div class="STING-web-Match" id="match-' + m.id + '">' +
-          '<a href="/' + matchSlug + '" onclick="event.preventDefault(); openMatchPage(\'' + m.id + '\', true);">' +
-            '<div class="STING-web-Right-Team">' +
-              '<div class="STING-web-Team-Logo"><img src="' + homeLogo + '" alt="' + homeName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
-              '<div class="STING-web-Team-NAME">' + homeName + '</div>' +
-            '</div>' +
-            '<div class="STING-web-Match-Center">' +
-              '<div class="STING-web-Match-Timing">' +
-                '<div class="sting-match-time ' + statusClass + '">' + statusText + '</div>' +
-                '<div class="sting-match-result">' + scoreText + '</div>' +
-                '<div class="STING-web-Match-Info">' + leagueName + ' (' + timeDisplay + ')</div>' +
+        var pillHtml = isLive
+          ? '<span class="zs-mc-pill-live"><span class="zs-ping-core" style="width:6px;height:6px;background:#fff;"></span>' + escapeHtml(statusText) + '</span>'
+          : (isFinished ? '<span class="zs-mc-pill-ft">FT</span>' : '<span class="zs-mc-pill-time">' + escapeHtml(timeDisplay) + '</span>');
+
+        // Clicking any match on Korra routes directly to the Blogger Match Post (keralahub.online)
+        html += '<div class="STING-web-Match ' + (isLive ? 'is-live' : '') + '" id="match-' + m.id + '">' +
+          '<a class="zs-match-link" href="' + postDestUrl + '">' +
+            '<div class="zs-mc-top">' +
+              '<span class="zs-mc-league"><span class="material-symbols-outlined" style="font-size:15px;">sports_soccer</span>' + leagueName + '</span>' +
+              '<div class="zs-mc-status-group">' +
+                pillHtml +
+                '<span class="zs-mc-venue">' + venueName + '</span>' +
               '</div>' +
             '</div>' +
-            '<div class="STING-web-Left-Team">' +
-              '<div class="STING-web-Team-NAME">' + awayName + '</div>' +
-              '<div class="STING-web-Team-Logo"><img src="' + awayLogo + '" alt="' + awayName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
+            '<div class="zs-mc-body">' +
+              '<div class="STING-web-Right-Team">' +
+                '<div class="STING-web-Team-Logo"><img src="' + homeLogo + '" alt="' + homeName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
+                '<div class="STING-web-Team-NAME">' + homeName + '</div>' +
+              '</div>' +
+              '<div class="zs-mc-center">' +
+                '<div class="zs-mc-score-chip ' + (scoreText === 'VS' ? 'is-vs' : '') + '">' + escapeHtml(scoreText) + '</div>' +
+                '<div class="zs-mc-sub">' + (isLive ? 'In Play' : (isFinished ? 'Full Time' : escapeHtml(timeDisplay))) + '</div>' +
+              '</div>' +
+              '<div class="STING-web-Left-Team">' +
+                '<div class="STING-web-Team-NAME">' + awayName + '</div>' +
+                '<div class="STING-web-Team-Logo"><img src="' + awayLogo + '" alt="' + awayName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
+              '</div>' +
             '</div>' +
-            '<div class="STING-web-Overlay"><div class="STING-web-SVG-Play">▶</div></div>' +
+            '<div class="zs-mc-foot">' +
+              '<span class="zs-mc-broadcast"><span class="material-symbols-outlined">menu_book</span>Match Report &amp; Watch Guide</span>' +
+              '<span class="zs-mc-cta-pill">Open Match Post &#8594;</span>' +
+            '</div>' +
           '</a>' +
         '</div>';
       });
 
       container.innerHTML = html;
+      try { updateHeaderLiveCounter(); } catch(e) {}
     }
 
     // ── Handle Browser Back / Forward & URL Routes ──
+    var initialRouteHandled = false;
+
+    function redirectKorraToBloggerPost(matchId) {
+      var detailsBase = getDetailsOrigin();
+      var currentOrigin = (typeof window !== 'undefined' && window.location) ? window.location.origin : '';
+      var match = (allMatches || []).find(function(m) { return String(m.id) === String(matchId); });
+      if (match) {
+        var dest = sanitizeUrl(getMatchPostUrl(match));
+        if (currentOrigin && detailsBase && currentOrigin !== detailsBase && isAllowedUrl(dest)) {
+          window.location.replace(dest);
+          return;
+        }
+        openMatchPage(match.id, false);
+        return;
+      }
+      fetchDirectMatch(matchId, function(fetched) {
+        var destUrl = sanitizeUrl(getMatchPostUrl(fetched || matchId));
+        if (currentOrigin && detailsBase && currentOrigin !== detailsBase && isAllowedUrl(destUrl)) {
+          window.location.replace(destUrl);
+          return;
+        }
+        openMatchPage(matchId, false);
+      });
+    }
+
     function checkUrlRoute() {
       var path = window.location.pathname || '';
       var params = new URLSearchParams(window.location.search);
@@ -2052,7 +2071,7 @@
       var serverIdx = parseInt(serverParam || '0', 10);
       if (isNaN(serverIdx)) serverIdx = 0;
 
-      // 1. Stream Route on Blogger Blog 2: ?stream={id} or /stream/{id}
+      // 1. Stream Player Route stays on Korra / Streaming Domain: ?stream={id} or /stream/{id}
       if (streamParam || path.indexOf('/stream/') !== -1) {
         var sId = streamParam || extractMatchId(path.split('/stream/')[1]);
         if (sId) {
@@ -2061,20 +2080,20 @@
         }
       }
 
-      // 2. Link Selection Route on Blogger Blog 1: ?links={id} or /links/{id}
+      // 2. Link Selection on Korra Theme -> Redirect to Blogger Match Post (keralahub.online)
       if (linksParam || path.indexOf('/links/') !== -1) {
         var lId = linksParam || extractMatchId(path.split('/links/')[1]);
         if (lId) {
-          openLinksPage(lId, false);
+          redirectKorraToBloggerPost(lId);
           return;
         }
       }
 
-      // 3. Match Details Post Route on Blogger Blog 1: ?match={id} or /{slug}-{id}
+      // 3. Match Details Post Route on Korra -> Redirect to Blogger Match Post (keralahub.online)
       if (matchParam) {
         var mId = extractMatchId(matchParam);
         if (mId) {
-          openMatchPage(mId, false);
+          redirectKorraToBloggerPost(mId);
           return;
         }
       }
@@ -2083,12 +2102,12 @@
         var cleanPath = path.replace(/^\/+|\/+$/g, '');
         var mId2 = extractMatchId(cleanPath);
         if (mId2) {
-          openMatchPage(mId2, false);
+          redirectKorraToBloggerPost(mId2);
           return;
         }
       }
 
-      // 4. Default Home View on Blogger Blog 1
+      // 4. Default Home View
       showView('home');
     }
 
@@ -2203,7 +2222,7 @@
         console.log('[ZetaSports] Loaded ' + allMatches.length + ' matches sorted by kickoff time.');
         try { renderMatches(); } catch(e) { console.error('[ZetaSports] renderMatches error:', e); }
         try { updateHeaderLiveCounter(); } catch(e) { console.error('[ZetaSports] updateHeaderLiveCounter error:', e); }
-        try { checkUrlRoute(); } catch(e) { console.error('[ZetaSports] checkUrlRoute error:', e); }
+        if (!initialRouteHandled) { initialRouteHandled = true; try { checkUrlRoute(); } catch(e) { console.error('[ZetaSports] checkUrlRoute error:', e); } }
         try { syncFotMobScores(); } catch(e) { console.error('[ZetaSports] syncFotMobScores error:', e); }
       } catch (err) {
         console.error('[ZetaSports] Supabase load error:', err);

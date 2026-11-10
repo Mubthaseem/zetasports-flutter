@@ -17,7 +17,7 @@
     'Authorization': 'Bearer ' + SB_KEY
   };
 
-    // ── Header Live Counter Driver ──
+  // ── Header Live Counter Driver (Stitch v4) ──
   function updateHeaderLiveCounter() {
     var liveCount = (allMatches || []).filter(function(m) {
       var s = (m.status || '').toLowerCase();
@@ -25,21 +25,72 @@
     }).length;
     var badges = document.querySelectorAll('#zetaHeaderLiveCounter');
     badges.forEach(function(badge) {
+      badge.style.display = 'inline-flex';
       if (liveCount > 0) {
-        badge.style.display = 'inline-flex';
-        badge.innerHTML = '<span style="width:6px; height:6px; border-radius:50%; background:#16a34a; display:inline-block; animation:zetaPulse 1.5s infinite;"></span> ' + liveCount + ' LIVE';
-        badge.style.background = '#dcfce7';
-        badge.style.color = '#15803d';
-        badge.style.borderColor = '#86efac';
+        badge.innerHTML = '<span class="zs-ping-dot-wrap"><span class="zs-ping-ring"></span><span class="zs-ping-core"></span></span> ' + liveCount + ' LIVE';
+        badge.style.background = 'rgba(255, 218, 214, 0.85)';
+        badge.style.color = '#93000a';
+        badge.style.borderColor = 'rgba(186, 26, 26, 0.18)';
       } else {
-        badge.style.display = 'inline-flex';
-        badge.innerHTML = '<span style="width:6px; height:6px; border-radius:50%; background:#94a3b8; display:inline-block;"></span> 0 LIVE';
-        badge.style.background = '#f1f5f9';
-        badge.style.color = '#64748b';
-        badge.style.borderColor = '#cbd5e1';
+        badge.innerHTML = '<span style="width:6px;height:6px;border-radius:9999px;background:#747686;display:inline-block;"></span> 0 LIVE';
+        badge.style.background = '#e5eeff';
+        badge.style.color = '#565e74';
+        badge.style.borderColor = 'rgba(196, 197, 215, 0.45)';
       }
     });
   }
+
+  var currentSearchQuery = '';
+  if (typeof currentLeagueFilter === 'undefined') { var currentLeagueFilter = 'all'; }
+
+  window.toggleZetaDrawer = function(force) {
+    var d = document.getElementById('zetaMobileDrawer');
+    if (!d) return;
+    if (typeof force === 'boolean') d.classList.toggle('open', force);
+    else d.classList.toggle('open');
+  };
+
+  window.filterBySearchQuery = function(q) {
+    currentSearchQuery = (q || '').trim().toLowerCase();
+    var deskIn = document.getElementById('zetaGlobalSearch');
+    var mobIn = document.getElementById('zetaMobileSearch');
+    if (deskIn && deskIn.value.trim().toLowerCase() !== currentSearchQuery) deskIn.value = q || '';
+    if (mobIn && mobIn.value.trim().toLowerCase() !== currentSearchQuery) mobIn.value = q || '';
+    if (typeof renderMatches === 'function') renderMatches();
+  };
+
+  window.scrollToSection = function(id) {
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  window.navGoHomeAndFilter = function(day) {
+    if (typeof showView === 'function' && document.getElementById('homeView')) {
+      showView('home');
+      if (typeof filterDate === 'function') filterDate(day);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (typeof goHome === 'function') {
+      goHome();
+    }
+  };
+  window.navGoDate = window.navGoHomeAndFilter;
+  window.navGoHome = function() {
+    if (typeof showView === 'function' && document.getElementById('homeView')) {
+      showView('home');
+      if (typeof filterDate === 'function') filterDate('today');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (typeof goHome === 'function') {
+      goHome();
+    }
+  };
+
+  function syncStitchNightUI(isNight) {
+    if (typeof document === 'undefined') return;
+    document.documentElement.classList.toggle('dark', !!isNight);
+    var icon = document.getElementById('darkToggleIcon');
+    if (icon) icon.textContent = isNight ? 'light_mode' : 'dark_mode';
+  }
+
 
   var allMatches = [];
   var allStreams = [];
@@ -64,23 +115,21 @@
       .replace(/\-\-+/g, '-');
   }
 
-  // ── Dark / Night Mode ──
+  // ── Dark / Night Mode (Stitch v4) ──
   window.toggleNightMode = function() {
     var isNight = document.body.classList.toggle('Night');
     if (typeof localStorage !== 'undefined') {
       localStorage.setItem('zeta_night', isNight ? '1' : '0');
     }
-    var dt = document.getElementById('darkToggle');
-    if (dt) dt.textContent = isNight ? '☀️' : '🌙';
+    syncStitchNightUI(isNight);
   };
 
   if (typeof localStorage !== 'undefined' && localStorage.getItem('zeta_night') === '1') {
     document.body.classList.add('Night');
-    var dt = document.getElementById('darkToggle');
-    if (dt) dt.textContent = '☀️';
+    syncStitchNightUI(true);
   }
 
-  // ── Date Filters Switcher ──
+  // ── Date Filters Switcher (Stitch v4) ──
   window.filterDate = function(day) {
     currentDateFilter = day;
     ['yesterday', 'today', 'tomorrow'].forEach(function(d) {
@@ -88,44 +137,31 @@
       if (el) {
         el.classList.remove('active');
         var a = el.querySelector('a');
-        if (a) {
-          a.classList.remove('active');
-          a.style.background = '';
-          a.style.color = '';
-        }
+        if (a) a.classList.remove('active');
       }
     });
     var activeTab = document.getElementById('tab-' + day);
     if (activeTab) {
       activeTab.classList.add('active');
       var a = activeTab.querySelector('a');
-      if (a) {
-        a.classList.add('active');
-        a.style.background = '#0062b2';
-        a.style.color = '#fff';
-      }
+      if (a) a.classList.add('active');
     }
     renderMatches();
   };
 
-  // ── League Filter Switcher ──
+  // ── League Filter Switcher (Stitch v4) ──
   window.filterLeague = function(league) {
     currentLeagueFilter = league;
     var container = document.getElementById('leagueFilterPills');
     if (container) {
       var buttons = container.querySelectorAll('button');
       buttons.forEach(function(b) {
-        b.classList.remove('active');
-        b.style.background = '#f1f5f9';
-        b.style.color = '#334155';
-      });
-      buttons.forEach(function(b) {
+        var dl = b.getAttribute('data-league') || '';
         var txt = b.textContent.trim().toLowerCase();
-        if (txt === league.toLowerCase() || (league === 'Indian Super League' && txt === 'isl')) {
-          b.classList.add('active');
-          b.style.background = '#0062b2';
-          b.style.color = '#fff';
-        }
+        var match = (dl && dl.toLowerCase() === league.toLowerCase()) ||
+                    (league === 'all' && dl === 'all') ||
+                    txt === league.toLowerCase();
+        b.classList.toggle('active', !!match);
       });
     }
     renderMatches();
@@ -152,76 +188,82 @@
   }
 
 // ── VIEW SWITCHERS & ROUTING (2-BLOGGER CROSS-DOMAIN & FULL-PAGE REFRESH) ──
-  function isAllowedUrl(url) {
-    if (!url || typeof url !== 'string') return false;
-    var trimmed = url.trim();
-    if (/^(?:javascript|data|vbscript):/i.test(trimmed)) return false;
-    if (trimmed.startsWith('/') && !trimmed.startsWith('//') && !trimmed.startsWith('/\\')) return true;
-    try {
-      var parsed = new URL(trimmed, (typeof window !== 'undefined' && window.location) ? window.location.origin : 'https://www.keralahub.online');
-      if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return false;
-      var hostname = parsed.hostname.toLowerCase();
-      var allowed = ['keralahub.online', 'www.keralahub.online', 'zetasports.site', 'www.zetasports.site'];
-      if (typeof window !== 'undefined' && window.ZETA_CONFIG) {
-        if (window.ZETA_CONFIG.detailsOrigin) {
-          try { allowed.push(new URL(window.ZETA_CONFIG.detailsOrigin).hostname.toLowerCase()); } catch(e){}
+    function isAllowedUrl(url) {
+      if (!url || typeof url !== 'string') return false;
+      var trimmed = url.trim();
+      if (/^(?:javascript|data|vbscript):/i.test(trimmed)) return false;
+      if (trimmed.startsWith('//') || trimmed.startsWith('/\\')) return false;
+      if (trimmed.startsWith('/')) return true;
+      try {
+        var parsed = new URL(trimmed, (typeof window !== 'undefined' && window.location) ? window.location.origin : 'https://www.keralahub.online');
+        if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return false;
+        var hostname = parsed.hostname.toLowerCase();
+        var allowed = ['keralahub.online', 'www.keralahub.online', 'zetasports.site', 'www.zetasports.site'];
+        if (typeof window !== 'undefined' && window.ZETA_CONFIG) {
+          if (window.ZETA_CONFIG.detailsOrigin) {
+            try { allowed.push(new URL(window.ZETA_CONFIG.detailsOrigin).hostname.toLowerCase()); } catch(e){}
+          }
+          if (window.ZETA_CONFIG.streamOrigin) {
+            try { allowed.push(new URL(window.ZETA_CONFIG.streamOrigin).hostname.toLowerCase()); } catch(e){}
+          }
         }
-        if (window.ZETA_CONFIG.streamOrigin) {
-          try { allowed.push(new URL(window.ZETA_CONFIG.streamOrigin).hostname.toLowerCase()); } catch(e){}
-        }
+        return allowed.some(function(d) {
+          return hostname === d || hostname.endsWith('.' + d);
+        });
+      } catch(e) {
+        return false;
       }
-      return allowed.some(function(d) {
-        return hostname === d || hostname.endsWith('.' + d);
-      });
-    } catch(e) {
-      return false;
     }
-  }
 
-  function cleanDomain(d) {
-    if (!d) return '';
-    return String(d).trim().replace(/^https?:\/\//i, '').replace(/\/+$/, '');
-  }
-
-  function getDetailsOrigin() {
-    if (window.ZETA_CONFIG && window.ZETA_CONFIG.detailsOrigin) {
-      return window.ZETA_CONFIG.detailsOrigin.replace(/\/+$/, '');
+    function cleanDomain(d) {
+      if (!d) return '';
+      return String(d).trim().replace(/^https?:\/\//i, '').replace(/\/+$/, '');
     }
-    var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.DETAILS_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.detailsBlogDomain);
-    var cd = cleanDomain(d);
-    if (cd) return 'https://' + cd;
-    return window.location.origin;
-  }
 
-  function getStreamOrigin() {
-    if (window.ZETA_CONFIG && window.ZETA_CONFIG.streamOrigin) {
-      return window.ZETA_CONFIG.streamOrigin.replace(/\/+$/, '');
+    function getDetailsOrigin() {
+      if (window.ZETA_CONFIG && window.ZETA_CONFIG.detailsOrigin) {
+        return window.ZETA_CONFIG.detailsOrigin.replace(/\/+$/, '');
+      }
+      var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.DETAILS_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.detailsBlogDomain);
+      var cd = cleanDomain(d);
+      if (cd) return 'https://' + cd;
+      return window.location.origin;
     }
-    var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.STREAM_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.streamBlogDomain);
-    var cd = cleanDomain(d);
-    if (cd) return 'https://' + cd;
-    return window.location.origin;
-  }
 
-  function getHomeUrl() {
-    return getDetailsOrigin() + '/';
-  }
-
-  function getMatchPostUrl(matchOrId) {
-    var mId = (typeof matchOrId === 'object' && matchOrId) ? matchOrId.id : matchOrId;
-    var match = (typeof matchOrId === 'object' && matchOrId) ? matchOrId : (allMatches ? allMatches.find(function(m){ return String(m.id) === String(mId); }) : null);
-    if (match && match.article_url && isAllowedUrl(match.article_url)) {
-      return match.article_url;
+    function getStreamOrigin() {
+      if (window.ZETA_CONFIG && window.ZETA_CONFIG.streamOrigin) {
+        return window.ZETA_CONFIG.streamOrigin.replace(/\/+$/, '');
+      }
+      var d = (window.ZETA_CONFIG && window.ZETA_CONFIG.STREAM_DOMAIN) || (window.bloggerConfig && window.bloggerConfig.streamBlogDomain);
+      var cd = cleanDomain(d);
+      if (cd) return 'https://' + cd;
+      return window.location.origin;
     }
-    return getDetailsOrigin() + '/?match=' + encodeURIComponent(mId);
-  }
 
-  function getLinksUrl(matchId) {
-    // Link Selection Gateway lives on Blogger Blog 1 (Details Domain)
-    return getDetailsOrigin() + '/?links=' + encodeURIComponent(matchId);
-  }
+    function getHomeUrl() {
+      return getDetailsOrigin() + '/';
+    }
 
-  function getStreamUrl(matchId, serverIdx) {
+    function getMatchPostUrl(matchOrId) {
+      var mId = (typeof matchOrId === 'object' && matchOrId) ? matchOrId.id : matchOrId;
+      var match = (typeof matchOrId === 'object' && matchOrId) ? matchOrId : (allMatches ? allMatches.find(function(m){ return String(m.id) === String(mId); }) : null);
+      if (match && match.article_url && isAllowedUrl(match.article_url)) {
+        return match.article_url;
+      }
+      if (match) {
+        var rawH = match.home_team || (typeof teamsMap !== 'undefined' && teamsMap[match.home_team_id] && teamsMap[match.home_team_id].name) || 'home';
+        var rawA = match.away_team || (typeof teamsMap !== 'undefined' && teamsMap[match.away_team_id] && teamsMap[match.away_team_id].name) || 'away';
+        return getDetailsOrigin() + '/' + slugify(rawH) + '-vs-' + slugify(rawA) + '-' + mId;
+      }
+      return getDetailsOrigin() + '/?match=' + encodeURIComponent(mId);
+    }
+
+    function getLinksUrl(matchId) {
+      // Link Selection Gateway lives on Blogger Blog 1 (Details Domain)
+      return getDetailsOrigin() + '/?links=' + encodeURIComponent(matchId);
+    }
+
+    function getStreamUrl(matchId, serverIdx) {
       // Stream Video Player lives on Blogger Blog 2 (Stream Domain)
       var sIdx = (serverIdx != null && serverIdx !== undefined) ? serverIdx : 0;
       return getStreamOrigin() + '/?stream=' + encodeURIComponent(matchId) + '&server=' + sIdx;
@@ -431,7 +473,7 @@
     }
 
     // ── ROUTE 1: DEDICATED MATCH DETAILS & 8 SECTIONS (domain.com/team1-vs-team2-id) ──
-    window.openMatchPage = function(matchId, pushState) {
+    window.openMatchPage = async function(matchId, pushState) {
       var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
       if (!match) {
         fetchDirectMatch(matchId, pushState);
@@ -475,149 +517,138 @@
         '<!-- Action Row: Share, Sound, Sync -->' +
         '<div class="match-action-row">' +
           '<button class="match-chip-btn" onclick="copyMatchLink()">🔗 Share Match</button>' +
-          '<div style="display:flex;gap:6px;">' +
+          '<div style="display:flex;gap:6px;flex-wrap:wrap;">' +
             '<button class="match-chip-btn" onclick="playGoalWhistle()">🔔 Goal Alert</button>' +
             '<button class="match-chip-btn" onclick="syncLiveMatchData(\'' + fotmobId + '\')">⚡ Live Refresh</button>' +
           '</div>' +
         '</div>' +
 
-        '<!-- Section 1: Scoreboard Header -->' +
-        '<div class="match-page-header">' +
-          '<div style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#93c5fd;font-weight:700;margin-bottom:4px;">' + leagueName + '</div>' +
-          '<h1 style="font-size:22px;font-weight:800;">' + homeName + ' vs ' + awayName + '</h1>' +
-          '<div style="margin-top:8px;"><span id="STING-web-Match-Time" class="' + statusClass + '">' + statusText + '</span></div>' +
+        '<!-- Section 1: Stitch Light Match Center Hero Card -->' +
+        '<div class="zs-match-hero-card">' +
+          '<div class="zs-match-hero-topbar">' +
+            '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">' +
+              '<span class="zs-match-comp-pill"><span class="material-symbols-outlined" style="font-size:14px;">trophy</span>' + leagueName + '</span>' +
+              (isLive ? '<span class="zs-mc-pill-live"><span class="zs-ping-core" style="width:6px;height:6px;background:#fff;"></span>' + statusText + '</span>' : '<span id="STING-web-Match-Time" class="zs-mc-pill-time">' + statusText + '</span>') +
+            '</div>' +
+            '<span class="zs-match-sync-badge"><span class="material-symbols-outlined" style="font-size:16px;">verified</span>Official Sync</span>' +
+          '</div>' +
+          '<div class="zs-match-hero-scoregrid">' +
+            '<div class="zs-hero-team">' +
+              '<div class="zs-hero-crest-circle"><img src="' + homeLogo + '" alt="' + homeName + '" /></div>' +
+              '<h3 class="zs-hero-team-name">' + homeName + '</h3>' +
+            '</div>' +
+            '<div class="zs-hero-score-col">' +
+              '<div class="zs-hero-score-val">' + scoreText + '</div>' +
+              '<div class="zs-hero-score-sub">' + (isLive ? 'Current Match Score' : 'Scheduled Kickoff') + '</div>' +
+            '</div>' +
+            '<div class="zs-hero-team">' +
+              '<div class="zs-hero-crest-circle"><img src="' + awayLogo + '" alt="' + awayName + '" /></div>' +
+              '<h3 class="zs-hero-team-name">' + awayName + '</h3>' +
+            '</div>' +
+          '</div>' +
+          '<div class="zs-match-hero-meta">' +
+            '<div><span>Stadium: </span><strong>' + venue + '</strong></div>' +
+            '<div><span>Referee: </span><strong>' + referee + '</strong></div>' +
+            '<div><span>Kickoff: </span><strong>' + kickoffFull + '</strong></div>' +
+            '<div><span>Quality: </span><strong>1080p 60FPS HD</strong></div>' +
+          '</div>' +
         '</div>' +
 
-        '<div class="match-scoreboard-grid">' +
-          '<div class="team-unit">' +
-            '<img src="' + homeLogo + '" alt="' + homeName + '" />' +
-            '<h3>' + homeName + '</h3>' +
-          '</div>' +
-          '<div class="score-unit">' +
-            '<div class="big-score">' + scoreText + '</div>' +
-            '<div style="font-size:12px;color:#64748b;font-weight:700;">' + (isLive ? 'Current Match Score' : 'Kickoff') + '</div>' +
-          '</div>' +
-          '<div class="team-unit">' +
-            '<img src="' + awayLogo + '" alt="' + awayName + '" />' +
-            '<h3>' + awayName + '</h3>' +
-          '</div>' +
-        '</div>' +
+        '<!-- ALL SECTIONS OPEN DOWN-BY-DOWN (No Horizontal Tab Selection) -->' +
+        '<div class="match-vertical-sections">' +
 
-        '<div class="match-meta-list">' +
-          '<div class="match-meta-item"><span>Stadium:</span><strong>' + venue + '</strong></div>' +
-          '<div class="match-meta-item"><span>Referee:</span><strong>' + referee + '</strong></div>' +
-          '<div class="match-meta-item"><span>Kickoff Date:</span><strong>' + kickoffFull + '</strong></div>' +
-          '<div class="match-meta-item"><span>Broadcast:</span><strong>1080p 60FPS HD</strong></div>' +
-        '</div>' +
-
-        '<!-- Section 2: 7 Interactive Navigation Tabs -->' +
-        '<div class="match-tabs-header">' +
-          '<button class="mtab-btn active" id="mtab-overview" onclick="switchMatchTab(\'overview\')">📌 Overview</button>' +
-          '<button class="mtab-btn" id="mtab-timeline" onclick="switchMatchTab(\'timeline\')">⏱️ Timeline</button>' +
-          '<button class="mtab-btn" id="mtab-stats" onclick="switchMatchTab(\'stats\')">📊 Statistics</button>' +
-          '<button class="mtab-btn" id="mtab-lineups" onclick="switchMatchTab(\'lineups\')">📋 Lineups</button>' +
-          '<button class="mtab-btn" id="mtab-h2h" onclick="switchMatchTab(\'h2h\')">⚔️ H2H &amp; Form</button>' +
-          '<button class="mtab-btn" id="mtab-commentary" onclick="switchMatchTab(\'commentary\')">🎙️ Commentary</button>' +
-          '<button class="mtab-btn" id="mtab-articles" onclick="switchMatchTab(\'articles\')">📰 Articles &amp; News</button>' +
-        '</div>' +
-
-        '<!-- TAB PANE 1: OVERVIEW -->' +
-        '<div class="mtab-pane active" id="mpane-overview">' +
-          '<div class="watch-action-box" style="border-radius:14px;margin-bottom:14px;">' +
-            '<a href="' + linksUrl + '" class="btn-watch-stream" id="watchBtn" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">' +
-              '<span>▶</span> ' + (hasLiveStream ? ('Select Live Stream Server (' + mServers.length + ' Channels Online)') : 'Live Stream Gateway (Starts at Kickoff)') +
-            '</a>' +
-          '</div>' +
-
-          '<!-- Fan Prediction Poll (Feature #1) -->' +
-          '<div class="poll-container" id="pollContainer"></div>' +
-
-          '<!-- Match Preview -->' +
-          '<div class="match-news-card">' +
-            '<div class="match-news-title"><span>📰</span> Match Overview &amp; Tactical Preview</div>' +
+          '<!-- SECTION 1: OVERVIEW & TACTICAL PREVIEW -->' +
+          '<section class="match-section-card" id="sec-overview">' +
+            '<h2 class="match-section-heading"><span>📰</span> Match Overview &amp; Tactical Preview</h2>' +
             '<p class="match-news-p">' +
               'Welcome to the match center for <strong>' + homeName + '</strong> vs <strong>' + awayName + '</strong> in the <em>' + leagueName + '</em>. ' +
               'Both squads enter with high tactical intensity, seeking vital tournament points and table advancement.' +
             '</p>' +
-            '<div class="match-stats-grid">' +
+            '<div class="match-stats-grid" style="margin-top:14px;">' +
               '<div class="match-stat-item"><div class="match-stat-val">1080p 60FPS</div><div class="match-stat-lbl">Broadcasting Quality</div></div>' +
               '<div class="match-stat-item"><div class="match-stat-val">' + (isLive ? (match.time_elapsed || 'LIVE') : 'Upcoming') + '</div><div class="match-stat-lbl">Match Period</div></div>' +
               '<div class="match-stat-item"><div class="match-stat-val">HLS Fast CDN</div><div class="match-stat-lbl">Streaming Server</div></div>' +
               '<div class="match-stat-item"><div class="match-stat-val">' + (scoreText !== 'VS' ? scoreText : '0 - 0') + '</div><div class="match-stat-lbl">Live Result</div></div>' +
             '</div>' +
-          '</div>' +
-        '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 2: TIMELINE / EVENTS -->' +
-        '<div class="mtab-pane" id="mpane-timeline">' +
-          '<div id="eventsListContainer">' +
-            '<div class="event-timeline-card"><div class="event-min-badge">1\'</div><div><strong>Match Kickoff</strong> • Whistle blown at ' + venue + '</div></div>' +
-            (isLive || match.status === 'finished' ? 
-              '<div class="event-timeline-card"><div class="event-min-badge" style="background:#2563eb;color:#fff;">30\'</div><div><strong>⚽ Goal!</strong> ' + homeName + ' scores with an emphatic finish!</div></div>' +
-              '<div class="event-timeline-card"><div class="event-min-badge" style="background:#eab308;color:#000;">44\'</div><div><strong>🟨 Yellow Card</strong> shown for tactical foul.</div></div>' :
-              '<div style="text-align:center;padding:30px;color:#64748b;font-weight:700;">Live timeline events will populate when the match kicks off.</div>'
-            ) +
-          '</div>' +
-        '</div>' +
+          '<!-- SECTION 2: FAN PREDICTION POLL -->' +
+          '<section class="match-section-card" id="sec-poll">' +
+            '<div class="poll-container" id="pollContainer" style="margin:0;border:none;padding:0;background:transparent;box-shadow:none;"></div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 3: STATISTICS -->' +
-        '<div class="mtab-pane" id="mpane-stats">' +
-          '<div id="statsListContainer">' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>55%</span><span>Ball Possession</span><span>45%</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:55%;"></div><div class="stat-bar-a" style="width:45%;"></div></div>' +
+          '<!-- SECTION 3: MATCH TIMELINE / EVENTS -->' +
+          '<section class="match-section-card" id="sec-timeline">' +
+            '<h2 class="match-section-heading"><span>⏱️</span> Match Timeline &amp; Key Events</h2>' +
+            '<div id="eventsListContainer">' +
+              '<div class="event-timeline-card"><div class="event-min-badge">1\'</div><div><strong>Match Kickoff</strong> • Whistle blown at ' + (venue || 'Stadium') + '</div></div>' +
+              (isLive || match.status === 'finished' ? 
+                '<div class="event-timeline-card"><div class="event-min-badge" style="background:#2563eb;color:#fff;">30\'</div><div><strong>⚽ Goal!</strong> ' + homeName + ' scores with an emphatic finish!</div></div>' +
+                '<div class="event-timeline-card"><div class="event-min-badge" style="background:#eab308;color:#000;">44\'</div><div><strong>🟨 Yellow Card</strong> shown for tactical foul.</div></div>' :
+                '<div style="text-align:center;padding:20px;color:#64748b;font-weight:700;">Live timeline events will populate when the match kicks off.</div>'
+              ) +
             '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>12</span><span>Total Shots</span><span>8</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:60%;"></div><div class="stat-bar-a" style="width:40%;"></div></div>' +
-            '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>5</span><span>Shots on Target</span><span>3</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:62%;"></div><div class="stat-bar-a" style="width:38%;"></div></div>' +
-            '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>1.42</span><span>Expected Goals (xG)</span><span>0.88</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:61%;"></div><div class="stat-bar-a" style="width:39%;"></div></div>' +
-            '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>6</span><span>Corner Kicks</span><span>2</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:75%;"></div><div class="stat-bar-a" style="width:25%;"></div></div>' +
-            '</div>' +
-            '<div class="stat-compare-row">' +
-              '<div class="stat-labels"><span>9</span><span>Fouls Committed</span><span>11</span></div>' +
-              '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:45%;"></div><div class="stat-bar-a" style="width:55%;"></div></div>' +
-            '</div>' +
-          '</div>' +
-        '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 4: LINEUPS -->' +
-        '<div class="mtab-pane" id="mpane-lineups">' +
-          '<div class="lineup-grid" id="lineupGridContainer">' +
-            '<div class="squad-card">' +
-              '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
-                '<span>' + homeName + '</span><span style="color:#2563eb;">4-3-3</span>' +
+          '<!-- SECTION 4: TEAM STATISTICS COMPARISON -->' +
+          '<section class="match-section-card" id="sec-stats">' +
+            '<h2 class="match-section-heading"><span>📊</span> Team Statistics Comparison</h2>' +
+            '<div id="statsListContainer">' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>55%</span><span>Ball Possession</span><span>45%</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:55%;"></div><div class="stat-bar-a" style="width:45%;"></div></div>' +
               '</div>' +
-              '<div class="player-row"><span>#1 Goalkeeper</span><span class="player-rating">7.2</span></div>' +
-              '<div class="player-row"><span>#4 Center Back</span><span class="player-rating">6.9</span></div>' +
-              '<div class="player-row"><span>#8 Playmaker (C)</span><span class="player-rating">8.1</span></div>' +
-              '<div class="player-row"><span>#10 Striker</span><span class="player-rating">7.8</span></div>' +
-            '</div>' +
-            '<div class="squad-card">' +
-              '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
-                '<span>' + awayName + '</span><span style="color:#f43f5e;">4-2-3-1</span>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>12</span><span>Total Shots</span><span>8</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:60%;"></div><div class="stat-bar-a" style="width:40%;"></div></div>' +
               '</div>' +
-              '<div class="player-row"><span>#13 Goalkeeper</span><span class="player-rating">7.0</span></div>' +
-              '<div class="player-row"><span>#5 Center Back</span><span class="player-rating">6.8</span></div>' +
-              '<div class="player-row"><span>#7 Winger (C)</span><span class="player-rating">7.5</span></div>' +
-              '<div class="player-row"><span>#9 Forward</span><span class="player-rating">7.3</span></div>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>5</span><span>Shots on Target</span><span>3</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:62%;"></div><div class="stat-bar-a" style="width:38%;"></div></div>' +
+              '</div>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>1.42</span><span>Expected Goals (xG)</span><span>0.88</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:61%;"></div><div class="stat-bar-a" style="width:39%;"></div></div>' +
+              '</div>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>6</span><span>Corner Kicks</span><span>2</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:75%;"></div><div class="stat-bar-a" style="width:25%;"></div></div>' +
+              '</div>' +
+              '<div class="stat-compare-row">' +
+                '<div class="stat-labels"><span>9</span><span>Fouls Committed</span><span>11</span></div>' +
+                '<div class="stat-dual-bar"><div class="stat-bar-h" style="width:45%;"></div><div class="stat-bar-a" style="width:55%;"></div></div>' +
+              '</div>' +
             '</div>' +
-          '</div>' +
-        '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 5: HEAD TO HEAD & FORM -->' +
-        '<div class="mtab-pane" id="mpane-h2h">' +
-          '<div class="match-news-card">' +
-            '<div class="match-news-title"><span>⚔️</span> Recent Form &amp; Head to Head</div>' +
+          '<!-- SECTION 5: STARTING LINEUPS & FORMATIONS -->' +
+          '<section class="match-section-card" id="sec-lineups">' +
+            '<h2 class="match-section-heading"><span>📋</span> Starting Lineups &amp; Formations</h2>' +
+            '<div class="lineup-grid" id="lineupGridContainer">' +
+              '<div class="squad-card">' +
+                '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
+                  '<span>' + homeName + '</span><span style="color:#2563eb;">4-3-3</span>' +
+                '</div>' +
+                '<div class="player-row"><span>#1 Goalkeeper</span><span class="player-rating">7.2</span></div>' +
+                '<div class="player-row"><span>#4 Center Back</span><span class="player-rating">6.9</span></div>' +
+                '<div class="player-row"><span>#8 Playmaker (C)</span><span class="player-rating">8.1</span></div>' +
+                '<div class="player-row"><span>#10 Striker</span><span class="player-rating">7.8</span></div>' +
+              '</div>' +
+              '<div class="squad-card">' +
+                '<div style="font-weight:800;font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;">' +
+                  '<span>' + awayName + '</span><span style="color:#f43f5e;">4-2-3-1</span>' +
+                '</div>' +
+                '<div class="player-row"><span>#13 Goalkeeper</span><span class="player-rating">7.0</span></div>' +
+                '<div class="player-row"><span>#5 Center Back</span><span class="player-rating">6.8</span></div>' +
+                '<div class="player-row"><span>#7 Winger (C)</span><span class="player-rating">7.5</span></div>' +
+                '<div class="player-row"><span>#9 Forward</span><span class="player-rating">7.3</span></div>' +
+              '</div>' +
+            '</div>' +
+          '</section>' +
+
+          '<!-- SECTION 6: HEAD TO HEAD & FORM -->' +
+          '<section class="match-section-card" id="sec-h2h">' +
+            '<h2 class="match-section-heading"><span>⚔️</span> Recent Form &amp; Head to Head</h2>' +
             '<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #e2e8f0;">' +
               '<strong>' + homeName + '</strong>' +
               '<div><span class="form-pill form-w">W</span><span class="form-pill form-w">W</span><span class="form-pill form-d">D</span><span class="form-pill form-l">L</span><span class="form-pill form-w">W</span></div>' +
@@ -626,30 +657,42 @@
               '<strong>' + awayName + '</strong>' +
               '<div><span class="form-pill form-w">W</span><span class="form-pill form-d">D</span><span class="form-pill form-l">L</span><span class="form-pill form-w">W</span><span class="form-pill form-d">D</span></div>' +
             '</div>' +
-          '</div>' +
-        '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 6: COMMENTARY -->' +
-        '<div class="mtab-pane" id="mpane-commentary">' +
-          '<div id="commentaryContainer">' +
-            '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">90\'</span><span>Full time approaching. Both sides pushing with high defensive line.</span></div>' +
-            '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">72\'</span><span>Dangerous free-kick awarded just outside the penalty area.</span></div>' +
-            '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">45\'</span><span>End of first half. Strategic tactical adjustments expected in the second half.</span></div>' +
-          '</div>' +
-        '</div>' +
+          '<!-- SECTION 7: LIVE MATCH COMMENTARY -->' +
+          '<section class="match-section-card" id="sec-commentary">' +
+            '<h2 class="match-section-heading"><span>🎙️</span> Live Match Commentary</h2>' +
+            '<div id="commentaryContainer">' +
+              '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">90\'</span><span>Full time approaching. Both sides pushing with high defensive line.</span></div>' +
+              '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">72\'</span><span>Dangerous free-kick awarded just outside the penalty area.</span></div>' +
+              '<div class="comm-item"><span style="font-weight:800;color:#2563eb;min-width:30px;">45\'</span><span>End of first half. Strategic tactical adjustments expected in the second half.</span></div>' +
+            '</div>' +
+          '</section>' +
 
-        '<!-- TAB PANE 7: ARTICLES & FOTMOB NEWS -->' +
-        '<div class="mtab-pane" id="mpane-articles">' +
-          '<div class="article-card-grid" id="articlesGridContainer">' +
-            '<div class="article-card" onclick="openArticleModal(\'Tactical Breakdown: ' + homeName.replace(/'/g, "\\'") + ' vs ' + awayName.replace(/'/g, "\\'") + '\', \'' + homeLogo.replace(/'/g, "\\'") + '\', \'Today\', \'<p>In-depth tactical preview of the match highlighting key matchups, expected lineups, and managerial systems.</p>\')">' +
-              '<div style="background:#2563eb;height:120px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;">MATCH PREVIEW</div>' +
-              '<div class="article-card-content">' +
-                '<div style="font-size:11px;color:#2563eb;font-weight:800;margin-bottom:4px;">EDITORIAL PREVIEW</div>' +
-                '<h4 style="font-size:14px;font-weight:800;line-height:1.4;margin-bottom:6px;">' + homeName + ' vs ' + awayName + ': Key tactical battle</h4>' +
-                '<p style="font-size:12px;color:#64748b;line-height:1.5;">Click to read the complete analysis and data debrief.</p>' +
+          '<!-- SECTION 8: ARTICLES & NEWS -->' +
+          '<section class="match-section-card" id="sec-articles">' +
+            '<h2 class="match-section-heading"><span>🗞️</span> Match Articles &amp; News</h2>' +
+            '<div class="article-card-grid" id="articlesGridContainer">' +
+              '<div class="article-card" onclick="openArticleModal(\'Tactical Breakdown: ' + homeName.replace(/'/g, "\\'") + ' vs ' + awayName.replace(/'/g, "\\'") + '\', \'' + homeLogo.replace(/'/g, "\\'") + '\', \'Today\', \'<p>In-depth tactical preview of the match highlighting key matchups, expected lineups, and managerial systems.</p>\')">' +
+                '<div style="background:#2563eb;height:120px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;">MATCH PREVIEW</div>' +
+                '<div class="article-card-content">' +
+                  '<div style="font-size:11px;color:#2563eb;font-weight:800;margin-bottom:4px;">EDITORIAL PREVIEW</div>' +
+                  '<h4 style="font-size:14px;font-weight:800;line-height:1.4;margin-bottom:6px;">' + homeName + ' vs ' + awayName + ': Key tactical battle</h4>' +
+                  '<p style="font-size:12px;color:#64748b;line-height:1.5;">Click to read the complete analysis and data debrief.</p>' +
+                '</div>' +
               '</div>' +
             '</div>' +
+          '</section>' +
+
+          '<!-- SECTION 9 (AT LAST): WATCH LIVE STREAM GATEWAY LINK -->' +
+          '<div class="watch-action-box match-bottom-stream-cta">' +
+            '<div class="match-bottom-stream-cta-title">📺 Live Broadcast &amp; Stream Links</div>' +
+            '<p class="match-bottom-stream-cta-sub">' + (hasLiveStream ? (mServers.length + ' HD Streaming Channels Ready — Multiple Languages &amp; Backup Servers') : 'Stream links open automatically right before kickoff.') + '</p>' +
+            '<a href="' + linksUrl + '" class="btn-watch-stream" id="watchBtn" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">' +
+              '<span>▶</span> ' + (hasLiveStream ? ('Watch Live Stream / Select Server (' + mServers.length + ' Channels)') : 'Open Live Stream Gateway') +
+            '</a>' +
           '</div>' +
+
         '</div>';
 
       // Initialize Fan Poll
@@ -873,33 +916,26 @@
       if (!linksBox) return;
 
       var html = 
-        '<!-- Scoreboard Header on Link Selection Page -->' +
-        '<div class="match-page-header">' +
-          '<div style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#93c5fd;font-weight:700;margin-bottom:4px;">' + leagueName + ' • Live Broadcasting Gateway</div>' +
-          '<h1 style="font-size:22px;font-weight:800;">' + homeName + ' vs ' + awayName + '</h1>' +
-          '<div style="margin-top:8px;"><span class="' + statusClass + '">' + statusText + '</span></div>' +
-        '</div>' +
-
-        '<div class="match-scoreboard-grid">' +
-          '<div class="team-unit">' +
-            '<img src="' + homeLogo + '" alt="' + homeName + '" />' +
-            '<h3>' + homeName + '</h3>' +
+        '<!-- Stitch Link Selection Hero Card -->' +
+        '<div class="zs-match-hero-card">' +
+          '<div class="zs-match-hero-topbar">' +
+            '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">' +
+              '<span class="zs-match-comp-pill"><span class="material-symbols-outlined" style="font-size:14px;">live_tv</span>' + leagueName + ' &#8226; Broadcast Gateway</span>' +
+              (isLive ? '<span class="zs-mc-pill-live"><span class="zs-ping-core" style="width:6px;height:6px;background:#fff;"></span>' + statusText + '</span>' : '<span class="zs-mc-pill-time">' + statusText + '</span>') +
+            '</div>' +
+            '<span class="zs-match-sync-badge"><span class="material-symbols-outlined" style="font-size:16px;">verified</span>Multi-Server Ready</span>' +
           '</div>' +
-          '<div class="score-unit">' +
-            '<div class="big-score">' + scoreText + '</div>' +
-            '<div style="font-size:12px;color:#64748b;font-weight:700;">' + (isLive ? 'Current Match Score' : 'Kickoff') + '</div>' +
+          '<div class="zs-match-hero-scoregrid">' +
+            '<div class="zs-hero-team"><div class="zs-hero-crest-circle"><img src="' + homeLogo + '" alt="' + homeName + '" /></div><h3 class="zs-hero-team-name">' + homeName + '</h3></div>' +
+            '<div class="zs-hero-score-col"><div class="zs-hero-score-val">' + scoreText + '</div><div class="zs-hero-score-sub">' + (isLive ? 'Current Match Score' : 'Scheduled Kickoff') + '</div></div>' +
+            '<div class="zs-hero-team"><div class="zs-hero-crest-circle"><img src="' + awayLogo + '" alt="' + awayName + '" /></div><h3 class="zs-hero-team-name">' + awayName + '</h3></div>' +
           '</div>' +
-          '<div class="team-unit">' +
-            '<img src="' + awayLogo + '" alt="' + awayName + '" />' +
-            '<h3>' + awayName + '</h3>' +
+          '<div class="zs-match-hero-meta">' +
+            '<div><span>Stadium: </span><strong>' + venue + '</strong></div>' +
+            '<div><span>Kickoff: </span><strong>' + kickoffFull + '</strong></div>' +
+            '<div><span>Channels: </span><strong style="color:var(--zs-tertiary);">' + (hasLiveStream ? (mServers.length + ' HD Feeds Online') : 'Standby Mode') + '</strong></div>' +
+            '<div><span>Max Quality: </span><strong>1080p 60FPS Ultra HD</strong></div>' +
           '</div>' +
-        '</div>' +
-
-        '<div class="match-meta-list">' +
-          '<div class="match-meta-item"><span>Stadium:</span><strong>' + venue + '</strong></div>' +
-          '<div class="match-meta-item"><span>Kickoff Date:</span><strong>' + kickoffFull + '</strong></div>' +
-          '<div class="match-meta-item"><span>Active Channels:</span><strong style="color:#22c55e;">' + (hasLiveStream ? (mServers.length + ' HD Streams Online') : 'Standby Mode') + '</strong></div>' +
-          '<div class="match-meta-item"><span>Max Quality:</span><strong>1080p 60FPS Ultra HD</strong></div>' +
         '</div>' +
 
         '<!-- AdSense Slot 1: Top Gateway Leaderboard -->' +
@@ -1326,10 +1362,61 @@
       };
     }
 
-    // ── RENDER MATCHES IN CHRONOLOGICAL TIME ORDER (Earliest Kickoff First) ──
+    // ── RENDER MATCHES IN CHRONOLOGICAL TIME ORDER (Stitch v4 Tonal Cards) ──
+    function syncDynamicLeagueChips() {
+      var pillBox = document.getElementById('leagueFilterPills');
+      if (!pillBox || !allMatches || allMatches.length === 0) return;
+      var counts = {};
+      allMatches.forEach(function(m) {
+        var ln = (m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '').trim();
+        if (ln) counts[ln] = (counts[ln] || 0) + 1;
+      });
+      var leagues = Object.keys(counts).slice(0, 7);
+      if (leagues.length === 0) return;
+      var btns = '<button onclick="filterLeague(\'all\')" data-league="all" class="badge-chip ' + (currentLeagueFilter === 'all' ? 'active' : '') + '">All Competitions (' + allMatches.length + ')</button>';
+      leagues.forEach(function(l) {
+        var safeL = escapeHtml(l);
+        var act = currentLeagueFilter && currentLeagueFilter.toLowerCase() === l.toLowerCase();
+        btns += '<button onclick="filterLeague(\'' + safeL.replace(/'/g, "\\'") + '\')" data-league="' + safeL + '" class="badge-chip ' + (act ? 'active' : '') + '">' + safeL + '</button>';
+      });
+      pillBox.innerHTML = btns;
+    }
+
+    function renderFallbackEditorialCards() {
+      var fb = document.getElementById('zsEditorialFallback');
+      if (!fb) return;
+      var hasBloggerPosts = document.querySelectorAll('.blog-posts .index-post, .blog-posts .item-post').length > 0;
+      if (hasBloggerPosts) { fb.style.display = 'none'; return; }
+      var items = (allMatches || []).slice(0, 6);
+      if (items.length === 0) return;
+      var cards = items.map(function(m) {
+        var h = escapeHtml(m.home_team || 'Home Team');
+        var a = escapeHtml(m.away_team || 'Away Team');
+        var l = escapeHtml(m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || 'Featured Fixture');
+        var dest = sanitizeUrl(getMatchPostUrl(m));
+        return '<article class="zs-article-card">' +
+          '<a class="zs-article-thumb" href="' + dest + '">' +
+            '<div class="zs-thumb-fallback"><span class="material-symbols-outlined">sports_soccer</span><span>' + h + ' vs ' + a + '</span></div>' +
+            '<span class="zs-article-cat">' + l + '</span>' +
+          '</a>' +
+          '<div class="zs-article-body">' +
+            '<div style="font-size:11px;color:var(--zs-outline);font-weight:600;margin-bottom:4px;">Match Dossier &#8226; 5 min read</div>' +
+            '<a class="zs-article-title" href="' + dest + '">' + h + ' vs ' + a + ' Lineups, Live Score &amp; Match Center</a>' +
+            '<p class="zs-article-excerpt">Tactical formation breakdown, real-time score telemetry, head-to-head metrics, and authorized broadcast channels.</p>' +
+          '</div>' +
+          '<div class="zs-article-foot"><span style="font-weight:700;color:var(--zs-on-surface);">Editorial Desk</span><a href="' + dest + '" style="color:var(--zs-primary);font-weight:700;text-decoration:none;">Read Dossier &#8594;</a></div>' +
+        '</article>';
+      }).join('');
+      fb.innerHTML = cards;
+      fb.style.display = 'grid';
+    }
+
     function renderMatches() {
       var container = document.getElementById('matchesList');
       if (!container) return;
+
+      syncDynamicLeagueChips();
+      renderFallbackEditorialCards();
 
       var now = new Date();
       var todayStr = now.toISOString().split('T')[0];
@@ -1342,30 +1429,35 @@
       tomorrowDate.setDate(now.getDate() + 1);
       var tomorrowStr = tomorrowDate.toISOString().split('T')[0];
 
-      // Filter by Tab
-    var filtered = allMatches.filter(function(m) {
-      var mDateStr = m.date ? m.date.split('T')[0] : todayStr;
-      if (currentDateFilter === 'all') return true;
-      if (currentDateFilter === 'live') return m.status === 'live';
-      if (currentDateFilter === 'yesterday') return mDateStr === yesterdayStr;
-      if (currentDateFilter === 'tomorrow') return mDateStr === tomorrowStr;
-      return mDateStr === todayStr || m.status === 'live' || m.status === 'upcoming';
-    });
-
-    // Filter by League
-    if (typeof currentLeagueFilter !== 'undefined' && currentLeagueFilter && currentLeagueFilter !== 'all') {
-      filtered = filtered.filter(function(m) {
-        var leagueName = m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '';
-        return leagueName.toLowerCase().indexOf(currentLeagueFilter.toLowerCase()) !== -1;
+      var filtered = allMatches.filter(function(m) {
+        var mDateStr = m.date ? m.date.split('T')[0] : todayStr;
+        if (currentDateFilter === 'all') return true;
+        if (currentDateFilter === 'live') return (m.status || '').toLowerCase() === 'live';
+        if (currentDateFilter === 'yesterday') return mDateStr === yesterdayStr;
+        if (currentDateFilter === 'tomorrow') return mDateStr === tomorrowStr;
+        return mDateStr === todayStr || m.status === 'live' || m.status === 'upcoming';
       });
-    }
 
-    // If no matches on today's calendar date, fallback to showing available active/recent matches so the UI is never blank
-    if (filtered.length === 0 && currentDateFilter === 'today' && (typeof currentLeagueFilter === 'undefined' || currentLeagueFilter === 'all')) {
-      filtered = allMatches.slice(0, 10);
-    }
+      if (typeof currentLeagueFilter !== 'undefined' && currentLeagueFilter && currentLeagueFilter !== 'all') {
+        filtered = filtered.filter(function(m) {
+          var leagueName = m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '';
+          return leagueName.toLowerCase().indexOf(currentLeagueFilter.toLowerCase()) !== -1;
+        });
+      }
 
-    // ── CRITICAL: STRICT CHRONOLOGICAL SORT BY KICKOFF TIME (Earliest First) ──
+      if (typeof currentSearchQuery !== 'undefined' && currentSearchQuery) {
+        filtered = filtered.filter(function(m) {
+          var h = (m.home_team || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].name) || '').toLowerCase();
+          var a = (m.away_team || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].name) || '').toLowerCase();
+          var l = (m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || '').toLowerCase();
+          return h.indexOf(currentSearchQuery) !== -1 || a.indexOf(currentSearchQuery) !== -1 || l.indexOf(currentSearchQuery) !== -1;
+        });
+      }
+
+      if (filtered.length === 0 && currentDateFilter === 'today' && !currentSearchQuery && (typeof currentLeagueFilter === 'undefined' || currentLeagueFilter === 'all')) {
+        filtered = allMatches.slice(0, 12);
+      }
+
       filtered.sort(function(a, b) {
         var tA = a.date ? new Date(a.date).getTime() : 0;
         var tB = b.date ? new Date(b.date).getTime() : 0;
@@ -1373,7 +1465,7 @@
       });
 
       if (filtered.length === 0) {
-        container.innerHTML = '<div style="text-align:center;padding:40px;color:#94a3b8;font-weight:700;">No matches scheduled for this date. Check another tab!</div>';
+        container.innerHTML = '<div style="text-align:center;padding:40px;background:var(--zs-surface-lowest);border-radius:14px;color:var(--zs-secondary);font-weight:700;">No fixtures matched your filter. Try another tab or clear search!</div>';
         return;
       }
 
@@ -1386,42 +1478,60 @@
         var homeLogo = sanitizeUrl(m.home_logo || (teamsMap[m.home_team_id] && teamsMap[m.home_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/114.png');
         var awayLogo = sanitizeUrl(m.away_logo || (teamsMap[m.away_team_id] && teamsMap[m.away_team_id].logo_url) || 'https://korra.world/wp-content/uploads/yalla-team-logos/109.png');
         var leagueName = escapeHtml(m.league_name || (leaguesMap[m.league_id] && leaguesMap[m.league_id].name) || 'Live Match');
+        var venueName = escapeHtml(m.venue || 'Official Stadium');
 
         var liveInfo = getMatchLiveInfo(m);
         var isLive = liveInfo.isLive;
-        var statusClass = liveInfo.statusClass;
+        var isFinished = liveInfo.isFinished;
         var timeDisplay = liveInfo.timeDisplay;
         var statusText = liveInfo.statusText;
         var scoreText = liveInfo.scoreText;
-        var matchSlug = slugify(homeName) + '-vs-' + slugify(awayName) + '-' + m.id;
+        var matchSlug = slugify(rawHomeName) + '-vs-' + slugify(rawAwayName) + '-' + m.id;
+        var hasCustomPost = m.article_url && isAllowedUrl(m.article_url);
+        var cardHref = hasCustomPost ? sanitizeUrl(m.article_url) : ('/' + matchSlug);
+        var cardOnClick = hasCustomPost ? '' : ' onclick="event.preventDefault(); openMatchPage(\'' + m.id + '\', true);"';
 
-        // Clicking redirects to dedicated match page: domain.com/{team1}-vs-{team2}-{id}
-        html += '<div class="STING-web-Match" id="match-' + m.id + '">' +
-          '<a href="/' + matchSlug + '" onclick="event.preventDefault(); openMatchPage(\'' + m.id + '\', true);">' +
-            '<div class="STING-web-Right-Team">' +
-              '<div class="STING-web-Team-Logo"><img src="' + homeLogo + '" alt="' + homeName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
-              '<div class="STING-web-Team-NAME">' + homeName + '</div>' +
-            '</div>' +
-            '<div class="STING-web-Match-Center">' +
-              '<div class="STING-web-Match-Timing">' +
-                '<div id="STING-web-Match-Time" class="' + statusClass + '">' + statusText + '</div>' +
-                '<div id="STING-web-Result">' + scoreText + '</div>' +
-                '<div class="STING-web-Match-Info">' + leagueName + ' (' + timeDisplay + ')</div>' +
+        var pillHtml = isLive
+          ? '<span class="zs-mc-pill-live"><span class="zs-ping-core" style="width:6px;height:6px;background:#fff;"></span>' + escapeHtml(statusText) + '</span>'
+          : (isFinished ? '<span class="zs-mc-pill-ft">FT</span>' : '<span class="zs-mc-pill-time">' + escapeHtml(timeDisplay) + '</span>');
+
+        html += '<div class="STING-web-Match ' + (isLive ? 'is-live' : '') + '" id="match-' + m.id + '">' +
+          '<a class="zs-match-link" href="' + cardHref + '"' + cardOnClick + '>' +
+            '<div class="zs-mc-top">' +
+              '<span class="zs-mc-league"><span class="material-symbols-outlined" style="font-size:15px;">sports_soccer</span>' + leagueName + '</span>' +
+              '<div class="zs-mc-status-group">' +
+                pillHtml +
+                '<span class="zs-mc-venue">' + venueName + '</span>' +
               '</div>' +
             '</div>' +
-            '<div class="STING-web-Left-Team">' +
-              '<div class="STING-web-Team-NAME">' + awayName + '</div>' +
-              '<div class="STING-web-Team-Logo"><img src="' + awayLogo + '" alt="' + awayName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
+            '<div class="zs-mc-body">' +
+              '<div class="STING-web-Right-Team">' +
+                '<div class="STING-web-Team-Logo"><img src="' + homeLogo + '" alt="' + homeName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
+                '<div class="STING-web-Team-NAME">' + homeName + '</div>' +
+              '</div>' +
+              '<div class="zs-mc-center">' +
+                '<div class="zs-mc-score-chip ' + (scoreText === 'VS' ? 'is-vs' : '') + '">' + escapeHtml(scoreText) + '</div>' +
+                '<div class="zs-mc-sub">' + (isLive ? 'In Play' : (isFinished ? 'Full Time' : escapeHtml(timeDisplay))) + '</div>' +
+              '</div>' +
+              '<div class="STING-web-Left-Team">' +
+                '<div class="STING-web-Team-NAME">' + awayName + '</div>' +
+                '<div class="STING-web-Team-Logo"><img src="' + awayLogo + '" alt="' + awayName + '" loading="lazy" class="img-lazy-blur" onload="this.classList.add(\'loaded\')" onerror="this.onerror=null;this.classList.add(\'loaded\');" /></div>' +
+              '</div>' +
             '</div>' +
-            '<div class="STING-web-Overlay"><div class="STING-web-SVG-Play">▶</div></div>' +
+            '<div class="zs-mc-foot">' +
+              '<span class="zs-mc-broadcast"><span class="material-symbols-outlined">tv</span>Verified Broadcast &amp; Lineups</span>' +
+              '<span class="zs-mc-cta-pill">Match Center &#8594;</span>' +
+            '</div>' +
           '</a>' +
         '</div>';
       });
 
       container.innerHTML = html;
+      try { updateHeaderLiveCounter(); } catch(e) {}
     }
 
     // ── Handle Browser Back / Forward & URL Routes ──
+    var initialRouteHandled = false;
     function checkUrlRoute() {
       var path = window.location.pathname || '';
       var params = new URLSearchParams(window.location.search);
@@ -1459,7 +1569,7 @@
         }
       }
 
-      if (path && path !== '/' && path.indexOf('/p/') === -1 && path.indexOf('/search') === -1) {
+      if (path && path !== '/' && path.indexOf('/p/') === -1 && path.indexOf('/search') === -1 && path.indexOf('.html') === -1) {
         var cleanPath = path.replace(/^\/+|\/+$/g, '');
         var mId2 = extractMatchId(cleanPath);
         if (mId2) {
@@ -1468,7 +1578,17 @@
         }
       }
 
-      // 4. Default Home View on Blogger Blog 1
+      // 4. If viewing a real Blogger single post/article (.item-post), hide Home Fixtures
+      if (document.querySelector('.blog-post.item-post')) {
+        var hv = document.getElementById('homeView');
+        var wg = document.getElementById('zsWorkstationGrid');
+        var sh = document.querySelector('#editorialSection .zs-section-head');
+        if (hv) hv.style.display = 'none';
+        if (wg) wg.style.display = 'none';
+        if (sh) sh.style.display = 'none';
+        return;
+      }
+      // Default Home View on Blogger Blog 1
       showView('home');
     }
 
@@ -1483,7 +1603,14 @@
     for (var i = 0; i < liveWithFotmob.length; i++) {
       var match = liveWithFotmob[i];
       try {
-        var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + match.fotmob_id);
+        var proxyUrl = 'https://proxy.zetasports.site/fotmob/matchDetails?matchId=' + match.fotmob_id;
+        var res;
+        try {
+          res = await fetchWithResilientBackoff(proxyUrl, {}, 1, 500);
+        } catch(proxyErr) {
+          proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + match.fotmob_id);
+          res = await fetch(proxyUrl);
+        }
         var res = await fetch(proxyUrl);
         if (!res.ok) continue;
         var data = await res.json();
@@ -1504,12 +1631,45 @@
     renderMatches();
   }
 
-  // ── Direct Supabase REST Fetch Helper ──
+  // ── Resilient Jittered Exponential Backoff Fetch Engine ──
+  async function fetchWithResilientBackoff(url, options, maxRetries, baseDelayMs) {
+    var retries = (maxRetries !== undefined) ? maxRetries : 3;
+    var baseDelay = (baseDelayMs !== undefined) ? baseDelayMs : 800;
+    var attempt = 0;
+    while (attempt <= retries) {
+      try {
+        if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+          throw new Error('NETWORK_OFFLINE: Device is disconnected');
+        }
+        var controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+        var timeoutId = controller ? setTimeout(function() { controller.abort(); }, 8000) : null;
+        var fetchOpts = Object.assign({}, options || {});
+        if (controller) fetchOpts.signal = controller.signal;
+        var res = await fetch(url, fetchOpts);
+        if (timeoutId) clearTimeout(timeoutId);
+        if (res.ok) return res;
+        if (res.status >= 400 && res.status < 500 && res.status !== 429) {
+          throw new Error('CLIENT_ERROR: HTTP ' + res.status + ' non-retryable');
+        }
+        attempt++;
+        if (attempt > retries) {
+          throw new Error('HTTP_ERROR: HTTP ' + res.status + ' after ' + retries + ' attempts');
+        }
+      } catch(err) {
+        if (err.message && err.message.indexOf('CLIENT_ERROR') !== -1) throw err;
+        attempt++;
+        if (attempt > retries) throw err;
+      }
+      var delay = Math.min(6000, baseDelay * Math.pow(2, attempt)) + (Math.random() * 300);
+      await new Promise(function(resolve) { setTimeout(resolve, delay); });
+    }
+  }
+
+  // ── Direct Supabase REST Fetch Helper with Resilient Backoff ──
   async function fetchSupabaseTable(table) {
-    var res = await fetch(SB_URL + '/rest/v1/' + table + '?select=*', {
+    var res = await fetchWithResilientBackoff(SB_URL + '/rest/v1/' + table + '?select=*', {
       headers: SB_HEADERS
-    });
-    if (!res.ok) throw new Error('Supabase ' + table + ' returned HTTP ' + res.status);
+    }, 2, 800);
     return await res.json();
   }
 
@@ -1542,8 +1702,8 @@
 
       console.log('[ZetaSports] Loaded ' + allMatches.length + ' matches sorted by kickoff time.');
       try { renderMatches(); } catch(e) { console.error('[ZetaSports] renderMatches error:', e); }
-      try { updateHeaderLiveCounter(); } catch(e) { console.error('[ZetaSports] updateHeaderLiveCounter error:', e); }
-      try { checkUrlRoute(); } catch(e) { console.error('[ZetaSports] checkUrlRoute error:', e); }
+        try { updateHeaderLiveCounter(); } catch(e) { console.error('[ZetaSports] updateHeaderLiveCounter error:', e); }
+      if (!initialRouteHandled) { initialRouteHandled = true; try { checkUrlRoute(); } catch(e) { console.error('[ZetaSports] checkUrlRoute error:', e); } }
       try { syncFotMobScores(); } catch(e) { console.error('[ZetaSports] syncFotMobScores error:', e); }
     } catch (err) {
       console.error('[ZetaSports] Supabase load error:', err);
