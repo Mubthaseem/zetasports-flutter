@@ -101,7 +101,7 @@ function parseFotMobTelemetry(data) {
 
 // ── 2. Poll Active Live Matches ──────────────────────────────────────────────
 async function pollActiveMatches(env) {
-  const sbUrl = (env.SUPABASE_URL || 'https://voocdrpetiyspuhyeapi.supabase.co').replace(/\/+$/, '');
+  const sbUrl = (env.SUPABASE_URL || 'https://udlncusvhmydivtjkjcy.supabase.co').replace(/\/+$/, '');
   const sbKey = env.SUPABASE_SERVICE_KEY || env.SUPABASE_KEY;
 
   if (!sbKey) {
