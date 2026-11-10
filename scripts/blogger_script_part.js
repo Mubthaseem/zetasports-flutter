@@ -430,6 +430,7 @@
         window.history.pushState({ matchId: match.id }, '', '/' + matchSlug);
       }
       document.title = homeName + ' vs ' + awayName + ' — Live Score, News & Stream | ZetaSports';
+      injectMatchSEO(homeName, awayName, leagueName, scoreText, isLive, kickoffFull);
 
       var liveInfo = getMatchLiveInfo(match);
       var isLive = liveInfo.isLive;
@@ -1536,4 +1537,163 @@
   if (typeof setInterval !== 'undefined') {
     setInterval(loadData, 25000);
     setInterval(syncFotMobScores, 30000);
+    
+  // ── AUTOMATED CLOUD SETTINGS & DYNAMIC SEO ENGINE ──
+  var TG_CONFIG = {
+    enabled: true,
+    url: 'https://t.me/zetasports_official',
+    title: '📢 Join Our Official Telegram',
+    message: 'Get instant live match streams, backup links, and real-time goal alerts directly on Telegram!',
+    intervalMins: 5
+  };
+
+  async function syncGlobalConfigAndSEO() {
+    try {
+      var res = await fetch(SB_URL + '/rest/v1/zeta_config?id=eq.global&select=*', {
+        headers: SB_HEADERS
+      });
+      if (res.ok) {
+        var data = await res.json();
+        if (data && data[0]) {
+          var c = data[0];
+          // 1. Telegram Sync
+          if (c.telegram_enabled !== undefined) TG_CONFIG.enabled = c.telegram_enabled;
+          if (c.telegram_url) TG_CONFIG.url = c.telegram_url;
+          if (c.telegram_title) TG_CONFIG.title = c.telegram_title;
+          if (c.telegram_message) TG_CONFIG.message = c.telegram_message;
+          if (c.telegram_interval_mins) TG_CONFIG.intervalMins = c.telegram_interval_mins;
+
+          // 2. Automated Title & SEO Keywords Sync
+          if (c.site_title && !window.location.pathname.includes('-vs-') && !window.location.search.includes('stream=')) {
+            document.title = c.site_title;
+          }
+          if (c.seo_keywords) {
+            var metaKw = document.querySelector('meta[name="keywords"]') || document.createElement('meta');
+            metaKw.name = 'keywords';
+            metaKw.content = c.seo_keywords;
+            if (!metaKw.parentNode) document.head.appendChild(metaKw);
+          }
+          if (c.meta_description && !window.location.pathname.includes('-vs-')) {
+            var metaDesc = document.querySelector('meta[name="description"]') || document.createElement('meta');
+            metaDesc.name = 'description';
+            metaDesc.content = c.meta_description;
+            if (!metaDesc.parentNode) document.head.appendChild(metaDesc);
+          }
+
+          // 3. Automated Announcement Banner
+          if (c.announcement_banner && c.announcement_banner.trim()) {
+            var bannerEl = document.getElementById('zetaAnnouncementBanner');
+            if (!bannerEl) {
+              bannerEl = document.createElement('div');
+              bannerEl.id = 'zetaAnnouncementBanner';
+              bannerEl.style.cssText = 'background:linear-gradient(90deg,#1e3a8a,#2563eb);color:#fff;text-align:center;padding:8px 12px;font-size:13px;font-weight:700;z-index:999;box-shadow:0 2px 4px rgba(0,0,0,0.1);';
+              document.body.insertBefore(bannerEl, document.body.firstChild);
+            }
+            bannerEl.innerHTML = '📢 ' + escapeHtml(c.announcement_banner);
+          }
+        }
+      }
+    } catch(e) {}
+    initTelegramNotification();
+  }
+
+  function injectMatchSEO(home, away, league, scoreText, isLive, kickoff) {
+    try {
+      var kw = home + ' vs ' + away + ', ' + home + ' vs ' + away + ' live score, ' + 
+               home + ' vs ' + away + ' stream, ' + home + ' vs ' + away + ' lineups, ' + 
+               league + ' live, FotMob Scores, ZetaSports, KeralaHub';
+      var metaKw = document.querySelector('meta[name="keywords"]') || document.createElement('meta');
+      metaKw.name = 'keywords';
+      metaKw.content = kw;
+      if (!metaKw.parentNode) document.head.appendChild(metaKw);
+
+      var desc = 'Watch ' + home + ' vs ' + away + ' (' + scoreText + ') live score, lineup formations, H2H statistics, and HD stream gateway on ZetaSports.';
+      var metaDesc = document.querySelector('meta[name="description"]') || document.createElement('meta');
+      metaDesc.name = 'description';
+      metaDesc.content = desc;
+      if (!metaDesc.parentNode) document.head.appendChild(metaDesc);
+
+      // Google SportsEvent JSON-LD Schema
+      var existingSchema = document.getElementById('zeta-sportsevent-schema');
+      if (existingSchema) existingSchema.remove();
+      var schema = document.createElement('script');
+      schema.id = 'zeta-sportsevent-schema';
+      schema.type = 'application/ld+json';
+      schema.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SportsEvent",
+        "name": home + " vs " + away,
+        "description": desc,
+        "startDate": kickoff || new Date().toISOString(),
+        "sport": "Soccer",
+        "eventStatus": isLive ? "https://schema.org/EventLive" : "https://schema.org/EventScheduled",
+        "competitor": [
+          { "@type": "SportsTeam", "name": home },
+          { "@type": "SportsTeam", "name": away }
+        ]
+      });
+      document.head.appendChild(schema);
+    } catch(e) {}
+  }
+
+  function initTelegramNotification() {
+    if (!TG_CONFIG.enabled) return;
+    function checkAndShow() {
+      if (!TG_CONFIG.enabled) return;
+      var lastShown = parseInt(localStorage.getItem('zeta_tg_last_shown') || '0');
+      var now = Date.now();
+      var intervalMs = (TG_CONFIG.intervalMins || 5) * 60 * 1000;
+      if (now - lastShown >= intervalMs) {
+        showTelegramPopup();
+      }
+    }
+    setTimeout(checkAndShow, 6000);
+    setInterval(checkAndShow, 60000);
+  }
+
+  function showTelegramPopup() {
+    window.showTelegramPopup = showTelegramPopup;
+    var existing = document.getElementById('zetaTgPopup');
+    if (existing) existing.remove();
+    var popup = document.createElement('div');
+    popup.id = 'zetaTgPopup';
+    popup.className = 'zeta-tg-card';
+    popup.innerHTML = 
+      '<div class="zeta-tg-header">' +
+        '<div class="zeta-tg-badge">' +
+          '<span class="zeta-tg-icon">✈️</span>' +
+          '<div class="zeta-tg-badge-pulse"></div>' +
+        '</div>' +
+        '<div class="zeta-tg-title-box">' +
+          '<div class="zeta-tg-title">' + escapeHtml(TG_CONFIG.title || 'Join Telegram Channel') + '</div>' +
+          '<div class="zeta-tg-sub">Instant Live Streams &amp; Goal Alerts</div>' +
+        '</div>' +
+        '<div class="zeta-tg-close" onclick="dismissTelegramPopup()">✕</div>' +
+      '</div>' +
+      '<div class="zeta-tg-body">' + escapeHtml(TG_CONFIG.message || 'Get instant live match streams, backup links, and real-time goal alerts directly on Telegram!') + '</div>' +
+      '<div class="zeta-tg-actions">' +
+        '<a href="' + sanitizeUrl(TG_CONFIG.url) + '" target="_blank" class="zeta-tg-btn" onclick="onJoinTelegramClicked()">' +
+          '<span>🚀</span> Join Telegram Channel' +
+        '</a>' +
+        '<button class="zeta-tg-later-btn" onclick="dismissTelegramPopup()">Later</button>' +
+      '</div>';
+    document.body.appendChild(popup);
+    setTimeout(function() { popup.classList.add('visible'); }, 50);
+    localStorage.setItem('zeta_tg_last_shown', Date.now().toString());
+  }
+
+  window.dismissTelegramPopup = function() {
+    var popup = document.getElementById('zetaTgPopup');
+    if (popup) {
+      popup.classList.remove('visible');
+      setTimeout(function() { popup.remove(); }, 350);
+    }
+    localStorage.setItem('zeta_tg_last_shown', Date.now().toString());
+  };
+
+  window.onJoinTelegramClicked = function() {
+    dismissTelegramPopup();
+  };
+
+    syncGlobalConfigAndSEO();
   }
