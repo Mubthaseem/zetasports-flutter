@@ -3,7 +3,7 @@
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' expr:lang='data:blog.localeUnderscoreDelimited' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
   <!-- ZetaSports Unified Core Stylesheet (Hosted on Supabase Storage CDN) -->
-  <link rel="stylesheet" href="https://udlncusvhmydivtjkjcy.supabase.co/storage/v1/object/public/scripts/zetasports-core.css" id="zetasports-core-css"/>
+  <link rel="stylesheet" href="https://udlncusvhmydivtjkjcy.supabase.co/storage/v1/object/public/scripts/zetasports-core.css" id="zetasports-core-css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/gh/Mubthaseem/zetasports-flutter@main/web/css/zetasports-core.css';"/>
 
 <b:include name='theme-head'/>
 
@@ -4697,7 +4697,7 @@ var _$_obify3=["\x51\x20\x61\x24\x69\x3D\x5B\x22\x5C\x31\x5A\x22\x2C\x22\x5C\x6B
     }
 
     // ── ROUTE 1: DEDICATED MATCH DETAILS & 8 SECTIONS (domain.com/team1-vs-team2-id) ──
-    window.openMatchPage = function(matchId, pushState) {
+    window.openMatchPage = async function(matchId, pushState) {
       var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
       if (!match) {
         fetchDirectMatch(matchId, pushState);
@@ -4747,25 +4747,25 @@ var _$_obify3=["\x51\x20\x61\x24\x69\x3D\x5B\x22\x5C\x31\x5A\x22\x2C\x22\x5C\x6B
           '</div>' +
         '</div>' +
 
-        '<!-- Section 1: Scoreboard Header -->' +
-        '<div class="match-page-header">' +
+        '<!-- Section 1: Scoreboard Header (Solid Dark Gradient) -->' +
+        '<div class="match-page-header" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;color:#f9fafb !important;padding:24px 20px;text-align:center;border-top-left-radius:14px;border-top-right-radius:14px;">' +
           '<div style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#93c5fd;font-weight:700;margin-bottom:4px;">' + leagueName + '</div>' +
-          '<h1 style="font-size:22px;font-weight:800;">' + homeName + ' vs ' + awayName + '</h1>' +
+          '<h1 style="font-size:22px;font-weight:800;color:#f9fafb !important;margin:6px 0;">' + homeName + ' vs ' + awayName + '</h1>' +
           '<div style="margin-top:8px;"><span id="STING-web-Match-Time" class="' + statusClass + '">' + statusText + '</span></div>' +
         '</div>' +
 
-        '<div class="match-scoreboard-grid">' +
-          '<div class="team-unit">' +
-            '<img src="' + homeLogo + '" alt="' + homeName + '" />' +
-            '<h3>' + homeName + '</h3>' +
+        '<div class="match-scoreboard-grid" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;color:#f9fafb !important;display:flex;align-items:center;justify-content:space-around;padding:24px 16px;border-bottom-left-radius:14px;border-bottom-right-radius:14px;margin-bottom:16px;">' +
+          '<div class="team-unit" style="display:flex;flex-direction:column;align-items:center;width:35%;">' +
+            '<img src="' + homeLogo + '" alt="' + homeName + '" style="width:64px;height:64px;object-fit:contain;margin-bottom:8px;" />' +
+            '<h3 style="font-size:18px;font-weight:800;color:#f9fafb !important;text-align:center;margin:0;">' + homeName + '</h3>' +
           '</div>' +
-          '<div class="score-unit">' +
-            '<div class="big-score">' + scoreText + '</div>' +
-            '<div style="font-size:12px;color:#64748b;font-weight:700;">' + (isLive ? 'Current Match Score' : 'Kickoff') + '</div>' +
+          '<div class="score-unit" style="text-align:center;width:30%;">' +
+            '<div class="big-score" style="font-size:46px;font-weight:900;letter-spacing:6px;color:#f9fafb !important;text-shadow:0 2px 8px rgba(0,0,0,0.5);font-family:\'Oswald\',sans-serif;">' + scoreText + '</div>' +
+            '<div style="font-size:12px;color:#9ca3af !important;font-weight:700;">' + (isLive ? 'Current Match Score' : 'Kickoff') + '</div>' +
           '</div>' +
-          '<div class="team-unit">' +
-            '<img src="' + awayLogo + '" alt="' + awayName + '" />' +
-            '<h3>' + awayName + '</h3>' +
+          '<div class="team-unit" style="display:flex;flex-direction:column;align-items:center;width:35%;">' +
+            '<img src="' + awayLogo + '" alt="' + awayName + '" style="width:64px;height:64px;object-fit:contain;margin-bottom:8px;" />' +
+            '<h3 style="font-size:18px;font-weight:800;color:#f9fafb !important;text-align:center;margin:0;">' + awayName + '</h3>' +
           '</div>' +
         '</div>' +
 
@@ -4776,15 +4776,15 @@ var _$_obify3=["\x51\x20\x61\x24\x69\x3D\x5B\x22\x5C\x31\x5A\x22\x2C\x22\x5C\x6B
           '<div class="match-meta-item"><span>Broadcast:</span><strong>1080p 60FPS HD</strong></div>' +
         '</div>' +
 
-        '<!-- Section 2: 7 Interactive Navigation Tabs -->' +
-        '<div class="match-tabs-header">' +
-          '<button class="mtab-btn active" id="mtab-overview" onclick="switchMatchTab(\'overview\')">📌 Overview</button>' +
-          '<button class="mtab-btn" id="mtab-timeline" onclick="switchMatchTab(\'timeline\')">⏱️ Timeline</button>' +
-          '<button class="mtab-btn" id="mtab-stats" onclick="switchMatchTab(\'stats\')">📊 Statistics</button>' +
-          '<button class="mtab-btn" id="mtab-lineups" onclick="switchMatchTab(\'lineups\')">📋 Lineups</button>' +
-          '<button class="mtab-btn" id="mtab-h2h" onclick="switchMatchTab(\'h2h\')">⚔️ H2H &amp; Form</button>' +
-          '<button class="mtab-btn" id="mtab-commentary" onclick="switchMatchTab(\'commentary\')">🎙️ Commentary</button>' +
-          '<button class="mtab-btn" id="mtab-articles" onclick="switchMatchTab(\'articles\')">📰 Articles &amp; News</button>' +
+        '<!-- Section 2: 7 Interactive Navigation Tabs (>= 44px Touch Targets) -->' +
+        '<div class="match-tabs-header" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:16px;scrollbar-width:none;-webkit-overflow-scrolling:touch;">' +
+          '<button class="mtab-btn active" id="mtab-overview" onclick="switchMatchTab(\'overview\')" style="min-height:44px;min-width:44px;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;">📌 Overview</button>' +
+          '<button class="mtab-btn" id="mtab-timeline" onclick="switchMatchTab(\'timeline\')" style="min-height:44px;min-width:44px;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;">⏱️ Timeline</button>' +
+          '<button class="mtab-btn" id="mtab-stats" onclick="switchMatchTab(\'stats\')" style="min-height:44px;min-width:44px;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;">📊 Statistics</button>' +
+          '<button class="mtab-btn" id="mtab-lineups" onclick="switchMatchTab(\'lineups\')" style="min-height:44px;min-width:44px;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;">📋 Lineups</button>' +
+          '<button class="mtab-btn" id="mtab-h2h" onclick="switchMatchTab(\'h2h\')" style="min-height:44px;min-width:44px;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;">⚔️ H2H &amp; Form</button>' +
+          '<button class="mtab-btn" id="mtab-commentary" onclick="switchMatchTab(\'commentary\')" style="min-height:44px;min-width:44px;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;">🎙️ Commentary</button>' +
+          '<button class="mtab-btn" id="mtab-articles" onclick="switchMatchTab(\'articles\')" style="min-height:44px;min-width:44px;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;">📰 Articles &amp; News</button>' +
         '</div>' +
 
         '<!-- TAB PANE 1: OVERVIEW -->' +
