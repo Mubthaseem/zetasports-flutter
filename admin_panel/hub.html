@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZetaSports Hub — White Drag & Drop Admin Studio</title>
+  
+  <!-- Google Fonts & Tailwind CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rajdhani:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Supabase JS Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['Rajdhani', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* White theme custom styling */
+    body { background-color: #f8fafc; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    .card-white {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+    }
+    .card-white-hover:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Drag & Drop Styles */
+    .draggable-card {
+      cursor: grab;
+      user-select: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+    .draggable-card:active {
+      cursor: grabbing;
+    }
+    .draggable-card.dragging {
+      opacity: 0.4;
+      transform: scale(0.98);
+      border-color: #10b981;
+      box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
+    }
+
+    .drop-zone {
+      transition: all 0.2s ease;
+    }
+    .drop-zone.drag-over {
+      background-color: #ecfdf5 !important;
+      border-color: #10b981 !important;
+      border-style: dashed !important;
+      transform: scale(1.005);
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 min-h-screen antialiased flex flex-col font-sans selection:bg-brand-500 selection:text-white">
+
+  <!-- TOP WHITE HEADER BAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 px-4 lg:px-8 py-3.5 shadow-sm">
+    <div class="max-w-[1600px] mx-auto flex items-center justify-between gap-4">
+      
+      <!-- Brand & Title -->
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center font-display text-2xl font-black tracking-wider text-white shadow-md shadow-brand-500/20">
+            Z
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-extrabold text-xl tracking-wide text-slate-900">ZETASPORTS</span>
+              <span class="px-2 py-0.5 text-[10px] font-bold bg-brand-50 text-brand-700 border border-brand-200 rounded-full uppercase tracking-wider">White Studio</span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium">Drag &amp; Drop Curation Engine • FotMob API ↔ Supabase</p>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
+          <button onclick="switchView('curation')" id="nav-curation" class="nav-btn px-3.5 py-1.5 rounded-lg text-white bg-brand-600 shadow-sm transition">
+            ⚡ Drag &amp; Drop Studio
+          </button>
+          <button onclick="switchView('news')" id="nav-news" class="nav-btn px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">
+            📰 News &amp; Articles
+          </button>
+          <button onclick="switchView('settings')" id="nav-settings" class="nav-btn px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">
+            🔑 Supabase Secret Key
+          </button>
+        </nav>
+      </div>
+
+      <!-- Live Indicators & Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Supabase Connection Pill -->
+        <div id="sb-status-pill" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-medium">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse" id="sb-status-dot"></span>
+          <span class="text-slate-600 font-mono" id="sb-status-text">Connecting...</span>
+        </div>
+
+        <!-- Refresh Button -->
+        <button onclick="fetchGitHubStorage(true)" id="btn-sync-storage" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-sm transition active:scale-95">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          <span>Sync GitHub Feed</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-[1600px] mx-auto w-full p-4 lg:p-8 space-y-6">
+
+    <!-- KPI STATS COUNTER BAR -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="card-white rounded-2xl p-4">
+        <div class="text-[11px] font-bold uppercase text-slate-400 mb-1 flex items-center justify-between">
+          <span>GitHub Action Feeds</span>
+          <span class="text-brand-600 font-extrabold">● Ready</span>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-slate-900" id="kpi-gh-count">0</div>
+        <p class="text-xs text-slate-500 mt-1" id="kpi-gh-updated">Last sync: Just now</p>
+      </div>
+
+      <div class="card-white rounded-2xl p-4">
+        <div class="text-[11px] font-bold uppercase text-slate-400 mb-1 flex items-center justify-between">
+          <span>Published in Supabase</span>
+          <span class="text-blue-600 font-extrabold">● Live in App &amp; Web</span>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-blue-600" id="kpi-sb-count">0</div>
+        <p class="text-xs text-slate-500 mt-1">Direct from Database</p>
+      </div>
+
+      <div class="card-white rounded-2xl p-4">
+        <div class="text-[11px] font-bold uppercase text-slate-400 mb-1 flex items-center justify-between">
+          <span>Broadcast Servers</span>
+          <span class="text-purple-600 font-extrabold">● DRM &amp; HLS</span>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-purple-600" id="kpi-stream-count">0</div>
+        <p class="text-xs text-slate-500 mt-1">Multi-server failover ready</p>
+      </div>
+
+      <div class="card-white rounded-2xl p-4">
+        <div class="text-[11px] font-bold uppercase text-slate-400 mb-1 flex items-center justify-between">
+          <span>Editorial News</span>
+          <span class="text-amber-600 font-extrabold">● Stories</span>
+        </div>
+        <div class="font-display text-3xl font-extrabold text-amber-600" id="kpi-news-count">0</div>
+        <p class="text-xs text-slate-500 mt-1">Full article reader</p>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW 1: FULL DRAG & DROP SPLIT STUDIO                                     -->
+    <!-- ========================================================================= -->
+    <section id="view-curation" class="space-y-6">
+
+      <!-- BANNER INSTRUCTION -->
+      <div class="card-white rounded-2xl p-4 bg-gradient-to-r from-emerald-50 via-white to-blue-50 border border-emerald-100 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg shadow-sm">
+            ✋
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-slate-900">Interactive Drag &amp; Drop Curation</h3>
+            <p class="text-xs text-slate-500">
+              Drag any match from the <strong>GitHub Feed (Left)</strong> and drop it into the <strong>Published Supabase (Right)</strong> column to make it immediately live on your Web Application and Flutter APK!
+            </p>
+          </div>
+        </div>
+        <button onclick="batchImportTodayMatches()" class="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-sm transition">
+          ⚡ Import All of Today (1-Click)
+        </button>
+      </div>
+
+      <!-- SPLIT TWO-COLUMN KANBAN STUDIO -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+
+        <!-- COLUMN 1 (LEFT): GITHUB ACTIONS HARVESTED FEEDS -->
+        <div class="space-y-4">
+          <div class="card-white rounded-2xl p-4">
+            <div class="flex items-center justify-between gap-3 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <h3 class="font-bold text-slate-900 text-sm">GitHub Actions Harvested Feeds</h3>
+              </div>
+              <span class="text-xs font-bold text-slate-400 font-mono" id="feed-items-badge">0 matches</span>
+            </div>
+
+            <!-- Tabs: Live, Today, Upcoming, Results -->
+            <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold mb-3 overflow-x-auto">
+              <button onclick="setFeedTab('live')" id="tab-f-live" class="feed-tab-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                <span>Live</span>
+                <span class="px-1.5 bg-white text-slate-700 rounded-full text-[10px]" id="count-f-live">0</span>
+              </button>
+              <button onclick="setFeedTab('today')" id="tab-f-today" class="feed-tab-btn px-3 py-1.5 rounded-lg text-white bg-brand-600 shadow-sm transition flex items-center gap-1.5">
+                <span>Today</span>
+                <span class="px-1.5 bg-brand-700 text-white rounded-full text-[10px]" id="count-f-today">0</span>
+              </button>
+              <button onclick="setFeedTab('upcoming')" id="tab-f-upcoming" class="feed-tab-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5">
+                <span>Upcoming (350+)</span>
+                <span class="px-1.5 bg-white text-slate-700 rounded-full text-[10px]" id="count-f-upcoming">0</span>
+              </button>
+              <button onclick="setFeedTab('results')" id="tab-f-results" class="feed-tab-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5">
+                <span>Finished</span>
+                <span class="px-1.5 bg-white text-slate-700 rounded-full text-[10px]" id="count-f-results">0</span>
+              </button>
+            </div>
+
+            <!-- Search & League Filter -->
+            <div class="grid grid-cols-2 gap-2">
+              <select id="feed-league-filter" onchange="renderFeedColumn()" class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-700 focus:outline-none focus:border-brand-500 font-medium">
+                <option value="all">All Competitions</option>
+              </select>
+              <input type="text" id="feed-search" oninput="renderFeedColumn()" placeholder="Search team..." class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand-500 font-medium"/>
+            </div>
+          </div>
+
+          <!-- Drag Source Cards List -->
+          <div id="feed-cards-container" class="space-y-3 max-h-[800px] overflow-y-auto pr-1">
+            <!-- Feed cards populate here -->
+            <div class="py-16 text-center text-slate-400 card-white rounded-2xl">
+              <div class="w-8 h-8 border-2 border-brand-500 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+              <p class="text-xs font-semibold">Loading feed from GitHub...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2 (RIGHT): PUBLISHED IN SUPABASE (DROP ZONE) -->
+        <div class="space-y-4">
+          <div class="card-white rounded-2xl p-4 flex items-center justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+                <h3 class="font-bold text-slate-900 text-sm">Published Live in Supabase</h3>
+              </div>
+              <p class="text-xs text-slate-500">Live in your Flutter App and Web Page.</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="syncLiveScoresToSupabase()" class="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-sm transition flex items-center gap-1.5"><span>⚡ Sync Live Scores</span></button> <button onclick="openManualMatchModal()" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+                + New Match
+              </button>
+              <button onclick="loadSupabaseData()" class="p-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="Refresh Supabase">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- DROP TARGET CONTAINER -->
+          <div id="supabase-drop-zone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)" class="drop-zone border-2 border-dashed border-slate-300 rounded-2xl p-4 min-h-[350px] space-y-3 bg-white">
+            
+            <!-- Empty drop invitation banner -->
+            <div id="drop-placeholder" class="py-12 text-center text-slate-400 border-2 border-dashed border-slate-200 rounded-xl bg-slate-50/50">
+              <div class="text-3xl mb-2">📥</div>
+              <p class="font-bold text-sm text-slate-700">Drop Matches Here</p>
+              <p class="text-xs text-slate-400 mt-1">Drag any fixture from the left column to publish it directly into Supabase.</p>
+            </div>
+
+            <!-- Published Cards Populate Here -->
+            <div id="curated-cards-container" class="space-y-3"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW 2: NEWS & EDITORIAL ARTICLES                                         -->
+    <!-- ========================================================================= -->
+    <section id="view-news" class="hidden space-y-6">
+      <div class="card-white rounded-2xl p-5 flex items-center justify-between gap-4">
+        <div>
+          <h2 class="font-display text-xl font-bold text-slate-900">Editorial Stories Harvested by GitHub Actions</h2>
+          <p class="text-xs text-slate-500">Review articles and publish them with 1-click to Supabase for the App &amp; Web reader.</p>
+        </div>
+        <button onclick="batchPublishAllNews()" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold shadow-sm transition">
+          ⚡ Publish All Stories to Supabase
+        </button>
+      </div>
+
+      <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- News populate here -->
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW 3: SETTINGS & SUPABASE SECRET KEY CONFIGURATION                      -->
+    <!-- ========================================================================= -->
+    <section id="view-settings" class="hidden space-y-6 max-w-3xl mx-auto">
+      <div class="card-white rounded-2xl p-6 space-y-6">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 flex items-center gap-2">
+            <span>🔑</span>
+            <span>Supabase Secret Key &amp; GitHub Storage Setup</span>
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Configure your Supabase Service Secret Key to bypass RLS policies and have full write/publish permissions.
+          </p>
+        </div>
+
+        <div class="space-y-4 text-xs">
+          <!-- Supabase URL -->
+          <div>
+            <label class="block font-bold text-slate-700 mb-1.5">Supabase Project URL</label>
+            <input type="text" id="cfg-sb-url" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-900 font-mono focus:outline-none focus:border-brand-500" placeholder="https://xyz.supabase.co"/>
+          </div>
+
+          <!-- Supabase Secret Key -->
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <label class="block font-bold text-slate-700">Supabase Secret / Service Role Key (or Anon Key)</label>
+              <span class="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">Full write permissions</span>
+            </div>
+            <input type="password" id="cfg-sb-key" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-900 font-mono focus:outline-none focus:border-brand-500" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."/>
+            <p class="text-[11px] text-slate-500 mt-1">Stored securely in your local browser storage. Never transmitted to third parties.</p>
+          </div>
+
+          <!-- GitHub Storage URL -->
+          <div>
+            <label class="block font-bold text-slate-700 mb-1.5">GitHub Raw Data Endpoint</label>
+            <input type="text" id="cfg-gh-url" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-900 font-mono focus:outline-none focus:border-brand-500" value="https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api.json"/>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+          <button onclick="testSupabaseConnection()" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 transition">
+            🔌 Test Connection
+          </button>
+          <button onclick="saveSettings()" class="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-xs font-bold text-white shadow-sm transition">
+            Save Configuration
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: DEDICATED STREAM SERVERS BUILDER & MATCH EDIT                      -->
+  <!-- ========================================================================= -->
+  <div id="modal-match-edit" class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl border border-slate-200 w-full max-w-2xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+      
+      <!-- Modal Header -->
+      <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <div>
+          <h3 class="font-display font-bold text-lg text-slate-900" id="m-edit-title">Match Curation &amp; Stream Servers</h3>
+          <p class="text-xs text-slate-500" id="m-edit-subtitle">Configure broadcast video servers (HLS, DASH, ClearKey DRM)</p>
+        </div>
+        <button onclick="closeModal('modal-match-edit')" class="w-8 h-8 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-500 flex items-center justify-center transition">✕</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-4 text-xs">
+        <input type="hidden" id="m-edit-id"/>
+        <input type="hidden" id="m-edit-fmid"/>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-slate-600 font-bold mb-1">Home Team</label>
+            <input type="text" id="m-edit-home" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900 font-semibold"/>
+          </div>
+          <div>
+            <label class="block text-slate-600 font-bold mb-1">Away Team</label>
+            <input type="text" id="m-edit-away" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900 font-semibold"/>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <label class="block text-slate-600 font-bold mb-1">Competition / League</label>
+            <input type="text" id="m-edit-league" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900"/>
+          </div>
+          <div>
+            <label class="block text-slate-600 font-bold mb-1">Kickoff (Local / UTC)</label>
+            <input type="datetime-local" id="m-edit-date" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900"/>
+          </div>
+          <div>
+            <label class="block text-slate-600 font-bold mb-1">Status</label>
+            <select id="m-edit-status" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900 font-bold">
+              <option value="scheduled">Scheduled</option>
+              <option value="live">LIVE</option>
+              <option value="finished">Finished</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <label class="block text-slate-600 font-bold mb-1">Home Score</label>
+            <input type="number" id="m-edit-hs" value="0" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900 text-center font-display font-bold text-base"/>
+          </div>
+          <div>
+            <label class="block text-slate-600 font-bold mb-1">Away Score</label>
+            <input type="number" id="m-edit-as" value="0" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900 text-center font-display font-bold text-base"/>
+          </div>
+          <div>
+            <label class="block text-slate-600 font-bold mb-1">Elapsed Time (e.g. 35')</label>
+            <input type="text" id="m-edit-te" placeholder="e.g. 45'" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-900 text-center font-bold"/>
+          </div>
+        </div>
+
+        <!-- DEDICATED STREAM SERVERS SECTION -->
+        <div class="pt-4 border-t border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Dedicated Video Broadcast Servers</h4>
+              <p class="text-slate-500 text-[11px]">Add HLS (.m3u8), DASH (.mpd) or ClearKey DRM streams</p>
+            </div>
+            <button onclick="addStreamServerRow()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition">
+              + Add Server
+            </button>
+          </div>
+
+          <div id="m-stream-servers-container" class="space-y-3">
+            <!-- Server rows populate here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t border-slate-200 bg-slate-50 flex items-center justify-between">
+        <button onclick="closeModal('modal-match-edit')" class="px-4 py-2 rounded-xl bg-white border border-slate-200 hover:bg-slate-100 text-xs font-bold text-slate-600 transition">
+          Cancel
+        </button>
+        <button onclick="saveCuratedMatch()" class="px-6 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-xs font-bold text-white shadow-sm transition">
+          Save to Supabase
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- ========================================================================= -->
+  <!-- APPLICATION CORE JAVASCRIPT & DRAG-AND-DROP LOGIC                         -->
+  <!-- ========================================================================= -->
+  <script>
+    // Configuration & State
+    const DEFAULT_SB_URL = 'https://udlncusvhmydivtjkjcy.supabase.co';
+    const DEFAULT_SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkbG5jdXN2aG15ZGl2dGpramN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM4MTE2MDgsImV4cCI6MjEwOTM4NzYwOH0.gsnxlDww-fUC4HG7R7VasXSaQvqkSsDhhmf16KUCLZY';
+    const DEFAULT_GH_URL = 'https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api.json';
+
+    let sbClient = null;
+    let ghData = null;
+    let sbMatches = [];
+    let sbMatchesMap = {};
+    let currentFeedTab = 'today';
+    let draggedFotmobId = null;
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      loadSavedSettings();
+      initSupabase();
+      await fetchGitHubStorage(false);
+      await loadSupabaseData();
+    });
+
+    function loadSavedSettings() {
+      document.getElementById('cfg-sb-url').value = localStorage.getItem('zs_sb_url') || DEFAULT_SB_URL;
+      document.getElementById('cfg-sb-key').value = localStorage.getItem('zs_sb_key') || DEFAULT_SB_KEY;
+      document.getElementById('cfg-gh-url').value = localStorage.getItem('zs_gh_url') || DEFAULT_GH_URL;
+    }
+
+    function initSupabase() {
+      const url = document.getElementById('cfg-sb-url').value.trim() || DEFAULT_SB_URL;
+      const key = document.getElementById('cfg-sb-key').value.trim() || DEFAULT_SB_KEY;
+
+      try {
+        sbClient = window.supabase.createClient(url, key, { auth: { persistSession: false } });
+        updateSupabasePill(true, 'Supabase Connected');
+      } catch (e) {
+        console.error('Supabase init error:', e);
+        updateSupabasePill(false, 'Init Error');
+      }
+    }
+
+    function updateSupabasePill(connected, text) {
+      const dot = document.getElementById('sb-status-dot');
+      const txt = document.getElementById('sb-status-text');
+      if (connected) {
+        dot.className = 'w-2 h-2 rounded-full bg-emerald-500';
+        txt.textContent = text || 'Supabase Active';
+        txt.className = 'text-emerald-700 font-mono font-bold';
+      } else {
+        dot.className = 'w-2 h-2 rounded-full bg-red-500';
+        txt.textContent = text || 'Disconnected';
+        txt.className = 'text-red-600 font-mono font-bold';
+      }
+    }
+
+    // ── Switch View Tabs ──
+    window.switchView = function(view) {
+      ['curation', 'news', 'settings'].forEach(v => {
+        document.getElementById(`view-${v}`).classList.add('hidden');
+        const nav = document.getElementById(`nav-${v}`);
+        if (nav) nav.className = 'nav-btn px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition';
+      });
+
+      document.getElementById(`view-${view}`).classList.remove('hidden');
+      const active = document.getElementById(`nav-${view}`);
+      if (active) active.className = 'nav-btn px-3.5 py-1.5 rounded-lg text-white bg-brand-600 shadow-sm transition font-bold';
+    };
+
+    // ── 1. Fetch GitHub Actions Storage (data/api.json) ──
+    window.fetchGitHubStorage = async function(showToastNotice = true) {
+      const ghUrl = document.getElementById('cfg-gh-url').value.trim() || DEFAULT_GH_URL;
+      const btn = document.getElementById('btn-sync-storage');
+      if (btn) btn.classList.add('opacity-70', 'pointer-events-none');
+
+      try {
+        let res;
+        try {
+          res = await fetch('../data/api.json');
+          if (!res.ok) throw new Error();
+        } catch(e) {
+          res = await fetch(ghUrl + '?t=' + Date.now());
+        }
+
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        ghData = await res.json();
+
+        // Update KPI counters
+        const total = (ghData.live?.length || 0) + (ghData.today?.length || 0) + (ghData.upcoming?.length || 0) + (ghData.results?.length || 0);
+        document.getElementById('kpi-gh-count').textContent = total;
+        document.getElementById('kpi-gh-updated').textContent = `Synced: ${new Date().toLocaleTimeString()}`;
+        document.getElementById('kpi-news-count').textContent = ghData.news?.length || 0;
+
+        document.getElementById('count-f-live').textContent = ghData.live?.length || 0;
+        document.getElementById('count-f-today').textContent = ghData.today?.length || 0;
+        document.getElementById('count-f-upcoming').textContent = ghData.upcoming?.length || 0;
+        document.getElementById('count-f-results').textContent = ghData.results?.length || 0;
+
+        populateLeagueFilter();
+        renderFeedColumn();
+        renderNewsGrid();
+
+        if (showToastNotice) showToast(`✅ Synced ${total} fixtures from GitHub Storage!`, 'success');
+      } catch (e) {
+        console.error('Failed to load GitHub storage:', e);
+        if (showToastNotice) showToast(`❌ Failed to sync GitHub feed: ${e.message}`, 'error');
+      } finally {
+        if (btn) btn.classList.remove('opacity-70', 'pointer-events-none');
+      }
+    };
+
+    // ── 2. Load Existing Supabase Matches ──
+    window.loadSupabaseData = async function() {
+      if (!sbClient) return;
+
+      try {
+        const { data: matches, error } = await sbClient
+          .from('zeta_matches')
+          .select('*')
+          .order('date', { ascending: true });
+
+        if (error) throw error;
+        sbMatches = matches || [];
+        sbMatchesMap = {};
+        
+        let streamsCount = 0;
+        sbMatches.forEach(m => {
+          if (m.fotmob_id) sbMatchesMap[String(m.fotmob_id)] = m;
+          if (m.stream_url && m.stream_url.length > 10) streamsCount++;
+        });
+
+        document.getElementById('kpi-sb-count').textContent = sbMatches.length;
+        document.getElementById('kpi-stream-count').textContent = streamsCount;
+
+        renderSupabaseColumn();
+        renderFeedColumn(); // Refresh badges on left column
+      } catch (e) {
+        console.error('Supabase load error:', e);
+        updateSupabasePill(false, 'Query Error');
+      }
+    };
+
+    function populateLeagueFilter() {
+      const select = document.getElementById('feed-league-filter');
+      const leagues = new Set();
+      const all = [...(ghData?.live || []), ...(ghData?.today || []), ...(ghData?.upcoming || []), ...(ghData?.results || [])];
+      all.forEach(m => { if (m.competitionName) leagues.add(m.competitionName); });
+
+      select.innerHTML = '<option value="all">All Competitions</option>';
+      Array.from(leagues).sort().forEach(l => {
+        const opt = document.createElement('option');
+        opt.value = l;
+        opt.textContent = l;
+        select.appendChild(opt);
+      });
+    }
+
+    window.setFeedTab = function(tab) {
+      currentFeedTab = tab;
+      ['live', 'today', 'upcoming', 'results'].forEach(t => {
+        const btn = document.getElementById(`tab-f-${t}`);
+        if (btn) btn.className = 'feed-tab-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5';
+      });
+
+      const active = document.getElementById(`tab-f-${tab}`);
+      if (active) active.className = 'feed-tab-btn px-3 py-1.5 rounded-lg text-white bg-brand-600 shadow-sm transition flex items-center gap-1.5 font-bold';
+
+      renderFeedColumn();
+    };
+
+    // ── 3. Render Left Column (GitHub Harvested Matches) ──
+    window.renderFeedColumn = function() {
+      const container = document.getElementById('feed-cards-container');
+      if (!ghData) return;
+
+      let list = ghData[currentFeedTab] || [];
+      const search = (document.getElementById('feed-search')?.value || '').toLowerCase().trim();
+      const leagueFlt = document.getElementById('feed-league-filter')?.value || 'all';
+
+      if (leagueFlt !== 'all') list = list.filter(m => m.competitionName === leagueFlt);
+      if (search) {
+        list = list.filter(m => 
+          (m.homeTeam?.name || '').toLowerCase().includes(search) ||
+          (m.awayTeam?.name || '').toLowerCase().includes(search) ||
+          (m.competitionName || '').toLowerCase().includes(search)
+        );
+      }
+
+      document.getElementById('feed-items-badge').textContent = `${list.length} matches`;
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="py-12 text-center text-slate-400 card-white rounded-2xl p-4">
+            <p class="font-bold text-sm text-slate-700">No matches found.</p>
+            <p class="text-xs text-slate-400 mt-1">Try another tab or search query.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map(m => {
+        const fmId = String(m.id);
+        const inSb = sbMatchesMap[fmId];
+        const isLive = m.status === 'LIVE' || (m.minute != null);
+        const home = m.homeTeam || {};
+        const away = m.awayTeam || {};
+        const kickoff = m.utcDate ? new Date(m.utcDate).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'TBD';
+
+        return `
+          <div draggable="true" ondragstart="handleDragStart(event, '${fmId}')" ondragend="handleDragEnd(event)" class="draggable-card card-white card-white-hover rounded-2xl p-4 border ${inSb ? 'border-emerald-300 bg-emerald-50/20' : 'border-slate-200'} relative">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <div class="flex items-center gap-1.5 text-slate-400 text-xs font-bold truncate">
+                <span class="cursor-grab text-slate-300 hover:text-slate-500 font-mono text-sm" title="Drag to Supabase column">⠿</span>
+                <span class="truncate">${m.competitionName || 'Football'}</span>
+              </div>
+              ${inSb 
+                ? `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-700 border border-emerald-300">✓ In Supabase</span>` 
+                : `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600">Drag to Publish ➔</span>`}
+            </div>
+
+            <!-- Teams & Scores -->
+            <div class="space-y-1.5 py-1">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2 truncate">
+                  <img src="${home.logoUrl || ''}" class="w-5 h-5 object-contain rounded-full bg-slate-100 p-0.5" onerror="this.src='https://images.fotmob.com/image_resources/logo/teamlogo/8586_small.png'"/>
+                  <span class="font-bold text-xs text-slate-900 truncate">${home.name || 'Home'}</span>
+                </div>
+                <span class="font-display font-bold text-sm ${isLive ? 'text-red-500' : 'text-slate-800'}">${home.score != null ? home.score : '-'}</span>
+              </div>
+
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2 truncate">
+                  <img src="${away.logoUrl || ''}" class="w-5 h-5 object-contain rounded-full bg-slate-100 p-0.5" onerror="this.src='https://images.fotmob.com/image_resources/logo/teamlogo/10252_small.png'"/>
+                  <span class="font-bold text-xs text-slate-900 truncate">${away.name || 'Away'}</span>
+                </div>
+                <span class="font-display font-bold text-sm ${isLive ? 'text-red-500' : 'text-slate-800'}">${away.score != null ? away.score : '-'}</span>
+              </div>
+            </div>
+
+            <!-- Footer: Kickoff & Actions -->
+            <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px]">
+              <span class="text-slate-400 font-medium">🕒 ${kickoff}</span>
+              <div class="flex items-center gap-2">
+                <button onclick="importMatchToSupabase('${fmId}')" class="px-2.5 py-1 rounded-lg ${inSb ? 'bg-slate-100 hover:bg-slate-200 text-slate-600' : 'bg-emerald-600 hover:bg-emerald-500 text-white'} font-bold transition">
+                  ${inSb ? 'Update' : '+ Publish'}
+                </button>
+                <button onclick="openStreamServerModal('${fmId}')" class="px-2 py-1 rounded-lg bg-purple-50 hover:bg-purple-100 text-purple-700 font-bold border border-purple-200 transition" title="Add Video Stream Servers">
+                  📺 Stream
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    };
+
+    // ── 4. Render Right Column (Published Supabase Matches) ──
+    window.renderSupabaseColumn = function() {
+      const container = document.getElementById('curated-cards-container');
+      const placeholder = document.getElementById('drop-placeholder');
+
+      if (sbMatches.length === 0) {
+        placeholder.classList.remove('hidden');
+        container.innerHTML = '';
+        return;
+      }
+
+      placeholder.classList.add('hidden');
+      container.innerHTML = sbMatches.map((m, idx) => {
+        const isLive = m.status === 'live';
+        const kickoff = m.date ? new Date(m.date).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '—';
+        
+        let serverCount = 0;
+        try {
+          const s = JSON.parse(m.stream_url);
+          if (Array.isArray(s)) serverCount = s.length;
+          else if (s && s.url) serverCount = 1;
+        } catch(e) {
+          if (m.stream_url && m.stream_url.startsWith('http')) serverCount = 1;
+        }
+
+        return `
+          <div class="card-white rounded-2xl p-4 border border-slate-200 hover:border-slate-300 transition relative">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-bold text-slate-500">${m.league_name || 'League'}</span>
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${isLive ? 'bg-red-100 text-red-700 border border-red-200 animate-pulse' : 'bg-slate-100 text-slate-600'} uppercase">
+                  ${m.status || 'scheduled'} ${m.time_elapsed ? `(${m.time_elapsed})` : ''}
+                </span>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${serverCount > 0 ? 'bg-purple-100 text-purple-700 border border-purple-200' : 'bg-slate-100 text-slate-400'}">
+                  ${serverCount > 0 ? `📺 ${serverCount} Server(s)` : 'No Stream'}
+                </span>
+              </div>
+            </div>
+
+            <!-- Teams and Score -->
+            <div class="flex items-center justify-between gap-3 py-1">
+              <div class="font-bold text-sm text-slate-900">${m.home_team || 'Home'} vs ${m.away_team || 'Away'}</div>
+              <div class="font-display font-extrabold text-lg text-slate-900 bg-slate-50 px-2.5 py-0.5 rounded-lg border border-slate-200">
+                ${m.home_score || 0} - ${m.away_score || 0}
+              </div>
+            </div>
+
+            <!-- Footer & Actions -->
+            <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span class="text-slate-400 text-[11px] font-mono">🕒 ${kickoff}</span>
+              <div class="flex items-center gap-1.5">
+                <button onclick="openStreamServerModal('${m.fotmob_id || ''}', '${m.id}')" class="px-3 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold transition">
+                  Edit &amp; Stream
+                </button>
+                <button onclick="deleteMatch('${m.id}')" class="px-2.5 py-1 rounded-lg bg-red-50 hover:bg-red-100 text-red-600 font-bold border border-red-100 transition">
+                  Del
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    };
+
+    // ── 5. HTML5 Drag and Drop Event Handlers ──
+    window.handleDragStart = function(e, fotmobId) {
+      draggedFotmobId = fotmobId;
+      e.dataTransfer.effectAllowed = 'copyMove';
+      e.dataTransfer.setData('text/plain', fotmobId);
+      e.target.classList.add('dragging');
+    };
+
+    window.handleDragEnd = function(e) {
+      e.target.classList.remove('dragging');
+      document.getElementById('supabase-drop-zone')?.classList.remove('drag-over');
+    };
+
+    window.handleDragOver = function(e) {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'copy';
+      document.getElementById('supabase-drop-zone')?.classList.add('drag-over');
+    };
+
+    window.handleDragLeave = function(e) {
+      document.getElementById('supabase-drop-zone')?.classList.remove('drag-over');
+    };
+
+    window.handleDrop = async function(e) {
+      e.preventDefault();
+      document.getElementById('supabase-drop-zone')?.classList.remove('drag-over');
+      
+      const fotmobId = e.dataTransfer.getData('text/plain') || draggedFotmobId;
+      if (!fotmobId) return;
+
+      await importMatchToSupabase(fotmobId);
+    };
+
+    // ── 6. Import Logic to Supabase ──
+    window.importMatchToSupabase = async function(fotmobId) {
+      if (!sbClient) return alert('Supabase client is not connected.');
+
+      const all = [...(ghData?.live || []), ...(ghData?.today || []), ...(ghData?.upcoming || []), ...(ghData?.results || [])];
+      const m = all.find(x => String(x.id) === String(fotmobId));
+      if (!m) return alert('Match data not found in feed.');
+
+      showToast(`Saving ${m.homeTeam?.name} vs ${m.awayTeam?.name}...`, 'info');
+
+      const existing = sbMatchesMap[String(fotmobId)];
+      const payload = {
+        home_team: m.homeTeam?.name || 'Home Team',
+        away_team: m.awayTeam?.name || 'Away Team',
+        home_logo: m.homeTeam?.logoUrl || null,
+        away_logo: m.awayTeam?.logoUrl || null,
+        league_name: m.competitionName || 'Football League',
+        date: m.utcDate || new Date().toISOString(),
+        status: (m.status || 'scheduled').toLowerCase(),
+        home_score: m.homeTeam?.score != null ? m.homeTeam.score : (m.score?.home ?? 0),
+        away_score: m.awayTeam?.score != null ? m.awayTeam.score : (m.score?.away ?? 0),
+        time_elapsed: m.minute || '',
+        fotmob_id: String(fotmobId),
+        round: m.round ? String(m.round) : null,
+        lineups: ghData?.lineups?.[String(fotmobId)] || {},
+        match_stats: ghData?.statistics?.[String(fotmobId)] || {},
+        match_events: ghData?.events?.[String(fotmobId)] || []
+      };
+
+      try {
+        let err;
+        if (existing) {
+          const { error } = await sbClient.from('zeta_matches').update(payload).eq('id', existing.id);
+          err = error;
+        } else {
+          // Default test server
+          payload.stream_url = JSON.stringify([{ serverName: 'Server 1 (HD 1080p)', url: 'https://test-stream-placeholder.m3u8', type: 'hls' }]);
+          const { error } = await sbClient.from('zeta_matches').insert([payload]);
+          err = error;
+        }
+
+        if (err) throw err;
+        showToast(`🎉 ${m.homeTeam?.name} vs ${m.awayTeam?.name} is now live in Supabase!`, 'success');
+        await loadSupabaseData();
+      } catch (e) {
+        showToast(`❌ Import error: ${e.message}`, 'error');
+      }
+    };
+
+    window.batchImportTodayMatches = async function() {
+      const todayList = ghData?.today || [];
+      if (todayList.length === 0) return alert('No matches in today\'s feed.');
+
+      if (!confirm(`Import all ${todayList.length} of today's fixtures to Supabase now?`)) return;
+
+      let count = 0;
+      for (const m of todayList) {
+        await importMatchToSupabase(m.id);
+        count++;
+      }
+      showToast(`⚡ Batch completed: ${count} matches published to Supabase!`, 'success');
+    };
+
+    
+    // ── SYNC ALL ACTIVE LIVE SCORES TO SUPABASE ──
+    window.syncLiveScoresToSupabase = async function() {
+      if (!sbClient) return alert('Supabase client not connected.');
+      if (!ghData) await fetchGitHubStorage(false);
+
+      const activeSb = sbMatches.filter(m => m.status === 'live' || m.status === 'scheduled');
+      if (activeSb.length === 0) {
+        return showToast('No active or scheduled matches found in Supabase.', 'info');
+      }
+
+      showToast('⚡ Syncing live scores with GitHub Storage feed...', 'info');
+
+      // Map of all matches from GitHub feed
+      const allGh = [...(ghData?.live || []), ...(ghData?.today || []), ...(ghData?.upcoming || []), ...(ghData?.results || [])];
+      const ghMap = {};
+      allGh.forEach(m => { if (m.id) ghMap[String(m.id)] = m; });
+
+      let updatedCount = 0;
+      for (const sm of activeSb) {
+        if (!sm.fotmob_id) continue;
+        const gm = ghMap[String(sm.fotmob_id)];
+        if (!gm) continue;
+
+        const newStatus = (gm.status || 'scheduled').toLowerCase();
+        const hs = gm.homeTeam?.score != null ? gm.homeTeam.score : (gm.score?.home ?? sm.home_score ?? 0);
+        const as = gm.awayTeam?.score != null ? gm.awayTeam.score : (gm.score?.away ?? sm.away_score ?? 0);
+        const elapsed = gm.minute || sm.time_elapsed || '';
+
+        // Check if changed
+        if (newStatus !== sm.status || hs !== sm.home_score || as !== sm.away_score || elapsed !== sm.time_elapsed) {
+          const { error } = await sbClient.from('zeta_matches').update({
+            status: newStatus,
+            home_score: hs,
+            away_score: as,
+            time_elapsed: elapsed
+          }).eq('id', sm.id);
+
+          if (!error) updatedCount++;
+        }
+      }
+
+      await loadSupabaseData();
+      showToast(`✅ Live scores updated for ${updatedCount} match(es)!`, 'success');
+    };
+  
+    // ── 7. Stream Server Builder Modal ──
+    window.openStreamServerModal = function(fotmobId, supabaseId) {
+      let m = null;
+      if (supabaseId) {
+        m = sbMatches.find(x => x.id === supabaseId);
+      } else if (fotmobId) {
+        m = sbMatchesMap[String(fotmobId)];
+        if (!m && ghData) {
+          const all = [...(ghData.live || []), ...(ghData.today || []), ...(ghData.upcoming || []), ...(ghData.results || [])];
+          const raw = all.find(x => String(x.id) === String(fotmobId));
+          if (raw) {
+            m = {
+              home_team: raw.homeTeam?.name,
+              away_team: raw.awayTeam?.name,
+              league_name: raw.competitionName,
+              date: raw.utcDate,
+              status: (raw.status || 'scheduled').toLowerCase(),
+              fotmob_id: String(fotmobId)
+            };
+          }
+        }
+      }
+
+      if (!m) return alert('Match data not found.');
+
+      document.getElementById('m-edit-id').value = m.id || '';
+      document.getElementById('m-edit-fmid').value = m.fotmob_id || fotmobId || '';
+      document.getElementById('m-edit-home').value = m.home_team || '';
+      document.getElementById('m-edit-away').value = m.away_team || '';
+      document.getElementById('m-edit-league').value = m.league_name || '';
+      document.getElementById('m-edit-date').value = m.date ? m.date.substring(0, 16) : '';
+      document.getElementById('m-edit-status').value = m.status || 'scheduled';
+      document.getElementById('m-edit-hs').value = m.home_score || 0;
+      document.getElementById('m-edit-as').value = m.away_score || 0;
+      document.getElementById('m-edit-te').value = m.time_elapsed || '';
+
+      const container = document.getElementById('m-stream-servers-container');
+      container.innerHTML = '';
+
+      let servers = [];
+      if (m.stream_url) {
+        try {
+          const parsed = JSON.parse(m.stream_url);
+          if (Array.isArray(parsed)) servers = parsed;
+          else if (parsed && parsed.url) servers = [parsed];
+        } catch(e) {
+          if (m.stream_url.startsWith('http')) servers = [{ serverName: 'Server 1', url: m.stream_url, type: 'hls' }];
+        }
+      }
+
+      if (servers.length === 0) {
+        addStreamServerRow({ serverName: 'Server 1 (HD 1080p)', type: 'm3u8' });
+      } else {
+        servers.forEach(s => addStreamServerRow(s));
+      }
+
+      openModal('modal-match-edit');
+    };
+
+    window.addStreamServerRow = function(s = {}) {
+      const container = document.getElementById('m-stream-servers-container');
+      const row = document.createElement('div');
+      row.className = 'p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-2 relative';
+      row.innerHTML = `
+        <button type="button" onclick="this.closest('div.p-3\\.5').remove()" class="absolute top-2.5 right-2.5 text-slate-400 hover:text-red-500 font-bold px-1.5">✕</button>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mr-6">
+          <input type="text" class="srv-name bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-900 font-bold" placeholder="Server Name (e.g. Server 1 HD 1080p)" value="${s.serverName || ''}"/>
+          <input type="text" class="srv-url bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-900 font-mono" placeholder="Stream URL (.m3u8, .mpd, embed)" value="${s.url || ''}"/>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <select class="srv-type bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 font-medium">
+            <option value="m3u8" ${(s.type||'m3u8')==='m3u8'?'selected':''}>HLS Adaptive (.m3u8)</option>
+            <option value="mpd" ${(s.type||'')==='mpd'?'selected':''}>DASH Video (.mpd)</option>
+            <option value="iframe" ${(s.type||'')==='iframe'?'selected':''}>Web Iframe Embed</option>
+            <option value="mp4" ${(s.type||'')==='mp4'?'selected':''}>Direct MP4 Video</option>
+          </select>
+          <select class="srv-drm bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 font-medium" onchange="this.closest('div.p-3\\.5').querySelector('.drm-keys').style.display = this.value !== 'none' ? 'grid' : 'none'">
+            <option value="none" ${(s.drmType||'none')==='none'?'selected':''}>No DRM Protection</option>
+            <option value="clearkey" ${(s.drmType||'')==='clearkey'?'selected':''}>ClearKey DRM</option>
+            <option value="widevine" ${(s.drmType||'')==='widevine'?'selected':''}>Widevine DRM</option>
+          </select>
+        </div>
+        <div class="drm-keys grid grid-cols-2 gap-2" style="display: ${(s.drmType||'none') !== 'none' ? 'grid' : 'none'}">
+          <input type="text" class="srv-keyid bg-white border border-purple-300 rounded-lg px-2.5 py-1.5 text-xs text-purple-700 font-mono" placeholder="Key ID (HEX)" value="${s.keyId || ''}"/>
+          <input type="text" class="srv-key bg-white border border-purple-300 rounded-lg px-2.5 py-1.5 text-xs text-purple-700 font-mono" placeholder="Key (HEX)" value="${s.key || ''}"/>
+        </div>
+      `;
+      container.appendChild(row);
+    };
+
+    window.saveCuratedMatch = async function() {
+      if (!sbClient) return alert('Supabase not connected');
+
+      const id = document.getElementById('m-edit-id').value;
+      const fotmobId = document.getElementById('m-edit-fmid').value;
+
+      const rows = document.querySelectorAll('#m-stream-servers-container > div');
+      const servers = [];
+      rows.forEach(r => {
+        const name = r.querySelector('.srv-name')?.value.trim() || 'Server 1';
+        const url = r.querySelector('.srv-url')?.value.trim();
+        const type = r.querySelector('.srv-type')?.value || 'm3u8';
+        const drmType = r.querySelector('.srv-drm')?.value || 'none';
+        const keyId = r.querySelector('.srv-keyid')?.value.trim() || '';
+        const key = r.querySelector('.srv-key')?.value.trim() || '';
+        if (url) servers.push({ serverName: name, url, type, drmType, keyId, key });
+      });
+
+      const payload = {
+        home_team: document.getElementById('m-edit-home').value.trim(),
+        away_team: document.getElementById('m-edit-away').value.trim(),
+        league_name: document.getElementById('m-edit-league').value.trim(),
+        date: document.getElementById('m-edit-date').value || new Date().toISOString(),
+        status: document.getElementById('m-edit-status').value,
+        home_score: parseInt(document.getElementById('m-edit-hs').value) || 0,
+        away_score: parseInt(document.getElementById('m-edit-as').value) || 0,
+        time_elapsed: document.getElementById('m-edit-te').value.trim(),
+        fotmob_id: fotmobId || null,
+        stream_url: servers.length > 0 ? JSON.stringify(servers) : null
+      };
+
+      try {
+        let err;
+        if (id) {
+          const { error } = await sbClient.from('zeta_matches').update(payload).eq('id', id);
+          err = error;
+        } else {
+          const { error } = await sbClient.from('zeta_matches').insert([payload]);
+          err = error;
+        }
+        if (err) throw err;
+
+        showToast('✅ Match saved to Supabase successfully!', 'success');
+        closeModal('modal-match-edit');
+        await loadSupabaseData();
+      } catch (e) {
+        showToast('❌ Error saving match: ' + e.message, 'error');
+      }
+    };
+
+    window.openManualMatchModal = function() {
+      openStreamServerModal(null, null);
+    };
+
+    window.deleteMatch = async function(id) {
+      if (!confirm('Delete this match from Supabase?')) return;
+      try {
+        const { error } = await sbClient.from('zeta_matches').delete().eq('id', id);
+        if (error) throw error;
+        showToast('Match removed from Supabase', 'info');
+        await loadSupabaseData();
+      } catch(e) {
+        showToast('Delete error: ' + e.message, 'error');
+      }
+    };
+
+    // ── 8. News Grid & Publishing ──
+    function renderNewsGrid() {
+      const container = document.getElementById('news-grid');
+      const news = ghData?.news || [];
+      if (news.length === 0) {
+        container.innerHTML = '<div class="col-span-full py-12 text-center text-slate-400">No news articles in feed.</div>';
+        return;
+      }
+
+      container.innerHTML = news.map(n => {
+        const full = ghData?.articles?.[n.id];
+        return `
+          <div class="card-white rounded-2xl overflow-hidden flex flex-col justify-between hover:shadow-md transition">
+            <div>
+              <div class="h-44 bg-slate-100 overflow-hidden relative">
+                <img src="${n.imageUrl}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=600&auto=format&fit=crop'"/>
+                <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-slate-800 shadow-sm">${n.source || 'Editorial'}</span>
+              </div>
+              <div class="p-4 space-y-2">
+                <h4 class="font-bold text-slate-900 text-sm line-clamp-2">${n.title}</h4>
+                <p class="text-xs text-slate-500 line-clamp-3">${full?.paragraphs?.[0] || n.description || ''}</p>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <button onclick="publishNewsStory('${n.id}')" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-sm transition">
+                ⚡ Publish to Supabase News
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    window.publishNewsStory = async function(storyId) {
+      if (!sbClient) return alert('Supabase not connected');
+      const story = ghData?.news?.find(x => x.id === storyId);
+      if (!story) return;
+
+      const full = ghData?.articles?.[storyId];
+      const payload = {
+        title: story.title,
+        summary: full?.paragraphs?.slice(0, 2).join(' ') || story.description || '',
+        image_url: story.imageUrl,
+        source: story.source || 'Editorial',
+        published: true,
+        created_at: story.publishedAt || new Date().toISOString()
+      };
+
+      try {
+        const { error } = await sbClient.from('zeta_news').insert([payload]);
+        if (error) throw error;
+        showToast('✅ Article published to Supabase news feed!', 'success');
+      } catch(e) {
+        showToast('❌ Error publishing news: ' + e.message, 'error');
+      }
+    };
+
+    window.batchPublishAllNews = async function() {
+      if (!sbClient) return alert('Supabase not connected');
+      const news = ghData?.news || [];
+      if (!confirm(`Publish all ${news.length} editorial stories to Supabase now?`)) return;
+
+      let count = 0;
+      for (const s of news) {
+        await publishNewsStory(s.id);
+        count++;
+      }
+      showToast(`✅ Published ${count} stories to Supabase!`, 'success');
+    };
+
+    // ── 9. Settings & Modal Helpers ──
+    window.saveSettings = function() {
+      const url = document.getElementById('cfg-sb-url').value.trim();
+      const key = document.getElementById('cfg-sb-key').value.trim();
+      const gh = document.getElementById('cfg-gh-url').value.trim();
+
+      localStorage.setItem('zs_sb_url', url);
+      localStorage.setItem('zs_sb_key', key);
+      localStorage.setItem('zs_gh_url', gh);
+
+      initSupabase();
+      showToast('Settings saved & Supabase reconnected!', 'success');
+    };
+
+    window.testSupabaseConnection = async function() {
+      initSupabase();
+      try {
+        const { data, error } = await sbClient.from('zeta_matches').select('id', { count: 'exact' });
+        if (error) throw error;
+        showToast(`✅ Connected! Found ${data.length} matches in Supabase.`, 'success');
+      } catch (e) {
+        showToast(`❌ Connection failed: ${e.message}`, 'error');
+      }
+    };
+
+    window.openModal = function(id) {
+      const el = document.getElementById(id);
+      if (el) { el.classList.remove('hidden'); el.classList.add('flex'); }
+    };
+
+    window.closeModal = function(id) {
+      const el = document.getElementById(id);
+      if (el) { el.classList.add('hidden'); el.classList.remove('flex'); }
+    };
+
+    function showToast(msg, type = 'info') {
+      const c = document.getElementById('toast-container');
+      const t = document.createElement('div');
+      const color = type === 'success' ? 'bg-emerald-600' : (type === 'error' ? 'bg-red-600' : 'bg-slate-900');
+      t.className = `${color} text-white px-4 py-2.5 rounded-xl shadow-lg text-xs font-bold transition-all duration-300 transform translate-y-2 opacity-0 pointer-events-auto`;
+      t.textContent = msg;
+      c.appendChild(t);
+
+      requestAnimationFrame(() => { t.classList.remove('translate-y-2', 'opacity-0'); });
+      setTimeout(() => {
+        t.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => t.remove(), 300);
+      }, 3500);
+    }
+  </script>
+
+</body>
+</html>
