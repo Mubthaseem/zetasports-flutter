@@ -8,7 +8,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap');
 
 :root {
+  /* ==========================================================================
+     CORE DARK THEME PALETTE (Primary System from DESIGN_SYSTEM.md)
+     ========================================================================== */
+  /* Primary Canvas Background: Deep Space Navy/Black */
+  --zeta-dark-bg: #0a0e17;
+  --zeta-dark-bg-rgb: 10, 14, 23;
+
+  /* Card Surface: Rich Dark Slate */
+  --zeta-dark-card: #111827;
+  --zeta-dark-card-rgb: 17, 24, 39;
+
+  /* Elevated Surface: Raised Badges, Toolbars, Menus */
+  --zeta-dark-surface-raised: #1e293b;
+  --zeta-dark-surface-raised-rgb: 30, 41, 59;
+
+  /* Borders & Dividers: Subtle Slate Boundaries */
+  --zeta-dark-border: #1f2937;
+  --zeta-dark-border-subtle: #374151;
+
+  /* Primary Accent: Pitch Emerald Green (Live Status, Highlights) */
+  --zeta-accent: #10b981;
+  --zeta-accent-rgb: 16, 185, 129;
+  --zeta-accent-hover: #059669;
+  --zeta-accent-glow: rgba(16, 185, 129, 0.35);
+
+  /* Action / CTA Blue: Primary Interactive Controls & Stream Triggers */
+  --zeta-action-blue: #2563eb;
+  --zeta-action-blue-hover: #1d4ed8;
+  --zeta-action-blue-glow: rgba(37, 99, 235, 0.40);
+
+  /* High-Contrast Typography */
+  --zeta-dark-text: #f9fafb;        /* Crisp White: Headings, Scores, Team Names */
+  --zeta-dark-muted: #9ca3af;       /* Medium Gray: Kickoff Times, Subtitles, League Names */
+  --zeta-dark-subtle: #6b7280;      /* Dim Gray: Meta tags, disabled states, timestamps */
+
+  /* In-Play & Match Status Colors */
+  --zeta-live-green: #10b981;
+  --zeta-live-green-bg: rgba(16, 185, 129, 0.12);
+  --zeta-live-green-pulse: #34d399;
+
+  --zeta-danger: #ef4444;           /* Red Cards, Live alerts, Errors */
+  --zeta-danger-bg: rgba(239, 68, 68, 0.12);
+
+  --zeta-warning: #f59e0b;          /* Yellow Cards, Half-Time, Pending */
+  --zeta-warning-bg: rgba(245, 158, 11, 0.12);
+
+  /* Tactical Pitch Turf Gradients */
+  --zeta-pitch-turf-1: #15803d;
+  --zeta-pitch-turf-2: #166534;
+  --zeta-pitch-line: rgba(255, 255, 255, 0.45);
+
+  /* ==========================================================================
+     LIGHT THEME COMPLEMENTARY TOKENS (Colorify Compatibility)
+     ========================================================================== */
+  --zeta-light-bg: #f8fafc;
+  --zeta-light-card: #ffffff;
+  --zeta-light-border: #e2e8f0;
+  --zeta-light-border-subtle: #f1f5f9;
+  --zeta-light-text: #0f172a;
+  --zeta-light-muted: #475569;
+  --zeta-light-subtle: #94a3b8;
+  --zeta-light-primary: #0062b2;
+  --zeta-light-primary-hover: #004f93;
+
+  /* Legacy & Semantic Theme Aliases */
   --zeta-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --zeta-font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --zeta-font-display: 'Oswald', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --zeta-font-mono: 'JetBrains Mono', 'Roboto Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
   --zeta-primary: #0062b2;
   --zeta-primary-hover: #004f93;
   --zeta-bg-light: #f8fafc;
@@ -16,10 +85,85 @@
   --zeta-text-main: #0f172a;
   --zeta-text-muted: #64748b;
   --zeta-border: #e2e8f0;
-  --zeta-dark-bg: #0b0f19;
-  --zeta-dark-card: #131b2e;
-  --zeta-dark-border: #1e293b;
-  --zeta-dark-text: #f1f5f9;
+  --zeta-bg: #f8fafc;
+  --zeta-card: #ffffff;
+  --zeta-blue: #2563eb;
+  --zeta-blue-hover: #1d4ed8;
+  --zeta-green: #10b981;
+  --zeta-pitch-turf: #15803d;
+  --zeta-pitch-turf-dark: #166534;
+
+  /* Font Weights */
+  --zeta-weight-regular: 400;
+  --zeta-weight-medium: 500;
+  --zeta-weight-semibold: 600;
+  --zeta-weight-bold: 700;
+  --zeta-weight-extrabold: 800;
+
+  /* Fluid Clamp Typography Equations */
+  /* Display XL: Big Scoreboard Counter (30px on 360px mobile -> 52px on 1440px desktop) */
+  --zeta-text-display-xl: clamp(1.875rem, 1.25rem + 2.5vw, 3.25rem);
+  --zeta-leading-display-xl: 1.1;
+
+  /* Heading 1: Match Post Title & Section Heroes (22px -> 36px) */
+  --zeta-text-h1: clamp(1.375rem, 1.05rem + 1.35vw, 2.25rem);
+  --zeta-leading-h1: 1.2;
+
+  /* Heading 2: Tab Titles, League Group Titles (18px -> 24px) */
+  --zeta-text-h2: clamp(1.125rem, 0.95rem + 0.75vw, 1.5rem);
+  --zeta-leading-h2: 1.3;
+
+  /* Heading 3: Team Names in Fixture Cards, Server Titles (14px -> 17px) */
+  --zeta-text-h3: clamp(0.875rem, 0.8rem + 0.35vw, 1.0625rem);
+  --zeta-leading-h3: 1.35;
+
+  /* Body Large: Action CTA Buttons, Tab Labels (15px -> 16px) */
+  --zeta-text-body-lg: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+  --zeta-leading-body-lg: 1.5;
+
+  /* Body Base: General Content, Descriptions (14px) */
+  --zeta-text-body: 0.875rem;
+  --zeta-leading-body: 1.5;
+
+  /* Body Small: Metadata, Kickoff Timestamps, Lineup Positions (12px) */
+  --zeta-text-body-sm: 0.75rem;
+  --zeta-leading-body-sm: 1.4;
+
+  /* Micro: Badges, Status Dots, Subscripts, Footnotes (11px) */
+  --zeta-text-micro: 0.6875rem;
+  --zeta-leading-micro: 1.25;
+
+  /* Spatial Scale (4px Geometric Scale) */
+  --zeta-space-1: 4px;
+  --zeta-space-2: 8px;
+  --zeta-space-3: 12px;
+  --zeta-space-4: 16px;
+  --zeta-space-6: 24px;
+  --zeta-space-8: 32px;
+  --zeta-space-12: 48px;
+  --zeta-space-16: 64px;
+
+  /* Corner Radii Scale */
+  --zeta-radius-xs: 4px;
+  --zeta-radius-sm: 6px;
+  --zeta-radius-md: 10px;
+  --zeta-radius-lg: 14px;
+  --zeta-radius-xl: 20px;
+  --zeta-radius-full: 9999px;
+
+  /* Elevation & Shadow Depth Scale */
+  --zeta-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.40);
+  --zeta-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.50), 0 2px 4px -2px rgba(0, 0, 0, 0.35);
+  --zeta-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.60), 0 4px 6px -4px rgba(0, 0, 0, 0.40);
+  --zeta-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.70), 0 8px 10px -6px rgba(0, 0, 0, 0.50);
+
+  /* Atmospheric Glows */
+  --zeta-glow-live: 0 0 16px rgba(16, 185, 129, 0.35);
+  --zeta-glow-action: 0 0 16px rgba(37, 99, 235, 0.40);
+  --zeta-glow-danger: 0 0 16px rgba(239, 68, 68, 0.35);
+
+  /* Touch Target Standard (WCAG 2.1 AAA) */
+  --zeta-touch-min: 44px;
 }
 
 body, button, input, select, textarea {
@@ -30,7 +174,7 @@ body, button, input, select, textarea {
 /* ==========================================================================
    SECTION 1: COLORIFY CRISP WHITE MODERN SYSTEM & AD PLACEMENTS
    ========================================================================== */
- ==========================================================================
+/*/*/*/* ==========================================================================
    ZetaSports Unified Theme: Crisp White Modern System (Blogger 2 & Blogger 3)
    ========================================================================== */
 :root {
@@ -1045,12 +1189,9 @@ body {
 #featured, .featured, .featured-post-wrap, .hero-post { display: none !important; }
 #content-wrapper { clear: both !important; }
 @keyframes zetaPulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.15); } }
-  /* ── 
-
 /* ==========================================================================
    SECTION 2: FIXTURE LIST, MATCH CARDS & DATE SELECTOR
    ========================================================================== */
-  }
 
   .STING-web-Menu > li > a:hover,
   .STING-web-Menu > li.active > a {
@@ -1331,12 +1472,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
 
 /* ==========================================================================
    SECTION 3: DEDICATED MATCH PAGE, SCOREBOARD & 8 TABS (10 FEATURES)
    ========================================================================== */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  }
 
   /* ── DEDICATED MATCH PAGE (DOMAIN.COM/TEAM1-VS-TEAM2-ID) ── */
   #matchView {
@@ -2597,6 +2738,14 @@ body.Night .commentary-min {
 
   /* AdSense Zero-CLS Reserved Isolation */
   .STING-web-Ads, .links-ad-container {
+    contain: layout !important;
+    min-height: 90px !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 
 /* Universal safe layout protections */
 #matchView, #linksView, #streamView {
@@ -2607,4 +2756,216 @@ body.Night .commentary-min {
 
 .match-scoreboard-grid, .links-page-box, .stream-player-container {
   overflow-x: hidden;
+}
+
+
+/* ==========================================================================
+   SECTION 5: ZETASPORTS MASTER DESIGN SYSTEM & COLLISION REMEDIATION (v3.6.0)
+   Enforces: Zero Horizontal Overflow, 104% Collision Fix, 44px Touch Targets,
+   and Non-Transparent Scoreboard Hero on Match Details & Permalinks
+   ========================================================================== */
+
+/* Universal Box-Sizing & Viewport Containment */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Fluid Global Centering Containers */
+.zeta-container,
+.STING-web-Container-Matches,
+.STING-web-Max-Size,
+.zeta-match-details-container,
+#matchView, #linksView, #streamView, #homeView {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(12px, 3vw, 24px) !important;
+  padding-right: clamp(12px, 3vw, 24px) !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* 104% Mobile Card Width Collision Resolution */
+.STING-web-Match-Content,
+.zeta-match-card-row,
+.STING-web-Match > a {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  gap: var(--zeta-space-2, 8px) !important;
+  box-sizing: border-box !important;
+}
+
+.STING-web-Left-Team,
+.STING-web-Right-Team,
+.zeta-card-team {
+  flex: 1 1 0% !important;
+  min-width: 0 !important;      /* Overrides flexbox intrinsic text width */
+  max-width: 35% !important;
+  width: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+.STING-web-Left-Team,
+.zeta-card-team-home {
+  justify-content: flex-end !important;
+  text-align: right !important;
+  gap: var(--zeta-space-2, 8px) !important;
+}
+
+.STING-web-Right-Team,
+.zeta-card-team-away {
+  justify-content: flex-start !important;
+  text-align: left !important;
+  gap: var(--zeta-space-2, 8px) !important;
+}
+
+.STING-web-Score-Box,
+.STING-web-Match-Center,
+.zeta-card-center {
+  flex: 0 0 auto !important;
+  min-width: 76px !important;
+  max-width: 30% !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.STING-web-Team-NAME,
+.zeta-team-name {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  font-family: var(--zeta-font-display, 'Oswald', sans-serif) !important;
+  font-weight: var(--zeta-weight-bold, 700) !important;
+  font-size: var(--zeta-text-h3, 14px) !important;
+}
+
+/* Non-Transparent Dark Scoreboard Hero (Immune to Template Permalinks) */
+#matchView .zeta-scoreboard-hero,
+.zeta-match-hero-wrapper,
+#matchView .match-page-header,
+#matchView .match-scoreboard-grid,
+.match-page-header,
+.match-scoreboard-grid {
+  background: #111827 !important; /* Solid fallback */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  color: var(--zeta-dark-text, #f9fafb) !important;
+  border: 1px solid var(--zeta-dark-border, #1f2937) !important;
+  border-radius: var(--zeta-radius-lg, 14px) !important;
+  box-shadow: var(--zeta-shadow-lg) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#matchView .match-scoreboard-grid,
+.match-scoreboard-grid {
+  border-top: none !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  margin-top: -1px !important;
+  margin-bottom: var(--zeta-space-4, 16px) !important;
+}
+
+#matchView .match-page-header,
+.match-page-header {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#matchView .match-scoreboard-grid .team-unit h3,
+.match-scoreboard-grid .team-unit h3,
+#matchView .team-unit h3 {
+  color: var(--zeta-dark-text, #f9fafb) !important;
+  font-family: var(--zeta-font-display, 'Oswald', sans-serif) !important;
+  font-size: var(--zeta-text-h3, 16px) !important;
+  font-weight: var(--zeta-weight-bold, 700) !important;
+}
+
+#matchView .score-unit .big-score,
+.score-unit .big-score {
+  color: var(--zeta-dark-text, #f9fafb) !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.50) !important;
+  font-family: var(--zeta-font-display, 'Oswald', sans-serif) !important;
+}
+
+#matchView .score-unit div,
+.score-unit div {
+  color: var(--zeta-dark-muted, #9ca3af) !important;
+}
+
+/* Universal Touch Target Standard (WCAG 2.1 AAA - min 44x44px) */
+.zeta-touch-target,
+.match-chip-btn,
+.btn-watch-stream,
+.mtab-btn,
+.zeta-server-btn,
+.STING-web-Matches-Toggle > li > a,
+.zeta-league-pill,
+.STING-web-Open-Dark,
+.STING-web-Open-Menu,
+#watchBtn,
+.search-clear-btn,
+.search-trigger,
+#btnLinksBackToMatch,
+#btnBackToLinks,
+#btnBackToPost,
+#btnBackToHome,
+.zeta-search-bar input,
+.links-selection-header button,
+.stream-player-header button,
+.drawer-link,
+.STING-web-Menu > li > a,
+#serverButtonsList button,
+.match-action-row button,
+.match-tabs-header button {
+  min-height: var(--zeta-touch-min, 44px) !important;
+  min-width: var(--zeta-touch-min, 44px) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  touch-action: manipulation !important;
+  box-sizing: border-box !important;
+}
+
+.zeta-touch-expand {
+  position: relative !important;
+  touch-action: manipulation !important;
+}
+
+.zeta-touch-expand::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  width: 100% !important;
+  height: 100% !important;
 }

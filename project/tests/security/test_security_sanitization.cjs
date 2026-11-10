@@ -1,29 +1,11 @@
 /**
- * Security Test Suite: Adversarial Input Sanitization & XSS Defense
+ * Security Test Suite: Adversarial Input Sanitization, XSS Defense & Open Redirect Protection
  */
 const assert = require('assert');
-
-function escapeHtml(str) {
-  if (typeof str !== 'string') return '';
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-function sanitizeUrl(url) {
-  if (typeof url !== 'string') return '#';
-  url = url.trim();
-  if (/^javascript:/i.test(url) || /^data:/i.test(url) || /^vbscript:/i.test(url)) {
-    return '#';
-  }
-  return url;
-}
+const { escapeHtml, sanitizeUrl, isAllowedUrl } = require('../../src/core/sanitizer.js');
 
 function runSecurityTests() {
-  console.log('Running Security Tests: Adversarial Sanitization...');
+  console.log('Running Security Tests: Adversarial Sanitization & Redirect Defense...');
 
   // 1. XSS Escaping Tests
   const xssPayloads = [
@@ -38,6 +20,7 @@ function runSecurityTests() {
     assert.ok(!escaped.includes('<script>'), `Payload must be escaped: ${p}`);
     assert.ok(!escaped.includes('<img'), `Img tag must be escaped: ${p}`);
     assert.ok(!escaped.includes('"'), `Quotes must be escaped: ${p}`);
+    assert.ok(!escaped.includes("'"), `Single quotes must be escaped: ${p}`);
   }
 
   // 2. URL Protocol Sanitization Tests
@@ -46,7 +29,9 @@ function runSecurityTests() {
     'JAVASCRIPT:/*--></title></style>*/<script>alert(1)</script>',
     'data:text/html,<script>alert(1)</script>',
     'vbscript:msgbox(1)',
-    ' javascript:alert(document.cookie)'
+    ' javascript:alert(document.cookie)',
+    '//attacker.com/malicious',
+    '/\\attacker.com/bypass'
   ];
 
   for (const u of dangerousUrls) {
@@ -64,7 +49,32 @@ function runSecurityTests() {
     assert.strictEqual(sanitizeUrl(u), u, `Safe URL must be preserved: ${u}`);
   }
 
-  console.log('✔ All Security Sanitization Tests Passed!');
+  // 3. Open Redirect & isAllowedUrl Validation
+  const allowedUrls = [
+    'https://www.keralahub.online/match-123',
+    'http://www.zetasports.site/?stream=123',
+    'https://keralahub.online/today',
+    '/stream/123',
+    '/?links=123'
+  ];
+
+  for (const u of allowedUrls) {
+    assert.strictEqual(isAllowedUrl(u), true, `Legitimate URL must be permitted: ${u}`);
+  }
+
+  const blockedRedirects = [
+    '//attacker.com',
+    '/\\attacker.com',
+    '//keralahub.online.attacker.com',
+    'https://evil-stream.com',
+    'javascript:alert(1)'
+  ];
+
+  for (const u of blockedRedirects) {
+    assert.strictEqual(isAllowedUrl(u), false, `Malicious or external URL must be blocked: ${u}`);
+  }
+
+  console.log('✔ All Security Sanitization & Redirect Defense Tests Passed!');
 }
 
 runSecurityTests();
