@@ -4421,7 +4421,8 @@ var _$_obify3=["\x51\x20\x61\x24\x69\x3D\x5B\x22\x5C\x31\x5A\x22\x2C\x22\x5C\x6B
       if (!url || typeof url !== 'string') return false;
       var trimmed = url.trim();
       if (/^(?:javascript|data|vbscript):/i.test(trimmed)) return false;
-      if (trimmed.startsWith('/') && !trimmed.startsWith('//') && !trimmed.startsWith('/\\')) return true;
+      if (trimmed.startsWith('//') || trimmed.startsWith('/\\')) return false;
+      if (trimmed.startsWith('/')) return true;
       try {
         var parsed = new URL(trimmed, (typeof window !== 'undefined' && window.location) ? window.location.origin : 'https://www.keralahub.online');
         if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return false;
@@ -4667,10 +4668,41 @@ var _$_obify3=["\x51\x20\x61\x24\x69\x3D\x5B\x22\x5C\x31\x5A\x22\x2C\x22\x5C\x6B
       if (modal) modal.style.display = 'none';
     };
 
+    // ── Direct Match Fetcher for Virtual URLs / Deep Links ──
+    async function fetchDirectMatch(matchId, pushState) {
+      showView('match');
+      var box = document.getElementById('matchBox');
+      if (box) {
+        box.innerHTML = '<div style="text-align:center;padding:48px 20px;color:#94a3b8;"><div class="loading-spinner" style="margin:0 auto 16px;width:32px;height:32px;border:3px solid rgba(255,255,255,0.1);border-top-color:#3b82f6;border-radius:50%;animation:spin 0.8s linear infinite;"></div><p style="font-size:15px;font-weight:600;color:#f8fafc;">Loading Match Details...</p><p style="font-size:12px;color:#64748b;margin-top:4px;">Connecting to ZetaSports Live Hub...</p></div>';
+      }
+      try {
+        var res = await fetch(SB_URL + '/rest/v1/zeta_matches?id=eq.' + encodeURIComponent(matchId) + '&select=*', {
+          headers: SB_HEADERS
+        });
+        if (res.ok) {
+          var data = await res.json();
+          if (data && data[0]) {
+            var m = data[0];
+            allMatches.push(m);
+            window.openMatchPage(m.id, pushState);
+            return;
+          }
+        }
+      } catch (err) {
+        console.error('[ZetaSports] Direct match fetch error:', err);
+      }
+      if (box) {
+        box.innerHTML = '<div style="text-align:center;padding:48px 20px;color:#ef4444;"><p style="font-size:16px;font-weight:700;">Match Not Found</p><p style="font-size:13px;color:#94a3b8;margin-top:6px;">This match may have concluded or the URL is invalid.</p><button onclick="showView(\'home\')" style="margin-top:16px;padding:8px 16px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;">← Return to Fixtures</button></div>';
+      }
+    }
+
     // ── ROUTE 1: DEDICATED MATCH DETAILS & 8 SECTIONS (domain.com/team1-vs-team2-id) ──
     window.openMatchPage = function(matchId, pushState) {
       var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
-      if (!match) return;
+      if (!match) {
+        fetchDirectMatch(matchId, pushState);
+        return;
+      }
 
       currentMatchId = match.id;
       var mServers = getMatchServers(match);
@@ -4690,19 +4722,19 @@ var _$_obify3=["\x51\x20\x61\x24\x69\x3D\x5B\x22\x5C\x31\x5A\x22\x2C\x22\x5C\x6B
       var matchIdClean = escapeHtml(String(match.id || '').replace(/[^a-zA-Z0-9_\-]/g, ''));
       var linksUrl = sanitizeUrl(getLinksUrl(match.id));
 
-      var matchSlug = slugify(rawHomeName) + '-vs-' + slugify(rawAwayName) + '-' + match.id;
-      if (pushState !== false) {
-        window.history.pushState({ matchId: match.id }, '', '/' + matchSlug);
-      }
-      document.title = homeName + ' vs ' + awayName + ' — Live Score, News & Stream | ZetaSports';
-      injectMatchSEO(homeName, awayName, leagueName, scoreText, isLive, kickoffFull);
-
       var liveInfo = getMatchLiveInfo(match);
       var isLive = liveInfo.isLive;
       var statusClass = liveInfo.statusClass;
       var statusText = liveInfo.statusText;
       var scoreText = liveInfo.scoreText;
       var kickoffFull = match.date ? new Date(match.date).toLocaleString() : 'TBD';
+
+      var matchSlug = slugify(rawHomeName) + '-vs-' + slugify(rawAwayName) + '-' + match.id;
+      if (pushState !== false) {
+        window.history.pushState({ matchId: match.id }, '', '/' + matchSlug);
+      }
+      document.title = homeName + ' vs ' + awayName + ' — Live Score, News & Stream | ZetaSports';
+      injectMatchSEO(homeName, awayName, leagueName, scoreText, isLive, kickoffFull);
 
       var box = document.getElementById('matchBox');
       box.innerHTML = 
@@ -5718,7 +5750,14 @@ var _$_obify3=["\x51\x20\x61\x24\x69\x3D\x5B\x22\x5C\x31\x5A\x22\x2C\x22\x5C\x6B
     for (var i = 0; i < liveWithFotmob.length; i++) {
       var match = liveWithFotmob[i];
       try {
-        var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + match.fotmob_id);
+        var proxyUrl = 'https://proxy.zetasports.site/fotmob/matchDetails?matchId=' + match.fotmob_id;
+        var res;
+        try {
+          res = await fetchWithResilientBackoff(proxyUrl, {}, 1, 500);
+        } catch(proxyErr) {
+          proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + match.fotmob_id);
+          res = await fetch(proxyUrl);
+        }
         var res = await fetch(proxyUrl);
         if (!res.ok) continue;
         var data = await res.json();
@@ -5739,12 +5778,45 @@ var _$_obify3=["\x51\x20\x61\x24\x69\x3D\x5B\x22\x5C\x31\x5A\x22\x2C\x22\x5C\x6B
     renderMatches();
   }
 
-  // ── Direct Supabase REST Fetch Helper ──
+  // ── Resilient Jittered Exponential Backoff Fetch Engine ──
+  async function fetchWithResilientBackoff(url, options, maxRetries, baseDelayMs) {
+    var retries = (maxRetries !== undefined) ? maxRetries : 3;
+    var baseDelay = (baseDelayMs !== undefined) ? baseDelayMs : 800;
+    var attempt = 0;
+    while (attempt <= retries) {
+      try {
+        if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+          throw new Error('NETWORK_OFFLINE: Device is disconnected');
+        }
+        var controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+        var timeoutId = controller ? setTimeout(function() { controller.abort(); }, 8000) : null;
+        var fetchOpts = Object.assign({}, options || {});
+        if (controller) fetchOpts.signal = controller.signal;
+        var res = await fetch(url, fetchOpts);
+        if (timeoutId) clearTimeout(timeoutId);
+        if (res.ok) return res;
+        if (res.status >= 400 && res.status < 500 && res.status !== 429) {
+          throw new Error('CLIENT_ERROR: HTTP ' + res.status + ' non-retryable');
+        }
+        attempt++;
+        if (attempt > retries) {
+          throw new Error('HTTP_ERROR: HTTP ' + res.status + ' after ' + retries + ' attempts');
+        }
+      } catch(err) {
+        if (err.message && err.message.indexOf('CLIENT_ERROR') !== -1) throw err;
+        attempt++;
+        if (attempt > retries) throw err;
+      }
+      var delay = Math.min(6000, baseDelay * Math.pow(2, attempt)) + (Math.random() * 300);
+      await new Promise(function(resolve) { setTimeout(resolve, delay); });
+    }
+  }
+
+  // ── Direct Supabase REST Fetch Helper with Resilient Backoff ──
   async function fetchSupabaseTable(table) {
-    var res = await fetch(SB_URL + '/rest/v1/' + table + '?select=*', {
+    var res = await fetchWithResilientBackoff(SB_URL + '/rest/v1/' + table + '?select=*', {
       headers: SB_HEADERS
-    });
-    if (!res.ok) throw new Error('Supabase ' + table + ' returned HTTP ' + res.status);
+    }, 2, 800);
     return await res.json();
   }
 
