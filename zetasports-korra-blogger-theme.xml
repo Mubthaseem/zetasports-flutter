@@ -507,13 +507,13 @@
   <div id="streamView" class="STING-web-Max-Size">
     <div style="margin-bottom: 14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; flex-wrap:wrap; gap:10px;">
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a id="btnBackToLinks" href="#" class="match-chip-btn" style="background:#2563eb;color:#fff;border-color:#2563eb;text-decoration:none;">
+        <a id="btnBackToLinks" href="#" class="match-chip-btn" style="background:#2563eb;color:#fff;border-color:#2563eb;text-decoration:none;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;">
           🔀 Change Server / Links
         </a>
-        <a id="btnBackToPost" href="#" class="match-chip-btn" style="text-decoration:none;">
+        <a id="btnBackToPost" href="#" class="match-chip-btn" style="text-decoration:none;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;">
           ← Match Post
         </a>
-        <a id="btnBackToHome" href="#" class="match-chip-btn" style="text-decoration:none;">
+        <a id="btnBackToHome" href="#" class="match-chip-btn" style="text-decoration:none;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;">
           🏠 Home
         </a>
       </div>
@@ -663,7 +663,8 @@
       if (!url || typeof url !== 'string') return false;
       var trimmed = url.trim();
       if (/^(?:javascript|data|vbscript):/i.test(trimmed)) return false;
-      if (trimmed.startsWith('/') && !trimmed.startsWith('//') && !trimmed.startsWith('/\\')) return true;
+      if (trimmed.startsWith('//') || trimmed.startsWith('/\\')) return false;
+      if (trimmed.startsWith('/')) return true;
       try {
         var parsed = new URL(trimmed, (typeof window !== 'undefined' && window.location) ? window.location.origin : 'https://www.keralahub.online');
         if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return false;
@@ -1011,10 +1012,37 @@
       if (modal) modal.style.display = 'none';
     };
 
+    // ── Direct Match Fetcher for Stream & Gateway Deep Links ──
+    async function fetchDirectMatch(matchId, cb) {
+      try {
+        var res = await fetch(SB_URL + '/rest/v1/zeta_matches?id=eq.' + encodeURIComponent(matchId) + '&select=*', {
+          headers: SB_HEADERS
+        });
+        if (res.ok) {
+          var data = await res.json();
+          if (data && data[0]) {
+            var m = data[0];
+            allMatches.push(m);
+            if (typeof cb === 'function') {
+              cb(m);
+            }
+            return;
+          }
+        }
+      } catch (err) {
+        console.error('[ZetaSports] Direct match fetch error:', err);
+      }
+    }
+
     // ── ROUTE 1: DEDICATED MATCH DETAILS & 8 SECTIONS (domain.com/team1-vs-team2-id) ──
     window.openMatchPage = function(matchId, pushState) {
       var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
-      if (!match) return;
+      if (!match) {
+        fetchDirectMatch(matchId, function() {
+          window.openMatchPage(matchId, pushState);
+        });
+        return;
+      }
 
       currentMatchId = match.id;
       var mServers = getMatchServers(match);
@@ -1416,7 +1444,12 @@
     // ── ROUTE 1.5: DEDICATED LINK SELECTION GATEWAY (domain.com/?links=id) ──
     window.openLinksPage = function(matchId, pushState) {
       var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
-      if (!match) return;
+      if (!match) {
+        fetchDirectMatch(matchId, function() {
+          window.openLinksPage(matchId, pushState);
+        });
+        return;
+      }
 
       currentMatchId = match.id;
       stopStream();
@@ -1557,7 +1590,12 @@
     // ── ROUTE 2: DEDICATED STREAMING PAGE WITH DYNAMIC MULTI-SERVER (domain.com/stream/id) ──
     window.openStreamPage = function(matchId, pushState, serverIdx) {
       var match = allMatches.find(function(m) { return String(m.id) === String(matchId); });
-      if (!match) return;
+      if (!match) {
+        fetchDirectMatch(matchId, function() {
+          window.openStreamPage(matchId, pushState, serverIdx);
+        });
+        return;
+      }
 
       currentMatchId = match.id;
       var targetServerIdx = (serverIdx != null && serverIdx !== undefined) ? parseInt(serverIdx, 10) : 0;
@@ -1619,7 +1657,7 @@
         var isActive = idx === currentServerIndex;
         var bg = isActive ? '#2563eb' : '#334155';
         var border = isActive ? '2px solid #60a5fa' : '1px solid #475569';
-        html += '<button class="match-chip-btn" onclick="switchServer(' + idx + ')" style="color:#fff;background:' + bg + ';border:' + border + ';font-size:12px;padding:6px 14px;font-weight:700;cursor:pointer;">' +
+        html += '<button class="match-chip-btn zeta-server-btn" onclick="switchServer(' + idx + ')" style="color:#fff;background:' + bg + ';border:' + border + ';font-size:12px;padding:8px 16px;font-weight:700;cursor:pointer;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;">' +
           (isActive ? '▶ ' : '') + escapeHtml(srv.name) +
         '</button>';
       });
@@ -1683,6 +1721,9 @@
         if (video) video.style.display = 'none';
         if (iframe) {
           iframe.style.display = 'block';
+          iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation');
+          iframe.setAttribute('referrerpolicy', 'no-referrer');
+          iframe.setAttribute('allowfullscreen', 'true');
           iframe.src = sanitizeUrl(streamUrl);
         }
         if (badgeEl) {
@@ -2062,7 +2103,14 @@
       for (var i = 0; i < liveWithFotmob.length; i++) {
         var match = liveWithFotmob[i];
         try {
-          var proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + match.fotmob_id);
+          var proxyUrl = 'https://proxy.zetasports.site/fotmob/matchDetails?matchId=' + match.fotmob_id;
+        var res;
+        try {
+          res = await fetchWithResilientBackoff(proxyUrl, {}, 1, 500);
+        } catch(proxyErr) {
+          proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.fotmob.com/api/matchDetails?matchId=' + match.fotmob_id);
+          res = await fetch(proxyUrl);
+        }
           var res = await fetch(proxyUrl);
           if (!res.ok) continue;
           var data = await res.json();
@@ -2083,12 +2131,45 @@
       renderMatches();
     }
 
-    // ── Direct Supabase REST Fetch Helper ──
+    // ── Resilient Jittered Exponential Backoff Fetch Engine ──
+    async function fetchWithResilientBackoff(url, options, maxRetries, baseDelayMs) {
+      var retries = (maxRetries !== undefined) ? maxRetries : 3;
+      var baseDelay = (baseDelayMs !== undefined) ? baseDelayMs : 800;
+      var attempt = 0;
+      while (attempt <= retries) {
+        try {
+          if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+            throw new Error('NETWORK_OFFLINE: Device is disconnected');
+          }
+          var controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+          var timeoutId = controller ? setTimeout(function() { controller.abort(); }, 8000) : null;
+          var fetchOpts = Object.assign({}, options || {});
+          if (controller) fetchOpts.signal = controller.signal;
+          var res = await fetch(url, fetchOpts);
+          if (timeoutId) clearTimeout(timeoutId);
+          if (res.ok) return res;
+          if (res.status >= 400 && res.status < 500 && res.status !== 429) {
+            throw new Error('CLIENT_ERROR: HTTP ' + res.status + ' non-retryable');
+          }
+          attempt++;
+          if (attempt > retries) {
+            throw new Error('HTTP_ERROR: HTTP ' + res.status + ' after ' + retries + ' attempts');
+          }
+        } catch(err) {
+          if (err.message && err.message.indexOf('CLIENT_ERROR') !== -1) throw err;
+          attempt++;
+          if (attempt > retries) throw err;
+        }
+        var delay = Math.min(6000, baseDelay * Math.pow(2, attempt)) + (Math.random() * 300);
+        await new Promise(function(resolve) { setTimeout(resolve, delay); });
+      }
+    }
+
+    // ── Direct Supabase REST Fetch Helper with Resilient Backoff ──
     async function fetchSupabaseTable(table) {
-      var res = await fetch(SB_URL + '/rest/v1/' + table + '?select=*', {
+      var res = await fetchWithResilientBackoff(SB_URL + '/rest/v1/' + table + '?select=*', {
         headers: SB_HEADERS
-      });
-      if (!res.ok) throw new Error('Supabase ' + table + ' returned HTTP ' + res.status);
+      }, 2, 800);
       return await res.json();
     }
 
