@@ -12,7 +12,7 @@ echo  [4] First-Time Setup: Log in to Google Account (Visible Browser)
 echo  [5] Dry-Run Validation (Test Without Saving)
 echo  [6] Update SEO Keywords, Titles & Announcement Banner (Live Cloud)
 echo  [7] Launch AI Niche Blogger Post Generator (Gemini/Ollama)
-echo  [8] Run All 5 Automated Test Suites (run_tests.bat)
+echo  [8] Run All 7 Automated Test Suites (run_tests.bat)
 echo  [9] Start Real-Time Live Matches & Scores Sync Daemon
 echo  [10] Launch ZetaSports Admin Portal v3 (Port 2121)
 echo  [11] Exit
