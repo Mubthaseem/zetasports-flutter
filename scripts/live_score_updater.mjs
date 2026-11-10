@@ -21,8 +21,8 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const rawUrl = process.env.SUPABASE_URL?.trim();
 const rawKey = (process.env.SUPABASE_KEY || process.env.SUPABASE_SERVICE_KEY)?.trim();
 
-const SUPABASE_URL = rawUrl && rawUrl.length > 5 ? rawUrl : 'https://voocdrpetiyspuhyeapi.supabase.co';
-const SUPABASE_KEY = rawKey && rawKey.length > 10 ? rawKey : 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
+const SUPABASE_URL = rawUrl && rawUrl.length > 5 ? rawUrl : 'https://udlncusvhmydivtjkjcy.supabase.co';
+const SUPABASE_KEY = rawKey && rawKey.length > 10 ? rawKey : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkbG5jdXN2aG15ZGl2dGpramN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM4MTE2MDgsImV4cCI6MjEwOTM4NzYwOH0.gsnxlDww-fUC4HG7R7VasXSaQvqkSsDhhmf16KUCLZY';
 
 const sb = createClient(SUPABASE_URL, SUPABASE_KEY);
 
