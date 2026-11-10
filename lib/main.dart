@@ -12,8 +12,8 @@ import 'services/ad_service.dart';
 import 'services/app_version_service.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 
-const _supabaseUrl     = 'https://voocdrpetiyspuhyeapi.supabase.co';
-const _supabaseAnonKey = 'sb_publishable_luDUt769BBrrApn8z-Cgvw_W9VE0rIV';
+const _supabaseUrl     = 'https://udlncusvhmydivtjkjcy.supabase.co';
+const _supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkbG5jdXN2aG15ZGl2dGpramN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM4MTE2MDgsImV4cCI6MjEwOTM4NzYwOH0.gsnxlDww-fUC4HG7R7VasXSaQvqkSsDhhmf16KUCLZY';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
