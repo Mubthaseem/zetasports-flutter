@@ -141,6 +141,8 @@ async function publishBlog(targetKey, browser) {
 async function run() {
   const args = process.argv.slice(2);
   const isHeadless = !args.includes('--visible');
+  const isDryRun = args.includes('--dry-run');
+  if (isDryRun) console.log('[DRY-RUN MODE ACTIVATED: Validation only, no changes will be saved]');
 
   console.log(`Launching automation browser (headless: ${isHeadless})...`);
 
