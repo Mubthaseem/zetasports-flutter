@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-11-15T05:00:57.542Z",
+    "generatedAt": "2026-11-15T08:22:41.303Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 2636
+      "fullArticlesCount": 2643
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,69 @@
     }
   },
   "news": [
+    {
+      "id": "BD1819D65364E6786A1B0D90A8FBD68E",
+      "title": "How Spain's humble superstar Simon became world's best keeper",
+      "description": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cqvg23nv0jw2o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/41cb/live/396f38d0-dddc-11f1-b865-d17d8611efca.jpg",
+      "publishedAt": "2026-11-15T07:29:30.000Z"
+    },
+    {
+      "id": "69BEF8A57AD80C105F59F35380A41489",
+      "title": "How Aston Villa are reclaiming their identity",
+      "description": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cm4gkgnkkn9zo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/2d8a/live/a96f30c0-e009-11f1-9fd4-8b3c9f9dfc89.jpg",
+      "publishedAt": "2026-11-15T07:12:05.000Z"
+    },
+    {
+      "id": "65F0B9DB8AE80173ADDB5ABEC3FC0A13",
+      "title": "Respect? Exposure? Why England's star names are going abroad",
+      "description": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/ckdd17mq2pvmo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/e10a/live/d6b0c900-df4a-11f1-a48c-75dd2efdacb5.jpg",
+      "publishedAt": "2026-11-15T06:25:41.000Z"
+    },
+    {
+      "id": "ftbpro_01m7e0p7sv3h",
+      "title": "Four Takeaways From USMNT’s Unapologetic Thrashing of Haiti in Concacaf Nations League",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m7e0p7sv3h/four-takeaways-from-usmnts-unapologetic-thrashing-haiti-concacaf-nations-league",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m7e663n50ggc556ee0.jpg",
+      "publishedAt": "2026-11-15T03:32:51.000Z"
+    },
+    {
+      "id": "ftbpro_01m7e5y81pxe",
+      "title": "Every Dual National Now Cap-Tied to the USMNT Following Concacaf Nations League",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m7e5y81pxe/every-dual-national-now-cap-tied-usmnt-following-concacaf-nations-league",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_35/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m7ef83vx1nxdag0m47.jpg",
+      "publishedAt": "2026-11-15T03:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m77ts6yxjt",
+      "title": "Mauricio Pochettino’s Alarming Record in Cup Finals Serves As Warning to Man Utd",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m77ts6yxjt/mauricio-pochettinos-alarming-record-cup-finals-serves-warning-man-utd",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_87/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m77vsxkpn7cyavnrgc.jpg",
+      "publishedAt": "2026-11-15T02:00:00.000Z"
+    },
+    {
+      "id": "ftbpro_01m7e731q379",
+      "title": "‘No Racism in Spain’—Luis De La Fuente and Thomas Tuchel Thrown Into Fiery Debate",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m7e731q379/no-racism-spainluis-de-la-fuente-thomas-tuchel-thrown-into-fiery-debate",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2422,h_1362,x_79,y_23/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m7e7tdqb9gkrztfcfq.jpg",
+      "publishedAt": "2026-11-15T01:39:26.000Z"
+    },
     {
       "id": "ftbpro_01m7ct8j6hta",
       "title": "Spain vs. England—Nations League: Preview, Predictions and Lineups",
@@ -130,69 +193,6 @@
       "sourceUrl": "/news/v44cpcw0lenc1xq7er8fwaf79-portugal-1-4-denmark-hosts-thrashed-first-game-since-ronaldo-retirement",
       "imageUrl": "https://images.performgroup.com/di/library/omnisport/a5/53/rasmus-hojlund_zs86n97ewfvmz5xyr09czyv6.jpg?t=-531339375&w=1260&h=708",
       "publishedAt": "2026-11-14T21:50:45.000Z"
-    },
-    {
-      "id": "CC56307E64D5144E13A76002DB5FABBC",
-      "title": "Arsenal target Nusa could cost £66m - Sunday's gossip",
-      "description": "BBC",
-      "source": "BBC",
-      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c6e9kgn532gxo?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/4ca1/live/7aacbf20-e06b-11f1-99e6-531f8829f5a3.png",
-      "publishedAt": "2026-11-14T21:48:45.000Z"
-    },
-    {
-      "id": "1w25q5g50rtez1qmbq06wk6749",
-      "title": "Mancini sees Nations League as 'source of pride' for Italy",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1w25q5g50rtez1qmbq06wk6749-mancini-sees-nations-league-source-pride-italy",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/6b/8d/roberto-mancini_h4z87uwhgopj1nue4qk7jvfbw.jpg?t=-535587375&w=1260&h=708",
-      "publishedAt": "2026-11-14T21:15:31.000Z"
-    },
-    {
-      "id": "ftbpro_01m7aexy6zkc",
-      "title": "Grading Every Man Utd Player’s 2026–27 So Far As Mauricio Pochettino Takes Over",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m7aexy6zkc/grading-every-man-utd-players-2026-27-so-far-mauricio-pochettino-takes-over",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1848,h_1039,x_42,y_17/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m7afj41b2q8gwnea50.jpg",
-      "publishedAt": "2026-11-14T21:00:00.000Z"
-    },
-    {
-      "id": "9A523145DF614765BDE16FD74472C0CB",
-      "title": "What Wales need to stay in Nations League top tier",
-      "description": "BBC",
-      "source": "BBC",
-      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cmx28nxw1elvo?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/7f6a/live/8d336370-e065-11f1-b454-23ac84bf5ae9.jpg",
-      "publishedAt": "2026-11-14T20:52:48.000Z"
-    },
-    {
-      "id": "1rvhkr8ne7pyu1m8dm3s58psqt",
-      "title": "Tuchel: I absolutely believe England can win a big tournament",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1rvhkr8ne7pyu1m8dm3s58psqt-tuchel-i-absolutely-believe-england-can-win-big-tournament",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/12/f4/thomas-tuchel_d71x4lnyo8wf1m469dvr2yhxh.jpg?t=-538191567&w=1260&h=708",
-      "publishedAt": "2026-11-14T20:49:43.000Z"
-    },
-    {
-      "id": "43834BD2613E011E5ED1BD6460536FBC",
-      "title": "'No racism in Spain' – De la Fuente message for Tuchel",
-      "description": "BBC",
-      "source": "BBC",
-      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c893r74ryy3qo?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/d168/live/23ffd600-e05f-11f1-9e26-b3b65586122f.jpg",
-      "publishedAt": "2026-11-14T20:43:57.000Z"
-    },
-    {
-      "id": "1CB3503DB4665912999785C9AD1C203E",
-      "title": "Spain test will reveal if Tuchel and England have learned World Cup lessons",
-      "description": "BBC",
-      "source": "BBC",
-      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cq2d9l3e313zo?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/8a93/live/1896ea50-e038-11f1-9ca9-b3b288fceb81.jpg",
-      "publishedAt": "2026-11-14T20:22:00.000Z"
     }
   ],
   "articles": {
@@ -6165,7 +6165,7 @@
         "\"Terry&#x27;s a great lad. He deserves everything he&#x27;ll get from the game and he&#x27;s one of those lads that maximises what he has,\" O&#x27;Neill said about the 23-year-old Portsmouth defender.",
         "Northern Ireland beat Ukraine to move closer to Nations League promotion",
         "Devlin nets winner as NI top Nations League group",
-        "Published2 hours agoSpeaking about his versatility - Devlin can play in midfield as well as a full-back on either side - O&#x27;Neill added: \"He does it with no fuss. He tries to do it to the best of his ability.",
+        "Published9 hours agoSpeaking about his versatility - Devlin can play in midfield as well as a full-back on either side - O&#x27;Neill added: \"He does it with no fuss. He tries to do it to the best of his ability.",
         "\"He&#x27;s a bit of a dream for a manager and he has the ability to contribute goals.\"",
         "The average age of O&#x27;Neill&#x27;s starting XI on Saturday was just 22.9 with eight players aged 23 or younger.",
         "Devlin epitomises what this team are all about with his all-action display rewarded with a first international goal.",
@@ -22905,6 +22905,37 @@
         "For Carlos, a player with Tenerife&#x27;s disability side Tenerife Foundation, the loss is particularly personal."
       ]
     },
+    "65F0B9DB8AE80173ADDB5ABEC3FC0A13": {
+      "id": "65F0B9DB8AE80173ADDB5ABEC3FC0A13",
+      "title": "Respect? Exposure? Why England's star names are going abroad",
+      "subtitle": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/ckdd17mq2pvmo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/e10a/live/d6b0c900-df4a-11f1-a48c-75dd2efdacb5.jpg",
+      "publishedAt": "2026-11-15T06:25:41.000Z",
+      "paragraphs": [
+        "BBC HomepageSkip to contentAccessibility HelpYour accountHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsMore menuMore menuSearch BBCHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsClose menu BBC SportMenuHomeFootballCricketFormula 1Rugby UTennisGolfCyclingAthleticsMoreA-Z SportsAmerican FootballAthleticsBasketballBoxingCricketCyclingDartsDisability SportFootballFormula 1Gaelic GamesGolfGymnasticsHorse RacingMixed Martial ArtsMotorsportNetballRugby LeagueRugby UnionSnookerSwimmingTennisFull Sports A-ZMore from SportEnglandScotlandWalesNorthern IrelandQuizzesNews FeedsHelp & FAQsEnglandMen&#x27;s Scores & FixturesNations League TableWomen&#x27;s Scores & FixturesWorld Cup Qualifying TablesRespect? Exposure? Why England&#x27;s star names are going abroadImage source, Getty ImagesImage caption, Anthony Gordon joined Barcelona from Newcastle in the summer",
+        "England reporterPublished1 hour agoBayern Munich&#x27;s Ballon d&#x27;Or winner Harry Kane, Real Madrid&#x27;s Jude Bellingham, Barcelona&#x27;s Anthony Gordon - three of England&#x27;s star players, all of whom are playing their club football abroad.",
+        "The Premier League is widely regarded as the most competitive league in the world with the greatest financial muscle, but that does not always translate to the biggest individual profiles and, increasingly, star names are looking elsewhere.",
+        "Since Cristiano Ronaldo won the Ballon d&#x27;Or in 2008, for example, only Rodri in 2024 was playing in England at the time of being crowned the best player in the world. Michael Owen, in 2001, was the last Englishman to do so while in England.",
+        "The trend of English players going abroad has gathered pace since a teenage Jadon Sancho signed for Borussia Dortmund in 2017 and that is reflected in this current Three Lions squad - seven of the initial 25 play outside England.",
+        "\"Jude Bellingham and Harry Kane were decisive for us in the World Cup and I see no reason they won&#x27;t be in the future,\" said England boss Thomas Tuchel when talking about his big stars playing outside of their home country.",
+        "\"It&#x27;s good that Anthony has stepped up now. He is the third one. There is obviously a relevance to them playing abroad but I don&#x27;t see that a player who plays in the Premier League cannot step up and be decisive for us.\"",
+        "At the World Cup in the summer and during the last international break, however, it was those three players&#x27; goals and assists that proved decisive.",
+        "Currently there are 43 English players on the Football Association&#x27;s radar playing their club football in Europe.",
+        "The FA&#x27;s technical director John McDermott believes it is a \"huge positive\" to have so many players playing across Europe.",
+        "\"I spoke to a couple of the boys that are playing abroad at the moment,\" he told BBC Sport. \"The exposure they get in those leagues, playing Champions League or European football, where you&#x27;re not necessarily having to bang out 55 games, but you still have got time to do your weight training and your gym work.",
+        "\"Often if you&#x27;re playing in the English competition or in the EFL, where it&#x27;s 46 games - you know it&#x27;s game, game, game, which is fantastic - but for some players that opportunity to get the training in-between and to practise developing on technique or other areas, there&#x27;s benefits to that.\"",
+        "McDermott was previously at Tottenham Hotspur and says that even when he was in club football, he was a \"big believer\" in players going abroad to \"develop character\" and \"independence\".",
+        "\"I think being in another changing room and learning another language just puts you under the pressure to adapt,\" he added.",
+        "\"And I think for any young person that ability not only to become technically, tactically more adept, but also culturally have to pick up something else - it&#x27;s huge and prevents people from becoming complacent or just getting used to the same old, same old.\"",
+        "Gordon said in the recent international break he feels he gets more respect now he plays for one of Europe&#x27;s elite sides, compared with when he was at Newcastle.",
+        "\"I think he&#x27;s always been respected,\" McDermott said.",
+        "\"I remember when Trips (Kieran Trippier) came back, and Trips was a good player, but when he came back from Atletico (Madrid) I noticed he was just maybe tighter technically and noticed there was a change that Kieran came back with.",
+        "\"So I&#x27;m not sure if he&#x27;s respected more ... but I think you want all of the players - whether they stay in England [or not] - every six months you see this sort of incremental step where they&#x27;ve added something, another dimension to the game.",
+        "\"That can sometimes come in this country, obviously, playing with different players, being in new competitions, but I think going abroad definitely helps that."
+      ]
+    },
     "65tjd0h4aodq1kqwdrrkfwvla": {
       "id": "65tjd0h4aodq1kqwdrrkfwvla",
       "title": "OFI Crete 0-2 Bayer Leverkusen: Hofmann at the double for in-form visitors",
@@ -23174,6 +23205,37 @@
         "&quot;It&#39;s my fault because I am the coach, I gave the angle to the players. I gave the motivation. I prepare the situations. We played so badly. It&#39;s my fault.&quot;"
       ],
       "html": "<p>Fabian Hurzeler has implored&nbsp;his Brighton players to &quot;stay humble&quot; after they thumped rivals Crystal Palace 5-0 to continue their excellent start in the Premier League.&nbsp;</p>\n\n<p>Brighton raced into a three-goal lead inside 10 minutes after an own-goal from Jaydee Canvot, a wonder-strike from Diego Gomez and Yasin Ayari&#39;s composed finish.</p>\n\n<p>The Seagulls&nbsp;became the ninth side in Premier League history to score three goals in the first 10 minutes of a match, and first since Newcastle United against Tottenham in April 2023, and it only got better from there.&nbsp;</p>\n\n<p>Charalampos Kostoulas found the back of the net four minutes after the restart before&nbsp;Jack Hinshelwood added further gloss to the scoreline six minutes from time.&nbsp;</p>\n\n<p>The result saw Brighton extend their winning run in the Premier League to four matches, while also taking their goal tally to 23, their most ever at this stage of a campaign in the top four tiers. Incredibly, only&nbsp;Barcelona have scored more goals than the Seagulls across the top five&nbsp;leagues this term (39).</p>\n\n<p>And when asked about his side&#39;s performance, Hurzeler said: &quot;I am very happy for our supporters, our fans. They have waited long enough for this feeling, beating our rivals.</p>\n\n<p>&quot;We had another good performance, another clean sheet which was important, and I am happy for the boys.</p>\n\n<p>&quot;Although it is important to celebrate the goal and the win, there is room for improvement. We have to stay humble and understand why we are where we are at the moment.&quot;</p>\n\n\n<p>The contest was best known for Gomez&#39;s halfway finish with the strike already being touted as an early goal of the season contender.</p>\n\n<p>Gomez&#39;s stunner was from 51 metres, the furthest range Premier League goal since Wayne Rooney for Everton v West Ham in November 2017 (58 metres).</p>\n\n<p>But for Palace boss Pierre Sage, it was a day to forget after his team registered five shots in this game, their lowest total in a single match in the Premier League this season.</p>\n\n<p>The Eagles have now lost their fourth league game of the season and currently sit 14th, two points ahead of 18th-placed Fulham.</p>\n\n<p>Palace have also now conceded 17 goals across their opening seven Premier League matches, with the Eagles last letting in&nbsp;more at this stage of a season in the top four tiers in 1980-81 (21).</p>\n\n<p>When asked about his feelings after the contest, Sage said, &quot;Only one feeling – shame. When you play this kind of game you have to show another face. It was our worst face.</p>\n\n<p>&quot;We cannot accept that, especially at the beginning of the game. We didn&#39;t fight at that moment. Once it was 3-0 after nine minutes, the game was really different.</p>\n\n<p>&quot;It&#39;s my fault because I am the coach, I gave the angle to the players. I gave the motivation. I prepare the situations. We played so badly. It&#39;s my fault.&quot;</p>\n"
+    },
+    "69BEF8A57AD80C105F59F35380A41489": {
+      "id": "69BEF8A57AD80C105F59F35380A41489",
+      "title": "How Aston Villa are reclaiming their identity",
+      "subtitle": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cm4gkgnkkn9zo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/2d8a/live/a96f30c0-e009-11f1-9fd4-8b3c9f9dfc89.jpg",
+      "publishedAt": "2026-11-15T07:12:05.000Z",
+      "paragraphs": [
+        "BBC HomepageSkip to contentAccessibility HelpYour accountHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsMore menuMore menuSearch BBCHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsClose menu BBC SportMenuHomeFootballCricketFormula 1Rugby UTennisGolfCyclingAthleticsMoreA-Z SportsAmerican FootballAthleticsBasketballBoxingCricketCyclingDartsDisability SportFootballFormula 1Gaelic GamesGolfGymnasticsHorse RacingMixed Martial ArtsMotorsportNetballRugby LeagueRugby UnionSnookerSwimmingTennisFull Sports A-ZMore from SportEnglandScotlandWalesNorthern IrelandQuizzesNews FeedsHelp & FAQsWomen&#x27;s FootballScores & FixturesTableTop ScorersWSL Fan ChatHow Aston Villa are reclaiming their identityImage source, Getty ImagesImage caption, Aston Villa currently sit ninth in the Women&#x27;s Super League table",
+        "BBC Sport women’s football news reporterPublished1 hour agoA club&#x27;s true identity always shows in a local derby and Aston Villa hope to impose theirs when they face rivals Birmingham City on Sunday.",
+        "Villa have not had a smooth ride of it this season after a winless start led to the sacking of former manager Natalia Arroyo at the end of September.",
+        "The Spaniard helped stabilise Villa during her two years in charge but they lacked consistency, and it left some wondering what their identity really was.",
+        "Brian Sorensen is the man in charge of changing that on the pitch now, while there are others off it who are transforming Villa behind the scenes.",
+        "\"Aston Villa is a club of heart. We put a lot into everything we do,\" managing director Maggie Murphy told BBC Sport.",
+        "\"I think a lot of people know we try to do everything the right way, the proper way. We&#x27;re a club that is the heart of &#x27;proper football&#x27; in many ways.\"",
+        "So what are Villa doing this season to get in touch with their values?",
+        "Find interviews and extra content on the BBC Women&#x27;s Football Weekly feed",
+        "Diving into their historyImage source, Getty ImagesImage caption, Former Everton boss Brian Sorensen is now managing Aston Villa",
+        "Sunday&#x27;s Women&#x27;s Super League match with Birmingham (14:00 GMT) marks 30 years since the team officially took the Aston Villa name.",
+        "Sorensen hoes it will be the perfect opportunity to showcase who Villa are on the pitch.",
+        "\"There&#x27;s a lot of history in this club which maybe not many people know. We need to showcase that,\" said interim manager Sorensen.",
+        "\"We want to be really hard-working and humble - like the area we are from - and have a clear identity of how we attack and defend.",
+        "\"It&#x27;s trying to align all of that, making sure that we are a team that is recognised, that is one the other teams will fear playing against.\"",
+        "They will celebrate this crucial point in their history in the second city derby at Villa Park, and inform fans of a research project they are undertaking this season.",
+        "The project is called &#x27;Roots, Rise and Reach&#x27; and hopes to uncover periods of the women&#x27;s team&#x27;s history that have never been documented before.",
+        "They have already found a newspaper report from 1957 detailing a game between an unofficial Aston Villa Ladies team and Birmingham City.",
+        "\"It&#x27;s huge piece of work that we&#x27;re doing just to understand our own heritage and where we&#x27;ve come from,\" said Murphy.",
+        "\"We&#x27;re very aware that our roots go much further [than 1996]. We&#x27;re going back decades at the moment trying to uncover some of that history."
+      ]
     },
     "6ADE82EEB5044B2E4CC2311AF8EE2463": {
       "id": "6ADE82EEB5044B2E4CC2311AF8EE2463",
@@ -28763,6 +28825,37 @@
         "Listen on SoundsSubscribe and listen for everything you love about Newcastle",
         "Latest Newcastle news, analysis and fan views",
         "Ask about Newcastle - what do you want to know?"
+      ]
+    },
+    "BD1819D65364E6786A1B0D90A8FBD68E": {
+      "id": "BD1819D65364E6786A1B0D90A8FBD68E",
+      "title": "How Spain's humble superstar Simon became world's best keeper",
+      "subtitle": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cqvg23nv0jw2o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/41cb/live/396f38d0-dddc-11f1-b865-d17d8611efca.jpg",
+      "publishedAt": "2026-11-15T07:29:30.000Z",
+      "paragraphs": [
+        "BBC HomepageSkip to contentAccessibility HelpYour accountHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsMore menuMore menuSearch BBCHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsClose menu BBC SportMenuHomeFootballCricketFormula 1Rugby UTennisGolfCyclingAthleticsMoreA-Z SportsAmerican FootballAthleticsBasketballBoxingCricketCyclingDartsDisability SportFootballFormula 1Gaelic GamesGolfGymnasticsHorse RacingMixed Martial ArtsMotorsportNetballRugby LeagueRugby UnionSnookerSwimmingTennisFull Sports A-ZMore from SportEnglandScotlandWalesNorthern IrelandQuizzesNews FeedsHelp & FAQsFootballScores & FixturesTablesPremier LeagueChampions LeagueWomen&#x27;s FootballTeamsLeagues & CupsGossipTop ScorersEuropeanQuizzesHow Spain&#x27;s humble superstar Simon became world&#x27;s best keeperByGuillem BalagueBBC Sport columnistPublished52 minutes agoPeter Schmeichel handed Unai Simon the Yashin Trophy and the room applauded warmly. Then the world&#x27;s best goalkeeper spent his time talking about everybody else.",
+        "Simon thanked his parents and his brother. He thanked his girlfriend for being an \"oasis of tranquillity\", and the friends from home who remind him that \"many of us in this room are privileged\".",
+        "&#x27;La cuadrilla&#x27;, the gang of lifelong friends that is a traditional part of Basque culture, has a WhatsApp group of its own, and he takes them on holiday every summer.",
+        "He thanked his coaches and team-mates. Like Simon, none of them are regulars on the covers of the media.",
+        "Then he talked about a man who could not be in the room at last month&#x27;s Ballon d&#x27;Or ceremony in London, but whose influence lives on - Simon&#x27;s youth academy mentor Koldo Asua, who died in 2021.",
+        "The Spain and Athletic Club number one is not your archetypal superstar. In fact, he is the complete opposite.",
+        "He stays away from the headlines and is relatively low profile when compared with some of the game&#x27;s other goalkeepers. His position as Spain&#x27;s number is regularly questioned - as was the decision to name him as the world&#x27;s best.",
+        "In the part-beauty pageant election that is the Ballon d&#x27;Or, being low key can work against you, but the case on the pitch is easy to state - even though it rattles those who see the Premier League as the highest standard reachable.",
+        "Was Raya robbed & how did Europe react to Kane&#x27;s Ballon d&#x27;Or win?",
+        "Image source, Getty ImagesImage caption, Unai Simon was named the world&#x27;s best goalkeeper at the recent Ballon d&#x27;Or ceremony",
+        "Back to the award. Most acceptance speeches are lists of names. This one drew a portrait of a man, and it explains why the voters got it right.",
+        "Simon&#x27;s mentor Asua spent 13 years in Bilbao working with young Athletic Club players, helping them keep their family ties and their studies alive next to football.",
+        "Simon told the Palladium Asua changed how he understood the game, and that what matters is \"the legacy one leaves when this is over\" - being remembered as a good person and a good team-mate.",
+        "He then turned to ex-Spain and Athletic goalkeeper Jose Angel Iribar, 83 years old and still an ambassador for the club.",
+        "Iribar, who holds the all-time appearances record at Athletic with 614 matches,  wore black as a homage to legendary goalkeeper Levin Yashin - the Russian &#x27;Black Spider&#x27; - and Simon wears the same colour as a tribute to Iribar.",
+        "Simon&#x27;s parents also got a mention, because they raised him with values later reinforced at Athletic: respect for authority, a work ethic and keeping close to people who love you.",
+        "Before Spain&#x27;s World Cup final triumph, Simon spoke about the natural order in which other goalkeepers could soon replace him. Arsenal&#x27;s David Raya is one of those players in that queue.",
+        "Before England&#x27;s Nations League visit to Spain on Sunday, Simon keeps his place with that competition beside him. Raya and Joan Garcia must wait for their moment to take the number one shirt of the best national team in the world.",
+        "Spain won the World Cup and Simon conceded the fewest goals during the tournament, which earned him the Golden Glove.",
+        "He conceded a single goal in the whole competition and kept seven clean sheets. His longest run without conceding lasted about 650 minutes, beating the 517-minute record of Italy&#x27;s Walter Zenga at the 1990 tournament."
       ]
     },
     "BD59A84223401E057B114CD7C24530FF": {
@@ -66616,6 +66709,33 @@
         "feed. READ THE LATEST WREXHAM NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m77ts6yxjt": {
+      "id": "ftbpro_01m77ts6yxjt",
+      "title": "Mauricio Pochettino’s Alarming Record in Cup Finals Serves As Warning to Man Utd",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/mauricio-pochettino-alarming-record-cup-finals-man-utd/app/?utm_source=fotmob&v=1794708000",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_87/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m77vsxkpn7cyavnrgc.jpg",
+      "publishedAt": "2026-11-15T02:00:00.000Z",
+      "paragraphs": [
+        "By Ewan Ross-Murray9:00 PM ESTMauricio Pochettino doesn’t boast the beefiest trophy cabinet. / Omar Vega/USSF/Getty ImagesEven amid Manchester United’s repeated forays into the abyss during the post-Sir Alex Ferguson era, muscle memory has kicked in regularly during domestic and continental cup competitions.",
+        "The Red Devils have reached nine cup finals over the past decade—excluding the Community Shield and UEFA Super Cup—despite some truly miserable stretches. Ruben Amorim, Erik ten Hag and Ole Gunnar Solskjær all competed for silverware and in some cases lifted trophies.",
+        "While this current iteration of United appears very far from adding to the club’s well-stocked trophy cabinet, winning major titles will be the ultimate objective for new manager Mauricio Pochettino, who has finally moved to Old Trafford after a 10-year flirtation period.",
+        "Expectations will be tempered upon arrival considering the abject position United find themselves in currently, but, sooner or later, the onus will be on Pochettino to guide the club back to its perch—and that inevitably requires more deep runs in cup competitions.",
+        "Unfortunately for United, their new appointment’s record on such occasions makes for grim viewing.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "Pochettino was beaten in his most recent final with the USMNT. / Omar Vega/Getty ImagesPochettino has earned renown for his man-management ability and tactical acumen during an impressive coaching career, but those skills have seldom translated to trophies. The 54-year-old has won just three pieces of silverware as a manager, all of which came during his time at Paris Saint-Germain—where trophies are never in short supply, no matter who’s in charge.",
+        "The Trophées des Champions—the French super cup—was his first triumph as PSG beat rivals Marseille 2–1 in the 2020 edition (actually played in 2021 due to Covid-19). Despite Pochettino inexplicably surrendering the Ligue 1 title to Lille later that season, the Argentine did at least enjoy success in the Coupe de France final, too, where PSG beat Monaco in front of an empty stadium.",
+        "Eventually, Pochettino got his hands on the Ligue 1 title the following season, shortly before his departure from Paris, but he was beaten by Lille in the Trophées des Champions match earlier in the campaign—the third of five cup final defeats in his career to date.",
+        "The first two losses were considerably more agonizing. Pochettino was heralded—and rightly so—for transforming Tottenham Hotspur into a serious force, led by the likes of Harry Kane, Son Heung-min and Christian Eriksen, but silverware still eluded him come his eventual dismissal in November 2019.",
+        "As Spurs chased their first trophy in seven years during the 2014–15 League Cup final, Pochettino and his players fell short at the hands of bitter London foes Chelsea, who were 2–0 winners under future Tottenham and United boss José Mourinho. Things would prove even more painful four years later, however, as Tottenham defied the odds to reach their first-ever Champions League final.",
+        "Emotions ran high after the 2019 Champions League final defeat. /  Charlotte Wilson/Offside/Getty ImagesPochettino, with the help of the inspired Lucas Moura, had conjured a magical turnaround in the semifinal against Ajax, but they were unable to produce any sorcery in the showpiece event as they sank to a 2–0 defeat to Liverpool. A teary-eyed Pochettino had suffered the biggest disappointment of his managerial career.",
+        "Liverpool were again the architects of Pochettino’s misery in 2024, this time while the South American was managing Chelsea. During his sole season at Stamford Bridge, he helped the Blues to the League Cup final, but Virgil van Dijk’s 118th-minute winner at Wembley resulted in heartbreak.",
+        "And Pochettino’s most recent appearance in a final ended in similar frustration. After diving into international management, he propeled the United States men’s national team to the 2025 Concacaf Gold Cup final against arch-rivals Mexico, but an early goal from Chris Richards proved immaterial as El Tri came from behind to claim a 2–1 victory.",
+        "That’s seven finals for Pochettino, yet only two triumphs. A warning for United, perhaps.",
+        "feed. READ THE LATEST MAN UTD NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
     "ftbpro_01m77vpy95ad": {
       "id": "ftbpro_01m77vpy95ad",
       "title": "How Mauricio Pochettino’s Man Utd Could Line Up With New Signings",
@@ -67750,6 +67870,37 @@
         "CM: Tyler Adams—7.6: Seemingly every rebound or second ball found its way to Adams. The USMNT captain dominated in midfield and was the main reason why his side overwhelmingly dominated possession."
       ]
     },
+    "ftbpro_01m7e0p7sv3h": {
+      "id": "ftbpro_01m7e0p7sv3h",
+      "title": "Four Takeaways From USMNT’s Unapologetic Thrashing of Haiti in Concacaf Nations League",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/four-takeaways-usmnt-unapologetic-thrashing-haiti-concacaf-nations-league/app/?utm_source=fotmob&v=1794713571",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2560,h_1440,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m7e663n50ggc556ee0.jpg",
+      "publishedAt": "2026-11-15T03:32:51.000Z",
+      "paragraphs": [
+        "By Sophia VeselyNov 14, 2026The USMNT dominated Haiti in the first leg of the quarterfinals. / JC Ruiz/Getty ImagesThere may be a lot of unrest and uncertainty right now within the U.S. men’s national team, but you wouldn’t know it.",
+        "The USMNT thrashed Haiti 6–0 in Miami in the first leg of the Concacaf Nations League quarterfinals on Saturday, just one day after manager Mauricio Pochettino signed a new contract to take charge of  Manchester United.",
+        "The deal shocked the soccer world, coming just four months after Pochettino inked a renewal with U.S. Soccer through the 2030 World Cup, involving him in every major facet of the federation for what was supposed to be the long haul.",
+        "The players themselves only received confirmation of Pochettino’s exit on Thursday; however, in the Argentine’s penultimate game on the touchline, they absolutely dazzled for him. The overwhelming victory all but seals the team’s advancement to the Nations League finals in March, which requires an aggregate win across both legs of the series. It also extends the USMNT’s win streak to five games, maintaining perfection in the post-World Cup era.",
+        "Here are four takeaways from the USMNT’s emphatic victory.",
+        "dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC",
+        "Christian Pulisic had a brace on Saturday. / JC Ruiz/Getty ImagesUpon Pulisic’s return to the USMNT, it was unclear the role he would play.",
+        "In the September-October window without him, a team of budding young talents cruised to four straight victories, leaving him firmly in the rearview. The team’s success only compounded the distrust Americans had in Pulisic’s ability to be a true talisman—an utter lack of confidence in the No. 10 ignited by his lackluster World Cup display this summer.",
+        "But a recent resurgence at club side AC Milan suggested that Pulisic might have a bit more magic up his sleeve, and what he performed on Saturday night was magic alright, at least in the second half.",
+        "In the first half at Nu Stadium, the attacking load was very much shared. Pulisic had flashes of creativity, a few terrifying drives into the final third, a couple moments of silky footwork, yet he was by no means the chief creator. He wasn’t the centerfold as he has so often been during his international career.",
+        "Next. What Does the Future Hold for Pulisic With USMNT?. What Does the Future Hold for Pulisic With USMNT?. dark",
+        "That all changed in the second half. Taken down in the box, Pulisic earned a penalty kick in the 61st minute, which he blasted through the center of the net. That finish was his first in competitive action for the USMNT in almost exactly two years, dating back to the 2024 Concacaf Nations League quarterfinals against Jamaica on Nov. 18.",
+        "It proved to be just the confidence boost he needed, finding the net again less than two minutes later on a line drive just outside the 18-yard box. It was his first brace in red, white and blue in over three years, dating back to 2023 Concacaf Nations League semifinals against Mexico.",
+        "Pulisic continued to stamp his authority all over the pitch, commanding the USMNT’s attacking motions until the final whistle and ending with a game-high nine touches in the opposition’s box. He effectively silenced all doubters and proved that he is still the same “Captain America” that he always was.",
+        "Auston Trusty could be Chris Richards’s new partner on the backline. / JC Ruiz/Getty ImagesA major personnel question has lingered in the wake of the retirement of USMNT captain Tim Ream: Who can partner Chris Richards on the backline?",
+        "The stalwart center back needs an equally strong presence beside him to help command the defense, and on multiple occasions, even Ream proved he wasn’t up to the task. It has left a glaring hole in the USMNT’s otherwise strong line, which is flanked by studs Antonee Robinson and Alex Freeman.",
+        "The team may finally have its answer: Auston Trusty.",
+        "The 28-year-old Celtic star is playing the best soccer of his career and has demonstrated his potential as Richards’s partner this fall. Not only is the 6'2&#34; player as aerially gifted as Richards—which provides assurance against opponents committed to the long-ball game—but he is as commanding in possession and as confident in his defensive duties, evidenced by how he stifled the dangerous Wilson Isidor.",
+        "To further compound his skillset, it was actually Trusty who opened the evening’s scoring, performing a flawless side volley to remind everyone of the danger he presents in offensive set pieces.",
+        "Trusty was included in Pochettino’s 26-man World Cup roster this summer but was perhaps pigeon-holed into a bench reinforcement role due to his versatility as both a fullback and center back. He was also likely overshadowed by the veteran leadership Ream could provide."
+      ]
+    },
     "ftbpro_01m7e2pfb5s2": {
       "id": "ftbpro_01m7e2pfb5s2",
       "title": "Gotham FC Are ‘Making Lemonade Out of Lemons’ Amid Stadium Relocation for NWSL Semifinal",
@@ -67779,6 +67930,62 @@
         "From Bloomfield, N.J. to Astoria, Queens, Tisch put down $2,000 at each of the four official watch party locations to make sure the fans who couldn’t fill the seats at Icahn still feel part of the action.",
         "“So many people are behind us, and we knew that not everyone could be here in person,” Averbuch West adds. “So it’s not just having people cheer us on from home, but also to get together and feel the community aspect of cheering for the team is really important. We love that people are gathering all over the place, including here.”",
         "For the players and staff at Gotham, they are giving this semifinal the importance it deserves. In 2025, the team knocked out the shield-winning Kansas City Current in the quarterfinals 2–1 with a stoppage-time goal from Katie [Stengel] Lampson. This time, Gotham get the home field deserving of their own shield win, and they’re considering Icahn their true home away from home."
+      ]
+    },
+    "ftbpro_01m7e5y81pxe": {
+      "id": "ftbpro_01m7e5y81pxe",
+      "title": "Every Dual National Now Cap-Tied to the USMNT Following Concacaf Nations League",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/every-dual-national-cap-tied-usmnt-concacaf-nations-league/app/?utm_source=fotmob&v=1794711600",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_35/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m7ef83vx1nxdag0m47.jpg",
+      "publishedAt": "2026-11-15T03:00:00.000Z",
+      "paragraphs": [
+        "By Zach Lowy10:00 PM ESTJulian Hall is now cap-tied to the USMNT. / JC Ruiz/Getty ImagesThe U.S. men’s national team made a triumphant return in its first competitive match since the 2026 World Cup. The Stars and Stripes demolished Haiti 6–0 on Saturday in the first leg of the Concacaf Nations League quarterfinals, ensuring that the second leg in Cincinnati is a mere formality.",
+        "In his first match since announcing his impending departure to Manchester United, USMNT manager Mauricio Pochettino fielded his strongest starting XI, with Christian Pulisic and Weston McKennie returning to action alongside Malik Tillman, Tyler Adams and Sebastian Berhalter in the midfield.",
+        "Chris Richards, Alex Freeman and Antonee Robinson continued in the backline, while Auston Trusty proved why he is one of the strongest contenders to fill Tim Ream’s void in central defense.",
+        "However, there were also a number of young prospects who got the chance to shine on Saturday night, becoming cap-tied to the USMNT in the process.",
+        "Here is every dual (or tri) national that sealed their future with the Stars and Stripes.",
+        "New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER",
+        "Julian Hall is officially committed to the USMNT. / JC Ruiz/Getty ImagesJulian Hall took Major League Soccer by storm this season as Red Bull New York’s starting center forward, so it’s no surprise that both the U.S. and Poland have been vying for his hand. However, it was the former who gave the 18-year-old his senior debut. Last month, Hall became just the third player in federation history to score in each of his first three USMNT appearances, before being held scoreless against Canada.",
+        "FIFA’s rules regarding dual nationals dictate that once a player under the age of 21 plays more than three competitive international matches for a nation—including at least one official competition—then they are locked into representing that country.",
+        "But while Hall had met the minimum threshold of total appearances last camp (four), he still hadn’t played in a competitive setting, meaning he wasn’t officially cap-tied. That changed on Saturday when he started up top in the Concacaf competition. Poland will now have to look elsewhere for a long-term replacement for 38-year-old Robert Lewandowski in attack.",
+        "Mathis Albert is proving that age is just a number. / JC Ruiz/Getty ImagesHe has only played two club matches this season, and he doesn’t turn 18 for another six months, but Mathis Albert is already emerging as an important figure in the USMNT’s attack.",
+        "After playing in all four friendlies in the previous window and even scoring against Chile, Albert made his competitive debut against Haiti after replacing Pulisic in the 81st minute. No matter what, he is now permanently cap-tied and will not be able to switch international allegiances to France or Germany.",
+        "Adri Mehmeti has enjoyed a breakout year for club and country. / Leonardo Fernandez/USSF/Getty ImagesAnother player who became permanently cap-tied in South Florida was Adri Mehmeti. The 17-year-old had played against Peru, Chile and Canada in the previous window, and by making his fourth appearance in a competitive setting, he is now tied to the USMNT. Having previously represented Albania at the U-15 level, he is now fully committed to representing the Stars and Stripes.",
+        "Justin Ellis is officially locked in with the USMNT. / Omar Vega/Getty ImagesWith the U.S. cruising to a 6–0 win, Pochettino brought on Justin Ellis for his fourth international appearance and permanently cap-tied the 19-year-old striker. It was a damning blow for Uruguay manager Diego Forlán, who traveled to Orlando in September to watch him play and attempt to poach him for La Celeste.",
+        "Diego Kochen is challenging Matt Freese for the USMNT's starting position between the sticks. / Leonardo Fernandez/USSF/Getty ImagesAfter making his USMNT debut against Peru and starting against Mexico in the September-October international window, Diego Kochen made his competitive debut on Saturday, playing the entirety of the USMNT’s win against Haiti. He has now kept a clean sheet throughout his two-and-a-half international matches thus far.",
+        "He still isn’t officially cap-tied, though. 20-year-old Kochen has played just three matches so far with the USMNT, meaning that Peru or Venezuela could still potentially convince him to switch over. However, if he plays at any point of the second leg against Haiti, then he will become officially cap-tied to the U.S.",
+        "There are several other dual nationals left for Pochettino to tie down on Tuesday, including Neil Pierre and Cavan Sullivan.",
+        "feed. READ THE LATEST USMNT NEWS, ANALYSIS AND INSIGHT FROM SI FC"
+      ]
+    },
+    "ftbpro_01m7e731q379": {
+      "id": "ftbpro_01m7e731q379",
+      "title": "‘No Racism in Spain’—Luis De La Fuente and Thomas Tuchel Thrown Into Fiery Debate",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/luis-de-la-fuente-thomas-tuchel-fiery-debate-racism-spain/app/?utm_source=fotmob&v=1794706766",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2422,h_1362,x_79,y_23/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m7e7tdqb9gkrztfcfq.jpg",
+      "publishedAt": "2026-11-15T01:39:26.000Z",
+      "paragraphs": [
+        "By Roberto Casillas8:39 PM ESTLuis de la Fuente (right) had a message for Thomas Tuchel.    / Michael Regan/The FA/Getty ImagesSpain manager Luis de la Fuente issued a passionate response to England boss Thomas Tuchel after the German said he’d “take our five minutes to inform the players” about the anti-racism protocol ahead of England’s UEFA Nations League trip to Spain.",
+        "England, set to play at the Metropolitano Stadium in the final match of the UEFA Nations League group stage, visits Madrid for the first time since 2004. It was during that international friendly at the  Bernabéu that former Three Lions players Ashley Cole, Shaun Wright-Phillips and Rio Ferdinand, among others, were subjected to racist abuse. The Spanish soccer federation was subsequently fined for the incidents.",
+        "Tuchel’s comments came after he was asked how he and the team would react if they were victims of racist abuse during Sunday’s long-awaited return to Madrid.",
+        "De la Fuente was likewise asked about the subject on the eve of the clash with England and delivered a passionate response when asked if Tuchel’s statement somehow suggested that Spanish soccer still has plenty of work to do to fight racism.",
+        "“I could say the opposite,” De la Fuente said. “What I can tell you, and pass this along to Thomas [Tuchel], is that there is no racism in Spain. Plain and simple, there’s no racism. Exactly the same as in England, in Spain there is no racism. None of us are racists.”",
+        "Sign Up to Get Informed With SI FC. dark. FREE NEWSLETTER. New SI FC Newsletter Global Embed",
+        "Thomas Tuchel (right) responded to De la Fuete and criticized reporters.  / Maynard Manyowa/News Images/NurPhoto/Getty ImagesDe la Fuente’s fiery response seemed to lack the full context of Tuchel’s initial comments, which the England manager subsequently addressed, visibly angered by the way he words were “twisted.”",
+        "“I was polite enough to answer a question from your colleagues,” Tuchel said Saturday. “And you run and ask the other coach and tell him that I talked about racism in Spain. It’s a perfect example of how it works, because I never talked about racism in Spain.",
+        "“I answered politely a question about what happens, I never expect racism, and the dressing room is the most anti-racist place on earth. And that’s exactly how it works, you create a lot of confusion for absolutely nothing. It’s a perfect example of how it should not work.”",
+        "“It got twisted,” Tuchel added. “Because I said I always expect a friendly atmosphere, and I always expect, now if we play away, I expect emotional and of course supporting fans from Spain for their national team. That’s what I expect.",
+        "“But I don’t expect racism nowhere, and I’m shocked if it happens, and it should happen nowhere. I’m the first one to stand up to these kind of values. Then I got asked ‘what will happen if,’ and I said if it happens, there’s a protocol in place. That’s it.",
+        "“But my trust is that we have a friendly atmosphere, that we have an atmosphere who is clearly in favor of the Spanish team, and that football does what it does best: bring people together and not divide people. That’s 100% clear.”",
+        "Real Madrid winger Vinícius Júnior has been victim of racist abuse multiple times during his time in Spain.  / Jose Breton/Pics Action/NurPhoto/Getty ImagesAs much as it seems De la Fuente’s response to Tuchel comes from an apparent misunderstanding, the Spanish boss is also clearly ignoring the various acts of racism that have stained Spanish soccer in recent times.",
+        "Real Madrid winger Vinícius Júnior has been subject to racist abuse in multiple La Liga grounds, and he even went to court accusing Valencia fans of racially abusing him during a match at Mestalla Stadium in 2023.",
+        "Earlier in 2026, Spanish fans at Espanyol’s Stadium in Barcelona sung anti-Muslim chants in the stands during a friendly match against Egypt. Spain star Lamine Yamal—who is Muslim—later denounced the “ignorant and racist” chants.",
+        "Spain’s federation was fined €20,000 ($22,000), and La Roja was forced to play in a partially closed stadium during its first match of the September–October international window as punishment.",
+        "READ THE LATEST SOCCER NEWS, ANALYSIS AND INSIGHT FROM SI FC. feed"
       ]
     },
     "fuvk7p3c6b561s66ow0vu2529": {
