@@ -2,7 +2,7 @@
   "competitionId": "54",
   "competitionName": "Bundesliga",
   "season": "2026/2027",
-  "updatedAt": "2026-11-20T14:57:52.744Z",
+  "updatedAt": "2026-11-20T23:43:07.134Z",
   "table": [
     {
       "position": 1,
@@ -10,14 +10,14 @@
       "teamName": "Bayern München",
       "shortName": "Bayern München",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9823.png",
-      "played": 9,
+      "played": 10,
       "won": 6,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 0,
-      "goalsFor": 29,
-      "goalsAgainst": 9,
+      "goalsFor": 30,
+      "goalsAgainst": 10,
       "goalDifference": 20,
-      "points": 21,
+      "points": 22,
       "form": [
         "#2AD572"
       ]
@@ -219,6 +219,21 @@
     },
     {
       "position": 14,
+      "teamId": "8722",
+      "teamName": "1. FC Köln",
+      "shortName": "Köln",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8722.png",
+      "played": 10,
+      "won": 2,
+      "drawn": 4,
+      "lost": 4,
+      "goalsFor": 11,
+      "goalsAgainst": 15,
+      "goalDifference": -4,
+      "points": 10
+    },
+    {
+      "position": 15,
       "teamId": "8406",
       "teamName": "Augsburg",
       "shortName": "Augsburg",
@@ -230,21 +245,6 @@
       "goalsFor": 20,
       "goalsAgainst": 20,
       "goalDifference": 0,
-      "points": 9
-    },
-    {
-      "position": 15,
-      "teamId": "8722",
-      "teamName": "1. FC Köln",
-      "shortName": "Köln",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8722.png",
-      "played": 9,
-      "won": 2,
-      "drawn": 3,
-      "lost": 4,
-      "goalsFor": 10,
-      "goalsAgainst": 14,
-      "goalDifference": -4,
       "points": 9
     },
     {

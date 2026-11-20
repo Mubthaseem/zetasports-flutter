@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-11-20T14:57:50.848Z",
+  "updatedAt": "2026-11-20T23:43:04.335Z",
   "table": [
     {
       "position": 1,
@@ -118,13 +118,13 @@
       "teamName": "Athletic Club",
       "shortName": "Athletic Club",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8315.png",
-      "played": 11,
+      "played": 12,
       "won": 4,
       "drawn": 4,
-      "lost": 3,
+      "lost": 4,
       "goalsFor": 15,
-      "goalsAgainst": 11,
-      "goalDifference": 4,
+      "goalsAgainst": 12,
+      "goalDifference": 3,
       "points": 16
     },
     {
@@ -159,6 +159,21 @@
     },
     {
       "position": 10,
+      "teamId": "8558",
+      "teamName": "Espanyol",
+      "shortName": "Espanyol",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8558.png",
+      "played": 13,
+      "won": 4,
+      "drawn": 3,
+      "lost": 6,
+      "goalsFor": 14,
+      "goalsAgainst": 14,
+      "goalDifference": 0,
+      "points": 15
+    },
+    {
+      "position": 11,
       "teamId": "8696",
       "teamName": "Racing Santander",
       "shortName": "Racing Santander",
@@ -173,7 +188,7 @@
       "points": 14
     },
     {
-      "position": 11,
+      "position": 12,
       "teamId": "9910",
       "teamName": "Celta Vigo",
       "shortName": "Celta Vigo",
@@ -188,7 +203,7 @@
       "points": 13
     },
     {
-      "position": 12,
+      "position": 13,
       "teamId": "9866",
       "teamName": "Deportivo Alavés",
       "shortName": "Deportivo Alavés",
@@ -201,21 +216,6 @@
       "goalsAgainst": 17,
       "goalDifference": -2,
       "points": 13
-    },
-    {
-      "position": 13,
-      "teamId": "8558",
-      "teamName": "Espanyol",
-      "shortName": "Espanyol",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8558.png",
-      "played": 12,
-      "won": 3,
-      "drawn": 3,
-      "lost": 6,
-      "goalsFor": 13,
-      "goalsAgainst": 14,
-      "goalDifference": -1,
-      "points": 12
     },
     {
       "position": 14,
