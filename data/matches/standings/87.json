@@ -2,7 +2,7 @@
   "competitionId": "87",
   "competitionName": "LaLiga",
   "season": "2026/2027",
-  "updatedAt": "2026-11-21T14:17:01.528Z",
+  "updatedAt": "2026-11-21T22:48:51.411Z",
   "table": [
     {
       "position": 1,
@@ -28,14 +28,14 @@
       "teamName": "Real Madrid",
       "shortName": "Real Madrid",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8633.png",
-      "played": 12,
-      "won": 10,
+      "played": 13,
+      "won": 11,
       "drawn": 0,
       "lost": 2,
-      "goalsFor": 31,
-      "goalsAgainst": 10,
-      "goalDifference": 21,
-      "points": 30,
+      "goalsFor": 33,
+      "goalsAgainst": 11,
+      "goalDifference": 22,
+      "points": 33,
       "form": [
         "#2AD572"
       ]
@@ -64,14 +64,14 @@
       "teamName": "Real Betis",
       "shortName": "Real Betis",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8603.png",
-      "played": 12,
+      "played": 13,
       "won": 8,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 2,
-      "goalsFor": 20,
-      "goalsAgainst": 15,
+      "goalsFor": 21,
+      "goalsAgainst": 16,
       "goalDifference": 5,
-      "points": 26,
+      "points": 27,
       "form": [
         "#2AD572"
       ]
@@ -100,14 +100,14 @@
       "teamName": "Sevilla",
       "shortName": "Sevilla",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8302.png",
-      "played": 12,
+      "played": 13,
       "won": 5,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 4,
-      "goalsFor": 17,
-      "goalsAgainst": 19,
+      "goalsFor": 18,
+      "goalsAgainst": 20,
       "goalDifference": -2,
-      "points": 18,
+      "points": 19,
       "form": [
         "#02CCF0"
       ]
@@ -129,19 +129,18 @@
     },
     {
       "position": 8,
-      "teamId": "9783",
-      "teamName": "Deportivo A Coruña",
-      "shortName": "Deportivo A Coruña",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9783.png",
+      "teamId": "9866",
+      "teamName": "Deportivo Alavés",
+      "shortName": "Deportivo Alavés",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9866.png",
       "played": 13,
-      "won": 3,
-      "drawn": 7,
-      "lost": 3,
-      "goalsFor": 16,
-      "goalsAgainst": 15,
-      "goalDifference": 1,
-      "points": 16,
-      "qualificationZone": "Active"
+      "won": 4,
+      "drawn": 4,
+      "lost": 5,
+      "goalsFor": 18,
+      "goalsAgainst": 18,
+      "goalDifference": 0,
+      "points": 16
     },
     {
       "position": 9,
@@ -175,19 +174,18 @@
     },
     {
       "position": 11,
-      "teamId": "9866",
-      "teamName": "Deportivo Alavés",
-      "shortName": "Deportivo Alavés",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9866.png",
+      "teamId": "9783",
+      "teamName": "Deportivo A Coruña",
+      "shortName": "Deportivo A Coruña",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9783.png",
       "played": 13,
       "won": 3,
-      "drawn": 5,
-      "lost": 5,
+      "drawn": 6,
+      "lost": 4,
       "goalsFor": 16,
-      "goalsAgainst": 18,
-      "goalDifference": -2,
-      "points": 14,
-      "qualificationZone": "Active"
+      "goalsAgainst": 17,
+      "goalDifference": -1,
+      "points": 15
     },
     {
       "position": 12,
@@ -210,13 +208,13 @@
       "teamName": "Celta Vigo",
       "shortName": "Celta Vigo",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9910.png",
-      "played": 12,
+      "played": 13,
       "won": 2,
       "drawn": 7,
-      "lost": 3,
-      "goalsFor": 10,
-      "goalsAgainst": 10,
-      "goalDifference": 0,
+      "lost": 4,
+      "goalsFor": 11,
+      "goalsAgainst": 12,
+      "goalDifference": -1,
       "points": 13
     },
     {
@@ -225,13 +223,13 @@
       "teamName": "Rayo Vallecano",
       "shortName": "Rayo Vallecano",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8370.png",
-      "played": 11,
+      "played": 12,
       "won": 3,
       "drawn": 3,
-      "lost": 5,
+      "lost": 6,
       "goalsFor": 15,
-      "goalsAgainst": 21,
-      "goalDifference": -6,
+      "goalsAgainst": 22,
+      "goalDifference": -7,
       "points": 12
     },
     {
@@ -266,6 +264,21 @@
     },
     {
       "position": 17,
+      "teamId": "10267",
+      "teamName": "Valencia",
+      "shortName": "Valencia",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10267.png",
+      "played": 13,
+      "won": 3,
+      "drawn": 3,
+      "lost": 7,
+      "goalsFor": 9,
+      "goalsAgainst": 20,
+      "goalDifference": -11,
+      "points": 12
+    },
+    {
+      "position": 18,
       "teamId": "8581",
       "teamName": "Levante",
       "shortName": "Levante",
@@ -277,10 +290,13 @@
       "goalsFor": 16,
       "goalsAgainst": 21,
       "goalDifference": -5,
-      "points": 11
+      "points": 11,
+      "form": [
+        "#FF4646"
+      ]
     },
     {
-      "position": 18,
+      "position": 19,
       "teamId": "10268",
       "teamName": "Elche",
       "shortName": "Elche",
@@ -293,24 +309,6 @@
       "goalsAgainst": 20,
       "goalDifference": -6,
       "points": 10,
-      "form": [
-        "#FF4646"
-      ]
-    },
-    {
-      "position": 19,
-      "teamId": "10267",
-      "teamName": "Valencia",
-      "shortName": "Valencia",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10267.png",
-      "played": 12,
-      "won": 2,
-      "drawn": 3,
-      "lost": 7,
-      "goalsFor": 8,
-      "goalsAgainst": 20,
-      "goalDifference": -12,
-      "points": 9,
       "form": [
         "#FF4646"
       ]
