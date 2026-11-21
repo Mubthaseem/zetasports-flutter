@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-11-21T05:49:04.555Z",
+  "updatedAt": "2026-11-21T14:16:58.904Z",
   "table": [
     {
       "position": 1,
@@ -46,17 +46,18 @@
       "teamName": "Manchester City",
       "shortName": "Man City",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8456.png",
-      "played": 10,
+      "played": 11,
       "won": 7,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 3,
-      "goalsFor": 21,
-      "goalsAgainst": 13,
+      "goalsFor": 22,
+      "goalsAgainst": 14,
       "goalDifference": 8,
-      "points": 21,
+      "points": 22,
       "form": [
         "#2AD572"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 4,
@@ -216,6 +217,22 @@
     },
     {
       "position": 14,
+      "teamId": "9879",
+      "teamName": "Fulham",
+      "shortName": "Fulham",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
+      "played": 11,
+      "won": 2,
+      "drawn": 5,
+      "lost": 4,
+      "goalsFor": 11,
+      "goalsAgainst": 13,
+      "goalDifference": -2,
+      "points": 11,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 15,
       "teamId": "9902",
       "teamName": "Ipswich Town",
       "shortName": "Ipswich",
@@ -228,21 +245,6 @@
       "goalsAgainst": 20,
       "goalDifference": -5,
       "points": 11
-    },
-    {
-      "position": 15,
-      "teamId": "9879",
-      "teamName": "Fulham",
-      "shortName": "Fulham",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9879.png",
-      "played": 10,
-      "won": 2,
-      "drawn": 4,
-      "lost": 4,
-      "goalsFor": 10,
-      "goalsAgainst": 12,
-      "goalDifference": -2,
-      "points": 10
     },
     {
       "position": 16,
