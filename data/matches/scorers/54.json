@@ -2,10 +2,20 @@
   "competitionId": "54",
   "competitionName": "Bundesliga",
   "season": "2026/2027",
-  "updatedAt": "2026-11-22T14:08:22.271Z",
+  "updatedAt": "2026-11-22T23:17:07.986Z",
   "scorers": [
     {
       "rank": 1,
+      "playerId": "276791",
+      "playerName": "Niclas Füllkrug",
+      "teamId": "8697",
+      "teamName": "Werder Bremen",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8697.png",
+      "goals": 10,
+      "assists": 0
+    },
+    {
+      "rank": 2,
       "playerId": "540097",
       "playerName": "Patrik Schick",
       "teamId": "8178",
@@ -15,23 +25,13 @@
       "assists": 0
     },
     {
-      "rank": 2,
-      "playerId": "276791",
-      "playerName": "Niclas Füllkrug",
-      "teamId": "8697",
-      "teamName": "Werder Bremen",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8697.png",
-      "goals": 9,
-      "assists": 0
-    },
-    {
       "rank": 3,
-      "playerId": "947901",
-      "playerName": "Jonathan Burkardt",
-      "teamId": "9810",
-      "teamName": "Eintracht Frankfurt",
-      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/9810.png",
-      "goals": 6,
+      "playerId": "198316",
+      "playerName": "Michael Gregoritsch",
+      "teamId": "8406",
+      "teamName": "Augsburg",
+      "teamLogoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8406.png",
+      "goals": 7,
       "assists": 0
     }
   ]

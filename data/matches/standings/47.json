@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-11-22T14:08:17.720Z",
+  "updatedAt": "2026-11-22T23:17:03.757Z",
   "table": [
     {
       "position": 1,
@@ -30,16 +30,15 @@
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10204.png",
       "played": 11,
       "won": 7,
-      "drawn": 2,
-      "lost": 2,
+      "drawn": 1,
+      "lost": 3,
       "goalsFor": 26,
-      "goalsAgainst": 7,
-      "goalDifference": 19,
-      "points": 23,
+      "goalsAgainst": 9,
+      "goalDifference": 17,
+      "points": 22,
       "form": [
         "#2AD572"
-      ],
-      "qualificationZone": "Active"
+      ]
     },
     {
       "position": 3,
@@ -61,6 +60,24 @@
     },
     {
       "position": 4,
+      "teamId": "8650",
+      "teamName": "Liverpool",
+      "shortName": "Liverpool",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
+      "played": 11,
+      "won": 6,
+      "drawn": 3,
+      "lost": 2,
+      "goalsFor": 18,
+      "goalsAgainst": 10,
+      "goalDifference": 8,
+      "points": 21,
+      "form": [
+        "#2AD572"
+      ]
+    },
+    {
+      "position": 5,
       "teamId": "8678",
       "teamName": "AFC Bournemouth",
       "shortName": "Bournemouth",
@@ -71,24 +88,6 @@
       "lost": 3,
       "goalsFor": 18,
       "goalsAgainst": 14,
-      "goalDifference": 4,
-      "points": 18,
-      "form": [
-        "#2AD572"
-      ]
-    },
-    {
-      "position": 5,
-      "teamId": "8650",
-      "teamName": "Liverpool",
-      "shortName": "Liverpool",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8650.png",
-      "played": 10,
-      "won": 5,
-      "drawn": 3,
-      "lost": 2,
-      "goalsFor": 14,
-      "goalsAgainst": 10,
       "goalDifference": 4,
       "points": 18,
       "form": [
@@ -172,6 +171,21 @@
     },
     {
       "position": 11,
+      "teamId": "8667",
+      "teamName": "Hull City",
+      "shortName": "Hull",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8667.png",
+      "played": 11,
+      "won": 3,
+      "drawn": 5,
+      "lost": 3,
+      "goalsFor": 13,
+      "goalsAgainst": 11,
+      "goalDifference": 2,
+      "points": 14
+    },
+    {
+      "position": 12,
       "teamId": "10252",
       "teamName": "Aston Villa",
       "shortName": "Aston Villa",
@@ -186,7 +200,7 @@
       "points": 14
     },
     {
-      "position": 12,
+      "position": 13,
       "teamId": "10261",
       "teamName": "Newcastle United",
       "shortName": "Newcastle",
@@ -199,22 +213,6 @@
       "goalsAgainst": 18,
       "goalDifference": -3,
       "points": 13
-    },
-    {
-      "position": 13,
-      "teamId": "8667",
-      "teamName": "Hull City",
-      "shortName": "Hull",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8667.png",
-      "played": 11,
-      "won": 2,
-      "drawn": 6,
-      "lost": 3,
-      "goalsFor": 11,
-      "goalsAgainst": 11,
-      "goalDifference": 0,
-      "points": 12,
-      "qualificationZone": "Active"
     },
     {
       "position": 14,
@@ -300,13 +298,13 @@
       "teamName": "Manchester United",
       "shortName": "Man United",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10260.png",
-      "played": 10,
+      "played": 11,
       "won": 1,
       "drawn": 5,
-      "lost": 4,
+      "lost": 5,
       "goalsFor": 14,
-      "goalsAgainst": 19,
-      "goalDifference": -5,
+      "goalsAgainst": 23,
+      "goalDifference": -9,
       "points": 8,
       "form": [
         "#FF4646"
