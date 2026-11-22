@@ -2,7 +2,7 @@
   "competitionId": "47",
   "competitionName": "Premier League",
   "season": "2026/2027",
-  "updatedAt": "2026-11-22T05:20:37.172Z",
+  "updatedAt": "2026-11-22T14:08:17.720Z",
   "table": [
     {
       "position": 1,
@@ -28,17 +28,18 @@
       "teamName": "Brighton & Hove Albion",
       "shortName": "Brighton",
       "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/10204.png",
-      "played": 10,
+      "played": 11,
       "won": 7,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 2,
       "goalsFor": 26,
       "goalsAgainst": 7,
       "goalDifference": 19,
-      "points": 22,
+      "points": 23,
       "form": [
         "#2AD572"
-      ]
+      ],
+      "qualificationZone": "Active"
     },
     {
       "position": 3,
@@ -201,6 +202,22 @@
     },
     {
       "position": 13,
+      "teamId": "8667",
+      "teamName": "Hull City",
+      "shortName": "Hull",
+      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8667.png",
+      "played": 11,
+      "won": 2,
+      "drawn": 6,
+      "lost": 3,
+      "goalsFor": 11,
+      "goalsAgainst": 11,
+      "goalDifference": 0,
+      "points": 12,
+      "qualificationZone": "Active"
+    },
+    {
+      "position": 14,
       "teamId": "8669",
       "teamName": "Coventry City",
       "shortName": "Coventry",
@@ -213,21 +230,6 @@
       "goalsAgainst": 21,
       "goalDifference": -8,
       "points": 12
-    },
-    {
-      "position": 14,
-      "teamId": "8667",
-      "teamName": "Hull City",
-      "shortName": "Hull",
-      "logoUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8667.png",
-      "played": 10,
-      "won": 2,
-      "drawn": 5,
-      "lost": 3,
-      "goalsFor": 11,
-      "goalsAgainst": 11,
-      "goalDifference": 0,
-      "points": 11
     },
     {
       "position": 15,
