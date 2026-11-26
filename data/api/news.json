@@ -2,11 +2,11 @@
   "status": "success",
   "meta": {
     "platform": "Zeta Sports Open Football API - News & Articles Feed",
-    "generatedAt": "2026-11-26T01:40:04.082Z",
+    "generatedAt": "2026-11-26T08:49:42.440Z",
     "apiKey": "zeta_public_free_feed",
     "summary": {
       "newsHeadlinesCount": 20,
-      "fullArticlesCount": 3070
+      "fullArticlesCount": 3079
     },
     "endpoints": {
       "raw": "https://raw.githubusercontent.com/Mubthaseem/zetasports-flutter/main/data/api/news.json",
@@ -14,6 +14,87 @@
     }
   },
   "news": [
+    {
+      "id": "80CBF17C3C444B5D83D7EAA2C2C47BF7",
+      "title": "New Manager, No Europe, But Same Old Problems for Chelsea",
+      "description": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/chelsea-problems-xabi-alonso-stats",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/chelsea-alonso-palmer-martinez.jpg",
+      "publishedAt": "2026-11-26T08:01:58.000Z"
+    },
+    {
+      "id": "A1785C6160263AA55583D858B0762409",
+      "title": "Can Hull City Keep Defying the xG Gods?",
+      "description": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/hull-city-defying-xg-gods-stats",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/can-hull-city-keep-defying-the-xg-gods-scaled.webp",
+      "publishedAt": "2026-11-26T08:01:55.000Z"
+    },
+    {
+      "id": "B7DE2C755C26656FD2FBC53C7052A1F3",
+      "title": "The 10% Club: Opta’s Best Under-the-Radar FPL Picks for Gameweeks 12 and 13",
+      "description": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/opta-best-fpl-picks-gameweek-12-13-2026-27",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/fpl-picks-gw-12-and-13.png",
+      "publishedAt": "2026-11-26T08:01:51.000Z"
+    },
+    {
+      "id": "8A1715410E39BB3DC3E168AB24143463",
+      "title": "How Close Is Bournemouth’s Winning Run to a Premier League Record?",
+      "description": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/bournemouth-winning-run-record-compared-premier-league-clubs-stats",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/bournemouth-winning-streak.jpg",
+      "publishedAt": "2026-11-26T07:50:06.000Z"
+    },
+    {
+      "id": "5619EEB3CFF11C7D811BC7E4AD3EB6E4",
+      "title": "Why KMI Panel frustrates referees too - and impacts their salary",
+      "description": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cq20x16zxxzeo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/ca44/live/8c9006a0-e7fc-11f1-85d8-8d5c5b3dc8c8.jpg",
+      "publishedAt": "2026-11-26T07:28:18.000Z"
+    },
+    {
+      "id": "E4D3F5969CE90128C06C8E339C01C8AA",
+      "title": "'Laughing gas has ended careers' - so how common is it in football?",
+      "description": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c6kgdrj9nxgdo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/0c0a/live/8a3de1f0-e8fc-11f1-a77a-271abcb79951.jpg",
+      "publishedAt": "2026-11-26T06:18:30.000Z"
+    },
+    {
+      "id": "ftbpro_01m8764e2nev",
+      "title": "10 Wingers PSG Could Target in Search of Champions League Three-Peat",
+      "description": "SI",
+      "source": "SI",
+      "sourceUrl": "/embed/news/01m8764e2nev/10-wingers-psg-could-target-search-champions-league-three-peat",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m81za6w4a16kpek8jg.jpg",
+      "publishedAt": "2026-11-26T05:00:00.000Z"
+    },
+    {
+      "id": "33D6A071779677C3AB44B7BCD5AAA9A0",
+      "title": "Pochettino's whirlwind week ends with optimism and frustration",
+      "description": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c6vg24l724l4o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/7aff/live/89296710-e930-11f1-99a1-253766e7ad8b.jpg",
+      "publishedAt": "2026-11-26T00:24:48.000Z"
+    },
+    {
+      "id": "2FB18BF8A77AB212A0D4FFA02731D58F",
+      "title": "Divots, howlers and bad decisions - dissecting Man Utd's draw in Lisbon",
+      "description": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cvrlg074ld74o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/8572/live/fb0ba300-e92d-11f1-a094-5fdc692f3e33.jpg",
+      "publishedAt": "2026-11-26T00:22:28.000Z"
+    },
     {
       "id": "ftbpro_01m89nqcs8bz",
       "title": "Transfer Rumors: Haaland Requests Man City Exit; Osimhen’s Man Utd Plan",
@@ -112,87 +193,6 @@
       "sourceUrl": "https://theanalyst.com/articles/club-brugge-vs-liverpool-stats-champions-league-11-2026",
       "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/isak-celebration-v-brugge.png",
       "publishedAt": "2026-11-25T22:32:53.000Z"
-    },
-    {
-      "id": "gxop4mwf0m7p1mnlcdlnbjrcm",
-      "title": "Sporting CP 2-2 Manchester United: Lammens howler gifts Suarez late equaliser",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/gxop4mwf0m7p1mnlcdlnbjrcm-sporting-cp-2-2-manchester-united-lammens-howler-gifts-suarez-late-equaliser",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/4d/d8/suarez_t41wbxwvfd5s1xzr8jn1wn0xd.jpg?t=424316114&w=1260&h=708",
-      "publishedAt": "2026-11-25T22:30:20.000Z"
-    },
-    {
-      "id": "855DF2028D198A2BE951383A76D2738E",
-      "title": "Sporting CP 2-2 Man Utd Stats: Lammens Howler Denies Pochettino First Victory",
-      "description": "The Analyst",
-      "source": "The Analyst",
-      "sourceUrl": "https://theanalyst.com/articles/sporting-cp-vs-man-utd-stats-champions-league-11-2026",
-      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/lammens-howler-v-sporting.png",
-      "publishedAt": "2026-11-25T22:28:32.000Z"
-    },
-    {
-      "id": "ftbpro_01m8a408stpw",
-      "title": "Man Utd Player Ratings vs. Sporting CP: Individual Errors Cancel Out Fernandes’s Heroics",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m8a408stpw/man-utd-player-ratings-vs-sporting-cp-individual-errors-cancel-out-fernandess-heroics",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_14/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m8acxcdqt8gp0e4x6t.jpg",
-      "publishedAt": "2026-11-25T22:26:48.000Z"
-    },
-    {
-      "id": "531akwsps7gp1e704cat2a31h",
-      "title": "Paris Saint-Germain 2-2 Roma: Malen penalty ends champions' perfect start",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/531akwsps7gp1e704cat2a31h-paris-saint-germain-2-2-roma-malen-penalty-ends-champions-perfect-start",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/d5/33/donyell-malen_irtd04p634xp1cc6gn3wj9sqc.jpg?t=423183922&w=1260&h=708",
-      "publishedAt": "2026-11-25T22:22:55.000Z"
-    },
-    {
-      "id": "ftbpro_01m8a3p2m9cq",
-      "title": "Liverpool Player Ratings vs. Club Brugge: Isak Delights in Convincing European Win",
-      "description": "SI",
-      "source": "SI",
-      "sourceUrl": "/embed/news/01m8a3p2m9cq/liverpool-player-ratings-vs-club-brugge-isak-delights-convincing-european-win",
-      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1024,h_576,x_0,y_76/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m8ab3sebee69hgew0g.jpg",
-      "publishedAt": "2026-11-25T22:15:37.000Z"
-    },
-    {
-      "id": "1tekquzmbuavi1wii2dklhkef7",
-      "title": "Lille 2-1 Bayern Munich: Pavlovic error damages Kompany's top-eight push",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1tekquzmbuavi1wii2dklhkef7-lille-2-1-bayern-munich-pavlovic-error-damages-kompanys-top-eight-push",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/f3/61/aleksandar-pavlovic_1g3xr9envqlps1ranhb8gerp0x.jpg?t=421689858&w=1260&h=708",
-      "publishedAt": "2026-11-25T22:12:49.000Z"
-    },
-    {
-      "id": "7h4xfuzvfpc5zxgil3jlbc24",
-      "title": "Club Brugge 0-3 Liverpool: Isak double boosts Iraola's top-eight hopes",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/7h4xfuzvfpc5zxgil3jlbc24-club-brugge-0-3-liverpool-isak-double-boosts-iraolas-top-eight-hopes",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/8b/23/alexander-isak_1ontuoj6zyo8g1h2jclos2u05z.png?t=420592434&w=640&h=360",
-      "publishedAt": "2026-11-25T22:07:05.000Z"
-    },
-    {
-      "id": "566624C0C9AA859B153BA0F9A10B8451",
-      "title": "Ferguson's Glentoran reign hits early turbulence",
-      "description": "BBC",
-      "source": "BBC",
-      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cxzd9v7457nro?at_medium=RSS&at_campaign=rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/06c6/live/644041b0-e90f-11f1-8383-53f283141713.jpg",
-      "publishedAt": "2026-11-25T21:41:00.000Z"
-    },
-    {
-      "id": "1t6aia59au3qc1ravx3sjmoxoa",
-      "title": "Hinshelwood targets Brighton bounce-back in Conference League",
-      "description": "FotMob",
-      "source": "FotMob",
-      "sourceUrl": "/news/1t6aia59au3qc1ravx3sjmoxoa-hinshelwood-targets-brighton-bounce-back-conference-league",
-      "imageUrl": "https://images.performgroup.com/di/library/omnisport/62/b/jack-hinshelwood_13n6dgqke02px1qeq55tpz9oks.png?t=402809858&w=1260&h=708",
-      "publishedAt": "2026-11-25T21:29:38.000Z"
     }
   ],
   "articles": {
@@ -21030,6 +21030,37 @@
         "He was extremely unfortunate to also end up on the losing side, too, becoming the sixth player ever to score a hat-trick and lose a Premier League game, and the first since Roque Santa Cruz for Blackburn vs Wigan in December 2007."
       ]
     },
+    "2FB18BF8A77AB212A0D4FFA02731D58F": {
+      "id": "2FB18BF8A77AB212A0D4FFA02731D58F",
+      "title": "Divots, howlers and bad decisions - dissecting Man Utd's draw in Lisbon",
+      "subtitle": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cvrlg074ld74o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/8572/live/fb0ba300-e92d-11f1-a094-5fdc692f3e33.jpg",
+      "publishedAt": "2026-11-26T00:22:28.000Z",
+      "paragraphs": [
+        "BBC HomepageSkip to contentAccessibility HelpYour accountHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsMore menuMore menuSearch BBCHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsClose menu BBC SportMenuHomeFootballCricketFormula 1Rugby UTennisGolfCyclingAthleticsMoreA-Z SportsAmerican FootballAthleticsBasketballBoxingCricketCyclingDartsDisability SportFootballFormula 1Gaelic GamesGolfGymnasticsHorse RacingMixed Martial ArtsMotorsportNetballRugby LeagueRugby UnionSnookerSwimmingTennisFull Sports A-ZMore from SportEnglandScotlandWalesNorthern IrelandQuizzesNews FeedsHelp & FAQsManchester UnitedScores & FixturesTableLive Match UpdatesOn BBC SoundsTop ScorersWho Am I? QuizDivots, howlers and bad decisions - dissecting Man Utd&#x27;s draw in LisbonTo play this video you need to enable JavaScript in your browser.This video can not be played",
+        "Three pens and a red as Man Utd draw against Sporting",
+        "Manchester United were held to a draw in a chaotic and controversial Champions League encounter with Sporting in Lisbon with Mauricio Pochettino denied a first win as United head coach despite his side turning around a first-half deficit.",
+        "They were behind at the break after goalkeeper Senne Lammens conceded from a penalty he gave away – having saved another just minutes before.",
+        "United then had a goal disallowed before scoring a penalty of their own through Bruno Fernandes, who then put them in front with the help of a large divot on the pitch.",
+        "Fernandes appeared to have inadvertently created the divot himself moments earlier when turning in the penalty area.",
+        "There was more drama as Lammens dropped the ball for Sporting&#x27;s equaliser before Pochettino&#x27;s side had what they thought was a winner ruled out.",
+        "Polish referee Szymon Marciniak was at the centre of much of the drama with midfielder Youri Tielemans sent off in stoppage time.",
+        "BBC Sport breaks down each incident after a crazy night.",
+        "Lammens saved a poor penalty from Sporting&#x27;s Luis Suarez, given after Lisandro Martinez left a leg out which caught Geny Catamo.",
+        "The Belgium keeper got down to hold on to Suarez&#x27;s low effort which looked set to be a huge boost for the underperforming United number one.",
+        "Image source, Getty ImagesImage caption, Suarez scored the second from the spot",
+        "Pochettino&#x27;s whirlwind week ends with optimism and frustration",
+        "Published8 hours agoSporting score second penalty (31 mins)Lammens went from hero to zero in the space of 76 seconds as he rushed out of his goal and took out Maxi Araujo in the United box.",
+        "Noussair Mazraoui was caught out by a ball over the top but it was reckless from Lammens and this time Suarez buried the spot-kick.",
+        "Former United midfielder Owen Hargreaves told TNT Sports: \"There is no way Senne Lammens can get there. Just stay in the goal.\"",
+        "Amad Diallo thought he had equalised for United before half-time when he headed in after his first attempted was turned on to the cross bar.",
+        "However, referee Marciniak blew his whistle for a foul against Youri Tielemans.",
+        "Replays showed Tielemans won the ball and pulled out of the challenge after he played the ball through to Amad.",
+        "BBC Sport&#x27;s Dale Johnson: \"Marciniak believed that Goncalo Inacio had been fouled by Youri Tielemens on the edge of the area as the Manchester United midfielder played a pass through."
+      ]
+    },
     "2c7hipzzm7ng1hwkildq0rgj2": {
       "id": "2c7hipzzm7ng1hwkildq0rgj2",
       "title": "Leverkusen aiming to build on European win against leaders Freiburg",
@@ -21528,6 +21559,37 @@
         "Greece can still take plenty of positives in knowing they are also unbeaten (W2 D1), sitting top of Group A2 and after causing plenty of trouble for both Germany and Netherlands so far in the competition."
       ],
       "html": "<p>Tijjani Reijnders scored an 89th-minute equaliser as the Netherlands came back from 2-0 down to draw 2-2 with Greece.</p>\n\n<p>After stunning Germany last time out, Greece looked set to make it three wins from three in the Nations League following first-half goals from&nbsp;Fotis Ioannidis and&nbsp;Giorgos Masouras, but Virgil van Dijk and Reijnders ensured the points would be shared at&nbsp;Stadio Toumbas.</p>\n\n<p>Greece thought they were ahead inside the opening quarter of an hour when Christos Tzolis&nbsp;picked out the bottom-right corner, but the strike was ruled out as Vangelis Pavlidis obstructed Bart Verbruggen&#39;s view from an offside position.</p>\n\n<p>Tzolis was soon forced off with an injury, but his replacement&nbsp;Masouras made an immediate impact in the 23rd minute as his flick-on allowed&nbsp;Ioannidis to run through on goal and curl past Verbruggen.</p>\n\n<p>Ioannidis then returned the favour in first-half stoppage time, regaining possession after intercepting a blind back pass from Ruben van Bommel and squaring for&nbsp;Masouras&nbsp;to tap in from close range, though Greece&#39;s decision to sit on their lead after half-time proved costly.</p>\n\n<p>Van Dijk halved the deficit for the visitors with a powerful header from Joey Veerman&#39;s floated corner in the 59th minute, while Denzel Dumfries saw a potential equaliser ruled out for offside soon afterwards.</p>\n\n<p>The Real Madrid right-back would again be denied by the offside flag in the 73rd minute, moving beyond the final defender before turning home Van Dijk&#39;s knockdown, but there was no stopping Reijnders late on.</p>\n\n<p>Gjivai Zechiel&#39;s acrobatic attempt from Noa Lang&#39;s cross was blocked by Konstantinos Mavropanos, but Reijnders was able to volley the rebound past Konstantinos Tzolakis from the edge of the six-yard box.</p>\n\n\n<p><strong>Greece made to pay for defensive mindset</strong></p>\n\n<p>Greece were brave on the ball in the first half and committed numbers forward on the counter, but Ivan Jovanovic&#39;s side offered almost no attacking threat in the second half; 0.93 of their 0.95 expected goals (xG) tally came in the opening 45 minutes.</p>\n\n<p>Greece attempted two more shots than their opponents before half-time (seven&nbsp;to five), with the Netherlands attempting 13 more than Greece in the second half (14 to one); Greece&#39;s only shot after the break came in the 63rd minute and did not hit the target.</p>\n\n<p>Credit must still go to the Netherlands, who did not give up their search for a point, despite seeing two goals narrowly disallowed against Dumfries after the break.</p>\n\n<p>They have now scored late equalisers in two of their three Nations League games to remain unbeaten (W1 D2).</p>\n\n<p>Greece can still take plenty of positives in knowing they are also unbeaten (W2 D1), sitting top of Group A2 and after causing plenty of trouble for both Germany and Netherlands so far in the competition.</p>\n"
+    },
+    "33D6A071779677C3AB44B7BCD5AAA9A0": {
+      "id": "33D6A071779677C3AB44B7BCD5AAA9A0",
+      "title": "Pochettino's whirlwind week ends with optimism and frustration",
+      "subtitle": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c6vg24l724l4o?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/7aff/live/89296710-e930-11f1-99a1-253766e7ad8b.jpg",
+      "publishedAt": "2026-11-26T00:24:48.000Z",
+      "paragraphs": [
+        "BBC HomepageSkip to contentAccessibility HelpYour accountHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsMore menuMore menuSearch BBCHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsClose menu BBC SportMenuHomeFootballCricketFormula 1Rugby UTennisGolfCyclingAthleticsMoreA-Z SportsAmerican FootballAthleticsBasketballBoxingCricketCyclingDartsDisability SportFootballFormula 1Gaelic GamesGolfGymnasticsHorse RacingMixed Martial ArtsMotorsportNetballRugby LeagueRugby UnionSnookerSwimmingTennisFull Sports A-ZMore from SportEnglandScotlandWalesNorthern IrelandQuizzesNews FeedsHelp & FAQsManchester UnitedScores & FixturesTableLive Match UpdatesOn BBC SoundsTop ScorersWho Am I? QuizMore ref frustration as Pochettino&#x27;s chaotic start at Man Utd continuesTo play this video you need to enable JavaScript in your browser.This video can not be played",
+        "Three pens and a red as Man Utd draw against Sporting",
+        "Manchester United reporter in LisbonPublished8 hours agoTwo games, no wins. Two red cards, two goals scored. One goal disallowed, six conceded. Is it possible for Mauricio Pochettino to have learned anything from a crazy first week as Manchester United boss?",
+        "United and Pochettino went on the warpath before the Champions League encounter with Sporting, furious at Leny Yoro&#x27;s dismissal at Liverpool which they believe was unjust and shaped the eventual 4-0 defeat.",
+        "Club officials were seething after the 2-2 draw in Lisbon as well.",
+        "This time it was 2022 World Cup final referee Szymon Marciniak in the firing line. Blowing before Amad&#x27;s first-half header went into the net meant VAR had no chance to assess whether the Polish official was right to rule Youri Tielemans had fouled Goncalo Inacio before prodding the ball through to the Ivorian.",
+        "Former United winger Ashley Young didn&#x27;t think so. He called Marciniak&#x27;s performance \"a disgrace\".",
+        "That Tielemans picked up a booking that eventually led to his late red card – the Old Trafford outfit have now had four players sent off in their past five games, meaning the Belgian will miss the Old Trafford clash with RB Leipzig on 8 December - just compounded the situation.",
+        "Then, in a matter of minutes, Marciniak decided neither Manchester United keeper Senne Lammens nor Sporting counterpart Kaique had been fouled as they conceded. Their respective defences complained bitterly. Marciniak was only asked to go to the pitchside monitor by VAR for the latter incident, which he overturned.",
+        "United insiders felt the Tielemans incident was clearly not a foul and Amad&#x27;s goal should have stood. They also felt any foul on Kaique by Patrick Dorgu was marginal and did not warrant their goal being disallowed.",
+        "Pochettino trod a fine path, knowing if he said something too controversial, it could land him with a fine.",
+        "A nod of a head in agreement was his initial reaction in his post-match news conference, when asked if he felt Marciniak had got it wrong.",
+        "A few minutes before, he was more expansive when he spoke to TNT.",
+        "\"It&#x27;s difficult to find a game where you get punished [so much] in one game,\" he said. \"We were punished a lot in key actions.\"",
+        "Divots, howlers and bad decisions - dissecting Man Utd&#x27;s draw in Lisbon",
+        "Published8 hours agoFour goals, chaos and controversy - Man Utd held in Lisbon",
+        "Image source, Getty ImagesImage caption, Manchester United head coach Mauricio Pochettino shows his frustration during the 2-2 draw with Sporting",
+        "Not for the first time this season, United controlled extended periods of a game they ended up not winning.",
+        "The goals they conceded at the Jose Alvalade were bizarre.",
+        "Seventy-five seconds after superbly saving one penalty, goalkeeper Lammens suffered a rush of blood and conceded another, which was scored."
+      ]
     },
     "344D3D501E856082CEDBB5F157A38E49": {
       "id": "344D3D501E856082CEDBB5F157A38E49",
@@ -25315,6 +25377,37 @@
         "That was expected. City had won each of their past 17 WSL home games, including all 10 in 2026 – until Tottenham tore up the script.",
         "The outcome means Manchester City, beaten at Chelsea in their previous outing, have suffered consecutive league losses for the first time since January 2025.",
         "Image source, Getty ImagesImage caption, Spurs have rediscovered form after losing all three league games in October while conceding 14 goals"
+      ]
+    },
+    "5619EEB3CFF11C7D811BC7E4AD3EB6E4": {
+      "id": "5619EEB3CFF11C7D811BC7E4AD3EB6E4",
+      "title": "Why KMI Panel frustrates referees too - and impacts their salary",
+      "subtitle": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cq20x16zxxzeo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/ca44/live/8c9006a0-e7fc-11f1-85d8-8d5c5b3dc8c8.jpg",
+      "publishedAt": "2026-11-26T07:28:18.000Z",
+      "paragraphs": [
+        "BBC HomepageSkip to contentAccessibility HelpYour accountHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsMore menuMore menuSearch BBCHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsClose menu BBC SportMenuHomeFootballCricketFormula 1Rugby UTennisGolfCyclingAthleticsMoreA-Z SportsAmerican FootballAthleticsBasketballBoxingCricketCyclingDartsDisability SportFootballFormula 1Gaelic GamesGolfGymnasticsHorse RacingMixed Martial ArtsMotorsportNetballRugby LeagueRugby UnionSnookerSwimmingTennisFull Sports A-ZMore from SportEnglandScotlandWalesNorthern IrelandQuizzesNews FeedsHelp & FAQsPremier LeagueScores & FixturesTableFollow Your TeamTransfersTop ScorersGossipWhy KMI Panel frustrates referees too - and impacts their salaryImage source, Getty ImagesImage caption, Referees rely on the opinions of former players to determine a significant part of their annual salary",
+        "Football issues correspondentPublished1 hour agoIt has become something of a Wednesday morning ritual for fans. At 10am, the Premier League releases the latest votes of its Key Match Incidents Panel.",
+        "For four seasons, the KMI Panel was a clandestine operation. It was distributed to clubs only, but it would still find its way out into the public domain.",
+        "This season, it began being released to the public.",
+        "Yet little is really understood about the KMI Panel.",
+        "Why does it exist? Is it just protecting referees? And does it really mean anything?",
+        "For referees, the last question is more important than you might realise.",
+        "The votes, which ultimately say whether referees have got a decision right or wrong, create a merit table of performance - and this impacts their salary.",
+        "\"It depends where you are on the list,\" former Premier League referee Graham Scott said. \"But if you&#x27;re in the middle, then it might be 25% of your take-home. So it&#x27;s substantial.\"",
+        "For the officials, these are not decisions being taken by their bosses.",
+        "Their performance reviews are effectively outsourced to a group of former players.",
+        "The results can be inconsistent and frustrating as much for the referees as they are for the fans.",
+        "Let&#x27;s take a look at how a referee&#x27;s salary works in the Premier League.",
+        "A Premier League official will earn, on average, about £175,000 per year. The scale will run between £125,000 and £250,000.",
+        "Think that is unduly high? Referees in Spain&#x27;s La Liga are the highest paid in the world, according to Marca, with an average yearly salary of £221,000.",
+        "Premier League officials are about on par with those in the German Bundesliga and Italian Serie A.",
+        "In England, there is a guaranteed base wage of 50%. This will differ depending on the seniority and experience of an official.",
+        "Michael Oliver would be at the top of the bracket, a newcomer like Farai Hallam at the other end.",
+        "The other 50% is based upon a set of variables, with match fees a major part.",
+        "Each on-field appointment is worth a little over £1000, with a VAR game slightly less."
       ]
     },
     "5670753B5E9C43CBEC684017E21751F3": {
@@ -29434,6 +29527,18 @@
         "Underneath the match centre you can find the official Opta stats on the game as well."
       ]
     },
+    "80CBF17C3C444B5D83D7EAA2C2C47BF7": {
+      "id": "80CBF17C3C444B5D83D7EAA2C2C47BF7",
+      "title": "New Manager, No Europe, But Same Old Problems for Chelsea",
+      "subtitle": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/chelsea-problems-xabi-alonso-stats",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/chelsea-alonso-palmer-martinez.jpg",
+      "publishedAt": "2026-11-26T08:01:58.000Z",
+      "paragraphs": [
+        "The Analyst"
+      ]
+    },
     "80EFB9D7B61B25F666B0DDA9BD9E071A": {
       "id": "80EFB9D7B61B25F666B0DDA9BD9E071A",
       "title": "Dutch match postponed after fans block team bus",
@@ -30029,6 +30134,18 @@
         "That follows on from his previous spell at the club. In each of his seven seasons with Brighton prior to joining Dortmund in August 2024, Groß created a minimum of 52 chances in the Premier League. The only other player to have made as many in a single campaign for the club in the competition is Solly March (67 in 2022-23).",
         "He remains as cultured on the ball as ever, and while he isn’t topping the charts for line-breaking passes, he is making incisive and dangerous passes when he does attempt them.",
         "Groß has made 62 line-breaking passes in the Premier League this season, the joint-41st most, but only Bruno Fernandes (19) and Kiernan Dewsbury-Hall (14) have made more line-breaking passes leading to a shot in the next 10 seconds than him (13), while he has the joint-most line-breaking passes leading to a goal in the next 10 seconds (3)."
+      ]
+    },
+    "8A1715410E39BB3DC3E168AB24143463": {
+      "id": "8A1715410E39BB3DC3E168AB24143463",
+      "title": "How Close Is Bournemouth’s Winning Run to a Premier League Record?",
+      "subtitle": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/bournemouth-winning-run-record-compared-premier-league-clubs-stats",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/bournemouth-winning-streak.jpg",
+      "publishedAt": "2026-11-26T07:50:06.000Z",
+      "paragraphs": [
+        "The Analyst"
       ]
     },
     "8A88090C0A1D9C785B08E716F507010D": {
@@ -32194,6 +32311,18 @@
         "Chaotic week, nightmare start and huge reality check for Pochettino"
       ]
     },
+    "A1785C6160263AA55583D858B0762409": {
+      "id": "A1785C6160263AA55583D858B0762409",
+      "title": "Can Hull City Keep Defying the xG Gods?",
+      "subtitle": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/hull-city-defying-xg-gods-stats",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/can-hull-city-keep-defying-the-xg-gods-scaled.webp",
+      "publishedAt": "2026-11-26T08:01:55.000Z",
+      "paragraphs": [
+        "The Analyst"
+      ]
+    },
     "A2389199675A1F4E66275D969ACADB02": {
       "id": "A2389199675A1F4E66275D969ACADB02",
       "title": "Czechia vs England Prediction: UEFA Nations League Preview",
@@ -33535,6 +33664,18 @@
         "So, even though they aren’t conceding that many shots, the chances they are giving up are of high-quality.",
         "There are numerous potential causes for this, and it’s fair to suggest their backline and midfield being so disrupted won’t have helped. But there’s an argument they could have done more to help themselves.",
         "For instance, instead of moving for a greater degree of control, they might have decided that collectively sitting deeper to prioritise being compact and protecting their own goal while looking for transition opportunities was the best course of action."
+      ]
+    },
+    "B7DE2C755C26656FD2FBC53C7052A1F3": {
+      "id": "B7DE2C755C26656FD2FBC53C7052A1F3",
+      "title": "The 10% Club: Opta’s Best Under-the-Radar FPL Picks for Gameweeks 12 and 13",
+      "subtitle": "The Analyst",
+      "source": "The Analyst",
+      "sourceUrl": "https://theanalyst.com/articles/opta-best-fpl-picks-gameweek-12-13-2026-27",
+      "imageUrl": "https://theanalyst.com/wp-content/uploads/2026/11/fpl-picks-gw-12-and-13.png",
+      "publishedAt": "2026-11-26T08:01:51.000Z",
+      "paragraphs": [
+        "The Analyst"
       ]
     },
     "B7FD9CE5A8A8607B8A3AFB2F147DA0D5": {
@@ -36919,6 +37060,37 @@
         "A 3-0 victory over Ukraine was one of the most impressive performances from O&#x27;Neill&#x27;s young side, and they ended the quadruple-header with another goalless draw, this time at home to Georgia.",
         "If Northern Ireland can top the group they would not only win promotion to League A, but they would also be all but guaranteed of a play-off for Euro 2028.",
         "PreviousNext0:28Are Man City&#x27;s players being affected by the charges verdict? 00:00:28, play videoAre Man City&#x27;s players being affected by the charges verdict?0:52Do you agree with Troy&#x27;s Team of the Week? 00:00:52, play videoDo you agree with Troy&#x27;s Team of the Week?1:24Slade and Baxter: Newspaper headlines galvanised England. 00:01:24, play videoSlade and Baxter: Newspaper headlines galvanised England0:50Selector North on Carse&#x27;s return to England set-up. 00:00:50, play videoSelector North on Carse&#x27;s return to England set-up0:38&#x27;Jude was a big person for me&#x27; - King on Bellingham&#x27;s guidance. 00:00:38, play video&#x27;Jude was a big person for me&#x27; - King on Bellingham&#x27;s guidance1:00Fishlock&#x27;s emotional final press conference as a player. 00:01:00, play videoFishlock&#x27;s emotional final press conference as a player1:08Ashton: England a good side with full-strength team. 00:01:08, play videoAshton: England a good side with full-strength team0:48When is a mini shin pad too mini? 00:00:48, play videoWhen is a mini shin pad too mini?0:59Shaw&#x27;s omission from World XI shortlist &#x27;criminal&#x27; 00:00:59, play videoShaw&#x27;s omission from World XI shortlist &#x27;criminal&#x27;1:04&#x27;Australia need to stop picking rugby league players&#x27; 00:01:04, play video&#x27;Australia need to stop picking rugby league players&#x27;0:50Fulham fan &#x27;excited for world to see how good Josh King is&#x27; 00:00:50, play videoFulham fan &#x27;excited for world to see how good Josh King is&#x27;1:02The table after ten games - what Premier League history tells us. 00:01:02, play videoThe table after ten games - what Premier League history tells us1:00&#x27;We can&#x27;t count out relegation&#x27; 00:01:00, play video&#x27;We can&#x27;t count out relegation&#x27;Top storiesMan Utd expected to sack head coach Carrick"
+      ]
+    },
+    "E4D3F5969CE90128C06C8E339C01C8AA": {
+      "id": "E4D3F5969CE90128C06C8E339C01C8AA",
+      "title": "'Laughing gas has ended careers' - so how common is it in football?",
+      "subtitle": "BBC",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c6kgdrj9nxgdo?at_medium=RSS&at_campaign=rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/0c0a/live/8a3de1f0-e8fc-11f1-a77a-271abcb79951.jpg",
+      "publishedAt": "2026-11-26T06:18:30.000Z",
+      "paragraphs": [
+        "BBC HomepageSkip to contentAccessibility HelpYour accountHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsMore menuMore menuSearch BBCHomeNewsSportEarthReelWorklifeTravelCultureFutureMusicTVWeatherSoundsClose menu BBC SportMenuHomeFootballCricketFormula 1Rugby UTennisGolfCyclingAthleticsMoreA-Z SportsAmerican FootballAthleticsBasketballBoxingCricketCyclingDartsDisability SportFootballFormula 1Gaelic GamesGolfGymnasticsHorse RacingMixed Martial ArtsMotorsportNetballRugby LeagueRugby UnionSnookerSwimmingTennisFull Sports A-ZMore from SportEnglandScotlandWalesNorthern IrelandQuizzesNews FeedsHelp & FAQsEnglandMen&#x27;s Scores & FixturesNations League TableWomen&#x27;s Scores & FixturesWorld Cup Qualifying Tables&#x27;Laughing gas has ended careers&#x27; - so how common is it in football? To play this video you need to enable JavaScript in your browser.This video can not be played",
+        "Watch: Moment Raheem Sterling arrested after car crash",
+        "It is known as laughing gas but the impact nitrous oxide can have on a professional footballer&#x27;s body is anything but funny.",
+        "\"I&#x27;m not going to name names but I have colleagues who know Premier League footballers who are no longer playing as a direct result of nitrous oxide [use],\" said Dr David Nicholl.",
+        "Nicholl, a clinical lead in neurology with Sandwell and West Birmingham NHS Trust, was speaking after former Manchester City, Chelsea, Liverpool and England forward Raheem Sterling was handed a suspended jail term after pleading guilty to dangerous driving.",
+        "A key part of the case was that Sterling had been inhaling nitrous oxide from a balloon while driving.",
+        "His Lamborghini was seen veering across a motorway and later crashed into a metal gate. Sterling, 31, was arrested at the scene and found with six gas canisters in his car.",
+        "He disclosed to custody staff \"he had a problem with nitrous oxide\", the court was told.",
+        "Defending Sterling, Jason Bartfeld KC said his client \"recognised the various unhealthy coping mechanisms that brought him to this position\" and that he has \"sought to address\" these in the \"most positive and effective way and with some success\".",
+        "So, what is nitrous oxide, how does it affect those who take it and is its use more common in footballers than the wider population?",
+        "To play this video you need to enable JavaScript in your browser.This video can not be played",
+        "Footage was released of the footballer driving dangerously",
+        "Nitrous oxide&#x27;s original use was as a sedative that healthcare providers like dentists could use to keep patients comfortable during procedures.",
+        "It is now legally sold for catering, medical and industrial purposes, but is frequently used as a recreational drug and is commonly known as laughing gas.",
+        "This can be abused by inhaling the gas via a balloon, leading to a short-term high causing symptoms such as brief euphoria, mild perceptual changes and uncontrollable laughter, external.",
+        "Nitrous oxide also slows brain and body responses and can displace oxygen in the lungs and bloodstream, contributing to dizziness, confusion or fainting.",
+        "It is thought long-term or excessive use can have disastrous effects on the body, from neurological harms to nerve and spinal cord damage which could lead to permanent disability.",
+        "According to medical journal The Lancet, it is now the third most commonly used drug after cannabis and cocaine in the UK, with use highest among people aged 16–24 years.",
+        "It has been increasing in popularity as a recreational drug over the past decade.",
+        "This prompted it to be reclassified as a Class C drug in 2023 after a government consultation."
       ]
     },
     "E5756A53D6DF47D1A883ACEB525557B7": {
@@ -78544,6 +78716,36 @@
         "feed. READ THE LATEST CHAMPIONS LEAGUE NEWS, ANALYSIS AND INSIGHT FROM SI FC"
       ]
     },
+    "ftbpro_01m8764e2nev": {
+      "id": "ftbpro_01m8764e2nev",
+      "title": "10 Wingers PSG Could Target in Search of Champions League Three-Peat",
+      "subtitle": "SI",
+      "source": "SI",
+      "sourceUrl": "https://www.si.com/soccer/10-wingers-psg-target-champions-league-three-peat/app/?utm_source=fotmob&v=1795669200",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1920,h_1080,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m81za6w4a16kpek8jg.jpg",
+      "publishedAt": "2026-11-26T05:00:00.000Z",
+      "paragraphs": [
+        "By Andrew Headspeath12:00 AM ESTTwo Brazilians could be on PSG’s radar.  / Lewis Storey CFC/Chelsea FC/Getty Images (Estêvão), Oscar J. Barroso/Europa Press/Getty Images (Viní Jr.)Sometimes fate levels the playing field. Just when it looked like absolutely no-one could stop Paris Saint-Germain from completing a Champions League three-peat, both Khvicha Kvaratskhelia and Désiré Doué have been struck down with season-ending ACL tears.",
+        "First, Kvaratskhelia crumpled in pain during the 4–2 Champions League win over Barcelona last month. At the weekend, it was Doué left in that familiar heap, clutching his right knee and screaming during the win over Nice.",
+        "The loss of two of European soccer’s best attackers would be a serious blow to the ambitions of any team—even Luis Enrique’s all-conquering PSG.",
+        "“We will replace them all together,” was the party line spouted by Achraf Hakimi ahead of the Champions League clash with Roma. The manager backed this up, insisting: “We are not obliged to go to the market”.",
+        "FREE NEWSLETTER. New SI FC Newsletter Global Embed. Sign Up to Get Informed With SI FC. dark",
+        "It’s true that the manager can still call on Senny Mayulu, Ferran Torres, Maghnes Akliouche and Mika Godts to fill the wing voids left by the two fallen superstars, but PSG’s strength in recent years has been in keeping their big names fresh for the Champions League.",
+        "Without Kvaratskhelia and Doué to call on for the big nights under the lights, can their remaining options keep up the intensity all season?",
+        "Here are ten transfer options PSG could explore in January to ease the attacking burden.",
+        "Díaz ranked 24th in this year’s Ballon d’Or. / EyesWideOpen/Getty ImagesThe Colombian has gone up a level since leaving Liverpool for Bayern Munich in the summer of 2025 and is now firmly established as one of the very best wide forwards in the world.At 29, Luis Díaz would not be a long-term option, nor would he be a cheap one, with Bayern—a direct Champions League rival—under absolutely no obligation to sell a player under contract until 2029.He would, however, bring the ideal combination of skill, speed and dogged tenacity in the press that Luis Enrique values. He has also shown a level of versatility that would allow him to be deployed in any position across the front line.",
+        "Estêvão has yet to find his feet at Chelsea. / Visionhaus/Getty ImagesXabi Alonso and Chelsea seem unsure exactly how to handle the precocious young talent they have, with Estêvão struggling for regular minutes in a Blues team still searching for an identity.The Brazilian has started just twice in the Premier League this season, and seemed to voice his frustration at a lack of game time during the last international break.When let loose, the 19-year-old winger looks like one of the most devastating young talents in world soccer. He had also been linked with PSG before all the injuries hit.",
+        "Vinícius Júnior’s long-term Madrid future is uncertain.  / Kazimierz Koper/Eurasia Sport Images/Getty ImagesThe Vinícius Júnior soap opera recently took another twist as the Brazilian inspired Real Madrid’s comeback victory over Celta Vigo, earning him some redemption after a dismal start to the campaign by his lofty standards. However, one productive performance doesn’t alter much, with Los Blancos still a more coherent side when only one of Vinícius and Kylian Mbappé is playing. Despite signing a lucrative contract extension in the summer, the 26-year-old’s poor form and the consistent brilliance of Yan Diomande clouds his future in uncertainty. Paris could provide a welcome escape route for Viní Jr., most feasibly as part of an expensive loan deal. While PSG have moved away from their ‘Galácticos’ policy with great success since Enrique’s arrival, desperate times call for desperate measures. On his day, the Real Madrid forward still remains one of the world’s most devastating attackers, and could realistically propel the French giants to another European crown.",
+        "Nusa has started 2026–7 in unstoppable form. / Soeren Stache/picture alliance/Getty ImagesLong tipped as a hot prospect, this has been the season that Antonio Nusa has taken his game to the next tier.The 21-year-old Norway international has seven goals and as many assists for RB Leipzig in 2026–27 and has been a regular pest to fullbacks across the continent.While there is reportedly no release clause in his current contract in Germany, recent reports suggest Leipzig might consider doing business for as low as €70 million ($76.5 million).",
+        "Rio Ngumoha is Liverpool’s youngest scorer against Manchester United. / Liverpool FC/Getty ImagesFresh from tearing a 10-man Manchester United to shreds, 18-year-old Rio Ngumoha is hotter than lava right now. The four-cap England international leads the way for successful dribbles in the Champions League after Matchday 4 (25), ahead of the likes of Lamine Yamal and Michael Olise, and looks to have the world at his dancing feet.Annoyingly for Liverpool, Ngumoha has little over 18 months left on his current contract and the youngster could force the Reds to cash in on their asset against their wishes, in a hypothetical scenario where the reigning European champions came calling with a head-turning offer.",
+        "No super-club has been able to tear Williams away from Bilbao. / Ricardo Larreina/Europa Press/Getty ImagesIt felt like Nico Williams’s window for a move to one of European soccer’s big boys may have closed in the summer of 2025, after the Barcelona saga and backlash ended with a definitive 10-year contract extension in Bilbao.Still, there have been murmurs from the player’s agent that pure loyalty was not the sole reason for staying put at his hometown club. A serious overture from PSG would put that unwavering love for Athletic Club to the ultimate test.The 2026 World Cup winner’s renewed deal is said to include a release clause of around €90 million ($98 million).",
+        "The Frenchman enjoyed a landmark debut campaign with Bournemouth. / Getty ImagesThe transfer market isn’t littered with short-term solutions capable of carrying PSG until the end of the season. Therefore, they could turn to more realistic targets which will help them now and in the future, with one of those potentially being Bournemouth forward Eli Junior Kroupi. The precocious Frenchman is reportedly keen on a move back to his homeland, with PSG providing the perfect destination for him to hone his skills and compete for the biggest titles. The 20-year-old has already proven himself in the Premier League, scoring 13 times last season, and is generating interest from Arsenal and Barcelona, too. Unfortunately, Kroupi is not a winger, although his versatility has seen him feature as an attacking midfielder and center forward for Bournemouth. But his arrival would potentially allow Dembélé to drift back into a wide position for the time being, without leaving PSG with too many wingers once Doué and Kvaratskhelia return.",
+        "Yassine is a breakout star in Ligue 1 this season. / ROMEO BOETZLE/AFP/Getty ImagesA lesser known option, Morocco international Gessime Yassine has been a rare bright light for struggling Strasbourg this season, contributing four goals and three assists in 11 games out wide in Ligue 1.No player has completed more dribbles in Ligue 1 than the 21 year-old who can operate on either flank and became Morocco’s youngest ever scorer at the World Cup during the summer.",
+        "Abde Ezzalzouli played for Barcelona before moving to Betis. / Eric Verhoeven/Soccrates/Getty ImagesReports claim Ezzalzouli is already on PSG’s radar, while Barça too are keeping tabs on the player who they still own 20% of the rights to.One of La Liga’s finest ball carriers and chance creators, Ezzalzouli is a bull of a winger. The explosive Morocco star was a major part in leading Real Betis to Champions League qualification last season, and has continued his fine form into 2026–27. His release clause sits at a deliciously tempting €60 million ($65 million).",
+        "Said El Mala is another emerging Bundesliga star. / Harry Langer/DeFodi Images/DeFodi/Getty ImagesThere are few wide men with greater potential than Said El Mala. The speedy, robust and tenacious 20-year-old has blossomed since moving to Köln, with 13 goals and four assists delivered in the Bundesliga last season. He was unfortunate to miss out on Germany’s World Cup roster at the end of a breakout campaign.  El Mala has begun the current season in similarly confident mood, whether operating as a winger or central striker for Köln. Seven goal contributions have been registered already, and he’s doubled his number of senior international caps as well. A long-term investment capable of bolstering an already high-quality forward line, El Mala certainly makes logistical and financial sense. He’s expected to cost around $54.8 million, which is pocket change for PSG’s Qatari owners.",
+        "READ THE LATEST TRANSFER NEWS AND RUMORS FROM WORLD SOCCER. feed"
+      ]
+    },
     "ftbpro_01m878nw5bj2": {
       "id": "ftbpro_01m878nw5bj2",
       "title": "Sporting CP vs. Man Utd: Preview, Predictions, Talking Points",
@@ -78950,7 +79152,7 @@
       "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,w_1919,h_1079,x_0,y_0/c_limit,w_912,f_auto,q_auto/images/voltaxMediaLibrary/mmsport/si/01m89seq71a3vztgvaqd.jpg",
       "publishedAt": "2026-11-26T00:05:00.000Z",
       "paragraphs": [
-        "By SI FC Staff7:05 PM ESTErling Haaland (left) and Victor Osimhen (right) headline the gossip. / Mark Cosgrove/News Images/NurPhoto/Getty Images (Haaland), Yagiz Gurtug/PS Images/MB Media/Getty Images (Osimhen)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
+        "By SI FC StaffNov 25, 2026Erling Haaland (left) and Victor Osimhen (right) headline the gossip. / Mark Cosgrove/News Images/NurPhoto/Getty Images (Haaland), Yagiz Gurtug/PS Images/MB Media/Getty Images (Osimhen)Sports Illustrated rounds up the latest transfer rumors and gossip from around the world.",
         "Marcus Rashford’s future at Man Utd remains unclear. / James Gill - Danehouse/Getty ImagesMarcus Rashford remains available for transfer at Manchester United despite the Red Devils’ public insistence that he is being reintegrated into the squad. (Source: Ben Jacobs)",
         "Also linked with an exit from Man Utd is center back Ayden Heaven. The 20-year-old has admirers across the Premier League and at Championship side West Ham United. (Source: Sky Sports News)",
         "Erling Haaland is ready to push for an exit from Manchester City as early as next summer, when Barcelona would be among his preferred destinations. (Source: El Nacional)",
